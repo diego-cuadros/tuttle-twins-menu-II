@@ -1,0 +1,1012 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ss_hero_33_PzC7JT": {
+      "type": "ss-hero-33",
+      "blocks": {
+        "heading_QcKHRE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Spark Imagination and Learning Beyond the Classroom</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "button_fm6Q9E": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Back to School Sale",
+            "button_url": "#back-to-school",
+            "button_custom": false,
+            "button_bold": true,
+            "button_italic": false,
+            "button_font": "poppins_n4",
+            "button_size": 20,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_radius": 48,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 16,
+            "button_style": "outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#da5846",
+            "button_bg_color": "#da5846",
+            "button_bg_hover_color": "#ffffff",
+            "button_border_color": "#da5846",
+            "button_border_hover_color": "#da5846"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QcKHRE",
+        "button_fm6Q9E"
+      ],
+      "name": "SS - Hero #33",
+      "settings": {
+        "layout_height": "fixed_height",
+        "layout_fixed_height": 700,
+        "layout_fixed_height_mobile": 450,
+        "content_maxwidth": 50,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "center",
+        "layout_bg_type": "video",
+        "bg_image": "shopify://shop_images/Untitled_design_13.png",
+        "bg_video": "shopify://files/videos/Untitled design.mp4",
+        "bg_video_url": "",
+        "bg_overlay": 0,
+        "bg_overlay_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "ss_hero_33_pNUJQn": {
+      "type": "ss-hero-33",
+      "blocks": {
+        "heading_jggLkL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Spark Imagination and Learning Beyond the Classroom</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "button_NxYiB6": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Back to School Sale",
+            "button_url": "#back-to-school",
+            "button_custom": false,
+            "button_bold": true,
+            "button_italic": false,
+            "button_font": "poppins_n4",
+            "button_size": 20,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_radius": 48,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 16,
+            "button_style": "outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#da5846",
+            "button_bg_color": "#da5846",
+            "button_bg_hover_color": "#ffffff",
+            "button_border_color": "#da5846",
+            "button_border_hover_color": "#da5846"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jggLkL",
+        "button_NxYiB6"
+      ],
+      "custom_css": [
+        ".section-template--18777883639946__ss_hero_33_pNUJQn {height: 50%; display: none;}",
+        "@media screen and (max-width: 749px) {.section-template--18777883639946__ss_hero_33_pNUJQn {min-height: 250px !important; } .hero-heading-heading_jggLkL h1 {font-size: 24px; } .hero-heading-heading_jggLkL {margin-top: 100px; } .hero-buttons-template--18777883639946__ss_hero_33_pNUJQn {display: none; }}"
+      ],
+      "name": "Half Height Header",
+      "settings": {
+        "layout_height": "fixed_height",
+        "layout_fixed_height": 700,
+        "layout_fixed_height_mobile": 450,
+        "content_maxwidth": 50,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "center",
+        "layout_bg_type": "video",
+        "bg_image": "shopify://shop_images/Untitled_design_13.png",
+        "bg_video": "shopify://files/videos/Untitled design.mp4",
+        "bg_video_url": "",
+        "bg_overlay": 0,
+        "bg_overlay_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "z_featured_collection_74jWQE": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "back-to-school",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "back-to-school",
+        "padding_top": 28,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_hFkUUX": {
+      "type": "z-featured-collection",
+      "name": "Back to School Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Back to School Sale",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "back-to-school",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "back-to-school",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_text_block_dtXty8": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "button_9wTbYX": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Learn More About the Academy",
+            "button_link_new_window": true,
+            "button_link": "shopify://pages/academy",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "button_9wTbYX"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 12,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_product_column_c_m6P3mg": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_fDX8Rh": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "button_tqcnY4": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link_new_window": false,
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "back-to-school-bundle",
+            "product_button_label": "Add the Back to School Bundle to Cart",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "button_tqcnY4"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 12,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_text_image_block_c_pBaRMR": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_column_DT8be6": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_column_97ey6r": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>14 Inspiring and Beautifully <br/>Illustrated Children’s Books</p>",
+            "text": "<p>Educational stories that are entertaining and easy to understand</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_ccF66k": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Engaging Storytelling About <br/>the Most Important Ideas of Our Time</p>",
+            "text": "<p>Our books introduce the ideas of liberty to a new generation</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_xee9Tk": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Activities and Conversation <br/>Starters With Every Book</p>",
+            "text": "<p>Encourage your kids to learn — and apply!— these new ideas</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_Lfej6X": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Based on Famous Books by <br/>Thought Leading Authors</p>",
+            "text": "<p>Restore freedom of education and the values that make our society great</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_NwrePG": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Easy to Understand Language <br/>for Kids About Big Ideas</p>",
+            "text": "<p>Written for children age 5-11 to make the ideas of liberty easy to digest</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_nUf8YJ": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Level up Your Own Education <br/>as You Share With Your Kids</p>",
+            "text": "<p>Increase your own confidence by easily learning alongside your children</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_column_97ey6r",
+        "text_column_ccF66k",
+        "text_column_xee9Tk",
+        "text_column_Lfej6X",
+        "text_column_NwrePG",
+        "text_column_nUf8YJ"
+      ],
+      "settings": {
+        "heading": "<p>Principled. Independent. Intelligent.</p>",
+        "heading_size": "h1",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_4Cx3Mk": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_mEzNVK": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "back-to-school-bundle",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well designed education supplement for your family that teaches freedom and responsibility through engaging stories, you are in the right place.</p>",
+            "text_size": "large",
+            "text_weight": "medium",
+            "max_width": 59,
+            "button_label": "Books For Bright Young Minds",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": true,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Includes All 14 Activity Workbook PDFs, Audiobooks, and Parent Guides Free!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_mEzNVK"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_eMQq8r": {
+      "type": "z-video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "So Glad I Bought These Books",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=9Bmp_29ghqw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_I_am_glad_that_I_buy.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ssky_testimonials_AWxtTJ": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_c9CfP8": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about</strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Marcos D., Illinois",
+            "author_state": "",
+            "author_image": "shopify://shop_images/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_c9CfP8"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_MbHwmN": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_8H6XVj": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_kYqRnd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>You Want to Raise Free-Thinking, Freedom-Loving Individuals </p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_nxbMcM": {
+          "type": "text",
+          "settings": {
+            "max_width": 72,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>But it’s hard to navigate the minefield of media and entertainment manipulation, right?</p>",
+            "text_size": "extra-large",
+            "text_weight": "medium"
+          }
+        },
+        "text_88kqHC": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>You have probably tried in the past to educate your kids on what’s happening in our world and struggled:<br/><br/></p>",
+            "text_size": "medium",
+            "text_weight": "medium"
+          }
+        },
+        "text_with_icon_4KejYf": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>A trip to the <strong>Local Library </strong>in search of good literature results in frustration that many books are pushing harmful agendas that are appealing to kids. You wonder what good material you can introduce to your children that they’ll actually enjoy.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>You have broached big subjects in <strong>Family Discussions </strong>after dinner that end up in silence from apathetic kids or end awkwardly when your kids ask questions you can’t answer.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_cH8aQj": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>After finding <strong>YouTube Videos</strong> from creators that seemed good at the time for your kids, you discovered that they ultimately had some agenda and were using their platform to promote ideas you strongly disagree with.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>Perhaps you use <strong>Current Events</strong> to try and educate your child about what is happening but there is no context and it’s too complex to explain. Often, you wonder if what you’re doing is enough to “stick” and prepare your children for the world they’re growing up in.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "divider_pF39QX": {
+          "type": "divider",
+          "settings": {
+            "margin": 24,
+            "contrast": true
+          }
+        },
+        "text_cGkQPz": {
+          "type": "text",
+          "settings": {
+            "max_width": 92,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Your kids are sometimes left with more questions than answers, and you can’t bear the thought of them getting lost at sea in all the manipulation and power games playing out in the world. <br/><br/>What if the solution to this emerging education problem was simpler than you thought?</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYqRnd",
+        "text_nxbMcM",
+        "text_88kqHC",
+        "text_with_icon_4KejYf",
+        "text_with_icon_cH8aQj",
+        "divider_pF39QX",
+        "text_cGkQPz"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "scheme-4",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_CVeNKG": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_AzqJdj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Be empowered as a parent to give your children a foundation of freedom—to understand the ideas of a free society that socialists and progressives are trying hard to undermine.",
+            "custom_color": "",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzqJdj"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 84,
+        "color_scheme": "scheme-4",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_bgrKay": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_TUY4Er": {
+          "type": "caption",
+          "settings": {
+            "caption": "A NEW KIND OF EDUCATION",
+            "custom_color": "",
+            "text_style": "small-bold",
+            "color_class": "primary-orange"
+          }
+        },
+        "caption_qUf3KB": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Tuttle Twins:",
+            "custom_color": "",
+            "text_style": "extra-extra-large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_Rnz3Up": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Thought Provoking Book <br/>Series Read By Millions of Children</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_n74MMW": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>A unique series of beautiful, enjoyable books that use storytelling to introduce important economic, civic, and history principles to your child.</p>",
+            "text_size": "extra-large",
+            "text_weight": "semibold"
+          }
+        },
+        "heading_mxmNpw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Mentor Your Children to Become Critical Thinkers</p><p></p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_with_icon_R7dDph": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Feel Confident as a Parent Teaching Your Children True Principles </strong><br/>Storytelling and illustrations unpack big concepts for easy understanding</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_WiUL4B": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Fix Your Own Political and Economic Education Gaps </strong><br/>Learn big ideas together as a family in a simple yet engaging way</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_TNrT6w": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Give Your Children a Leg Up in Life</strong><br/>Encouraging critical thinking and truth seeking will set them apart</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_rJiUKB": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Raise Well-Rounded Children</strong><br/>So they are prepared and understand what’s going on in the world</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_hgAmVk": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Bond as a Family and Strengthen Your Values</strong><br/>Elevate family discussions with powerful ideas and current events</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_YYeEHq": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p><br/>If you want a way to educate and equip your children for the future, we are glad you found us — because something new and important is happening here.</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "caption_TUY4Er",
+        "caption_qUf3KB",
+        "heading_Rnz3Up",
+        "text_n74MMW",
+        "heading_mxmNpw",
+        "text_with_icon_R7dDph",
+        "text_with_icon_WiUL4B",
+        "text_with_icon_TNrT6w",
+        "text_with_icon_rJiUKB",
+        "text_with_icon_hgAmVk",
+        "text_YYeEHq"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 66,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "z_featured_collection_AEWkhR": {
+      "type": "z-featured-collection",
+      "name": "Back to School Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Back to School Sale",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "back-to-school",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "back-to-school",
+        "padding_top": 32,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_image_block_b_erpQpz": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_hero_33_PzC7JT",
+    "ss_hero_33_pNUJQn",
+    "z_featured_collection_74jWQE",
+    "z_featured_collection_hFkUUX",
+    "ssky_text_block_dtXty8",
+    "sskymo_product_column_c_m6P3mg",
+    "ssky_text_block_fDX8Rh",
+    "sskymo_text_image_block_c_pBaRMR",
+    "ssky_text_column_DT8be6",
+    "ssky_product_order_block_4Cx3Mk",
+    "z_video_eMQq8r",
+    "ssky_testimonials_AWxtTJ",
+    "sskymo_three_block_MbHwmN",
+    "ssky_text_block_8H6XVj",
+    "ssky_text_block_CVeNKG",
+    "ssky_text_block_bgrKay",
+    "z_featured_collection_AEWkhR",
+    "sskymo_text_image_block_b_erpQpz"
+  ]
+}

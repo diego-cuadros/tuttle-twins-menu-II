@@ -1,0 +1,653 @@
+{% style %}
+    #section-{{ section.id }} {
+        background: {{ section.settings.bg_color }};
+        padding-top: {{ section.settings.desktop_padding_top }}px;
+        padding-bottom: {{ section.settings.desktop_padding_bottom }}px;
+    }
+    {% if section.settings.heading_color != blank %}
+        #section-{{ section.id }} .review-heading{
+            color:{{ section.settings.heading_color }};
+        }
+    {% endif %}
+
+    #section-{{ section.id }} .left-right-ticker .ticker_container {
+        animation: scroll-left {{ section.settings.left_ticker_speed }}s linear infinite;
+    }
+
+    #section-{{ section.id }} .right-left-ticker .ticker_container {
+        animation: scroll-right {{ section.settings.right_ticker_speed }}s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-right {
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    {% unless request.design_mode %}
+        .customers-reviews-sec .review_item_wrapper {
+            display: none;            
+            opacity: 0;
+            max-height: 0;
+        }
+    {% endunless %}
+
+    /* Desktop (width > 767px) */
+    @media screen and (min-width:768px) {
+        {% unless section.settings.show_left_ticker_desktop %}
+        #section-{{ section.id }} .left-right-ticker {
+            display: none;
+        }
+        {% endunless %}
+
+        {% unless section.settings.show_right_ticker_desktop %}
+        #section-{{ section.id }} .right-left-ticker {
+            display: none;
+        }
+        {% endunless %}
+    }
+
+    /* Mobile (width <= 767px) */
+    @media screen and (max-width:767px) {        
+        #section-{{ section.id }} {
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+
+        #section-{{ section.id }} .left-right-ticker .ticker_container {
+            animation-duration: {{ section.settings.left_ticker_speed_mobile }}s;
+        }
+        #section-{{ section.id }} .right-left-ticker .ticker_container {
+            animation-duration: {{ section.settings.right_ticker_speed_mobile }}s;
+        }
+
+        {% unless section.settings.show_left_ticker_mobile %}
+            #section-{{ section.id }} .left-right-ticker {
+                display: none;
+            }
+        {% endunless %}
+
+        {% unless section.settings.show_right_ticker_mobile %}
+            #section-{{ section.id }} .right-left-ticker {
+                display: none;
+            }
+        {% endunless %}
+    }
+{% endstyle %}
+
+<div class="section-{{ section.id }} customers-reviews-sec" id="section-{{ section.id }}">
+  <div class="sec-container">    
+
+    {% if section.settings.heading != blank %}
+      <div class="sechead">
+        <h2 class="review-heading">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {% endif %}
+
+    {% assign left_ticker_blocks = section.blocks | where: "type", "ticker-left" %}
+    {% assign right_ticker_blocks = section.blocks | where: "type", "ticker-right" %}
+
+    {% if left_ticker_blocks.size > 0 or right_ticker_blocks.size > 0 %}
+      <div class="image_ticker_block">
+
+        {% if left_ticker_blocks.size > 0 %}
+          <div class="left-right-ticker image-ticker">
+            <div class="ticker_container">
+              {% for i in (1..2) %}
+                {% for block in left_ticker_blocks %}
+                  {% if block.settings.tickerimg != blank %}
+                    <div class="ticker_item">
+                      {{ block.settings.tickerimg
+                        | image_url: width: 400
+                        | image_tag:
+                          class: 'ticker_img',
+                          loading: 'lazy',
+                          widths: '200,300,400,600',
+                          sizes: '(max-width: 768px) 200px, 400px' }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if right_ticker_blocks.size > 0 %}
+          <div class="right-left-ticker image-ticker">
+            <div class="ticker_container">
+              {% for i in (1..2) %}
+                {% for block in right_ticker_blocks %}
+                  {% if block.settings.tickerimg != blank %}
+                    <div class="ticker_item">
+                      {{ block.settings.tickerimg
+                        | image_url: width: 400
+                        | image_tag:
+                          class: 'ticker_img',
+                          loading: 'lazy',
+                          widths: '200,300,400,600',
+                          sizes: '(max-width: 768px) 200px, 400px' }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+    {% assign review_blocks = section.blocks | where: "type", "review-item" %}
+    {% assign total_reviews = review_blocks.size %}
+
+    {% if total_reviews > 0 %}
+      <div class="review_container">
+        <div class="review_row">
+
+          {% for block in review_blocks %}
+            <div class="review_col review_item_wrapper {% if shop.design_mode %}show editor-preview{% endif %}" 
+              data-index="{{ forloop.index0 }}">
+              
+              <div class="review_item">
+                
+                <img src="{{ 'rating-star.svg' | file_url }}" 
+                     alt="Rating Stars" 
+                     class="rating_star">
+
+                {% if block.settings.reviewtext != blank %}
+                  <div class="review_content">
+                    {{ block.settings.reviewtext }}
+                  </div>
+                {% endif %}
+
+                <div class="bottom_block">
+                  <h5 class="customer_name">
+                    {{ block.settings.title }}
+                  </h5>
+
+                  <div class="verify_block">
+                    <img src="{{ 'verify_icon_e487f5eb-8e65-4196-9e0d-885b1a7df5dc.svg' | file_url }}" 
+                         alt="Verify Icon">
+                    <span>VERIFIED BUYER</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+        {% assign show_buttons = false %}
+        {% if total_reviews > section.settings.max_reviews_desktop or total_reviews > section.settings.max_reviews_mobile %}
+          {% assign show_buttons = true %}
+        {% endif %}
+
+        {% if show_buttons %}
+          <div class="show_all_wrapper"></div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+
+<style>
+    .customers-reviews-sec .sec-container {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .customers-reviews-sec .review-heading {
+        margin: 0;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 140%;
+    }
+    .customers-reviews-sec .review_container {
+        max-width: 1272px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .customers-reviews-sec .review_container .review_row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        row-gap: 16px;
+    }
+    .customers-reviews-sec .review_container .review_row .review_col {
+        flex: 0 0 33.33%;
+        padding: 0 8px;
+    }
+    .customers-reviews-sec .review_item {
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .customers-reviews-sec .review_item .rating_star {
+        width: 88px;
+    }
+    .customers-reviews-sec .review_content {
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 140%;
+    }
+    .customers-reviews-sec .review_content p {
+        margin: 0;
+    }
+    .customers-reviews-sec .verify_block img {
+        width: 20px;
+    }
+    .customers-reviews-sec .verify_block {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .customers-reviews-sec .verify_block span {
+        font-size: 14px;
+        color: #3F3939;
+        letter-spacing: 0;
+        line-height: 100%;
+    }
+    .customers-reviews-sec .review_item .customer_name {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: 0;
+    }
+    .customers-reviews-sec .review_item .bottom_block {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .customers-reviews-sec .review_item_wrapper {
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    
+    .customers-reviews-sec .review_item_wrapper.show {
+        display: flex;
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .customers-reviews-sec .show_all_wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .customers-reviews-sec .show_all_reviews,
+    .customers-reviews-sec .show_less_reviews {
+        margin: 24px auto 0; 
+        display: block; 
+        padding: 15px 24px; 
+        cursor: pointer; 
+        border: 1px solid #000000; 
+        background: transparent; 
+        color:#3F3939; 
+        font-size: 18px; 
+        font-family: var(--font-body-family); 
+        font-weight: 500; 
+        line-height: 123%; 
+        border-radius: 100px; 
+        width: 100%; 
+        justify-content: center; 
+        align-items: center; 
+        max-width: 268px;
+    }
+    .customers-reviews-sec .show_all_reviews:hover, .show_less_reviews:hover {
+        background: #000;
+        color: #fff;
+    }
+    .customers-reviews-sec .image_ticker_block {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .customers-reviews-sec .image-ticker {
+        overflow: hidden;
+        position: relative;
+    }
+    .customers-reviews-sec .ticker_item .ticker_img {
+        vertical-align: middle;
+        max-width: 354px;
+        aspect-ratio: 3 / 1.7;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .customers-reviews-sec .ticker_container {
+        display: flex;
+        gap: 24px;
+        width: max-content;
+    }
+    .customers-reviews-sec .ticker_item {
+        flex-shrink: 0;
+    }
+    
+
+    @media screen and (max-width:1024px){
+        .customers-reviews-sec .review_container .review_row .review_col {
+            flex: 0 0 50%;
+        }
+    }
+
+    @media screen and (max-width:767px){
+        .customers-reviews-sec .review_container {
+            padding: 0 16px;
+        }
+        .customers-reviews-sec .review_container .review_row .review_col {
+            flex: 0 0 100%;
+        }
+        .customers-reviews-sec .review-heading {
+            font-size: 28px;
+            line-height:120%;
+        }
+        .customers-reviews-sec .sec-container {
+            gap: 24px;
+        }
+        .customers-reviews-sec .ticker_container {
+            gap: 12px;
+        }
+    }
+</style>
+
+{% unless request.design_mode %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        if (typeof Shopify !== "undefined" && Shopify.designMode) return; // skip in editor
+
+        document.querySelectorAll(".customers-reviews-sec").forEach(section => {
+            const showWrapper = section.querySelector(".show_all_wrapper");
+            const reviewItems = section.querySelectorAll(".review_item_wrapper");
+
+            if (!showWrapper) return;
+
+            // Create buttons
+            const showMoreBtn = document.createElement("button");
+            showMoreBtn.className = "show_all_reviews";
+            showMoreBtn.textContent = "{{ section.settings.show_more_text }}";
+
+            const showLessBtn = document.createElement("button");
+            showLessBtn.className = "show_less_reviews";
+            showLessBtn.textContent = "{{ section.settings.show_less_text }}";
+
+            showWrapper.appendChild(showMoreBtn);
+            showWrapper.appendChild(showLessBtn);
+
+            showMoreBtn.style.display = "none";
+            showLessBtn.style.display = "none";
+
+            function setVisibleReviews() {
+            const isMobile = window.innerWidth <= 767;
+            const limit = isMobile ? {{ section.settings.max_reviews_mobile }} : {{ section.settings.max_reviews_desktop }};
+
+            reviewItems.forEach((el, i) => {
+                if(i < limit){
+                el.classList.add("show");
+                } else {
+                el.classList.remove("show");
+                }
+            });
+
+            if(reviewItems.length > limit){
+                showMoreBtn.style.display = "inline-block";
+                showLessBtn.style.display = "none";
+            } else {
+                showMoreBtn.style.display = "none";
+                showLessBtn.style.display = "none";
+            }
+            }
+
+            setVisibleReviews();
+            window.addEventListener("resize", setVisibleReviews);
+
+            showMoreBtn.addEventListener("click", function() {
+            reviewItems.forEach(el => el.classList.add("show"));
+            showMoreBtn.style.display = "none";
+            showLessBtn.style.display = "inline-block";
+            });
+
+            showLessBtn.addEventListener("click", function() {
+            setVisibleReviews();
+            showLessBtn.style.display = "none";
+            showMoreBtn.style.display = "inline-block";
+            });
+        });
+        });
+    </script>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Customers Reviews Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Color",
+      "default": "#D3E2EA"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#061461"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Millions of Happy Kids (and Parents)"
+    },
+    {
+      "type": "header",
+      "content": "Left Ticker Settings"
+    },
+    {
+        "type": "range",
+        "id": "left_ticker_speed",
+        "label": "Left Ticker Speed (seconds)",
+        "min": 5,
+        "max": 100,
+        "step": 1,
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "left_ticker_speed_mobile",
+        "label": "Left Ticker Speed on Mobile (seconds)",
+        "min": 5,
+        "max": 100,
+        "step": 1,
+        "default": 30
+    },
+    {
+        "type": "checkbox",
+        "id": "show_left_ticker_desktop",
+        "label": "Show Left Ticker on Desktop",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_left_ticker_mobile",
+        "label": "Show Left Ticker on Mobile",
+        "default": true
+    },
+    {
+      "type": "header",
+      "content": "Right Ticker Settings"
+    },
+    {
+        "type": "range",
+        "id": "right_ticker_speed",
+        "label": "Right Ticker Speed (seconds)",
+        "min": 5,
+        "max": 100,
+        "step": 1,
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "right_ticker_speed_mobile",
+        "label": "Right Ticker Speed on Mobile (seconds)",
+        "min": 5,
+        "max": 100,
+        "step": 1,
+        "default": 30
+    },
+    {
+        "type": "checkbox",
+        "id": "show_right_ticker_desktop",
+        "label": "Show Right Ticker on Desktop",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_right_ticker_mobile",
+        "label": "Show Right Ticker on Mobile",
+        "default": true
+    },
+    {
+      "type": "header",
+      "content": "Review Display Settings"
+    },
+    {
+        "type": "range",
+        "id": "max_reviews_desktop",
+        "label": "Max Reviews on Desktop",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "default": 6
+    },
+    {
+        "type": "range",
+        "id": "max_reviews_mobile",
+        "label": "Max Reviews on Mobile",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "type": "text",
+        "id": "show_more_text",
+        "label": "Load More Reviews Button Text",
+        "default": "Load More Reviews"
+    },
+    {
+        "type": "text",
+        "id": "show_less_text",
+        "label": "Show Less Reviews Button Text",
+        "default": "Show Less"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_top",
+      "label": "Desktop Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Mobile Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Mobile Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review-item",
+      "name": "Review Item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "reviewtext",
+          "label": "Review Content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Customer Name"
+        }
+      ]
+    },
+    {
+    "type": "ticker-left",
+    "name": "Left Ticker Image",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "tickerimg",
+        "label": "Left Ticker Image"
+        }
+    ]
+    },
+    {
+    "type": "ticker-right",
+    "name": "Right Ticker Image",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "tickerimg",
+        "label": "Right Ticker Image"
+        }
+    ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customers Reviews Section"
+    }
+  ]
+}
+{% endschema %}

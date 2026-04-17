@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "sc_collection_list_mRyHen": {
+      "type": "sc-collection-list",
+      "blocks": {
+        "collection_JdhgPe": {
+          "type": "collection",
+          "settings": {
+            "bg-color": "#bcecf5",
+            "color": "#3f3939",
+            "tab-title": "Toddler (0–4)",
+            "section-title": "Toddler Books",
+            "section-subtitle": "(Ages 0 to 4)",
+            "collection": "toddler-books-ages-v2",
+            "products_limit": 10
+          }
+        },
+        "collection_9nQE6P": {
+          "type": "collection",
+          "settings": {
+            "bg-color": "#f8cd5e",
+            "color": "#3f3939",
+            "tab-title": "Kids (5–12)",
+            "section-title": "Kids Books",
+            "section-subtitle": "(Ages 5 to 12)",
+            "collection": "kids-books-ages-5-to-12-v2",
+            "products_limit": 10
+          }
+        },
+        "collection_9Q3HRN": {
+          "type": "collection",
+          "settings": {
+            "bg-color": "#6f9b43",
+            "color": "#ffffff",
+            "tab-title": "Teens (13+)",
+            "section-title": "Teens Books",
+            "section-subtitle": "(Ages 13+)",
+            "collection": "teens-books-ages-13-v2",
+            "products_limit": 16
+          }
+        }
+      },
+      "block_order": [
+        "collection_JdhgPe",
+        "collection_9nQE6P",
+        "collection_9Q3HRN"
+      ],
+      "name": "Collection List",
+      "settings": {
+        "main-title": "Shop By Age",
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "sc_collection_list_mRyHen"
+  ]
+}

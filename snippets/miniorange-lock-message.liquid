@@ -1,0 +1,166 @@
+<style>  
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.mo-button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mo-button:hover {
+  opacity: 0.8;
+}
+
+.mo-container {
+  padding: 16px;
+}
+#lockMessage {
+   max-width: 100%;
+   overflow-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .mo-container-body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   #lockMessage {
+       max-width: 205px;
+       overflow-wrap: break-word;
+   }
+}
+</style>
+{% capture accessDenied %}
+	<p style="margin-left:40%; color:red">Sorry, You are not allowed to access this page</p>
+{% endcapture %}
+{% assign elementsString = '*[itemprop=price],*[class~="price"],*[class~="Price"],*[id|="productPrice"],*[class*="__price"],*[class*="__Price"],*[class*="--price"],*[class*="--Price"],*[class="money"],*[class~="product-price"],*[id~="product-price"],*[class~="cart__item-total"],*[class~="cart__subtotal"], *[class~=cart__price-wrapper]' %}
+
+{% capture loginPage %}
+{% if customer %}
+{{ accessDenied }}
+{% else %}
+<script>
+      	let checkout_url = window.location.href.replace( '{{ shop.url | append:"/" }}' , '/');
+        let redirect_url = window.location.href;
+        let is_new_customer_account = "{{ routes.account_login_url }}".includes("shopify.com");
+        if (is_new_customer_account) {
+          redirect_url = "{{ shop.url }}/customer_identity/login?return_to=" + encodeURIComponent(checkout_url);
+        } else {
+          redirect_url = '{{ shop.url }}/account/login' + '?checkout_url=' + encodeURIComponent(checkout_url);
+        }
+        window.location.href = redirect_url;
+</script>
+{% endif %}
+{% endcapture %}<script>
+function mo_getCookie(cookieName) {
+    let cookie = {};
+    document.cookie.split(";").forEach(function(el) {
+      let [key,value] = el.split("=");
+      cookie[key.trim()] = value;
+    })
+    return cookie[cookieName];
+}
+function mo_setCookie(name,value,days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+</script>
+
+<!-- miniOrange LOCK START _7400 -->
+{% capture _7400 %}
+{{ content_for_layout }}
+<script>
+  function _7400passcodeLock() {
+    document.getElementById("innerForm").style.opacity = "0.4";
+    document.getElementById("innerForm").style.pointerEvents = "none";    
+    let userValue = document.getElementById("pwd").value;
+    let api = '/apps/contentrestriction/test?lockId=7400&lock='+ userValue;
+    fetch(api)
+    .then((response) => {
+        return response.text();
+      })
+    .then((data) => {
+      var json = JSON.parse(data);     
+      if( json.value == true ){
+        mo_setCookie("7400", json.token, 1);
+        window.location.href = window.location.href;
+      }else {
+        document.getElementById("innerForm").style.opacity = "1";
+        document.getElementById("innerForm").style.pointerEvents = "auto"; 
+        document.getElementById("invalidPasscode").style.display = "";
+        document.getElementById("lockMessage").style.display = "";
+      }
+    })
+    .catch((error) => console.log(error.data));
+  }
+</script>
+
+{% capture test %}
+<div class="mo-container-body">
+    <div class="mo-container" id="passcode">
+      <h2>Enter Passcode</h2>
+        <div id="innerForm">
+          <input type="password" placeholder="Passcode" name="pwd" id="pwd">
+          <br>
+          <span style="color:red; display:none" id="invalidPasscode">Invalid Password<br></span>
+          <button type="submit" class="mo-button" onclick="_7400passcodeLock()">Submit</button>
+        </div>
+        <div id="lockMessage" style="display: none; "></div>
+    </div>
+  </div>{% endcapture %}
+
+<script>
+  if(typeof mo_getCookie("7400") !== 'undefined'){
+    let api = '/apps/contentrestriction/test?lockId=7400&token=' + mo_getCookie("7400");
+    fetch(api)
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      var json = JSON.parse(data);
+      if( json.value == true ){
+        mo_setCookie("7400", json.token, 365);
+      }else {
+        eraseCookie("7400");
+        {% assign change =  test | replace: "script", "scripttobereplaced" %}
+        let text = `{{ change }}`; 
+        lockModalPlacement(text);
+      }
+    })
+    .catch((error) => console.log(error.data));
+  }else{
+    {% assign change =  test | replace: "script", "scripttobereplaced" %}
+    let text = `{{ change }}`; 
+        lockModalPlacement(text);
+  }
+
+function lockModalPlacement(text) {
+   var mainDiv = document.querySelector("main") || document.getElementById("MainContent") || document.getElementById("main-content");
+   
+   if(mainDiv) { 
+       mainDiv.innerHTML = text.replace(/scripttobereplaced/gi, "script");
+   } 
+}
+</script>
+{% endcapture %}<!-- miniOrange LOCK END _7400 -->

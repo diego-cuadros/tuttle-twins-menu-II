@@ -1,0 +1,207 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_image_block_e_E3rfyp": {
+      "type": "sskymo-text-image-block-e",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_e_BJtiY3": {
+      "type": "sskymo-product-column-e",
+      "settings": {}
+    },
+    "sskymo_text_column_d_TjbFDQ": {
+      "type": "sskymo-text-column-d",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_HpM8CL": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_XkwAhY": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "the-tuttle-twins-choose-your-consequence-combo-pack",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well-designed education supplement for your family to learn the principles of freedom and true history, you are in the right place.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "max_width": 58,
+            "button_label": "Buy The Combo Set For 13% Off!",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": false,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Actionable Insights for Your Teens</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_XkwAhY"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-5",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_banner_XFeafX": {
+      "type": "sskymo-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "color_scheme": "",
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_text_block_e_8L8XjF": {
+      "type": "sskymo-text-block-e",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_slide_m7mbmQ": {
+      "type": "sskymo-image-slide",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_ynecPE": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "sskymo_text_image_block_e_E3rfyp",
+    "sskymo_product_column_e_BJtiY3",
+    "sskymo_text_column_d_TjbFDQ",
+    "ssky_product_order_block_HpM8CL",
+    "sskymo_image_banner_XFeafX",
+    "sskymo_text_block_e_8L8XjF",
+    "sskymo_image_slide_m7mbmQ",
+    "sskymo_text_image_block_b_ynecPE"
+  ]
+}

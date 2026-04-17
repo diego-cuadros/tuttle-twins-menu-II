@@ -1,0 +1,315 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "z_featured_collection_jknmaL": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Teen Guidebook Series",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "guidebooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_YTJiFy": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "choose-your-consequence",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_t3a9pY": {
+      "type": "z-featured-collection",
+      "name": "Academy Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Tuttle Twins Academy",
+        "heading_size": "h3",
+        "description": "<p>An online learning platform that encourages teens to think, question, and explore our world. </p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "academy",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "sskymo_text_image_block_d_dztLLw": {
+      "type": "sskymo-text-image-block-d",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_e_RMkaA6": {
+      "type": "sskymo-text-image-block-e",
+      "custom_css": [
+        ".price__container {color: #fff;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "image_position": "image-left",
+        "padding_top": 100,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_A3zmqM": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_CjTX8g": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Tuttle Twins Academy</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_fMnJ7r": {
+          "type": "caption",
+          "settings": {
+            "caption": "Educating and inspiring teens for the real world.",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_bXHnxK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Trusted content to shape the next generation of thinkers and leaders. An online learning platform that encourages teens to think, question, and explore our world. Launching with a bang, Tuttle Twins Academy offers an immediate treasure trove of knowledge with 24 immersive courses organized into six categories: </p><ul><li>U.S. History</li><li>Economics</li><li>Civics</li><li>Finances</li><li>Logic & Critical Thinking</li><li>Entrepreneurship</li></ul>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_VmpyWE": {
+          "type": "button",
+          "settings": {
+            "button_medium": true,
+            "button_large": false,
+            "button_label": "Enroll My Teen in the Academy",
+            "button_link": "shopify://pages/academy",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "number_counter_yRPxaT": {
+          "type": "number_counter",
+          "settings": {
+            "number_a": 24,
+            "text_a": "Different Courses",
+            "number_b": 215,
+            "text_b": "Engaging Lessons",
+            "number_c": 20,
+            "text_c": "Different Teachers"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CjTX8g",
+        "caption_fMnJ7r",
+        "text_bXHnxK",
+        "button_VmpyWE",
+        "number_counter_yRPxaT"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/teen_girls.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "sskymo_text_column_d_Ey8Mjy": {
+      "type": "sskymo-text-column-d",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_testimonials_c_NfQ6Df": {
+      "type": "sskymo-testimonials-c",
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_qUTDwH": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "z_featured_collection_jknmaL",
+    "z_featured_collection_YTJiFy",
+    "z_featured_collection_t3a9pY",
+    "sskymo_text_image_block_d_dztLLw",
+    "sskymo_text_image_block_e_RMkaA6",
+    "ssky_text_image_block_A3zmqM",
+    "sskymo_text_column_d_Ey8Mjy",
+    "sskymo_testimonials_c_NfQ6Df",
+    "sskymo_text_image_block_b_qUTDwH"
+  ]
+}

@@ -1,0 +1,923 @@
+{%- style -%}
+  .rcl-home-main__image.image-fit.media {
+    background: transparent;
+    max-height: 70rem;
+    margin-bottom: -8rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    .rcl-home-main__image.image-fit.media {
+      max-height: 50rem;
+    }
+  }
+
+  .media>*:not(.zoom):not(.deferred-media__poster-button), .media model-viewer {
+    position: relative;
+  }
+
+  .ssky-home-main__blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .ssky-home-main__blocks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  h1.ssky-home-main__heading.h0.weight-bold {
+    font-size: clamp(24px, 3vw, 48px);
+  }
+
+  .ssky-home-main__text.rte.text-body-large h5 {
+    font-size: clamp(16px, 2vw, 25px);
+  }
+
+  .ssky-home-main__block-left {
+    width: calc(100% - 12px);
+  }
+
+  .ssky-home-main-{{ section.id }} .ssky-home-main {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ssky-home-main-{{ section.id }} .ssky-home-main {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {%- if section.settings.top_left -%}
+    .ssky-home-main-{{ section.id }} .ssky-home-main {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-home-main-{{ section.id }} .ssky-home-main {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-home-main-{{ section.id }} .ssky-home-main {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-home-main-{{ section.id }} .ssky-home-main {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-home-main-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+
+  .rcl-blog__link {
+    font-size: 1.3rem;
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    letter-spacing: 0.04rem;
+    color: #bcecf6;
+    text-decoration: none;
+  }
+
+  .rcl-blog__link.blog-title {
+    font-weight: normal!important;
+  }
+
+  .btn-img img {
+    height: clamp(3.5rem, 3.5vw, 50px)
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 550px) {
+    .btn-img img {
+      height: clamp(5rem, 3.5vw, 50px);
+    }
+  }
+
+  svg.rcl-blog__link.e-font-icon-svg.e-fas-angle-right {
+    height: 11px;
+    fill: #fff;
+  }
+
+  nav.blog-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 3vw;
+    flex-wrap: wrap;
+  }
+
+  .ssky-home-main__image {
+    padding-bottom: 0 !important;
+  }
+
+  /* FIT image: make it actually take space on mobile */
+@media screen and (max-width: 749px) {
+  .rcl-home-main__image.image-fit.media {
+    max-height: none;          /* remove the cap */
+    height: auto;
+    min-height: 260px;         /* tweak: 240–340px usually feels right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rcl-home-main__image.image-fit.media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* keeps “fit” behavior */
+  }
+}
+
+/* Desktop/tablet can keep your existing sizing, but this helps consistency */
+@media screen and (min-width: 750px) {
+  .rcl-home-main__image.image-fit.media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rcl-home-main__image.image-fit.media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+  .ssky-home-main__buttons {
+    flex-flow: row;
+    @media (max-width: 1024px) {
+      max-width: 50rem;
+    }
+  }
+
+  .ssky-home-main__buttons .button {
+    min-width: 0;
+  }
+
+  .ssky-home-main__buttons .btn-img {
+    min-height: auto;
+  }
+
+  .ssky-home-main__buttons .btn-img {
+    padding: 0;
+    border: 0;
+  }
+
+  .ssky-home-main__buttons .btn-img:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+  }
+
+  .ssky-home-main__buttons {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ssky-blog-menu {
+  margin-top: 2rem;
+}
+
+.ssky-blog-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ssky-blog-menu__link {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.ssky-blog-menu__link:hover {
+  opacity: 1;
+}
+
+.ssky-blog-menu__link.is-active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+<div class="ssky-home-main-{{ section.id }}">
+  <div class="ssky-home-main gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-home-main__blocks">
+        <div class="ssky-home-main__block-left">
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'blog_menu' -%}
+  {% if block.settings.menu != blank %}
+    <nav class="ssky-blog-menu" {{ block.shopify_attributes }}>
+      <ul class="ssky-blog-menu__list">
+        {% for link in block.settings.menu.links %}
+          <li class="ssky-blog-menu__item">
+            <a
+              href="{{ link.url }}"
+              class="ssky-blog-menu__link{% if link.active %} is-active{% endif %}"
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+
+              {%- when 'breadcrumbs' -%}
+                <div class="ssky-home-main__caption ssky-text-block__caption h5 {{ block.settings.text_style }} {{ block.settings.color_class }}">
+                  <nav class="blog-breadcrumbs" aria-label="breadcrumb">
+                    {% if template contains 'article' %}
+                      <a class="rcl-blog__link" href="{{ routes.root_url }}">Home</a>
+                      {{- 'icon-fas-angle-right.svg' | inline_asset_content -}}
+                      <a class="rcl-blog__link" href="{{ blog.url }}">{{ blog.title }}</a>
+                      {{- 'icon-fas-angle-right.svg' | inline_asset_content -}}
+                      <span class="rcl-blog__link blog-title">{{ article.title }}</span>
+                    {% else %}
+                      <a class="rcl-blog__link" href="{{ routes.root_url }}">Home</a>
+                      {{- 'icon-fas-angle-right.svg' | inline_asset_content -}}
+                      <span class="rcl-blog__link blog-title">{{ page_title }}</span>
+                    {% endif %}
+                  </nav>
+                </div>
+              {%- when 'caption' -%}
+                <h2
+                  class="ssky-home-main__caption ssky-text-block__caption h5 {{ block.settings.text_style }} {{ block.settings.color_class }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.caption | escape }}
+                </h2>
+              {%- when 'heading' -%}
+                <h1
+                  class="ssky-home-main__heading {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.heading }}
+                </h1>
+{%- when 'custom_liquid' -%}
+  <div class="ssky-home-main__custom-liquid" {{ block.shopify_attributes }}>
+    {{ block.settings.custom_liquid }}
+  </div>
+
+              {%- when 'text' -%}
+                <div
+                  class="ssky-home-main__text rte{%- if block.settings.text_large %} text-body-large{%- endif -%}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.text }}
+                </div>
+              {%- when 'button' -%}
+                <div class="ssky-home-main__buttons{%- if block.settings.button_full %} ssky-home-main__buttons--fullwidth{%- endif -%}">
+                  {%- comment -%}
+                    ---------------------
+                    Button A
+                    ---------------------
+                  {%- endcomment -%}
+                  {%- if block.settings.button_label != blank
+                    or block.settings.use_button_image == true
+                    and block.settings.button_image != blank
+                  -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="ssky-home-main__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.use_button_image and block.settings.button_image != blank and block.settings.button_label == blank %} btn-img{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {%- if block.settings.use_button_image and block.settings.button_image != blank -%}
+                        {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                        {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                        {{
+                          block.settings.button_image
+                          | image_url: width: 1500
+                          | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      {%- else -%}
+                        {{ block.settings.button_label | escape }}
+                      {%- endif -%}
+                    </a>
+                  {%- endif -%}
+
+                  {%- comment -%}
+                    ---------------------
+                    Button B
+                    ---------------------
+                  {%- endcomment -%}
+                  {%- if block.settings.button_label_b != blank
+                    or block.settings.use_button_image_b == true
+                    and block.settings.button_image_b != blank
+                  -%}
+                    <a
+                      {% if block.settings.button_link_b == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_b }}"
+                      {% endif %}
+                      class="ssky-home-main__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.use_button_image_b and block.settings.button_image_b != blank and block.settings.button_label_b == blank %} btn-img{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {%- if block.settings.use_button_image_b and block.settings.button_image_b != blank -%}
+                        {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                        {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                        {{
+                          block.settings.button_image_b
+                          | image_url: width: 1500
+                          | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      {%- else -%}
+                        {{ block.settings.button_label_b | escape }}
+                      {%- endif -%}
+                    </a>
+                  {%- endif -%}
+
+                  {%- comment -%}
+                    ---------------------
+                    Button C
+                    ---------------------
+                  {%- endcomment -%}
+                  {%- if block.settings.button_label_c != blank
+                    or block.settings.use_button_image_c == true
+                    and block.settings.button_image_c != blank
+                  -%}
+                    <a
+                      {% if block.settings.button_link_c == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_c }}"
+                      {% endif %}
+                      class="ssky-home-main__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.use_button_image_c and block.settings.button_image_c != blank and block.settings.button_label_c == blank %} btn-img{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {%- if block.settings.use_button_image_c and block.settings.button_image_c != blank -%}
+                        {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                        {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                        {{
+                          block.settings.button_image_c
+                          | image_url: width: 1500
+                          | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      {%- else -%}
+                        {{ block.settings.button_label_c | escape }}
+                      {%- endif -%}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- when 'milestones' -%}
+                <div class="ssky-home-main__milestones" {{ block.shopify_attributes }}>
+                  {%- if block.settings.title_a != blank -%}
+                    <div class="ssky-home-main__milestone-one">
+                      <div class="ssky-home-main__ms-heading h2">{{ block.settings.title_a }}</div>
+                      <div class="ssky-home-main__ms-text rte">{{ block.settings.text_a }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title_b != blank -%}
+                    <div class="ssky-home-main__milestone-two">
+                      <div class="ssky-home-main__ms-heading h2">{{ block.settings.title_b }}</div>
+                      <div class="ssky-home-main__ms-text">{{ block.settings.text_b }}</div>
+                      {%- if block.settings.review_stars != blank -%}
+                        {{ block.settings.review_stars | image_url: width: 200 | image_tag }}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.icon != blank -%}
+                    <div class="ssky-home-main__milestone-three">
+                      {{ block.settings.icon | image_url: width: 300 | image_tag }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- when 'spacer' -%}
+                <div
+                  class="ssky-home-main__spacer"
+                  style="padding-bottom: {{ block.settings.spacer_height_vw }}vw;"
+                  {{ block.shopify_attributes }}
+                ></div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'image' -%}
+              <div
+                class="rcl-home-main__image {%- if block.settings.image_fit %} image-fit{%- endif -%}{%- if block.settings.image != blank %} media{%- else %} placeholder{% endif -%}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.image != blank -%}
+                  {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                  {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1500
+                    | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                  }}
+                {%- else -%}
+                  {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTb Blog Podcast Main",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["blog", "article", "page"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+  "type": "blog_menu",
+  "name": "Blog Menu",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Blog menu"
+    }
+  ]
+},
+    {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "small-bold",
+              "label": "Small Bold"
+            },
+            {
+              "value": "medium-semibold",
+              "label": "Medium Semibold"
+            },
+            {
+              "value": "large-semibold",
+              "label": "Large Semibold"
+            },
+            {
+              "value": "large-bold",
+              "label": "Large Bold"
+            }
+          ],
+          "default": "large-bold",
+          "label": "Text Style"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "Color Class",
+          "default": "primary",
+          "info": "Optional custom class for styling the breadcrumb text color."
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "small-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "medium-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+            },
+            {
+              "value": "large-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+            },
+            {
+              "value": "large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+            }
+          ],
+          "default": "large-bold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "primary-yellow",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "t:sections.all.heading_size.options__0.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            {
+              "value": "medium",
+              "label": "t:sections.all.heading_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.heading_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.heading_weight.options__3.label"
+            }
+          ],
+          "default": "semibold",
+          "label": "t:sections.all.heading_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_fit",
+          "label": "Switch between image fill or fit.",
+          "default": false,
+          "info": "Fill covers the container, while fit fits within the container."
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "button_large",
+          "default": true,
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_large.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_full",
+          "default": true,
+          "label": "Full-width button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.ssky_text_block.blocks.button.settings.button_label.default",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_button_image",
+          "label": "Use image instead of text for Button A",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "button_image",
+          "label": "Button Image A"
+        },
+        {
+          "type": "text",
+          "id": "button_label_b",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_b",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_button_image_b",
+          "label": "Use image instead of text for Button B",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "button_image_b",
+          "label": "Button Image B"
+        },
+        {
+          "type": "text",
+          "id": "button_label_c",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_c",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_button_image_c",
+          "label": "Use image instead of text for Button C",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "button_image_c",
+          "label": "Button Image C"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "spacer",
+      "name": "Spacer",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "spacer_height_vw",
+          "label": "Spacer height (VW)",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 5,
+          "unit": "vw"
+        }
+      ]
+    },
+    {
+  "type": "custom_liquid",
+  "name": "Custom Liquid",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Custom Liquid",
+      "default": "<p>Add custom Liquid or HTML here.</p>"
+    }
+  ]
+},
+    {
+      "type": "milestones",
+      "name": "Milestones",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Milestones One"
+        },
+        {
+          "type": "text",
+          "id": "title_a",
+          "label": "Title",
+          "default": "100+"
+        },
+        {
+          "type": "richtext",
+          "id": "text_a",
+          "label": "Text",
+          "default": "<p>Order's <br> Every day</p>"
+        },
+        {
+          "type": "header",
+          "content": "Milestones Two - Reviews"
+        },
+        {
+          "type": "text",
+          "id": "title_b",
+          "label": "Title",
+          "default": "1000+"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_stars",
+          "label": "Review Stars"
+        },
+        {
+          "type": "text",
+          "id": "text_b",
+          "label": "Text",
+          "default": "5 Star Reviews"
+        },
+        {
+          "type": "header",
+          "content": "Milestones Three - Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTb Blog Podcast Main",
+      "blocks": [
+        {
+          "type": "breadcrumbs"
+        },
+        {
+          "type": "caption"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "spacer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

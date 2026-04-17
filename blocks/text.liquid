@@ -1,0 +1,156 @@
+{%- liquid
+  assign visibility_classes = ''
+  if block.settings.hide_on_mobile
+    assign visibility_classes = visibility_classes | append: ' hide-mobile'
+  endif
+  if block.settings.hide_on_tablet
+    assign visibility_classes = visibility_classes | append: ' hide-tablet'
+  endif
+  if block.settings.hide_on_desktop
+    assign visibility_classes = visibility_classes | append: ' hide-desktop'
+  endif
+-%}
+
+{%- style -%}
+  .tt-text-{{ block.id }} {
+    font-size: {{ block.settings.font_size_mobile }}px;
+    font-weight: {{ block.settings.font_weight }};
+    text-transform: {{ block.settings.text_transform }};
+    text-align: {{ block.settings.alignment }};
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    {%- if block.settings.color != blank -%}
+      color: {{ block.settings.color }};
+    {%- endif -%}
+  }
+  @media screen and (min-width: 750px) {
+    .tt-text-{{ block.id }} {
+      font-size: {{ block.settings.font_size_desktop }}px;
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tt-text-{{ block.id }}{{ visibility_classes }} rte" {{ block.shopify_attributes }}>
+  {{ block.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_tablet",
+      "label": "Hide on tablet",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_desktop",
+      "label": "Hide on desktop",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "Share information about your brand with your customers!"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Alignment"
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "400",
+      "label": "Font weight"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "lowercase", "label": "Lowercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "none",
+      "label": "Text transform"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 16
+    }
+  ],
+  "presets": [
+    { "name": "Text" }
+  ]
+}
+{% endschema %}

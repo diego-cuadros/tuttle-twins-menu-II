@@ -1,0 +1,96 @@
+{%- comment -%}
+  Shopify robots.txt.liquid
+  Strategy:
+  1) Preserve Shopify default robots groups/rules
+  2) Add explicit AI bot groups after defaults
+  3) Keep checkout/cart/account/admin and preview paths blocked
+{%- endcomment -%}
+
+{%- for group in robots.default_groups -%}
+{{- group.user_agent -}}
+{%- for rule in group.rules -%}
+{{ rule }}
+{%- endfor -%}
+{%- if group.sitemap != blank -%}
+{{ group.sitemap }}
+{%- endif -%}
+
+{%- endfor -%}
+
+# --- AI / LLM crawlers ---
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /carts
+Disallow: /account
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /sf_private_access_tokens
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /cdn/wpm/*.js
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /carts
+Disallow: /account
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /sf_private_access_tokens
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /cdn/wpm/*.js
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /carts
+Disallow: /account
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /sf_private_access_tokens
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /cdn/wpm/*.js
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /carts
+Disallow: /account
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /sf_private_access_tokens
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /cdn/wpm/*.js
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /carts
+Disallow: /account
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /sf_private_access_tokens
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /cdn/wpm/*.js
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: FacebookBot
+Allow: /

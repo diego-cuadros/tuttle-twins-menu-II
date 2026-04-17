@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "dc_featured_collection_ftanQP": {
+      "type": "dc-featured-collection",
+      "name": "dc-featured-collection",
+      "settings": {
+        "collection_handles": "bundles,childrens-series,magazine,books-for-teens,toddler-books,americas-history-bonuses,economics-for-kids,e-book,cartoon,audiobooks,merch,other-products",
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "sskymo_text_image_block_h_3TBNFh": {
+      "type": "sskymo-text-image-block-h",
+      "name": "TTm Other languages",
+      "settings": {
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_M4EUBn": {
+      "type": "sskymo-text-image-block-b",
+      "name": "TTm Footer guarantee",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_49FEpN": {
+      "type": "sskymo-text-image-block",
+      "name": "TTm Take a stand today",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "dc_featured_collection_ftanQP",
+    "sskymo_text_image_block_h_3TBNFh",
+    "sskymo_text_image_block_b_M4EUBn",
+    "sskymo_text_image_block_49FEpN"
+  ]
+}

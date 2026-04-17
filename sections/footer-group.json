@@ -1,0 +1,302 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "ssky_footer_corner_color": {
+      "type": "ssky-footer-corner-color",
+      "blocks": {
+        "template_LyVdtF": {
+          "type": "template",
+          "settings": {
+            "title": "toddlers",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_6rNUNU": {
+          "type": "template",
+          "settings": {
+            "title": "childrens-resources",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_XUdh4M": {
+          "type": "template",
+          "settings": {
+            "title": "childrens-series",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_aUQ9nQ": {
+          "type": "template",
+          "settings": {
+            "title": "consequence",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_rVTXxH": {
+          "type": "template",
+          "settings": {
+            "title": "guidebooks",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_tqpnCt": {
+          "type": "template",
+          "settings": {
+            "title": "e-book",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_gWncNB": {
+          "type": "template",
+          "settings": {
+            "title": "cartoon",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_HGa9Qf": {
+          "type": "template",
+          "settings": {
+            "title": "magazine",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_WDEFxk": {
+          "type": "template",
+          "settings": {
+            "title": "other-products",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_fkpcmq": {
+          "type": "template",
+          "settings": {
+            "title": "teens",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_b7M33F": {
+          "type": "template",
+          "settings": {
+            "title": "guide",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_rgC3Hd": {
+          "type": "template",
+          "settings": {
+            "title": "cart",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_9H8yEg": {
+          "type": "template",
+          "settings": {
+            "title": "babylon-bee",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_kTmajP": {
+          "type": "template",
+          "settings": {
+            "title": "free-market",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_pUdjwT": {
+          "type": "template",
+          "settings": {
+            "title": "other-languages",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_Fz88iY": {
+          "type": "template",
+          "settings": {
+            "title": "books-for-teens",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_gcJUN4": {
+          "type": "template",
+          "settings": {
+            "title": "americas-history",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_EBRMwe": {
+          "type": "template",
+          "settings": {
+            "title": "about",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_mawTY4": {
+          "type": "template",
+          "settings": {
+            "title": "economics",
+            "corner_color": "#04aed8"
+          }
+        },
+        "template_VQTF3D": {
+          "type": "template",
+          "settings": {
+            "title": "template1",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_xn8WRW": {
+          "type": "template",
+          "settings": {
+            "title": "template2",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_mB6E4W": {
+          "type": "template",
+          "settings": {
+            "title": "template3",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_73FRUJ": {
+          "type": "template",
+          "settings": {
+            "title": "template4",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_EKRHA4": {
+          "type": "template",
+          "settings": {
+            "title": "template5",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_WVYdzK": {
+          "type": "template",
+          "settings": {
+            "title": "template7",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_Hhjchx": {
+          "type": "template",
+          "settings": {
+            "title": "template8",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_XHGLUT": {
+          "type": "template",
+          "settings": {
+            "title": "template9",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_zY6Xih": {
+          "type": "template",
+          "settings": {
+            "title": "kids-vs-congress",
+            "corner_color": "#bcecf6"
+          }
+        },
+        "template_4Wd6XC": {
+          "type": "template",
+          "settings": {
+            "title": "template11",
+            "corner_color": "#bcecf6"
+          }
+        }
+      },
+      "block_order": [
+        "template_LyVdtF",
+        "template_6rNUNU",
+        "template_XUdh4M",
+        "template_aUQ9nQ",
+        "template_rVTXxH",
+        "template_tqpnCt",
+        "template_gWncNB",
+        "template_HGa9Qf",
+        "template_WDEFxk",
+        "template_fkpcmq",
+        "template_b7M33F",
+        "template_rgC3Hd",
+        "template_9H8yEg",
+        "template_kTmajP",
+        "template_pUdjwT",
+        "template_Fz88iY",
+        "template_gcJUN4",
+        "template_EBRMwe",
+        "template_mawTY4",
+        "template_VQTF3D",
+        "template_xn8WRW",
+        "template_mB6E4W",
+        "template_73FRUJ",
+        "template_EKRHA4",
+        "template_WVYdzK",
+        "template_Hhjchx",
+        "template_XHGLUT",
+        "template_zY6Xih",
+        "template_4Wd6XC"
+      ],
+      "settings": {}
+    },
+    "1746648074d290c12c": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_8x7Gtd": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "212015",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_8x7Gtd"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "footer_logo": "shopify://shop_images/TT_LOGO_Yellow.webp",
+        "footer_menu": "footer",
+        "color_scheme": "scheme-4",
+        "show_policy": true,
+        "copyright_additional": "Part of the <a href=\"https://libertas.org/\" target=\"_blank\" title=\"https://libertas.org/\">Libertas Network</a>",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "margin_top": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "ssky_footer_corner_color",
+    "1746648074d290c12c",
+    "footer"
+  ]
+}

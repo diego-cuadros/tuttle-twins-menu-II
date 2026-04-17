@@ -1,0 +1,293 @@
+{%- liquid
+  assign merging_with_section_below = false
+  assign show_as_card = false
+  assign narrow_width = false
+  if section.settings.merging_with_section_below == true
+    assign merging_with_section_below = true
+  elsif section.settings.show_as_card == true
+    assign show_as_card = true
+    if section.settings.narrow_width == true
+      assign narrow_width = true
+    endif
+  endif
+-%}
+{%- style -%}
+  .ssky-text-block-{{ section.id }} .ssky-text-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-text-block-{{ section.id }} .ssky-text-block__blocks > *:not(.ssky-text-block__divider) {
+    max-width: 60rem;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__blocks > *:not(.ssky-text-block__divider, .ssky-text-block__buttons) {
+      max-width: {{ section.settings.max_width }}rem;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if merging_with_section_below -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      z-index: 1;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__layout-merging-color {
+      background-color: {{ section.settings.merging_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+  {%- if narrow_width -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      max-width: 1100px;
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-text-block-{{ section.id }}">
+  <div class="ssky-text-block content-container color-{{ section.settings.color_scheme }} gradient">
+    {%- if merging_with_section_below -%}
+      <div class="ssky-text-block__layout-merging page-width{%- if section.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}">
+        <div class="color-{{ section.settings.color_scheme_layout_merging }} gradient">
+    {%- endif -%}
+    {%- if show_as_card -%}
+      <div class="page-width">
+    {%- endif -%}
+    <div class="ssky-text-block__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-text-block__blocks center">
+        {%- for americas_what_families_saying in shop.metaobjects.americas_what_families_saying.values limit: 1 -%}
+          {%- assign heading_length = americas_what_families_saying.heading | metafield_text | size -%}
+          <h2
+            class="ssky-text-block__heading rte h3 weight-semibold{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {{ americas_what_families_saying.heading | metafield_tag }}
+          </h2>
+
+          <div
+            class="ssky-text-block__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="rte">
+              {{ americas_what_families_saying.testimonial_one | metafield_tag }}
+            </div>
+          </div>
+
+          <div class="ssky-text-block__divider" style="margin:24px auto;"></div>
+
+          <div
+            class="ssky-text-block__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="rte">
+                {{ americas_what_families_saying.testimonial_two | metafield_tag }}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+    {%- if merging_with_section_below -%}
+      </div>
+      </div>
+      <div
+        class="ssky-text-block__layout-merging-color {%- if section.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}"
+      ></div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Americas families say",
+  "tag": "section",
+  "class": "section sskymo-text-block-f",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 72,
+      "max": 120,
+      "step": 1,
+      "label": "t:sections.ssky_text_block.settings.max_width.label",
+      "default": 80
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_width",
+      "label": "t:sections.all.ssky_layouts.extension.narrow",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.merging"
+    },
+    {
+      "type": "checkbox",
+      "id": "merging_with_section_below",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_layout_merging",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "color",
+      "id": "merging_color",
+      "label": "Merging color",
+      "default": "#bcecf6"
+    },
+    {
+      "type": "checkbox",
+      "id": "merge_with_section_above",
+      "label": "t:sections.all.ssky_layouts.extension.merging_above",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Americas families say"
+    }
+  ]
+}
+{% endschema %}

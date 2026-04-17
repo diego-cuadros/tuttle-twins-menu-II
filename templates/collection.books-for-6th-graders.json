@@ -1,0 +1,389 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "use_shop_now_to_go_to_pdp": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "tag_color": "#000000"
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_z8d3rq": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_PQEykk": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_Fpc86G": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_ccPreM": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_hAThCR": {
+          "type": "caption",
+          "settings": {
+            "caption": "Educational Books for 6th Graders Who Want More From Reading",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_pK3kaD": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>By 6th grade, many kids are ready for books that do more than fill reading time. They want stories that feel a little more grown up, and parents want books that lead to better questions, stronger character, and real conversations at home. Tuttle Twins meets that moment with stories that help kids understand how the world works in language they can actually grasp. Parents appreciate clear lessons woven into stories that keep kids turning pages—and then turning those ideas into real questions and conversations about how the world works.</p><h2>Benefits of Books for 6th Graders</h2><p>Our books help older kids become sharper thinkers, more confident decision-makers, and more engaged participants in family conversations. Here are five reasons parents choose this collection for the middle-school years.</p><h3>Builds Real-World Understanding</h3><p>Sixth graders start connecting ideas from books to everyday life. Our stories introduce ideas like earning and spending, starting a business, rules and fairness, and personal responsibility—all through situations kids can recognize in real life. Kids see how choices shape outcomes. They begin spotting these ideas at home, in school, within their social groups, and in the world around them. Parents often say one chapter turns into a real conversation later that day — at dinner, in the car, or while running errands — because kids start noticing how choices, money, fairness, and responsibility show up in the world around them.</p><h3>Encourages Independent Thinking</h3><p>Our books invite kids to think instead of repeating opinions. Characters face real decisions, make mistakes, and learn from outcomes. Readers explore fairness, incentives, honesty, and responsibility through relatable situations. This approach helps kids weigh ideas for themselves instead of just echoing what they hear. Parents appreciate stories that open honest discussion without turning into a lecture, giving kids room to ask why, test ideas, and speak up with growing confidence.</p><h3>Makes Reading Engaging for Older Kids</h3><p>Many 6th graders check out when books feel babyish or textbook-heavy. Tuttle Twins hits the middle ground: strong stories, fast-moving chapters, humor, and ideas older kids actually want to talk about afterward. The writing is approachable enough for independent reading, while still giving kids something meaningful to wrestle with.</p><h3>Supports Meaningful Family Conversations</h3><p>By middle school, kids start asking bigger questions—why some choices have consequences, why prices change, what fairness really means, and how to stand their ground when friends think differently. Instead of lectures, families can talk about characters and choices from the books, like <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-golden-rule\" title=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-golden-rule\">The Tuttle Twins and the Golden Rule</a>. It makes discussions feel relaxed and honest. Reading together or talking after chapters helps families stay connected during changing years.</p><h3>Written for Growing Readers</h3><p>Our books for 6th graders respect their maturity without overwhelming them. Chapters are manageable, the vocabulary stretches kids in a healthy way, and examples help big ideas click without talking down to them. Kids can read alone, read aloud, or switch between both. Parents appreciate books that match their kids’ growing attention spans and curiosity.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_hAThCR",
+        "text_pK3kaD"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_rGxwrp": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_GmUj8f": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Frequently Asked Questions</h2>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_JadEGK": {
+          "type": "faq",
+          "settings": {
+            "text": "<h5>What Reading Level Are These Books For?</h5>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our books for 6th graders are written for upper elementary and early middle school readers. Language and chapter length support independent reading. Many younger advanced readers enjoy them, and older kids still find the ideas interesting and age-appropriate.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_B79rxf": {
+          "type": "faq",
+          "settings": {
+            "text": "<h5>Are These Books Educational or Just Stories?</h5>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>They’re stories first, but stories with substance. Kids get adventure, humor, and memorable characters, while parents get books that naturally open conversations about money, choices, responsibility, and how the world works.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_9PVPq9": {
+          "type": "faq",
+          "settings": {
+            "text": "<h5>Can My Child Read These Books on Their Own?</h5>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes. Most sixth graders can read independently with ease. Families also enjoy reading together and discussing ideas along the way. The books work well for homeschool, family reading time, or personal reading during quiet hours.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_9nCdVA": {
+          "type": "faq",
+          "settings": {
+            "text": "<h5>What Makes Tuttle Twins Books Different for Older Kids?</h5>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our books respect kids’ ability to think deeply. We explain big ideas in clear, honest ways without talking down to readers. Parents trust the values behind the stories, and kids stay hooked because the situations feel real — and worth talking about after the chapter ends.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_A4N7ME": {
+          "type": "faq",
+          "settings": {
+            "text": "<h5>Looking for Something Else?</h5>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Looking for the right next step for your family? Explore more Tuttle Twins books for every stage, from early read-alouds to deeper history and <a href=\"https://tuttletwins.com/collections/books-for-teens\" title=\"https://tuttletwins.com/collections/books-for-teens\">books for teens</a> that keep the conversations going as your kids grow. Each one is designed to help you raise kids who think clearly, ask better questions, and bring great conversations back to the dinner table.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GmUj8f",
+        "faq_JadEGK",
+        "faq_B79rxf",
+        "faq_9PVPq9",
+        "faq_9nCdVA",
+        "faq_A4N7ME"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "sskymo_three_block_z8d3rq",
+    "sskymo_product_column_c_PQEykk",
+    "sskymo_text_image_block_Fpc86G",
+    "sskymo_text_image_block_b_V3HPhx",
+    "ssky_text_block_ccPreM",
+    "ssky_faqs_rGxwrp"
+  ]
+}

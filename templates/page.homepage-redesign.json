@@ -1,0 +1,1047 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_home_hero_2_bdWz4p": {
+      "type": "ssky-home-hero-2",
+      "blocks": {
+        "pill_banner_pgDgkP": {
+          "type": "pill_banner",
+          "settings": {
+            "pill_text": "<p><strong>⭐️⭐️⭐️⭐️⭐️ 4,500+ Five-Star Reviews • 7 Million+ Happy Kids</strong></p>"
+          }
+        },
+        "heading_EChFEL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Raise a Kid Who Grows Up <span class=\"hero2-teal-dark\">With Ideas,</span> Not Just Grades",
+            "heading_size": "h0",
+            "heading_weight": "semibold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_G3TxYg": {
+          "type": "text",
+          "settings": {
+            "text": "Stories that give kids the ideas behind <span class=\"hero2-teal-dark\"><strong>freedom, economics, and history,</strong></span> and give parents the dinner table back.",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_D9XPxK": {
+          "type": "button",
+          "settings": {
+            "button_large": true,
+            "button_full": true,
+            "button_label": "Toddlers (2-4)",
+            "button_link": "shopify://collections/toddler-books",
+            "button_label_b": "Kids (5-12)",
+            "button_link_b": "shopify://pages/childrens-resources",
+            "button_label_c": "Teens (13+)",
+            "button_link_c": "shopify://collections/books-for-teens",
+            "button_style_secondary": false,
+            "button_style_teal": true,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "button_a6AHVf": {
+          "type": "button",
+          "settings": {
+            "button_large": true,
+            "button_full": true,
+            "button_label": "Shop Bundles Up to 70% Off",
+            "button_link": "shopify://collections/bundles",
+            "button_label_b": "",
+            "button_link_b": "",
+            "button_label_c": "",
+            "button_link_c": "",
+            "button_style_secondary": false,
+            "button_style_teal": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": true
+          }
+        },
+        "image_Y7WHxn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/homepage_image_bec8bf97-127a-46e4-ae0d-34775e4c4f1a.png",
+            "image_fit": true,
+            "image_link": ""
+          }
+        },
+        "text_Rj3YQj": {
+          "type": "text",
+          "settings": {
+            "text": "<strong><a href=\"https://www.tuttletwins.com/products/tuttle-twins-family-starter-pack\"><span class=\"hero2-teal-dark\" style=\"padding:20px;\">Start with the Family Starter Pack →</span></a></strong>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_VwWRyh": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<span style=\"font-size:14px; font-weight:700;color:#555;font-family:'Nunito Sans';padding:20px;\">🛡️ 30-Day Guarantee • 🚚 Free Shipping over $175 • 📚 Ages 2–18</span>",
+            "text_size": "regular",
+            "text_weight": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "pill_banner_pgDgkP",
+        "heading_EChFEL",
+        "text_G3TxYg",
+        "button_D9XPxK",
+        "button_a6AHVf",
+        "image_Y7WHxn",
+        "text_Rj3YQj",
+        "text_VwWRyh"
+      ],
+      "custom_css": [
+        "p {font-family: \"Nunito Sans\";}",
+        "@media (max-width: 767px) {.ssky-home-hero-2__image {display: none !important; } .ssky-home-hero-2__pill {font-size: 11px !important; }}"
+      ],
+      "name": "Homepage Hero 2",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "padding_top": 40,
+        "padding_bottom": 44,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#ffffff"
+      }
+    },
+    "ssky_trust_bar_dqeAgA": {
+      "type": "ssky-trust-bar",
+      "blocks": {
+        "item_x84Tcq": {
+          "type": "item",
+          "settings": {
+            "title": "475,000+",
+            "text": "Tuttle Twins families"
+          }
+        },
+        "item_rxjmaJ": {
+          "type": "item",
+          "settings": {
+            "title": "★★★★★ 4.9",
+            "text": "Average review across all titles"
+          }
+        },
+        "item_wTEEQd": {
+          "type": "item",
+          "settings": {
+            "title": "7M+",
+            "text": "Books sold"
+          }
+        },
+        "item_UwfMwF": {
+          "type": "item",
+          "settings": {
+            "title": "30-Day",
+            "text": "Money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "item_x84Tcq",
+        "item_rxjmaJ",
+        "item_wTEEQd",
+        "item_UwfMwF"
+      ],
+      "custom_css": [
+        ".ssky-trust-bar__item {text-align: center;}",
+        ".ssky-trust-bar--teal .ssky-trust-bar__text {font-size: 14px; color: white;}",
+        ".ssky-trust-bar--teal .ssky-trust-bar__title {font-size: 24px;}"
+      ],
+      "name": "Trust Bar",
+      "settings": {
+        "style": "teal",
+        "color_scheme": "scheme-3",
+        "show_images": false,
+        "padding_y_mobile": 18,
+        "padding_y_desktop": 14
+      }
+    },
+    "ssky_stat_cards_jpQnUa": {
+      "type": "ssky-stat-cards",
+      "blocks": {
+        "caption_eLkngU": {
+          "type": "caption",
+          "settings": {
+            "caption": "FROM OUR SURVEY OF 1,014 PARENTS"
+          }
+        },
+        "heading_W9GR9k": {
+          "type": "heading",
+          "settings": {
+            "heading": "90% of Parents Know Something Is Missing",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_hNbizt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We surveyed 1,014 parents of school-aged kids across the U.S. Here’s what they said:</p>"
+          }
+        },
+        "card_thDREU": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#04aed8",
+            "icon_emoji": "",
+            "stat": "10%",
+            "internal_heading": "",
+            "body": "of parents feel confident schools are preparing their kids for life after graduation",
+            "pill_text": "",
+            "subtext": ""
+          }
+        },
+        "card_DVhyE3": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#f19514",
+            "icon_emoji": "",
+            "stat": "#1",
+            "internal_heading": "",
+            "body": "subject parents want schools to teach more of: Financial Literacy and Economics",
+            "pill_text": "",
+            "subtext": ""
+          }
+        },
+        "card_qTQXrT": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#da5846",
+            "icon_emoji": "",
+            "stat": "58%",
+            "internal_heading": "",
+            "body": "of parents believe the government has too much control over school curricula",
+            "pill_text": "",
+            "subtext": ""
+          }
+        },
+        "card_fDefnh": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#afc856",
+            "icon_emoji": "",
+            "stat": "55%",
+            "internal_heading": "",
+            "body": "of parents are already supplementing their child's education with outside resources",
+            "pill_text": "",
+            "subtext": ""
+          }
+        },
+        "buttons_UTMTBe": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_large": true,
+            "button_full": false,
+            "button_label": "View the Survey",
+            "button_link": "https://www.tuttletwins.com/blogs/blog/we-surveyed-1-000-parents-heres-what-they-told-us-about-schooling-today",
+            "button_style_secondary": false,
+            "button_label_b": "",
+            "button_link_b": "",
+            "button_label_c": "",
+            "button_link_c": "",
+            "button_label_d": "",
+            "button_link_d": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_eLkngU",
+        "heading_W9GR9k",
+        "text_hNbizt",
+        "card_thDREU",
+        "card_DVhyE3",
+        "card_qTQXrT",
+        "card_fDefnh",
+        "buttons_UTMTBe"
+      ],
+      "name": "Colored Stat Cards",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "card_background": "#ffffff",
+        "padding_y_mobile": 40,
+        "padding_y_desktop": 60
+      }
+    },
+    "ssky_stat_cards_dbQWJG": {
+      "type": "ssky-stat-cards",
+      "blocks": {
+        "caption_qBfzXq": {
+          "type": "caption",
+          "settings": {
+            "caption": "WHAT WE TEACH"
+          }
+        },
+        "heading_TxiTyQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "The 3 Subjects Every Kid Deserves to Learn",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_4WdzgR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lots of kids can ace a test. Fewer can explain why prices rise, how governments fall, or what makes someone truly free. Economics. History. Liberty. That’s what we write about.</p>"
+          }
+        },
+        "card_kxUzAx": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#04aed8",
+            "icon_emoji": "💵",
+            "stat": "",
+            "internal_heading": "Money & Economics",
+            "body": "How money works, what markets do, how to start a business, and what value creation really means taught through stories kids actually want to read.",
+            "pill_text": "📊 #1 subject parents want taught in schools",
+            "subtext": ""
+          }
+        },
+        "card_kHWa4B": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#f19514",
+            "icon_emoji": "🏛️",
+            "stat": "",
+            "internal_heading": "Real History & Civics",
+            "body": "The full story of American history, including the ideas of freedom and self-government that shaped the nation with context and principles, not just dates.",
+            "pill_text": "📚 55% of families already supplementing at home",
+            "subtext": ""
+          }
+        },
+        "card_UP7Cxa": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#da5846",
+            "icon_emoji": "🧠",
+            "stat": "",
+            "internal_heading": "Critical Thinking & Logic",
+            "body": "How to spot fallacies, think independently, and evaluate ideas on their merit. Skills that makes everything else click and that schools rarely teach.",
+            "pill_text": "🎯 Taught through stories, not worksheets",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_qBfzXq",
+        "heading_TxiTyQ",
+        "text_4WdzgR",
+        "card_kxUzAx",
+        "card_kHWa4B",
+        "card_UP7Cxa"
+      ],
+      "custom_css": [
+        ".page-width {background: #efefef;}"
+      ],
+      "name": "Colored Stat Cards",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "card_background": "#ffffff",
+        "padding_y_mobile": 40,
+        "padding_y_desktop": 64
+      }
+    },
+    "ssky_how_it_works_VkwdmV": {
+      "type": "ssky-how-it-works",
+      "name": "How It Works",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "accent_color": "#04aed8",
+        "caption": "Your Next Move",
+        "heading": "Dinner Table Conversations Start Here",
+        "text": "<p>No planning required. Order the bundle that fits your child's age and watch what happens at dinner.</p>",
+        "step1_title": "Choose Your Child's Age",
+        "step1_text": "Toddlers, ages 5-12, or teens. Find where your child is today, and give them the ideas that take them further than you imagined.",
+        "step2_title": "Pick Your Bundle",
+        "step2_text": "Select from one of our most popular bundles  below.",
+        "step3_title": "Start Reading Together",
+        "step3_text": "Most kids beg for five more minutes of screen time. Tuttle Twins kids beg for one more chapter.",
+        "p_2_4_1": "the-tuttle-toddlers-combo-set-1",
+        "p_2_4_1_blurb": "A complete 6-book collection designed just for toddlers — from ABCs to 123s and everything in between. Build early literacy, counting skills, and character foundations in one adorable, best-selling bundle.",
+        "p_2_4_2": "the-tuttle-toddlers-combo-set",
+        "p_2_4_2_blurb": "This power-packed 3-book ABC bundle teaches letters, boosts vocabulary, and sparks early reading confidence — all in one fun, parent-approved set.",
+        "p_2_4_3": "the-tuttle-toddlers-123-combo-set",
+        "p_2_4_3_blurb": "Big numbers for little learners. This 3-book set helps toddlers count, recognize numbers, and start understanding “how many” — all through bright, engaging pages they’ll want to read again and again.",
+        "p_2_4_4": "",
+        "p_2_4_4_blurb": "",
+        "p_5_8_1": "tuttle-twins-combo-pack-plus-free-bonuses",
+        "p_5_8_1_blurb": "Everything you need to start the journey. The best-selling Family Starter Pack combines our 14-book Kids Series with our 2-volume America’s History set — giving your family a strong foundation in economics, government, and the story of freedom.",
+        "p_5_8_2": "seasons-1-3-graphic-novels-box-set-hardback-1",
+        "p_5_8_2_blurb": "34 full-color hardback graphic novels adapted from the Tuttle Twins animated show that your kids already love watching, now in their hands to read, reread, and laugh through again. Economics, free speech, Bitcoin, government, and the principles of freedom — told through Ethan and Emily in the stories kids can't put down.",
+        "p_5_8_3": "",
+        "p_5_8_3_blurb": "",
+        "p_5_8_4": "",
+        "p_5_8_4_blurb": "",
+        "p_9_12_1": "tuttle-twins-family-starter-pack",
+        "p_9_12_1_blurb": "Everything you need to start the journey. The best-selling Family Starter Pack combines our 14-book Kids Series with our 2-volume America’s History set — giving your family a strong foundation in economics, government, and the story of freedom.",
+        "p_9_12_2": "tuttle-twins-combo-pack-plus-free-bonuses",
+        "p_9_12_2_blurb": "The complete 14-book Kids Series — plus free activity workbooks to bring the lessons to life. Teach big ideas about economics, government, and freedom in a way kids understand and remember.",
+        "p_9_12_3": "americas-history-volume-1-2-bundle",
+        "p_9_12_3_blurb": "Two beautifully illustrated volumes that bring America’s history to life. Explore the people, events, and principles that shaped the nation — in a way kids can truly understand.",
+        "p_9_12_4": "",
+        "p_9_12_4_blurb": "",
+        "p_13_plus_1": "the-tuttle-twins-teen-bundle",
+        "p_13_plus_1_blurb": "All 7 Teen Guidebooks and 5 Choose Your Consequence novels in one powerful set. Big controversies. Dangerous ideas. Courageous leaders. Interactive stories that force real decisions — and real critical thinking.",
+        "p_13_plus_2": "the-tuttle-twins-guidebook-combo-set",
+        "p_13_plus_2_blurb": "All 7 Teen Guidebooks in one complete set. Explore conspiracy theories, modern villains, courageous heroes, logical fallacies, and more ideas — designed to sharpen your teens critical thinking and independent analysis.",
+        "p_13_plus_3": "the-tuttle-twins-choose-your-consequence-combo-pack",
+        "p_13_plus_3_blurb": "Five interactive novels where every decision matters. Step into high-stakes stories and see how your teen's choices shape the outcome — because ideas have consequences.",
+        "p_13_plus_4": "",
+        "p_13_plus_4_blurb": "",
+        "padding_y_mobile": 48,
+        "padding_y_desktop": 72
+      }
+    },
+    "ssky_character_cards_aVhyWi": {
+      "type": "ssky-character-cards",
+      "blocks": {
+        "caption_GcMMPy": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Kids Who Started it All"
+          }
+        },
+        "heading_pyGiGH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet Ethan & Emily Tuttle",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_LBWnkQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ethan dives headfirst into every new idea. Emily sees the patterns everyone else misses. Together they've turned economics into adventures, history into mysteries, and freedom into something a 9-year-old can explain.</p>"
+          }
+        },
+        "character_card_n4hYAW": {
+          "type": "character_card",
+          "settings": {
+            "accent_color": "#da5846",
+            "image_side": "left",
+            "image": "shopify://shop_images/Ethan_1.png",
+            "name": "Ethan Tuttle",
+            "desc": "<p>Ethan turns every market problem into an adventure. Curious, persistent, and convinced there's always a better way.</p>",
+            "pill_text": "🍋 His lemonade stand teaches more about supply, demand, and pricing than most economics courses.",
+            "quote": ""
+          }
+        },
+        "character_card_ngHaVE": {
+          "type": "character_card",
+          "settings": {
+            "accent_color": "#04aed8",
+            "image_side": "right",
+            "image": "shopify://shop_images/Emily_1.png",
+            "name": "Emily Tuttle",
+            "desc": "<p>Emily sees what others miss. She asks the fairness questions, the freedom questions — and she never lets them go.</p>",
+            "pill_text": "⚖️ Her questions about rights and responsibility challenge adults to think more carefully.",
+            "quote": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_GcMMPy",
+        "heading_pyGiGH",
+        "text_LBWnkQ",
+        "character_card_n4hYAW",
+        "character_card_ngHaVE"
+      ],
+      "name": "Character Cards",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "card_background": "#ffffff",
+        "padding_y_mobile": 40,
+        "padding_y_desktop": 60
+      }
+    },
+    "ssky_stat_cards_VYPhkd": {
+      "type": "ssky-stat-cards",
+      "blocks": {
+        "caption_xjdcDr": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Kids Who Started it All"
+          }
+        },
+        "heading_3XJLjU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet Ethan & Emily Tuttle",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_X9BnzW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ethan dives headfirst into every new idea. Emily sees the patterns everyone else misses. Together they've turned economics into adventures, history into mysteries, and freedom into something a 9-year-old can explain. Every book is their story. And every story is your kid's invitation to think bigger.</p>"
+          }
+        },
+        "card_MRiEr6": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#da5846",
+            "icon_image": "shopify://shop_images/Ethan_transparent.png",
+            "icon_emoji": "",
+            "stat": "",
+            "internal_heading": "Ethan Tuttle",
+            "body": "Ethan navigates business problems, market dynamics, and economic puzzles with curiosity and persistence. He makes mistakes. He reasons through them. He never accepts 'that's just how it is' as an answer.",
+            "pill_text": "🍋 His lemonade stand teaches more about supply, demand, and pricing than most economics courses.",
+            "subtext": "\"There has to be a reason prices went up. Let's figure it out.\""
+          }
+        },
+        "card_TTDB7U": {
+          "type": "card",
+          "settings": {
+            "accent_color": "#04aed8",
+            "icon_image": "shopify://shop_images/Emily_transparent.png",
+            "icon_emoji": "",
+            "stat": "",
+            "internal_heading": "Emily Tuttle",
+            "body": "Emily asks the fairness questions, the freedom questions, the questions about why things work the way they do. She stands up, she notices, she pushes back — thoughtfully, always.",
+            "pill_text": "⚖️ Her questions about rights and responsibility challenge adults to think more carefully.",
+            "subtext": "\"Just because it's a rule doesn't mean it's right. What's the reason behind it?\""
+          }
+        },
+        "section_pill_4nCYei": {
+          "type": "section_pill",
+          "settings": {
+            "pill_text": "Real kids. Real ideas. Real conversations their parents didn't see coming. Every child in our content is proof that the Tuttle Twins standard is working.",
+            "pill_opacity": 35,
+            "pill_radius": 12,
+            "pill_padding_y": 24,
+            "pill_padding_x": 30,
+            "invert": true
+          }
+        },
+        "buttons_kaYHKi": {
+          "type": "buttons",
+          "settings": {
+            "button_large": true,
+            "button_full": true,
+            "button_label": "Shop Ages 2-4",
+            "button_link": "shopify://collections/toddler-books",
+            "button_style_secondary": false,
+            "button_label_b": "Shop Ages 5-8",
+            "button_link_b": "shopify://collections/books-for-kids-from-ages-5-to-8-copy",
+            "button_label_c": "Shop Ages 9-12",
+            "button_link_c": "shopify://collections/books-for-kids-from-ages-9-to-12-copy",
+            "button_label_d": "Shop Teens 13+",
+            "button_link_d": "shopify://collections/books-for-teens"
+          }
+        }
+      },
+      "block_order": [
+        "caption_xjdcDr",
+        "heading_3XJLjU",
+        "text_X9BnzW",
+        "card_MRiEr6",
+        "card_TTDB7U",
+        "section_pill_4nCYei",
+        "buttons_kaYHKi"
+      ],
+      "disabled": true,
+      "name": "Colored Stat Cards",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "card_background": "#ffffff",
+        "padding_y_mobile": 40,
+        "padding_y_desktop": 64
+      }
+    },
+    "ssky_product_compare_hRi7tC": {
+      "type": "ssky-product-compare",
+      "blocks": {
+        "caption_iP9Hbk": {
+          "type": "caption",
+          "settings": {
+            "caption": "BUNDLES built for every age"
+          }
+        },
+        "heading_39yzfW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Give Them the Education Schools Skip",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_C8jnWw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give them the ideas that were always supposed to be theirs.</p>"
+          }
+        },
+        "product_card_kMT6zM": {
+          "type": "product_card",
+          "settings": {
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses",
+            "highlight": false,
+            "badge_text": "",
+            "badge_bg": "#04aed8",
+            "top_bg": "#fbdb97",
+            "kicker": "ALL Ages",
+            "title_override": "Combo Pack",
+            "desc": "14 books. Every big idea. The complete children's library for the kid who's ready to understand how the world actually works.",
+            "features": "All 14 children's story books\nActivity workbooks",
+            "accent_color": "#0597af"
+          }
+        },
+        "product_card_ajNVxw": {
+          "type": "product_card",
+          "settings": {
+            "product": "tuttle-twins-family-starter-pack",
+            "highlight": true,
+            "badge_text": "⭐ MOST POPULAR",
+            "badge_bg": "#e85a3d",
+            "top_bg": "#bfeaf5",
+            "kicker": "AGES 5–12",
+            "title_override": "Family Starter Pack",
+            "desc": "The starting point for a kid who's about to surprise you. Everything your family needs to have the first of many dinner table moments.",
+            "features": "All 14 children's story books\nActivity workbooks + parent guides\nAmerica's History 2-Volume Set\nDigital History bonus videos & curriculum",
+            "accent_color": "#da5846"
+          }
+        },
+        "product_card_i48VHL": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-tuttle-twins-teen-bundle",
+            "highlight": false,
+            "badge_text": "",
+            "badge_bg": "#e85a3d",
+            "top_bg": "#e2d9f9",
+            "kicker": "Ages 13+",
+            "title_override": "Teen Bundle",
+            "desc": "For the teen who deserves the real story behind freedom, money, and power, not the version the world hands everyone else.",
+            "features": "7 Guidebooks\n5 Choose Your Consequence Books",
+            "accent_color": "#0597af"
+          }
+        },
+        "button_DM8xfK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All Bundles",
+            "button_link": "shopify://collections/bundles",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "caption_iP9Hbk",
+        "heading_39yzfW",
+        "text_C8jnWw",
+        "product_card_kMT6zM",
+        "product_card_ajNVxw",
+        "product_card_i48VHL",
+        "button_DM8xfK"
+      ],
+      "custom_css": [
+        ".button {font-family: \"Nunito\", sans-serif; font-weight: 900;}"
+      ],
+      "name": "Product Compare",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_y_mobile": 56,
+        "padding_y_desktop": 60
+      }
+    },
+    "ssky_two_column_product_cbdHUJ": {
+      "type": "ssky-two-column-product",
+      "blocks": {
+        "caption_YBEtg4": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Compound Effect"
+          }
+        },
+        "heading_izmEpx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Two Books a Month Is the Habit. A Freer Future Is the Point.",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_7Abxed": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One book changes a conversation. Two books a month changes a kid. Two books a month for four years changes who they become for the rest of their life. That's the compound effect, and it starts with the next book they can't put down.</p>"
+          }
+        },
+        "bullets_Thr7LG": {
+          "type": "bullets",
+          "settings": {
+            "items": "$19.99/month — less than a streaming subscription, more than a lifetime of ideas\nBuild Confident, Independent Thinkers\nCancel anytime · Keep every book\n🛡️ 30-Day Guarantee · Free Shipping"
+          }
+        },
+        "tags_q88CVe": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {
+            "items": "48 books\n4 years\n1 conversation at a time"
+          }
+        },
+        "product_card_zH3xmk": {
+          "type": "product_card",
+          "settings": {
+            "product": "bookclub",
+            "highlight": false,
+            "badge_text": "",
+            "badge_bg": "#e85a3d",
+            "top_bg": "#bfeaf5",
+            "accent_color": "#0597af",
+            "sale_label": "",
+            "card_title": "Tuttle Twins Book Club",
+            "price_suffix": "/month",
+            "show_savings_pill": true,
+            "savings_prefix": "Save",
+            "savings_suffix": "off",
+            "card_subtext": "",
+            "features": "2 New Books Every Month\nScreen-Free Learning Kids Actually Enjoy\nBig Ideas Made Simple",
+            "cta_mode": "link",
+            "cta_label": "Start Your Child's Library →",
+            "cta_link": "shopify://products/bookclub",
+            "under_cta": "",
+            "fine_print": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_YBEtg4",
+        "heading_izmEpx",
+        "text_7Abxed",
+        "bullets_Thr7LG",
+        "tags_q88CVe",
+        "product_card_zH3xmk"
+      ],
+      "custom_css": [
+        ".ssky-two-col-product__image img {opacity: 0;}",
+        ".ssky-two-col-product__image {background-image: url(\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/Bookclub-mailbox2.png?v=1773064339\"); background-size: 120%; background-position: center; background-repeat: no-repeat; height: 255px;}"
+      ],
+      "name": "Two Column Product",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "product_side": "right",
+        "accent_color": "#0bbdd6",
+        "padding_y_mobile": 64,
+        "padding_y_desktop": 60
+      }
+    },
+    "ssky_two_column_product_3nMFHc": {
+      "type": "ssky-two-column-product",
+      "blocks": {
+        "caption_fq4Thd": {
+          "type": "caption",
+          "settings": {
+            "caption": "Beyond the Books"
+          }
+        },
+        "heading_3WwdBc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Curious Kids Deserve More Than a Textbook Answer",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_xVKcXG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your kid has questions the classroom doesn't have time for. The Academy does. Video lessons that go deeper than any textbook. Discussions that turn into dinner table moments. Ideas that compound one lesson at a time into a kid who understands the world and knows what to do with that understanding. That's what Conversation Confident looks like.</p>"
+          }
+        },
+        "bullets_Yq6BMK": {
+          "type": "bullets",
+          "settings": {
+            "items": "$299/year or a Lifetime of Learning Access for $559, less than private tutoring\nOver 280 On-Demand Video Lessons\nBuilt-In Quizzes & Knowledge Checks to Keep Track of Your Students Progress\n🛡️ 30-Day Guarantee · Cancel anytime"
+          }
+        },
+        "text_KBrn67": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Already a subscriber? Check out our <a href=\"/collections/teen-bundles\" title=\"Teen Bundles\">Teen Book Bundles</a> for even more adventures.</p>"
+          }
+        },
+        "tags_raHeQ7": {
+          "type": "tags",
+          "settings": {
+            "items": "Critical Thinking Skills\nReal-World Economics\nCivics & Government\n& More!"
+          }
+        },
+        "product_card_g6UCJj": {
+          "type": "product_card",
+          "settings": {
+            "product": "tuttle-twins-academy-annual",
+            "highlight": false,
+            "badge_text": "",
+            "badge_bg": "#e85a3d",
+            "top_bg": "#d1e391",
+            "accent_color": "#0597af",
+            "sale_label": "",
+            "card_title": "Tuttle Twins Academy",
+            "price_suffix": "/year",
+            "show_savings_pill": true,
+            "savings_prefix": "You save",
+            "savings_suffix": "off",
+            "card_subtext": "",
+            "features": "Annual subscription to all available Academy courses\nAutomatic access to all future Academy courses we create while you're enrolled\nAccess to quizzes, slide decks, summaries, and takeaways for each lesson",
+            "cta_mode": "link",
+            "cta_label": "Fill the Gap in Your Child's Education",
+            "cta_link": "shopify://pages/academy",
+            "under_cta": "",
+            "fine_print": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_fq4Thd",
+        "heading_3WwdBc",
+        "text_xVKcXG",
+        "bullets_Yq6BMK",
+        "text_KBrn67",
+        "tags_raHeQ7",
+        "product_card_g6UCJj"
+      ],
+      "custom_css": [
+        ".ssky-two-col-product__bullets li {color: #3f3939;}"
+      ],
+      "name": "Two Column Product",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "product_side": "left",
+        "accent_color": "#0bbdd6",
+        "padding_y_mobile": 64,
+        "padding_y_desktop": 60
+      }
+    },
+    "ssky_text_block_8tE8by": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_D4MxLn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Real Families. Real Conversations.",
+            "custom_color": "",
+            "text_style": "small-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_U3HKKw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>These Are the Dinner Table Moments We Built Everything Around.</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_mRMWRV": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>From families across the country, in public schools, homeschools, and kitchen tables alike, these are the real experiences parents didn't plan for and couldn't imagine living without. </p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_D4MxLn",
+        "heading_U3HKKw",
+        "text_mRMWRV"
+      ],
+      "custom_css": [
+        ".ssky-text-block__caption {font-family: \"Nunito\", sans-serif; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 900;}",
+        ".ssky-text-block__heading {font-family: \"Nunito\", sans-serif; font-weight: 900 !important; line-height: 1.1; margin-bottom: 14px;}",
+        ".ssky-text-block__text {font-family: \"Nunito\", sans-serif; font-size: 16px;}"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "177255656195afa10b": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_rN3MxF": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_rN3MxF"
+      ],
+      "custom_css": [
+        ".oke-reviewCarousel {padding-bottom: 40px;}"
+      ],
+      "settings": {}
+    },
+    "ssky_two_column_product_DHBJek": {
+      "type": "ssky-two-column-product",
+      "blocks": {
+        "caption_E4HDqf": {
+          "type": "caption",
+          "settings": {
+            "caption": "START RIGHT AWAY"
+          }
+        },
+        "heading_FCedLk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Give Them What the Test Never Covers",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nQ3y3M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most kids learn what's on the test. The Family Starter Pack teaches what the test never covers how money works, how history shaped the world they're inheriting, and what it actually means to think for yourself. Not as bonus material. As the foundation. Start today and watch the compound effect begin.</p>"
+          }
+        },
+        "bullets_hQpM9t": {
+          "type": "bullets",
+          "settings": {
+            "items": "Works for public school, homeschool, or hybrid families\nKids ages 5-12 — there's a perfect fit for every stage\nStories so engaging, kids actually ask to keep reading\nBacked by a 30-day, no-questions-asked guarantee · Free Shipping"
+          }
+        },
+        "product_card_LymNf3": {
+          "type": "product_card",
+          "settings": {
+            "product": "tuttle-twins-family-starter-pack",
+            "highlight": false,
+            "badge_text": "⭐ MOST POPULAR",
+            "badge_bg": "#e85a3d",
+            "top_bg": "#f6d198",
+            "accent_color": "#0597af",
+            "sale_label": "",
+            "card_title": "Tuttle Twins Family Starter Pack",
+            "price_suffix": "",
+            "show_savings_pill": true,
+            "savings_prefix": "Save",
+            "savings_suffix": "off",
+            "card_subtext": "",
+            "features": "14 Kids Books & 2 History Books\nParent Guides, Videos, Curriculum, & Activity Books",
+            "cta_mode": "cart",
+            "cta_label": "Add to Cart",
+            "cta_link": "",
+            "under_cta": "",
+            "fine_print": ""
+          }
+        },
+        "text_BCMK8W": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"/collections/bundles\" title=\"Bundles\"><strong>Compare all bundles and find the right fit →</strong></a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_E4HDqf",
+        "heading_FCedLk",
+        "text_nQ3y3M",
+        "bullets_hQpM9t",
+        "product_card_LymNf3",
+        "text_BCMK8W"
+      ],
+      "custom_css": [
+        ".rte:not(.ssky-text-block__heading) a {color: #ffd05a;}"
+      ],
+      "name": "Two Column Product",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "product_side": "right",
+        "accent_color": "#ffd05a",
+        "padding_y_mobile": 64,
+        "padding_y_desktop": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_home_hero_2_bdWz4p",
+    "ssky_trust_bar_dqeAgA",
+    "ssky_stat_cards_jpQnUa",
+    "ssky_stat_cards_dbQWJG",
+    "ssky_how_it_works_VkwdmV",
+    "ssky_character_cards_aVhyWi",
+    "ssky_stat_cards_VYPhkd",
+    "ssky_product_compare_hRi7tC",
+    "ssky_two_column_product_cbdHUJ",
+    "ssky_two_column_product_3nMFHc",
+    "ssky_text_block_8tE8by",
+    "177255656195afa10b",
+    "ssky_two_column_product_DHBJek"
+  ]
+}

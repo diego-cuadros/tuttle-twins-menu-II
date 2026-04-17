@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "heading": "<p>Tuttle Twins Books in Foreign Languages</p>",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_h_wm49xp": {
+      "type": "sskymo-text-image-block-h",
+      "settings": {
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_QXKpAm": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_k4ak8e": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Is Your Child’s Education Being <br/>Influenced by Harmful Agendas?</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_DNH4yX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a parent, you want to ensure that your children learn about true history, personal freedom, sound money, individual rights, entrepreneurship, and other important concepts. The problem is that schools, media, and entertainment industries often promote harmful socialist and “woke” ideas that can influence your kids.</p><p>We understand that it can be challenging to find quality educational resources that align with your values and teach the principles of freedom. It can feel like you are swimming against the tide, constantly worried about the biases, censoring, and dilution of truth in education and the media.</p><p>You don’t have to navigate this minefield alone. We created the Tuttle Twins books to teach kids about individual liberty, free market economics, and entrepreneurism, empowering parents to give their children a foundation of freedom that socialist and progressive agendas are trying to undermine.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_k4ak8e",
+        "text_DNH4yX"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/childrens-series-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 4,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_Q89DKV": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_gjyJ3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Empower Yourself as a Parent</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_LVW6Nr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At times, you may feel like you're not perfectly equipped to teach your child about important concepts like freedom and responsibility. You may be worried that schools are promoting an agenda that will diminish the individuality and freedom of your child.<br/><br/>We understand that you want your child to be well-rounded and informed about the world they’re growing up in. That's why we offer resources that are aligned with your values and will help your child understand real-world concepts.<br/><br/>With our books, you'll no longer have to worry about harmful agendas influencing your child's education. Instead, you can feel confident that you're providing your child with the knowledge they need to succeed in life.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gjyJ3U",
+        "text_LVW6Nr"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Mask-Group-424-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sskymo_text_image_block_h_wm49xp",
+    "ssky_text_image_block_QXKpAm",
+    "ssky_text_image_block_Q89DKV"
+  ]
+}

@@ -1,0 +1,1266 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_zPhkpt": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_rjaQgD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Your children need this book! It will help them <strong>to develop personal responsibility and self-ownership<\/strong>. It’s essential reading for every freedom-loving family!<\/p>",
+            "heading_size": "h4",
+            "heading_weight": "medium",
+            "heading_tag": "h2"
+          }
+        },
+        "text_EqebWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>We are offering a free paperback copy of our children’s book that teaches the principles that will help kids develop a strong sense of self and purpose. <\/em><span style=\"text-decoration:underline\"><em>Limited offer, only while supplies last. Book is free, you only pay shipping.<\/em><\/span><\/p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rjaQgD",
+        "text_EqebWY"
+      ],
+      "custom_css": [
+        ".ssky-text-image-block__wrapper {align-items: center;}"
+      ],
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/2021-01-25.jpg",
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": true,
+        "background_overlay_color": "#3f3939",
+        "background_overlay_opacity": 90,
+        "image": "shopify:\/\/shop_images\/the-tuttle-twins-and-the-12-rules-boot-campL3-400x400.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "heading-bold-blue",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_M9NNP8": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_e4fdCj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Teach Your Kids About <br\/>Personal Responsibility <br\/>(And More) <\/p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "hxl",
+            "heading_weight": "semibold",
+            "heading_tag": "h1",
+            "center": false
+          }
+        },
+        "heading_hP3xEx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>With the constant push to normalize a victim mentality and government handouts, kids need encouragement to embrace wise yet \"unpopular\" ideas to overcome their problems and succeed in life.<\/p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_e4fdCj",
+        "heading_hP3xEx"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_8dYcRm": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "stats_block_tt9yhW": {
+          "type": "stats_block",
+          "settings": {
+            "copies_number": "6 Mil+",
+            "copies_text": "Copies Sold Worldwide",
+            "reviews_number": "4,500+",
+            "reviews_text": "5 Star Reviews",
+            "background_color": "#00b1d8",
+            "text_color": "#ffffff",
+            "star_color": "#ffd700",
+            "guarantee_badge": "shopify:\/\/shop_images\/30-years-guarantee.webp"
+          }
+        },
+        "testimonial_HcqJrd": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about<\/strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“<\/p>",
+            "testimonial": "<p>““<\/p>",
+            "author": "Marcos D., Illinois",
+            "author_state": "",
+            "author_image": "shopify:\/\/shop_images\/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "stats_block_tt9yhW",
+        "testimonial_HcqJrd"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_LHBb7C": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "text_promo_AXgi4U": {
+          "type": "text_promo",
+          "settings": {
+            "promo_position": "image-side",
+            "promo_color_scheme": "scheme-4",
+            "promo_heading": "Teach Your Child About",
+            "heading_size": "h4",
+            "heading_weight": "medium",
+            "heading_tag": "h3",
+            "promo_subheading": "Personal Responsibility!",
+            "text_style_subheading": "large-bold",
+            "promo_text": "<p><em>For a limited time, just pay shipping and get our children’s book for FREE Just enter code: BootCampFree<\/em><\/p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "center",
+            "button_medium": false,
+            "button_large": false,
+            "promo_button_text": "",
+            "promo_button_link": "",
+            "promo_button_style_secondary": false,
+            "promo_button_text_2": "",
+            "promo_button_link_2": "",
+            "promo_button_style_secondary_2": false,
+            "product": "12rules_fr",
+            "product_button_label": "Claim Your Free Book",
+            "show_price": false,
+            "promo_secondary_text": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "promo_secondary_link": "shopify:\/\/pages\/12rules-free",
+            "secondary_link_color": "#da5846",
+            "secondary_product": "12-rules-boot-camp-pdf-parent-guide",
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_show_price": false
+          }
+        },
+        "text_9mKbia": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dear Parent,<\/strong><br\/><br\/>If you’re like me, you’re worried about the “new normal” and how society promotes a victimhood mentality and other woke ideals.<br\/><br\/>Politicians, pundits and their fans have created a mythical world where everyone is a victim, and only the government can make things better.<br\/><br\/>Cranking up the money presses for “inflation reduction” and student loan forgiveness is their idea of saving the world.<br\/><br\/>It’s truly insane, but it only works as long as Americans go along with the idea that everyone is a victim.<br\/><br\/>This is why Jordan Peterson is viewed as “controversial” by many. His ideas would have been considered  common sense less than a generation ago.<br\/><br\/>The public school system, the mainstream media, and the entertainment industry no longer share ideas such as personal responsibility and individual liberty. They’re too busy pushing crazy ideas like woke-ism and a victimhood mentality into the minds of our kids.<br\/><br\/>These radical messages work their way into school curriculum, movies, advertising, and social media platforms to <strong>persuade our impressionable children.<\/strong><\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_promo_AXgi4U",
+        "text_9mKbia"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 30,
+        "image": "shopify:\/\/shop_images\/12rules_cover-min.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_YGi4RB": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_akwtCX": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Parents like you struggle to find educational material that doesn’t lie about our nation’s history or teach that the government is the solution to our problems.<br\/><br\/>You want to help your children learn about true history, sound money, personal freedom and responsibility, entrepreneurship, individual rights, and more.<br\/><br\/><strong>You find yourself asking, “What exactly are my children learning at school…?”<\/strong><br\/><br\/>And even if you homeschool, you are always on the hunt for a new curriculum to make sure your children are being taught good principles and true ideas.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_akwtCX"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": true,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 16,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_z4pJYE": {
+      "type": "ssky-image-banner",
+      "custom_css": [
+        ".banner__box.content-container {display: none;}"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": false,
+        "image": "shopify:\/\/shop_images\/12-rules-family.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "top-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_GneJ3Q": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_R8nK8L": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>But most curriculum is dumbed down and leaves out the essential truths that children and adults need to know. <br\/><br\/>That’s why we’ve made it our mission to create books and curriculum materials that teach students the values of a free society—ideas that support your family values.<br\/><br\/>And for a limited time, <span style=\"text-decoration:underline\"><strong>we’re offering you a free copy of our 12 Rules Boot Camp, inspired by Dr. Peterson’s book, that teaches kids the principles that will help them develop good character and a happy life.<\/strong><\/span><br\/><br\/>Freedom-loving parents like you might question whether your kids could be interested in—and understand!—these real-world concepts.<br\/><br\/>Take it from me — I’ve been blown away at how well kids understand and love these ideas when you explain them simply, with fully illustrated, fun stories. <br\/><br\/>And what’s critical is that we empower our children to understand these time-tested principles so that they can <strong>recognize and reject the brainwashing<\/strong> they will be bombarded with in the world. <br\/><br\/>Fortunately, parents like you don’t have to do this alone. That’s why we created the Tuttle Twins books!<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "heading_VYqDn8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why Are We Giving Away This Book?<\/p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_8jWR7e": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our Tuttle Twins books are making a difference in the lives of children and their parents. We’ve sold over 5 million copies so far. But there are still so many families that haven’t read them yet, and so many children that are only hearing “one side of the story.” Our mission is to reach even more homes.<br\/><br\/>We’re confident that if you read one book, you’ll be interested in the rest. It’s the reason we offer a free money-back guarantee for folks that buy our complete book sets.<br\/><br\/>So, we’re giving away a free copy of The Tuttle Twins and the 12 Rules Boot Camp while our surplus printing supply lasts. We’re sure it will be a hit in your house. We chose this book because many young people are susceptible to the siren calls of victimhood and socialism that are so pervasive today.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_R8nK8L",
+        "heading_VYqDn8",
+        "text_8jWR7e"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 21,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": true,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_Y8cpiC": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_AaTGq6": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Why Do We Need Rules? <br\/>How Can They Help Guide Us?<\/p>",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_6hWHnG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life doesn’t come with a manual, but there are some helpful rules that one can follow in their life to be set up for success.<br\/><br\/>The Tuttle Twins use stories and illustrations to present these concepts in a fun and interesting way that children can easily understand.<br\/><br\/>Inspired by Jordan Peterson’s bestseller 12 Rules for Life, the twins organize a boot camp for Brock to help him see the power of these ideas—and how each of the ideas is like an ingredient that, when mixed together, can lead to great results!<br\/><br\/>But what are these ideas and why do we need them? Your children will discover the answers to these and other questions in this engaging and entertaining book!<br\/><br\/><span style=\"text-decoration:underline\"><strong>And for a limited time, it’s yours—free.<\/strong><\/span> All you need to pay is for shipping!<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_AaTGq6",
+        "text_6hWHnG"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify:\/\/shop_images\/the-tuttle-twins-and-the-12-rules-boot-camp1200-qqa4uj8l4m8v98be4y5w0f6j4xyt680jaehapp8yyo.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_nfiFPi": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_b_heAMjF": {
+          "type": "order_block_one_b",
+          "settings": {
+            "product": "12rules_fr",
+            "heading": "<p>Teach Your Child About<br\/><strong>Life Rules and <br\/>Responsibilities<\/strong><\/p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_b": "",
+            "heading_size_b": "h3",
+            "heading_weight_b": "semibold",
+            "text": "<p>For a limited time, just pay shipping and get our children’s book for FREE: Just use code BootCampFree<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "max_width": 58,
+            "show_price": false,
+            "button_label": "Claim Your Free Book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": "<p>— OR —<br\/><br\/>Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_b_heAMjF"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-4",
+        "narrow_width": true,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_REjd84": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_jDLHrB": {
+          "type": "caption",
+          "settings": {
+            "caption": "With our books, your children will learn things like:",
+            "custom_color": "",
+            "text_style": "large-semibold",
+            "color_class": ""
+          }
+        },
+        "text_dqiDaq": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<ul><li>Why a <strong>free market<\/strong> economy is the greatest way to lift people out of poverty and allow people to trade with one another.<\/li><li>How <strong>property rights<\/strong> allows us to decide what’s best for us, and make decisions for our family.<\/li><li>Why the world is a better place because of <strong>entrepreneurs<\/strong> who create businesses to help serve us and improve our lives.<\/li><li>What <strong>socialism<\/strong> is and why it is so destructive to our freedoms and well being.<\/li><li>How the <strong>Golden Rule<\/strong> is so important to people getting along with one another, no matter where we live, what we look like, or what we believe.<\/li><li>Why <strong>education is so important<\/strong>, and why children should be allowed to learn things they are interested in.<\/li><li>What <strong>true laws<\/strong> are, and why the government should protect our rights.<\/li><li>…and so much more!<\/li><\/ul>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_jDLHrB",
+        "text_dqiDaq"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": true,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_mCN4M7": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "text_MNcNw4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>And each of our books come with discussion questions at the end, helping parents like you have <em>amazing<\/em> conversations with their children about these rich ideas.<\/p><p>We get emails daily from parents who are blown away at how much they learned alongside their children—and how their conversations over dinner have “leveled up” by talking about real-world concepts about what’s happening in the world.<\/p><p>You owe it to your children to give them this well-rounded education that schools aren’t teaching—and the Tuttle Twins books make it super easy for you.<\/p><p>Your children can read these books on their own, or you can read along with them — and be sure to use the FREE activity workbooks we provide, to reinforce these new ideas your children will be learning.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_MNcNw4"
+      ],
+      "custom_css": [
+        ".ssky-text-image-block__layout-merging:not( .ssky-text-image-block__layout-merging-above ) > div {max-width: 100% !important; padding: 0; border-radius: 10vw 0 0 0;}",
+        ".ssky-text-image-block__layout-merging:not( .ssky-text-image-block__layout-merging-above ) {padding: 0 !important;}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify:\/\/shop_images\/Mask-Group-448-1-196x218-2.webp",
+        "rounded": false,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#ffffff",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": true,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Xikcnh": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_m7HWac": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>What Makes Our Books So Different?<\/h2>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_4MRANN": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>The Tuttle Twins’ Book Series Introduces Important Ideas That Schools Don’t Teach.<\/p><p>There aren’t any other children’s books that present a vast array of free-market topics in such a fun way. The books teach relevant freedom-based concepts that most of us were never taught as kids. But it’s not too late!<\/p><p>The Tuttle Twins books challenges children to learn “adult” ideas—and they love it! We explain these ideas simply, and with helpful illustrations… and we’ve been amazed at how well kids rise to this challenge. Yours will, too. <\/p><p>These stimulating stories encourage children to make sense of the world—and we’ve heard so much fun stories about how this is working so well.<\/p><p>One mom wrote us this: “I took my kids to the grocery store a few days after we read one of the Tuttle Twins books about free markets. We were walking down the chip aisle when my son pointed to the 18 kinds of potato chips and said <em>Hey, that’s spontaneous order!<\/em> I kid you not. My kids know economic ideas that I didn’t even understand until we read the book together. So awesome!”<\/p><p>And I recently got this email from another mom: “I’ve been so anxious about the state of our world and what to share with my children. Now we read Tuttle Twins books each night and it has been so helpful to talk to my kids about things like individual rights, the proper role of government, and what it means to be free. These discussions are so meaningful to our family, and they wouldn’t be happening without these books. Thank you so much!”<\/p><p>That’s what our books are about: helping you have amazing conversations with your children about the ideas that built our amazing country but which are now under attack. <\/p><p>For too long, parents have lacked a language to communicate these concepts to their kids.<\/p><p>But not any longer. That problem has been solved with the Tuttle Twins books!<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_m7HWac",
+        "text_4MRANN"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-8688c846-c48c-4cb6-8520-67b1e5c12d79",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "scheme-1",
+        "merging_color": "#3f3939",
+        "merge_with_section_above": true,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#3f3939"
+      }
+    },
+    "sskymo_text_column_c_g44wAi": {
+      "type": "sskymo-text-column-c",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_JhdbAX": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_four_mrteeQ": {
+          "type": "order_block_four",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/the-tuttle-twins-and-the-12-rules-boot-campL1-1024x1024.webp",
+            "max_width": 32,
+            "rounded": true,
+            "heading": "<p>For a limited time, get the 12 Rules book for free!<\/p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "subheading": "",
+            "text_style_subheading": "medium-semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "left",
+            "product": "",
+            "show_price": false,
+            "button_text": "Get Your FREE Book (just pay shipping)",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_large": true,
+            "show_or_divider": true,
+            "secondary_product": "10-important-facts-about-the-declaration-of-independence-pdf",
+            "secondary_show_price": false,
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_link": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_large2": true
+          }
+        }
+      },
+      "block_order": [
+        "order_block_four_mrteeQ"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_EDJJCQ": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_7J7hFT": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_HUQQV3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h5>Amid the ever-growing problems facing the next generation, true education has never been so important to defend. The Tuttle Twins books are a great way to instill a respect for the ideas of liberty in your children and help them understand the principles of a free society, before it's too late.<\/h5>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "button_zcaq37": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Empower Your Kids Today",
+            "button_link": "shopify:\/\/pages\/12rules-free",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HUQQV3",
+        "button_zcaq37"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_xGnyBk": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_UpeJ4t": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sales of Tuttle Twins Books are Staggering!",
+            "custom_color": "#152136",
+            "text_style": "extra-large-bold",
+            "color_class": "primary_dark_blue"
+          }
+        },
+        "text_BMHnpP": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>When we started selling these books, we weren’t sure if there would be demand. We made them as a labor of love—because we believe in these ideas so strongly.<\/p><p>But we quickly learned that there were many parents out there who shared our values and our concerns with the world—and who were desperate to find material like this to teach their children about why freedom is so important.<\/p><p>And today, millions of children are reading the Tuttle Twins books, learning the dangers of socialism, the benefits of freedom, the importance of entrepreneurship, and more!<\/p><p>Each day we hear from families who have newly discovered these materials, expressing their gratitude. Sometimes they’re even upset… that they didn’t find the books years ago!<\/p><p>Amandah wanted her kids to know about the principles of liberty and free markets, but she didn’t think they would have any interest. The Tuttle Twins give her kids the ability to learn “big kid” ideas (that most adults have never learned) and make it super easy for her, as a busy mom, to make sure her children learn valuable concepts. She was surprised and delighted that her kids were actually excited to read the books.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_UpeJ4t",
+        "text_BMHnpP"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-8688c846-c48c-4cb6-8520-67b1e5c12d79",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_testimonials_aBUrGE": {
+      "type": "sskymo-testimonials",
+      "custom_css": [
+        ".ssky-testimonials__blocks.ssky-text-block__blocks.center {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "card_background_color": "#3f3939",
+        "author_text_color": "#ffd05a",
+        "review_text_color": "#ffffff",
+        "star_color": "gold",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#ffffff"
+      }
+    },
+    "ssky_product_order_block_qrHdUm": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_four_yhaaTi": {
+          "type": "order_block_four",
+          "settings": {
+            "max_width": 50,
+            "rounded": true,
+            "heading": "<h3>Join the 500,000+ Families<br\/>Benefiting from the Tuttle Twins<\/h3>",
+            "heading_size": "h2",
+            "heading_weight": "medium",
+            "subheading": "",
+            "text_style_subheading": "medium-semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "center",
+            "product": "",
+            "show_price": false,
+            "button_text": "Get Your FREE Book (just pay shipping)",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_large": true,
+            "show_or_divider": true,
+            "secondary_product": "10-important-facts-about-the-declaration-of-independence-pdf",
+            "secondary_show_price": false,
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_link": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_large2": true
+          }
+        }
+      },
+      "block_order": [
+        "order_block_four_yhaaTi"
+      ],
+      "custom_css": [
+        "h2.ssky-text-block__heading {display: none;}"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "show_as_card": true,
+        "rounded": 100,
+        "color_scheme_show_as_card": "",
+        "narrow_width": true,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_BaDLYb": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_78wPgR": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Cost of NOT Getting These Books",
+            "custom_color": "#152136",
+            "text_style": "extra-large-bold",
+            "color_class": ""
+          }
+        },
+        "text_peLa6N": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>There’s a high cost to our society when these ideas aren’t taught to children. Why? It’s quite simple: our kids become voters.<\/p><p>Ignorant voters support laws that restrict our rights and hurt businesses. Even worse, they miss out on valuable principles that improve their life.<\/p><p>The current political and economic climate is coming to a critical tipping point, and socialism’s popularity is on the rise. You need to educate your children about the ideas of freedom today—because people you strongly disagree with will be exposing them to all kinds of bad ideas in the days ahead.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_78wPgR",
+        "text_peLa6N"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-8688c846-c48c-4cb6-8520-67b1e5c12d79",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_iEWd3E": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_hMPThh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>Ordering Now Gives You an Early Advantage!<\/h3>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_jVzWbC": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<h3>There are plenty of reasons to get the Tuttle Twins books today:<\/h3><ul><li>We’re offering you a limited-time <strong>35% OFF discount!<\/strong><\/li><li>You will also receive ALL <strong>14 PDF activity workbooks<\/strong> for free! (a $70 value)<\/li><li>We have a <strong>100%<\/strong> Unconditional Money-Back Guarantee<\/li><li><strong>Over 6 million<\/strong> copies of the books have been sold, with 5-star reviews from people around the world<\/li><li>Your children <strong>will learn<\/strong> amazing, important things very soon with these books <\/li><\/ul><p>Our children’s books are for kids age 5-11, but the magic of this content—and our amazing illustrations—is that younger and older children are attracted to learning from the books, too.<\/p><p>And more than half of the parents who buy our books indicate that <em>they<\/em> learned a lot, too! (Maybe we should send a few copies to Congress…)<\/p><p>You care about the principles of freedom, and with the Tuttle Twins, you now have<strong> a way to teach these values to your children<\/strong>.<\/p><p>As a father, I know how hard it is to communicate big ideas to little kids. For example, how do you teach an eight-year-old boy about the free market in a way that will be relevant to him? How can a six-year-old girl understand property rights? How can your child learn about and remember the Golden Rule?<\/p><p>And more than getting them to learn about the ideas… how do you get them to <em>care<\/em> about them?<\/p><p>As the founder and president of a thriving non-profit and the author of over two dozen books, I’ve spent years trying to figure out simple and effective ways of teaching other people important principles. Along the way, I came to realize something: kids can understand these ideas, too.<\/p><p>And now that we’ve sold over 4 million copies, the market has spoken… countless parents agree and are seeing the magic play out in their homes.<\/p><p>These families have been able to have some amazing conversations about big ideas—even with their little children. So get the books today and watch your child develop important critical thinking skills and insight about ideas that most adults don’t even understand.<\/p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hMPThh",
+        "text_jVzWbC"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-2",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "scheme-1",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": true,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_HGTgMp": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "two_columns_text_cmmfwg": {
+          "type": "two_columns_text",
+          "settings": {
+            "left_heading": "<h2>How does it work?<\/h2>",
+            "left_heading_size": "h2",
+            "left_heading_weight": "bold",
+            "left_heading_tag": "h2",
+            "left_text": "<p>You can read these books to your kids, or they can simply read them themselves. Once they do, they will have the vocabulary to ask questions that lead to inspiring conversations. And with this new perspective, They will be encouraged to learn even more, ask bigger questions, and even take action—like writing an elected official or starting a small business.<\/p><p>Our optional activity workbooks and parent guides will enhance the process and enable you as a parent to make sure your child learns all of the many principles and concepts covered in the Tuttle Twins books.<\/p>",
+            "left_text_size": "medium",
+            "left_text_weight": "regular",
+            "right_heading": "<h2>You have nothing to lose.<\/h2>",
+            "right_heading_size": "h2",
+            "right_heading_weight": "bold",
+            "right_heading_tag": "h2",
+            "right_text": "<p>These books allow you to instill your children with the values you believe in and remember, if you don’t teach them true ideas, others will teach them false ones soon. We are in a sort of war for our minds, and it’s critical that we parents protect our children by teaching them correct principles.<\/p><p><em>Those who don’t learn from the past are condemned to repeat it.<\/em> Don’t let your children become indoctrinated by the media and other voices that want to spread socialism. <\/p><p>Help your children recognize truth and learn to think for themselves. The Tuttle Twins books are here to help.<\/p>",
+            "right_text_size": "regular",
+            "right_text_weight": "regular",
+            "background": "#ffffff",
+            "text_color": "#0a0a0a",
+            "rounded": false
+          }
+        },
+        "testimonial_LGqdBf": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>My oldest is seven years old. He is autistic, on the high-functioning side. Speech therapy is via Zoom. So we've been reading a LOT more. He loves The Creature from Jekyll Island!! He now has made his own money to buy a very specific train he wants for Christmas.<\/p>",
+            "font_size": 18,
+            "background": "#3f3939",
+            "text_color": "#ffffff",
+            "profile_image": "shopify:\/\/shop_images\/Carrie-Hammer.jpg",
+            "profile_name": "Carrie Hammer",
+            "profile_location": "",
+            "image_position": "image-right",
+            "show_star": false,
+            "stars": 5,
+            "narrow_width": false
+          }
+        }
+      },
+      "block_order": [
+        "two_columns_text_cmmfwg",
+        "testimonial_LGqdBf"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "fullwidth": false,
+        "narrow_width": true
+      }
+    },
+    "ssky_text_block_tDntzp": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_RJqpcL": {
+          "type": "text",
+          "settings": {
+            "max_width": 85,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Connor's Your-Kids-Will-Love-The-Tuttle-Twins-Or-I-Will-Refund-Your-Money-And-You-Keep-The-Books Guarantee!<\/p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold"
+          }
+        },
+        "text_j9HRNk": {
+          "type": "text",
+          "settings": {
+            "max_width": 88,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Help the children in your life learn these important ideas by purchasing the books now. Over 500,000 families have already bought the books for their kids. Can you guess how many families didn’t like them and demanded a refund? Nine.<\/p><p>Needless to say, our young readers love these books!<\/p><p>Worried that you’re not sure you’ll love them? No problem! The risk is all on our end. If you don’t like them, let us know within 30 days of purchase and you can keep the books. I will immediately refund your money.<\/p><p>Yes — I’m THAT confident your family will benefit from these books. No questions asked. No hassle. And with that guarantee, there’s no reason to not get these books for your kids.<\/p><p>You’ve got nothing at all to lose. So give your children a foundation of freedom today!<\/p><p>In liberty,<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "icon_AzqCEE": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/csb-1-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_RJqpcL",
+        "text_j9HRNk",
+        "icon_AzqCEE"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_MHGhXK": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_four_iebRCp": {
+          "type": "order_block_four",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BootCampFree-1024x1024.webp",
+            "max_width": 40,
+            "rounded": true,
+            "heading": "<h3>For a limited time, get your first book for free!<\/h3>",
+            "heading_size": "h2",
+            "heading_weight": "medium",
+            "subheading": "",
+            "text_style_subheading": "medium-semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "center",
+            "product": "",
+            "show_price": false,
+            "button_text": "Get Your Free Book",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_large": true,
+            "show_or_divider": true,
+            "secondary_product": "10-important-facts-about-the-declaration-of-independence-pdf",
+            "secondary_show_price": false,
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_link": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_large2": true
+          }
+        }
+      },
+      "block_order": [
+        "order_block_four_iebRCp"
+      ],
+      "custom_css": [
+        "h2.ssky-text-block__heading {display: none;}"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 90,
+        "color_scheme": "scheme-1",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": true,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_zPhkpt",
+    "ssky_text_block_M9NNP8",
+    "ssky_testimonials_8dYcRm",
+    "ssky_text_image_block_LHBb7C",
+    "ssky_text_block_YGi4RB",
+    "ssky_image_banner_z4pJYE",
+    "ssky_text_block_GneJ3Q",
+    "ssky_text_image_block_Y8cpiC",
+    "ssky_product_order_block_nfiFPi",
+    "ssky_text_block_REjd84",
+    "ssky_text_image_block_mCN4M7",
+    "ssky_text_block_Xikcnh",
+    "sskymo_text_column_c_g44wAi",
+    "ssky_product_order_block_JhdbAX",
+    "sskymo_product_column_c_EDJJCQ",
+    "ssky_text_block_7J7hFT",
+    "ssky_text_block_xGnyBk",
+    "sskymo_testimonials_aBUrGE",
+    "ssky_product_order_block_qrHdUm",
+    "ssky_text_block_BaDLYb",
+    "ssky_text_block_iEWd3E",
+    "ssky_custom_block_HGTgMp",
+    "ssky_text_block_tDntzp",
+    "ssky_product_order_block_MHGhXK"
+  ]
+}

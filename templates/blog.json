@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rcl_blog_header_hAXwUR": {
+      "type": "rcl-blog-header",
+      "blocks": {
+        "blog_menu_3L8jNy": {
+          "type": "blog_menu",
+          "settings": {
+            "menu": "blog-menu"
+          }
+        },
+        "heading_CgVtww": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Tuttle Twins Latest Articles",
+            "heading_size": "h1",
+            "heading_weight": "semibold"
+          }
+        },
+        "text_wYwDHw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Practical guides, resources, and insights to help families navigate education and learning.</p>",
+            "text_large": false
+          }
+        },
+        "image_6QrtFJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter-scaled-1-1024x622.webp",
+            "image_fit": true
+          }
+        },
+        "spacer_RqLTeU": {
+          "type": "spacer",
+          "settings": {
+            "spacer_height_vw": 5
+          }
+        }
+      },
+      "block_order": [
+        "blog_menu_3L8jNy",
+        "heading_CgVtww",
+        "text_wYwDHw",
+        "image_6QrtFJ",
+        "spacer_RqLTeU"
+      ],
+      "name": "TTb Blog Podcast Main",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "heading": "Helping Families Navigate Education with Confidence",
+        "h1": false,
+        "subheading": "<p>From homeschooling laws to learning milestones & educational resources, our articles break down complex topics into clear, actionable guidance for parents.</p>",
+        "margin_top": 2,
+        "margin_top_mobile": 1,
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "articles_per_page": 9,
+        "excerpt_limit": 150,
+        "show_image": true,
+        "image_height": "small",
+        "show_date": true,
+        "show_author": false
+      }
+    }
+  },
+  "order": [
+    "rcl_blog_header_hAXwUR",
+    "main"
+  ]
+}

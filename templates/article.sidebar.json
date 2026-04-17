@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "disabled": true,
+      "settings": {}
+    },
+    "rcl_blog_sidebar_76m3aP": {
+      "type": "rcl-blog-sidebar",
+      "blocks": {
+        "blog_header_block_LJAfxP": {
+          "type": "blog_header_block",
+          "settings": {
+            "show_title": true,
+            "show_breadcrumbs": true,
+            "show_date": false,
+            "show_author": false
+          }
+        },
+        "large_block_xLnafN": {
+          "type": "large_block",
+          "settings": {
+            "background_color": "#04aed8",
+            "subheader": "FREE DOWNLOAD",
+            "block_image": "shopify://shop_images/socialism-cover-1-901x1024.webp",
+            "header": "Protect Your Kids Today",
+            "content": "There are many subtle ways that socialist ideas are being introduced, taught, and reinforced directly to your children.\n\nOur e-book walks through several examples to help raise your attention to this agenda so you can help your children avoid being indoctrinated to support the state.",
+            "button_label": "Download Now",
+            "button_link": "https://tuttletwins.com/free-ebook/",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "small_block_UCHnHN": {
+          "type": "small_block",
+          "settings": {
+            "background_color": "#04aed8",
+            "background_image": "shopify://shop_images/sp-w2-1.png",
+            "header_color": "#ffffff",
+            "content_color": "#000000",
+            "header": "CHILDREN'S BOOKS (AGE 5 - 11)",
+            "content": "",
+            "button_label": "Shop Collection",
+            "button_link": "shopify://pages/childrens-resources",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "small_block_CEyKcP": {
+          "type": "small_block",
+          "settings": {
+            "background_color": "#04aed8",
+            "background_image": "shopify://shop_images/history-book-1.png",
+            "header_color": "#ffffff",
+            "content_color": "#000000",
+            "header": "Our American History Books + Curriculum",
+            "content": "",
+            "button_label": "Shop The Bundle",
+            "button_link": "shopify://collections/american-history-for-kids",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "small_block_M8mzbX": {
+          "type": "small_block",
+          "settings": {
+            "background_color": "#da5846",
+            "background_image": "shopify://shop_images/fiction-books-1.png",
+            "header_color": "#152137",
+            "content_color": "#000000",
+            "header": "FICTION BOOKS (AGE 12+)",
+            "content": "",
+            "button_label": "Shop Collection",
+            "button_link": "shopify://collections/choose-your-consequence",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "small_block_LJ8dA6": {
+          "type": "small_block",
+          "settings": {
+            "background_color": "#3f3939",
+            "background_image": "shopify://shop_images/non-fiction-books-1.png",
+            "header_color": "#ffffff",
+            "content_color": "#000000",
+            "header": "NON-FICTION BOOKS (AGE 12+)",
+            "content": "",
+            "button_label": "Shop Collection",
+            "button_link": "shopify://collections/guidebooks",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "small_block_4CXFYg": {
+          "type": "small_block",
+          "settings": {
+            "background_color": "#ffd05a",
+            "background_image": "shopify://shop_images/books-for-toddlers-1.png",
+            "header_color": "#152137",
+            "content_color": "#000000",
+            "header": "BOOKS FOR TODDLERS",
+            "content": "",
+            "button_label": "Shop Collection",
+            "button_link": "shopify://collections/toddler-books",
+            "button_font_color": "#ffffff",
+            "button_bg_color": "#da5846"
+          }
+        },
+        "review_block_TgjaKk": {
+          "type": "review_block",
+          "settings": {
+            "reviewer_name": "SumthinWhittee",
+            "review_content": "Hopefully Santa gives these out this year. Best gift to help counter the elementary school propaganda. #tuttletwins",
+            "star_count": 5
+          }
+        },
+        "review_block_UY4Aqp": {
+          "type": "review_block",
+          "settings": {
+            "reviewer_name": "LadyKayRising",
+            "review_content": "When ur bedtime story teaches ur girl about the federal reserve & what a crock of crap it is. Vocab words: Medium of exchange & fiat currency. #tuttletwins for the win",
+            "star_count": 5
+          }
+        },
+        "review_block_9may4d": {
+          "type": "review_block",
+          "settings": {
+            "reviewer_name": "Maribeth Cogan",
+            "review_content": "“My just-turned-5 year old told me he is planning to read all the #TuttleTwins books today. It’s 10AM on Saturday and he’s already on his third. #Homeschooling ftw.”",
+            "star_count": 5
+          }
+        }
+      },
+      "block_order": [
+        "blog_header_block_LJAfxP",
+        "large_block_xLnafN",
+        "small_block_UCHnHN",
+        "small_block_CEyKcP",
+        "small_block_M8mzbX",
+        "small_block_LJ8dA6",
+        "small_block_4CXFYg",
+        "review_block_TgjaKk",
+        "review_block_UY4Aqp",
+        "review_block_9may4d"
+      ],
+      "settings": {
+        "featured_image": "{{ article.image }}",
+        "featured_image_alt": "",
+        "blog_content": "{{ article.content }}"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rcl_blog_sidebar_76m3aP"
+  ]
+}

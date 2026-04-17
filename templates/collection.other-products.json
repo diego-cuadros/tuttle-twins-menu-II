@@ -1,0 +1,1229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 4,
+        "padding_bottom": 64
+      }
+    },
+    "z_featured_collection_BkmJkV": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_txyFdX": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "z_featured_collection_mdWaUj": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "other-products",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "ssky_text_image_block_FyEMVF": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_k4ak8e": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Is Your Child’s Education Being <br/>Influenced by Harmful Agendas?</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_DNH4yX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a parent, you want to ensure that your children learn about true history, personal freedom, sound money, individual rights, entrepreneurship, and other important concepts. The problem is that schools, media, and entertainment industries often promote harmful socialist and “woke” ideas that can influence your kids.</p><p>We understand that it can be challenging to find quality educational resources that align with your values and teach the principles of freedom. It can feel like you are swimming against the tide, constantly worried about the biases, censoring, and dilution of truth in education and the media.</p><p>You don’t have to navigate this minefield alone. We created the Tuttle Twins books to teach kids about individual liberty, free market economics, and entrepreneurism, empowering parents to give their children a foundation of freedom that socialist and progressive agendas are trying to undermine.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_k4ak8e",
+        "text_DNH4yX"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/childrens-series-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 4,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_66zdk4": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_gjyJ3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Empower Yourself as a Parent</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_LVW6Nr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At times, you may feel like you're not perfectly equipped to teach your child about important concepts like freedom and responsibility. You may be worried that schools are promoting an agenda that will diminish the individuality and freedom of your child.<br/><br/>We understand that you want your child to be well-rounded and informed about the world they’re growing up in. That's why we offer resources that are aligned with your values and will help your child understand real-world concepts.<br/><br/>With our books, you'll no longer have to worry about harmful agendas influencing your child's education. Instead, you can feel confident that you're providing your child with the knowledge they need to succeed in life.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gjyJ3U",
+        "text_LVW6Nr"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Mask-Group-424-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_CrAniG": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_JXexkR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Truth Is… as a Parent, You May Feel as if You Are Not <br/>Informed Enough to Teach Your Children These Ideas</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_with_icon_nnGzEh": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-one.webp",
+            "text": "<p><strong>Are you concerned you don’t have the knowledge or confidence to teach your kids about ideas of freedom and how they relate to their life?</strong> Hoping that, somehow, they will be curious enough to figure it out for themselves?</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-two.webp",
+            "text_b": "<p><strong>Are you afraid schools are promoting an agenda that will diminish the freedom and individuality of your children?</strong> Perhaps you’re feeling in the dark about what they are learning and concerned they will grow up to believe false ideas.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_88F9RP": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-three.webp",
+            "text": "<p><strong>Do you want to find educational resources to teach your child true principles, but don't know where to look?</strong> It’s hard to know what's aligned with your values, and ideas, and even to know which messages you want to share with your family.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-one.webp",
+            "text_b": "<p><strong>Do you question whether your kids will be interested in (or even understand) these real-world concepts?</strong> Perhaps you barely understand them yourself, and you wonder how to help your children become well rounded in learning these ideas.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_PdYNdd": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-four.webp",
+            "text": "<p><strong>Are you worried about your kids being ignorant or apathetic about the values you believe in?</strong> If you can’t guide them, your kids will absorb ideas and agendas from their peers and social media.</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "divider_JNVtME": {
+          "type": "divider",
+          "settings": {
+            "margin": 40,
+            "contrast": true
+          }
+        },
+        "text_4BxFJa": {
+          "type": "text",
+          "settings": {
+            "max_width": 69,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p><strong>After all, you only have one shot at helping shape your children's worldview before the noise of today's society takes over. </strong>Fortunately, you are not alone. You no longer need to feel as though you have no voice. And you can let go worrying that your children are not receiving the quality of education that they deserve.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JXexkR",
+        "text_with_icon_nnGzEh",
+        "text_with_icon_88F9RP",
+        "text_with_icon_PdYNdd",
+        "divider_JNVtME",
+        "text_4BxFJa"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-4",
+        "twi_max_width": 115,
+        "twi_margin": 60,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_block_UJPVMW": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_kYqRnd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>You Want to Raise Free-Thinking, <br/>Freedom-Loving Individuals </p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_nxbMcM": {
+          "type": "text",
+          "settings": {
+            "max_width": 72,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>But it’s hard to navigate the minefield of media and entertainment manipulation, right?</p>",
+            "text_size": "extra-large",
+            "text_weight": "medium"
+          }
+        },
+        "text_88kqHC": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>You have probably tried in the past to educate your kids on what’s happening in our world and struggled:<br/><br/></p>",
+            "text_size": "medium",
+            "text_weight": "medium"
+          }
+        },
+        "text_with_icon_4KejYf": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>A trip to the <strong>Local Library </strong>in search of good literature results in frustration that many books are pushing harmful agendas that are appealing to kids. You wonder what good material you can introduce to your children that they’ll actually enjoy.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>You have broached big subjects in <strong>Family Discussions </strong>after dinner that end up in silence from apathetic kids or end awkwardly when your kids ask questions you can’t answer.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_cH8aQj": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>After finding <strong>YouTube Videos</strong> from creators that seemed good at the time for your kids, you discovered that they ultimately had some agenda and were using their platform to promote ideas you strongly disagree with.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>Perhaps you use <strong>Current Events</strong> to try and educate your child about what is happening but there is no context and it’s too complex to explain. Often, you wonder if what you’re doing is enough to “stick” and prepare your children for the world they’re growing up in.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "divider_pF39QX": {
+          "type": "divider",
+          "settings": {
+            "margin": 24,
+            "contrast": true
+          }
+        },
+        "text_cGkQPz": {
+          "type": "text",
+          "settings": {
+            "max_width": 92,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Your kids are sometimes left with more questions than answers, and you can’t bear the thought of them getting lost at sea in all the manipulation and power games playing out in the world. <br/><br/>What if the solution to this emerging education problem was simpler than you thought?</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYqRnd",
+        "text_nxbMcM",
+        "text_88kqHC",
+        "text_with_icon_4KejYf",
+        "text_with_icon_cH8aQj",
+        "divider_pF39QX",
+        "text_cGkQPz"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#3f3939"
+      }
+    },
+    "ssky_text_block_ExNDWB": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_AzqJdj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Be empowered as a parent to give your children a foundation of freedom—to understand the ideas of a free society that socialists and progressives are trying hard to undermine.",
+            "custom_color": "",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzqJdj"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 84,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_XwVCXt": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_TUY4Er": {
+          "type": "caption",
+          "settings": {
+            "caption": "A NEW KIND OF EDUCATION",
+            "custom_color": "",
+            "text_style": "small-bold",
+            "color_class": "primary-orange"
+          }
+        },
+        "caption_qUf3KB": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Tuttle Twins:",
+            "custom_color": "",
+            "text_style": "extra-extra-large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_Rnz3Up": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Thought Provoking Book <br/>Series Read By Millions of Children</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_n74MMW": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>A unique series of beautiful, enjoyable books that use storytelling to introduce important economic, civic, and history principles to your child.</p>",
+            "text_size": "extra-large",
+            "text_weight": "semibold"
+          }
+        },
+        "heading_mxmNpw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Mentor Your Children to Become Critical Thinkers<br/><br/></p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_with_icon_R7dDph": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Feel Confident as a Parent Teaching Your Children About True History </strong><br/>Storytelling and illustrations unpack big concepts for easy understanding</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_WiUL4B": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Fix Your Own Political and Economic Education Gaps </strong><br/>Learn big ideas together as a family in a simple yet engaging way</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_TNrT6w": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Give Your Children a Leg Up in Life</strong><br/>Encouraging critical thinking and truth seeking will set them apart</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_rJiUKB": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Raise Well-Rounded Children</strong><br/>So they are prepared and understand what’s going on in the world</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_hgAmVk": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Bond as a Family and Strengthen Your Values</strong><br/>Elevate family discussions with powerful ideas and current events</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_YYeEHq": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p><br/>If you want a way to educate and equip your children for the future, we are glad you found us — because something new and important is happening here.</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "caption_TUY4Er",
+        "caption_qUf3KB",
+        "heading_Rnz3Up",
+        "text_n74MMW",
+        "heading_mxmNpw",
+        "text_with_icon_R7dDph",
+        "text_with_icon_WiUL4B",
+        "text_with_icon_TNrT6w",
+        "text_with_icon_rJiUKB",
+        "text_with_icon_hgAmVk",
+        "text_YYeEHq"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 66,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_column_ygEFng": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_column_97ey6r": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>14 Inspiring and Beautifully <br/>Illustrated Children’s Books</p>",
+            "text": "<p>Educational stories that are entertaining and easy to understand</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_ccF66k": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Engaging Storytelling About <br/>the Most Important Ideas of Our Time</p>",
+            "text": "<p>Our books introduce the ideas of liberty to a new generation</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_xee9Tk": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Activities and Conversation <br/>Starters With Every Book</p>",
+            "text": "<p>Encourage your kids to learn — and apply!— these new ideas</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_Lfej6X": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Based on Famous Books by <br/>Thought Leading Authors</p>",
+            "text": "<p>Restore freedom of education and the values that make our society great</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_NwrePG": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Easy to Understand Language <br/>for Kids About Big Ideas</p>",
+            "text": "<p>Written for children age 5-11 to make the ideas of liberty easy to digest</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_nUf8YJ": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Level up Your Own Education <br/>as You Share With Your Kids</p>",
+            "text": "<p>Increase your own confidence by easily learning alongside your children</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_column_97ey6r",
+        "text_column_ccF66k",
+        "text_column_xee9Tk",
+        "text_column_Lfej6X",
+        "text_column_NwrePG",
+        "text_column_nUf8YJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "<p>Principled. Independent. Intelligent.</p>",
+        "heading_size": "h1",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_c_UdPbJV": {
+      "type": "sskymo-text-column-c",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_KqyrdN": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_47z7g6": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well designed education supplement for your family to learn the principles of freedom and true history, you are in the right place.</p>",
+            "text_size": "large",
+            "text_weight": "semibold",
+            "max_width": 64,
+            "button_label": "Books For Brilliant Young Minds",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": false,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Includes All 14 Workbook PDFs Free</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_47z7g6"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-4",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-2",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_CwP3NN": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_mc7QTy": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p><em>Equipping the Next Generation of Free Thinkers</em></p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "heading_VnYPJk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside<br/>The Tuttle Twins Book Series?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_Lw7JdR": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>There is no better way to teach your children about liberty than to read these books with them. They will learn how the world really works, including…</p>",
+            "text_size": "large",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_j3wMfg": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Why a <strong>free market economy</strong> is the greatest way to lift people out of poverty and make the world better for everyone.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_T7KRnx": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>How <strong>property rights</strong> allow us to decide what’s best for us and make better decisions for our family.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_4TKx7j": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Why the world is a better place is because of <strong>entrepreneurs </strong>who create businesses to help serve us and improve our lives.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_krDDf8": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>What <strong>true laws</strong> are, and why the government should protect our rights.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_w8LRJD": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>What <strong>socialism</strong> is and why it is so destructive to our freedoms and well being.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_j8VL7i": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>How the <strong>Golden Rule</strong> encourages people to get along with one another, no matter where we live, what we look like, or what we believe.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_QxzNCM": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Why true <strong>education</strong> (not just memorizing facts) is so important and why children should be allowed to learn things they are interested in.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "text_39BXf3": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>…and so much more!</p>",
+            "text_size": "large",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_mc7QTy",
+        "heading_VnYPJk",
+        "text_Lw7JdR",
+        "checkbox_individual_j3wMfg",
+        "checkbox_individual_T7KRnx",
+        "checkbox_individual_4TKx7j",
+        "checkbox_individual_krDDf8",
+        "checkbox_individual_w8LRJD",
+        "checkbox_individual_j8VL7i",
+        "checkbox_individual_QxzNCM",
+        "text_39BXf3"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 78,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 16,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#3f3939"
+      }
+    },
+    "ssky_text_block_JtwzEa": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_MEdmjU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Plus Activities to Bring the <br/>Learning to Life</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_cDVWkK": {
+          "type": "text",
+          "settings": {
+            "max_width": 64,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Each of our books come with discussion questions at the end, helping you have amazing conversations with your children about these rich ideas. And as a bonus, we’re including our 14 PDF Activity Workbooks full of projects, worksheets, and more to help reinforce these new ideas in your child’s mind. We get emails daily from parents who are blown away at how much they learned alongside their children—and how their conversations over dinner have “leveled up” by talking about real-world concepts about what’s happening in the world. </p><p></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_AD8VbA": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "<p>Includes All 14 Workbook PDFs Free</p>",
+            "custom_color": "",
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Reclaim Your Family's Freedom Now",
+            "show_price": false
+          }
+        },
+        "background_9VQRqg": {
+          "type": "background",
+          "settings": {
+            "image": "shopify://shop_images/section_background_with_magazines.webp",
+            "background": "#ffffff",
+            "background_overlay": 0,
+            "padding_top": 208,
+            "padding_bottom": 208,
+            "wide_background": false,
+            "ultra_wide_background": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MEdmjU",
+        "text_cDVWkK",
+        "button_AD8VbA",
+        "background_9VQRqg"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_3TFnyR": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_aPTT8Y": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_36CPiA": {
+          "type": "text",
+          "settings": {
+            "max_width": 83,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Amid the ever-growing problems facing the next generation, true education has never been so important to defend. The Tuttle Twins books are a great way to instill a respect for the ideas of liberty in your children and help them understand the principles of a free society, before it's too late.</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "button_rf834p": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "<p>35% OFF Complete Series</p>",
+            "custom_color": "",
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Empower Your Kids Today",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_36CPiA",
+        "button_rf834p"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_testimonials_c_JXBbyB": {
+      "type": "sskymo-testimonials-c",
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_6g8xTY": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "z_featured_collection_BkmJkV",
+    "z_featured_collection_txyFdX",
+    "z_featured_collection_mdWaUj",
+    "ssky_text_image_block_FyEMVF",
+    "ssky_text_image_block_66zdk4",
+    "ssky_text_block_CrAniG",
+    "ssky_text_block_UJPVMW",
+    "ssky_text_block_ExNDWB",
+    "ssky_text_block_XwVCXt",
+    "ssky_text_column_ygEFng",
+    "sskymo_text_column_c_UdPbJV",
+    "ssky_product_order_block_KqyrdN",
+    "ssky_text_block_CwP3NN",
+    "ssky_text_block_JtwzEa",
+    "sskymo_product_column_c_3TFnyR",
+    "ssky_text_block_aPTT8Y",
+    "sskymo_testimonials_c_JXBbyB",
+    "sskymo_text_image_block_b_6g8xTY"
+  ]
+}

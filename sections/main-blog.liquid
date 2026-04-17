@@ -1,0 +1,251 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    {% if section.settings.columns_tablet == 1 %}
+      .grid--1-col-tablet .grid__item {
+        width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2);
+        max-width: 100%;
+      }
+    {% elsif section.settings.columns_tablet == 2 %}
+      .grid--2-col-tablet .grid__item {
+        width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+        max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+      }
+    {% elsif section.settings.columns_tablet == 3 %}
+      .grid--3-col-tablet .grid__item {
+        width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+        max-width: 33.33%;
+      }
+    {% endif %}
+  }
+
+  /* ===== Custom Articles Section ===== */
+  .custom-articles-section {
+    position: relative;
+    margin: -{{ section.settings.margin_top_mobile }}.5rem auto 0;
+    max-width: 1250px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 3rem;
+  }
+
+  @media screen and (min-width: 769px) {
+    .custom-articles-section {
+      margin: -{{ section.settings.margin_top }}.5rem auto 0;
+      padding: 6rem;
+    }
+  }
+
+  .custom-articles-section .page-width {
+    padding: 0;
+  }
+
+  .custom-articles-section__heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #091d52;
+    margin: 0 0 2rem;
+  }
+
+  .custom-articles-section__subheading.rte {
+    max-width: 1000px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto 4rem;
+    color: #152136;
+  }
+
+  .custom-articles-grid__item .card.article-card {
+    border-style: solid;
+    border-width: 0;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgba(180, 180, 180, 0.5);
+  }
+
+  .custom-articles-grid__item h3.card__heading.h2 {
+    font-size: 2.375rem;
+  }
+
+  .custom-articles-grid__item .full-unstyled-link {
+    color: #000;
+  }
+{% endstyle %}
+
+<section class="custom-articles-section gradient">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      {% if section.settings.h1 %}
+        <h1 class="custom-articles-section__heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h1>
+      {% else %}
+        <h2 class="custom-articles-section__heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <div class="custom-articles-section__subheading rte">
+        {{ section.settings.subheading }}
+      </div>
+    {% endif %}
+
+    {% paginate blog.articles by section.settings.articles_per_page %}
+      <div
+        class="custom-articles-grid grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_tablet }}-col-tablet"
+        data-id="{{ section.id }}"
+      >
+        {% for article in blog.articles %}
+          <div class="custom-articles-grid__item grid__item">
+            {% render 'article-card',
+              article: article,
+              media_height: section.settings.image_height,
+              show_image: section.settings.show_image,
+              show_date: section.settings.show_date,
+              show_author: section.settings.show_author,
+              show_excerpt: true,
+              excerpt_char_limit: section.settings.excerpt_limit,
+              section_id: section.id
+            %}
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if paginate.pages > 1 %}
+        {% render 'pagination', paginate: paginate %}
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Articles Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Latest Articles"
+    },
+    {
+      "type": "checkbox",
+      "id": "h1",
+      "label": "H1 heading tag",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Stay updated with our latest news and stories</p>"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "label": "Margin of the posts from the image cut (desktop)",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "label": "Margin of the posts from the image cut (mobile)",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Articles per row (desktop)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Articles per row (tablet)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Articles per row (mobile)",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "label": "Articles per page",
+      "default": 9
+    },
+    {
+      "type": "range",
+      "id": "excerpt_limit",
+      "min": 20,
+      "max": 500,
+      "step": 10,
+      "label": "Excerpt character limit",
+      "default": 150
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show featured image",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "label": "Image height",
+      "default": "adapt",
+      "options": [
+        { "value": "adapt", "label": "Adapt to image" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show publish date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Articles Grid"
+    }
+  ]
+}
+{% endschema %}

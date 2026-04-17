@@ -1,0 +1,1351 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ssky_text_image_block_7zGJL7": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_EhFDRB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Tuttle Twins Guidebooks</p>",
+            "heading_size": "hxl",
+            "heading_weight": "semibold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_iTkP97": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our hardback non-fiction books teach pre-teens and teenagers (and adults!) about important topics like logical fallacies, critical thinking, entrepreneurship, and standing up for what is right!</p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EhFDRB",
+        "text_iTkP97"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Guidebook_set_no_violator.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_d_mYi3XM": {
+      "type": "sskymo-text-image-block-d",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_eAJbhJ": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_drcrnV": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>What's Inside Our Guidebooks</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_8jAmzq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to the World's Worst Ideas</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_7VLURc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Some ideas just never seem to go away—no matter how badly they fail. From Marxism to censorship, from central banking to government welfare, these bad ideas keep popping up. So why do people keep falling for them? And how can we make sure the next generation doesn’t repeat the same mistakes?</p><p>In <em>The Tuttle Twins Guide to the World’s Worst Ideas</em>, your teens will learn how these flawed concepts took root—and why they’re still around today. This guidebook breaks down 20 terrible ideas, exposing their failures and real-world impact, while giving young readers the tools to think critically and challenge bad logic. Get ready to expose the myths and defend liberty!<br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/conspiracies_sample.pdf?v=1737545849\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_drcrnV",
+        "heading_8jAmzq",
+        "text_7VLURc"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/WWI_lifestyle_1_-_1080x1080_6bc30ae0-e3e9-4e46-8d3f-55791647c0a2.jpg",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_product_breakdown_Ubb9ce": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_FLTYAq": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-the-worlds-worst-ideas",
+            "image_fit": true,
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_eErLG9": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>World's worst ideas revealed:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_8zNVtC": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Government Welfare</p>",
+            "highlight_b": "<p>Neoconservatism</p>",
+            "highlight_c": "<p>Taxes</p>",
+            "highlight_d": "<p>Government Schools</p>",
+            "highlight_e": "<p>Authoritarianism</p>",
+            "highlight_f": "<p>Nationalism</p>",
+            "highlight_g": "<p>Central Banking</p>",
+            "highlight_h": ""
+          }
+        },
+        "highlights_h7pFLQ": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Prohibition</p>",
+            "highlight_b": "<p>Censorship</p>",
+            "highlight_c": "<p>Conscription</p>",
+            "highlight_d": "<p>Occupational Licensure</p>",
+            "highlight_e": "<p>Eminent Domain</p>",
+            "highlight_f": "<p>Gun Control</p>",
+            "highlight_g": "<p>Minimum Wage</p>",
+            "highlight_h": ""
+          }
+        },
+        "highlights_yVjFFr": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Climate \"Change\"</p>",
+            "highlight_b": "<p>Immunity</p>",
+            "highlight_c": "<p>Marxism</p>",
+            "highlight_d": "<p>Civil Asset Forfeiture</p>",
+            "highlight_e": "<p>Permanent Record</p>",
+            "highlight_f": "<p>Bureaucracy</p>",
+            "highlight_g": "",
+            "highlight_h": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_FLTYAq",
+        "text_eErLG9",
+        "highlights_8zNVtC",
+        "highlights_h7pFLQ",
+        "highlights_yVjFFr"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "scheme-2",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_order_block_QWbYK8": {
+      "type": "sskymo-product-order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-2",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_6CxPWP": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_e94WfF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to True Conspiracies</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_aUWEKY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Conspiracies often dwell in the realms of fantasy and fiction. But what happens when some of the “theories” dismissed by politicians and the media instead turn out to be true?<br/><br/>Obscured from public scrutiny, plots have been hatched that defy our most wild speculations. These aren’t tales spun by overactive imaginations, but actual covert operations conducted by those bestowed with immense power and trust.<br/><br/>The stories shared in this gripping book are more than just disturbing episodes of our history—they’re stark reminders of the ability of powerful people to shape world events and our own lives through deception and lawless corruption.<br/><br/>By illuminating these obscure corners of history, this book will challenge you to question, to seek the truth, and to be skeptical of those in power. <br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/conspiracies_sample.pdf?v=1737545849\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_e94WfF",
+        "text_aUWEKY"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/True-Conspiracies-lifestyle-2-squared-scaled-1_e43b4a7d-f5ae-4d27-b3c9-4e380f24fa27.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_product_breakdown_Ybf9rJ": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_69XGFC": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-true-conspiracies",
+            "image_fit": true,
+            "image": "shopify://shop_images/guidebook_conspiracy-1.webp",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_k4n8JQ": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>True conspiracies revealed:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_jGdmmD": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Nayirah and the Iraq War</p>",
+            "highlight_b": "<p>Operation Mockingbird</p>",
+            "highlight_c": "<p>Operation Paperclip</p>",
+            "highlight_d": "<p>Gulf of Tonkin</p>",
+            "highlight_e": "<p>Operation Sea-Spray</p>",
+            "highlight_f": "<p>A New Pearl Harbor</p>",
+            "highlight_g": "<p>Unconstitutional Surveillance</p>",
+            "highlight_h": ""
+          }
+        },
+        "highlights_DDBHEm": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Project MK-Ultra</p>",
+            "highlight_b": "<p>The Tuskegee Experiment</p>",
+            "highlight_c": "<p>Operation Fast and Furious</p>",
+            "highlight_d": "<p>Operation Popeye</p>",
+            "highlight_e": "<p>Operation Northwoods</p>",
+            "highlight_f": "<p>Hunter Biden's Laptop</p>",
+            "highlight_g": "<p>The Creature from Jekyll Island</p>",
+            "highlight_h": ""
+          }
+        },
+        "highlights_7XeWkQ": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Sugar/Fat Studies</p>",
+            "highlight_b": "<p>The Great Reset</p>",
+            "highlight_c": "<p>Operation Ajax</p>",
+            "highlight_d": "<p>Social Media Manipulation</p>",
+            "highlight_e": "<p>Poisoned Booze</p>",
+            "highlight_f": "<p>Cointelpro</p>",
+            "highlight_g": "",
+            "highlight_h": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_69XGFC",
+        "text_k4n8JQ",
+        "highlights_jGdmmD",
+        "highlights_DDBHEm",
+        "highlights_7XeWkQ"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "scheme-2",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 20,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_TyW94h": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_8erEay": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to Logical Fallacies</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_dHq4tw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In a society where countless ideas are being shared, debated, and analyzed, it’s more important than ever to sift out the good ones from among the bad ones. And when people you respect and trust use arguments that sound persuasive, how can you determine if they are correct?<br/><br/>One of the most commonly used methods of spreading misinformation is the use of a logical fallacy—a bad argument that makes something seem truthful that actually might not be. These types of arguments are used repeatedly, and there are many different types.<br/><br/>Fortunately, these logical fallacies can be learned, so they can be avoided. Armed with this information, you’ll be equipped to understand when people are sharing an idea that is wrong or making a claim that isn’t true. You’ll become an expert debater by being able to point out a flaw in an opponent’s argument.<br/><br/>That makes this book dangerous—a guidebook for teenagers and young adults who want to explore the ins and outs of how to win arguments and point out problems in others’ ideas. Use this book wisely!<br/><br/>192 pages of content. <br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/fallacies_sample.pdf?v=1737620499\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8erEay",
+        "text_dHq4tw"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Mask-Group-404-1-1.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_product_breakdown_7MLxEp": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_xWtLTw": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-logical-fallacies",
+            "image_fit": true,
+            "image": "shopify://shop_images/Logical-Fallacies.png",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_yqtP7G": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Logical Fallacies Included</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_Ki9XBk": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>The Strawman</p>",
+            "highlight_b": "<p>False Cause</p>",
+            "highlight_c": "<p>Appeal to Emotion</p>",
+            "highlight_d": "<p>Slippery Slope</p>",
+            "highlight_e": "<p>Ad Hominem</p>",
+            "highlight_f": "<p>Personal Incredulity</p>",
+            "highlight_g": "<p>Special Pleading</p>",
+            "highlight_h": "<p>Loaded Question</p>"
+          }
+        },
+        "highlights_xaiDMM": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Burden of Proof</p>",
+            "highlight_b": "<p>Ambiguity</p>",
+            "highlight_c": "<p>The Gambler</p>",
+            "highlight_d": "<p>The Bandwagon</p>",
+            "highlight_e": "<p>Appeal to Authority</p>",
+            "highlight_f": "<p>Composition & Division</p>",
+            "highlight_g": "<p>No True Scotsman</p>",
+            "highlight_h": "<p>Origins</p>"
+          }
+        },
+        "highlights_3UB9fJ": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Black or White</p>",
+            "highlight_b": "<p>Begging the Question</p>",
+            "highlight_c": "<p>Appeal to Nature</p>",
+            "highlight_d": "<p>Anecdotal</p>",
+            "highlight_e": "<p>The Sharpshooter</p>",
+            "highlight_f": "<p>Middle Ground</p>",
+            "highlight_g": "<p>Aleksandr Tu Quoque</p>",
+            "highlight_h": "<p>The Fallacy Fallacy</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_xWtLTw",
+        "text_yqtP7G",
+        "highlights_Ki9XBk",
+        "highlights_xaiDMM",
+        "highlights_3UB9fJ"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 20,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_PyKdmf": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_JMgyE3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to Courageous Heroes​</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_G6QeDE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Daring men and women aren’t just found in the pages of fictional stories. In fact, history offers us a number of examples of people who stood up for what was right in the face of significant opposition. Their stories can inspire us to also be courageous when the situation calls for it.</p><p>Whether the problem is a large one, like a dictatorial state or a cultural prejudice, or a small one, such as standing up to a bully, we can resolve to be a hero and fight for what is right.</p><p>That’s why the stories in this book are so impactful—they offer us an opportunity to learn lessons from the lives of a wide variety of people and ponder how we might have acted in a similar situation.</p><p>These heroes often stand out because so many of their peers failed to act likewise. Sadly, too few seem to have the courage to oppose something that is wrong. But these stories can help us prepare to be counted as someone who will choose the right! <br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/heroes_sample.pdf?v=1737620649\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JMgyE3",
+        "text_G6QeDE"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Mask-Group-431-1-1.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_breakdown_HbYEAz": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_mEKgHc": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-courageous-heroes",
+            "image_fit": true,
+            "image": "shopify://shop_images/Coragious-Hero.png",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_jA4GQX": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Heroes included:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_ynkei3": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Corrie ten Boom</p>",
+            "highlight_b": "<p>Harriet Tubman</p>",
+            "highlight_c": "<p>Booker T. Washington</p>",
+            "highlight_d": "<p>Leif Erikkson</p>",
+            "highlight_e": "<p>Signers of the DOI</p>",
+            "highlight_f": "<p>William Wilberforce</p>",
+            "highlight_g": "<p>Sophie and Hans Scholl</p>",
+            "highlight_h": "<p>Dietrich Bonhoeffer</p>"
+          }
+        },
+        "highlights_xc3kfi": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Althea Gibson</p>",
+            "highlight_b": "<p>Katherine Johnson</p>",
+            "highlight_c": "<p>Pemper and Schindler</p>",
+            "highlight_d": "<p>Harriett Beecher Stowe</p>",
+            "highlight_e": "<p>Alfred the Great</p>",
+            "highlight_f": "<p>Stephen Langton</p>",
+            "highlight_g": "<p>Prudence Crandall</p>",
+            "highlight_h": "<p>Matthew Hensen</p>"
+          }
+        },
+        "highlights_Jh6ECT": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Wilder and Wilder</p>",
+            "highlight_b": "<p>Fred Douglass</p>",
+            "highlight_c": "<p>Ed Snowden</p>",
+            "highlight_d": "<p>Mercy Otis Warren</p>",
+            "highlight_e": "<p>Robert Smalls</p>",
+            "highlight_f": "<p>Aleksander Solzhos</p>",
+            "highlight_g": "<p>Helmuth Huberner</p>",
+            "highlight_h": "<p>George Muller</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_mEKgHc",
+        "text_jA4GQX",
+        "highlights_ynkei3",
+        "highlights_xc3kfi",
+        "highlights_Jh6ECT"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_product_order_block_adNY88": {
+      "type": "sskymo-product-order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-2",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_EUHFcq": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_BWGNHw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to Modern Villains​ </p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Cc8KfP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What is it about human nature that leads some people to commit unspeakably evil acts?<br/><br/>And, perhaps a more important question for each of us, why do so many people submit to or even support these villains?<br/><br/>World history sadly offers us a long list of dictators and totalitarian thugs who used their power to steal from and oppress their countrymen—and kill those who defied them.<br/><br/>As tragic as these stories all are, they can still offer us lessons to learn from if we try to understand why these people acted the way they did—both those in control and those who were controlled.<br/><br/>These lessons may just have the key we need to help make sure the list of future villains is far shorter than the list in this book. <br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/villains_sample.pdf?v=1737620655\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BWGNHw",
+        "text_Cc8KfP"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/vill2_1e9675fa-1e5a-48c1-9d14-aead7a27dc7d.jpg",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_product_breakdown_JXzdkg": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_LCcx3d": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-modern-villains",
+            "image_fit": true,
+            "image": "shopify://shop_images/Modern-Villains-1.webp",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_WaerJp": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Villains included:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_9cGgaL": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Napoleon Bonaparte</p>",
+            "highlight_b": "<p>Karl Marx</p>",
+            "highlight_c": "<p>Leopold II</p>",
+            "highlight_d": "<p>Woodrow Wilson</p>",
+            "highlight_e": "<p>Nicholas II</p>",
+            "highlight_f": "<p>Vladimir Lenin</p>",
+            "highlight_g": "<p>Joseph Stalin</p>",
+            "highlight_h": "<p>Ismail Enver Pasha</p>"
+          }
+        },
+        "highlights_4z4tjE": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Benito Mussolini</p>",
+            "highlight_b": "<p>Hideki Tojo</p>",
+            "highlight_c": "<p>Adolf Hitler</p>",
+            "highlight_d": "<p>Ho Chi Minh</p>",
+            "highlight_e": "<p>Josip Broz (“Tito”)</p>",
+            "highlight_f": "<p>Mao Zedong</p>",
+            "highlight_g": "<p>Ne Win</p>",
+            "highlight_h": ""
+          }
+        },
+        "highlights_f7EQDU": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Kim Il-Sung</p>",
+            "highlight_b": "<p>Augusto Pinochet</p>",
+            "highlight_c": "<p>Robert Mugabe</p>",
+            "highlight_d": "<p>Pol Pot</p>",
+            "highlight_e": "<p>Idi Amin</p>",
+            "highlight_f": "<p>Fidel Castro</p>",
+            "highlight_g": "<p>Hosni Mubarak</p>",
+            "highlight_h": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_LCcx3d",
+        "text_WaerJp",
+        "highlights_9cGgaL",
+        "highlights_4z4tjE",
+        "highlights_f7EQDU"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_e87xPX": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_z9GEmz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to Beware Your Bias</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_yWqcHP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We all have them. And we know everyone else does, too. But we avoid thinking about them, even though they affect our thinking deeply. What are they? <br/><br/>They are cognitive biases, and they lead our mind to do things that might not be in our best interest. We are all prone to being affected by them, yet hardly anyone takes the time to learn about them—and how to make sure they don’t have as great an impact on us. <br/><br/>That’s where this guidebook comes in, helping teens and adults learn about each bias so that we can make a concerted effort to not fall prey to their powers. Armed with this information, we can think more clearly, better understand ourselves and others, and make good decisions to benefit our lives. <br/><br/>This is powerful information precisely because so few people seek it. Those who read this book will have an advantage over others who are mentally manipulated without knowing it.<br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/bias_sample.pdf?v=1737620662\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z9GEmz",
+        "text_yWqcHP"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Beware-ur-Bias-139-edited-scaled-1-2048x2048.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_breakdown_ariCEi": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_HezR9D": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-beware-your-bias",
+            "image_fit": true,
+            "image": "shopify://shop_images/Beware-Your-Bias.png",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_nkfw4A": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Biases included:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_MYjwwN": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Anchoring</p>",
+            "highlight_b": "<p>Sunk Cost</p>",
+            "highlight_c": "<p>Availability Heuristic</p>",
+            "highlight_d": "<p>Curse of Knowledge</p>",
+            "highlight_e": "<p>Confirmation Bias</p>",
+            "highlight_f": "<p>Dunning-Kruger Effect</p>",
+            "highlight_g": "<p>Belief Bias</p>",
+            "highlight_h": "<p>Self-Serving Bias</p>"
+          }
+        },
+        "highlights_9ez9Uh": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Backfire Effect</p>",
+            "highlight_b": "<p>Barnum Effect</p>",
+            "highlight_c": "<p>Groupthink</p>",
+            "highlight_d": "<p>Negativity Bias</p>",
+            "highlight_e": "<p>Declinism</p>",
+            "highlight_f": "<p>Framing Effect</p>",
+            "highlight_g": "<p>Attribution Error</p>",
+            "highlight_h": "<p>Spotlight Effect</p>"
+          }
+        },
+        "highlights_FYUVEX": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Halo Effect</p>",
+            "highlight_b": "<p>Optimism Bias</p>",
+            "highlight_c": "<p>Just-World Hypothesis</p>",
+            "highlight_d": "<p>In-Group Bias</p>",
+            "highlight_e": "<p>Placebo Effect</p>",
+            "highlight_f": "<p>Bystander Effect</p>",
+            "highlight_g": "<p>Reactance</p>",
+            "highlight_h": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_HezR9D",
+        "text_nkfw4A",
+        "highlights_MYjwwN",
+        "highlights_9ez9Uh",
+        "highlights_FYUVEX"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_product_order_block_i43jVU": {
+      "type": "sskymo-product-order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-2",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_T3RTy4": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_HtUh8z": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Tuttle Twins Guide to Inspiring Entrepreneurs</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_inTjpp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Throughout history, a certain few people have made risky decisions in an attempt to solve a problem that many people were experiencing, hoping that their new innovation or invention would be able to serve these people and that they—the entrepreneurs, as we call them—would be able to profit in return.<br/><br/>These risk-takers are the key drivers of the economy who create jobs and new products and services that make our lives more comfortable and convenient. The world becomes a better place through their efforts.<br/><br/>But entrepreneurs don’t always succeed. Indeed, their failures teach them powerful (and sometimes hard) lessons that they can learn from. They gain knowledge with each new attempt that makes their future efforts even more fruitful.<br/><br/>Their stories can serve as inspiration as you begin to determine your own path in life and whether being an entrepreneur is part of your journey.<br/><br/><a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/entrepreneur_sample.pdf?v=1737620669\" target=\"_blank\" title=\"Click here to see a sample chapter.\">Click here to see a sample chapter.</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HtUh8z",
+        "text_inTjpp"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Inspiring-Entrep-edited-scaled-1-2048x2048.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_product_breakdown_qhGUya": {
+      "type": "ssky-product-breakdown",
+      "blocks": {
+        "product_Wgdtzk": {
+          "type": "product",
+          "settings": {
+            "product": "the-tuttle-twins-guide-to-inspiring-entrepreneurs",
+            "image_fit": true,
+            "image": "shopify://shop_images/Inspiring-Interprenuers_1.webp",
+            "price": "",
+            "button_label": "Buy the book",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "text_mrzy8t": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Entrepreneurs included:</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "highlights_q8nRwH": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Adi Dassler</p>",
+            "highlight_b": "<p>Brian Chesky & Joe Gebbia</p>",
+            "highlight_c": "<p>Andrew Mellon</p>",
+            "highlight_d": "<p>Elijah McCoy</p>",
+            "highlight_e": "<p>Elon Musk</p>",
+            "highlight_f": "<p>George Eastman</p>",
+            "highlight_g": "",
+            "highlight_h": ""
+          }
+        },
+        "highlights_7Jbijm": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Hetty Green</p>",
+            "highlight_b": "<p>Howard Schultz</p>",
+            "highlight_c": "<p>John Rockefeller</p>",
+            "highlight_d": "<p>Madam Walker</p>",
+            "highlight_e": "<p>Magatte Wade</p>",
+            "highlight_f": "",
+            "highlight_g": "",
+            "highlight_h": ""
+          }
+        },
+        "highlights_8JbqwG": {
+          "type": "highlights",
+          "settings": {
+            "highlight_a": "<p>Powel Crosley</p>",
+            "highlight_b": "<p>Steve Jobs</p>",
+            "highlight_c": "<p>Wally Amos</p>",
+            "highlight_d": "<p>Walt Disney</p>",
+            "highlight_e": "<p>Yvon Chouinard</p>",
+            "highlight_f": "",
+            "highlight_g": "",
+            "highlight_h": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_Wgdtzk",
+        "text_mrzy8t",
+        "highlights_q8nRwH",
+        "highlights_7Jbijm",
+        "highlights_8JbqwG"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_product_order_block_gnrENm": {
+      "type": "sskymo-product-order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_6DWVji": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_PytWff": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Challenge Your Teen</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_qiP9He": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our teen books were created to provide the mental tools and ideas that most teens lack in today’s society. Instead of “keeping up with” status-obsessed influencers, actors, or trivia, your teens will be reading about some of the <strong>most important ideas and people from history.</strong> </p><p>Each guidebook explores a central theme by going through many different examples. They’re designed to help teens <strong>think for themselves</strong> and <strong>learn from the past</strong>.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_PytWff",
+        "text_qiP9He"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Guidebook_Inspiring_Entrepreneurs_Teen_Couch-scaled-2-1024x684.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_c_kYHPPF": {
+      "type": "sskymo-text-column-c",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_mRrKmC": {
+      "type": "ssky-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/True-Conspiracies-lifestyle-3-scaled-2.webp",
+        "image_2_link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "sskymo_image_slide_Dc3QUa": {
+      "type": "sskymo-image-slide",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_XDjEFM": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "ssky_text_image_block_7zGJL7",
+    "sskymo_text_image_block_d_mYi3XM",
+    "ssky_text_image_block_eAJbhJ",
+    "ssky_product_breakdown_Ubb9ce",
+    "sskymo_product_order_block_QWbYK8",
+    "ssky_text_image_block_6CxPWP",
+    "ssky_product_breakdown_Ybf9rJ",
+    "ssky_text_image_block_TyW94h",
+    "ssky_product_breakdown_7MLxEp",
+    "ssky_text_image_block_PyKdmf",
+    "ssky_product_breakdown_HbYEAz",
+    "sskymo_product_order_block_adNY88",
+    "ssky_text_image_block_EUHFcq",
+    "ssky_product_breakdown_JXzdkg",
+    "ssky_text_image_block_e87xPX",
+    "ssky_product_breakdown_ariCEi",
+    "sskymo_product_order_block_i43jVU",
+    "ssky_text_image_block_T3RTy4",
+    "ssky_product_breakdown_qhGUya",
+    "sskymo_product_order_block_gnrENm",
+    "ssky_text_image_block_6DWVji",
+    "sskymo_text_column_c_kYHPPF",
+    "ssky_image_banner_mRrKmC",
+    "sskymo_image_slide_Dc3QUa",
+    "sskymo_text_image_block_b_XDjEFM"
+  ]
+}

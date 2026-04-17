@@ -1,0 +1,335 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: America's History Books
+  File:    sections/section-a250-books.liquid
+  Blocks:  book_card (each volume)
+           bundle_cta (the navy bundle callout — limit 1)
+
+  DYNAMIC PRICING TIP:
+  Replace block.settings.price with:
+    {{ all_products[block.settings.product_handle].price | money }}
+  to pull live Shopify pricing instead of the text field.
+  ============================================================
+{% endcomment %}
+{{ 'america250.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Nunito+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+<div class="a250">
+  <section class="a250-books-section" id="a250-books">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-section-sub">{{ section.settings.subheading }}</p>
+
+    {% assign book_blocks = section.blocks | where: 'type', 'book_card' %}
+    {% if book_blocks.size > 0 %}
+      <div class="a250-books-grid">
+        {% for block in book_blocks %}
+          <div class="a250-book-card" {{ block.shopify_attributes }}>
+            {% if block.settings.badge_text != blank %}
+              <span class="a250-book-badge {% if block.settings.badge_style == 'new' %}a250-book-badge--new{% endif %}">
+                {{ block.settings.badge_text }}
+              </span>
+            {% endif %}
+
+            <div class="a250-book-cover a250-book-cover--{{ block.settings.cover_style }}">
+              <span class="a250-book-cover-icon">{{ block.settings.cover_icon }}</span>
+              <span class="a250-book-vol-num">{{ block.settings.vol_numeral }}</span>
+            </div>
+
+            <div class="a250-book-body">
+              <div class="a250-book-vol-label">{{ block.settings.vol_label }}</div>
+              <div class="a250-book-title">{{ block.settings.title }}</div>
+              <div class="a250-book-desc">{{ block.settings.description }}</div>
+
+              <div class="a250-book-price" {% if block.settings.price_color != blank %}style="color:{{ block.settings.price_color }}"{% endif %}>
+                {% if block.settings.original_price != blank %}
+                  <s>{{ block.settings.original_price }}</s>&nbsp;
+                {% endif %}
+                {{ block.settings.price }}
+              </div>
+
+              <a href="{{ block.settings.product_url }}"
+                 class="a250-btn-book {% if block.settings.button_style == 'featured' %}a250-btn-book--featured{% endif %}">
+                {{ block.settings.button_text }}
+                {% if block.settings.button_style == 'featured' %} →{% endif %}
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% assign bundle_block = section.blocks | where: 'type', 'bundle_cta' | first %}
+    {% if bundle_block %}
+      <div class="a250-bundle-callout" {{ bundle_block.shopify_attributes }}>
+        <div class="a250-bundle-callout-text">
+          <h3>{{ bundle_block.settings.heading }}</h3>
+          <p>{{ bundle_block.settings.description }}</p>
+        </div>
+        <div class="a250-bundle-price-group">
+          {% if bundle_block.settings.save_badge != blank %}
+            <div class="a250-bundle-save-badge">{{ bundle_block.settings.save_badge }}</div>
+          {% endif %}
+          <div class="a250-bundle-price">
+            {% if bundle_block.settings.original_price != blank %}
+              <s>{{ bundle_block.settings.original_price }}</s>
+            {% endif %}
+            {{ bundle_block.settings.sale_price }}
+          </div>
+          <a href="{{ bundle_block.settings.url }}" class="a250-btn-bundle">
+            {{ bundle_block.settings.button_text }} →
+          </a>
+        </div>
+      </div>
+    {% endif %}
+
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · Books",
+  "tag": "div",
+  "class": "a250-section-books",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "America's History Series"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The books behind the next generation's story."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Whether your family is new to Tuttle Twins or ready for the newest volume — these are the books the contest is built around. Volume 3 is almost here."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "book_card",
+      "name": "Book Card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Badge"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text (leave blank to hide)"
+        },
+        {
+          "type": "select",
+          "id": "badge_style",
+          "label": "Badge style",
+          "options": [
+            { "value": "sale", "label": "Red (Sale)"     },
+            { "value": "new",  "label": "Green (New/Coming Soon)" }
+          ],
+          "default": "new"
+        },
+        {
+          "type": "header",
+          "content": "Cover"
+        },
+        {
+          "type": "text",
+          "id": "cover_icon",
+          "label": "Cover icon / emoji",
+          "default": "🏛️"
+        },
+        {
+          "type": "select",
+          "id": "cover_style",
+          "label": "Cover gradient",
+          "options": [
+            { "value": "vol1", "label": "Navy (Vol 1)"      },
+            { "value": "vol2", "label": "Navy/Red (Vol 2)"  },
+            { "value": "vol3", "label": "Teal/Navy (Vol 3)" }
+          ],
+          "default": "vol1"
+        },
+        {
+          "type": "text",
+          "id": "vol_numeral",
+          "label": "Volume numeral (watermark)",
+          "default": "I"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "vol_label",
+          "label": "Volume label (small caps)",
+          "default": "Volume 1 · America's History"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Book title",
+          "default": "[VOL1_TITLE]"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Short description",
+          "default": "[VOL1_DESC]"
+        },
+        {
+          "type": "header",
+          "content": "Pricing"
+        },
+        {
+          "type": "text",
+          "id": "original_price",
+          "label": "Original price (struck through — leave blank if no discount)"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price (or 'Pre-Order Now')",
+          "default": "$24.99"
+        },
+        {
+          "type": "text",
+          "id": "price_color",
+          "label": "Price color (hex — leave blank for default dark)",
+          "info": "e.g. #0597AF for teal. Use for Pre-Order 'coming soon' styling."
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "url",
+          "id": "product_url",
+          "label": "Product URL"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button label",
+          "default": "Get Volume 1"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "teal",     "label": "Teal (standard)" },
+            { "value": "featured", "label": "Red (featured / pre-order)" }
+          ],
+          "default": "teal"
+        }
+      ]
+    },
+    {
+      "type": "bundle_cta",
+      "name": "Bundle CTA",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Bundle heading",
+          "default": "Get All 3 Volumes — the Complete America's History Set"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Bundle description",
+          "default": "The full arc: founding principles, national trials, and the road ahead. The set that makes the contest entry easier — and makes Dinner Table conversations last for years."
+        },
+        {
+          "type": "text",
+          "id": "save_badge",
+          "label": "Save badge text",
+          "default": "Best Value"
+        },
+        {
+          "type": "text",
+          "id": "original_price",
+          "label": "Original price (struck through)",
+          "default": "$74.97"
+        },
+        {
+          "type": "text",
+          "id": "sale_price",
+          "label": "Sale price",
+          "default": "$59.99"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Bundle product URL"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button label",
+          "default": "Shop the Bundle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Books",
+      "blocks": [
+        {
+          "type": "book_card",
+          "settings": {
+            "cover_icon": "🏛️", "cover_style": "vol1", "vol_numeral": "I",
+            "vol_label": "Volume 1 · America's History",
+            "title": "[VOL1_TITLE]", "description": "[VOL1_DESC]",
+            "price": "$24.99", "button_text": "Get Volume 1", "button_style": "teal"
+          }
+        },
+        {
+          "type": "book_card",
+          "settings": {
+            "cover_icon": "⚔️", "cover_style": "vol2", "vol_numeral": "II",
+            "vol_label": "Volume 2 · America's History",
+            "title": "[VOL2_TITLE]", "description": "[VOL2_DESC]",
+            "price": "$24.99", "button_text": "Get Volume 2", "button_style": "teal"
+          }
+        },
+        {
+          "type": "book_card",
+          "settings": {
+            "badge_text": "Coming Soon", "badge_style": "new",
+            "cover_icon": "🗽", "cover_style": "vol3", "vol_numeral": "III",
+            "vol_label": "Volume 3 · America's History · NEW",
+            "title": "[VOL3_TITLE]", "description": "[VOL3_DESC]",
+            "price": "Pre-Order Now", "price_color": "#0597AF",
+            "button_text": "Pre-Order Volume 3", "button_style": "featured"
+          }
+        },
+        {
+          "type": "bundle_cta",
+          "settings": {
+            "heading": "Get All 3 Volumes — the Complete America's History Set",
+            "description": "The full arc: founding principles, national trials, and the road ahead. The set that makes the contest entry easier — and makes Dinner Table conversations last for years.",
+            "save_badge": "Best Value",
+            "original_price": "$74.97",
+            "sale_price": "$59.99",
+            "button_text": "Shop the Bundle"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

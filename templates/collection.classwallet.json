@@ -1,0 +1,505 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ssky_home_main_dpBXCz": {
+      "type": "ssky-home-main",
+      "blocks": {
+        "heading_jTWbnc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Introducing the Ideas of Liberty to a New Generation",
+            "heading_size": "h0",
+            "heading_weight": "semibold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_E9yQRy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For years, parents who value freedom have looked for meaningful ways to teach their kids about liberty, personal responsibility, and critical thinking. Today, more families than ever are turning to our engaging resources to spark conversations, build character, and inspire a lifelong love of learning.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_4FGxC3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NewGen-splash.webp",
+            "image_fit": true
+          }
+        },
+        "button_tV8h8a": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_large": true,
+            "button_full": true,
+            "button_label": "Toddlers",
+            "button_link": "shopify://pages/toddler",
+            "button_label_b": "Kids",
+            "button_link_b": "shopify://pages/kids-books",
+            "button_label_c": "Teens",
+            "button_link_c": "shopify://pages/books-for-teens",
+            "button_style_secondary": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": true
+          }
+        },
+        "milestones_YKNEEr": {
+          "type": "milestones",
+          "settings": {
+            "title_a": "6 Mil+",
+            "text_a": "<p>Copies Sold <br/>Worldwide</p>",
+            "title_b": "4,500+",
+            "review_stars": "shopify://shop_images/5-Stars-1.webp",
+            "text_b": "5 Star Reviews",
+            "icon": "shopify://shop_images/30-days-guarantee.webp"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jTWbnc",
+        "text_E9yQRy",
+        "image_4FGxC3",
+        "button_tV8h8a",
+        "milestones_YKNEEr"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "sskymo_logo_list_B9KBEY": {
+      "type": "sskymo-logo-list",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 36,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_e6xFUh": {
+      "type": "z-video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/aJg-TyXFdTw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_about_page.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "ssky_testimonials_Wd3A9w": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_RaN7tK": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“<strong>We’re really concerned about teaching our daughter proper education, giving her real useful and practical tools to be a successful person and to learn about</strong> economics and government and politics and history, the way it’s supposed to be taught accurately. Thanks for what you do.“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Dusty S.",
+            "author_state": "",
+            "author_image": "shopify://shop_images/Dusty-Scott.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_RaN7tK"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_k3NrJD": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_HJGjTB": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Our Mission Is to Help You Teach Powerful Ideas and True History to Your Children</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_4qXrPH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a parent wanting to teach your kids the values you hold dear, you may wonder:</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_MgUEEY": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>Can my kids really understand economic ideas? Do I need to teach them about it?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_QLxhiq": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How can I inspire my kids to love America and the ideas taught by the Founding Fathers?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_DLyRMr": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do I give my kids a foundation of freedom so they aren’t swept up by the crazy ideas being promoted on social media and by the government and media?</p>",
+            "text_large": true
+          }
+        },
+        "text_8ECg4a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While there are many books to teach the ideas of freedom to adults, there has been a profound void in the children’s literature market. The Tuttle Twins series closes the gap, helping parents convey the principles of freedom to their kids in a fun way.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_HJGjTB",
+        "text_4qXrPH",
+        "checkbox_MgUEEY",
+        "checkbox_QLxhiq",
+        "checkbox_DLyRMr",
+        "text_8ECg4a"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/family-with-book.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_3Mq9tR": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_8cymFT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Taking the ideas of liberty to the next generation, with fun, educational books that kids and adults can enjoy.</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_LJFxyj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each of our books focuses on a different aspect of the principles of a free society: free markets, entrepreneurship, individual rights, personal responsibility, sound money, protectionism, and a variety of other issues—all boiled down to core concepts that children of different ages can easily grasp.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8cymFT",
+        "text_LJFxyj"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Girl-with-Book-v2.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "scheme-5",
+        "merging_color": "#3f3939",
+        "overflow_image": 60,
+        "merge_with_section_above": true,
+        "remove_bottom_space": true,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_f_k7Hfee": {
+      "type": "sskymo-text-column-f",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "hs_landing_xaxAj6": {
+      "type": "hs-landing",
+      "name": "HS - Landing",
+      "settings": {
+        "hide_nav_items": true
+      }
+    }
+  },
+  "order": [
+    "ssky_home_main_dpBXCz",
+    "sskymo_logo_list_B9KBEY",
+    "banner",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "z_video_e6xFUh",
+    "ssky_testimonials_Wd3A9w",
+    "ssky_text_image_block_k3NrJD",
+    "ssky_text_image_block_3Mq9tR",
+    "sskymo_text_column_f_k7Hfee",
+    "sskymo_text_image_block_b_V3HPhx",
+    "hs_landing_xaxAj6"
+  ]
+}

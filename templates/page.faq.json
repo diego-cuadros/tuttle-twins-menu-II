@@ -1,0 +1,420 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_3Qemgx": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_UKnEdr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Order Questions</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_RegETV": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How long will it take to receive my books after ordering?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Packages are usually processed by our warehouse in 3-5 business days, and our shipping partners offers a window of 5-7 business once the package is transferred to them.  This creates a shipping window of 8-10 business days from when your order is placed.  We cannot control delays caused by weather or shipping partner complications but we do our best to package your products in a timely manner.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_QTTPt8": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Where can I find my digital downloads I ordered?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>The links to your digital files are included in your order confirmation email sent after purchase.  They appear as blue hyperlinks that you can click on to download those files.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_rT9Wyg": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>I am having issues downloading digital files I ordered. Can you please help?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Here are some helpful hints we have for people as they are working with the downloads. I hope these can help!<br/><br/>Tips that may work well to retrieve the files. All computers have different settings, so we have a few suggestions.<br/><br/>When you click on the link it will download the file to your computer rather than opening it up on a new window. If you are having a hard time finding it try going to your computer’s “settings” and then “downloads” and you should find the file(s) there. Sometimes it is helpful to copy/paste the link in your browser.<br/><br/>Open the link using a different browser.<br/><br/>Take the email to your local printshop and ask them to print the files for you.<br/><br/>Save the link onto a USB drive and open it on a different computer.<br/><br/>For downloading your audio files to iTunes:<br/></p><ol><li>Open iTunes</li><li>Click File Menu and select “Add to Library”</li><li>Find the files you would like to add</li><li>Add the selected files to your iTunes.</li><li>Click the music button and open your library.</li><li>Find your newly added files in your library and press play.</li></ol>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_RJ9U8M": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do you ship outside the U.S.?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>We do ship outside the U.S.! You should be able to add the items to your cart and proceed to a placed to  enter your shipping information.  Shipping for your package is calculated based on the weight of the items and your destination address.  <br/><br/>NOTE: This does not include our magazine subscription. Our mail house for the magazine doesn’t have the capability to ship internationally. We might look at a PDF only version for our international customers, but that is not an option just yet.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_rhqGwr": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What should I do if my package is damaged or incorrect?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>If your package is damaged or incorrect, please send us an email with your order number as well as photo documentation of the damage/received books. We will do our best to get you the correct, undamaged books in a timely manner.  Sending a photo helps us verify your new order is correct, and how we can improve our packaging for the future.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_PWDbhi": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What is the return/refund process?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>If you do not want to keep the books you can send them back to us and, once they are received, we can issue a refund for the books or an exchange for a different set.  We are happy to work with you through the process.  We do not cover the cost of return postage.<br/><br/><strong>Please send them to: <br/></strong>659 N Saratoga Rd, Suite 355 <br/>Saratoga Springs, Utah 84045<br/><br/>To help connect us with your order, please include a note with your name, order number, and email address so we can identify your order. You can find your order details on the confirmation email you received after placing the order.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_jWne3d": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How can I place a bulk order?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Please email us at <a href=\"mailto:info@tuttletwins.com\" target=\"_blank\" title=\"mailto:info@tuttletwins.com\">info@tuttletwins.com</a> or contact us through our customer service form so we can send you more information about ordering in bulk.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UKnEdr",
+        "faq_RegETV",
+        "faq_QTTPt8",
+        "faq_rT9Wyg",
+        "faq_RJ9U8M",
+        "faq_rhqGwr",
+        "faq_PWDbhi",
+        "faq_jWne3d"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 96,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_xYdTBN": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_EMz6pT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Book Questions</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_tb4y9R": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are your books political? Do they teach the conservative republican view?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our books lean towards our Libertarian roots. These books do have a conservative perspective on personal freedom, free markets, property rights, limited government, etc.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_KRNdRF": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are your books religious?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Each of our children’s books is based on an original book or essay—we take classic content and turn it into something accessible for a child.<br/><br/>The first book we did is based on The Law, an essay written in 1850 by a French economist named Frédéric Bastiat.In this essay, Bastiat argues that God is the source of our rights. (A popular opinion at the time, of course.) As such, our book explains the same thing, since we stick with what the original author talked about.<br/><br/>Not all families agree with this, of course—so the secular families reading our books simply take the opportunity to explain that while this is a popular perspective, it’s not one that they share. And that’s fine!<br/><br/>But this is the only book in the children’s series that contains any religious reference; the remaining books—<a href=\"/pages/products\" title=\"Tuttle Twins Books and Products\">see the list here</a>—have no religious content of any kind.<br/><br/>Here is a link to see how Connor answers this question: <br/><br/><a href=\"https://youtu.be/WllQVKPo-e4\" target=\"_blank\" title=\"https://youtu.be/WllQVKPo-e4\">https://youtu.be/WllQVKPo-e4</a></p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_BFVHei": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What reading level are your books?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Here are some of our samples and age levels: <br/></p><ul><li>Free Market Curriculum (Kindergarten-High school): <a href=\"/pages/economics\" title=\"Life-Changing Education for Children of All Ages\">https://tuttletwins.com/pages/economics</a></li></ul><p></p><ul><li>Our history book (ages 12 and up): <a href=\"/pages/history\" title=\"History\">https://tuttletwins.com/pages/history</a></li></ul><p></p><ul><li>Tuttle Twins magazine issue 0 (ages 5-12):  <a href=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/Issue-0-Digital.pdf?v=1740208911\" title=\"https://cdn.shopify.com/s/files/1/0655/8951/0282/files/Issue-0-Digital.pdf?v=1740208911\">https://cdn.shopify.com/s/files/1/0655/8951/0282/files/Issue-0-Digital.pdf</a></li></ul><p></p><ul><li>Our teen Guidebooks (ages 12 and up) : <a href=\"/pages/guide\" title=\"Tuttle Twins Guidebooks\">https://tuttletwins.com/pages/guide</a></li></ul><p></p><ul><li>Graphic Novels (ages 8 and up) : <a href=\"/collections/cartoon\" title=\"Cartoon\">https://tuttletwins.com/collections/cartoon</a><br/></li></ul><p></p><ul><li>Children’s book Series (ages 5-11): <a href=\"/pages/childrens-resources\" title=\"Children's Resources (Age 5–11)\">https://tuttletwins.com/pages/childrens-resources</a><br/></li></ul><p></p><ul><li>Toddler books (ages 0-4): <a href=\"/collections/tuttle-toddlers\" title=\"Tuttle Toddlers\">https://tuttletwins.com/collections/tuttle-toddlers</a></li></ul><p><a href=\"/collections/tuttle-toddlers\" title=\"Tuttle Toddlers\"><br/></a></p><p>Can I view a sample of your children’s books before purchasing?</p><ul><li>Children’s book Series (ages 5-11): <a href=\"/pages/childrens-resources\" title=\"Children's Resources (Age 5–11)\">https://tuttletwins.com/pages/childrens-resources</a></li></ul><p></p><p><br/>Can I view a sample of your history book before purchasing?</p><ul><li>Here is the link for a sample of our history: <a href=\"/pages/history\" title=\"History\">https://tuttletwins.com/pages/history</a><br/><br/>If you scroll down on the page you will be able to download a chapter of the History book to look over.</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EMz6pT",
+        "faq_tb4y9R",
+        "faq_KRNdRF",
+        "faq_BFVHei"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_RkT7aU": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_UP7Qk7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Tuttle Times magazine</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_Ez6tpb": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How do I purchase more than one magazine subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Order once, creating an account…..after checking out, go to my-account and sign in to your new account. After logging in, go to <a href=\"/pages/magazine\" title=\"A Monthly Magazine for Curious Kids\">https://tuttletwins.com/pages/magazine</a> and purchase another subscription.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_7qGdTp": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Does my Tuttle Times magazine subscription auto-renew?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, but if you would like it to NOT auto-renew please email us so we can set it to manually renew.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_jjfJzB": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How do I access the Tuttle Times Plus Pack?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>You will receive an email each month with the Plus Pack or you can login on this website for access. </p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_niJNjd": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>As a Tuttle Times Plus Pack subscriber, how do I access the PDFs of past issues?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>You can login on this website for access to all the past issues. </p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_tdhYqQ": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How do I upgrade my Tuttle Times magazine subscription to receive the Plus Pack?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<ol><li>Log in to your account<br/>Log in to your account. (If you don’t recall your password, click “Forgot Your Password” and follow the prompts.<br/>Then click the “manage your subscription” link in the last sentence.<br/><br/></li><li>Review your subscription<br/>On this page you can see your magazine subscription. Click on the subscription number to edit it.<br/><br/></li><li>Click “Upgrade or Downgrade” button<br/>Scroll down to the “Subscription totals” section and hit the button that says “Upgrade or Downgrade.”<br/><br/></li><li>Select the Magazine PLUS option<br/>You will be taken to the magazine product page. From there, select Magazine PLUS then click the “Switch Subscription” button.<br/><br/></li><li>Follow the remaining instructions<br/>Depending on the time you do this during your subscription, you may see a prorated amount being applied from your previous magazine subscription.</li></ol>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_rzRGLn": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can I purchase the magazine as an international customer?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>You may purchase the Plus subscription as an international customer, but you will need to send the physical magazine to someone in the United States.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_x98WpJ": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How do I change or cancel my Tuttle Times magazine subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>You can email us at <a href=\"mailto:info@tuttletwins.com\" target=\"_blank\" title=\"mailto:info@tuttletwins.com\">info@tuttletwins.com</a> to update the status of your subscription or you may log in to your account </p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UP7Qk7",
+        "faq_Ez6tpb",
+        "faq_7qGdTp",
+        "faq_jjfJzB",
+        "faq_niJNjd",
+        "faq_tdhYqQ",
+        "faq_rzRGLn",
+        "faq_x98WpJ"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_UCBmV6": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_9qFzVQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Tuttle Twins Cartoon</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_krzWRk": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are the Tuttle Twins cartoon episodes the same stories as the books?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>No, but they encompass the same values and ideas!</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_tnHXYN": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Where can I watch the Tuttle Twins cartoon?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>You can watch our cartoons on the Angel TV app!</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_gRTiR9": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How can I order the merchandise and specials offered during the show?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p><a href=\"https://tuttletwins.store/collections/frontpage\" target=\"_blank\" title=\"https://tuttletwins.store/collections/frontpage\">https://tuttletwins.store/collections/frontpage</a></p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9qFzVQ",
+        "faq_krzWRk",
+        "faq_tnHXYN",
+        "faq_gRTiR9"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 96,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_faqs_3Qemgx",
+    "ssky_faqs_xYdTBN",
+    "ssky_faqs_RkT7aU",
+    "ssky_faqs_UCBmV6"
+  ]
+}

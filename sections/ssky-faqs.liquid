@@ -1,0 +1,938 @@
+{%- liquid
+  assign merging_with_section_below = false
+  assign show_as_card = false
+  assign narrow_width = false
+  if section.settings.merging_with_section_below == true
+    assign merging_with_section_below = true
+  elsif section.settings.show_as_card == true
+    assign show_as_card = true
+    if section.settings.narrow_width == true
+      assign narrow_width = true
+    endif
+  endif
+-%}
+{%- style -%}
+  *:not(.ssky-text-block__faqs) + .ssky-text-block__faqs {
+    margin-top: 3.2rem;
+  }
+  .ssky-text-block__faqs + *:not(.ssky-text-block__faqs) {
+    margin-top: 5.2rem;
+  }
+  .ssky-text-block__faqs {
+    margin-top: 0px;
+  }
+  .ssky-text-block__faq {
+    padding: 0 8px;
+    border-bottom: 1px solid rgba(var(--color-foreground), .75);;
+  }
+  .ssky-text-block__question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .ssky-text-block__question .svg-wrapper {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+    padding: 8px;
+  }
+  .ssky-text-block__question .svg-wrapper .icon {
+    transition: all 0.3s ease;
+  }
+  .ssky-text-block__question.active {
+    padding-top: 32px;
+  }
+  .ssky-text-block__question.active .svg-wrapper .icon {
+    rotate: 180deg;
+  }
+  .ssky-text-block__answer {
+    height: auto;
+    max-height: 0px;
+    margin-right: 30px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .ssky-text-block__question.active + .ssky-text-block__answer {
+    max-height: 1200px;
+    padding-bottom: 32px;
+  }
+  .ssky-text-block__question.overflow-auto + .ssky-text-block__answer {
+    overflow: auto;
+  }
+
+  .ssky-text-block-{{ section.id }} .ssky-text-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-text-block-{{ section.id }} .ssky-text-block__blocks > *:not(.ssky-text-block__divider) {
+    max-width: 60rem;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__blocks > *:not(.ssky-text-block__divider, .ssky-text-block__buttons) {
+      max-width: {{ section.settings.max_width }}rem;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if merging_with_section_below -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block {
+      z-index: 1;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    }
+    .ssky-text-block-{{ section.id }} .ssky-text-block__layout-merging-color {
+      background-color: {{ section.settings.merging_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+  {%- if narrow_width -%}
+    .ssky-text-block-{{ section.id }} .ssky-text-block__wrapper {
+      max-width: 1100px;
+    }
+  {%- endif -%}
+  .ssky-text-block-{{ section.id }} .button-link {
+    background: transparent;
+    border: transparent;
+    color: #da5846;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+  }
+{%- endstyle -%}
+<div class="ssky-text-block-{{ section.id }}">
+  <div class="ssky-text-block content-container color-{{ section.settings.color_scheme }} gradient">
+    {%- if merging_with_section_below -%}
+      <div class="ssky-text-block__layout-merging page-width{%- if section.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}">
+        <div class="color-{{ section.settings.color_scheme_layout_merging }} gradient">
+    {%- endif -%}
+    {%- if show_as_card -%}
+      <div class="page-width">
+    {%- endif -%}
+    <div class="ssky-text-block__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-text-block__blocks ssky-text-block__background {{ section.settings.content_alignment }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'faq' -%}
+              <div
+                class="ssky-text-block__faqs ssky-text-block__text rte left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="ssky-text-block__faq" style="max-width:{{ section.settings.max_width_faqs }}rem;">
+                  <div class="ssky-text-block__question text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}">
+                    <span class="rte">
+                      {{ block.settings.text }}
+                    </span>
+                    <span class="svg-wrapper">
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </span>
+                  </div>
+                  <div class="ssky-text-block__answer rte text-{{ block.settings.text_size_b }} weight-{{ block.settings.text_weight_b }}">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+            {%- when 'caption' -%}
+              <div
+                class="ssky-text-block__caption {{ block.settings.text_style }} {{ block.settings.color_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.caption | escape }}
+              </div>
+            {%- when 'heading' -%}
+              {%- assign heading_length = block.settings.heading | size -%}
+              <h2
+                class="ssky-text-block__heading rte {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
+
+            {%- when 'text' -%}
+              <div
+                class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="rte" style="max-width:{{ block.settings.max_width }}rem;">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            {%- when 'button' -%}
+              {%- assign button_block = true -%}
+          {%- endcase -%}
+        {%- endfor -%}
+        {%- if button_block == true -%}
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'button' -%}
+                {%- if block.settings.product != blank -%}
+                  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                  {%- assign block_product = block.settings.product -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                  {%- if block.settings.show_price -%}
+                    <div class="ssky-text-block__price">
+                      {% render 'price', product: block_product, show_compare_at_price: true %}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+                <div
+                  class="ssky-text-block__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} ssky-text-block__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {%- if block.settings.product != blank -%}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: block_product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      is_button_large: block.settings.button_large,
+                      is_button_full: block.settings.button_full,
+                      is_button_link: block.settings.button_outlink,
+                      button_label: block.settings.product_button_label
+                    -%}
+                  {%- else -%}
+                    {%- if block.settings.button_label != blank -%}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
+                        {% if block.settings.button_outlink %}
+                          class="button-link"
+                        {% else %}
+                          class="button{%- if block.settings.button_large %} button--large{%- elsif block.settings.button_medium %} button--medium{%- endif -%}{%- if block.settings.button_full %} button--full-width{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                        {% endif %}
+                      >
+                        {{- block.settings.button_label | escape -}}
+                      </a>
+                    {%- endif -%}
+                    {%- if block.settings.button_label_2 != blank -%}
+                      <a
+                        {% if block.settings.button_link_2 == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link_2 }}"
+                        {% endif %}
+                        {% if block.settings.button_outlink %}
+                          class="button-link"
+                        {% else %}
+                          class="button{%- if block.settings.button_large %} button--large{%- elsif block.settings.button_medium %} button--medium{%- endif -%}{%- if block.settings.button_full %} button--full-width{%- endif -%}{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                        {% endif %}
+                      >
+                        {{- block.settings.button_label_2 | escape -}}
+                      </a>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.text_below_buttons != blank -%}
+                  <div class="ssky-text-block__text-below-buttons rte">{{ block.settings.text_below_buttons }}</div>
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+    {%- if merging_with_section_below -%}
+      </div>
+      </div>
+      <div
+        class="ssky-text-block__layout-merging-color {%- if section.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}"
+      ></div>
+    {%- endif -%}
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sskyFaqQuestions = document.querySelectorAll(
+        '.ssky-text-block-{{ section.id }} .ssky-text-block__question'
+      );
+      sskyFaqQuestions.forEach((sskyFaqQuestion) => {
+        sskyFaqQuestion.addEventListener('click', () => {
+          if (sskyFaqQuestion.classList.contains('active')) {
+            sskyFaqQuestion.classList.remove('active');
+            sskyFaqQuestion.classList.remove('overflow-auto');
+          } else {
+            sskyFaqQuestions.forEach((sskyFaqQuestion) => {
+              sskyFaqQuestion.classList.remove('active');
+              sskyFaqQuestion.classList.remove('overflow-auto');
+            });
+            sskyFaqQuestion.classList.add('active');
+            setTimeout(() => {
+              sskyFaqQuestion.classList.add('overflow-auto');
+            }, 500);
+          }
+        });
+      });
+    });
+  </script>
+</div>
+
+{% schema %}
+{
+  "name": "TT FAQs",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.ssky_text_block.settings.content_alignment.label"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 72,
+      "max": 120,
+      "step": 1,
+      "label": "t:sections.ssky_text_block.settings.max_width.label",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "max_width_faqs",
+      "min": 56,
+      "max": 120,
+      "step": 1,
+      "label": "FAQs width",
+      "default": 64,
+      "info": "t:sections.ssky_text_block.blocks.text.settings.max_width.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_width",
+      "label": "t:sections.all.ssky_layouts.extension.narrow",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.merging"
+    },
+    {
+      "type": "checkbox",
+      "id": "merging_with_section_below",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_layout_merging",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "color",
+      "id": "merging_color",
+      "label": "Merging color",
+      "default": "#bcecf6"
+    },
+    {
+      "type": "checkbox",
+      "id": "merge_with_section_above",
+      "label": "t:sections.all.ssky_layouts.extension.merging_above",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "limit": 15,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Question",
+          "default": "<p>Question?</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            },
+            {
+              "value": "extra-extra-large",
+              "label": "t:sections.all.text_size.options__4.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "bold",
+          "label": "t:sections.all.text_weight.label"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Answer here</p>",
+          "info": "After editing, click 'Save' to preview the content."
+        },
+        {
+          "type": "select",
+          "id": "text_size_b",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            },
+            {
+              "value": "extra-extra-large",
+              "label": "t:sections.all.text_size.options__4.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight_b",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "small-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+            },
+            {
+              "value": "small-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "medium-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+            },
+            {
+              "value": "large-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+            },
+            {
+              "value": "large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+            },
+            {
+              "value": "extra-large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__5.label"
+            },
+            {
+              "value": "extra-extra-large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__6.label"
+            }
+          ],
+          "default": "large-bold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "t:sections.all.ssky_color_class.default",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.ssky_text_block.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "t:sections.all.heading_size.options__0.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            {
+              "value": "medium",
+              "label": "t:sections.all.heading_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.heading_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.heading_weight.options__3.label"
+            }
+          ],
+          "default": "bold",
+          "label": "t:sections.all.heading_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.ssky_text_block.blocks.text.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "range",
+          "id": "max_width",
+          "min": 56,
+          "max": 120,
+          "step": 1,
+          "label": "t:sections.ssky_text_block.blocks.text.settings.max_width.label",
+          "default": 100,
+          "info": "t:sections.ssky_text_block.blocks.text.settings.max_width.info"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            },
+            {
+              "value": "extra-extra-large",
+              "label": "t:sections.all.text_size.options__4.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.ssky_text_block.blocks.button.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "button_large",
+          "default": false,
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_large.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_full",
+          "default": false,
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_full.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_outlink",
+          "default": false,
+          "label": "Button link style",
+          "info": "When enabled, all other button classes will be removed"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.ssky_text_block.blocks.button.settings.button_label.default",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text_below_buttons",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.text_below_buttons.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.ssky_text_block.blocks.button.settings.product.header"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.label",
+          "info": "t:sections.ssky_text_block.blocks.button.settings.product.info"
+        },
+        {
+          "type": "text",
+          "id": "product_button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.button_label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.show_price",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT FAQs",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,110 @@
+/* -----  ssky edits starts here ------ */
+.ssky-pdorder-block__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.ssky-pdorder-block__order-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+.ssky-pdorder-block__order-block + .ssky-pdorder-block__order-block,
+style + .ssky-pdorder-block__order-block {
+  margin-top: 6rem;
+}
+.ssky-pdorder-block__order-block
+  .ssky-text-block__buttons
+  + .ssky-text-block__buttons {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 749px) {
+  .ssky-pdorder-block__wrapper > .ssky-text-block__blocks {
+    text-align: center;
+  }
+  .ssky-pdorder-block__wrapper
+    > .ssky-text-block__blocks
+    .ssky-text-block__buttons {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 750px) {
+  .ssky-pdorder-block__order-block {
+    flex-direction: row;
+    align-items: center;
+  }
+  .ssky-pdorder-block__order-block-left {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .ssky-pdorder-block__order-block-right {
+    flex: 0 0 calc(50% - 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+.ssky-pdorder-block__price-compare .price__regular,
+.ssky-pdorder-block__price-compare .price__sale .price-item--sale {
+  display: none;
+}
+.ssky-pdorder-block__price-regular .price__sale .price-item--regular {
+  display: none;
+}
+/* ssky-pdorder-block__order-block--one */
+.ssky-pdorder-block__order-block--one .ssky-text-block__buttons {
+  flex-direction: column;
+  align-items: center;
+}
+/* ssky-pdorder-block__order-block--three */
+.ssky-pdorder-block__order-block--three .ssky-pdorder-block__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 20px 24px;
+  border-radius: 45px;
+  border: 1.6px solid rgb(var(--color-foreground));
+}
+.ssky-pdorder-block__order-block--three .ssky-pdorder-block__price-compare {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.ssky-pdorder-block__order-block--three
+  .ssky-pdorder-block__price-compare
+  .price-item--regular {
+  font-size: 25px;
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.8);
+}
+.ssky-pdorder-block__order-block--three
+  .ssky-pdorder-block__price-regular
+  .price {
+  font-size: clamp(
+    calc(var(--font-heading-scale) * 3.5rem),
+    5vw,
+    calc(var(--font-heading-scale) * 6rem)
+  );
+  font-weight: 700;
+}
+@media screen and (min-width: 990px) {
+  .ssky-pdorder-block__order-block--three .ssky-pdorder-block__order-block-left {
+    flex: 0 0 calc(60% - 16px);
+  }
+  .ssky-pdorder-block__order-block--three .ssky-pdorder-block__order-block-right {
+    flex: 0 0 calc(40% - 16px);
+  }
+}
+@media screen and (min-width: 1140px) {
+  .ssky-pdorder-block__order-block--three .ssky-pdorder-block__price {
+    min-width: 350px;
+  }
+}
+/* -----  ssky edits completes here ------ */

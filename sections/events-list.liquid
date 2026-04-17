@@ -1,0 +1,211 @@
+{% liquid
+  assign now_ts = 'now' | date: '%s'
+  assign events = shop.metaobjects.event.values
+%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  {% if section.settings.heading != blank %}
+    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <h1 class="title inline-richtext {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h1>
+    </div>
+  {% endif %}
+
+  <ul class="grid grid--1-col grid--2-col-tablet grid--3-col-desktop" role="list">
+    {% for event in events %}
+      {% assign start_ts = event.start_datetime | date: '%s' %}
+      {% assign end_ts = event.end_datetime | date: '%s' %}
+
+      {%- comment -%}
+        Filter logic:
+        - If end_datetime exists, show while end >= now
+        - Else fall back to start >= now
+      {%- endcomment -%}
+{% assign show_event = false %}
+
+{% if event.end_datetime %}
+  {% if end_ts >= now_ts %}
+    {% assign show_event = true %}
+  {% endif %}
+{% else %}
+  {% if start_ts >= now_ts %}
+    {% assign show_event = true %}
+  {% endif %}
+{% endif %}
+
+
+      {% if show_event %}
+        <li class="grid__item">
+          <div class="card-wrapper underline-links-hover">
+            <div class="card card--standard card--media">
+              {% if event.image %}
+                <div class="card__inner">
+                  <div class="card__media">
+                    <div class="media media--landscape media--hover-effect">
+                      <img
+                        src="{{ event.image | image_url: width: 1200 }}"
+                        alt="{{ event.title | escape }}"
+                        loading="lazy"
+                        width="1200"
+                        height="675"
+                      >
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+              <div class="card__content">
+                <div class="card__information">
+                  <h3 class="card__heading h5">
+                    {%- if event.event_url -%}
+                      <a href="{{ event.event_url }}" class="full-unstyled-link">
+                        {{ event.title }}
+                      </a>
+                    {%- else -%}
+                      {{ event.title }}
+                    {%- endif -%}
+                  </h3>
+
+                  <div class="article-card__info caption-with-letter-spacing">
+                    <span>
+                      {% if event.end_datetime %}
+  {% assign start_ymd = event.start_datetime | date: "%Y%m%d" %}
+  {% assign end_ymd = event.end_datetime | date: "%Y%m%d" %}
+
+  {% if end_ymd != start_ymd %}
+    – {{ event.end_datetime | date: "%B %-d, %Y" }}
+  {% endif %}
+{% endif %}
+
+                    </span>
+
+                    {% if event.city != blank or event.region != blank %}
+                      <span aria-hidden="true">•</span>
+                      <span>
+                        {{ event.city }}{% if event.city != blank and event.region != blank %}, {% endif %}{{ event.region }}
+                      </span>
+                    {% endif %}
+
+                    {% if event.booth != blank %}
+                      <span aria-hidden="true">•</span>
+                      <span>Booth {{ event.booth }}</span>
+                    {% endif %}
+                  </div>
+
+                  {% if event.summary != blank %}
+                    <p class="article-card__excerpt rte">
+                      {{ event.summary }}
+                    </p>
+                  {% endif %}
+
+                  {% if event.event_url %}
+                    <div class="article-card__footer">
+                      <a class="link animate-arrow" href="{{ event.event_url }}">
+                        {{ event.cta_label | default: section.settings.default_cta }}
+                        <span class="icon-wrap" aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% if section.settings.show_empty_message %}
+    {% comment %}
+      If no events match, show a friendly message.
+    {% endcomment %}
+    {% assign any_upcoming = false %}
+    {% for event in events %}
+      {% assign start_ts = event.start_datetime | date: '%s' %}
+      {% assign end_ts = event.end_datetime | date: '%s' %}
+      {% if event.end_datetime %}
+        {% if end_ts >= now_ts %}{% assign any_upcoming = true %}{% endif %}
+      {% else %}
+        {% if start_ts >= now_ts %}{% assign any_upcoming = true %}{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% unless any_upcoming %}
+      <div class="rte">
+        <p>{{ section.settings.empty_message }}</p>
+      </div>
+    {% endunless %}
+  {% endif %}
+</div>
+
+
+<style>
+.tt-events__grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.tt-event-card {
+  border: 1px solid #eee;
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.tt-event-card__image img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Events List",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Upcoming Events"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h1",
+      "options": [
+        { "value": "h1", "label": "Large" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h3", "label": "Small" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "default_cta",
+      "label": "Default CTA label",
+      "default": "Event details"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_empty_message",
+      "label": "Show message when no upcoming events",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "empty_message",
+      "label": "Empty message",
+      "default": "No upcoming events right now—check back soon!"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Events List"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,532 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subnav": {
+      "type": "section-a250-subnav",
+      "blocks": {
+        "nav_contest": {
+          "type": "nav_link",
+          "settings": {
+            "label": "The Contest",
+            "url": "#a250-contest"
+          }
+        },
+        "nav_how": {
+          "type": "nav_link",
+          "settings": {
+            "label": "How to Enter",
+            "url": "#a250-how"
+          }
+        },
+        "nav_newspapers": {
+          "type": "nav_link",
+          "settings": {
+            "label": "Find Your Newspaper",
+            "url": "#a250-newspapers"
+          }
+        },
+        "nav_books": {
+          "type": "nav_link",
+          "settings": {
+            "label": "Books",
+            "url": "#a250-books"
+          }
+        }
+      },
+      "block_order": [
+        "nav_contest",
+        "nav_how",
+        "nav_newspapers",
+        "nav_books"
+      ],
+      "settings": {
+        "sticky_offset": 0,
+        "cta_text": "Enter Now",
+        "cta_url": "#a250-enter"
+      }
+    },
+    "hero": {
+      "type": "section-a250-hero",
+      "blocks": {
+        "stat_copies": {
+          "type": "proof_stat",
+          "settings": {
+            "number": "7M+",
+            "label": "Copies Sold"
+          }
+        },
+        "stat_reviews": {
+          "type": "proof_stat",
+          "settings": {
+            "number": "4,500+",
+            "label": "5-Star Reviews"
+          }
+        },
+        "stat_winners": {
+          "type": "proof_stat",
+          "settings": {
+            "number": "250",
+            "label": "Book Prize Winners"
+          }
+        },
+        "stat_grand": {
+          "type": "proof_stat",
+          "settings": {
+            "number": "1",
+            "label": "Grand Prize Family Trip"
+          }
+        }
+      },
+      "block_order": [
+        "stat_copies",
+        "stat_reviews",
+        "stat_winners",
+        "stat_grand"
+      ],
+      "settings": {
+        "eyebrow_emoji_left": "⭐",
+        "eyebrow_text": "America's 250th Anniversary",
+        "eyebrow_emoji_right": "⭐",
+        "heading": "Your kid's voice belongs in the",
+        "heading_italic": "conversation.",
+        "subheading": "250 years of extraordinary history — and a new generation is ready to write the next chapter. Enter the [CONTEST_NAME] and give your child a voice in America's biggest birthday.",
+        "cta_primary_emoji": "🖊️",
+        "cta_primary_text": "Submit Your Entry",
+        "cta_primary_url": "#a250-enter",
+        "cta_secondary_text": "Learn How It Works",
+        "cta_secondary_url": "#a250-contest"
+      }
+    },
+    "story_arc": {
+      "type": "section-a250-story-arc",
+      "blocks": {
+        "beat_world": {
+          "type": "beat",
+          "settings": {
+            "icon": "🌎",
+            "color_key": "world",
+            "beat_label": "The World",
+            "beat_text": "America turns 250 — the most important experiment in human freedom ever attempted. Most kids can recite the facts. Very few understand what it cost, what it means, and what it still requires of them."
+          }
+        },
+        "beat_villain": {
+          "type": "beat",
+          "settings": {
+            "icon": "⚡",
+            "color_key": "villain",
+            "beat_label": "The Gap",
+            "beat_text": "It's not a failure of kids. It's a gap in what they've been given. The distance between the world they'll inherit and the ideas most schools have time to teach."
+          }
+        },
+        "beat_guide": {
+          "type": "beat",
+          "settings": {
+            "icon": "📖",
+            "color_key": "guide",
+            "beat_label": "The Guide",
+            "beat_text": "We put the ideas that built America — liberty, character, self-governance, and honest history — into stories a 9-year-old can love and a 16-year-old can stand behind."
+          }
+        },
+        "beat_moment": {
+          "type": "beat",
+          "settings": {
+            "icon": "💬",
+            "color_key": "moment",
+            "beat_label": "The Dinner Table Moment",
+            "beat_text": "\"She read the passage at dinner and said, 'I think I finally get why 1776 actually mattered.'\" That conversation — that's the whole point."
+          }
+        },
+        "beat_vision": {
+          "type": "beat",
+          "settings": {
+            "icon": "🗽",
+            "color_key": "vision",
+            "beat_label": "A Freer Future",
+            "beat_text": "A kid who understands the history of freedom becomes an adult who protects it. This contest is their first chance to say so — in their own words, in their own community."
+          }
+        }
+      },
+      "block_order": [
+        "beat_world",
+        "beat_villain",
+        "beat_guide",
+        "beat_moment",
+        "beat_vision"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "Why This Matters",
+        "heading": "The world your child inherits is 250 years in the making.",
+        "subheading": "Most kids can name the date of independence. Ask them why it changed the world. That gap is exactly what Tuttle Twins exists to close."
+      }
+    },
+    "contest": {
+      "type": "section-a250-contest",
+      "blocks": {
+        "prize_grand": {
+          "type": "prize_card",
+          "settings": {
+            "style": "grand",
+            "icon": "✈️",
+            "tag": "Grand Prize · 1 Family",
+            "title": "An Unforgettable Family Trip",
+            "description": "One family will win an extraordinary trip to a landmark of American history. Details coming soon — but this one is worth writing for. Your family's Dinner Table Moment, taken live.",
+            "badge_emoji": "🗺️",
+            "badge_text": "Historic American Destination · Details TBD"
+          }
+        },
+        "prize_runner": {
+          "type": "prize_card",
+          "settings": {
+            "style": "runner",
+            "icon": "📚",
+            "tag": "Runner-Up Prize · 250 Winners",
+            "title": "Donate 3 Books to Your Community",
+            "description": "250 randomly drawn winners each receive all 3 volumes of America's History by Tuttle Twins — to donate to the library, school, or non-profit of their choice.",
+            "badge_emoji": "🏆",
+            "badge_text": "250 Winners · Randomly Drawn"
+          }
+        }
+      },
+      "block_order": [
+        "prize_grand",
+        "prize_runner"
+      ],
+      "settings": {
+        "eyebrow": "The Contest",
+        "heading": "Write a letter. Win for your community.",
+        "subheading": "Kids write an editorial for their local newspaper about America's 250th anniversary — weaving in what they've learned from the Tuttle Twins. The best entries get recognized. The winners give back.",
+        "show_deadline": true,
+        "deadline_label": "Submission Deadline",
+        "deadline_date": "[CONTEST DEADLINE — TBD]",
+        "deadline_sub": "One entry per child · Open to all ages · U.S. residents only"
+      }
+    },
+    "how_to_enter": {
+      "type": "section-a250-how-to-enter",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Write the Editorial",
+            "description": "Your child writes a letter to the editor of a local (or any U.S.) newspaper about America's 250th anniversary, weaving in the Tuttle Twins. Any age, any style — their voice, their words."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Find Your Newspaper",
+            "description": "Use our state-by-state guide below to find submission instructions for your state's most-read papers. Every paper has a letters-to-the-editor section — this is how real voices get heard."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Submit to the Paper",
+            "description": "Follow the paper's submission process. Most accept email or online form submissions. Keep it under 300 words — editors love brevity."
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "title": "Screenshot the Confirmation",
+            "description": "Once you receive your submission confirmation from the newspaper, take a screenshot. That confirmation — not publication — is your entry proof."
+          }
+        },
+        "step_5": {
+          "type": "step",
+          "settings": {
+            "title": "Enter Here",
+            "description": "Upload your screenshot and fill out the form below. 250 winners will be randomly drawn, plus one Grand Prize family trip. Winners notified after the deadline."
+          }
+        },
+        "elig_1": {
+          "type": "eligibility_stat",
+          "settings": {
+            "label": "Who Can Enter",
+            "value": "All Kids"
+          }
+        },
+        "elig_2": {
+          "type": "eligibility_stat",
+          "settings": {
+            "label": "Residency",
+            "value": "U.S. Only"
+          }
+        },
+        "elig_3": {
+          "type": "eligibility_stat",
+          "settings": {
+            "label": "Entries Per Child",
+            "value": "One"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5",
+        "elig_1",
+        "elig_2",
+        "elig_3"
+      ],
+      "settings": {
+        "eyebrow": "How to Enter",
+        "heading": "Five steps to a published voice.",
+        "subheading": "Here's everything a family needs to go from first draft to official submission."
+      }
+    },
+    "newspaper_hub": {
+      "type": "section-a250-newspaper-hub",
+      "settings": {
+        "eyebrow": "Find Your Newspaper",
+        "heading": "Every state has a voice. Help yours be heard.",
+        "subheading": "Select your state to find the most-read newspapers and their letters-to-the-editor submission instructions.",
+        "dropdown_label": "Select Your State",
+        "dropdown_placeholder": "— Choose a state —",
+        "show_tip": true,
+        "tip_emoji": "💡",
+        "tip_text": "Tip for parents: \"Letters to the editor\" sections are one of the most-read parts of any newspaper. A child's letter almost always gets special attention — editors love featuring young voices. You're already giving your kids something most schools can't."
+      }
+    },
+    "form": {
+      "type": "section-a250-form",
+      "blocks": {
+        "default_form": {
+          "type": "default_form",
+          "settings": {
+            "form_action": "#",
+            "rules_url": "",
+            "submit_emoji": "🇺🇸",
+            "submit_text": "Submit My Child's Entry",
+            "guarantee_text": "🔒 Secure form · No spam, ever · 30-day money-back on any purchase",
+            "success_heading": "You're in! Entry received.",
+            "success_body": "Your child's entry has been officially submitted. We'll be in touch after the deadline. Share this with another family who should enter.",
+            "success_cta_text": "Share the Contest",
+            "success_cta_url": "#a250-share"
+          }
+        }
+      },
+      "block_order": [
+        "default_form"
+      ],
+      "settings": {
+        "eyebrow": "Official Entry Form",
+        "heading": "Submit Your Entry",
+        "subheading": "Fill out the form below and upload your confirmation screenshot from the newspaper. One entry per child. All fields required."
+      }
+    },
+    "share": {
+      "type": "section-a250-share",
+      "blocks": {
+        "btn_fb": {
+          "type": "share_button",
+          "settings": {
+            "platform": "facebook",
+            "label": "Share on Facebook",
+            "icon_svg": "<svg width=\"16\" height=\"16\" viewbox=\"0 0 24 24\" fill=\"white\"><path d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\"></path></svg>"
+          }
+        },
+        "btn_x": {
+          "type": "share_button",
+          "settings": {
+            "platform": "twitter",
+            "label": "Share on X",
+            "icon_svg": "<svg width=\"16\" height=\"16\" viewbox=\"0 0 24 24\" fill=\"white\"><path d=\"M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z\"></path></svg>"
+          }
+        },
+        "btn_email": {
+          "type": "share_button",
+          "settings": {
+            "platform": "email",
+            "label": "✉️ Send to a Friend",
+            "icon_svg": ""
+          }
+        },
+        "btn_copy": {
+          "type": "share_button",
+          "settings": {
+            "platform": "copy",
+            "label": "🔗 Copy Link",
+            "icon_svg": ""
+          }
+        }
+      },
+      "block_order": [
+        "btn_fb",
+        "btn_x",
+        "btn_email",
+        "btn_copy"
+      ],
+      "settings": {
+        "emoji": "🇺🇸",
+        "heading": "Know a family who should enter?",
+        "subheading": "The Compound Effect is real: one conversation becomes two. Help another family give their child a voice in America's 250th."
+      }
+    },
+    "books": {
+      "type": "section-a250-books",
+      "blocks": {
+        "vol1": {
+          "type": "book_card",
+          "settings": {
+            "badge_text": "",
+            "badge_style": "new",
+            "cover_icon": "🏛️",
+            "cover_style": "vol1",
+            "vol_numeral": "I",
+            "vol_label": "Volume 1 · America's History",
+            "title": "[VOL1_TITLE]",
+            "description": "[VOL1_DESC]",
+            "original_price": "",
+            "price": "$24.99",
+            "price_color": "",
+            "product_url": "",
+            "button_text": "Get Volume 1",
+            "button_style": "teal"
+          }
+        },
+        "vol2": {
+          "type": "book_card",
+          "settings": {
+            "badge_text": "",
+            "badge_style": "new",
+            "cover_icon": "⚔️",
+            "cover_style": "vol2",
+            "vol_numeral": "II",
+            "vol_label": "Volume 2 · America's History",
+            "title": "[VOL2_TITLE]",
+            "description": "[VOL2_DESC]",
+            "original_price": "",
+            "price": "$24.99",
+            "price_color": "",
+            "product_url": "",
+            "button_text": "Get Volume 2",
+            "button_style": "teal"
+          }
+        },
+        "vol3": {
+          "type": "book_card",
+          "settings": {
+            "badge_text": "Coming Soon",
+            "badge_style": "new",
+            "cover_icon": "🗽",
+            "cover_style": "vol3",
+            "vol_numeral": "III",
+            "vol_label": "Volume 3 · America's History · NEW",
+            "title": "[VOL3_TITLE]",
+            "description": "[VOL3_DESC]",
+            "original_price": "",
+            "price": "Pre-Order Now",
+            "price_color": "#0597AF",
+            "product_url": "",
+            "button_text": "Pre-Order Volume 3",
+            "button_style": "featured"
+          }
+        },
+        "bundle": {
+          "type": "bundle_cta",
+          "settings": {
+            "heading": "Get All 3 Volumes — the Complete America's History Set",
+            "description": "The full arc: founding principles, national trials, and the road ahead. The set that makes the contest entry easier — and makes Dinner Table conversations last for years.",
+            "save_badge": "Best Value",
+            "original_price": "$74.97",
+            "sale_price": "$59.99",
+            "url": "",
+            "button_text": "Shop the Bundle"
+          }
+        }
+      },
+      "block_order": [
+        "vol1",
+        "vol2",
+        "vol3",
+        "bundle"
+      ],
+      "settings": {
+        "eyebrow": "America's History Series",
+        "heading": "The books behind the next generation's story.",
+        "subheading": "Whether your family is new to Tuttle Twins or ready for the newest volume — these are the books the contest is built around. Volume 3 is almost here."
+      }
+    },
+    "testimonials": {
+      "type": "section-a250-testimonials",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "quote": "My own children knew more than their college economics professors. One audited the Navy. The other became a CEO. These books gave them a foundation the classroom never did.",
+            "attribution": "Spencer Deal · Tuttle Twins Parent",
+            "accent_color": "teal"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "quote": "She explained trade policy at Thanksgiving. She was 11. I didn't know whether to be proud or embarrassed that she knew more than I did.",
+            "attribution": "Sarah M. · Parent, Utah",
+            "accent_color": "red"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "quote": "These books don't just teach history — they make kids feel like they're part of it. That's the whole difference.",
+            "attribution": "David K. · Parent, Georgia",
+            "accent_color": "gold"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "eyebrow": "What Families Are Saying",
+        "heading": "The Dinner Table Moments are real."
+      }
+    },
+    "email_capture": {
+      "type": "section-a250-email-capture",
+      "settings": {
+        "eyebrow": "Stay Connected",
+        "heading": "Get contest updates & Dinner Table resources.",
+        "subheading": "We'll notify you when Volume 3 ships, when winners are announced, and send free resources to help your family celebrate 250 years — one conversation at a time.",
+        "embed_type": "vanilla",
+        "klaviyo_embed_code": "",
+        "input_placeholder": "Your email address",
+        "button_text": "Keep Me Posted",
+        "privacy_text": "🔒 No spam. Unsubscribe any time. You're already giving your kids something most schools can't.",
+        "success_input_placeholder": "✅ You're on the list — watch your inbox!",
+        "success_text": "✅ You're in! We'll be in touch with contest updates and Dinner Table resources."
+      }
+    }
+  },
+  "order": [
+    "subnav",
+    "hero",
+    "story_arc",
+    "contest",
+    "how_to_enter",
+    "newspaper_hub",
+    "form",
+    "share",
+    "books",
+    "testimonials",
+    "email_capture"
+  ]
+}

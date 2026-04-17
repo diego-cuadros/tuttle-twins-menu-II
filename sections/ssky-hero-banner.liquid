@@ -1,0 +1,479 @@
+{%- style -%}
+  .ssky-hero-banner-{{ section.id }} .ssky-hero-banner {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner { border-radius: 15vw 0 0 0; }
+  {%- elsif section.settings.top_right -%}
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner { border-radius: 0 15vw 0 0; }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner { border-radius: 0 0 15vw 0; }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner { border-radius: 0 0 0 15vw; }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-hero-banner-{{ section.id }} { background-color: {{ section.settings.corner_color }}; }
+  {%- endif -%}
+
+  /* Dawn-like select styling — forced white/black */
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select-wrap { margin-top: 1rem; }
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select-label { display:block; font-weight:600; margin-bottom:.5rem; }
+
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select {
+  width: 100%;
+  max-width: 520px;
+  padding: .75rem 2.5rem .75rem .875rem;
+  border-radius: var(--inputs-radius, 8px);
+
+  /* Force white bg + black text regardless of color scheme */
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 0px solid #000;
+
+  /* Make sure theme vars don’t bleed through */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #000 50%),
+    linear-gradient(135deg, #000 50%, transparent 50%);
+  background-position: calc(100% - 1.35rem) 1.05rem, calc(100% - 1rem) 1.05rem;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  line-height: 1.25;
+  font: inherit;
+}
+
+/* Keep it white on focus/hover */
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select:focus,
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #000;
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.15);
+}
+
+/* (Optional) hide old IE arrow if it ever shows */
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select::-ms-expand { display: none; }
+
+/* (Optional) ensure options render black on white in browsers that honor it */
+.ssky-hero-banner-{{ section.id }} .ssky-hero-banner__select option {
+  color: #000;
+  background: #fff;
+}
+
+
+  /* Reveal container + animation */
+  .ssky-hero-banner-{{ section.id }} .ssky-hero-banner__reveal { margin-top: 1rem; }
+  .ssky-hero-banner-{{ section.id }} .ssky-hero-banner__reveal-animator {
+    overflow: hidden; height: 0; transition: height .28s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ssky-hero-banner-{{ section.id }} .ssky-hero-banner__reveal-animator { transition: none; }
+  }
+  .ssky-hero-banner-{{ section.id }} .ssky-hero-banner__reveal-panel[hidden] { display: none; }
+
+  /* Optional helper for full-width button */
+  .ssky-hero-banner-{{ section.id }} .button--full-width { width: 100%; text-align: center; display: inline-block; }
+
+  /* Anchor: offset so sticky headers don't cover it */
+  {%- if section.settings.anchor_id != blank -%}
+    #{{ section.settings.anchor_id | strip | handleize }} { scroll-margin-top: {{ section.settings.anchor_offset | default: 80 }}px; }
+  {%- endif -%}
+{%- endstyle -%}
+
+{% assign fetch_priority = 'auto' %}
+{% if section.index == 1 %}{% assign fetch_priority = 'high' %}{% endif %}
+
+<div class="ssky-hero-banner-{{ section.id }}" {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | strip | handleize }}"{% endif %}>
+  <div class="ssky-hero-banner gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-hero-banner__blocks">
+        <div class="ssky-hero-banner__block-left">
+
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+
+              {%- when 'caption' -%}
+                <h2 class="ssky-hero-banner__caption ssky-text-block__caption h5 {{ block.settings.text_style }} {{ block.settings.color_class }}" {{ block.shopify_attributes }}>
+                  {{ block.settings.caption | escape }}
+                </h2>
+
+              {%- when 'heading' -%}
+                <{{ block.settings.heading_tag }} class="ssky-hero-banner__heading {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}" {{ block.shopify_attributes }}>
+                  {{ block.settings.heading }}
+                </{{ block.settings.heading_tag }}>
+
+              {%- when 'text' -%}
+                <div class="ssky-hero-banner__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+
+              {%- when 'image' -%}
+                <div class="ssky-hero-banner__image{%- if block.settings.image_fit %} image-fit{%- endif -%}{%- if block.settings.image != blank %} media{%- else %} placeholder{% endif -%}" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                    {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                    {{ block.settings.image | image_url: width: 1500 | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority }}
+                  {%- else -%}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+
+              {%- when 'button' -%}
+                {%- if block.settings.product != blank -%}
+                  <script src="{{ 'product-form.js' | asset_url }}" defer></script>
+                  {%- assign block_product = block.settings.product -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                  {%- if block.settings.show_price -%}
+                    <div class="ssky-text-block__price">{% render 'price', product: block_product, show_compare_at_price: true %}</div>
+                  {%- endif -%}
+                {%- endif -%}
+                <div class="ssky-hero-banner__buttons{%- if block.settings.button_full %} ssky-hero-banner__buttons--fullwidth{%- endif -%}">
+                  {%- if block.settings.product != blank -%}
+                    {%- render 'buy-buttons', block: block, product: block_product, product_form_id: product_form_id, section_id: section.id, is_button_large: block.settings.button_large, is_button_full: block.settings.button_full, button_label: block.settings.product_button_label -%}
+                  {%- else -%}
+                    {%- if block.settings.button_label != blank -%}
+                      <a {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}
+                         class="ssky-hero-banner__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                         {{ block.shopify_attributes }}>{{ block.settings.button_label | escape }}</a>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+
+              {%- when 'milestones' -%}
+                <div class="ssky-hero-banner__milestones" id="counter" {{ block.shopify_attributes }}>
+                  {%- if block.settings.title_a != blank -%}
+                    <div class="ssky-hero-banner__milestone-one">
+                      <div class="ssky-hero-banner__ms-heading h2 count percent" js-counter data-count="{{ block.settings.title_a }}">0</div>
+                      <div class="ssky-hero-banner__ms-text rte">{{ block.settings.text_a }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title_b != blank -%}
+                    <div class="ssky-hero-banner__milestone-two">
+                      <div class="ssky-hero-banner__ms-heading h2 count percent" js-counter data-count="{{ block.settings.title_b }}">0</div>
+                      <div class="ssky-hero-banner__ms-text rte">{{ block.settings.text_b }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title_c != blank -%}
+                    <div class="ssky-hero-banner__milestone-three">
+                      <div class="ssky-hero-banner__ms-heading h2 count percent" js-counter data-count="{{ block.settings.title_c }}">0</div>
+                      <div class="ssky-hero-banner__ms-text rte">{{ block.settings.text_c }}</div>
+                    </div>
+                  {%- endif -%}
+                </div>
+
+              {%- when 'state_selector' -%}
+                {%- assign default_up = block.settings.default_state_code | upcase -%}
+                {%- assign entries = block.settings.states -%}
+
+                <div class="ssky-hero-banner__select-wrap" {{ block.shopify_attributes }}>
+                  {%- if block.settings.label != blank -%}
+                    <label class="ssky-hero-banner__select-label" for="state-select-{{ section.id }}-{{ block.id }}">{{ block.settings.label }}</label>
+                  {%- endif -%}
+
+                  <select id="state-select-{{ section.id }}-{{ block.id }}"
+                          class="ssky-hero-banner__select"
+                          data-reveal-target="state-reveal-{{ section.id }}-{{ block.id }}"
+                          aria-controls="state-reveal-{{ section.id }}-{{ block.id }}">
+                    {%- if entries.size == 0 -%}
+                      <option value="" selected disabled>No states configured</option>
+                    {%- else -%}
+                      {%- assign all_states = "
+AL:Alabama|AK:Alaska|AZ:Arizona|AR:Arkansas|CA:California|CO:Colorado|CT:Connecticut|DE:Delaware|DC:District of Columbia|FL:Florida|GA:Georgia|HI:Hawaii|ID:Idaho|IL:Illinois|IN:Indiana|IA:Iowa|KS:Kansas|KY:Kentucky|LA:Louisiana|ME:Maine|MD:Maryland|MA:Massachusetts|MI:Michigan|MN:Minnesota|MS:Mississippi|MO:Missouri|MT:Montana|NE:Nebraska|NV:Nevada|NH:New Hampshire|NJ:New Jersey|NM:New Mexico|NY:New York|NC:North Carolina|ND:North Dakota|OH:Ohio|OK:Oklahoma|OR:Oregon|PA:Pennsylvania|RI:Rhode Island|SC:South Carolina|SD:South Dakota|TN:Tennessee|TX:Texas|UT:Utah|VT:Vermont|VA:Virginia|WA:Washington|WV:West Virginia|WI:Wisconsin|WY:Wyoming
+" | strip | split: '|' -%}
+                      {%- for entry in entries -%}
+                        {%- assign code = entry.state_code.value | upcase -%}
+                        {%- assign name = code -%}
+                        {%- for pair in all_states -%}
+                          {%- assign c = pair | split: ':' | first -%}
+                          {%- if c == code -%}{%- assign name = pair | split: ':' | last -%}{%- break -%}{%- endif -%}
+                        {%- endfor -%}
+                        <option value="{{ code }}"{% if default_up == code and default_up != blank %} selected{% endif %}>{{ name }}</option>
+                      {%- endfor -%}
+                    {%- endif -%}
+                  </select>
+
+                  <div id="state-reveal-{{ section.id }}-{{ block.id }}" class="ssky-hero-banner__reveal">
+                    <div class="ssky-hero-banner__reveal-animator" aria-live="polite">
+                      <div class="ssky-hero-banner__reveal-inner">
+                        {%- for entry in entries -%}
+                          {%- assign code = entry.state_code.value | upcase -%}
+                          <div class="ssky-hero-banner__reveal-panel" data-reveal-value="{{ code }}" hidden>
+                            {%- if entry.content != blank -%}{{ entry.content | metafield_tag }}{%- endif -%}
+
+                            {%- assign btn_label = entry.button_label.value -%}
+                            {%- assign btn_url = entry.button_url.value -%}
+                            {%- if btn_label != blank -%}
+                              <div class="tt-state-actions" style="margin-top:0.75rem;">
+                                <a {% if btn_url == blank %}role="link" aria-disabled="true"{% else %}href="{{ btn_url }}"{% endif %}
+                                   {% if entry.button_new_tab.value %} target="_blank" rel="noopener noreferrer"{% endif %}
+                                   class="ssky-hero-banner__button button
+                                          {%- if entry.button_large.value %} button--large{% endif -%}
+                                          {%- if entry.button_style_secondary.value %} button--secondary{% else %} button--primary{% endif -%}
+                                          {%- if entry.button_full.value %} button--full-width{% endif -%}">
+                                  {{ btn_label | escape }}
+                                </a>
+                              </div>
+                            {%- endif -%}
+                          </div>
+                        {%- endfor -%}
+
+                        <div class="ssky-hero-banner__reveal-panel" data-fallback hidden>
+                          <p style="margin:0;">No content configured for this state yet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            {%- endcase -%}
+          {%- endfor -%}
+
+        </div><!-- /.block-left -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  /* Counter animation (existing) */
+  (function(){
+    const counters = document.querySelectorAll('[js-counter]');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          const el = e.target, target = parseInt(el.dataset.count);
+          let cur = 0, inc = target / 100;
+          const t = setInterval(() => {
+            cur += inc; if (cur >= target){ cur = target; clearInterval(t); }
+            el.textContent = Math.floor(cur);
+          }, 5);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: .5 });
+    counters.forEach(el => io.observe(el));
+  })();
+
+  /* State selector: show/hide pre-mounted panels with height animation */
+  (function(){
+    const root = document.querySelector('.ssky-hero-banner-{{ section.id }}'); if (!root) return;
+    const selects = root.querySelectorAll('.ssky-hero-banner__select');
+    selects.forEach(sel => {
+      const targetId = sel.getAttribute('data-reveal-target');
+      const wrap = root.querySelector('#' + (window.CSS && CSS.escape ? CSS.escape(targetId) : targetId));
+      if (!wrap) return;
+      const animator = wrap.querySelector('.ssky-hero-banner__reveal-animator');
+      const inner = wrap.querySelector('.ssky-hero-banner__reveal-inner');
+      if (!animator || !inner) return;
+
+      const panels = Array.from(inner.querySelectorAll('.ssky-hero-banner__reveal-panel[data-reveal-value]'))
+        .reduce((m, p) => { m[(p.getAttribute('data-reveal-value')||'').toUpperCase()] = p; return m; }, {});
+      const fallback = inner.querySelector('.ssky-hero-banner__reveal-panel[data-fallback]');
+
+      function animateHeight(nextH){
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce){ animator.style.height = nextH + 'px'; requestAnimationFrame(() => { animator.style.height = 'auto'; }); return; }
+        const from = animator.getBoundingClientRect().height;
+        animator.style.height = from + 'px';
+        requestAnimationFrame(() => {
+          animator.style.height = nextH + 'px';
+          const onEnd = () => { animator.style.height = 'auto'; animator.removeEventListener('transitionend', onEnd); };
+          animator.addEventListener('transitionend', onEnd, { once: true });
+        });
+      }
+
+      function reveal(code, animated=true){
+        const key = (code || '').toUpperCase();
+        Object.values(panels).forEach(p => p.setAttribute('hidden',''));
+        if (fallback) fallback.setAttribute('hidden','');
+
+        const target = panels[key] || fallback;
+        if (target) target.removeAttribute('hidden');
+
+        const nextH = inner.getBoundingClientRect().height;
+        if (!animated){ animator.style.height = nextH + 'px'; requestAnimationFrame(() => { animator.style.height = 'auto'; }); }
+        else { animateHeight(nextH); }
+      }
+
+      // Initial: if current value has no panel, pick first option that does.
+      (function init(){
+        const opts = Array.from(sel.options);
+        let value = sel.value;
+        if (!panels[(value||'').toUpperCase()]){
+          const cand = opts.find(o => panels[(o.value||'').toUpperCase()]);
+          if (cand) { sel.value = cand.value; value = cand.value; }
+        }
+        reveal(value, false);
+      })();
+
+      sel.addEventListener('change', e => reveal(e.target.value, true));
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "TT Hero Banner (States)",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-2" },
+    { "type": "header", "content": "t:sections.all.padding.section_padding_heading" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 80 },
+    { "type": "header", "content": "t:sections.all.ssky_round_corners.heading", "info": "t:sections.all.ssky_round_corners.info" },
+    { "type": "checkbox", "id": "top_left", "label": "t:sections.all.ssky_round_corners.top_left", "default": false },
+    { "type": "checkbox", "id": "top_right", "label": "t:sections.all.ssky_round_corners.top_right", "default": false },
+    { "type": "checkbox", "id": "bottom_right", "label": "t:sections.all.ssky_round_corners.bottom_right", "default": false },
+    { "type": "checkbox", "id": "bottom_left", "label": "t:sections.all.ssky_round_corners.bottom_left", "default": true },
+    { "type": "color", "id": "corner_color", "label": "t:sections.all.ssky_round_corners.corner_color" },
+
+    { "type": "text", "id": "anchor_id", "label": "Anchor ID (optional)", "info": "Lowercase letters/numbers/hyphens. We'll sanitize automatically." },
+    { "type": "range", "id": "anchor_offset", "label": "Anchor scroll offset", "min": 0, "max": 200, "step": 2, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "caption", "label": "Text", "default": "Caption" },
+        { "type": "select", "id": "text_style", "label": "Style", "default": "large-bold",
+          "options": [
+            { "value": "small-semibold", "label": "Small Semibold" },
+            { "value": "small-bold", "label": "Small Bold" },
+            { "value": "medium-semibold", "label": "Medium Semibold" },
+            { "value": "large-semibold", "label": "Large Semibold" },
+            { "value": "large-bold", "label": "Large Bold" }
+          ]
+        },
+        { "type": "text", "id": "color_class", "label": "Color utility class", "default": "primary-yellow" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Hero heading" },
+        { "type": "select", "id": "heading_size", "label": "Size", "default": "h1",
+          "options": [
+            { "value": "h4", "label": "H4" }, { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" }, { "value": "h1", "label": "H1" },
+            { "value": "h0", "label": "H0" }, { "value": "hxl", "label": "HXL" }
+          ]
+        },
+        { "type": "select", "id": "heading_weight", "label": "Weight", "default": "semibold",
+          "options": [
+            { "value": "medium", "label": "Medium" },
+            { "value": "semibold", "label": "Semibold" },
+            { "value": "bold", "label": "Bold" }
+          ]
+        },
+        { "type": "select", "id": "heading_tag", "label": "HTML tag", "default": "h1",
+          "options": [
+            { "value": "h1", "label": "H1" }, { "value": "h2", "label": "H2" }, { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }, { "value": "h5", "label": "H5" }, { "value": "h6", "label": "H6" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 2,
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Some intro copy.</p>" },
+        { "type": "select", "id": "text_size", "label": "Size", "default": "regular",
+          "options": [
+            { "value": "regular", "label": "Regular" },
+            { "value": "medium", "label": "Medium" },
+            { "value": "large", "label": "Large" },
+            { "value": "extra-large", "label": "Extra large" }
+          ]
+        },
+        { "type": "select", "id": "text_weight", "label": "Weight", "default": "regular",
+          "options": [
+            { "value": "regular", "label": "Regular" },
+            { "value": "medium", "label": "Medium" },
+            { "value": "semibold", "label": "Semibold" },
+            { "value": "bold", "label": "Bold" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "checkbox", "id": "image_fit", "label": "Switch between image fill or fit.", "default": false }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        { "type": "checkbox", "id": "button_large", "label": "Large", "default": true },
+        { "type": "checkbox", "id": "button_full", "label": "Full width", "default": true },
+        { "type": "text", "id": "button_label", "label": "Label", "default": "Primary CTA" },
+        { "type": "url", "id": "button_link", "label": "Link" },
+        { "type": "checkbox", "id": "button_style_secondary", "label": "Use secondary style", "default": false }
+      ]
+    },
+    {
+      "type": "milestones",
+      "name": "Milestones",
+      "limit": 1,
+      "settings": [
+        { "type": "header", "content": "Milestones One" },
+        { "type": "text", "id": "title_a", "label": "Title", "default": "100+" },
+        { "type": "richtext", "id": "text_a", "label": "Text", "default": "<p>Orders<br>Every day</p>" },
+        { "type": "header", "content": "Milestones Two" },
+        { "type": "text", "id": "title_b", "label": "Title", "default": "100+" },
+        { "type": "richtext", "id": "text_b", "label": "Text", "default": "<p>Happy<br>Families</p>" },
+        { "type": "header", "content": "Milestones Three" },
+        { "type": "text", "id": "title_c", "label": "Title", "default": "100+" },
+        { "type": "richtext", "id": "text_c", "label": "Text", "default": "<p>Five-star<br>Reviews</p>" }
+      ]
+    },
+    {
+      "type": "state_selector",
+      "name": "State Dropdown",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Choose your state" },
+        { "type": "text", "id": "default_state_code", "label": "Default state code (e.g., TX)", "default": "TX" },
+        { "type": "metaobject_list", "id": "states", "label": "State entries", "metaobject_type": "state_content" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Hero Banner (States)",
+      "blocks": [
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "image" },
+        { "type": "button" },
+        { "type": "state_selector" }
+      ]
+    }
+  ]
+}
+{% endschema %}

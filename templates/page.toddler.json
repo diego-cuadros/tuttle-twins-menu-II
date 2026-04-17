@@ -1,0 +1,623 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_cCtEgn": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_G83tFy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Your Little Ones Will Love Our TWO <strong>Tuttle Toddlers</strong> Book Series!</p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h1"
+          }
+        },
+        "text_AJmpVK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our 3-book ABC series, and our 3-book 123 series, each feature colorful, simple introductions to economics and liberty principles for fun, early learning.<br/><br/>Join the Tuttle Toddlers on their learning journey as they learn the ABCs and 123s of some really important topics! <br/><br/>(And scroll down to see sample pages!)</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_G83tFy",
+        "text_AJmpVK"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/toddler6-1024x1024.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "heading-blue-orange",
+        "padding_top": 64,
+        "padding_bottom": 100,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_column_6gEkQY": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_large_vtwo_zRRLNm": {
+          "type": "product_column_large_vtwo",
+          "settings": {
+            "product": "the-tuttle-toddlers-123-combo-set",
+            "image_fit": true,
+            "heading": "<p>The Tuttle Toddlers 123s</p>",
+            "text": "<p>Early Introduction to Freedom: Start your child’s journey into the world of freedom and basic principles early with our adorable toddler books. These board books cover essential concepts like helping, innovation, and the Bill of Rights, laying the groundwork for a lifelong understanding of freedom and its importance.<br/><br/>Engaging and Educational: With charming illustrations and simple language, our toddler books make learning about freedom fun and accessible for young children. Each book walks through numbers 1-10, introducing new words and their definitions in a way that captures your child’s imagination and encourages early literacy skills.</p>",
+            "text_large": true,
+            "text_bottom": "",
+            "text_large_bottom": false,
+            "price": "",
+            "button_label": "Buy The 123s Combo Set",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        },
+        "product_column_large_vtwo_8qeNDq": {
+          "type": "product_column_large_vtwo",
+          "settings": {
+            "product": "the-tuttle-toddlers-combo-set",
+            "image_fit": true,
+            "heading": "<p>The Tuttle Toddlers ABCs</p>",
+            "text": "<p>Educational Fun: Delight your child with adorable illustrations and engaging content that covers economics, liberty, and the American Revolution, making learning a joyful experience.<br/><br/>Alphabet Adventure: Explore the ABCs while introducing new words and their definitions, providing a solid foundation in economic and historical concepts from a young age.<br/><br/>Holistic Learning: Immerse your child in a well-rounded educational experience that fosters an understanding of important ideas like economics, liberty, and historical events like the American Revolution, setting them up for success in their academic journey.</p>",
+            "text_large": true,
+            "text_bottom": "",
+            "text_large_bottom": false,
+            "price": "",
+            "button_label": "Buy The ABCs Combo Set",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        }
+      },
+      "block_order": [
+        "product_column_large_vtwo_zRRLNm",
+        "product_column_large_vtwo_8qeNDq"
+      ],
+      "settings": {
+        "heading": "<p>The Tuttle Toddlers Books have Two Series:</p>",
+        "heading_size": "h3",
+        "heading_weight": "semibold",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "custom_class": "",
+        "padding_top": 100,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_jdhXEt": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_iNmR4b": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Want to buy just 1 or 2 of the books? <a href=\"/collections/tuttle-toddlers\" title=\"Tuttle Toddlers\">Visit the product page</a> to buy individual copies.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_iNmR4b"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_large_epEPUT": {
+      "type": "sskymo-image-large",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_block_tGTf48": {
+      "type": "sskymo-text-block",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#04aed8",
+        "merge_with_section_above": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_b_jcPegM": {
+      "type": "sskymo-text-column-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_GhGnrt": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "icon_8NxXMH": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/footer_guarantee_seal_edited.webp"
+          }
+        },
+        "heading_xqdx87": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>100% Unconditional<br/>Money Back Guarantee</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_wLpPBi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don’t like the book? Contact us within 30 days and we’ll refund your money. No questions asked.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "icon_qcAWMz": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/footer_guarantee_payment_icons.webp"
+          }
+        }
+      },
+      "block_order": [
+        "icon_8NxXMH",
+        "heading_xqdx87",
+        "text_wLpPBi",
+        "icon_qcAWMz"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/toddler6-1024x1024.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_tNFXL6": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_zrakgL": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "the-tuttle-toddlers-123-combo-set",
+            "heading": "<p>Order the <strong>123 set</strong> for only $19.99</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 58,
+            "button_label": "Order The 123s Combo Set",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_zrakgL"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-5",
+        "narrow_width": false,
+        "custom_class": "heading-bold-orange",
+        "padding_top": 8,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_bqmexc": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_7bb6aJ": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "the-tuttle-toddlers-combo-set",
+            "heading": "<p>Order the<strong> ABC set</strong> for only $19.99</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 58,
+            "button_label": "Order The ABCs Combo Set",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_7bb6aJ"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-5",
+        "narrow_width": false,
+        "custom_class": "heading-bold-orange",
+        "padding_top": 12,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_slide_b_UCrmdQ": {
+      "type": "sskymo-image-slide-b",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_U4FxQ9": {
+      "type": "ssky-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "image": "shopify://shop_images/toddler_page_image_banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_JNHtyc": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_z9L7mi": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>See what children have to say!</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_z9L7mi"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Connor-Letter.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_tYdcck": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_NbxDq6": {
+          "type": "caption",
+          "settings": {
+            "caption": "Meet the Author",
+            "text_style": "large-semibold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_iwxnKh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Connor Boyack is founder and president of Libertas Institute, a free market think tank in Utah. Named one of Utah’s most politically influential people by <em>The Salt Lake Tribune</em>, Connor’s leadership has led to dozens of legislative victories spanning a wide range of areas such as privacy, government transparency, property rights, entrepreneurship, education, personal freedom, and more.</p><p>A public speaker and author of over two dozen books, Connor is best known for The Tuttle Twins books, a children’s series introducing young readers to economic, political, and civic principles.</p><p>Connor lives near Salt Lake City, Utah, with his wife and two homeschooled children.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "divider_jmymci": {
+          "type": "divider",
+          "settings": {
+            "margin": 16
+          }
+        }
+      },
+      "block_order": [
+        "caption_NbxDq6",
+        "text_iwxnKh",
+        "divider_jmymci"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/connor.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_Df9bTc": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_BR8n96": {
+          "type": "caption",
+          "settings": {
+            "caption": "Meet the Illustrator",
+            "text_style": "large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_YAJAah": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elijah Stanfield is owner of Red House Motion Imaging, a media production company in Washington.</p><p>A longtime student of Austrian economics, history, and the classical liberal philosophy, Elijah has dedicated much of his time and energy to promoting the ideas of free markets and individual liberty. Some of his more notable works include producing eight videos in support of Ron Paul’s 2012 presidential candidacy.</p><p>He currently resides in Tennessee with his wife April and their six children.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_BR8n96",
+        "text_YAJAah"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/elijah.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "small",
+        "content_alignment": "right",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_cCtEgn",
+    "ssky_product_column_6gEkQY",
+    "ssky_text_block_jdhXEt",
+    "sskymo_image_large_epEPUT",
+    "sskymo_text_block_tGTf48",
+    "sskymo_text_column_b_jcPegM",
+    "ssky_text_image_block_GhGnrt",
+    "ssky_product_order_block_tNFXL6",
+    "ssky_product_order_block_bqmexc",
+    "sskymo_image_slide_b_UCrmdQ",
+    "ssky_image_banner_U4FxQ9",
+    "ssky_text_image_block_JNHtyc",
+    "ssky_text_image_block_tYdcck",
+    "ssky_text_image_block_Df9bTc"
+  ]
+}

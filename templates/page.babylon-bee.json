@@ -1,0 +1,962 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_3eYRAM": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "text_KMFjiW": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>What does the Babylon Bee say about the Tuttle Twins Books?</h1>",
+            "text_large": false
+          }
+        },
+        "text_3mPj98": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Scroll Down for a Special Deal on the Books</p>",
+            "text_large": false
+          }
+        },
+        "youtube_video_gR6fGM": {
+          "type": "youtube_video",
+          "settings": {
+            "youtube_id": "-8910kLFsUM",
+            "autoplay": false
+          }
+        }
+      },
+      "block_order": [
+        "text_KMFjiW",
+        "text_3mPj98",
+        "youtube_video_gR6fGM"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": true,
+        "image": "shopify://shop_images/article-8133-1.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": true,
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_7GM9rU": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_77BNqb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Here's why the Babylon Bee suggested that the Tuttle Twins should be canceled IMMEDIATELY...</p>",
+            "heading_size": "h4",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_mWtc9y": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Tuttle Twins:</strong> Free markets? Individual responsibility? American history? Are you kidding? Where do we even start? We literally can’t even with this one.</p><p>The left is trying to cancel books and this is why we are trying to share it with the Babylon Bee audience. [<a href=\"https://babylonbee.com/news/we-must-cancel-hundreds-more-childrens-books----here-are-9-to-start-with\" target=\"_blank\" title=\"https://babylonbee.com/news/we-must-cancel-hundreds-more-childrens-books----here-are-9-to-start-with\">Read Article</a>]</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        },
+        "text_Hg4t9B": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/><br/>– <a href=\"https://babylonbee.com/news/we-must-cancel-hundreds-more-childrens-books----here-are-9-to-start-with\" target=\"_blank\" title=\"https://babylonbee.com/news/we-must-cancel-hundreds-more-childrens-books----here-are-9-to-start-with\">The Babylon Bee</a></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_q8mFjc": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "",
+            "button_link": "",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Buy the Books + Bonuses",
+            "show_price": false
+          }
+        },
+        "button_4K4C8Q": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Watch Video",
+            "button_link": "https://www.youtube.com/watch?v=Wl_iQuG397U",
+            "use_video_lightbox": true,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_77BNqb",
+        "text_mWtc9y",
+        "text_Hg4t9B",
+        "button_q8mFjc",
+        "button_4K4C8Q"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/article-8133-1-qqasw20qaywsglu1nky71lu55klsnfbfw5tzqxdj0c.jpg",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_Pd6m3i": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "stats_block_eWyNBL": {
+          "type": "stats_block",
+          "settings": {
+            "copies_number": "5 Mil+",
+            "copies_text": "Copies Sold Worldwide",
+            "reviews_number": "5,000+",
+            "reviews_text": "5 Star Reviews",
+            "background_color": "#00b1d8",
+            "text_color": "#ffffff",
+            "star_color": "#ffd700",
+            "guarantee_badge": "shopify://shop_images/30-years-guarantee.webp"
+          }
+        },
+        "testimonial_HcqJrd": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about</strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Marcos D., Illinois",
+            "author_state": "",
+            "author_image": "shopify://shop_images/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "stats_block_eWyNBL",
+        "testimonial_HcqJrd"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_column_7kz7VT": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_VeBYEh": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>A dumbed-down curriculum leaves out economic and civic truths that your child needs to learn.<br/><br/>Are you doing your part to teach them?</p>",
+            "text_size": "large",
+            "text_weight": "bold"
+          }
+        },
+        "text_column_w_icons_LBGKUV": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Can’t trust most curriculum</p>",
+            "heading_color": "#04aed8",
+            "icon_type": "fa-book-reader",
+            "icon_background_color": "#bcecf6",
+            "icon_color": "#04aed8",
+            "text_item": "<p>You want to find educational resources to teach your child true principles, but where do you look? Who do you trust?</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_ehGrGG": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Lack confidence to teach?</p>",
+            "heading_color": "#04aed8",
+            "icon_type": "fa-chalkboard-teacher",
+            "icon_background_color": "#bcecf6",
+            "icon_color": "#04aed8",
+            "text_item": "<p>Parents often doubt their knowledge of economic and civic ideas and feel incapable of explaining them to others.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_mjDXRd": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Your children need these ideas</p>",
+            "heading_color": "#04aed8",
+            "icon_type": "fa-lightbulb",
+            "icon_background_color": "#bcecf6",
+            "icon_color": "#04aed8",
+            "text_item": "<p>Children ought to be taught the time-tested principles of a free society to boost their ability to succeed in life.</p>",
+            "text_large": false
+          }
+        }
+      },
+      "block_order": [
+        "text_VeBYEh",
+        "text_column_w_icons_LBGKUV",
+        "text_column_w_icons_ehGrGG",
+        "text_column_w_icons_mjDXRd"
+      ],
+      "settings": {
+        "heading": "<p>Schools Don't Teach These Ideas… But Now You Can </p>",
+        "heading_size": "h2",
+        "heading_weight": "semibold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": true,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_Pd3hF7": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_gVhWmY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>For a limited time, get the series at a 35% discount!</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_TUJnC3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’ll even throw in our companion PDF activity workbooks—a $70 value—for free!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_yixf8H": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Button label",
+            "button_link": "",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Get The Books - and Claim Your Free Bonuses!",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gVhWmY",
+        "text_TUJnC3",
+        "button_yixf8H"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Medals-of-Merit.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_xcVfhL": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_kVQwXF": {
+          "type": "caption",
+          "settings": {
+            "caption": "HI, I'M CONNOR",
+            "text_style": "large-semibold",
+            "color_class": "primary-blue"
+          }
+        },
+        "caption_UFtrNH": {
+          "type": "caption",
+          "settings": {
+            "caption": "I’ve been in your shoes. So I wrote a series of books to teach your kids what their schools no longer do.",
+            "text_style": "large-bold",
+            "color_class": ""
+          }
+        },
+        "text_tRNDYX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the president of two non-profits, I’ve learned the importance of simplifying complex ideas so others can understand. And this approach works perfectly when it comes to children.<br/><br/>I’ve written a popular series of children’s books that helps kids age 5-11 learn the ideas of liberty. But be prepared: your dinner conversations are bound to be much more interesting!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_kVQwXF",
+        "caption_UFtrNH",
+        "text_tRNDYX"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/connor-boyack-2.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "custom-image-padding-bottom",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_RjzfyU": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_AzEQHE": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "Proudly Serving 500,000+ Families",
+            "text_style_subheading": "large-semibold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_AzEQHE"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/AMAZON-min.png",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_M3nrGY": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_xwNnYy": {
+          "type": "caption",
+          "settings": {
+            "caption": "A Promise to You",
+            "text_style": "extra-large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_NXw3F9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>100% satisfaction, or your money back.<br/><br/></p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        },
+        "text_column_w_icons_EfcBMB": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon_position": "left",
+            "heading": "<p>Increased clarity</p>",
+            "heading_color": "",
+            "icon_type": "fa-edit",
+            "icon_background_color": "#ffd05a",
+            "icon_color": "",
+            "text_item": "<p>Our books will make complex ideas seem simple and understandable for your children—and you!</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_LFid8U": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon_position": "left",
+            "heading": "<p>Better conversation</p>",
+            "heading_color": "",
+            "icon_type": "fa-thumbs-up",
+            "icon_background_color": "#ffd05a",
+            "icon_color": "",
+            "text_item": "<p>Your family will have more meaningful discussions about dozens of important principles and ideas.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_kHyhct": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "icon_position": "left",
+            "heading": "<p>More Curiosity</p>",
+            "heading_color": "",
+            "icon_type": "fa-question",
+            "icon_background_color": "#ffd05a",
+            "icon_color": "",
+            "text_item": "<p>After reading our books, your children will ask questions about ideas you never would have imagined.</p>",
+            "text_large": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_xwNnYy",
+        "text_NXw3F9",
+        "text_column_w_icons_EfcBMB",
+        "text_column_w_icons_LFid8U",
+        "text_column_w_icons_kHyhct"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/the-tuttle-twins-and-their-spectacular-show-businessL2-qqasw5s9g3whhyxt01k24vw74b5iguidlukezvy7w4.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 24,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_mARJ6h": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_kb3dEA": {
+          "type": "caption",
+          "settings": {
+            "caption": "OVER 5 MILLION COPIES SOLD!",
+            "text_style": "extra-large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "divider_text_Dt6bFT": {
+          "type": "divider_text",
+          "settings": {
+            "divider_color": "#ffffff",
+            "divider_height": 16,
+            "divider_tile_width": 50,
+            "divider_stroke_width": 1,
+            "divider_spacing": 20,
+            "divider_opacity": 100
+          }
+        },
+        "caption_YhrXCX": {
+          "type": "caption",
+          "settings": {
+            "caption": "Here's the Plan",
+            "text_style": "large-semibold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_DK7apT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A set of beautiful, enjoyable books that use storytelling to help you introduce important economic, civic, and social principles to your child.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_kb3dEA",
+        "divider_text_Dt6bFT",
+        "caption_YhrXCX",
+        "text_DK7apT"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Footer-Books-CTA-2-1024x836.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 24,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_7wecUy": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_dgWpHT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What Makes Our Books So Different?</p>",
+            "custom_color": "#3f3939",
+            "alignment": "center",
+            "heading_size": "h0",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_h6nwNc": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>When it comes to teaching their children about the enduring principles of freedom, many parents don’t know where to start. The Tuttle Twins series helps you introduce these ideas to your children and have meaningful family discussions about them.<br/><br/>As a father, I know how hard it is to communicate big ideas to little kids. For example, how do you teach an eight-year-old boy about the free market in a way that will be relevant to him? How can a six-year-old girl understand property rights? How can your child learn about and remember the golden rule?<br/><br/>And more than getting them to learn about the ideas… how do you get them to actually care about them?<br/><br/>As the founder and president of two non-profits, and the author of 29 books, I’ve spent years trying to figure out simple and effective ways of teaching other people important principles. Along the way I came to realize something: kids can understand these ideas, too.<br/><br/>And so the Tuttle Twins books were born! These totally unique books help kids age 5-11 learn important truths and develop crucial critical thinking skills. 500,000+ families just like yours have benefitted from the clear messages and fun stories in these books.<br/><br/>More importantly, these families have been able to have some amazing conversations about big ideas—even with their little children. Get the books today and watch your child develop important critical thinking skills and insight about ideas that most adults don’t even understand.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_KjiFt9": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Get The Books and Claim Your Free Bonuses!",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dgWpHT",
+        "text_h6nwNc",
+        "button_KjiFt9"
+      ],
+      "custom_css": [
+        "h2.ssky-text-block__heading.rte p {color: #6ec1e4;}",
+        ".ssky-text-block__buttons.scroll-trigger.animate--slide-in {width: 100%; justify-content: center; max-width: 100% !important;}"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "scheme-2",
+        "merging_color": "#152136",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_k7N678": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Beb8a6": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_n3Pfdw": {
+          "type": "text",
+          "settings": {
+            "max_width": 88,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Amid the ever-growing problems facing the next generation, true education has never been so important to defend. The Tuttle Twins books are a great way to instill a respect for the ideas of liberty in your children and help them understand the principles of a free society, before it's too late.</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "text_n3Pfdw"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_testimonials_99Uhtp": {
+      "type": "sskymo-testimonials",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "card_background_color": "#3f3939",
+        "author_text_color": "#ffd05a",
+        "review_text_color": "#ffffff",
+        "star_color": "gold",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": true,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    },
+    "ssky_text_block_HkecYA": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_EBDKyr": {
+          "type": "text",
+          "settings": {
+            "max_width": 85,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Connor's Your-Kids-Will-Love-The-Tuttle-Twins-Or-I-Will-Refund-Your-Money-And-You-Keep-The-Books Guarantee!</p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "semibold"
+          }
+        },
+        "text_qwWCHB": {
+          "type": "text",
+          "settings": {
+            "max_width": 88,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Help the children in your life learn these important ideas by purchasing the books now. Over 500,000 families have already bought the books for their kids. Can you guess how many families didn’t like them and demanded a refund? Nine.<br/><br/>Needless to say, our young readers love these books!<br/><br/>Worried that you’re not sure you’ll love them? No problem! The risk is all on our end. If you don’t like them, let us know within 30 days of purchase and you can keep the books. I will immediately refund your money.<br/><br/>Yes — I’m THAT confident your family will benefit from these books. No questions asked. No hassle. And with that guarantee, there’s no reason to not get these books for your kids.<br/><br/>You’ve got nothing at all to lose. So give your children a foundation of freedom today!<br/><br/>In liberty,</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "icon_B8ydAj": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/csb-1-1.png"
+          }
+        },
+        "text_hAeRPX": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p><br/><br/></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_PVmPVP": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses-2",
+            "product_button_label": "Get The Books and Claim Your Free Bonuses!",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_EBDKyr",
+        "text_qwWCHB",
+        "icon_B8ydAj",
+        "text_hAeRPX",
+        "button_PVmPVP"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_HFChhQ": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_image_banner_3eYRAM",
+    "ssky_text_image_block_7GM9rU",
+    "ssky_testimonials_Pd6m3i",
+    "ssky_text_column_7kz7VT",
+    "ssky_text_image_block_Pd3hF7",
+    "ssky_text_image_block_xcVfhL",
+    "ssky_text_image_block_RjzfyU",
+    "ssky_text_image_block_M3nrGY",
+    "ssky_text_image_block_mARJ6h",
+    "ssky_text_block_7wecUy",
+    "sskymo_product_column_c_k7N678",
+    "ssky_text_block_Beb8a6",
+    "sskymo_testimonials_99Uhtp",
+    "ssky_text_block_HkecYA",
+    "sskymo_text_image_block_b_HFChhQ"
+  ]
+}

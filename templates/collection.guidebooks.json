@@ -1,0 +1,921 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_image_block_d_inTJrX": {
+      "type": "sskymo-text-image-block-d",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_DtGT93": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_qy6r4A": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside Our Guidebooks</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qy6r4A"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6",
+        "custom_id": ""
+      }
+    },
+    "ssky_guidebook_combo_DgC74L": {
+      "type": "ssky-guidebook-combo",
+      "blocks": {
+        "description_3MBLat": {
+          "type": "description",
+          "name": "True Conspiracies Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-true-conspiracies",
+            "image_fit": false,
+            "image_width_desktop": 40,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-1",
+            "padding_top": 0,
+            "padding_bottom": 36,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "rgba(0,0,0,0)"
+          }
+        },
+        "product_TmfKta": {
+          "type": "product",
+          "name": "TC Breakdown",
+          "settings": {
+            "product_breakdown": "true-conspiracies",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 44,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": true,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "order_AFFDXH": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_nz7dHm": {
+          "type": "description",
+          "name": "LF Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-logical-fallacies",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#04aed8"
+          }
+        },
+        "product_NzML8U": {
+          "type": "product",
+          "name": "LF breakdown",
+          "settings": {
+            "product_breakdown": "logical-fallacies",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "order_Y7aHgf": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_XEyLyJ": {
+          "type": "description",
+          "name": "Heroes Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-courageous-heroes",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "product_X6c6Pr": {
+          "type": "product",
+          "name": "Heroes breakdown",
+          "settings": {
+            "product_breakdown": "courageous-heroes",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "order_aLhQND": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_WxktqB": {
+          "type": "description",
+          "name": "Villains Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-modern-villains",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#04aed8"
+          }
+        },
+        "product_yBByec": {
+          "type": "product",
+          "name": "Villains breakdown",
+          "settings": {
+            "product_breakdown": "modern-villains",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "order_QDLAWE": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_EM6jL7": {
+          "type": "description",
+          "name": "Bias Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-beware-your-bias",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "product_ADnmnD": {
+          "type": "product",
+          "name": "Bias breakdown",
+          "settings": {
+            "product_breakdown": "beware-your-bias",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "order_RFRHBT": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_aRFzWB": {
+          "type": "description",
+          "name": "Entre Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-inspiring-entrepreneurs",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#04aed8"
+          }
+        },
+        "product_RqCwtX": {
+          "type": "product",
+          "name": "Entre breakdown",
+          "settings": {
+            "product_breakdown": "inspiring-entrepreneurs",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "order_Y6khDC": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_69PCK3": {
+          "type": "description",
+          "name": "WWI Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-the-worlds-worst-ideas",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "product_8eAWUw": {
+          "type": "product",
+          "name": "WWI breakdown",
+          "settings": {
+            "product_breakdown": "worlds-worst-ideas",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "order_aUJ9D9": {
+          "type": "order",
+          "name": "Teen Bundle Order block",
+          "settings": {
+            "order_block": "guidebook-bundle-order-7-books",
+            "content_alignment": "left",
+            "max_width": 80,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "description_3MBLat",
+        "product_TmfKta",
+        "order_AFFDXH",
+        "description_nz7dHm",
+        "product_NzML8U",
+        "order_Y7aHgf",
+        "description_XEyLyJ",
+        "product_X6c6Pr",
+        "order_aLhQND",
+        "description_WxktqB",
+        "product_yBByec",
+        "order_QDLAWE",
+        "description_EM6jL7",
+        "product_ADnmnD",
+        "order_RFRHBT",
+        "description_aRFzWB",
+        "product_RqCwtX",
+        "order_Y6khDC",
+        "description_69PCK3",
+        "product_8eAWUw",
+        "order_aUJ9D9"
+      ],
+      "name": "TTm Guidebook Combined",
+      "settings": {
+        "section_background": "#ffffff",
+        "show_as_card": false,
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_text_block_FqJQ66": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_rFzF8y": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Inspiring Nonfiction Books for Teens</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_yxXaUf": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>If we’re all honest, many nonfiction books can feel dry, boring, or overly complex, especially when it comes to books for teens. But our books are written with experience and values, providing meaningful content with simple language.</p><p>Our books are designed to encourage independent thinking and evoke family discussions. Your teen may be a budding economist, a history enthusiast, or simply curious about how the world works, and we’ve made sure that our books deliver.</p><p>Every title is carefully researched and full of relatable examples. Teens will discover how money works, why personal freedom matters, learn about <a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-courageous-heroes\"><span style=\"text-decoration:underline\">courageous heroes</span></a>, and how past events in <a href=\"https://tuttletwins.com/collections/american-history-for-kids\"><span style=\"text-decoration:underline\">American history</span></a> shape the present. Our writing style is friendly yet professional, prioritizing short sentences, easy explanations, and just the right amount of technical detail.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rFzF8y",
+        "text_yxXaUf"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_column_JNT34d": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_Q9J8Nb": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Our books for teens to read go far beyond ordinary books. Each book presents real-world concepts, such as entrepreneurship, personal freedom, and responsible citizenship, through engaging storytelling. Teens don’t just learn — they understand and apply these ideas to their own lives. Here are some benefits:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "text_column_nn9TkR": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "",
+            "heading": "<p><strong>Critical Thinking Skills</strong></p>",
+            "text": "<p>We encourage your teen to question assumptions with books like<a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-beware-your-bias\"> <span style=\"text-decoration:underline\">Beware Your Bias</span></a> and think independently. Through real-life examples and thought-provoking scenarios, your child can learn to analyze issues rather than simply accept them.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_ipghiL": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "heading": "<p><strong>Real-World Application</strong></p>",
+            "text": "<p>Concepts like economics, free markets, and individual rights are explained in ways that teens can connect to daily life, like starting a business, budgeting, or understanding current events.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_mQfymj": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p><strong>Engaging, Age-Appropriate Language</strong></p>",
+            "text": "<p>Written in a clear, conversational style, these books are easy to read without watering down important ideas. Our books keep teens engaged while teaching them about complex concepts.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_xYH3r4": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p><strong>Strong Moral Foundations</strong></p>",
+            "text": "<p>The stories promote honesty, responsibility, and respect for others. These values help teens build character and confidence in their decision-making.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_wytFnV": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "heading": "<p><strong>Durable, High-Quality Editions</strong></p>",
+            "text": "<p>Our books are designed to be read again and again, and each book is well-bound with vibrant covers and clean layouts. They’re great for home libraries, classrooms, or as gifts.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_wJrdMc": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "",
+            "heading": "<p><strong>Great for Independent or Family Reading</strong></p>",
+            "text": "<p>Teens can enjoy these books on their own or discuss them with their parents, siblings, or homeschool groups. Our books spark deeper conversations and can lead teens to develop their own opinions about freedom, ethics, and personal growth.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Q9J8Nb",
+        "text_column_nn9TkR",
+        "text_column_ipghiL",
+        "text_column_mQfymj",
+        "text_column_xYH3r4",
+        "text_column_wytFnV",
+        "text_column_wJrdMc"
+      ],
+      "name": "TT Text column",
+      "settings": {
+        "heading": "<h2>6 Benefits of Tuttle Twins Nonfiction Books for Teens</h2>",
+        "heading_size": "h2",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_3BkgW4": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_r4BKX7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A Collection Teens Will Actually Enjoy</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_KMc3XM": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Tuttle Twins nonfiction books are informative, but they also inspire real action. Readers meet real historical figures, explore big economic ideas, and see how individual choices shape the world. These aren’t boring assignments; they’re page-turners that help teens make sense of news headlines and future opportunities.</p><p>Parents and educators love how these books fit into homeschooling or after-school learning. We know teens love reading about relatable stories that boast a fresh perspective. With our books, your child can learn about everything from <a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-modern-villains\"><span style=\"text-decoration:underline\">modern villains</span></a> to <a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-true-conspiracies\"><span style=\"text-decoration:underline\">true conspiracies</span></a> (and everything in between).</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_yAbU6w": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link_new_window": false,
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "the-tuttle-twins-guidebook-combo-set",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_r4BKX7",
+        "text_KMc3XM",
+        "button_yAbU6w"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_KH9JiA": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_yGUVVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p> Frequently Asked Questions About Nonfiction Books for Teens</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_bWVEAC": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can Nonfiction Books Benefit My Teenager’s Learning and Development?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Nonfiction books help teens expand their knowledge, improve critical thinking, and build research and comprehension skills. They can deepen understanding of school subjects like science or history and inspire curiosity about real-world issues such as inflation, technology, or individual rights.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_gGfj4n": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Topics Are Most Engaging for Teenagers in Nonfiction?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Teens often enjoy nonfiction that connects with their interests, such as:</p><ul><li>Biography & Memoir (inspirational people, athletes, activists)</li><li>Science & Technology (space, AI, medicine)</li><li>Social Issues (liberty, personal responsibility, property rights)</li><li>How-to & Life Skills (personal finance, <a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-inspiring-entrepreneurs\"><span style=\"text-decoration:underline\">Inspiring Entrepreneurs</span></a>)</li><li>True Crime or History (mysteries, unsolved cases, the<a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-the-worlds-worst-ideas\"> <span style=\"text-decoration:underline\">World’s Worst Ideas</span></a>, world events)</li></ul><p>Choosing based on your teen’s hobbies or current school projects can make reading more appealing.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_6YKenA": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Do I Know if a Nonfiction Book Is Age-Appropriate?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Look for books labeled YA (Young Adult) or Teen Nonfiction, which are written with age-appropriate language and themes. Check reviews, teacher recommendations, or library guides, and when possible, skim the book or read excerpts to ensure the content matches your teen’s maturity level and values.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_7CyLiD": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Encourage My Teen to Read More Nonfiction if They Usually Prefer Fiction?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<ul><li><strong>Match interests</strong>: Choose nonfiction tied to topics they already enjoy in fiction (e.g., real-life mysteries if they like thrillers).</li><li><strong>Start with short reads</strong>: Magazines, graphic nonfiction, or collections of short essays.</li><li><strong>Read together or discuss</strong>: Share interesting facts, or watch a related documentary as a family.</li></ul><p><strong>Offer choice</strong>: Let them pick from a variety of appealing nonfiction titles.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_qW6ydt": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Where Can I Find Good Nonfiction Books for Teens?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Great sources include:</p><ul><li>Bookstores and online platforms with teen-curated nonfiction categories, like the Tuttle Twins.</li><li>Local and school libraries with YA nonfiction sections.</li><li>Trusted booklists like those from the American Library Association (ALA) or YALSA.</li><li>Teacher or librarian recommendations, which often align with school curriculum and teen interests.</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_UQKenx": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Looking for Something Else?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>If you’re searching for nonfiction books for teens, good books to read for teens, or simply meaningful books for teens to read, the Tuttle Twins collection is the perfect place to start. These engaging titles combine real knowledge with timeless values, giving young readers the tools to think for themselves and shape their futures.</p><p>Help your teen grow into a confident, informed citizen by getting them engaged with various topics and formats, including<a href=\"https://tuttletwins.com/collections/cartoon\"> <span style=\"text-decoration:underline\">graphic novels</span></a> and<a href=\"https://tuttletwins.com/collections/choose-your-consequence\"> <span style=\"text-decoration:underline\">choose your consequence</span></a> books. Explore the Tuttle Twins<a href=\"https://tuttletwins.com/pages/academy\"> <span style=\"text-decoration:underline\">Academy</span></a> and turn curiosity into lifelong learning.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yGUVVd",
+        "faq_bWVEAC",
+        "faq_gGfj4n",
+        "faq_6YKenA",
+        "faq_7CyLiD",
+        "faq_qW6ydt",
+        "faq_UQKenx"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_jzXGaE": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "sskymo_text_image_block_d_inTJrX",
+    "ssky_text_block_DtGT93",
+    "ssky_guidebook_combo_DgC74L",
+    "ssky_text_block_FqJQ66",
+    "ssky_text_column_JNT34d",
+    "ssky_text_block_3BkgW4",
+    "ssky_faqs_KH9JiA",
+    "sskymo_text_image_block_b_jzXGaE"
+  ]
+}

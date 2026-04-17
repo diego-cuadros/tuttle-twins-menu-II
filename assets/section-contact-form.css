@@ -1,0 +1,74 @@
+.contact img {
+  max-width: 100%;
+}
+
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__button {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+/* -----  ssky edits starts here ------ */
+.ssky-contact {
+  position: relative;
+}
+.ssky-contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+.ssky-contact-form-label {
+  width: max-content;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  color: rgb(var(--primary-orange));
+}
+.ssky-contact-form-label + .contact {
+  margin-top: 0;
+}
+.ssky-contact .contact {
+  padding: 32px 20px;
+  border-radius: 0 20px 20px 20px;
+}
+@media screen and (min-width: 750px) {
+  .ssky-contact .contact {
+    padding: 40px 32px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .ssky-contact__wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* -----  ssky edits completes here ------ */

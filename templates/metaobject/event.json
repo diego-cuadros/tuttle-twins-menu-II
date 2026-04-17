@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "event_detail_mcDb9Y": {
+      "type": "event-detail",
+      "blocks": {
+        "hero_zQyCGX": {
+          "type": "hero",
+          "settings": {}
+        },
+        "about_aBLWmU": {
+          "type": "about",
+          "settings": {}
+        },
+        "event_details_tgEFJC": {
+          "type": "event_details",
+          "settings": {}
+        },
+        "location_k8xRBz": {
+          "type": "location",
+          "settings": {}
+        },
+        "find_us_LUUKkV": {
+          "type": "find_us",
+          "settings": {
+            "cta_heading": "Come Find Us!",
+            "cta_subheading": "Register through the official event page",
+            "btn_label": "Register for This Event",
+            "btn_note": "Opens the official event organizer's page"
+          }
+        },
+        "calendar_dL9ACJ": {
+          "type": "calendar",
+          "settings": {
+            "ics_url": ""
+          }
+        },
+        "share_GyXrLH": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "hero_zQyCGX",
+        "about_aBLWmU",
+        "event_details_tgEFJC",
+        "location_k8xRBz",
+        "find_us_LUUKkV",
+        "calendar_dL9ACJ",
+        "share_GyXrLH"
+      ],
+      "name": "Event Detail",
+      "settings": {
+        "event_metaobject": "{{ metaobject }}",
+        "fb_name": "{{ section.settings.event_metaobject.title.value }}",
+        "fb_type": "{{ metaobject.event_type.value }} · {{ metaobject.event_category_topics | metafield_text }}",
+        "fb_date_start": "{{ section.settings.event_metaobject.start_datetime | metafield_text }}",
+        "fb_date_end": "{{ section.settings.event_metaobject.end_datetime | metafield_text }}",
+        "fb_day_1_start": "{{ section.settings.event_metaobject.day_1_start_time | metafield_text }}",
+        "fb_day_1_end": "{{ section.settings.event_metaobject.day_1_end_time | metafield_text }}",
+        "fb_day_2_start": "{{ section.settings.event_metaobject.day_2_start_time | metafield_text }}",
+        "fb_day_2_end": "{{ section.settings.event_metaobject.day_2_end_time | metafield_text }}",
+        "fb_day_3_start": "{{ section.settings.event_metaobject.day_3_start_time | metafield_text }}",
+        "fb_day_3_end": "{{ section.settings.event_metaobject.day_3_end_time | metafield_text }}",
+        "fb_admission": "{{ metaobject.admission_details_cost.value }}",
+        "fb_format": "{{ metaobject.event_category_topics | metafield_text }} {{ section.settings.event_metaobject.event_type.value }}",
+        "event_category_topics": "{{ section.settings.event_metaobject.event_category_topics | metafield_text }} ,{{ section.settings.event_metaobject.audience | metafield_text }},{{ section.settings.event_metaobject.event_type.value }}",
+        "fb_venue_name": "{{ section.settings.event_metaobject.venue.value }}",
+        "fb_venue_street": "{{ section.settings.event_metaobject.street.value }}",
+        "fb_venue_city": "{{ metaobject.city.value }}, {{ section.settings.event_metaobject.state.value }}",
+        "fb_venue_state": "",
+        "fb_reg_url": "{{ metaobject.event_url.value }}",
+        "fb_about": "<p>{{ metaobject.summary | metafield_tag }}</p>",
+        "fb_vendor_note": "Register for the  {{ section.settings.event_metaobject.event_type.value }} through the link below, then come visit the Tuttle Twins booth for exclusive deals.",
+        "fb_tags": "{{ section.settings.event_metaobject.event_category_topics | metafield_text }},{{ section.settings.event_metaobject.on_site_location.value }},{{ section.settings.event_metaobject.audience | metafield_text }},{{ section.settings.event_metaobject.event_type.value }}",
+        "extra_pills": "{{ section.settings.event_metaobject.extra_hero_pill | metafield_text }}"
+      }
+    }
+  },
+  "order": [
+    "event_detail_mcDb9Y"
+  ]
+}

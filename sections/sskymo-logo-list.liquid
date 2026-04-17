@@ -1,0 +1,180 @@
+{%- style -%}
+  .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-logo-list__blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
+    width: 100%;
+  }
+    .ssky-logo-list__image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (max-width: 549px) {
+    .ssky-logo-list__image {
+      flex: 1 0 calc(50% - 8px);
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (max-width: 989px) {
+    .ssky-logo-list__blocks {
+      column-gap: 16px;
+    }
+    .ssky-logo-list__image {
+      max-width: 200px;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .ssky-logo-list__image {
+      flex: 0 0 calc(20% - 20px);
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-logo-list-{{ section.id }} .ssky-logo-list {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-logo-list-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div class="ssky-logo-list-{{ section.id }}">
+  <div class="ssky-logo-list gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-logo-list__blocks">
+        {%- for credibility_trust_logo in shop.metaobjects.credibility_trust_logos.values -%}
+          <div class="ssky-logo-list__image">
+            {%- if credibility_trust_logo.logo_image != blank -%}
+              {%- assign widths = '360, 500' -%}
+              {{
+                credibility_trust_logo.logo_image
+                | image_url: width: 500
+                | image_tag: sizes: '400px', widths: widths, fetchpriority: fetch_priority
+              }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Credibility logos",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Credibility logos"
+    }
+  ]
+}
+{% endschema %}

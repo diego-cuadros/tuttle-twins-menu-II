@@ -1,0 +1,958 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins — Event Detail Section
+  File: sections/event-detail.liquid
+
+  METAOBJECT DEFINITION (type: "event") — recommended fields:
+    event_name                single_line_text_field
+    event_type                single_line_text_field
+    hero_emoji                single_line_text_field
+    hero_subtitle             single_line_text_field
+    date_start                date
+    date_end                  date
+    hours                     single_line_text_field
+    admission                 single_line_text_field
+    event_format              single_line_text_field
+    venue_name                single_line_text_field
+    venue_address             single_line_text_field
+    venue_city_state          single_line_text_field
+    registration_url          url
+    about_text                multi_line_text_field
+    vendor_note               single_line_text_field
+    cta_emoji                 single_line_text_field
+    tags                      list.single_line_text_field
+    extra_features_for_hero   list.single_line_text_field
+  ============================================================
+{% endcomment %}
+
+{%- liquid
+  assign ev = section.settings.event_metaobject.value
+
+  assign event_name    = ev.title            | default: section.settings.fb_name
+  assign event_type    = ev.event_type       | default: section.settings.fb_type
+  assign day_1_start = ev.day_1_start_time | default: section.settings.fb_day_1_start
+  assign day_1_end   = ev.day_1_end_time   | default: section.settings.fb_day_1_end
+  assign day_2_start = ev.day_2_start_time | default: section.settings.fb_day_2_start
+  assign day_2_end   = ev.day_2_end_time   | default: section.settings.fb_day_2_end
+  assign day_3_start = ev.day_3_start_time | default: section.settings.fb_day_3_start
+  assign day_3_end   = ev.day_3_end_time   | default: section.settings.fb_day_3_end
+  assign day_4_start = ev.day_4_start_time | default: section.settings.fb_day_4_start
+  assign day_4_end   = ev.day_4_end_time   | default: section.settings.fb_day_4_end
+
+  comment
+    Derive event start/end from day fields — no separate date fields needed.
+    Start = day 1. End = last day that has a value.
+  endcomment
+  assign date_start = day_1_start
+  assign date_end   = day_1_start
+  if day_2_start != blank
+    assign date_end = day_2_start
+  endif
+  if day_3_start != blank
+    assign date_end = day_3_start
+  endif
+  if day_4_start != blank
+    assign date_end = day_4_start
+  endif
+
+  assign admission     = ev.admission        | default: section.settings.fb_admission
+  assign event_format  = ev.event_format     | default: section.settings.fb_format
+  assign venue_name    = ev.venue_name       | default: section.settings.fb_venue_name
+  assign venue_street  = ev.street           | default: section.settings.fb_venue_street | strip
+  assign venue_city    = ev.city             | default: section.settings.fb_venue_city | strip
+  assign venue_state   = ev.state            | default: section.settings.fb_venue_state | split: ' and ' | first | remove: ',' | strip
+  assign venue_address = venue_street | append: ', ' | append: venue_city | append: ', ' | append: venue_state
+  assign reg_url       = ev.registration_url | default: section.settings.fb_reg_url
+  assign about_text    = ev.about_text       | default: section.settings.fb_about
+  assign vendor_note   = ev.vendor_note      | default: section.settings.fb_vendor_note
+
+  comment
+    Shopify serializes list fields as "Item 1, Item 2 and Item 3"
+    So we replace ' and ' with ',' first, then split on ',' to get individual items.
+  endcomment
+  assign ev_tags_raw = section.settings.event_category_topics | replace: ' and ', ','
+  assign ev_tags = ev_tags_raw | split: ','
+  if ev_tags == blank
+    assign ev_tags = section.settings.fb_tags | split: ','
+  endif
+  assign tag_colors = 'yellow,blue,coral,purple,lime,orange' | split: ','
+
+  assign ev_hero_pills_raw = section.settings.extra_pills | replace: ' and ', ','
+  assign ev_hero_pills = ev_hero_pills_raw | split: ','
+
+  assign maps_query  = venue_name | append: ' ' | append: venue_address | url_encode
+  assign google_maps = 'https://maps.google.com/?q=' | append: maps_query
+  assign apple_maps  = 'https://maps.apple.com/?q='  | append: maps_query
+  assign waze_maps   = 'https://www.waze.com/ul?q='  | append: maps_query
+
+  assign date_start_fmt = date_start | date: '%B %-d'
+  assign date_end_fmt   = date_end   | date: '%-d, %Y'
+
+  if date_end == blank or date_start == date_end
+    assign date_display = date_start | date: '%B %-d, %Y'
+  else
+    assign date_display = date_start_fmt | append: '–' | append: date_end_fmt
+  endif
+
+  assign gcal_title    = event_name | url_encode
+  assign gcal_location = venue_address | url_encode
+  assign gcal_start    = date_start | date: '%Y%m%d'
+  assign gcal_end      = date_end   | date: '%Y%m%d'
+  assign gcal_dates    = gcal_start | append: '/' | append: gcal_end
+  assign gcal_url      = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' | append: gcal_title | append: '&dates=' | append: gcal_dates | append: '&location=' | append: gcal_location
+
+  assign share_url   = request.origin | append: request.path
+  assign share_title = event_name | url_encode
+
+  comment — ISO dates for structured data and comparisons
+  endcomment
+  assign date_start_iso = date_start | date: '%Y-%m-%d'
+  assign date_end_iso   = date_end   | date: '%Y-%m-%d'
+  assign today_iso      = 'now' | date: '%Y-%m-%d'
+  assign event_past     = false
+  if date_end_iso < today_iso
+    assign event_past = true
+  elsif date_end == blank and date_start_iso < today_iso
+    assign event_past = true
+  endif
+-%}
+
+{%- comment -%} ══ STRUCTURED DATA — Event JSON-LD for Google rich results ══ {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ event_name | json }},
+  "description": {{ about_text | strip_html | truncate: 300 | json }},
+  "startDate": {{ date_start_iso | json }},
+  "endDate": {{ date_end_iso | json }},
+  "eventStatus": "{%- if event_past -%}https://schema.org/EventEnded{%- else -%}https://schema.org/EventScheduled{%- endif -%}",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": {{ venue_name | json }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ venue_street | json }},
+      "addressLocality": {{ venue_city | json }},
+      "addressRegion": {{ venue_state | json }},
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Tuttle Twins",
+    "url": {{ shop.url | json }}
+  },
+  "url": {{ share_url | json }}
+  {%- if reg_url != blank -%}
+  ,"offers": {
+    "@type": "Offer",
+    "url": {{ reg_url | json }},
+    "availability": "https://schema.org/InStock"
+  }
+  {%- endif -%}
+}
+</script>
+
+{% style %}
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+  .tt-ev {
+    --tt-yellow:   #ffd05a;
+    --tt-coral:    #da5846;
+    --tt-coral-dk: #9a2f20;
+    --tt-blue:     #04aed8;
+    --tt-sky:      #bcecf6;
+    --tt-purple:   #cb80c1;
+    --tt-dark:     #3f3939;
+    --tt-lime:     #afc856;
+    --tt-orange:   #f8ad42;
+    --tt-white:    #ffffff;
+    --tt-cream:    #fffdf7;
+    --tt-border:   rgba(63,57,57,0.1);
+    --tt-muted:    #6b6464;
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--tt-white);
+    color: var(--tt-dark);
+  }
+  .tt-ev * { box-sizing: border-box; margin: 0; padding: 0; }
+  .tt-ev__wrap { max-width: 960px; margin: 0 auto; padding-bottom: 80px; }
+
+  /* ── HERO ── */
+  .tt-ev__hero {
+    position: relative; background: var(--tt-blue);
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 48px calc(50% - 480px) 44px; overflow: hidden;
+  }
+  .tt-ev__hero-dots {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.18) 2px, transparent 2px);
+    background-size: 22px 22px;
+  }
+  .tt-ev__hero-blob1 {
+    position: absolute; top: -40px; right: -40px; pointer-events: none;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: var(--tt-yellow); opacity: 0.35;
+  }
+  .tt-ev__hero-blob2 {
+    position: absolute; bottom: 10px; left: 30px; pointer-events: none;
+    width: 120px; height: 120px; border-radius: 50%;
+    background: var(--tt-purple); opacity: 0.25;
+  }
+  .tt-ev__hero-curve {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 18px;
+    background: var(--tt-white); clip-path: ellipse(52% 100% at 50% 100%);
+    pointer-events: none;
+  }
+  .tt-ev__cat {
+    position: relative; font-family: 'Nunito', sans-serif;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--tt-yellow); margin-bottom: 10px;
+  }
+  .tt-ev__title {
+    position: relative; font-family: 'Nunito', sans-serif;
+    font-size: 38px; font-weight: 900; line-height: 1.1; color: #fff;
+    max-width: 620px; margin-bottom: 8px;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+  }
+  .tt-ev__pills { display: flex; gap: 10px; flex-wrap: wrap; position: relative; }
+  .tt-ev__pill {
+    display: flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.22); border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 40px; padding: 7px 15px;
+    font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; color: #fff;
+  }
+  .tt-ev__pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--tt-yellow); flex-shrink: 0; }
+
+  /* ── BODY LAYOUT ── */
+  .tt-ev__body {
+    display: grid; grid-template-columns: 1fr 300px;
+    gap: 28px; padding: 40px 0 0; align-items: start;
+  }
+  .tt-ev__main  { display: flex; flex-direction: column; gap: 36px; }
+  .tt-ev__aside { display: flex; flex-direction: column; gap: 18px; }
+
+  /* ── SHARED LABELS ── */
+  .tt-ev__label {
+    font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--tt-blue);
+    margin-bottom: 12px; padding-bottom: 10px;
+    border-bottom: 2.5px dashed rgba(4,174,216,0.25);
+  }
+  .tt-ev__bar { width: 36px; height: 4px; border-radius: 4px; margin: 0 0 16px; }
+  .tt-ev__bar--yellow { background: var(--tt-yellow); }
+  .tt-ev__bar--blue   { background: var(--tt-blue); }
+  .tt-ev__bar--coral  { background: var(--tt-coral); }
+
+  /* ── ABOUT ── */
+  .tt-ev__about-body { font-size: 15px; line-height: 1.8; color: var(--tt-muted); }
+  .tt-ev__about-body p + p { margin-top: 12px; }
+
+  /* ── TAGS ── */
+  .tt-ev__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .tt-ev__tag  { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 700; padding: 5px 13px; border-radius: 20px; }
+  .tt-ev__tag--yellow { background: rgba(255,208,90,0.25); color: #7a5900; border: 1.5px solid rgba(255,208,90,0.6); }
+  .tt-ev__tag--blue   { background: rgba(4,174,216,0.15);  color: #026a88; border: 1.5px solid rgba(4,174,216,0.4); }
+  .tt-ev__tag--coral  { background: rgba(218,88,70,0.12);  color: #9a2f20; border: 1.5px solid rgba(218,88,70,0.3); }
+  .tt-ev__tag--purple { background: rgba(203,128,193,0.2); color: #7a3a72; border: 1.5px solid rgba(203,128,193,0.4); }
+  .tt-ev__tag--lime   { background: rgba(175,200,86,0.2);  color: #4e6a10; border: 1.5px solid rgba(175,200,86,0.5); }
+  .tt-ev__tag--orange { background: rgba(248,173,66,0.2);  color: #7a4e00; border: 1.5px solid rgba(248,173,66,0.4); }
+
+  /* ── FACTS ── */
+  .tt-ev__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tt-ev__fact  {
+    background: var(--tt-white); border: 2px solid var(--tt-border);
+    border-radius: 16px; padding: 16px 18px; position: relative; overflow: hidden;
+  }
+  .tt-ev__fact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--fact-color, var(--tt-yellow)); }
+  .tt-ev__fact:nth-child(4n+1)::before { background: var(--fact-color, var(--tt-yellow)); }
+  .tt-ev__fact:nth-child(4n+2)::before { background: var(--fact-color, var(--tt-blue)); }
+  .tt-ev__fact:nth-child(4n+3)::before { background: var(--fact-color, var(--tt-coral)); }
+  .tt-ev__fact:nth-child(4n)::before   { background: var(--fact-color, var(--tt-lime)); }
+  .tt-ev__fact-lbl { font-size: 11px; font-weight: 700; color: var(--tt-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  .tt-ev__fact-val { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--tt-dark); }
+  .tt-ev__fact-val--hl { color: var(--tt-coral); }
+
+  /* ── MAP ── */
+  .tt-ev__map-card { background: var(--tt-white); border: 2px solid var(--tt-border); border-radius: 20px; overflow: hidden; }
+  .tt-ev__map-canvas { height: 260px; position: relative; overflow: hidden; }
+  .tt-ev__map-info   { padding: 16px 18px; }
+  .tt-ev__venue-name { font-family: 'Nunito',sans-serif; font-weight: 800; font-size: 15px; color: var(--tt-dark); margin-bottom: 4px; }
+  .tt-ev__venue-addr { font-size: 13px; color: var(--tt-muted); line-height: 1.6; margin-bottom: 14px; }
+  .tt-ev__map-btns   { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tt-ev__map-btn    {
+    font-family: 'Nunito',sans-serif; font-size: 12px; font-weight: 700;
+    padding: 7px 14px; border-radius: 30px; text-decoration: none;
+    border: 2px solid var(--tt-border); color: var(--tt-dark); background: var(--tt-white);
+    transition: border-color 0.15s;
+  }
+  .tt-ev__map-btn--primary { background: var(--tt-blue); color: #fff; border-color: var(--tt-blue); }
+
+  /* ── SIDEBAR CARD SHELL ── */
+  .tt-ev__card { background: var(--tt-white); border: 2px solid var(--tt-border); border-radius: 18px; overflow: hidden; }
+  .tt-ev__card-hd { padding: 20px 22px; position: relative; overflow: hidden; background: var(--tt-yellow); }
+  .tt-ev__card-hd-blob { position: absolute; top: -20px; right: -20px; width: 90px; height: 90px; border-radius: 50%; background: rgba(255,255,255,0.3); pointer-events: none; }
+  .tt-ev__card-hd-title { position: relative; font-family: 'Nunito',sans-serif; font-size: 20px; font-weight: 900; text-align: center; color: var(--tt-dark); margin-bottom: 3px; }
+  .tt-ev__card-hd-sub   { position: relative; font-size: 13px; font-weight: 600; text-align: center; color: rgba(63,57,57,0.7); }
+  .tt-ev__card-bd { padding: 20px 22px; }
+
+  /* ── PAST EVENT ── */
+  .tt-ev__past-banner {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(63,57,57,0.06); border: 2px solid var(--tt-border);
+    border-radius: 12px; padding: 14px 18px;
+  }
+  .tt-ev__past-title {
+    font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800;
+    color: var(--tt-dark); margin-bottom: 2px;
+  }
+  .tt-ev__past-sub { font-size: 12px; color: var(--tt-muted); font-weight: 600; }
+
+  /* ── FIND US ── */
+  .tt-ev__note {
+    font-size: 13px; color: var(--tt-muted); line-height: 1.7; font-weight: 600;
+    padding: 13px 15px; margin-bottom: 18px;
+    background: rgba(188,236,246,0.4); border-radius: 12px; border-left: 4px solid var(--tt-blue);
+  }
+  .tt-ev__note strong { color: var(--tt-dark); }
+  .tt-ev__reg-btn {
+    display: block; width: 100%; text-align: center;
+    background: var(--tt-coral); color: #fff;
+    font-family: 'Nunito',sans-serif; font-size: 15px; font-weight: 900;
+    padding: 14px 20px; border-radius: 50px; border: none; text-decoration: none;
+    box-shadow: 0 4px 0 var(--tt-coral-dk);
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .tt-ev__reg-btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--tt-coral-dk); }
+  .tt-ev__reg-btn--sm {
+    font-size: 13px; font-weight: 700; padding: 9px 14px;
+    border-radius: 12px; box-shadow: 0 3px 0 var(--tt-coral-dk);
+    text-align: center; line-height: 1.3;
+  }
+  .tt-ev__reg-note { font-size: 11px; font-weight: 600; color: var(--tt-muted); text-align: center; margin-top: 10px; }
+
+  /* ── CALENDAR ── */
+  .tt-ev__cal-bd  { padding: 18px 20px; }
+  .tt-ev__cal-lbl { font-family: 'Nunito',sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tt-blue); margin-bottom: 12px; }
+  .tt-ev__cal-btn {
+    display: block; width: 100%; font-family: 'Nunito',sans-serif; font-size: 13px; font-weight: 700;
+    padding: 9px 14px; border: 2px solid var(--tt-border); border-radius: 30px;
+    color: var(--tt-dark); text-decoration: none; text-align: center; margin-bottom: 8px;
+    background: var(--tt-white); transition: border-color 0.15s, color 0.15s;
+  }
+  .tt-ev__cal-btn:last-child { margin-bottom: 0; }
+  .tt-ev__cal-btn:hover { border-color: var(--tt-blue); color: var(--tt-blue); }
+
+  /* ── SHARE ── */
+  .tt-ev__share-bd  { padding: 16px 20px; }
+  .tt-ev__share-lbl { font-family: 'Nunito',sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tt-blue); margin-bottom: 12px; }
+  .tt-ev__share-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tt-ev__share-btn {
+    font-family: 'Nunito',sans-serif; font-size: 12px; font-weight: 700;
+    padding: 7px 14px; border-radius: 30px; cursor: pointer;
+    border: 2px solid var(--tt-border); color: var(--tt-dark); background: var(--tt-white);
+    transition: border-color 0.15s, color 0.15s; text-decoration: none;
+  }
+  .tt-ev__share-btn:hover { border-color: var(--tt-purple); color: var(--tt-purple); }
+
+  /* ── SIDEBAR NOTE ── */
+  .tt-ev__snote-bd  { padding: 16px 20px; }
+  .tt-ev__snote-lbl { font-family: 'Nunito',sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tt-blue); margin-bottom: 10px; }
+  .tt-ev__snote-txt { font-size: 13px; line-height: 1.7; color: var(--tt-muted); font-weight: 600; }
+
+  /* ── SCHEDULE ── */
+  .tt-ev__schedule { display: flex; flex-direction: column; }
+  .tt-ev__sched-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 0; border-bottom: 1.5px dashed var(--tt-border);
+  }
+  .tt-ev__sched-row:last-child { border-bottom: none; }
+  .tt-ev__sched-date {
+    font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800;
+    color: var(--tt-dark);
+  }
+  .tt-ev__sched-time {
+    font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700;
+    color: var(--tt-blue); white-space: nowrap;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .tt-ev__hero  { padding: 36px 20px 38px; }
+    .tt-ev__title { font-size: 26px; }
+    .tt-ev__body  { grid-template-columns: 1fr; padding: 24px 20px 0; }
+  }
+{% endstyle %}
+
+<div class="tt-ev">
+
+  {%- comment -%} ══ HERO — full width, outside wrap ══ {%- endcomment -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'hero' -%}
+      <div class="tt-ev__hero" {{ block.shopify_attributes }}>
+        <div class="tt-ev__hero-dots"></div>
+        <div class="tt-ev__hero-blob1"></div>
+        <div class="tt-ev__hero-blob2"></div>
+
+        <p class="tt-ev__cat">{{ event_type }}</p>
+        <h1 class="tt-ev__title">{{ event_name }}</h1>
+
+        <div class="tt-ev__pills">
+          {%- if date_display != blank -%}
+            <div class="tt-ev__pill"><span class="tt-ev__pill-dot"></span>{{ date_display }}</div>
+          {%- endif -%}
+          {%- if venue_name != blank -%}
+            <div class="tt-ev__pill"><span class="tt-ev__pill-dot"></span>{{ venue_name }}</div>
+          {%- endif -%}
+          {%- if venue_city != blank -%}
+            <div class="tt-ev__pill"><span class="tt-ev__pill-dot"></span>{{ venue_city }}{%- if venue_state != blank -%}, {{ venue_state }}{%- endif -%}</div>
+          {%- endif -%}
+          {%- for pill_item in ev_hero_pills -%}
+            {%- assign pill_text = pill_item | strip -%}
+            {%- if pill_text != blank -%}
+              <div class="tt-ev__pill"><span class="tt-ev__pill-dot"></span>{{ pill_text }}</div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="tt-ev__hero-curve"></div>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+
+  <div class="tt-ev__wrap">
+
+    {%- comment -%} ══ TWO-COLUMN BODY ══ {%- endcomment -%}
+    <div class="tt-ev__body">
+
+      {%- comment -%} ── MAIN COLUMN ── {%- endcomment -%}
+      <div class="tt-ev__main">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'about' -%}
+              <div {{ block.shopify_attributes }}>
+                <p class="tt-ev__label">About this event</p>
+                <div class="tt-ev__bar tt-ev__bar--yellow"></div>
+                {%- if about_text != blank -%}
+                  <div class="tt-ev__about-body">{{ about_text }}</div>
+                {%- endif -%}
+                {%- if ev_tags != blank and ev_tags.size > 0 -%}
+                  <div class="tt-ev__tags">
+                    {%- assign tag_color_index = 0 -%}
+                    {%- for tag_item in ev_tags -%}
+                      {%- assign tag_text = tag_item | strip -%}
+                      {%- if tag_text != blank -%}
+                        {%- assign color_index = tag_color_index | modulo: 6 -%}
+                        {%- assign tag_color = tag_colors[color_index] -%}
+                        <span class="tt-ev__tag tt-ev__tag--{{ tag_color }}">{{ tag_text }}</span>
+                        {%- assign tag_color_index = tag_color_index | plus: 1 -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+              </div>
+
+            {%- when 'event_details' -%}
+              <div {{ block.shopify_attributes }}>
+                <p class="tt-ev__label">Event details</p>
+                <div class="tt-ev__bar tt-ev__bar--blue"></div>
+
+                {%- comment -%} Day-by-day schedule — only renders days that have values {%- endcomment -%}
+                {%- if day_1_start != blank or day_2_start != blank or day_3_start != blank or day_4_start != blank -%}
+                  <div class="tt-ev__facts" style="margin-bottom: 16px;">
+                    <div class="tt-ev__fact" style="grid-column: 1 / -1; --fact-color: var(--tt-yellow);">
+                      <div class="tt-ev__fact-lbl">Schedule</div>
+                      <div class="tt-ev__schedule">
+                        {%- if day_1_start != blank -%}
+                          {%- assign d1s = day_1_start | date: '%s' | minus: 0 -%}
+                          {%- assign d1e = day_1_end | date: '%s' | minus: 21600 -%}
+                          <div class="tt-ev__sched-row">
+                            <span class="tt-ev__sched-date">{{ d1s | date: '%A, %B %-d' }}</span>
+                            <span class="tt-ev__sched-time">
+                              {{ d1s | date: '%-I:%M %p' }}
+                              {%- if day_1_end != blank %} – {{ d1e | date: '%-I:%M %p' }}{%- endif -%}
+                            </span>
+                          </div>
+                        {%- endif -%}
+                        {%- if day_2_start != blank -%}
+                          {%- assign d2s = day_2_start | date: '%s' | minus: 0 -%}
+                          {%- assign d2e = day_2_end | date: '%s' | minus: 21600 -%}
+                          <div class="tt-ev__sched-row">
+                            <span class="tt-ev__sched-date">{{ d2s | date: '%A, %B %-d' }}</span>
+                            <span class="tt-ev__sched-time">
+                              {{ d2s | date: '%-I:%M %p' }}
+                              {%- if day_2_end != blank %} – {{ d2e | date: '%-I:%M %p' }}{%- endif -%}
+                            </span>
+                          </div>
+                        {%- endif -%}
+                        {%- if day_3_start != blank -%}
+                          {%- assign d3s = day_3_start | date: '%s' | minus: 0 -%}
+                          {%- assign d3e = day_3_end | date: '%s' | minus: 21600 -%}
+                          <div class="tt-ev__sched-row">
+                            <span class="tt-ev__sched-date">{{ d3s | date: '%A, %B %-d' }}</span>
+                            <span class="tt-ev__sched-time">
+                              {{ d3s | date: '%-I:%M %p' }}
+                              {%- if day_3_end != blank %} – {{ d3e | date: '%-I:%M %p' }}{%- endif -%}
+                            </span>
+                          </div>
+                        {%- endif -%}
+                        {%- if day_4_start != blank -%}
+                          {%- assign d4s = day_4_start | date: '%s' | minus: 0 -%}
+                          {%- assign d4e = day_4_end | date: '%s' | minus: 21600 -%}
+                          <div class="tt-ev__sched-row">
+                            <span class="tt-ev__sched-date">{{ d4s | date: '%A, %B %-d' }}</span>
+                            <span class="tt-ev__sched-time">
+                              {{ d4s | date: '%-I:%M %p' }}
+                              {%- if day_4_end != blank %} – {{ d4e | date: '%-I:%M %p' }}{%- endif -%}
+                            </span>
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
+
+                <div class="tt-ev__facts">
+                  {%- if admission != blank -%}
+                    <div class="tt-ev__fact" style="--fact-color: var(--tt-coral);">
+                      <div class="tt-ev__fact-lbl">Admission</div>
+                      <div class="tt-ev__fact-val tt-ev__fact-val--hl">{{ admission }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if event_format != blank -%}
+                    <div class="tt-ev__fact" style="--fact-color: var(--tt-lime);">
+                      <div class="tt-ev__fact-lbl">Type</div>
+                      <div class="tt-ev__fact-val">{{ event_format }}</div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+
+            {%- when 'location' -%}
+              <div {{ block.shopify_attributes }}>
+                <p class="tt-ev__label">Location</p>
+                <div class="tt-ev__bar tt-ev__bar--coral"></div>
+                <div class="tt-ev__map-card">
+                  <div class="tt-ev__map-canvas">
+                    {%- assign map_address = venue_name | append: ' ' | append: venue_street | append: ' ' | append: venue_city | append: ' ' | append: venue_state | url_encode -%}
+                    <iframe
+                      src="https://maps.google.com/maps?q={{ map_address }}&output=embed&z=15"
+                      width="100%"
+                      height="100%"
+                      style="border:0; display:block;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Event location map">
+                    </iframe>
+                  </div>
+                  <div class="tt-ev__map-info">
+                    <div class="tt-ev__venue-name">{{ venue_name }}</div>
+                    <div class="tt-ev__venue-addr">
+                      {{ venue_street }}<br>
+                      {{ venue_city }}{%- if venue_state != blank -%}, {{ venue_state }}{%- endif -%}
+                    </div>
+                    <div class="tt-ev__map-btns">
+                      <a class="tt-ev__map-btn tt-ev__map-btn--primary" href="{{ google_maps }}" target="_blank" rel="noopener">Google Maps</a>
+                      <a class="tt-ev__map-btn" href="{{ apple_maps }}" target="_blank" rel="noopener">Apple Maps</a>
+                      <a class="tt-ev__map-btn" href="{{ waze_maps }}" target="_blank" rel="noopener">Waze</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} ── SIDEBAR COLUMN ── {%- endcomment -%}
+      <div class="tt-ev__aside">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'find_us' -%}
+              <div class="tt-ev__card" {{ block.shopify_attributes }}>
+                <div class="tt-ev__card-hd">
+                  <div class="tt-ev__card-hd-blob"></div>
+                  <h2 class="tt-ev__card-hd-title">{{ block.settings.cta_heading }}</h2>
+                  <p class="tt-ev__card-hd-sub">{{ block.settings.cta_subheading }}</p>
+                </div>
+                <div class="tt-ev__card-bd">
+                  {%- if event_past -%}
+                    {%- comment -%}
+                      Find upcoming events in the same state from the event metaobject.
+                      Shopify metaobject page URLs are auto-generated as /pages/event/{handle}.
+                    {%- endcomment -%}
+                    {%- assign has_upcoming = false -%}
+                    {%- assign today_ts = 'now' | date: '%s' -%}
+                    {%- comment -%} First pass: find current event's state by matching handle {%- endcomment -%}
+                    {%- assign current_state = '' -%}
+                    {%- for ev_entry in shop.metaobjects.event.values -%}
+                      {%- if ev_entry.system.handle == metaobject.system.handle -%}
+                        {%- assign current_state = ev_entry.state | strip | downcase -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- comment -%} Second pass: check if any upcoming events exist {%- endcomment -%}
+                    {%- for ev_entry in shop.metaobjects.event.values -%}
+                      {%- assign entry_state = ev_entry.state | strip | downcase -%}
+                      {%- assign entry_ts = ev_entry.day_1_start_time | date: '%s' -%}
+                      {%- if entry_state == current_state and entry_ts > today_ts -%}
+                        {%- assign has_upcoming = true -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- comment -%} Render note first, then buttons {%- endcomment -%}
+                    {%- if has_upcoming -%}
+                      <p class="tt-ev__reg-note" style="margin-bottom:14px;">This event has ended. Here are upcoming events in {{ current_state | upcase }}:</p>
+                      {%- for ev_entry in shop.metaobjects.event.values -%}
+                        {%- assign entry_state = ev_entry.state | strip | downcase -%}
+                        {%- assign entry_ts = ev_entry.day_1_start_time | date: '%s' -%}
+                        {%- if entry_state == current_state and entry_ts > today_ts -%}
+                          <a class="tt-ev__reg-btn tt-ev__reg-btn--sm" style="margin-bottom:10px;" href="/pages/event/{{ ev_entry.system.handle }}">
+                            {{ ev_entry.title }}
+                          </a>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- else -%}
+                      <div class="tt-ev__past-banner">
+                        <div>
+                          <div class="tt-ev__past-title">This event has ended</div>
+                          <div class="tt-ev__past-sub">Check back for upcoming events near you</div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- if vendor_note != blank -%}
+                      <div class="tt-ev__note">{{ vendor_note }}</div>
+                    {%- endif -%}
+                    {%- if reg_url != blank -%}
+                      <a class="tt-ev__reg-btn" href="{{ reg_url }}" target="_blank" rel="noopener">
+                        {{ block.settings.btn_label }}
+                      </a>
+                      {%- if block.settings.btn_note != blank -%}
+                        <p class="tt-ev__reg-note">{{ block.settings.btn_note }}</p>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+              </div>
+
+            {%- when 'calendar' -%}
+              <div class="tt-ev__card" {{ block.shopify_attributes }}>
+                <div class="tt-ev__cal-bd">
+                  <p class="tt-ev__cal-lbl">Add to calendar</p>
+                  <a class="tt-ev__cal-btn" href="{{ gcal_url }}" target="_blank" rel="noopener">Google Calendar</a>
+                  {%- if block.settings.ics_url != blank -%}
+                    <a class="tt-ev__cal-btn" href="{{ block.settings.ics_url }}" target="_blank" rel="noopener">Apple Calendar (.ics)</a>
+                    <a class="tt-ev__cal-btn" href="{{ block.settings.ics_url }}" target="_blank" rel="noopener">Outlook</a>
+                  {%- else -%}
+                    <a class="tt-ev__cal-btn" href="#" aria-disabled="true">Apple Calendar (.ics)</a>
+                    <a class="tt-ev__cal-btn" href="#" aria-disabled="true">Outlook</a>
+                  {%- endif -%}
+                </div>
+              </div>
+
+            {%- when 'share' -%}
+              <div class="tt-ev__card" {{ block.shopify_attributes }}>
+                <div class="tt-ev__share-bd">
+                  <p class="tt-ev__share-lbl">Share this event</p>
+                  <div class="tt-ev__share-btns">
+                    <a class="tt-ev__share-btn"
+                       href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | url_encode }}"
+                       target="_blank" rel="noopener">Facebook</a>
+                    <a class="tt-ev__share-btn"
+                       href="https://twitter.com/intent/tweet?text={{ share_title }}&url={{ share_url | url_encode }}"
+                       target="_blank" rel="noopener">X / Twitter</a>
+                    <button
+                      class="tt-ev__share-btn"
+                      onclick="navigator.clipboard.writeText('{{ share_url }}').then(function(){ var b=this; b.textContent='Copied!'; setTimeout(function(){ b.textContent='Copy link'; },2000); }.bind(this))"
+                    >Copy link</button>
+                    <a class="tt-ev__share-btn"
+                       href="mailto:?subject={{ share_title }}&body={{ share_url | url_encode }}">Email</a>
+                  </div>
+                </div>
+              </div>
+
+            {%- when 'sidebar_note' -%}
+              <div class="tt-ev__card" {{ block.shopify_attributes }}>
+                <div class="tt-ev__snote-bd">
+                  <p class="tt-ev__snote-lbl">{{ block.settings.note_heading }}</p>
+                  <div class="tt-ev__snote-txt">{{ block.settings.note_body }}</div>
+                </div>
+              </div>
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Event Detail",
+  "tag": "section",
+  "class": "tt-event-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Event Data Source"
+    },
+    {
+      "type": "metaobject",
+      "id": "event_metaobject",
+      "label": "Event (metaobject)",
+      "metaobject_type": "event",
+      "info": "Connect your Event metaobject. All fields below are fallback/preview values used when no metaobject is attached."
+    },
+    {
+      "type": "header",
+      "content": "Fallback / Preview Values",
+      "info": "Only displayed in the theme editor when no metaobject is connected."
+    },
+    {
+      "type": "text",
+      "id": "fb_name",
+      "label": "Event name",
+      "default": "Great Homeschool Convention"
+    },
+    {
+      "type": "text",
+      "id": "fb_type",
+      "label": "Event type label",
+      "default": "Homeschool Convention · Vendor Booth"
+    },
+    {
+      "type": "header",
+      "content": "Schedule",
+      "info": "Connect each field to the corresponding datetime metaobject field via Dynamic Sources."
+    },
+    {
+      "type": "text",
+      "id": "fb_day_1_start",
+      "label": "Day 1 start"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_1_end",
+      "label": "Day 1 end"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_2_start",
+      "label": "Day 2 start"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_2_end",
+      "label": "Day 2 end"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_3_start",
+      "label": "Day 3 start"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_3_end",
+      "label": "Day 3 end"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_4_start",
+      "label": "Day 4 start"
+    },
+    {
+      "type": "text",
+      "id": "fb_day_4_end",
+      "label": "Day 4 end"
+    },
+    {
+      "type": "text",
+      "id": "fb_admission",
+      "label": "Admission",
+      "default": "Registration Required"
+    },
+    {
+      "type": "text",
+      "id": "fb_format",
+      "label": "Event format / type",
+      "default": "Convention & Exhibit Hall"
+    },
+    {
+      "type": "text",
+      "id": "event_category_topics",
+      "label": "Event categories / topics",
+      "info": "Connect to the 'event_category_topics' metaobject field via Dynamic Sources. Renders as colored tag pills under the About section."
+    },
+    {
+      "type": "text",
+      "id": "fb_venue_name",
+      "label": "Venue name",
+      "default": "Duke Energy Convention Center"
+    },
+    {
+      "type": "text",
+      "id": "fb_venue_street",
+      "label": "Venue street"
+    },
+    {
+      "type": "text",
+      "id": "fb_venue_city",
+      "label": "Venue city"
+    },
+    {
+      "type": "text",
+      "id": "fb_venue_state",
+      "label": "Venue state"
+    },
+    {
+      "type": "url",
+      "id": "fb_reg_url",
+      "label": "Registration URL"
+    },
+    {
+      "type": "richtext",
+      "id": "fb_about",
+      "label": "About text",
+      "default": "<p>The Great Homeschool Convention is the homeschooling event of the year! Come find us in the Exhibit Hall for exclusive convention deals and stock up on everything your family needs to learn about liberty and free markets. We can't wait to see you there!</p>"
+    },
+    {
+      "type": "text",
+      "id": "fb_vendor_note",
+      "label": "Vendor note (sidebar callout)",
+      "default": "We'll be in the Exhibit Hall! Register for the convention through the link below, then come visit the Tuttle Twins booth for exclusive deals."
+    },
+    {
+      "type": "text",
+      "id": "fb_tags",
+      "label": "Preview tags (comma-separated)",
+      "default": "Family Friendly,Homeschool,Curriculum Fair,Workshops,Free Markets",
+      "info": "Theme editor preview only. Live tags come from the 'tags' field on the event metaobject (list.single_line_text_field). Colors cycle automatically."
+    },
+    {
+      "type": "header",
+      "content": "Extra Hero Pills"
+    },
+    {
+      "type": "text",
+      "id": "extra_pills",
+      "label": "Extra hero pills",
+      "placeholder": "3-Day Event, Free Admission, Kids Welcome",
+      "info": "Connect to the 'extra_hero_pill' metaobject field via Dynamic Sources, or type comma-separated values directly."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "🎨 Hero Banner",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "about",
+      "name": "📝 About This Event",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "event_details",
+      "name": "📋 Event Details",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "location",
+      "name": "📍 Location & Map",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "find_us",
+      "name": "🦝 Come Find Us",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "cta_heading",
+          "label": "Heading",
+          "default": "Come Find Us!"
+        },
+        {
+          "type": "text",
+          "id": "cta_subheading",
+          "label": "Subheading",
+          "default": "Register through the official event page"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button label",
+          "default": "Register for This Event →"
+        },
+        {
+          "type": "text",
+          "id": "btn_note",
+          "label": "Note below button",
+          "default": "Opens the official event organizer's page"
+        }
+      ]
+    },
+    {
+      "type": "calendar",
+      "name": "📅 Add to Calendar",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "ics_url",
+          "label": "ICS file URL",
+          "info": "Upload a .ics file to Shopify Files and paste the URL here. Powers the Apple Calendar and Outlook links. Google Calendar is auto-generated from event dates."
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "name": "🔗 Share This Event",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "sidebar_note",
+      "name": "📣 Sidebar Note Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "note_heading",
+          "label": "Card heading",
+          "default": "Find Our Booth"
+        },
+        {
+          "type": "richtext",
+          "id": "note_body",
+          "label": "Card body",
+          "default": "<p>Look for the Tuttle Twins banner in the main exhibit hall. We'll have exclusive show discounts and giveaways!</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Event Detail",
+      "blocks": [
+        { "type": "hero" },
+        { "type": "about" },
+        { "type": "event_details" },
+        { "type": "location" },
+        { "type": "find_us" },
+        { "type": "calendar" },
+        { "type": "share" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,305 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_V8PjVX": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_hexBP6": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Ignite your teen's sense of adventure with our exciting collection of adventure books. Our books thrill and engage while inspiring valuable life lessons and important discussions — perfect for sparking curiosity and independent thinking.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_hexBP6"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_image_block_e_E3rfyp": {
+      "type": "sskymo-text-image-block-e",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_e_BJtiY3": {
+      "type": "sskymo-product-column-e",
+      "settings": {}
+    },
+    "sskymo_text_column_d_TjbFDQ": {
+      "type": "sskymo-text-column-d",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_HpM8CL": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_XkwAhY": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "the-tuttle-twins-choose-your-consequence-combo-pack",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well-designed education supplement for your family to learn the principles of freedom and true history, you are in the right place.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "max_width": 58,
+            "button_label": "Buy The Combo Set For 13% Off!",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": false,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Actionable Insights for Your Teens</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_XkwAhY"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-5",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_banner_XFeafX": {
+      "type": "sskymo-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "color_scheme": "",
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_text_block_e_8L8XjF": {
+      "type": "sskymo-text-block-e",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_slide_m7mbmQ": {
+      "type": "sskymo-image-slide",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_ynecPE": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_X8EHHj": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_hCC4mW": {
+          "type": "caption",
+          "settings": {
+            "caption": "Adventure Books for Teens That Inspire and Excite",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_UxqxaU": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Dive into our collection of adventure books for teens, where thrilling plots meet meaningful lessons. Each story is designed to capture your teen’s imagination while teaching them valuable lessons about responsibility, freedom, honesty, and personal growth.</p><p>Books like our <a href=\"https://tuttletwins.com/products/the-tuttle-twins-guide-to-inspiring-entrepreneurs\"><span style=\"text-decoration:underline\">Inspiring Entrepreneurs</span></a> instill the confidence your teen needs to think critically and make informed decisions. We believe that learning should be exciting, and our adventure books mix fun and education.</p><h2>Benefits of Adventure Books for Teens</h2><p>Our adventure books for teens do more than entertain. Here’s how they help your child grow:</p><h3>Real-World Lessons through Fiction</h3><p>Our adventure books for teens teach practical, real-world lessons, like entrepreneurship, personal responsibility, and understanding the principles of freedom. Your teen will enjoy thrilling tales while absorbing concepts that help them navigate the real world. For example, <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-food-truck-fiasco\"><span style=\"text-decoration:underline\">The Tuttle Twins and the Food Truck Fiasco</span></a> introduces important lessons about business, personal responsibility, and creativity, making complex topics easy to understand.</p><h3>Encourages Critical Thinking</h3><p>Each of our adventure books is designed to make teens think critically. As they follow the stories, your teen will encounter challenges that require problem-solving, analysis, and decision-making. These skills are important for their development as independent thinkers. Our <a href=\"https://www.tuttletwins.com/pages/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a> help young readers question the world around them, encouraging curiosity and an open mind.</p><h3>Builds Character and Integrity</h3><p>Through action-packed stories, your teen will encounter characters who demonstrate integrity, courage, honesty, and perseverance. Our books encourage teens to explore these virtues and how they apply to real-world situations. Books like <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-guide-to-beware-your-bias\"><span style=\"text-decoration:underline\">Beware Your Bias</span></a> show how integrity plays a vital role in overcoming obstacles. The lessons in our books help teens build strong character, preparing them for life's challenges. </p><h3>Exciting Stories that Keep Them Hooked</h3><p>We know that getting teens to read can sometimes be a challenge, but with our adventure books, that’s not an issue. Our thrilling plots and relatable characters keep your teen engaged from the first page to the last. Our books make reading a fun and captivating experience, helping your teens develop a love for books that lasts.</p><h3>Family-Focused Reading</h3><p>Reading our adventure books together provides an excellent opportunity for family bonding. As your teen explores new ideas and adventures, you can engage in meaningful discussions together. Our stories are packed with thought-provoking ideas, perfect for sparking conversations that strengthen family relationships.</p><h4>Frequently Asked Questions</h4><h5>What Age Group Are Our Adventure Books Best Suited For?</h5><p>Our adventure books for teens are designed for readers aged 13+. Our books strike the perfect balance between age-appropriate content and engaging, thought-provoking themes. But our books aren’t only for your teen; they’re for your whole family to enjoy and engage with.</p><h5>Are Our Books Suitable for Independent Reading?</h5><p>Yes! Our adventure books are perfect for independent reading. With clear, compelling narratives and relatable characters, your teen can enjoy them solo, but they also make great family read-alouds.</p><h5>Do Our Books Align With Educational Topics?</h5><p>Absolutely. Our adventure books touch on important themes like <a href=\"https://tuttletwins.com/collections/american-history-for-kids\"><span style=\"text-decoration:underline\">American history</span></a>, <a href=\"https://www.tuttletwins.com/collections/economics-for-kids\"><span style=\"text-decoration:underline\">economics</span></a>, and personal responsibility. These topics complement what your teens are learning in school and help them apply their knowledge in the real world.</p><h5>Can I Read These Books With My Teen?</h5><p>Of course! Each book encourages open discussion, and you can ask your teen thought-provoking questions. Reading together gives you the opportunity to bond and talk about important topics with your teen.</p><h2>Looking for Something Else?</h2><p>Help your teen grow into a confident, informed citizen by getting them engaged with various topics and formats, including<a href=\"https://tuttletwins.com/collections/cartoon\"> <span style=\"text-decoration:underline\">graphic novels</span></a> and<a href=\"https://tuttletwins.com/collections/choose-your-consequence\"> <span style=\"text-decoration:underline\">choose your consequence</span></a> books. Explore the Tuttle Twins<a href=\"https://tuttletwins.com/pages/academy\"> <span style=\"text-decoration:underline\">Academy</span></a> and turn curiosity into lifelong learning.<br/><br/></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_hCC4mW",
+        "text_UxqxaU"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ssky_text_block_V8PjVX",
+    "product-grid",
+    "sskymo_text_image_block_e_E3rfyp",
+    "sskymo_product_column_e_BJtiY3",
+    "sskymo_text_column_d_TjbFDQ",
+    "ssky_product_order_block_HpM8CL",
+    "sskymo_image_banner_XFeafX",
+    "sskymo_text_block_e_8L8XjF",
+    "sskymo_image_slide_m7mbmQ",
+    "sskymo_text_image_block_b_ynecPE",
+    "ssky_text_block_X8EHHj"
+  ]
+}

@@ -1,0 +1,101 @@
+{%- style -%}
+  .ssky-text-block__image-{{block.id}} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }  
+  @media screen and (min-width: 750px) {
+    .ssky-text-block__image-{{block.id}} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-text-block__image-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+<div class="ssky-text-block__image ssky-text-block__image-{{block.id}}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>  
+  <div class="ssky-text-block__image--container">
+    {%- if block.settings.image != blank -%}
+      {%- if block.settings.image_mobile != blank -%}        
+        {%- assign class = 'ssky-text-block__image--desktop' -%}
+      {%- endif -%}
+      {%- assign widths = '1500, 1780, 2000, 3000, 3840' -%}
+      {% if block.settings.lazy %}
+        {%- assign loading = 'lazy' -%}
+      {% else %}
+        {%- assign loading = 'eager' -%}
+      {% endif %}
+      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'full_width' -%}{%- endcapture -%}
+      {{
+        block.settings.image
+        | image_url: width: 3840
+        | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto', class: class
+      }}
+      {%- if block.settings.image_mobile != blank -%}  
+        {%- assign widths = '360, 535, 750, 1070' -%}
+      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+      {{
+        block.settings.image_mobile
+        | image_url: width: 1070
+        | image_tag: sizes: sizes, widths: widths, loading: loading, class: 'ssky-text-block__image--mobile'
+      }}
+      {%- endif -%}
+    {%- else -%}
+      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.ssky_text_block.blocks.image.settings.image_desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "t:sections.ssky_text_block.blocks.image.settings.image_mobile"
+      },
+      {
+        "type": "checkbox",
+        "id": "lazy",
+        "label": "Lazyload?",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 20
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Image" }
+    ]
+  }
+{% endschema %}

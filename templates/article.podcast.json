@@ -1,0 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rcl_blog_header_Uq6YQU": {
+      "type": "rcl-blog-header",
+      "blocks": {
+        "breadcrumbs_cRPGXA": {
+          "type": "breadcrumbs",
+          "disabled": true,
+          "settings": {
+            "text_style": "small-bold",
+            "color_class": "primary"
+          }
+        },
+        "heading_p7rAbE": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ article.title }}",
+            "heading_size": "h0",
+            "heading_weight": "bold"
+          }
+        },
+        "text_6j9pbX": {
+          "type": "text",
+          "settings": {
+            "text": "<h5><strong>Click below to Subscribe</strong></h5>",
+            "text_large": true
+          }
+        },
+        "button_9WEExa": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link": "https://podcasts.apple.com/us/podcast/the-way-the-world-works-a-tuttle-twins-podcast-for-families/id1520102889",
+            "use_button_image": true,
+            "button_image": "shopify://shop_images/Group-101938.png",
+            "button_label_b": "",
+            "button_link_b": "https://open.spotify.com/show/6fHOiVhFl2seVssecCYglm",
+            "use_button_image_b": true,
+            "button_image_b": "shopify://shop_images/Group-101940.png",
+            "button_label_c": "",
+            "button_link_c": "https://www.stitcher.com/podcast/libertas-institute/the-way-the-world-works-a-tuttle-twins-podcast-for-families",
+            "use_button_image_c": true,
+            "button_image_c": "shopify://shop_images/Group-101936.png",
+            "button_style_secondary": true
+          }
+        },
+        "button_MVaDKp": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link": "https://tunein.com/podcasts/Education-Podcasts/The-Way-the-World-Works-A-Tuttle-Twins-Podcast-fo-p1337409/",
+            "use_button_image": true,
+            "button_image": "shopify://shop_images/Group-101935.png",
+            "button_label_b": "",
+            "button_link_b": "https://podcasts.google.com/feed/aHR0cHM6Ly90dXR0bGV0d2lucy5jb20vZmVlZC9wb2RjYXN0Lw",
+            "use_button_image_b": true,
+            "button_image_b": "shopify://shop_images/Group-101937.png",
+            "button_label_c": "",
+            "button_link_c": "",
+            "use_button_image_c": false,
+            "button_style_secondary": true
+          }
+        },
+        "image_mhqKwa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The_Way_the_World_Works_3.png",
+            "image_fit": true
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs_cRPGXA",
+        "heading_p7rAbE",
+        "text_6j9pbX",
+        "button_9WEExa",
+        "button_MVaDKp",
+        "image_mhqKwa"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 100,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "podcast_NFNr77": {
+          "type": "podcast",
+          "settings": {}
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "transcript_Q96wdb": {
+          "type": "transcript",
+          "settings": {
+            "label": "Read Transcript",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "podcast_NFNr77",
+        "content",
+        "transcript_Q96wdb"
+      ],
+      "settings": {}
+    },
+    "z_featured_blog_xDnb9d": {
+      "type": "z-featured-blog",
+      "settings": {
+        "heading": "You May Also Be Interested In These Podcasts",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "blog": "podcast",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": false,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "excerpt_limit": 100,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rcl_blog_header_Uq6YQU",
+    "main",
+    "z_featured_blog_xDnb9d"
+  ]
+}

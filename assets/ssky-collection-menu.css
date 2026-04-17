@@ -1,0 +1,86 @@
+/* -----  ssky edits starts here ------ */
+.collection-menu-ssky__blocks {
+  width: 100%;
+}
+.collection-menu-ssky__block {
+  width: 100%;
+}
+.collection-menu-ssky__block-head {
+  display: none;
+}
+.collection-menu-ssky__block:hover {
+  color: rgb(var(--primary-orange));
+}
+.collection-menu-ssky__block-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+@media screen and (max-width: 749px) {
+  .collection-menu-ssky .page-width {
+    padding: 0 2.4rem;
+  }
+  .collection-menu-ssky__blocks {
+    height: auto;
+    max-height: 54px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgb(var(--primary-orange));
+    transition: all 0.5s linear;
+  }
+  .collection-menu-ssky__block-head {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    border-bottom: 1px solid currentColor;
+    color: rgb(var(--primary-orange));
+    cursor: pointer;
+  }
+  .collection-menu-ssky__block-item {
+    justify-content: flex-start;
+    padding: 16px 20px;
+    text-align: left;
+  }
+  .collection-menu-ssky__block-head .svg-wrapper {
+    position: absolute;
+    right: 13px;
+    transition: all 0.3s ease;
+  }
+  /* active state */
+  .collection-menu-ssky__blocks.active {
+    max-height: 900px;
+  }
+  .collection-menu-ssky__blocks.active
+    .collection-menu-ssky__block-head
+    .svg-wrapper {
+    rotate: 90deg;
+  }
+}
+@media screen and (min-width: 750px) {
+  .collection-menu-ssky__blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 10px;
+  }
+  .collection-menu-ssky__block {
+    flex: 0 0 calc(25% - 8px);
+    border-radius: 10px;
+    border: 1px solid currentColor;
+  }
+}
+@media screen and (min-width: 990px) {
+  .collection-menu-ssky__block {
+    flex: 0 0 calc(20% - 8px);
+  }
+}
+/* -----  ssky edits completes here ------ */

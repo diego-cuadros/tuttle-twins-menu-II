@@ -1,0 +1,590 @@
+{%- style -%}
+  .ssky-courses-{{ section.id }} .ssky-courses {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+  }
+  .ssky-courses-{{ section.id }} .ssky-courses-item {flex-wrap: nowrap!important}
+  @media screen and (min-width: 750px) {
+    .ssky-courses-{{ section.id }} .ssky-courses {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-courses-{{ section.id }} .ssky-courses {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-courses-{{ section.id }} .ssky-courses {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-courses-{{ section.id }} .ssky-courses {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-courses-{{ section.id }} .ssky-courses {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-courses-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+<div class="ssky-courses-{{ section.id }}">
+  <div class="ssky-courses gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-courses__blocks">
+        <div class="ssky-courses__block-left">
+          <div class="ssky-courses__block-header" >
+            <{{ section.settings.heading_tag}} class="ssky-courses__heading {{ section.settings.heading_size }} weight-{{ section.settings.heading_weight }}" {{ section.shopify_attributes }} >
+              {{ section.settings.heading }}
+            </{{section.settings.heading_tag}}>
+            <div class="ssky-courses__text rte text-{{ section.settings.text_size }} weight-{{ section.settings.text_weight }}" {{ section.shopify_attributes }} >
+              {{ section.settings.text }}
+            </div>
+          </div>
+          {%- for block in section.blocks -%}
+            <div class="ssky-courses-itwms-section">
+              <div class="ssky-courses-inner-section {{ block.settings.image_alignment }}-alignment" >
+                <div class="ssky-courses-content-section" >
+                  {% if block.settings.icon != blank %}
+                    <div class="ssky-courses-icon-section" >
+                      <img class="ssky-courses-icon" src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.icon.alt }}" width="100%" height="auto" style="max-width: 65.25px"  />
+                    </div>
+                  {% endif %}
+                  <{{block.settings.heading_tag}} class="ssky-courses__heading {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}" {{ block.shopify_attributes }} >
+                    {{ block.settings.title }}
+                  </{{block.settings.heading_tag}}>
+                  <div class="ssky-courses__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}" {{ block.shopify_attributes }} >
+                    {{ block.settings.description }}
+                  </div>
+                  {% if block.settings.listicle_text_1 != blank or block.settings.listicle_text_2 != blank or block.settings.listicle_text_3 != blank or block.settings.listicle_text_4 != blank %}<div class="ssky-courses-listicle-section" >
+                    <ul class="ssky-courses-listicle-items {{ block.settings.listicle_marker }}">
+                      {% if block.settings.listicle_text_1 != blank %}<li class="ssky-courses-item {{ block.settings.listicle_marker }}" {% if block.settings.listicle_marker == 'dot' %}style="color:{{block.settings.listicle_icon_color }};"{% endif %} >
+                      {% if block.settings.listicle_marker == 'play-button' %}
+                        <svg aria-hidden="true" width="22px" class="e-font-icon-svg e-far-play-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="{{ block.settings.listicle_icon_color }}" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>
+                      {% elsif block.settings.listicle_marker == 'clock' %}                        
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="{{ block.settings.listicle_icon_color }}" xmlns="http://www.w3.org/2000/svg"><path d="M14.1617 5.23342L15.5 3.91342L16.7834 5.19675L15.4634 6.53508C16.3556 7.65953 16.9178 8.92453 17.15 10.3301C17.3822 11.7112 17.2722 13.0556 16.82 14.3634C16.3556 15.7201 15.5856 16.8781 14.51 17.8376C13.4345 18.797 12.2 19.4295 10.8067 19.7351C9.45003 20.0406 8.10558 20.004 6.77336 19.6251C5.39225 19.234 4.19447 18.5312 3.18003 17.5168C2.16558 16.5023 1.4628 15.3045 1.07169 13.9234C0.692804 12.5912 0.656138 11.2468 0.961693 9.89008C1.26725 8.49675 1.89975 7.26231 2.85919 6.18675C3.81864 5.1112 4.97669 4.3412 6.33336 3.87675C7.64114 3.42453 8.98558 3.31453 10.3667 3.54675C11.7722 3.77897 13.0372 4.3412 14.1617 5.23342ZM9.01003 18.1034C10.1711 18.1034 11.2528 17.8101 12.255 17.2234C13.2206 16.6612 13.9845 15.8973 14.5467 14.9318C15.1334 13.9295 15.4267 12.8479 15.4267 11.6868C15.4267 10.5256 15.1334 9.44397 14.5467 8.44175C13.9845 7.4762 13.2206 6.71231 12.255 6.15008C11.2528 5.56342 10.1711 5.27009 9.01003 5.27009C7.84892 5.27009 6.76725 5.56342 5.76503 6.15008C4.79947 6.71231 4.03558 7.4762 3.47336 8.44175C2.88669 9.44397 2.59336 10.5256 2.59336 11.6868C2.59336 12.8479 2.88669 13.9295 3.47336 14.9318C4.03558 15.8973 4.79947 16.6612 5.76503 17.2234C6.76725 17.8101 7.84892 18.1034 9.01003 18.1034ZM8.09336 7.10342H9.92669V12.6034H8.09336V7.10342ZM5.34336 0.68675H12.6767V2.52008H5.34336V0.68675Z" fill="{{ block.settings.listicle_icon_color }}"/></svg>
+                      {% endif %}
+                      {{ block.settings.listicle_text_1 }}</li>{% endif %}
+                      {% if block.settings.listicle_text_2 != blank %}<li class="ssky-courses-item {{ block.settings.listicle_marker }}" {% if block.settings.listicle_marker == 'dot' %}style="color:{{block.settings.listicle_icon_color }};"{% endif %} >
+                      {% if block.settings.listicle_marker == 'play-button' %}
+                        <svg aria-hidden="true" width="22px" class="e-font-icon-svg e-far-play-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="{{ block.settings.listicle_icon_color }}" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>
+                      {% elsif block.settings.listicle_marker == 'clock' %}                        
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="{{ block.settings.listicle_icon_color }}" xmlns="http://www.w3.org/2000/svg"><path d="M14.1617 5.23342L15.5 3.91342L16.7834 5.19675L15.4634 6.53508C16.3556 7.65953 16.9178 8.92453 17.15 10.3301C17.3822 11.7112 17.2722 13.0556 16.82 14.3634C16.3556 15.7201 15.5856 16.8781 14.51 17.8376C13.4345 18.797 12.2 19.4295 10.8067 19.7351C9.45003 20.0406 8.10558 20.004 6.77336 19.6251C5.39225 19.234 4.19447 18.5312 3.18003 17.5168C2.16558 16.5023 1.4628 15.3045 1.07169 13.9234C0.692804 12.5912 0.656138 11.2468 0.961693 9.89008C1.26725 8.49675 1.89975 7.26231 2.85919 6.18675C3.81864 5.1112 4.97669 4.3412 6.33336 3.87675C7.64114 3.42453 8.98558 3.31453 10.3667 3.54675C11.7722 3.77897 13.0372 4.3412 14.1617 5.23342ZM9.01003 18.1034C10.1711 18.1034 11.2528 17.8101 12.255 17.2234C13.2206 16.6612 13.9845 15.8973 14.5467 14.9318C15.1334 13.9295 15.4267 12.8479 15.4267 11.6868C15.4267 10.5256 15.1334 9.44397 14.5467 8.44175C13.9845 7.4762 13.2206 6.71231 12.255 6.15008C11.2528 5.56342 10.1711 5.27009 9.01003 5.27009C7.84892 5.27009 6.76725 5.56342 5.76503 6.15008C4.79947 6.71231 4.03558 7.4762 3.47336 8.44175C2.88669 9.44397 2.59336 10.5256 2.59336 11.6868C2.59336 12.8479 2.88669 13.9295 3.47336 14.9318C4.03558 15.8973 4.79947 16.6612 5.76503 17.2234C6.76725 17.8101 7.84892 18.1034 9.01003 18.1034ZM8.09336 7.10342H9.92669V12.6034H8.09336V7.10342ZM5.34336 0.68675H12.6767V2.52008H5.34336V0.68675Z" fill="{{ block.settings.listicle_icon_color }}"/></svg>
+                      {% endif %}
+                      {{ block.settings.listicle_text_2 }}</li>{% endif %}
+                      {% if block.settings.listicle_text_3 != blank %}<li class="ssky-courses-item {{ block.settings.listicle_marker }}" {% if block.settings.listicle_marker == 'dot' %}style="color:{{block.settings.listicle_icon_color }};"{% endif %} >
+                        {% if block.settings.listicle_marker == 'play-button' %}
+                        <svg aria-hidden="true" width="22px" class="e-font-icon-svg e-far-play-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="{{ block.settings.listicle_icon_color }}" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>
+                      {% elsif block.settings.listicle_marker == 'clock' %}                        
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="{{ block.settings.listicle_icon_color }}" xmlns="http://www.w3.org/2000/svg"><path d="M14.1617 5.23342L15.5 3.91342L16.7834 5.19675L15.4634 6.53508C16.3556 7.65953 16.9178 8.92453 17.15 10.3301C17.3822 11.7112 17.2722 13.0556 16.82 14.3634C16.3556 15.7201 15.5856 16.8781 14.51 17.8376C13.4345 18.797 12.2 19.4295 10.8067 19.7351C9.45003 20.0406 8.10558 20.004 6.77336 19.6251C5.39225 19.234 4.19447 18.5312 3.18003 17.5168C2.16558 16.5023 1.4628 15.3045 1.07169 13.9234C0.692804 12.5912 0.656138 11.2468 0.961693 9.89008C1.26725 8.49675 1.89975 7.26231 2.85919 6.18675C3.81864 5.1112 4.97669 4.3412 6.33336 3.87675C7.64114 3.42453 8.98558 3.31453 10.3667 3.54675C11.7722 3.77897 13.0372 4.3412 14.1617 5.23342ZM9.01003 18.1034C10.1711 18.1034 11.2528 17.8101 12.255 17.2234C13.2206 16.6612 13.9845 15.8973 14.5467 14.9318C15.1334 13.9295 15.4267 12.8479 15.4267 11.6868C15.4267 10.5256 15.1334 9.44397 14.5467 8.44175C13.9845 7.4762 13.2206 6.71231 12.255 6.15008C11.2528 5.56342 10.1711 5.27009 9.01003 5.27009C7.84892 5.27009 6.76725 5.56342 5.76503 6.15008C4.79947 6.71231 4.03558 7.4762 3.47336 8.44175C2.88669 9.44397 2.59336 10.5256 2.59336 11.6868C2.59336 12.8479 2.88669 13.9295 3.47336 14.9318C4.03558 15.8973 4.79947 16.6612 5.76503 17.2234C6.76725 17.8101 7.84892 18.1034 9.01003 18.1034ZM8.09336 7.10342H9.92669V12.6034H8.09336V7.10342ZM5.34336 0.68675H12.6767V2.52008H5.34336V0.68675Z" fill="{{ block.settings.listicle_icon_color }}"/></svg>
+                      {% endif %}
+                      {{ block.settings.listicle_text_3 }}</li>{% endif %}
+                      {% if block.settings.listicle_text_4 != blank %}<li class="ssky-courses-item {{ block.settings.listicle_marker }}" {% if block.settings.listicle_marker == 'dot' %}style="color:{{block.settings.listicle_icon_color }};"{% endif %} >
+                      {% if block.settings.listicle_marker == 'play-button' %}
+                        <svg aria-hidden="true" width="22px" class="e-font-icon-svg e-far-play-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="{{ block.settings.listicle_icon_color }}" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>
+                      {% elsif block.settings.listicle_marker == 'clock' %}                        
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="{{ block.settings.listicle_icon_color }}" xmlns="http://www.w3.org/2000/svg"><path d="M14.1617 5.23342L15.5 3.91342L16.7834 5.19675L15.4634 6.53508C16.3556 7.65953 16.9178 8.92453 17.15 10.3301C17.3822 11.7112 17.2722 13.0556 16.82 14.3634C16.3556 15.7201 15.5856 16.8781 14.51 17.8376C13.4345 18.797 12.2 19.4295 10.8067 19.7351C9.45003 20.0406 8.10558 20.004 6.77336 19.6251C5.39225 19.234 4.19447 18.5312 3.18003 17.5168C2.16558 16.5023 1.4628 15.3045 1.07169 13.9234C0.692804 12.5912 0.656138 11.2468 0.961693 9.89008C1.26725 8.49675 1.89975 7.26231 2.85919 6.18675C3.81864 5.1112 4.97669 4.3412 6.33336 3.87675C7.64114 3.42453 8.98558 3.31453 10.3667 3.54675C11.7722 3.77897 13.0372 4.3412 14.1617 5.23342ZM9.01003 18.1034C10.1711 18.1034 11.2528 17.8101 12.255 17.2234C13.2206 16.6612 13.9845 15.8973 14.5467 14.9318C15.1334 13.9295 15.4267 12.8479 15.4267 11.6868C15.4267 10.5256 15.1334 9.44397 14.5467 8.44175C13.9845 7.4762 13.2206 6.71231 12.255 6.15008C11.2528 5.56342 10.1711 5.27009 9.01003 5.27009C7.84892 5.27009 6.76725 5.56342 5.76503 6.15008C4.79947 6.71231 4.03558 7.4762 3.47336 8.44175C2.88669 9.44397 2.59336 10.5256 2.59336 11.6868C2.59336 12.8479 2.88669 13.9295 3.47336 14.9318C4.03558 15.8973 4.79947 16.6612 5.76503 17.2234C6.76725 17.8101 7.84892 18.1034 9.01003 18.1034ZM8.09336 7.10342H9.92669V12.6034H8.09336V7.10342ZM5.34336 0.68675H12.6767V2.52008H5.34336V0.68675Z" fill="{{ block.settings.listicle_icon_color }}"/></svg>
+                      {% endif %}
+                      {{ block.settings.listicle_text_4 }}</li>{% endif %}
+                    </ul>
+                  </div>{% endif %}
+                </div>
+                {% if block.settings.image != blank %}
+                  <div class="ssky-courses-img-secftion" >
+                    <a href="{% if block.settings.image_url != blank %}{{ block.settings.image_url }}{% else %}javascript:void(0);{% endif %}" ><img src="{{ block.settings.image | img_url: 'master' }}" alt="" widht="100%" height="auto" class="ssky-courses-main-img" /></a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TT Courses",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+      "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_size.options__0.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "options": [
+        {
+          "value": "medium",
+          "label": "t:sections.all.heading_weight.options__1.label"
+        },
+        {
+          "value": "semibold",
+          "label": "t:sections.all.heading_weight.options__2.label"
+        },
+        {
+          "value": "bold",
+          "label": "t:sections.all.heading_weight.options__3.label"
+        }
+      ],
+      "default": "semibold",
+      "label": "t:sections.all.heading_weight.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading tag"
+    },
+    {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "courses",
+      "name": "Courses",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image",
+          "info": "Please Select Image"
+        },
+        {
+          "type": "url",
+          "label": "Image URL",
+          "id": "image_url",
+          "info": "Please Enter the Image URL"
+        },
+        {
+          "type": "select",
+          "label": "Image Alignment",
+          "id": "image_alignment",
+          "default": "right",
+          "info": "Please Select Image Alignment",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon",
+          "info": "Please Select Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "label": "Title",
+          "id": "title",
+          "default": "Civics",
+          "info": "Please enter text for title"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "t:sections.all.heading_size.options__0.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            {
+              "value": "medium",
+              "label": "t:sections.all.heading_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.heading_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.heading_weight.options__3.label"
+            }
+          ],
+          "default": "semibold",
+          "label": "t:sections.all.heading_weight.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "default": "h1",
+          "label": "Heading tag"
+        },
+        {
+          "type": "richtext",
+          "label": "Description",
+          "id": "description",
+          "default": "<p>Not your typical Civics 101. These courses explain</p><p>how the government was supposed to work...</p><p>and provide many examples of how it has gone</p><p>awry.</p>",
+          "info": "Please enter content"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        },
+        {
+          "type": "color",
+          "label": "Listicle Icon Color",
+          "id": "listicle_icon_color",
+          "info": "Please Select color"
+        },
+        {
+          "type": "select",
+          "label": "Listicle Marker",
+          "id": "listicle_marker",
+          "options": [
+            {
+              "label": "Dot",
+              "value": "dot"
+            },
+            {
+              "label": "Play Button",
+              "value": "play-button"
+            },
+            {
+              "label": "Clock",
+              "value": "clock"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "label": "Listicle text 1",
+          "id": "listicle_text_1",
+          "default": "<p><a href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">Bill of Rights Basics</a></p>",
+          "info": "Please enter listicle content"
+        },
+        {
+          "type": "richtext",
+          "label": "Listicle text 2",
+          "id": "listicle_text_2",
+          "default": "<p><a href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">Constitutional Competency: Understanding US</a></p><p><a href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">Law</a></p>",
+          "info": "Please enter listicle content"
+        },
+        {
+          "type": "richtext",
+          "label": "Listicle text 3",
+          "id": "listicle_text_3",
+          "default": "<p><a href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">The Ten Worst SCOTUS Cases</a></p>",
+          "info": "Please enter listicle content"
+        },
+        {
+          "type": "richtext",
+          "label": "Listicle text 4",
+          "id": "listicle_text_4",
+          "default": "<p><a href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">How the System REALLY Works</a></p>",
+          "info": "Please enter listicle content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Courses",
+      "blocks": [
+        {
+          "type": "courses"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

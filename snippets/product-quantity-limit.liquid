@@ -1,0 +1,159 @@
+{% comment %}
+  Product Quantity Limit Snippet
+  Include this in your product templates to limit specific products
+Commenting out to save function details if needed in future - Nikki 9.4.25
+
+{% assign limited_products = "the-tuttle-toddlers-combo-set-1,the-tuttle-toddlers-combo-set,the-tuttle-toddlers-123-combo-set" | split: "," %}
+{% if limited_products contains product.handle %}
+  {% assign quantity_limit = 1 %}
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      function setupQuantityLimits() {
+        // Get all quantity inputs on this page
+        const quantityInputs = document.querySelectorAll('input[name="quantity"], .quantity__input');
+        
+        quantityInputs.forEach(function(input) {
+          // Set the maximum
+          input.setAttribute('max', {{ quantity_limit }});
+          input.setAttribute('min', '1');
+          
+          // Ensure current value doesn't exceed limit
+          if (parseInt(input.value) > {{ quantity_limit }}) {
+            input.value = {{ quantity_limit }};
+          }
+          
+          // Add event listener to enforce limit on change
+          input.addEventListener('change', function() {
+            if (parseInt(this.value) > {{ quantity_limit }}) {
+              this.value = {{ quantity_limit }};
+            }
+          });
+                    
+          // Find quantity adjustment buttons
+          const incrementButtons = document.querySelectorAll('.plus, [data-action="increase-quantity"], .quantity__button[name="plus"]');
+          incrementButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+              // Get the associated input
+              const nearestInput = button.closest('.quantity, .quantity-wrapper').querySelector('input[name="quantity"], .quantity__input');
+              
+              // Check if clicking the button would exceed the limit
+              if (parseInt(nearestInput.value) >= {{ quantity_limit }}) {
+                e.preventDefault();
+                e.stopPropagation();
+                nearestInput.value = {{ quantity_limit }};
+                
+                // Show alert when trying to add more than the limit
+                if (!button.hasAttribute('data-limit-warning-shown')) {
+                  alert("This product is limited to {{ quantity_limit }} per order.");
+                  button.setAttribute('data-limit-warning-shown', 'true');
+                  
+                  // Reset the attribute after a short delay so it can show again later
+                  setTimeout(() => {
+                    button.removeAttribute('data-limit-warning-shown');
+                  }, 5000);
+                }
+              }
+            });
+          });
+        });
+      }
+      
+      // Run initially
+      setupQuantityLimits();
+      
+      // Set up a MutationObserver to handle dynamically loaded elements
+      const observer = new MutationObserver(function(mutations) {
+        setupQuantityLimits();
+      });
+      
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
+  
+ 
+{% endif %}
+ {% endcomment %}
+
+ {%- comment -%} Global quantity limit of 3 for all products {%- endcomment -%}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const QUANTITY_LIMIT = 3;
+
+    function setupQuantityLimits() {
+      // Get all quantity inputs on this page
+      const quantityInputs = document.querySelectorAll('input[name="quantity"], .quantity__input');
+
+      quantityInputs.forEach(function(input) {
+        // Skip if already initialized
+        if (input.hasAttribute('data-quantity-limit-initialized')) return;
+        input.setAttribute('data-quantity-limit-initialized', 'true');
+
+        // Add event listener to enforce limit on input/change
+        function validateQuantity() {
+          const value = parseInt(this.value);
+          if (value > QUANTITY_LIMIT) {
+            this.value = QUANTITY_LIMIT;
+            showQuantityWarning();
+          }
+        }
+
+        input.addEventListener('input', validateQuantity);
+        input.addEventListener('change', validateQuantity);
+      });
+
+      // Find quantity increment buttons
+      const incrementButtons = document.querySelectorAll('.quantity__button[name="plus"]');
+      incrementButtons.forEach(function(button) {
+        // Skip if already initialized
+        if (button.hasAttribute('data-quantity-limit-initialized')) return;
+        button.setAttribute('data-quantity-limit-initialized', 'true');
+
+        button.addEventListener('click', function(e) {
+          // Get the associated input
+          const quantityContainer = button.closest('.quantity, quantity-input, .quantity-wrapper');
+          const input = quantityContainer ? quantityContainer.querySelector('input[name="quantity"], .quantity__input') : null;
+
+          if (input) {
+            const currentValue = parseInt(input.value);
+            // Only show warning and prevent if trying to go ABOVE the limit
+            if (currentValue >= QUANTITY_LIMIT) {
+              e.preventDefault();
+              e.stopPropagation();
+              input.value = QUANTITY_LIMIT;
+              // Only show warning if they're trying to exceed the limit
+              if (currentValue > QUANTITY_LIMIT) {
+                showQuantityWarning();
+              }
+              return false;
+            }
+          }
+        });
+      });
+    }
+
+    function showQuantityWarning() {
+      // Check if warning is already showing
+      if (window.quantityWarningTimeout) {
+        clearTimeout(window.quantityWarningTimeout);
+      }
+
+      alert("You may not add more than 3 of this product to cart");
+
+      // Prevent rapid-fire alerts
+      window.quantityWarningTimeout = setTimeout(() => {
+        window.quantityWarningTimeout = null;
+      }, 2000);
+    }
+
+    // Run initially
+    setupQuantityLimits();
+
+    // Set up a MutationObserver to handle dynamically loaded elements
+    const observer = new MutationObserver(function(mutations) {
+      setupQuantityLimits();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>

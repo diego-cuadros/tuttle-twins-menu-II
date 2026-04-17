@@ -1,0 +1,320 @@
+{% if section.settings.enable_section %}
+  {% assign current_url = request.path %}
+  {% assign excluded_pages = '/cart,/checkout,/pages/hidden-offer,/pages/history,/pages/americas' | split: ',' %}
+
+  {% unless excluded_pages contains current_url %}
+    <style>
+      body.sticky-no-scroll {
+        overflow: hidden;
+      }
+
+      .sticky-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: {{ section.settings.overlay_color }};
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+        z-index: 998;
+      }
+
+      body.sticky-no-scroll .sticky-overlay {
+        display: block;
+      }
+
+      #md-sticky-offer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: {{ section.settings.bg_color }};
+        
+        border-top: 6px solid {{ section.settings.border_color }};
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        overflow: visible;
+      }
+
+      #md-sticky-offer.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .sticky-bar {
+        padding: 1rem 3rem;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+      }
+
+      .sticky-bar .sticky-right {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+
+      .sticky-bar .sticky-center h4,
+      .sticky-center h4 {
+        margin: 0;
+        font-size: {{ section.settings.font_size_heading | append: 'px' }};
+        font-weight: 600;
+        color: {{ section.settings.text_color_heading }};
+      }
+
+      .sticky-bar .sticky-center .collapsed-subtext,
+      .sticky-center p {
+        font-size: {{ section.settings.font_size_large_text | append: 'px' }};
+        font-weight: 500;
+        color: {{ section.settings.text_color_large_text }};
+        margin: 0.25rem 0;
+      }
+
+      .sticky-center .expanded-subtext {
+        font-size: {{ section.settings.font_size_subtext | append: 'px' }};
+        font-weight: 400;
+        color: {{ section.settings.text_color_subtext }};
+        margin-bottom: 2rem;
+      }
+
+      .sticky-bar .sticky-bar-button {
+        display: none;
+      }
+
+      .sticky-details {
+        display: none;
+        background-color: {{ section.settings.bg_color }};
+        color: {{ section.settings.text_color_heading }};
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .sticky-expanded .sticky-details {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem 3rem;
+      }
+
+      .sticky-left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+        overflow: visible;
+        margin-top: -60px;
+        text-align: right;
+      }
+
+      .sticky-left img {
+        display: block;
+        width: 244px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .sticky-center {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem 1rem;
+      }
+
+      .sticky-center a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: {{ section.settings.button_bg }};
+        color: {{ section.settings.button_text_color }};
+        text-decoration: none;
+        border-radius: 40px;
+        border: 2px solid transparent;
+        font-weight: 600;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .sticky-center a:hover {
+        background-color: {{ section.settings.button_hover_bg }};
+        border-color: {{ section.settings.button_hover_border_color }};
+        color: {{ section.settings.button_hover_text_color }}
+      }
+
+      .sticky-right {
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .toggle-arrow {
+        font-size: 1.75rem;
+        color: {{ section.settings.arrow_color }};
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .sticky-expanded .toggle-arrow {
+        transform: rotate(180deg);
+      }
+
+      .sticky-expanded .sticky-bar {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .sticky-expanded .sticky-details {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .sticky-bar .sticky-center h4,
+.sticky-center h4 {
+  font-size: {{ section.settings.font_size_heading_mobile | append: 'px' }};
+}
+
+.sticky-bar .sticky-center .collapsed-subtext,
+.sticky-center p {
+  font-size: {{ section.settings.font_size_large_text_mobile | append: 'px' }};
+}
+
+.sticky-center .expanded-subtext {
+  font-size: {{ section.settings.font_size_subtext_mobile | append: 'px' }};
+}
+
+
+        .sticky-left,
+        .sticky-right {
+          display: none;
+        }
+
+        .sticky-center {
+          flex: none;
+          width: 100%;
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sticky = document.getElementById('md-sticky-offer');
+        const collapsed = sticky.querySelector('.sticky-bar');
+        const expanded = sticky.querySelector('.sticky-details');
+        const arrow = sticky.querySelectorAll('.toggle-arrow');
+        const offset = 300;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'sticky-overlay';
+        document.body.appendChild(overlay);
+
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > offset) {
+            sticky.classList.add('show');
+          } else {
+            sticky.classList.remove('show');
+          }
+        });
+
+        function toggleSticky() {
+          sticky.classList.toggle('sticky-expanded');
+          document.body.classList.toggle('sticky-no-scroll');
+        }
+
+        collapsed.addEventListener('click', toggleSticky);
+        expanded.addEventListener('click', toggleSticky);
+
+        arrow.forEach(el => {
+          el.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleSticky();
+          });
+        });
+
+        overlay.addEventListener('click', toggleSticky);
+      });
+    </script>
+
+    <div id="md-sticky-offer">
+      <div class="sticky-bar">
+        <div class="sticky-center">
+          <{% if section.settings.heading_tag != blank %}{{ section.settings.heading_tag }}{% else %}h4{% endif %}>{{ section.settings.heading }}</{% if section.settings.heading_tag != blank %}{{ section.settings.heading_tag }}{% else %}h4{% endif %}>
+          {% if section.settings.collapsed_subtext != blank %}
+            <{% if section.settings.collapsed_subtext_tag != blank %}{{ section.settings.collapsed_subtext_tag }}{% else %}p{% endif %} class="collapsed-subtext">{{ section.settings.collapsed_subtext }}</{% if section.settings.collapsed_subtext_tag != blank %}{{ section.settings.collapsed_subtext_tag }}{% else %}p{% endif %}>
+          {% endif %}
+        </div>
+        <div class="sticky-right">
+          <div class="toggle-arrow">▾</div>
+        </div>
+      </div>
+      <div class="sticky-details">
+        <div class="sticky-left">
+          {% if section.settings.image %}
+            <img src="{{ section.settings.image | image_url }}" alt="Sticky Promo" loading="lazy">
+          {% endif %}
+        </div>
+        <div class="sticky-center">
+          <{% if section.settings.heading_tag != blank %}{{ section.settings.heading_tag }}{% else %}h4{% endif %}>{{ section.settings.heading }}</{% if section.settings.heading_tag != blank %}{{ section.settings.heading_tag }}{% else %}h4{% endif %}>
+          <{% if section.settings.collapsed_subtext_tag != blank %}{{ section.settings.collapsed_subtext_tag }}{% else %}p{% endif %}>{{ section.settings.collapsed_subtext }}</{% if section.settings.collapsed_subtext_tag != blank %}{{ section.settings.collapsed_subtext_tag }}{% else %}p{% endif %}>
+          {% if section.settings.expanded_subtext != blank %}
+            <{% if section.settings.expanded_subtext_tag != blank %}{{ section.settings.expanded_subtext_tag }}{% else %}p{% endif %} class="expanded-subtext">{{ section.settings.expanded_subtext }}</{% if section.settings.expanded_subtext_tag != blank %}{{ section.settings.expanded_subtext_tag }}{% else %}p{% endif %}>
+          {% endif %}
+          <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+        </div>
+        <div class="sticky-right">
+          <div class="toggle-arrow">▾</div>
+        </div>
+      </div>
+    </div>    
+{% endunless %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Expandable Sticky Offer",
+  "settings": [
+    { "type": "color", "id": "overlay_color", "label": "Overlay Background Color", "default": "#000000" },
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay Opacity (%)", "min": 0, "max": 100, "step": 5, "default": 40 },
+    { "type": "range", "id": "font_size_heading", "label": "Heading Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 20 },
+    { "type": "range", "id": "font_size_large_text", "label": "Large Text Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 18 },
+    { "type": "range", "id": "font_size_subtext", "label": "Subtext Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 16 },
+    { "type": "range", "id": "font_size_heading_mobile", "label": "Mobile Heading Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 18 },
+{ "type": "range", "id": "font_size_large_text_mobile", "label": "Mobile Large Text Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 16 },
+{ "type": "range", "id": "font_size_subtext_mobile", "label": "Mobile Subtext Font Size (px)", "min": 10, "max": 40, "step": 1, "default": 14 },
+
+    { "type": "checkbox", "id": "enable_section", "label": "Enable Sticky Offer", "default": true },
+    { "type": "text", "id": "heading", "label": "Sticky Heading", "default": "Limited Time Offer!" },
+    { "type": "text", "id": "collapsed_subtext", "label": "Large Text Under Heading", "default": "Don’t miss this exclusive deal!" },
+    { "type": "text", "id": "expanded_subtext", "label": "Expanded Subheading", "default": "Get 20% off plus a bonus gift when you order today." },
+    { "type": "text", "id": "button_link", "label": "Button Link", "default": "https://example.com" },
+    { "type": "text", "id": "button_text", "label": "Button Text", "default": "Claim Offer" },
+    { "type": "image_picker", "id": "image", "label": "Promo Image" },
+    { "type": "text", "id": "img_width", "label": "Image Width (px)", "default": "120" },
+    { "type": "text", "id": "img_height", "label": "Image Height (px)", "default": "120" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#fff9e6" },
+    { "type": "color", "id": "text_color_heading", "label": "Heading Text Color", "default": "#111111" },
+    { "type": "color", "id": "text_color_large_text", "label": "Large Text Color", "default": "#111111" },
+    { "type": "color", "id": "text_color_subtext", "label": "Subtext Color", "default": "#111111" },
+    { "type": "color", "id": "border_color", "label": "Top Border Color", "default": "#ffaa00" },
+    { "type": "color", "id": "arrow_color", "label": "Arrow Color", "default": "#111111" },
+    { "type": "color", "id": "button_bg", "label": "Button Background Color", "default": "#da5846" },
+    { "type": "color", "id": "button_hover_bg", "label": "Button Hover Background Color", "default": "#ffffff" },
+    { "type": "color", "id": "button_hover_border_color", "label": "Button Hover Border Color", "default": "#da5846" },
+    { "type": "color", "id": "button_hover_text_color", "label": "Button Hover Text Color", "default": "#da5846" },
+    { "type": "color", "id": "button_text_color", "label": "Button Text Color", "default": "#ffffff" }
+  ],
+  "presets": [
+    { "name": "Expandable Sticky Offer" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,324 @@
+{% style %}
+#section-{{ section.id }} {
+  background-color: {{ section.settings.bg-color }};
+  color: {{ section.settings.text-color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+#section-{{ section.id }} .title {
+    color: {{ section.settings.title-color }};
+}
+@media (max-width: 991px) {
+  #section-{{ section.id }} {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+}
+{% endstyle %}
+
+<section class="sc-pdp-icon-box" id="section-{{ section.id }}">
+    <div class="container">
+        <div class="pdp-icon-box">
+            <div class="left-block">
+                {%if section.settings.title != blank %}
+                    <div class="title desk-title">{{ section.settings.title }}</div>
+                {% endif %}
+                {%if section.settings.content != blank %}
+                    <div class="content"> {{ section.settings.content }}</div>
+                {% endif %}
+                {% if section.settings.btn-text != blank %}
+                    <div class="btn-block">
+                        <a href="{{ section.settings.btn-link }}" class="btn shop-btn"> {{ section.settings.btn-text }}</a>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="right-block">
+              {% for block in section.blocks %}
+                <div class="icon-with-text-block" style="background-color: {{ block.settings.box-bg-color }}; color: {{ block.settings.box-text-color }}">
+                  {% if block.settings.icon != blank %}
+                    <div class="icon">
+                      <img src="{{ block.settings.icon | img_url: 'master' }}">
+                    </div>
+                  {% endif %}
+                  {% if block.settings.title != blank %}
+                    <div class="icon-title"> {{ block.settings.title }}</div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+            {%if section.settings.title != blank %}
+                <div class="title mobile-title">{{ section.settings.title }}</div>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+<style>
+.sc-pdp-icon-box .container{
+    max-width: 1264px;
+     margin: 0 auto;
+     padding: 0 16px;
+     width:100%;
+}
+.sc-pdp-icon-box .right-block {
+  max-width: 704PX;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #DBE7E9;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.sc-pdp-icon-box .mobile-title {
+  display:none;
+}
+.sc-pdp-icon-box .pdp-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.sc-pdp-icon-box .content p{
+    margin: 0;
+}
+.sc-pdp-icon-box .btn-block .shop-btn{
+     display:inline-block;
+     font-size:18px;
+     line-height:120%;
+     letter-spacing:0px;
+     font-weight:500;
+     color:#ffffff;
+     background-color:#DB5846;
+     padding:16px 48px;
+     transition:all 0.3s ease;
+     text-align:center;
+     border-radius:50px;
+     text-decoration:none;
+     margin-top:32px;
+  }
+  .sc-pdp-icon-box .btn-block .shop-btn:hover{
+     background-color:#3f3939;
+  }
+
+   .sc-pdp-icon-box .pdp-icon-box .title{
+     font-size:40px;
+     line-height:120%;
+     letter-spacing:0px;
+     font-weight:500;
+     margin: 0;
+     margin-bottom: 24px;
+  }
+.sc-pdp-icon-box .left-block {
+    max-width: 388px;
+    width: 100%;
+}
+.sc-pdp-icon-box .pdp-icon-box .icon-with-text-block .title{
+     font-size:16px;
+     line-height:160%;
+     letter-spacing:0px;
+     margin-top:24px;
+  }
+.sc-pdp-icon-box .right-block .icon-with-text-block .icon {
+    height: 56px;
+    width: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sc-pdp-icon-box .right-block .icon-with-text-block .icon img {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+.sc-pdp-icon-box .icon-with-text-block {
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.sc-pdp-icon-box .icon-with-text-block .icon-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height:120%;
+    letter-spacing: 0px;
+} 
+
+@media (max-width: 991px) {
+    .sc-pdp-icon-box .icon-with-text-block .icon-title { 
+        font-size:16px;
+    }
+    .sc-pdp-icon-box .pdp-icon-box .title {
+        margin-bottom: 20px;
+       font-size: 32px;
+    }
+    .sc-pdp-icon-box .pdp-icon-box {
+        flex-wrap:wrap;
+    }
+    .sc-pdp-icon-box .right-block,
+    .sc-pdp-icon-box .left-block{
+        max-width:100%;
+    }
+}
+@media (max-width: 575px) {
+    .sc-pdp-icon-box .right-block{ 
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .sc-pdp-icon-box .icon-with-text-block { 
+        gap: 0px;
+        padding: 12px 8px;
+    }
+    .sc-pdp-icon-box .right-block {
+        border-radius:15px;
+        padding: 11px;
+    }
+    .sc-pdp-icon-box .pdp-icon-box {
+        flex-direction:column-reverse;
+        gap:20px;
+    }
+    .sc-pdp-icon-box .mobile-title {
+      display:block;
+    }
+    .sc-pdp-icon-box .desk-title {
+      display:none;
+    }
+    .sc-pdp-icon-box .pdp-icon-box .title{
+      text-align:center;
+      margin-bottom:0px;
+    }
+    .sc-pdp-icon-box .btn-block .shop-btn{
+      margin-top:20px;
+      width:100%;
+    }
+    .sc-pdp-icon-box .content{
+      text-align:center;
+    }
+    .sc-pdp-icon-box .pdp-icon-box .title {
+      font-size:24px;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Pdp Icon Box",
+  "settings": [
+    {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+    },
+    {
+        "type": "color",
+        "id": "title-color",
+        "label": "Title Color"
+    },
+    {
+        "type": "color",
+        "id": "text-color",
+        "label": "Text Color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+    },
+    {
+        "type": "url",
+        "id": "btn-link",
+        "label": "Button Link"
+    },
+    {
+        "type": "text",
+        "id": "btn-text",
+        "label": "Button Text"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Mobile Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Mobile Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon-text",
+      "name": "Icon Text",
+      "settings": [
+        {
+          "type": "color",
+          "id": "box-bg-color",
+          "label": "Box Background Color"
+        },
+        {
+          "type": "color",
+          "id": "box-text-color",
+          "label": "Box Text Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pdp Icon Box"
+    }
+  ]
+}
+{% endschema %}

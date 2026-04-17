@@ -1,0 +1,171 @@
+{%- style -%}
+  .ssky-text-block__checkbox--with-icon-{{ block.id }} {
+    color:{{ block.settings.custom_color }};
+    text-align:{{ block.settings.alignment }};
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  } 
+  @media screen and (min-width: 750px) {
+    .ssky-text-block__checkbox--with-icon-{{ block.id }} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-text-block__checkbox--with-icon-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+
+<div
+  class="ssky-text-block__checkbox ssky-text-block__checkbox--with-icon ssky-text-block__checkbox--with-icon-{{ block.id }} left{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {{ block.shopify_attributes }}>
+  <span class="svg-wrapper">
+    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+  </span>
+  {%- if block.settings.icon != blank or block.settings.icon_svg != blank -%}
+    <div
+      class="ssky-text-block__icon{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {{ block.shopify_attributes }}>
+      {%- if block.settings.icon_svg != blank -%}
+        {{- block.settings.icon_svg -}}
+      {%- elsif block.settings.icon != blank -%}
+        <img src="{{ block.settings.icon | image_url: width: nil }}">
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+  <div>
+    <div class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}">
+      {{ block.settings.text }}
+    </div>
+    <div class="ssky-text-block__text rte{%- if block.settings.text_large %} text-body-large{%- endif -%}">
+      {{ block.settings.text_b }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Checkbox with icon",
+    "settings": [
+      {
+        "type": "select",
+        "id": "alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "label": "Text alignment"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "t:sections.ssky_text_block.blocks.checkbox_with_icon.settings.icon.label"
+      },
+      {
+        "type": "html",
+        "id": "icon_svg",
+        "label": "SVG Icon"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.ssky_text_block.blocks.checkbox_with_icon.settings.text.label",
+        "default": "t:sections.ssky_text_block.blocks.checkbox_with_icon.settings.text.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color",
+        "label": "Custom text color"
+      },
+      {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_size.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_size.options__1.label"
+          },
+          {
+            "value": "large",
+            "label": "t:sections.all.text_size.options__2.label"
+          },
+          {
+            "value": "extra-large",
+            "label": "t:sections.all.text_size.options__3.label"
+          },
+          {
+            "value": "extra-extra-large",
+            "label": "t:sections.all.text_size.options__4.label"
+          }
+        ],
+        "default": "large",
+        "label": "t:sections.all.text_size.label"
+      },
+      {
+        "type": "select",
+        "id": "text_weight",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_weight.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_weight.options__1.label"
+          },
+          {
+            "value": "semibold",
+            "label": "t:sections.all.text_weight.options__2.label"
+          },
+          {
+            "value": "bold",
+            "label": "t:sections.all.text_weight.options__3.label"
+          }
+        ],
+        "default": "semibold",
+        "label": "t:sections.all.text_weight.label"
+      },
+      {
+        "type": "richtext",
+        "id": "text_b",
+        "label": "t:sections.ssky_text_block.blocks.checkbox_with_icon.settings.text.label",
+        "default": "t:sections.ssky_text_block.blocks.checkbox_with_icon.settings.text.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_b",
+        "label": "Custom text color (second item)"
+      },
+      {
+        "type": "checkbox",
+        "id": "text_large",
+        "label": "t:sections.all.ssky_text_large.label",
+        "default": true
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Checkbox with icon" }
+    ]
+  }
+{% endschema %}

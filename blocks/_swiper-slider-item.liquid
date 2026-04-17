@@ -1,0 +1,62 @@
+<div class="slideshow__slide-swiper slider__slide-swiper"
+  {{ block.shopify_attributes }}
+  role="group"
+  aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+  tabindex="-1">
+  <div class="slideshow__media-swiper{% if block.settings.image == blank %} placeholder{% endif %}">
+    {%- if block.settings.image -%}
+      {%- liquid
+        assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+        assign sizes = '100vw'
+        assign widths = '375, 550, 750'
+        assign loading = 'eager'
+        if block.settings.lazy
+          assign loading = 'lazy'
+        endif
+      -%}
+      {%- if forloop.first %}
+        {{
+          block.settings.image
+          | image_url: width: 750
+          | image_tag: height: height, sizes: sizes, widths: widths, loading: loading
+        }}
+      {%- else -%}
+        {{
+          block.settings.image
+          | image_url: width: 750
+          | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+        }}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+      {%- if placeholder_slide == 1 -%}
+        {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Swiper image slide",
+  "class": "swiper-slide",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.ssky_text_block.blocks.image.settings.image_desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "lazy",
+      "label": "Lazyload?",
+      "default": true
+    }
+  ],
+  "presets": [
+    { "name": "Swiper image slide" }
+  ]
+}
+{% endschema %}

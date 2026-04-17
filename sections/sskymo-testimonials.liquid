@@ -1,0 +1,313 @@
+{%- style -%}
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-testimonials-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials__column-block {
+    background-color: {{ section.settings.card_background_color }};
+  }
+  
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials__block-author {
+    color: {{ section.settings.author_text_color }};
+  }
+  
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials__block-state, 
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials__block-text {
+    color: {{ section.settings.review_text_color }};
+  }
+  
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials__block-stars img {
+    {% case section.settings.star_color %}
+      {% when 'gold' %}
+        {%- comment -%} 
+          Default gold - no filter needed 
+        {%- endcomment -%}
+      {% when 'red' %}
+        filter: brightness(0) saturate(100%) invert(17%) sepia(86%) saturate(6328%) hue-rotate(358deg) brightness(99%) contrast(119%);
+      {% when 'green' %}
+        filter: brightness(0) saturate(100%) invert(49%) sepia(85%) saturate(1119%) hue-rotate(87deg) brightness(119%) contrast(119%);
+      {% when 'blue' %}
+        filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(5878%) hue-rotate(246deg) brightness(99%) contrast(147%);
+      {% when 'black' %}
+        filter: brightness(0) saturate(0%);
+    {% endcase %}
+  }
+{%- endstyle -%}
+<div class="ssky-testimonials-{{ section.id }}">
+  <div class="ssky-testimonials ssky-text-block content-container color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width">
+      {%- for testimonial_three_col in shop.metaobjects.testimonial_three_col.values limit: 1 -%}
+        <div class="ssky-testimonials__blocks ssky-text-block__blocks center">
+          {%- assign heading_length = testimonial_three_col.heading | metafield_text | size -%}
+          <h2
+            class="ssky-text-block__heading rte inline-richtext h2{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1;"
+            {% endif %}
+          >
+            {{ testimonial_three_col.heading | metafield_tag }}
+          </h2>
+        </div>
+
+        <div class="ssky-testimonials__column-blocks">
+          <div
+            class="ssky-testimonials__column-block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            <div class="ssky-testimonials__column-block-author-con">
+              {%- if testimonial_three_col.column_one_image != blank -%}
+                <div class="ssky-testimonials__block-author-image media">
+                  {{ testimonial_three_col.column_one_image | image_url: width: 140 | image_tag }}
+                </div>
+              {%- endif -%}
+              <div>
+                <div class="ssky-testimonials__block-author">
+                  {{ testimonial_three_col.column_one_author }}
+                </div>
+                <div class="ssky-testimonials__block-state">
+                  {{ testimonial_three_col.column_one_state }}
+                </div>
+              </div>
+            </div>
+            <div class="ssky-testimonials__block-text rte">
+              {{ testimonial_three_col.column_one_testimonial | metafield_tag }}
+            </div>
+            {%- if testimonial_three_col.review_stars_image != blank -%}
+              <div class="ssky-testimonials__block-stars">
+                {{ testimonial_three_col.review_stars_image | image_url: width: 240 | image_tag }}
+              </div>
+            {%- endif -%}
+          </div>
+          <div
+            class="ssky-testimonials__column-block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            <div class="ssky-testimonials__column-block-author-con">
+              {%- if testimonial_three_col.column_two_image != blank -%}
+                <div class="ssky-testimonials__block-author-image media">
+                  {{ testimonial_three_col.column_two_image | image_url: width: 140 | image_tag }}
+                </div>
+              {%- endif -%}
+              <div>
+                <div class="ssky-testimonials__block-author">
+                  {{ testimonial_three_col.column_two_author }}
+                </div>
+                <div class="ssky-testimonials__block-state">
+                  {{ testimonial_three_col.column_two_state }}
+                </div>
+              </div>
+            </div>
+            <div class="ssky-testimonials__block-text rte">
+              {{ testimonial_three_col.column_two_testimonial | metafield_tag }}
+            </div>
+            {%- if testimonial_three_col.review_stars_image != blank -%}
+              <div class="ssky-testimonials__block-stars">
+                {{ testimonial_three_col.review_stars_image | image_url: width: 240 | image_tag }}
+              </div>
+            {%- endif -%}
+          </div>
+          <div
+            class="ssky-testimonials__column-block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            <div class="ssky-testimonials__column-block-author-con">
+              {%- if testimonial_three_col.column_three_image != blank -%}
+                <div class="ssky-testimonials__block-author-image media">
+                  {{ testimonial_three_col.column_three_image | image_url: width: 140 | image_tag }}
+                </div>
+              {%- endif -%}
+              <div>
+                <div class="ssky-testimonials__block-author">
+                  {{ testimonial_three_col.column_three_author }}
+                </div>
+                <div class="ssky-testimonials__block-state">
+                  {{ testimonial_three_col.column_three_state }}
+                </div>
+              </div>
+            </div>
+            <div class="ssky-testimonials__block-text rte">
+              {{ testimonial_three_col.column_three_testimonial | metafield_tag }}
+            </div>
+            {%- if testimonial_three_col.review_stars_image != blank -%}
+              <div class="ssky-testimonials__block-stars">
+                {{ testimonial_three_col.review_stars_image | image_url: width: 240 | image_tag }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Testimonial three col",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "Card Colors"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "author_text_color",
+      "label": "Author Name",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review Text Color",
+      "default": "#444444"
+    },
+    {
+      "type": "select",
+      "id": "star_color",
+      "label": "Star Color",
+      "options": [
+        {
+          "value": "gold",
+          "label": "Gold (Default)"
+        },
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "blue",
+          "label": "Blue"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ],
+      "default": "gold"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color",
+      "default": "#bcecf6"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Testimonial three col"
+    }
+  ]
+}
+{% endschema %}

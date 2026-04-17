@@ -1,0 +1,136 @@
+{%- liquid
+  assign visibility_classes = ''
+  if block.settings.hide_on_mobile
+    assign visibility_classes = visibility_classes | append: ' hide-mobile'
+  endif
+  if block.settings.hide_on_tablet
+    assign visibility_classes = visibility_classes | append: ' hide-tablet'
+  endif
+  if block.settings.hide_on_desktop
+    assign visibility_classes = visibility_classes | append: ' hide-desktop'
+  endif
+-%}
+
+{%- style -%}
+  .tt-button-{{ block.id }} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    text-align: {{ block.settings.alignment }};
+  }
+  @media screen and (min-width: 750px) {
+    .tt-button-{{ block.id }} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- if block.settings.button_label != blank -%}
+  <div class="tt-button-{{ block.id }}{{ visibility_classes }}" {{ block.shopify_attributes }}>
+    <a
+      {% if block.settings.button_link == blank %}
+        role="link" aria-disabled="true"
+      {% else %}
+        href="{{ block.settings.button_link }}"
+      {% endif %}
+      class="button{% if block.settings.button_style == 'secondary' %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_size == 'large' %} button--large{% endif %}"
+    >
+      {{- block.settings.button_label | escape -}}
+    </a>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_tablet",
+      "label": "Hide on tablet",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_desktop",
+      "label": "Hide on desktop",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary (outline)" }
+      ],
+      "default": "primary",
+      "label": "Button style"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "default",
+      "label": "Button size"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Alignment"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    { "name": "Button" }
+  ]
+}
+{% endschema %}

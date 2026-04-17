@@ -1,0 +1,332 @@
+{% comment %}
+  DO NOT modify this file, its classes, or CSS. It is a universal module.
+{% endcomment %}
+{%- liquid
+  assign merging_with_section_below = false
+  assign show_as_card = false
+  assign narrow_width = false
+  assign text_button_split = false
+  if block.settings.merging_with_section_below == true
+    assign merging_with_section_below = true
+  elsif block.settings.show_as_card == true
+    assign show_as_card = true
+    if block.settings.narrow_width == true
+      assign narrow_width = true
+    endif
+    if block.settings.text_button_split == true
+      assign text_button_split = true
+    endif
+  endif  
+-%}
+{%- style -%}
+  .ssky-text-block-{{ block.id }} .ssky-text-block {
+    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-text-block-{{ block.id }} .ssky-text-block__blocks:not(.ssky-text-block__divider) {
+    max-width: 60rem;
+  }
+  .ssky-text-block-{{ block.id }} .ssky-text-block__text-with-icons {
+    max-width: {{ block.settings.twi_max_width }}rem !important;
+    margin-top: {{ block.settings.twi_margin }}px;
+    row-gap: {{ block.settings.twi_margin }}px;
+    {% if block.settings.twi_center %}
+      margin-left: auto;
+      margin-right: auto;
+    {% endif %}
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+    }
+    .ssky-text-block-{{ block.id }} .ssky-text-block__blocks:not(.ssky-text-block__divider, .ssky-text-block__buttons) {
+      max-width: {{ block.settings.max_width }}rem;
+    }
+    .ssky-text-block-{{ block.id }} .ssky-text-block__blocks .ssky-text-block__checkbox--individual,
+    .ssky-text-block-{{ block.id }} .ssky-text-block__blocks .ssky-text-block__checkbox--with-icon {
+      max-width: {{ block.settings.max_width | minus: 6.4 }}rem;
+    }
+  }
+  {%- if block.settings.top_left -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif block.settings.top_right -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif block.settings.bottom_right -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif block.settings.bottom_left -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if block.settings.corner_color != blank -%}
+    .ssky-text-block-{{ block.id }} {
+      background-color: {{ block.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if merging_with_section_below -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block {
+      z-index: 1;
+    }
+    .ssky-text-block-{{ block.id }} .ssky-text-block__wrapper {
+      padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+    }
+    .ssky-text-block-{{ block.id }} .ssky-text-block__layout-merging-color {
+      background-color: {{ block.settings.merging_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block__wrapper {
+      padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-text-block-{{ block.id }} .ssky-text-block__wrapper {
+        padding-top: {{ block.settings.padding_top }}px;
+        padding-bottom: {{ block.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+  {%- if narrow_width -%}
+    .ssky-text-block-{{ block.id }} .ssky-text-block__wrapper {
+      max-width: 1100px;
+    }
+  {%- endif -%}
+
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-text-block-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+<div class="ssky-text-block-{{ block.id }}">
+  <div class="ssky-text-block content-container color-{{ block.settings.color_scheme }} gradient">
+    {%- if merging_with_section_below -%}
+      <div class="ssky-text-block__layout-merging page-width{%- if block.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}">
+        <div class="color-{{ block.settings.color_scheme_layout_merging }} gradient">
+    {%- endif -%}
+    {%- if show_as_card -%}
+      <div class="page-width{%- if text_button_split %} ssky-text-block__layout-split{%- endif -%}">
+    {%- endif -%}
+    <div class="ssky-text-block__wrapper page-width{%- if show_as_card %} color-{{ block.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-text-block__blocks ssky-text-block__background {{ block.settings.content_alignment }}{%- if background_block == true %} color-scheme-1{%- endif -%}{%- if text_button_split %} ssky-text-block__blocks--split{%- endif -%}">
+        {%- if text_button_split -%}<div class="ssky-text-block__blocks left">{%- endif -%}
+          {% content_for 'blocks' %}        
+        {%- if text_button_split -%}</div>{%- endif -%}
+      </div>
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+    {%- if merging_with_section_below -%}
+      </div>
+      </div>
+      <div
+        class="ssky-text-block__layout-merging-color {%- if block.settings.merge_with_section_above %} ssky-text-block__layout-merging-above{%- endif -%}"
+      ></div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TT Text block section",
+    "blocks": [
+      { "type": "@theme" }, 
+      { "type": "_tb-checkbox-individual" },
+      { "type": "_tb-checkbox-with-icon" },
+      { "type": "_tb-highlights" },
+      { "type": "_tb-image" },
+      { "type": "_text-with-icon" },
+      { "type": "_checkbox" },
+      { "type": "_divider" },
+      { "type": "@app" }
+    ],
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.all.ssky_layouts.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.ssky_layouts.default"
+      },
+      {
+        "type": "range",
+        "id": "max_width",
+        "min": 72,
+        "max": 120,
+        "step": 1,
+        "label": "t:sections.ssky_text_block.settings.max_width.label",
+        "default": 100
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.ssky_text_block.settings.block_specific.label"
+      },
+      {
+        "type": "range",
+        "id": "twi_max_width",
+        "min": 64,
+        "max": 120,
+        "step": 1,
+        "label": "t:sections.ssky_text_block.settings.twi_max_width.label",
+        "default": 120
+      },
+      {
+        "type": "checkbox",
+        "id": "twi_center",
+        "label": "Center Text with icon block?",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "twi_margin",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.ssky_text_block.settings.twi_margin.label",
+        "default": 20
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.ssky_layouts.card"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_as_card",
+        "label": "t:sections.all.ssky_layouts.activate",
+        "default": false
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme_show_as_card",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-4"
+      },
+      {
+        "type": "checkbox",
+        "id": "narrow_width",
+        "label": "t:sections.all.ssky_layouts.extension.narrow",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "text_button_split",
+        "label": "t:sections.all.ssky_layouts.extension.split",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.ssky_layouts.merging"
+      },
+      {
+        "type": "checkbox",
+        "id": "merging_with_section_below",
+        "label": "t:sections.all.ssky_layouts.activate",
+        "default": false
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme_layout_merging",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-4"
+      },
+      {
+        "type": "color",
+        "id": "merging_color",
+        "label": "Merging color",
+        "default": "#bcecf6"
+      },
+      {
+        "type": "checkbox",
+        "id": "merge_with_section_above",
+        "label": "t:sections.all.ssky_layouts.extension.merging_above",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 64
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 64
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.ssky_round_corners.heading",
+        "info": "t:sections.all.ssky_round_corners.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "top_left",
+        "label": "t:sections.all.ssky_round_corners.top_left",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "top_right",
+        "label": "t:sections.all.ssky_round_corners.top_right",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bottom_right",
+        "label": "t:sections.all.ssky_round_corners.bottom_right",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bottom_left",
+        "label": "t:sections.all.ssky_round_corners.bottom_left",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "corner_color",
+        "label": "t:sections.all.ssky_round_corners.corner_color"
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+  "presets": [
+    {
+      "name": "TT Text block section"
+    }
+  ]
+}
+{% endschema %}

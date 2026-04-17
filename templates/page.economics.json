@@ -1,0 +1,1863 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_jpBkyC": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_BkiQjz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Life-Changing Education for Children of All Ages</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_9EJ8Lz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start your education journey into the free market today. Our award-winning curriculum offers easy-to-use activities and lessons to deliver economic concepts that young people can understand and apply in their lives.<br/><br/></p>",
+            "text_size": "large",
+            "text_weight": "regular"
+          }
+        },
+        "text_columns_qCaUrN": {
+          "type": "text_columns",
+          "settings": {
+            "text_a": "<h3>10,000+</h3>",
+            "text_size_a": "extra-extra-large",
+            "text_weight_a": "bold",
+            "subtext_a": "Families Enrolled",
+            "text_b": "<p>Projects for Kids <br/>of All Ages</p>",
+            "text_size_b": "extra-large",
+            "text_weight_b": "bold",
+            "subtext_b": "",
+            "text_c": "<p>Optional Parent <br/>Guides to Help</p>",
+            "text_size_c": "extra-large",
+            "text_weight_c": "bold",
+            "subtext_c": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BkiQjz",
+        "text_9EJ8Lz",
+        "text_columns_qCaUrN"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/economic-banner-1-849x1024.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 16,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_NeaeEf": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_CTaBgE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>So Glad I Bought These Books</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CTaBgE"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_image_banner_td9Aid": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "caption_CGUzcn": {
+          "type": "caption",
+          "settings": {
+            "caption": "ATTACKED BY",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "icon_xMFUgR": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/cnn_logo.webp"
+          }
+        },
+        "text_CmyE6x": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>CNN calls these kids books “Conservative Indoctrination” and <br/>part of a “right-wing children’s entertainment complex.” </strong><br/>Parents who cherish freedom are pushing back by <br/>teaching their kids the truth. <br/><br/><br/></p>",
+            "text_large": true
+          }
+        }
+      },
+      "block_order": [
+        "caption_CGUzcn",
+        "icon_xMFUgR",
+        "text_CmyE6x"
+      ],
+      "settings": {
+        "full_width_container": false,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/red_background.png",
+        "image_2_link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_4tixzw": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_gqiphC": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>30 Units, 120 Lessons, All Include:</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_VEbqHV": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Quick Introductory Content</strong>: Parents can quickly grasp the concept of the week, ensuring a smooth learning experience.<br/><br/><strong>Young Children’s Activity</strong>: Engage the young minds with activities tailored to their understanding.<br/><br/><strong>Older Children’s Activity</strong>: Challenge older children with lessons that deepen their comprehension.<br/><br/><strong>Family Discussion Prompts</strong>: Stimulate family conversations around economic concepts.<br/><br/><strong>“Go Deeper” Material</strong>: For those eager to delve into advanced concepts and expand their understanding.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_gqiphC",
+        "text_VEbqHV"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/childrens-series-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-1",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_qYi8qF": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_bEwrGd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Free Market Rules Economic Curriculum</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_jYEhBD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>(All 30 Units)</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        },
+        "heading_Ymeqg6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>$144.00 – $269.00</p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2"
+          }
+        },
+        "button_GmKRcz": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Give Your Family An Economics Education",
+            "button_link": "shopify://collections/economics-for-kids",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bEwrGd",
+        "text_jYEhBD",
+        "heading_Ymeqg6",
+        "button_GmKRcz"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/free-market-rules-economic-curriculum-all-30-units1200-1024x1024.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_FYGaKC": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_ameU7L": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 53,
+            "testimonial_highlight": "",
+            "testimonial": "<p>“<strong>I see so many young people supporting socialism, so I’m extra happy that my kids are learning how free markets work and how to defend them in today’s crazy world. .</strong> This curriculum is helpful for our homeschool family!“</p>",
+            "author": "– Meghan T.,",
+            "author_state": "(Florida)",
+            "author_image": "shopify://shop_images/author_image_meghan.png"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_ameU7L"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_qrkfYj": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_jfQKcL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Kid-Friendly Learning</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_4KfeB8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each lesson is presented in a format that resonates with young minds, ensuring a clear understanding of free market principles. Spark curiosity, nurture critical thinking, and empower your child with the knowledge to navigate the complexities of the real world.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "heading_3mPMEm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Choose Your Format</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_j4FCeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Digital Copy</strong>: View lessons on your own device and print pages as needed.<br/><br/><strong>Black-and-White Printed Copy</strong>: No printer? Receive a tangible workbook ready to go.<br/><br/><strong>Both Digital and Printed</strong>: Opt for a digital and printed copy for maximum flexibility.<br/><br/>Order Free Market Rules today and let the journey into economics begin!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jfQKcL",
+        "text_4KfeB8",
+        "heading_3mPMEm",
+        "text_j4FCeP"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Child-Content.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_EtzR4G": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_73rj8t": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Give Your Children a Head <br/>Start by Teaching Them About Economics and the Free Market</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_AXhCBE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An award winning curriculum that teaches the basics of economics and personal responsibility in a kid friendly way. They’ll learn powerful ideas most adults don’t even know about!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_b86c8G": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Get The Free Market Curriculum",
+            "button_link": "shopify://collections/economics-for-kids",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_73rj8t",
+        "text_AXhCBE",
+        "button_b86c8G"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/footer_guarantee_girl_image.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_WV86MP": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_y8iJJG": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Most School Curriculum Does Not Equip <br/>Your Children With the Business Skills <br/>They Will Need in the Future</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_4JMYGr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our children are entering a more global and entrepreneurial world than ever before. Isn’t it about time we start preparing them for this exciting change?<br/><br/>Maybe you wonder how your children are going to survive and thrive in a world full of socialism, victimhood, and attacks on entrepreneurs.<br/><br/>You want to find a curriculum that helps you teach them economic concepts in a way that can be easily understood. You also want your child to learn how to think rather than what to think, and develop the mental agility needed to navigate media and political rhetoric.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_y8iJJG",
+        "text_4JMYGr"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/free-market-1015x1024.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_block_VcMJLz": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_6iyLCb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Reality is Kids Need to Be Exposed to the Free Market and Taught How It Works</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_TgJaKV": {
+          "type": "text",
+          "settings": {
+            "max_width": 64,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>A Lack of This Knowledge Inhibits Their Ability to Innovate, Negotiate, and Compete in the Real World.</p>",
+            "text_size": "extra-large",
+            "text_weight": "bold"
+          }
+        },
+        "text_raD8d9": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>There’s a problem, though. Most of us parents weren’t taught these ideas very well in school. As a result, you may feel inadequate in talking to your kids about economic ideas.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_with_icon_tXMPWQ": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-five.svg",
+            "text": "<p><strong>Are you concerned you don’t have the knowledge or confidence to teach your kids about ideas of the free market and how they relate to their life? </strong><br/>Hoping that, somehow, they will be curious enough to figure it out for themselves?</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_wbp4mF": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-six.svg",
+            "text": "<p><strong>Do you want to find educational resources to teach your child sound economic principles, but don't know where to look?</strong>  It’s hard to know what's aligned with your values, and ideas, and even to know which messages you want to share with your family.</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_GfHJqq": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-seven.svg",
+            "text": "<p><strong>Do you question whether your kids will be interested in (or even understand) these real-world concepts?</strong> Perhaps you barely understand them yourself, and you wonder how to help your children become well rounded in learning these ideas.</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_kfeXjW": {
+          "type": "text",
+          "settings": {
+            "max_width": 62,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p><br/>After all, you only have one shot at helping shape your children’s worldview before the noise of today’s society takes over.<br/><br/>Fortunately, you are not alone. And you can let go worrying that your children are not receiving the quality of education that they deserve.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6iyLCb",
+        "text_TgJaKV",
+        "text_raD8d9",
+        "text_with_icon_tXMPWQ",
+        "text_with_icon_wbp4mF",
+        "text_with_icon_GfHJqq",
+        "text_kfeXjW"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-2",
+        "twi_max_width": 120,
+        "twi_margin": 32,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_APVcg6": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_kYqRnd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>More Than Anything… You Need a Helping <br/>Hand to Teach True Economic Principles to <br/>Your Children—A Curriculum Designed to <br/>Empower You and Your Kids</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_nxbMcM": {
+          "type": "text",
+          "settings": {
+            "max_width": 72,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>But Right Now Trying to Teach Kids About Economics Seems Painful and Difficult for Everyone Involved…</p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "medium"
+          }
+        },
+        "text_88kqHC": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Learning about the free market isn’t always easy, though maybe this sounds familiar:</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        },
+        "text_with_icon_4KejYf": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>A trip to the <strong>Local Library</strong> in search of good literature results in frustration that many books are pushing harmful agendas that are appealing to kids. You wonder what good material you can introduce to your children that they’ll actually enjoy.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>After finding <strong>YouTube Videos</strong> from creators that seemed good at the time for your kids, you discovered that they ultimately had some agenda and were using their platform to promote ideas you strongly disagree with.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_cH8aQj": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>You have broached big subjects in <strong>Family Discussions</strong> after dinner that end up in silence from apathetic kids or end awkwardly when your kids ask questions you can’t answer.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>Perhaps you use <strong>Current Events</strong> to try and educate your child about economics but it’s too complex to explain. Often, you wonder if what you’re doing is enough to “stick” and prepare your children for the world they’re growing up in.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_cGkQPz": {
+          "type": "text",
+          "settings": {
+            "max_width": 86,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Your kids are sometimes left with more questions than answers, and you can’t bear the thought of them getting lost at sea in all the socialist ideas being popularized today.<br/><br/>What if the solution to this problem was simpler than you thought?</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYqRnd",
+        "text_nxbMcM",
+        "text_88kqHC",
+        "text_with_icon_4KejYf",
+        "text_with_icon_cH8aQj",
+        "text_cGkQPz"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 102,
+        "twi_margin": 32,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_tfLekR": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_AzqJdj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Free your child from state control, grow their understanding of free markets, and share the joy of profit with them, while making this world a freer place for all of us together!",
+            "custom_color": "",
+            "text_style": "large-semibold",
+            "color_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzqJdj"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 88,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-2",
+        "narrow_width": true,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_column_PgHwxb": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_column_97ey6r": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>30 Relevant and Helpful Study Units</p>",
+            "text": "<p>Each unit as four lessons that are entertaining and easy to understand</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_ccF66k": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Activities and Curriculum Material for All Ages</p>",
+            "text": "<p>Each lesson has content both for younger and older children</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_xee9Tk": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Dinner Conversation Starters With Every Lesson</p>",
+            "text": "<p>After your children learn new ideas, we prompt you with questions to discuss</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_Lfej6X": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Complete Research-Based Economics Curriculum</p>",
+            "text": "<p>Restore freedom of education and the values that make our society great</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_NwrePG": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Easy to Understand Language for Kids About Big Ideas</p>",
+            "text": "<p>Written for children of all ages to make the ideas of money and the free market easy to digest</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_nUf8YJ": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Level up Your Own Education as You Share With Your Kids</p>",
+            "text": "<p>Increase your own confidence by easily learning alongside your children</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_column_97ey6r",
+        "text_column_ccF66k",
+        "text_column_xee9Tk",
+        "text_column_Lfej6X",
+        "text_column_NwrePG",
+        "text_column_nUf8YJ"
+      ],
+      "settings": {
+        "heading": "<p>Create a Foundation of Economic Literacy <br/>and Prepare Your Child for a Lifetime of <br/>Sound Financial Decisions.</p>",
+        "heading_size": "h1",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_FCqjKC": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_eq63fy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A Closer Look at What’s Inside <br/>the Economics Curriculum:</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_DyJq6L": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>30 Questions That Teach the Principles of Free Market Economics</p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold"
+          }
+        },
+        "highlights_fPNRK8": {
+          "type": "highlights",
+          "settings": {
+            "alignment": "left",
+            "highlight_a": "<p>1. Do you really need that?</p>",
+            "custom_color_a": "",
+            "highlight_b": "<p>2. What makes something useful?</p>",
+            "custom_color_b": "",
+            "highlight_c": "<p>3. Why can’t you always get what you want?</p>",
+            "custom_color_c": "",
+            "highlight_d": "<p>4. Can you have your cake and eat it too?</p>",
+            "custom_color_d": "",
+            "highlight_e": "<p>5. Why do people do what they do?</p>",
+            "custom_color_e": "",
+            "highlight_f": "<p>6. Where does value come from?</p>",
+            "custom_color_f": "",
+            "highlight_g": "<p>7. Where does value go?</p>",
+            "custom_color_g": "",
+            "highlight_h": "<p>8. Why do people produce certain things?</p>",
+            "custom_color_h": "",
+            "highlight_i": "<p>9. How does production create wealth?</p>",
+            "custom_color_i": "",
+            "highlight_j": "<p>10. What are the costs of trade?</p>",
+            "custom_color_j": ""
+          }
+        },
+        "highlights_mtrMEt": {
+          "type": "highlights",
+          "settings": {
+            "alignment": "left",
+            "highlight_a": "<p>11. How do we trade?</p>",
+            "custom_color_a": "",
+            "highlight_b": "<p>12. What does money do?</p>",
+            "custom_color_b": "",
+            "highlight_c": "<p>13. What should money be?</p>",
+            "custom_color_c": "",
+            "highlight_d": "<p>14. How do we decide what to buy?</p>",
+            "custom_color_d": "",
+            "highlight_e": "<p>15. What determines demand?</p>",
+            "custom_color_e": "",
+            "highlight_f": "<p>16. How do we decide what to sell?</p>",
+            "custom_color_f": "",
+            "highlight_g": "<p>17. How do supply and demand work together?</p>",
+            "custom_color_g": "",
+            "highlight_h": "<p>18. What’s the price of time?</p>",
+            "custom_color_h": "",
+            "highlight_i": "<p>19. How do banks work?</p>",
+            "custom_color_i": "",
+            "highlight_j": "<p>20. What is Keynesianism?</p>",
+            "custom_color_j": ""
+          }
+        },
+        "highlights_6Re8kF": {
+          "type": "highlights",
+          "settings": {
+            "alignment": "left",
+            "highlight_a": "<p>21. What can central banks do to our money?</p>",
+            "custom_color_a": "",
+            "highlight_b": "<p>22. How do boom and bust cycles actually work?</p>",
+            "custom_color_b": "",
+            "highlight_c": "<p>23. How does a business work?</p>",
+            "custom_color_c": "",
+            "highlight_d": "<p>24. What is a monopoly?</p>",
+            "custom_color_d": "",
+            "highlight_e": "<p>25. What are taxes?</p>",
+            "custom_color_e": "",
+            "highlight_f": "<p>26. How do people from different countries trade?</p>",
+            "custom_color_f": "",
+            "highlight_g": "<p>27. How do people invest their money?</p>",
+            "custom_color_g": "",
+            "highlight_h": "<p>28. How do people make political decisions?</p>",
+            "custom_color_h": "",
+            "highlight_i": "<p>29. What’s the best economic system?</p>",
+            "custom_color_i": "",
+            "highlight_j": "<p>30. How can we use economics?</p>",
+            "custom_color_j": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_eq63fy",
+        "text_DyJq6L",
+        "highlights_fPNRK8",
+        "highlights_mtrMEt",
+        "highlights_6Re8kF"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 110,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_wnKKAy": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_cQjXcq": {
+          "type": "text",
+          "settings": {
+            "max_width": 62,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Each lesson is presented in a kid-friendly format so that your family will understand the basics of free markets and specific ideas that will help them get perspective about how the world really works!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_cQjXcq"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_Uq6mgk": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_8qAmFe": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>It’s Never Been More Important to Introduce Your Kids to Free Market Economics</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_JjtmG9": {
+          "type": "text",
+          "settings": {
+            "max_width": 89,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Our award-winning, engaging, and interactive curriculum teaches economics in a way that is easy for kids to understand. Useful for any age group – from third-graders learning about the free market to high school students who want insight into the world around them.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8qAmFe",
+        "text_JjtmG9"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "scheme-2",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_LdRUQk": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "checkbox_with_icon_yxXkUc": {
+          "type": "checkbox_with_icon",
+          "settings": {
+            "alignment": "left",
+            "icon": "shopify://shop_images/icon_checkbox.webp",
+            "text": "<p>Free Market Rules All 30 Units</p>",
+            "custom_color": "",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold",
+            "text_b": "<p>Order a digital copy or a black-and-white printed copy - or both!</p>",
+            "custom_color_b": "",
+            "text_large": true
+          }
+        },
+        "checkbox_with_icon_h8nAxf": {
+          "type": "checkbox_with_icon",
+          "settings": {
+            "alignment": "left",
+            "icon": "shopify://shop_images/icon_checkbox_2.webp",
+            "text": "<p>Optional Parent Guide PDFs</p>",
+            "custom_color": "",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold",
+            "text_b": "<p>Get the information you need to support your young learners</p>",
+            "custom_color_b": "",
+            "text_large": true
+          }
+        },
+        "checkbox_with_icon_kBKW3c": {
+          "type": "checkbox_with_icon",
+          "settings": {
+            "alignment": "left",
+            "icon": "shopify://shop_images/icon_checkbox_3.webp",
+            "text": "<p>Freedom Lovers Guarantee</p>",
+            "custom_color": "",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold",
+            "text_b": "<p>100% Unconditional Money-Back Guarantee</p>",
+            "custom_color_b": "",
+            "text_large": true
+          }
+        },
+        "button_j97gkC": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": false,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Get The Free Market Curriculum",
+            "button_link_new_window": false,
+            "button_link": "shopify://collections/economics-for-kids",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "<p>100% Unconditional Money-Back Guarantee</p>",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "icon_eFxxxx": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/grey_cards.webp"
+          }
+        }
+      },
+      "block_order": [
+        "checkbox_with_icon_yxXkUc",
+        "checkbox_with_icon_h8nAxf",
+        "checkbox_with_icon_kBKW3c",
+        "button_j97gkC",
+        "icon_eFxxxx"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 79,
+        "color_scheme": "scheme-2",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": true,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_image_block_qPgaqh": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_rYX7XW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The “Freedom Lovers” Guarantee</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_A9ppyJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are serious about helping your family’s education and the future of freedom in our society.<br/><br/>To us the most important thing is that you have the tools to share your values with your children—especially in a world full of people who want to influence your kids in a different direction.<br/><br/>If for any reason you don’t enjoy The Tuttle Tribe or believe we haven’t contributed to your family positively, we will refund your money in full. We have a 100% Unconditional Money-Back Guarantee. Just drop us a line within 30 days of your purchase.<br/><br/>You’ve got nothing at all to lose. So give your children a foundation of freedom today!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rYX7XW",
+        "text_A9ppyJ"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/freedom-lovers.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "merge-image-above-two",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_testimonials_VfrNCw": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_eyVg8Y": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "",
+            "testimonial": "<p><strong>“I feel like my kids are learning more about economics than I ever learned in school, and they know way more than most adults. I’m so glad I got this for them.“</strong></p>",
+            "author": "– Lauren O.",
+            "author_state": "(Florida)",
+            "author_image": "shopify://shop_images/author_image_lauren.webp"
+          }
+        },
+        "testimonial_nmjJnQ": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "",
+            "testimonial": "<p>“<strong>This curriculum is so helpful!</strong><br/>The Tuttle Twins economic lessons have really helped my kids learn how the world works. They ask such interesting questions now and we talk about it over dinner. Highly recommended, there’s nothing like this we found!“</p>",
+            "author": "– Carla T.",
+            "author_state": "(West Virginia)",
+            "author_image": "shopify://shop_images/author_image_Carla.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_eyVg8Y",
+        "testimonial_nmjJnQ"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_CVTBEP": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_LUCNVH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Great Minds Think Un-alike… The <br/>Future of Freedom Starts Here</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_83QLJd": {
+          "type": "text",
+          "settings": {
+            "max_width": 73,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>As a parent, you now have a resource that helps you teach your child that earning and saving money goes hand-in-hand with making decisions and doing what’s right.<br/><br/>This groundbreaking curriculum is a hands-on approach to learning where students not only understand the basics of economics, they also learn how to apply their new knowledge to make a difference in society.<br/><br/>Prepare your kids to become knowledgeable, effective, and responsible citizens by teaching the importance of free enterprise, entrepreneurship, and economics.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_BhRT89": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Get The Free Market Curriculum",
+            "button_link_new_window": false,
+            "button_link": "shopify://collections/economics-for-kids",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "<p>100% Unconditional 30-Day Money-Back Guarantee</p>",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LUCNVH",
+        "text_83QLJd",
+        "button_BhRT89"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_zfBGCF": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_FhmgTJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our economics books are a fun and engaging way to introduce children to important economic concepts. With easy-to-understand language and real-world examples, our books help young learners understand how the world works.",
+            "custom_color": "",
+            "text_style": "small-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_aqhBmU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Explore Our Economics Books for Kids</h2>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_neYeTh": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>These economics books are designed to give children a clear understanding of economic principles through stories and examples that are easy to follow. Our books teach kids the basics of economics in a way that’s fun, relatable, engaging, and impactful.</p><h2>Benefits of Economics Books for Kids of All Ages</h2><p>Our economics books for kids provide foundational knowledge about money, <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-miraculous-pencil\"><span style=\"text-decoration:underline\">trade</span></a>, government, the <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-learn-about-the-law\"><span style=\"text-decoration:underline\">law</span></a>, and more. Here’s how they help your child grasp economic concepts:</p><h3>Introduces Key Economic Concepts</h3><p>Reading our economics books, your child will gain an understanding of how money works, the importance of saving and investing, and how free markets help people trade, create value, and improve their lives. We provide clear explanations that are easy for kids to grasp and rooted in real-world examples.</p><p>With our books, your child will learn the basic principles of economics, including supply and demand, how prices and incentives work, how money flows through an economy, and how markets function best when people are free to innovate, trade, and take responsibility for their choices. These fundamental concepts form the basis of a solid economic understanding, which will help them as they grow.</p><h3>Encourages Critical Thinking and Problem Solving</h3><p>Economics is not just about numbers and graphs; it’s about making decisions and understanding the consequences of those decisions. Our books encourage critical thinking and problem-solving by showing how economic choices affect individuals, families, communities, and entire countries. </p><p>Your child will learn to think critically about the world around them by working through different scenarios and exploring economic challenges. This prepares them to approach problems with a thoughtful, informed mindset.</p><h3>Teaches Personal Responsibility and Financial Literacy</h3><p>One of the most important lessons our economics books teach is personal responsibility. Kids learn the value of hard work, saving money, and making wise financial decisions. They’ll understand the importance of budgeting and how personal choices affect their financial future. </p><p>Our books help children develop smart habits that will serve them throughout their lives by introducing these concepts early. As they grasp the idea that their decisions matter, they begin to take ownership of their financial futures.</p><p>From running a lemonade stand to starting a business, our stories inspire creativity and independence. Our book <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"><span style=\"text-decoration:underline\">Messed Up Market</span></a> helps children see opportunities and turn ideas into action.</p><h3>Real-World Connections</h3><p>Our economics books don’t just stay in the classroom; they connect directly to the real world. Through fun, relatable stories and examples, children will see how economic principles play out in everyday life. </p><p>Your child will learn how businesses operate, the importance of trade, and why prices rise and fall to help your kids make the connection between what they’re learning and what they experience in their daily lives. These real-world connections make learning economics relevant and interesting, and they help your child understand the impact of economics on their own life.</p><h3>Suitable for Both Classroom and Homeschool Use</h3><p>Our economics books are versatile and perfect for both traditional classrooms and homeschool environments. With easy-to-follow chapters, activities, and discussion prompts, our books are ideal for teachers and parents looking to introduce their children to basic economic concepts. </p><p>They’re designed to complement and enhance school curricula, making them a great resource for parents who want to enrich their children’s education at home. Our books provide the tools your child needs to succeed, from learning economics for the first time to exploring more advanced concepts.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_FhmgTJ",
+        "heading_aqhBmU",
+        "text_neYeTh"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_zNdeMD": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_3Hqec7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions About <br/>Free Market Rules Curriculum</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_h3bFhB": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can I Use These Books for Homeschooling?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Absolutely! Our economics books are a great resource for homeschooling families. With clear, easy-to-follow chapters, engaging activities, and companion guides, they provide a solid foundation in economics and help kids think critically about real-world issues.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_qCbA6Q": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are the Economics Books Aligned With School Curricula?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, these economics books are designed to complement most standard school curricula. They introduce important economic concepts that align with educational standards, making them a great addition to classroom learning.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_i8gDDc": {
+          "type": "faq",
+          "settings": {
+            "text": "<p><strong>What Age Group Are These Economics Books Suitable For?</strong></p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "answer": "<p>Our economics books are perfect for children aged 8-12. The content is written in a way that’s accessible and fun for younger readers while still providing valuable information about economics and personal finance.</p>",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_zdfAF6": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>I don't understand economics very well. Does it matter?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>The Tuttle Twins Free Market Rules curriculum is a gold mine of information and will educate you on any gaps in your education at the same time you are reading with your kids. No need to understand anything, just your interest and curiosity to learn as a family will set you up for success.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_DQxrJd": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How much time will it take to teach my kids these ideas?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Without this curriculum, teaching your kids economics could take many years if you are lucky enough to have the right conversations at the right times and then even know what to share. With the Tuttle Twins Free Market Rules you can set up a study program that suits your family and study patterns. You’re free to move through all 30 units at whatever pace best suits your family.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_FrgYqH": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What are the Parent Guides?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>The Parent Guides are optional digital PDF files that you will be able to download after purchasing. A link will be provided on the “Thank You” page after ordering, as well as in your confirmation email you receive. While not necessary, many parents find that they are super helpful supplements so they can be better prepared to answer questions.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_HzMHTP": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What is the age range?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our curriculum is written for the entire family. Each lesson has two activities, one for younger children and one for older children. There’s information for parents, too, and discussion questions for the whole family. No matter the age of your child, there will be content for them.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "button_JitGLt": {
+          "type": "button",
+          "settings": {
+            "button_large": true,
+            "button_full": false,
+            "button_outlink": false,
+            "button_label": "Get The Free Market Curriculum",
+            "button_link": "shopify://collections/economics-for-kids",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "<p>100% Unconditional Money-Back Guarantee</p>",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3Hqec7",
+        "faq_h3bFhB",
+        "faq_qCbA6Q",
+        "faq_i8gDDc",
+        "faq_zdfAF6",
+        "faq_DQxrJd",
+        "faq_FrgYqH",
+        "faq_HzMHTP",
+        "button_JitGLt"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "scheme-1",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_xwba8j": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_edAFDY": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_qUaUHq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Looking for Something Else?</h2>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_T3zK9m": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>If you’re interested in teaching your child about personal responsibility, consider our colorful <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a>, exciting <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a>, or our engaging <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">book bundles</span></a>. You can also explore our <a href=\"https://www.tuttletwins.com/pages/history\"><span style=\"text-decoration:underline\">history books</span></a> for an enriching educational experience that connects the past with present-day concepts.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_edAFDY",
+        "heading_qUaUHq",
+        "text_T3zK9m"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_image_block_khTMdJ": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_k3q7Ac": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Life-Changing Education for Children of All Ages</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Jn8U3P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start your education journey into the free market today. Our award-winning curriculum offers easy-to-use activities and lessons to deliver economic concepts that young people can understand and apply in their lives.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_rgiEG7": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Give Your Family An Economics Education",
+            "button_link": "shopify://collections/economics-for-kids",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_k3q7Ac",
+        "text_Jn8U3P",
+        "button_rgiEG7"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/free-market-rules-economic-curriculum-all-30-units1200_342e5397-e0ad-4030-9685-b06b73137354.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_jpBkyC",
+    "ssky_text_block_NeaeEf",
+    "ssky_image_banner_td9Aid",
+    "ssky_text_image_block_4tixzw",
+    "ssky_text_image_block_qYi8qF",
+    "ssky_testimonials_FYGaKC",
+    "ssky_text_image_block_qrkfYj",
+    "ssky_text_image_block_EtzR4G",
+    "ssky_text_image_block_WV86MP",
+    "ssky_text_block_VcMJLz",
+    "ssky_text_block_APVcg6",
+    "ssky_text_block_tfLekR",
+    "ssky_text_column_PgHwxb",
+    "ssky_text_block_FCqjKC",
+    "ssky_text_block_wnKKAy",
+    "ssky_text_block_Uq6mgk",
+    "ssky_text_block_LdRUQk",
+    "ssky_text_image_block_qPgaqh",
+    "ssky_testimonials_VfrNCw",
+    "ssky_text_block_CVTBEP",
+    "ssky_text_block_zfBGCF",
+    "ssky_faqs_zNdeMD",
+    "ssky_text_block_xwba8j",
+    "ssky_text_image_block_khTMdJ"
+  ]
+}

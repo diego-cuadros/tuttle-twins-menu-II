@@ -1,0 +1,548 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "ssky_text_image_block_ABHYtJ": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_4eDycd": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Economics Curriculum</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_erijyq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unleash the power of free-market knowledge with our award-winning homeschool curriculum, “Free Market Rules.”</p><p>Designed for children of all ages, this comprehensive set comprises 30 units, each offering a profound exploration of free market economics. With a total of 120 lessons, your child will embark on a journey that combines understanding, engagement, and the building blocks of a prosperous future.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_4eDycd",
+        "text_erijyq"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Free-Market-1-1024x779.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_kAK9zc": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_EVXwV6": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>30 Units, 120 Lessons, All Include:</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_EcbENN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Quick Introductory Content</strong>: Parents can quickly grasp the concept of the week, ensuring a smooth learning experience.</p><p><strong>Young Children’s Activity</strong>: Engage the young minds with activities tailored to their understanding.</p><p><strong>Older Children’s Activity</strong>: Challenge older children with lessons that deepen their comprehension.</p><p><strong>Family Discussion Prompts</strong>: Stimulate family conversations around economic concepts.</p><p><strong>“Go Deeper” Material</strong>: For those eager to delve into advanced concepts and expand their understanding.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_EVXwV6",
+        "text_EcbENN"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/childrens-series-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-1",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_mtETJr": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_aqNLAQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Kid-Friendly Learning</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_cPEwza": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each lesson is presented in a format that resonates with young minds, ensuring a clear understanding of free market principles. Spark curiosity, nurture critical thinking, and empower your child with the knowledge to navigate the complexities of the real world.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "heading_NDrXrC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Choose Your Format</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_a4UzAN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Digital Copy</strong>: View lessons on your own device and print pages as needed.<br/><br/><strong>Black-and-White Printed Copy</strong>: No printer? Receive a tangible workbook ready to go.<br/><br/><strong>Both Digital and Printed</strong>: Opt for a digital and printed copy for maximum flexibility.<br/><br/>Order Free Market Rules today and let the journey into economics begin!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aqNLAQ",
+        "text_cPEwza",
+        "heading_NDrXrC",
+        "text_a4UzAN"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Mask-Group-424-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_TyRKFU": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "heading_PPGftJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Magic Can be Found in Our Kids Finance Books</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_ifEATn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our books turn intimidating economic principles into exciting adventures kids actually want to read. Through relatable stories and vibrant illustrations, your child will learn about money, trade, entrepreneurship, and personal responsibility, without ever feeling like they’re in a classroom.</p><p>We want to raise financially literate kids, and this collection provides an easy way to introduce saving, budgeting, investing, and understanding markets for every child. From basic money habits to supply and demand, every title in our book series is written to spark curiosity and critical thinking.</p><p>Families love that these books are designed for all ages. Younger readers enjoy the fun storytelling, while older kids dig into the bigger ideas. It mixes entertainment and education, making it ideal for bedtime reading, homeschool curriculum, or independent study.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PPGftJ",
+        "text_ifEATn"
+      ],
+      "name": "TT Box Image Block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/freedom-lovers.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 28,
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_text_block_w7eWbE": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_6JUUBq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Benefits of Our Kids Economics Books</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_Ubh3Eh": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>This collection is packed with value for both parents and children. Here are six benefits your children and family can enjoy when reading our economics books:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_KRRcpd": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Financial Confidence Early On:</strong> Children learn the foundations of saving, budgeting, and smart spending. Starting early helps them develop confidence with money before habits set in.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_AMbP3m": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Critical Thinking and Decision-Making:</strong> Each book presents real-life choices and challenges. Kids see how decisions create consequences, building lifelong problem-solving skills.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_zzRffF": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Entrepreneurial Mindset:</strong> From running a lemonade stand to starting a business, our stories inspire creativity and independence. Our book <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"><span style=\"text-decoration:underline\">Messed Up Market</span></a> helps children see opportunities and turn ideas into action.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_DXHKQG": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Simple Explanations of Big Ideas:</strong> Concepts like inflation, trade, and supply and demand are broken down into fun, easy-to-grasp stories. Kids learn without feeling overwhelmed.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_GHRgHa": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Family-Friendly Learning:</strong> Parents can read aloud and discuss each lesson. It’s an engaging way to bond and ensure kids truly understand important principles.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_66qmJN": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Curriculum-Friendly for Homeschoolers:</strong> Our books pair perfectly with homeschool economics lessons. They meet educational standards while keeping learning exciting and stress-free.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6JUUBq",
+        "text_Ubh3Eh",
+        "checkbox_individual_KRRcpd",
+        "checkbox_individual_AMbP3m",
+        "checkbox_individual_zzRffF",
+        "checkbox_individual_DXHKQG",
+        "checkbox_individual_GHRgHa",
+        "checkbox_individual_66qmJN"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_HdbVR3": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_eEyWqT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions about Economics for Kids</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_6FJEmp": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Long Does It Usually Take for a Child to Understand Economics?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>This depends on the child’s age and reading level, but most begin to grasp key ideas within a few weeks of regular reading and discussion. Our books and resources have fun storytelling that helps concepts click faster with your kids than traditional textbooks.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_V9rrQp": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Is the Best Age to Start Teaching Children Basic Economics Concepts Like Saving and Budgeting?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>A good starting point is ages 5 to 7. At this stage, kids are ready to understand simple ideas like saving for a toy or choosing between two treats. The earlier they start, the stronger their financial habits will be.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_mzaVfE": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Introduce Topics Such as Supply and Demand or Trade In a Fun, Kid-Friendly Way?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Stories and hands-on activities work best. For example, our books explain these ideas through exciting adventures and relatable scenarios like lemonade stands or community markets.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_j84J3D": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are There Simple Activities or Games That Help Children Understand Money Management and Decision-Making?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes! Set up a pretend store, encourage a mini business like selling crafts, or play board games involving buying and selling. These interactive experiences make lessons stick.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_FcWqtm": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Explain the Value of Money and the Difference Between Needs and Wants to Young Children?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Use real-life examples. Show how groceries are needs while toys are wants. Our books reinforce these ideas through memorable characters and fun, everyday situations.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_WX3UqE": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Looking for Something Else?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>We also have a wide range of resources and books for children, no matter what stage or age they’re at. You can explore our colorful <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a>, engaging <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a>, or our exciting <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">book bundles</span></a> to keep your kids entertained for hours.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eEyWqT",
+        "faq_6FJEmp",
+        "faq_V9rrQp",
+        "faq_mzaVfE",
+        "faq_j84J3D",
+        "faq_FcWqtm",
+        "faq_WX3UqE"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "ssky_text_image_block_ABHYtJ",
+    "ssky_text_image_block_kAK9zc",
+    "ssky_text_image_block_mtETJr",
+    "ssky_box_image_block_TyRKFU",
+    "ssky_text_block_w7eWbE",
+    "ssky_faqs_HdbVR3"
+  ]
+}

@@ -1,0 +1,335 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_ChiNR3": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_WKaPfn": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our engaging and educational books for 3rd graders are designed to spark curiosity, support personal growth, promote critical thinking, and encourage lifelong learning. These books have age-appropriate, fun stories and valuable lessons.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_WKaPfn"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "use_shop_now_to_go_to_pdp": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "tag_color": "#000000"
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_z8d3rq": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_PQEykk": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_Fpc86G": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_QxJq44": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_KDFbd8": {
+          "type": "caption",
+          "settings": {
+            "caption": "Engaging and Educational Books for 3rd Graders",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_PjHAkQ": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our books for 3rd graders are designed to balance fun and learning, helping young readers develop important skills while having a blast. Your child can explore new concepts in <a href=\"https://tuttletwins.com/collections/american-history-for-kids\"><span style=\"text-decoration:underline\">American history</span></a>, <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-learn-about-the-law\"><span style=\"text-decoration:underline\">law</span></a>, and <a href=\"https://www.tuttletwins.com/collections/economics-for-kids\"><span style=\"text-decoration:underline\">economics</span></a> in an exciting yet educational way. We believe in making big ideas accessible to children, ensuring they build a strong foundation for the future.</p><h2>Benefits of Books for 3rd Graders</h2><p>Our books help young learners grow in several key areas, preparing them for academic success and personal development. Here’s how our collection benefits your child:</p><h3>Builds Knowledge of the Real World</h3><p>Our books for 3rd graders help children understand real-world concepts in an engaging, age-appropriate way. Topics like economics, freedom, and entrepreneurship are explained through fun stories that are easy to grasp. For example, <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"><span style=\"text-decoration:underline\">The Tuttle Twins and the Messed-Up Market</span></a> introduces children to the basics of economics, showing how markets work while using relatable characters and scenarios to keep them hooked.</p><h3>Promotes Critical Thinking</h3><p>Critical thinking is an important life skill, and our books encourage children to ask questions and think deeply about what they’re reading. Each story includes moments where young readers can reflect on the main concepts, such as fairness, entrepreneurship, honesty, and freedom. Your kids start to think critically about their world and develop the ability to form their own opinions by engaging with the topics in our books.</p><h3>Fun and Memorable Stories</h3><p>We understand that children learn best when they’re having fun. Our books for 3rd graders use exciting plots and colorful illustrations to hold kids’ attention while delivering valuable lessons. We have stories about starting a business, understanding laws, and making important decisions. Your child will be engaged from start to finish, making the lessons both memorable and enjoyable.</p><h3>Encourages Family Discussions</h3><p>Our books are designed to be read together, making them the perfect tool for family bonding. After reading, your family can discuss the lessons in each book and explore topics like responsibility, fairness, integrity, and what it means to be an active citizen. Our books help encourage important conversations between parents and children, strengthening family connections while reinforcing the lessons learned.</p><h3>Easy-to-Follow, Age-Appropriate Content</h3><p>We know that 3rd graders are ready to tackle more challenging ideas, but the material must be presented in an accessible way. That’s why our books feature simple, easy-to-follow language, with clear explanations and vibrant illustrations that make complex topics easier for your child to digest. Our books make learning fun and approachable, from learning new concepts to reinforcing what they’ve learned in school.</p><h4>Frequently Asked Questions</h4><h5>What Age Group Are Our Books Best Suited For?</h5><p>Our books are perfect for children aged 5-12, so they’re ideal for kids in the 3rd grade. They’re written with language and concepts that are accessible to young readers while still providing enough depth to spark curiosity.</p><h5>Do Our Books Align With School Subjects?</h5><p>Yes! Our books complement subjects like history, civics, economics, and personal responsibility, reinforcing what children learn in school while making these topics engaging and fun.</p><h5>Are Our Books Suitable for Independent Reading?</h5><p>Absolutely! Our books are designed for independent reading, with simple language and engaging stories that encourage young readers to explore on their own. However, they’re also great for reading together as a family.</p><h2>Looking for Something Else?</h2><p>We have a wide range of resources and books for children, no matter what stage or age they’re at. You can explore our colorful <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a>, engaging <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a>, or our exciting <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">book bundles</span></a> to keep your kids entertained for hours.<br/><br/></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_KDFbd8",
+        "text_PjHAkQ"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ssky_text_block_ChiNR3",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "sskymo_three_block_z8d3rq",
+    "sskymo_product_column_c_PQEykk",
+    "sskymo_text_image_block_Fpc86G",
+    "sskymo_text_image_block_b_V3HPhx",
+    "ssky_text_block_QxJq44"
+  ]
+}

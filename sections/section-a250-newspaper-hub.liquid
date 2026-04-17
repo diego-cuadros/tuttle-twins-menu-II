@@ -1,0 +1,256 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: State Newspaper Hub
+  File:    sections/section-a250-newspaper-hub.liquid
+  Data:    Newspaper data is hardcoded in the inline <script>
+           block below. To update a URL or add a paper, edit
+           the `a250Newspapers` JS object directly in this file.
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-newspaper-hub" id="a250-newspapers">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-section-sub">{{ section.settings.subheading }}</p>
+
+    <div class="a250-state-selector-wrapper">
+      <label class="a250-state-select-label" for="a250StateSelect">
+        {{ section.settings.dropdown_label }}
+      </label>
+      <select class="a250-state-select" id="a250StateSelect" onchange="a250ShowNewspapers(this.value)">
+        <option value="">{{ section.settings.dropdown_placeholder }}</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+
+    <div class="a250-newspaper-results" id="a250NewspaperResults">
+      <div class="a250-newspaper-results-title" id="a250NewspaperResultsTitle"></div>
+      <div class="a250-newspaper-list" id="a250NewspaperList"></div>
+    </div>
+
+    {% if section.settings.show_tip %}
+      <div class="a250-hub-callout">
+        <span class="a250-hub-callout-icon">{{ section.settings.tip_emoji }}</span>
+        <span>{{ section.settings.tip_text }}</span>
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+<script>
+(function() {
+
+  /* ── NEWSPAPER DATA ────────────────────────────────────
+   * To update: edit the object below directly.
+   * Each state key maps to an array of paper objects:
+   *   { name, circ, url, guide }
+   * ──────────────────────────────────────────────────── */
+  var a250Newspapers = {
+    AL:[{name:"The Birmingham News / AL.com",circ:"Largest daily in Alabama",url:"https://www.al.com/contact-us/letters/",guide:"Online form, 300 words max"}],
+    AK:[{name:"Anchorage Daily News",circ:"Alaska's largest daily",url:"https://www.adn.com/contact-us/",guide:"Email or online form, 200 words"}],
+    AZ:[{name:"The Arizona Republic",circ:"Largest paper in Arizona",url:"https://www.azcentral.com/story/opinion/2020/01/28/letters-to-the-editor/4573513002/",guide:"Online form, 200 words max"},{name:"Arizona Daily Star (Tucson)",circ:"Southern Arizona's leading paper",url:"https://tucson.com/letters/",guide:"Email letters@tucson.com, 250 words"}],
+    AR:[{name:"Arkansas Democrat-Gazette",circ:"Largest paper in Arkansas",url:"https://www.arkansasonline.com/contact-us/letters/",guide:"Online form, 300 words max"}],
+    CA:[{name:"Los Angeles Times",circ:"Largest in California",url:"https://www.latimes.com/opinion/story/2020-01-28/how-to-write-a-letter-to-the-editor",guide:"Email letters@latimes.com, 150 words max"},{name:"San Francisco Chronicle",circ:"Bay Area's leading paper",url:"https://www.sfchronicle.com/letters/",guide:"Online form, 200 words max"}],
+    CO:[{name:"The Denver Post",circ:"Colorado's largest daily",url:"https://www.denverpost.com/letters/",guide:"Online form or email, 200 words"}],
+    CT:[{name:"Hartford Courant",circ:"Connecticut's largest paper",url:"https://www.courant.com/opinion/letters/",guide:"Email letters@courant.com, 250 words"}],
+    DE:[{name:"The News Journal (Wilmington)",circ:"Delaware's largest daily",url:"https://www.delawareonline.com/opinion/letters/",guide:"Online form, 250 words"}],
+    FL:[{name:"Tampa Bay Times",circ:"Florida's largest circulation",url:"https://www.tampabay.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words max"},{name:"Miami Herald",circ:"South Florida's leading paper",url:"https://www.miamiherald.com/opinion/letters-to-the-editor/",guide:"Email letters@miamiherald.com"}],
+    GA:[{name:"The Atlanta Journal-Constitution",circ:"Georgia's largest paper",url:"https://www.ajc.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words max"}],
+    HI:[{name:"Honolulu Star-Advertiser",circ:"Hawaii's largest daily",url:"https://www.staradvertiser.com/letters-to-the-editor/",guide:"Online form, 150 words"}],
+    ID:[{name:"Idaho Statesman",circ:"Boise's leading paper",url:"https://www.idahostatesman.com/opinion/letters-to-the-editor/",guide:"Online form or email"}],
+    IL:[{name:"Chicago Tribune",circ:"Illinois' largest paper",url:"https://www.chicagotribune.com/opinion/letters/",guide:"Online form, 150 words max"}],
+    IN:[{name:"Indianapolis Star",circ:"Indiana's largest daily",url:"https://www.indystar.com/opinion/letters/",guide:"Online form, 250 words"}],
+    IA:[{name:"Des Moines Register",circ:"Iowa's largest paper",url:"https://www.desmoinesregister.com/opinion/letters-to-the-editor/",guide:"Online form, 250 words max"}],
+    KS:[{name:"The Wichita Eagle",circ:"Kansas' most-read paper",url:"https://www.kansas.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words"}],
+    KY:[{name:"Courier Journal (Louisville)",circ:"Kentucky's largest paper",url:"https://www.courier-journal.com/opinion/letters/",guide:"Online form, 250 words"}],
+    LA:[{name:"The Advocate (Baton Rouge)",circ:"Louisiana's largest daily",url:"https://www.theadvocate.com/letters/",guide:"Online form, 200 words max"},{name:"The Times-Picayune / NOLA.com",circ:"New Orleans' leading paper",url:"https://www.nola.com/opinions/letters-to-editor/",guide:"Online form"}],
+    ME:[{name:"Portland Press Herald",circ:"Maine's largest paper",url:"https://www.pressherald.com/opinion/letters-to-the-editor/",guide:"Online form or email, 300 words"}],
+    MD:[{name:"The Baltimore Sun",circ:"Maryland's largest daily",url:"https://www.baltimoresun.com/opinion/letters/",guide:"Online form, 200 words"}],
+    MA:[{name:"The Boston Globe",circ:"Massachusetts' largest paper",url:"https://www.bostonglobe.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words max"}],
+    MI:[{name:"Detroit Free Press",circ:"Michigan's largest daily",url:"https://www.freep.com/opinion/letters/",guide:"Online form, 200 words max"}],
+    MN:[{name:"Star Tribune (Minneapolis)",circ:"Minnesota's largest paper",url:"https://www.startribune.com/letters/",guide:"Online form, 150 words max"}],
+    MS:[{name:"Clarion Ledger (Jackson)",circ:"Mississippi's largest paper",url:"https://www.clarionledger.com/opinion/letters/",guide:"Online form, 300 words"}],
+    MO:[{name:"St. Louis Post-Dispatch",circ:"Missouri's most-read paper",url:"https://www.stltoday.com/opinion/letters/",guide:"Online form, 300 words"}],
+    MT:[{name:"Billings Gazette",circ:"Montana's largest paper",url:"https://billingsgazette.com/opinion/letters/",guide:"Online form, 250 words"}],
+    NE:[{name:"Omaha World-Herald",circ:"Nebraska's largest daily",url:"https://omaha.com/opinion/letters/",guide:"Online form, 250 words max"}],
+    NV:[{name:"Las Vegas Review-Journal",circ:"Nevada's largest paper",url:"https://www.reviewjournal.com/letters-to-editor/",guide:"Online form, 300 words max"}],
+    NH:[{name:"Union Leader (Manchester)",circ:"New Hampshire's largest daily",url:"https://www.unionleader.com/letters/",guide:"Email letterstoeditor@unionleader.com"}],
+    NJ:[{name:"NJ.com / The Star-Ledger",circ:"New Jersey's largest paper",url:"https://www.nj.com/opinion/",guide:"Online form, 200 words"}],
+    NM:[{name:"Albuquerque Journal",circ:"New Mexico's most-read paper",url:"https://www.abqjournal.com/letters/",guide:"Online form or email, 200 words"}],
+    NY:[{name:"New York Times",circ:"National reach",url:"https://www.nytimes.com/content/help/site/editorial/letters/letters.html",guide:"Email letters@nytimes.com, 150 words max"},{name:"New York Post",circ:"High-circulation daily",url:"https://nypost.com/submit-a-letter/",guide:"Online form, 200 words"}],
+    NC:[{name:"The Charlotte Observer",circ:"North Carolina's largest paper",url:"https://www.charlotteobserver.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words"}],
+    ND:[{name:"Bismarck Tribune",circ:"North Dakota's largest daily",url:"https://bismarcktribune.com/opinion/letters/",guide:"Online form, 300 words"}],
+    OH:[{name:"The Columbus Dispatch",circ:"Ohio's largest daily",url:"https://www.dispatch.com/opinion/letters/",guide:"Online form, 250 words max"},{name:"Cleveland Plain Dealer",circ:"Northeast Ohio's leading paper",url:"https://www.cleveland.com/letters/",guide:"Online form"}],
+    OK:[{name:"The Oklahoman",circ:"Oklahoma's largest paper",url:"https://www.oklahoman.com/opinion/letters/",guide:"Online form, 250 words"}],
+    OR:[{name:"The Oregonian",circ:"Oregon's largest daily",url:"https://www.oregonlive.com/opinion/",guide:"Online form or email, 200 words"}],
+    PA:[{name:"Philadelphia Inquirer",circ:"Pennsylvania's largest paper",url:"https://www.inquirer.com/opinion/letters/",guide:"Online form or email, 200 words"},{name:"Pittsburgh Post-Gazette",circ:"Western PA's leading paper",url:"https://www.post-gazette.com/opinion/letters/",guide:"Online form, 250 words"}],
+    RI:[{name:"The Providence Journal",circ:"Rhode Island's largest paper",url:"https://www.providencejournal.com/opinion/letters/",guide:"Online form, 200 words max"}],
+    SC:[{name:"The State (Columbia)",circ:"South Carolina's largest daily",url:"https://www.thestate.com/opinion/letters-to-editor/",guide:"Online form, 250 words"}],
+    SD:[{name:"Argus Leader (Sioux Falls)",circ:"South Dakota's most-read paper",url:"https://www.argusleader.com/opinion/letters/",guide:"Online form, 250 words max"}],
+    TN:[{name:"The Tennessean (Nashville)",circ:"Tennessee's largest paper",url:"https://www.tennessean.com/opinion/letters/",guide:"Online form, 250 words max"},{name:"Commercial Appeal (Memphis)",circ:"West TN's leading paper",url:"https://www.commercialappeal.com/opinion/letters/",guide:"Online form"}],
+    TX:[{name:"Houston Chronicle",circ:"Texas' largest paper",url:"https://www.houstonchronicle.com/opinion/letters/",guide:"Online form, 200 words"},{name:"Dallas Morning News",circ:"Dallas-Fort Worth's leading paper",url:"https://www.dallasnews.com/opinion/letters/",guide:"Online form, 250 words"}],
+    UT:[{name:"The Salt Lake Tribune",circ:"Utah's largest daily",url:"https://www.sltrib.com/opinion/letters/",guide:"Online form, 200 words max"},{name:"Deseret News",circ:"Utah's second major daily",url:"https://www.deseret.com/opinion/letters/",guide:"Online form or email"}],
+    VT:[{name:"Burlington Free Press",circ:"Vermont's largest paper",url:"https://www.burlingtonfreepress.com/opinion/letters/",guide:"Online form, 250 words"}],
+    VA:[{name:"Richmond Times-Dispatch",circ:"Virginia's largest daily",url:"https://richmond.com/opinion/letters/",guide:"Online form, 250 words max"},{name:"The Virginian-Pilot (Norfolk)",circ:"Hampton Roads' leading paper",url:"https://www.pilotonline.com/opinion/letters/",guide:"Online form"}],
+    WA:[{name:"The Seattle Times",circ:"Washington's largest paper",url:"https://www.seattletimes.com/opinion/letters-to-the-editor/",guide:"Online form, 200 words max"},{name:"The Spokesman-Review (Spokane)",circ:"Eastern WA's leading paper",url:"https://www.spokesman.com/letters/",guide:"Online form"}],
+    WV:[{name:"Charleston Gazette-Mail",circ:"West Virginia's largest paper",url:"https://www.wvgazettemail.com/opinion/letters_to_editor/",guide:"Online form or email, 300 words"}],
+    WI:[{name:"Milwaukee Journal Sentinel",circ:"Wisconsin's largest daily",url:"https://www.jsonline.com/opinion/letters/",guide:"Online form, 200 words max"}],
+    WY:[{name:"Casper Star-Tribune",circ:"Wyoming's largest paper",url:"https://trib.com/opinion/letters/",guide:"Online form or email, 300 words"}]
+  };
+
+  var a250StateNames = {
+    AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",
+    CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",
+    IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",
+    ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",
+    MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",
+    NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",
+    OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",
+    TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",
+    WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"
+  };
+
+  window.a250ShowNewspapers = function(state) {
+    var resultsEl = document.getElementById('a250NewspaperResults');
+    var listEl    = document.getElementById('a250NewspaperList');
+    var titleEl   = document.getElementById('a250NewspaperResultsTitle');
+    if (!state || !a250Newspapers[state]) {
+      resultsEl.classList.remove('is-visible');
+      return;
+    }
+    titleEl.textContent = 'Most-Read Papers in ' + a250StateNames[state];
+    listEl.innerHTML = a250Newspapers[state].map(function(p) {
+      return '<div class="a250-newspaper-item">' +
+        '<div>' +
+          '<div class="a250-newspaper-name">📰 ' + p.name + '</div>' +
+          '<div class="a250-newspaper-detail">' + p.circ + ' &nbsp;·&nbsp; ' + p.guide + '</div>' +
+        '</div>' +
+        '<div class="a250-newspaper-actions">' +
+          '<a href="' + p.url + '" target="_blank" rel="noopener" class="a250-newspaper-btn a250-newspaper-btn--primary">Submit Letter →</a>' +
+          '<a href="' + p.url + '" target="_blank" rel="noopener" class="a250-newspaper-btn a250-newspaper-btn--outline">View Guidelines</a>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    resultsEl.classList.add('is-visible');
+  };
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "A250 · Newspaper Hub",
+  "tag": "div",
+  "class": "a250-section-newspaper-hub",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Find Your Newspaper"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Every state has a voice. Help yours be heard."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Select your state to find the most-read newspapers and their letters-to-the-editor submission instructions."
+    },
+    {
+      "type": "text",
+      "id": "dropdown_label",
+      "label": "Dropdown label",
+      "default": "Select Your State"
+    },
+    {
+      "type": "text",
+      "id": "dropdown_placeholder",
+      "label": "Dropdown placeholder",
+      "default": "— Choose a state —"
+    },
+    {
+      "type": "header",
+      "content": "Tip Box"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tip",
+      "label": "Show tip box",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tip_emoji",
+      "label": "Tip emoji",
+      "default": "💡"
+    },
+    {
+      "type": "textarea",
+      "id": "tip_text",
+      "label": "Tip text",
+      "default": "Tip for parents: \"Letters to the editor\" sections are one of the most-read parts of any newspaper. A child's letter almost always gets special attention — editors love featuring young voices, especially on milestone topics. You're already giving your kids something most schools can't."
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Newspaper Hub"
+    }
+  ]
+}
+{% endschema %}

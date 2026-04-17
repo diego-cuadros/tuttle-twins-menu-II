@@ -1,0 +1,137 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_custom_liquid_YjbpzQ": {
+      "type": "z-custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"background-color: #04AED8; text-align: center; margin: 0; padding: 0; line-height: 0;\">\n    <img\n      src=\"{{ 'Britt-Desktop.png' | asset_img_url: '3600x' }}\"\n      alt=\"Description of image\"\n      class=\"responsive-banner desktop-only\"\n    >\n    <img\n      src=\"{{ 'Britt-Mobile-Banner.png' | asset_img_url: '800x' }}\"\n      alt=\"Description of mobile image\"\n      class=\"responsive-banner mobile-only\"\n    >\n  </a>\n</div>\n\n<style>\n  .responsive-banner {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    margin: 0;\n    padding: 0;\n    border: 0;\n  }\n\n  .desktop-only {\n    display: none;\n  }\n\n  .mobile-only {\n    display: block;\n  }\n\n  @media (min-width: 768px) {\n    .desktop-only {\n      display: block;\n    }\n    .mobile-only {\n      display: none;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "z_custom_liquid_jYmaCt": {
+      "type": "z-custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-mobile-banner-wrapper\">\n  <a href=\"https://tuttletwins.com/pages/products\" style=\"display: block; margin: 0; padding: 0;\">\n    <img\n      src=\"{{ 'Horton-mobile.png' | asset_img_url: '800x' }}\"\n      alt=\"Description of mobile image\"\n      class=\"custom-mobile-banner-img\"\n    >\n  </a>\n</div>\n\n<style>\n  .custom-mobile-banner-wrapper {\n    background-color: #04AED8;\n    text-align: center;\n    margin: 0;\n    padding: 0;\n    line-height: 0;\n    display: block;\n  }\n\n  .custom-mobile-banner-img {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n    margin: 0;\n    padding: 0;\n    border: 0;\n  }\n\n  @media (min-width: 768px) {\n    .custom-mobile-banner-wrapper {\n      display: none !important;\n      height: 0 !important;\n      overflow: hidden !important;\n      padding: 0 !important;\n      margin: 0 !important;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_image_banner_z9Ujx8": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "image_block_YbFHeJ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/tuttletimes-horton-mobile_1.png",
+            "image_size": "large",
+            "mobile_image_size": "large",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_7wWhTA": {
+          "type": "icon",
+          "settings": {}
+        },
+        "heading_KNwcHL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Teach Your Kids",
+            "heading_size": "h1"
+          }
+        },
+        "text_6ACAxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Tuttle Twins books and Tuttle Times Magazine <br/>enable parents to have deeper conversations with their kids,<br/>empowering them with the ability to reject<br/>the nonsense—and build a freer, better future.</p><p><strong>Let's get to work. </strong></p><p></p>",
+            "text_large": true
+          }
+        },
+        "buttons_kqiRM7": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Magazine PLUS Only $56",
+            "button_link_1": "https://www.tuttletwins.com/apps/rebuy/cart?variants%5B45740771639434%5D%5Bquantity%5D=1&variants%5B45740771639434%5D%5Bselling_plan%5D=1717960842&clear_cart=no&discount=HORTONMAGAZINE&landing_page=shopify_checkout&smart_cart_show=no",
+            "button_style_secondary_1": false,
+            "button_label_2": "Magazine PLUS + 14 Book Set $155",
+            "button_link_2": "https://www.tuttletwins.com/apps/rebuy/cart?variants%5B45740770427018%5D%5Bquantity%5D=1&variants%5B45740771639434%5D%5Bquantity%5D=1&variants%5B45740771639434%5D%5Bselling_plan%5D=1717960842&clear_cart=no&discount=HORTONCOMBO&landing_page=shopify_checkout&smart_cart_show=no",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "image_block_YbFHeJ",
+        "icon_7wWhTA",
+        "heading_KNwcHL",
+        "text_6ACAxq",
+        "buttons_kqiRM7"
+      ],
+      "custom_css": [
+        "@media (max-width: 767px) {.banner__media {display: none !important; }}"
+      ],
+      "name": "TT Image banner",
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/Horton-desktop.png",
+        "image_2_link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "top-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-5",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "z_custom_liquid_YjbpzQ",
+    "z_custom_liquid_jYmaCt",
+    "ssky_image_banner_z9Ujx8"
+  ]
+}

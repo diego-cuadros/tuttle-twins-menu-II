@@ -1,0 +1,364 @@
+{%- comment -%}
+  sections/ssky-two-column-product.liquid
+  CSS lives in assets/homepage-redesign.css
+{%- endcomment -%}
+
+<section
+  class="ssky-two-col-product color-{{ section.settings.color_scheme }}"
+  data-ssky-two-col-product
+  style="
+    --ssky-2cp-pad-m: {{ section.settings.padding_y_mobile }}px;
+    --ssky-2cp-pad-d: {{ section.settings.padding_y_desktop }}px;
+    --ssky-2cp-accent: {{ section.settings.accent_color }};
+  "
+>
+  <div class="page-width">
+    <div class="ssky-two-col-product__grid{% if section.settings.product_side == 'left' %} is-product-left{% endif %}">
+
+      <!-- CONTENT COLUMN -->
+      <div class="ssky-two-col-product__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'caption' -%}
+              {%- if block.settings.caption != blank -%}
+                <div class="ssky-two-col-product__caption" {{ block.shopify_attributes }}>
+                  {{ block.settings.caption }}
+                </div>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+              {%- if block.settings.heading != blank -%}
+                <{{ block.settings.heading_tag }}
+                  class="ssky-two-col-product__heading {{ block.settings.heading_size }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.heading }}
+                </{{ block.settings.heading_tag }}>
+              {%- endif -%}
+
+            {%- when 'text' -%}
+              {%- if block.settings.text != blank -%}
+                <div class="ssky-two-col-product__text rte" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- endif -%}
+
+            {%- when 'bullets' -%}
+              {%- if block.settings.items != blank -%}
+                {%- assign lines = block.settings.items | newline_to_br | split: '<br />' -%}
+                <ul class="ssky-two-col-product__bullets" {{ block.shopify_attributes }}>
+                  {%- for line in lines -%}
+                    {%- assign item = line | strip -%}
+                    {%- if item != blank -%}
+                      <li>{{ item }}</li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+            {%- when 'tags' -%}
+              {%- if block.settings.items != blank -%}
+                {%- assign lines = block.settings.items | newline_to_br | split: '<br />' -%}
+                <div class="ssky-two-col-product__tags" {{ block.shopify_attributes }}>
+                  {%- for line in lines -%}
+                    {%- assign tag = line | strip -%}
+                    {%- if tag != blank -%}
+                      <span class="ssky-two-col-product__tag">{{ tag }}</span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      <!-- PRODUCT COLUMN -->
+      <div class="ssky-two-col-product__product">
+        {%- assign product_block = nil -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'product_card' -%}
+            {%- assign product_block = block -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if product_block != nil and product_block.settings.product != blank -%}
+          {%- assign p = product_block.settings.product -%}
+          {%- assign v = p.selected_or_first_available_variant -%}
+          {%- assign price = v.price -%}
+          {%- assign compare = v.compare_at_price -%}
+
+          {%- assign has_sale = false -%}
+          {%- if compare and compare > price -%}
+            {%- assign has_sale = true -%}
+            {%- assign savings_amount = compare | minus: price -%}
+            {%- assign savings_percent = savings_amount | times: 100 | divided_by: compare | round -%}
+          {%- endif -%}
+
+          <div
+            class="ssky-two-col-product__card{% if product_block.settings.highlight %} is-highlight{% endif %}"
+            style="
+              --ssky-2cp-card-accent: {{ product_block.settings.accent_color }};
+              --ssky-2cp-top: {{ product_block.settings.top_bg }};
+              --ssky-2cp-badge: {{ product_block.settings.badge_bg }};
+            "
+            {{ product_block.shopify_attributes }}
+          >
+
+            <div class="ssky-two-col-product__card-top">
+              {%- if product_block.settings.badge_text != blank -%}
+                <div class="ssky-two-col-product__badge">
+                  {{ product_block.settings.badge_text }}
+                </div>
+              {%- endif -%}
+
+              {%- if p.featured_image != blank -%}
+                <div class="ssky-two-col-product__image">
+                  {{ p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy' }}
+                </div>
+              {%- endif -%}
+            </div>
+
+            <div class="ssky-two-col-product__card-body">
+              {%- if product_block.settings.sale_label != blank -%}
+                <div class="ssky-two-col-product__kicker">
+                  {{ product_block.settings.sale_label }}
+                </div>
+              {%- endif -%}
+
+              {%- if product_block.settings.card_title != blank -%}
+                <div class="ssky-two-col-product__card-title">{{ product_block.settings.card_title }}</div>
+              {%- endif -%}
+
+              {%- if product_block.settings.card_subtext != blank -%}
+                <div class="ssky-two-col-product__card-subtext">
+                  {{ product_block.settings.card_subtext }}
+                </div>
+              {%- endif -%}
+
+              <div class="ssky-two-col-product__price-row">
+
+  <span class="ssky-two-col-product__price">
+    {{ price | money_without_trailing_zeros }}
+  </span>
+
+  {%- if compare and compare > price -%}
+    <span class="ssky-two-col-product__compare">
+      {{ compare | money_without_trailing_zeros }}
+    </span>
+  {%- endif -%}
+
+  {%- if product_block.settings.price_suffix != blank -%}
+    <span class="ssky-two-col-product__suffix">{{ product_block.settings.price_suffix }}</span>
+  {%- endif -%}
+
+  {%- if product_block.settings.show_savings_pill and has_sale -%}
+    <span class="ssky-two-col-product__savings">
+      {{ product_block.settings.savings_prefix | default: 'You save' }}
+      {{ savings_amount | money_without_trailing_zeros }}
+      —
+      {{ savings_percent }}% {{ product_block.settings.savings_suffix | default: 'off' }}
+    </span>
+  {%- endif -%}
+
+</div>
+                 
+
+              {%- if product_block.settings.features != blank -%}
+                {%- assign feat_lines = product_block.settings.features | newline_to_br | split: '<br />' -%}
+                <ul class="ssky-two-col-product__features">
+                  {%- for line in feat_lines -%}
+                    {%- assign item = line | strip -%}
+                    {%- if item != blank -%}
+                      <li>{{ item }}</li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+              <div class="ssky-two-col-product__cta">
+                {%- if product_block.settings.cta_mode == 'link' and product_block.settings.cta_link != blank -%}
+                  <a class="ssky-two-col-product__button button" href="{{ product_block.settings.cta_link }}">
+                    {{ product_block.settings.cta_label | default: 'Get started' }}
+                  </a>
+                {%- else -%}
+                  <form method="post" action="{{ routes.cart_add_url }}" class="ssky-two-col-product__form">
+                    <input type="hidden" name="id" value="{{ v.id }}">
+                    <button type="submit" class="ssky-two-col-product__button button">
+                      {{ product_block.settings.cta_label | default: 'Add to cart' }}
+                    </button>
+                  </form>
+                {%- endif -%}
+              </div>
+
+              {%- if product_block.settings.under_cta != blank -%}
+                <div class="ssky-two-col-product__under-cta">{{ product_block.settings.under_cta }}</div>
+              {%- endif -%}
+
+              {%- if product_block.settings.fine_print != blank -%}
+                <div class="ssky-two-col-product__fine-print">
+                  {{ product_block.settings.fine_print }}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+
+        {%- else -%}
+          <div class="ssky-two-col-product__card">
+            <div class="ssky-two-col-product__card-body">
+              <div class="ssky-two-col-product__card-title">Select a product</div>
+              <div class="ssky-two-col-product__card-subtext">Add a Product Card block and choose a product.</div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "2-Column Product Feature",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    {
+      "type": "select",
+      "id": "product_side",
+      "label": "Product card position",
+      "default": "right",
+      "options": [
+        { "value": "right", "label": "Right" },
+        { "value": "left", "label": "Left" }
+      ]
+    },
+    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#0597AF" },
+    { "type": "range", "id": "padding_y_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Padding (mobile)", "default": 64 },
+    { "type": "range", "id": "padding_y_desktop", "min": 0, "max": 180, "step": 4, "unit": "px", "label": "Padding (desktop)", "default": 88 }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "caption", "label": "Caption", "default": "THE BOOK CLUB" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Not Two Books a Month. A Four-Year Investment." },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "h1",
+          "options": [
+            { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h0", "label": "H0" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "default": "h2",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 2,
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>The parent who described her 20-year journey didn’t get there from one book…</p>" }
+      ]
+    },
+    {
+      "type": "bullets",
+      "name": "Bulleted list",
+      "limit": 1,
+      "settings": [
+        { "type": "textarea", "id": "items", "label": "One per line", "default": "$19.99/month — less than a streaming subscription, more than a lifetime of ideas\n2 new books every month, curated by age\nCancel anytime · Keep every book" }
+      ]
+    },
+    {
+      "type": "tags",
+      "name": "Tags",
+      "limit": 1,
+      "settings": [
+        { "type": "textarea", "id": "items", "label": "One per line", "default": "48 books\n4 years\n1 conversation at a time" }
+      ]
+    },
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "limit": 1,
+      "settings": [
+        { "type": "product", "id": "product", "label": "Product" },
+
+        { "type": "checkbox", "id": "highlight", "label": "Highlight card", "default": false },
+        { "type": "text", "id": "badge_text", "label": "Badge text (optional)", "default": "⭐ MOST POPULAR" },
+        { "type": "color", "id": "badge_bg", "label": "Badge background", "default": "#E85A3D" },
+        { "type": "color", "id": "top_bg", "label": "Top background", "default": "#BFEAF5" },
+        { "type": "color", "id": "accent_color", "label": "Card accent color", "default": "#0597AF" },
+
+        { "type": "text", "id": "sale_label", "label": "Kicker / sale label", "default": "Limited Time" },
+        { "type": "text", "id": "card_title", "label": "Card title", "default": "Tuttle Twins Book Club" },
+        { "type": "text", "id": "price_suffix", "label": "Price suffix (optional)", "default": "/month" },
+
+        { "type": "checkbox", "id": "show_savings_pill", "label": "Show savings pill (requires compare-at price)", "default": true },
+        { "type": "text", "id": "savings_prefix", "label": "Savings prefix", "default": "You save" },
+        { "type": "text", "id": "savings_suffix", "label": "Savings suffix", "default": "off" },
+
+        { "type": "text", "id": "card_subtext", "label": "Card subtext", "default": "Less than a streaming subscription · ~$10 per book · Cancel anytime" },
+        { "type": "textarea", "id": "features", "label": "Features (one per line)", "default": "2 books monthly\nAge-curated selection\nParent discussion guides\nDigital bonus content" },
+
+        {
+          "type": "select",
+          "id": "cta_mode",
+          "label": "CTA type",
+          "default": "cart",
+          "options": [
+            { "value": "cart", "label": "Add to cart" },
+            { "value": "link", "label": "Custom link" }
+          ]
+        },
+        { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Start Your Child's Library →" },
+        { "type": "url", "id": "cta_link", "label": "CTA link (only for Custom link)" },
+        { "type": "text", "id": "under_cta", "label": "Under CTA line (optional)", "default": "🛡️ 30-day guarantee · Free shipping" },
+        { "type": "richtext", "id": "fine_print", "label": "Fine print (optional)", "default": "<p>Already a subscriber? Bundles below are perfect as gifts or for additional children.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "2-Column Product Feature",
+      "blocks": [
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "bullets" },
+        { "type": "tags" },
+        { "type": "product_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

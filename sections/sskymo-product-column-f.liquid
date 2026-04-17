@@ -1,0 +1,371 @@
+{{ 'ssky-product-column.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-product-column-{{ section.id }} .ssky-product-column {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-product-column-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div class="ssky-product-column-{{ section.id }}">
+  <div class="ssky-product-column gradient color-{{ section.settings.color_scheme }}">
+    {%- for americas_discover_a in shop.metaobjects.americas_discover_a.values limit: 1 -%}
+      {%- if show_as_card -%}
+        <div class="ssky-text-block__blocks page-width center">
+          {%- if americas_discover_a.heading != blank -%}
+            {%- assign heading_length = americas_discover_a.heading | size -%}
+            <h2
+              class="ssky-text-block__heading rte inline-richtext h1{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 1"
+              {% endif %}
+            >
+              {{ americas_discover_a.heading | metafield_tag }}
+            </h2>
+          {%- endif -%}
+          {%- if americas_discover_a.caption != blank -%}
+            <div
+              class="ssky-text-block__caption large-semibold {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ americas_discover_a.caption }}
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="ssky-product-column__layout-card page-width">
+      {%- endif -%}
+      <div class="ssky-product-column__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+        <div class="ssky-product-column__blocks ssky-text-block__blocks center">
+          {%- unless show_as_card -%}
+            <div class="ssky-text-block__heading-con ssky-text-block__blocks">
+              {%- if americas_discover_a.heading != blank -%}
+                {%- assign heading_length = americas_discover_a.heading | size -%}
+                <h2
+                  class="ssky-text-block__heading rte inline-richtext h1{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: 1"
+                  {% endif %}
+                >
+                  {{ americas_discover_a.heading | metafield_tag }}
+                </h2>
+              {%- endif -%}
+              {%- if americas_discover_a.caption != blank -%}
+                <div
+                  class="ssky-text-block__caption large-semibold {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ americas_discover_a.caption }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endunless -%}
+
+          <div class="ssky-product-column__block-set ssky-product-column-large__block-set">
+            {%- if americas_discover_a.column_one_product != blank -%}
+              {%- assign block_product = americas_discover_a.column_one_product.value -%}
+              {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+              <div
+                class="ssky-product-column__block ssky-product-column-large__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="ssky-text-block__blocks">
+                  <h3 class="ssky-product-column__heading ssky-text-block__heading rte h4 weight-semibold">
+                    {%- if americas_discover_a.column_one_heading != blank -%}
+                      {{ americas_discover_a.column_one_heading | metafield_tag }}
+                    {%- elsif block_product != blank -%}
+                      {{ block_product.title }}
+                    {%- else -%}
+                      {{ 'TT_Sections.product_column_Section.title_placeholder' | t }}
+                    {%- endif -%}
+                  </h3>
+                  <div class="ssky-product-column__text rte">
+                    {%- if americas_discover_a.column_one_description != blank -%}
+                      {{ americas_discover_a.column_one_description | metafield_tag }}
+                    {%- else -%}
+                      {{ block_product.description | truncatewords: 20 | strip_html }}
+                    {%- endif -%}
+                  </div>
+                  <div class="ssky-product-column__image media{%- if americas_discover_a.column_one_image_fill_or_fit != false %} image-fit{%- endif -%}">
+                    {%- if americas_discover_a.column_one_image != blank -%}
+                      {{ americas_discover_a.column_one_image | image_url: width: 560 | image_tag }}
+                    {%- elsif block_product != blank -%}
+                      {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                    {%- else -%}
+                      {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="ssky-text-block__blocks">
+                  {%- if americas_discover_a.column_one_description_bottom != blank -%}
+                    <div class="ssky-product-column__text rte text-body-large">
+                      {{ americas_discover_a.column_one_description_bottom | metafield_tag }}
+                    </div>
+                  {%- else -%}
+                    <div class="ssky-product-column__price">
+                      {% render 'price', product: block_product, show_compare_at_price: true %}
+                    </div>
+                  {%- endif -%}
+                  {%- if americas_discover_a.column_one_button_link != blank -%}
+                    <a
+                      {% if americas_discover_a.column_one_button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ americas_discover_a.column_one_button_link }}"
+                      {% endif %}
+                      class="ssky-product-column__button button button--primary"
+                    >
+                      {{ americas_discover_a.column_one_button_label | escape }}
+                    </a>
+                  {%- else -%}
+                    {%- render 'buy-buttons',
+                      product: block_product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      is_product_column: true,
+                      button_label: americas_discover_a.column_one_button_label
+                    -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if americas_discover_a.column_two_product != blank -%}
+              {%- assign block_product = americas_discover_a.column_two_product.value -%}
+              {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+              <div
+                class="ssky-product-column__block ssky-product-column-large__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="ssky-text-block__blocks">
+                  <h3 class="ssky-product-column__heading ssky-text-block__heading rte h4 weight-semibold">
+                    {%- if americas_discover_a.column_two_heading != blank -%}
+                      {{ americas_discover_a.column_two_heading | metafield_tag }}
+                    {%- elsif block_product != blank -%}
+                      {{ block_product.title }}
+                    {%- else -%}
+                      {{ 'TT_Sections.product_column_Section.title_placeholder' | t }}
+                    {%- endif -%}
+                  </h3>
+                  <div class="ssky-product-column__text rte">
+                    {%- if americas_discover_a.column_two_description != blank -%}
+                      {{ americas_discover_a.column_two_description | metafield_tag }}
+                    {%- else -%}
+                      {{ block_product.description | truncatewords: 20 | strip_html }}
+                    {%- endif -%}
+                  </div>
+                  <div class="ssky-product-column__image media{%- if americas_discover_a.column_two_image_fill_or_fit != false %} image-fit{%- endif -%}">
+                    {%- if americas_discover_a.column_two_image != blank -%}
+                      {{ americas_discover_a.column_two_image | image_url: width: 560 | image_tag }}
+                    {%- elsif block_product != blank -%}
+                      {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                    {%- else -%}
+                      {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="ssky-text-block__blocks">
+                  {%- if americas_discover_a.column_two_description_bottom != blank -%}
+                    <div class="ssky-product-column__text rte text-body-large">
+                      {{ americas_discover_a.column_two_description_bottom | metafield_tag }}
+                    </div>
+                  {%- else -%}
+                    <div class="ssky-product-column__price">
+                      {% render 'price', product: block_product, show_compare_at_price: true %}
+                    </div>
+                  {%- endif -%}
+                  {%- if americas_discover_a.column_two_button_link != blank -%}
+                    <a
+                      {% if americas_discover_a.column_two_button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ americas_discover_a.column_two_button_link }}"
+                      {% endif %}
+                      class="ssky-product-column__button button button--primary"
+                    >
+                      {{ americas_discover_a.column_two_button_label | escape }}
+                    </a>
+                  {%- else -%}
+                    {%- render 'buy-buttons',
+                      product: block_product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      is_product_column: true,
+                      button_label: americas_discover_a.column_two_button_label
+                    -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {%- if show_as_card -%}</div>{%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Americas discover a",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Americas discover a"
+    }
+  ]
+}
+{% endschema %}

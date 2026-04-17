@@ -1,0 +1,359 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-text-image-block-{{ section.id }} .ssky-text-block__wrapper {
+    max-width: calc(10rem + var(--page-width));
+    padding-bottom: {{ section.settings.padding_top | times: 0.75 | round: 0 | at_least: 48 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .ssky-text-image-block-{{ section.id }} .ssky-text-block__wrapper {
+      padding-bottom: {{ section.settings.padding_top | at_least: 48 }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-image-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-text-image-block-{{ section.id }}">
+  <div class="ssky-text-image-block content-container color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class }}">
+    {%- for fun_and_engaging in shop.metaobjects.fun_and_engaging.values limit: 1 -%}
+      {%- if fun_and_engaging.top_heading != blank or fun_and_engaging.top_background_image != blank -%}
+        <div class="ssky-text-block__wrapper page-width">
+          <div class="ssky-text-block__blocks ssky-text-block__background color-scheme-1 center">
+            {%- if fun_and_engaging.top_heading != blank -%}
+              {%- assign heading_length = fun_and_engaging.top_heading | metafield_text | size -%}
+              <h2
+                class="ssky-text-block__heading rte h0 weight-semibold{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ fun_and_engaging.top_heading | metafield_tag }}
+              </h2>
+            {%- endif -%}
+            {%- if fun_and_engaging.top_background_image != blank -%}
+              {%- style -%}
+                .ssky-text-image-block-{{ section.id }} .ssky-text-block__background {
+                  background-image: url('{{ fun_and_engaging.top_background_image | image_url: width: 3840 }}');
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  border-radius: 45px;
+                  background-color: #fff;
+                  padding: 20px;
+                  padding-top: 140px;
+                  padding-bottom: 140px;
+                }
+              {%- endstyle -%}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if show_as_card -%}<div class="page-width">{%- endif -%}
+      <div class="ssky-text-image-block__wrapper {{ section.settings.image_position }} image-size-ssky-{{ section.settings.image_size }} page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+        <div class="ssky-text-image-block__image">
+          <div
+            class="{%- if fun_and_engaging.image != blank %} media{%- else %} placeholder{%- endif -%}{%- if section.settings.image_fit %} image-fit{%- endif -%}"
+            style="padding-bottom:{%- if section.settings.image_size == 'small' -%}{{ 1 | divided_by: fun_and_engaging.image.value.image.aspect_ratio | times: 100 | at_most: 150 }}%;{%- else -%}{{ 1 | divided_by: fun_and_engaging.image.value.image.aspect_ratio | times: 100 | at_most: 120 }}%;{%- endif -%}"
+          >
+            {% comment %}padding-bottom limit increased from 100% to 120% for normal conditions, on trial for sometime.{% endcomment %}
+            {%- if fun_and_engaging.image != blank -%}
+              {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+              {{
+                fun_and_engaging.image
+                | image_url: width: 1500
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="ssky-text-image-block__blocks ssky-text-block__blocks {{ section.settings.content_alignment }}">
+          {%- if fun_and_engaging.heading != blank -%}
+            {%- assign heading_length = fun_and_engaging.heading | metafield_text | size -%}
+            <h2
+              class="ssky-text-block__heading rte h3{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ fun_and_engaging.heading | metafield_tag }}
+            </h2>
+          {%- endif -%}
+          {%- if fun_and_engaging.description != blank -%}
+            <div
+              class="ssky-text-block__text rte text-medium{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ fun_and_engaging.description | metafield_tag }}
+            </div>
+          {%- endif -%}
+          {%- if fun_and_engaging.link_add_to_cart_button != blank -%}
+            {%- assign section_product = fun_and_engaging.link_add_to_cart_button.value -%}
+            {%- assign product_form_id = 'product-form-' | append: section.id | append: section_product.id -%}
+            <div
+              class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {%- render 'buy-buttons',
+                product: section_product,
+                product_form_id: product_form_id,
+                section_id: section.id,
+                button_label: fun_and_engaging.add_to_cart_button_label,
+                is_button_large: true
+              -%}
+            </div>
+          {%- endif -%}
+          {%- if fun_and_engaging.text_below_button != blank -%}
+            <div class="ssky-text-block__text-below-buttons rte">
+              {{ fun_and_engaging.text_below_button }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- if show_as_card -%}</div>{%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "TTm Fun and engaging",
+  "tag": "section",
+  "class": "section sskymo-text-image-block-k",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_fit",
+      "label": "t:sections.all.image_fit.label",
+      "default": true,
+      "info": "t:sections.all.image_fit.info"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "options": [
+        {
+          "value": "image-left",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "image-right",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "image-right",
+      "label": "Image position"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "SM"
+        },
+        {
+          "value": "smallplus",
+          "label": "SM+"
+        },
+        {
+          "value": "medium",
+          "label": "MD"
+        },
+        {
+          "value": "large",
+          "label": "LG"
+        }
+      ],
+      "default": "medium",
+      "label": "Image size"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.ssky_text_block.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.custom_class.header"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "t:sections.all.custom_class.label",
+      "info": "t:sections.all.custom_class.info",
+      "default": "heading-primary-light-blue"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Fun and engaging"
+    }
+  ]
+}
+{% endschema %}

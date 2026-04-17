@@ -1,0 +1,492 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "okendo_star_rating_ekB6wn": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "text_xCgkE7": {
+          "type": "text",
+          "settings": {
+            "text": "Recommended Ages: {{ product.metafields.custom.recommended_ages.value }}",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_FyfwHV": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "custom_liquid_KEQTRj": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- comment -%}\n  PDP-lookalike Quantity + ATC, but ATC goes to Rebuy SmartLink.\n  - Syncs with the REAL PDP quantity input\n  - Updates variants[...][quantity] params in your SmartLink\n{%- endcomment -%}\n\n{%- assign smartlink_url = 'https://www.tuttletwins.com/apps/rebuy/cart?variants%5B45740771606666%5D%5Bquantity%5D=1&variants%5B45740771606666%5D%5Bselling_plan%5D=1717960842&variants%5B45740770558090%5D%5Bproperties%5D%5B_source%5D=Rebuy&variants%5B45740770558090%5D%5Bproperties%5D%5B_widget_id%5D=219991&variants%5B45740770558090%5D%5Bproperties%5D%5B_attribution%5D=Rebuy%20Gift%20with%20Purchase&variants%5B45740770558090%5D%5Bquantity%5D=1&variants%5B47258673217674%5D%5Bproperties%5D%5B_source%5D=Rebuy&variants%5B47258673217674%5D%5Bproperties%5D%5B_attribution%5D=Rebuy%20Tiered%20Progress%20Bar&variants%5B47258673217674%5D%5Bproperties%5D%5B_tier%5D=780fd11a-5eb4-47f3-86c9-677695099d01&variants%5B47258673217674%5D%5Bquantity%5D=1&variants%5B47496995504266%5D%5Bquantity%5D=1&clear_cart=no&landing_page=shopify_checkout&smart_cart_show=no' -%}\n\n<div class=\"ssky-product-qty-atc-con ssky-rebuy-smartlink-atc\">\n  <div class=\"ssky-product-qty-con\">\n    <div class=\"product-form__input product-form__quantity\">\n      <div class=\"price-per-item__container\">\n        <quantity-input class=\"quantity\">\n          <button class=\"quantity__button disabled\" name=\"minus\" type=\"button\" data-qty-minus>\n            <span class=\"visually-hidden\">Decrease quantity</span>\n            <span class=\"svg-wrapper\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" class=\"icon icon-minus\" viewBox=\"0 0 10 2\">\n                <path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M.5 1C.5.7.7.5 1 .5h8a.5.5 0 1 1 0 1H1A.5.5 0 0 1 .5 1\" clip-rule=\"evenodd\"></path>\n              </svg>\n            </span>\n          </button>\n\n          <input\n            class=\"quantity__input\"\n            type=\"number\"\n            name=\"quantity\"\n            min=\"1\"\n            step=\"1\"\n            value=\"1\"\n            inputmode=\"numeric\"\n            pattern=\"[0-9]*\"\n            data-qty-input\n          >\n\n          <button class=\"quantity__button\" name=\"plus\" type=\"button\" data-qty-plus>\n            <span class=\"visually-hidden\">Increase quantity</span>\n            <span class=\"svg-wrapper\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" class=\"icon icon-plus\" viewBox=\"0 0 10 10\">\n                <path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M1 4.51a.5.5 0 0 0 0 1h3.5l.01 3.5a.5.5 0 0 0 1-.01V5.5l3.5-.01a.5.5 0 0 0-.01-1H5.5L5.49.99a.5.5 0 0 0-1 .01v3.5l-3.5.01z\" clip-rule=\"evenodd\"></path>\n              </svg>\n            </span>\n          </button>\n        </quantity-input>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"ssky-product-atc-con\">\n    <div class=\"buy-buttons--wrapper\">\n      <a\n        href=\"{{ smartlink_url }}\"\n        class=\"product-form__submit button button--full-width button--primary confetti-bound\"\n        data-smartlink-button\n        style=\"text-decoration:none;\"\n        aria-label=\"Add to cart\"\n      >\n        <span>Add to cart</span>\n\n        <div class=\"loading__spinner hidden\" data-smartlink-spinner>\n          <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"spinner\" viewBox=\"0 0 66 66\">\n            <circle stroke-width=\"6\" cx=\"33\" cy=\"33\" r=\"30\" fill=\"none\" class=\"path\"></circle>\n          </svg>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>\n\n<script>\n  (function () {\n    const root = document.currentScript.closest('.ssky-rebuy-smartlink-atc');\n    if (!root) return;\n\n    // Your SmartLink contains these two variants (encoded in the URL already)\n    const VARIANT_IDS_TO_UPDATE = ['45740771606666', '47480469454986'];\n\n    // Custom Liquid controls\n    const cloneInput = root.querySelector('[data-qty-input]');\n    const minus = root.querySelector('[data-qty-minus]');\n    const plus  = root.querySelector('[data-qty-plus]');\n    const btn   = root.querySelector('[data-smartlink-button]');\n    const spinner = root.querySelector('[data-smartlink-spinner]');\n\n    // PDP (real) quantity input on the page\n    const pdpInput = document.querySelector('form[action^=\"/cart/add\"] .quantity__input[name=\"quantity\"]');\n\n    const clampQty = (val) => {\n      const n = parseInt(val, 10);\n      return Number.isFinite(n) && n > 0 ? n : 1;\n    };\n\n    const setMinusDisabled = (qty) => {\n      if (!minus) return;\n      if (qty <= 1) minus.classList.add('disabled');\n      else minus.classList.remove('disabled');\n    };\n\n    const updateSmartLinkQuantities = (qty) => {\n      const currentHref = btn.getAttribute('href');\n      const url = new URL(currentHref, window.location.origin);\n\n      // Rebuy uses params like variants[ID][quantity]\n      VARIANT_IDS_TO_UPDATE.forEach((id) => {\n        url.searchParams.set(`variants[${id}][quantity]`, String(qty));\n      });\n\n      btn.setAttribute('href', url.toString());\n    };\n\n    const syncAllFromQty = (qty, source) => {\n      qty = clampQty(qty);\n\n      // Update both inputs (if present)\n      if (cloneInput && cloneInput.value !== String(qty)) cloneInput.value = qty;\n\n      // IMPORTANT: keep PDP quantity in sync too\n      // Some themes listen to input/change events, so dispatch them.\n      if (pdpInput && pdpInput.value !== String(qty) && source !== 'pdp') {\n        pdpInput.value = qty;\n        pdpInput.dispatchEvent(new Event('input', { bubbles: true }));\n        pdpInput.dispatchEvent(new Event('change', { bubbles: true }));\n      }\n\n      setMinusDisabled(qty);\n      updateSmartLinkQuantities(qty);\n    };\n\n    // Init quantity from PDP if it exists, otherwise from clone\n    const initialQty = pdpInput ? clampQty(pdpInput.value) : clampQty(cloneInput?.value || 1);\n    syncAllFromQty(initialQty);\n\n    // Listen to CUSTOM qty buttons/input\n    minus?.addEventListener('click', () => syncAllFromQty(clampQty(cloneInput.value) - 1));\n    plus?.addEventListener('click',  () => syncAllFromQty(clampQty(cloneInput.value) + 1));\n    cloneInput?.addEventListener('input', () => syncAllFromQty(cloneInput.value));\n    cloneInput?.addEventListener('change', () => syncAllFromQty(cloneInput.value));\n\n    // Listen to PDP qty changes and update clone + SmartLink\n    if (pdpInput) {\n      pdpInput.addEventListener('input',  () => syncAllFromQty(pdpInput.value, 'pdp'));\n      pdpInput.addEventListener('change', () => syncAllFromQty(pdpInput.value, 'pdp'));\n    }\n\n    // Optional spinner parity\n    btn?.addEventListener('click', () => spinner?.classList.remove('hidden'));\n  })();\n</script>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_rGnMXn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"klaviyo-form-XR6pAL\"></div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_large": true
+          }
+        },
+        "popup_RzmqbB": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "See the Bundle Comparison",
+            "content_type": "image",
+            "page": "",
+            "image": "shopify://shop_images/Bundle_Comparison.png",
+            "video_url": "",
+            "html": "",
+            "hide_title": true,
+            "visibility_mode": "tag",
+            "tag_list": "Bundle Comparison",
+            "handle_list": "",
+            "invert_match": false
+          }
+        },
+        "icon_with_text_TmywmQ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/pdp_icon_1.webp",
+            "heading_1": "",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/pdp_icon_2.webp",
+            "heading_2": "",
+            "icon_3": "none",
+            "image_3": "shopify://shop_images/pdp_icon_3.webp",
+            "heading_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "okendo_star_rating_ekB6wn",
+        "text_xCgkE7",
+        "price",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_FyfwHV",
+        "custom_liquid_KEQTRj",
+        "buy_buttons",
+        "custom_liquid_rGnMXn",
+        "description",
+        "popup_RzmqbB",
+        "icon_with_text_TmywmQ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "replo_fsp_buy_box_QL7H4R": {
+      "type": "replo-fsp-buy-box",
+      "custom_css": [
+        ".r-15sm1na {display: none !important;}"
+      ],
+      "name": "FSP - Buy Box ",
+      "settings": {}
+    },
+    "1757927398369ebdc6": {
+      "type": "apps",
+      "blocks": {
+        "okendo_media_grid_eJqkXW": {
+          "type": "shopify://apps/okendo/blocks/media-grid/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_media_grid_eJqkXW"
+      ],
+      "settings": {}
+    },
+    "17579274086252006a": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_rfKUyH": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_rfKUyH"
+      ],
+      "settings": {}
+    },
+    "sskyp_text_image_block_Ma3fbR": {
+      "type": "sskyp-text-image-block",
+      "blocks": {
+        "heading_kjphDk": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.section_tear_drop_heading | metafield_tag }}",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "text_qUUHAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.description }}</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kjphDk",
+        "text_qUUHAg"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.section_tear_drop_image.value }}",
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskyp_text_image_block_b_RQREVg": {
+      "type": "sskyp-text-image-block-b",
+      "blocks": {
+        "heading_MCRPrC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.metafields.woo.cta_title.value }}</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "caption_xgbqwY": {
+          "type": "caption",
+          "settings": {
+            "caption": "{{ product.metafields.woo.cta_subtitle.value }}",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_giNap8": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_jANKfK": {
+          "type": "checkbox",
+          "settings": {
+            "text": "",
+            "text_large": false
+          }
+        },
+        "button_HYcqE3": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MCRPrC",
+        "caption_xgbqwY",
+        "text_giNap8",
+        "checkbox_jANKfK",
+        "button_HYcqE3"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_k_eAECEn": {
+      "type": "sskymo-text-image-block-k",
+      "settings": {
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "custom_class": "heading-primary-light-blue",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "sskymo_product_column_c_yADiN4": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_c_yUXaNe": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_RiQr48": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskyp_atc_autopopulate_takR8L": {
+      "type": "sskyp-atc-autopopulate",
+      "blocks": {
+        "heading_3whfpd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.title }}</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "text_wRyXK6": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.section_atc_description | metafield_tag }}",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "testimonial_KAfzNf": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"{{ product.metafields.woo.testimonial | metafield_tag }}\"<strong><br/></strong><strong>{{ product.metafields.woo.testimonial_by.value }}</strong></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3whfpd",
+        "text_wRyXK6",
+        "testimonial_KAfzNf"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "17466480155b8d349c": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_wNCX4x": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "212015",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_wNCX4x"
+      ],
+      "settings": {}
+    },
+    "sskymo_text_image_block_b_rXATQX": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "replo_fsp_buy_box_QL7H4R",
+    "1757927398369ebdc6",
+    "17579274086252006a",
+    "sskyp_text_image_block_Ma3fbR",
+    "sskyp_text_image_block_b_RQREVg",
+    "sskymo_text_image_block_k_eAECEn",
+    "related-products",
+    "sskymo_product_column_c_yADiN4",
+    "sskymo_text_image_block_c_yUXaNe",
+    "sskymo_three_block_RiQr48",
+    "sskyp_atc_autopopulate_takR8L",
+    "17466480155b8d349c",
+    "sskymo_text_image_block_b_rXATQX"
+  ]
+}

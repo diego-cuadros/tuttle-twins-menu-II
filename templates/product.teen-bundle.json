@@ -1,0 +1,709 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "okendo_star_rating_qLCbcH": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "text_RtHiYi": {
+          "type": "text",
+          "settings": {
+            "text": "Recommended Ages: {{ product.metafields.custom.recommended_ages.value }}",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_large": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "icon_with_text_TmywmQ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/pdp_icon_1.webp",
+            "heading_1": "",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/pdp_icon_2.webp",
+            "heading_2": "",
+            "icon_3": "none",
+            "image_3": "shopify://shop_images/pdp_icon_3.webp",
+            "heading_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "okendo_star_rating_qLCbcH",
+        "text_RtHiYi",
+        "price",
+        "buy_buttons",
+        "description",
+        "variant_picker",
+        "icon_with_text_TmywmQ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
+    "17579275513f4ab1ab": {
+      "type": "apps",
+      "blocks": {
+        "okendo_media_grid_jbH4wt": {
+          "type": "shopify://apps/okendo/blocks/media-grid/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_media_grid_jbH4wt"
+      ],
+      "settings": {}
+    },
+    "1757927561e4c7d14e": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_YHYYBV": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_YHYYBV"
+      ],
+      "settings": {}
+    },
+    "sskymo_text_column_d_m6bTYG": {
+      "type": "sskymo-text-column-d",
+      "name": "TTm CYOC text column",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskyp_text_image_block_b_QVA8hJ": {
+      "type": "sskyp-text-image-block-b",
+      "blocks": {
+        "heading_CL7LfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.metafields.woo.cta_title.value }}</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "caption_x46KgL": {
+          "type": "caption",
+          "settings": {
+            "caption": "{{ product.metafields.woo.cta_subtitle.value }}",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_6kzQMw": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_hQjrx8": {
+          "type": "checkbox",
+          "settings": {
+            "text": "",
+            "text_large": false
+          }
+        },
+        "button_wNQTQ6": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CL7LfL",
+        "caption_x46KgL",
+        "text_6kzQMw",
+        "checkbox_hQjrx8",
+        "button_wNQTQ6"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_glide_slider_qicjLt": {
+      "type": "ssky-image-glide-slider",
+      "blocks": {
+        "ai_gen_block_a0ecce1_q3MVdr": {
+          "type": "ai_gen_block_a0ecce1",
+          "settings": {
+            "slide_background_color": "#ffffff",
+            "title_color": "#3f3939",
+            "description_color": "#3f3939",
+            "title_font_size": 18,
+            "description_font_size": 16,
+            "button_background_color": "#da5846",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "dot_active_color": "#000000",
+            "dot_inactive_color": "#cccccc",
+            "book_1_show": true,
+            "book_1_image": "shopify://shop_images/Inspiring-Interprenuers.webp",
+            "book_1_title": "Inspiring Entrepreneurs",
+            "book_1_description": "Their stories can serve as inspiration for teens  beginning to determine their own path in life.",
+            "book_2_show": true,
+            "book_2_image": "shopify://shop_images/guidebook_conspiracy.webp",
+            "book_2_title": "True Conspiracies",
+            "book_2_description": "By illuminating these obscure corners of history, this book will challenge teens (and adults!) to question, to seek the truth, and to be skeptical of those in power.",
+            "book_3_show": true,
+            "book_3_image": "shopify://shop_images/Modern-Villains.webp",
+            "book_3_title": "Modern Villains",
+            "book_3_description": "These lessons may just have the key we need to learn from the past, so the list of future villains is far shorter than the list in this book.",
+            "book_4_show": true,
+            "book_4_image": "shopify://shop_images/Coragious-Hero.webp",
+            "book_4_title": "Courageous Heroes",
+            "book_4_description": "Inspiring stories like these offer us an opportunity to learn lessons from the lives of a wide variety of people and ponder how we might have acted in a similar situation.",
+            "book_5_show": true,
+            "book_5_image": "shopify://shop_images/Logical-Fallacies.webp",
+            "book_5_title": "Logical Fallacies",
+            "book_5_description": "Teens will become expert debaters by being able to point out a flaw in an opponent's argument.",
+            "book_6_show": true,
+            "book_6_image": "shopify://shop_images/Beware-Your-Bias.webp",
+            "book_6_title": "Beware of Your Bias",
+            "book_6_description": "Those who read this book will have an advantage over others who are mentally manipulated without knowing it.",
+            "book_7_show": true,
+            "book_7_image": "shopify://shop_images/Worlds_Worst_Ideas_book.png",
+            "book_7_title": "World's Worst Ideas",
+            "book_7_description": "Through a deep dive into history's worst ideas and their lasting consequences, this book encourages teens to question popular narratives, recognize harmful ideologies, and become bold defenders of freedom and reason.",
+            "book_8_show": true,
+            "book_8_image": "shopify://shop_images/Days-of-darkness-3-1024x1024.webp",
+            "book_8_title": "Days of Darkness",
+            "book_8_description": "In an instant, the world for Ethan and Emily is shrouded in shadow. Go on an electrifying adventure where every decision can light the way or cast you further into chaos. 4 possible endings; 475 pages of content!",
+            "book_9_show": true,
+            "book_9_image": "shopify://shop_images/Hyperinflation-Devastation-hero-with-shadow-1-1024x1024.webp",
+            "book_9_title": "Hyperinflation Devastation",
+            "book_9_description": "It's the perfect vacation: the Tuttle Twins have saved their money, planned things out thoroughly, and are ready to head off to South America to water ski, hike the jungles, and see some of the world's oldest ruins. What could go wrong? 5 possible endings; 405 pages of content!",
+            "book_10_show": true,
+            "book_10_image": "shopify://shop_images/Little-Pink-House-hero-with-shadow-1.webp",
+            "book_10_title": "Little Pink House",
+            "book_10_description": "When a greedy corporation schemes to take over Grandma's land and push her little pink house into the river, can the twins stop it and come to her rescue? 10 possible endings; 496 pages of content!",
+            "book_11_show": true,
+            "book_11_image": "shopify://shop_images/Broken-Window-hero-with-shadow-1-1024x1024.webp",
+            "book_11_title": "Case of the Broken Window",
+            "book_11_description": "It's a perfect day for a game of baseball, and the Tuttle twins are determined to finally beat the rival team from the neighborhood. The game-winning home run from Emily gets them what they want...along with a whole lot of trouble. 9 possible endings; 279 pages of content!",
+            "book_12_show": true,
+            "book_12_image": "shopify://shop_images/Play-for-Power-hero-with-shadow-1-1024x1024.webp",
+            "book_12_title": "Play for Power",
+            "book_12_description": "Dennis Forde, Secretary of State, has died, and the Tuttle twins are headed for the funeral. Little do they know the opportunities—for good and bad—that will come from this event. 9 possible endings; 359 pages of content!"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a0ecce1_q3MVdr"
+      ],
+      "disabled": true,
+      "name": "TT Image swiper slider",
+      "settings": {
+        "color_scheme": "",
+        "fullwidth": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_text_block_wD86WM": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_AUQr6i": {
+          "type": "caption",
+          "settings": {
+            "caption": "Equipping the Next Generation of Free Thinkers",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_pzG4md": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside the Bundle?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_YYjPTY": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>There is no better way to teach your children about liberty than to read these books with them. They will learn how the world really works and that every choice has a consequence. Check out what's inside!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_YEPNxA": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Logical Fallacies</strong>: Teens will become expert debaters by being able to point out a flaw in an opponent's argument.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_PJzXTz": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Inspiring Entrepreneurs:</strong> Their stories can serve as inspiration for teens beginning to determine their own path in life.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_3XeVFx": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Courageous Heroes:</strong> Inspiring stories like these offer us an opportunity to learn lessons from the lives of a wide variety of people and ponder how we might have acted in a similar situation.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_xAzpwe": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Beware Your Bias:</strong> Those who read this book will have an advantage over others who are mentally manipulated without knowing it.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_KDapxh": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Modern Villains</strong>: These lessons may just have the key we need to learn from the past, so the list of future villains is far shorter than the list in this book.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_pihETh": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>True Conspiracies:</strong> By illuminating these obscure corners of history, this book will challenge teens (and adults!) to question, to seek the truth, and to be skeptical of those in power.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_qrbK6k": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>World's Worst Ideas:</strong> Through a deep dive into history's worst ideas and their lasting consequences, this book encourages teens to question popular narratives, recognize harmful ideologies, and become bold defenders of freedom and reason.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_8CXnag": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Days of Darkness</strong>: In an instant, the world for Ethan and Emily is shrouded in shadow. Go on an electrifying adventure where every decision can light the way or cast you further into chaos. 4 possible endings; 475 pages of content!</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_mFbtMd": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Hyperinflation Devastation</strong>: It's the perfect vacation: the Tuttle Twins have saved their money, planned things out thoroughly, and are ready to head off to South America to water ski, hike the jungles, and see some of the world's oldest ruins. What could go wrong? 5 possible endings; 405 pages of content!</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_qpeBi6": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Little Pink House</strong>: When a greedy corporation schemes to take over Grandma's land and push her little pink house into the river, can the twins stop it and come to her rescue? 10 possible endings; 496 pages of content!</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_bFWan9": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Case of the Broken Window</strong>: It's a perfect day for a game of baseball, and the Tuttle twins are determined to finally beat the rival team from the neighborhood. The game-winning home run from Emily gets them what they want...along with a whole lot of trouble. 9 possible endings; 279 pages of content!</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_VczJ9q": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Play for Power</strong>: Dennis Forde, Secretary of State, has died, and the Tuttle twins are headed for the funeral. Little do they know the opportunities—for good and bad—that will come from this event. 9 possible endings; 359 pages of content!</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "caption_AUQr6i",
+        "heading_pzG4md",
+        "text_YYjPTY",
+        "checkbox_YEPNxA",
+        "checkbox_PJzXTz",
+        "checkbox_3XeVFx",
+        "checkbox_xAzpwe",
+        "checkbox_KDapxh",
+        "checkbox_pihETh",
+        "checkbox_qrbK6k",
+        "checkbox_8CXnag",
+        "checkbox_mFbtMd",
+        "checkbox_qpeBi6",
+        "checkbox_bFWan9",
+        "checkbox_VczJ9q"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": "description"
+      }
+    },
+    "sskyp_atc_autopopulate_6nPAPh": {
+      "type": "sskyp-atc-autopopulate",
+      "blocks": {
+        "heading_rdhAGi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.title }}</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "text_rpVKLk": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.section_atc_description | metafield_tag }}",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "testimonial_Gdt3B3": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"{{ product.metafields.woo.testimonial | metafield_tag }}\"<strong><br/></strong><strong>{{ product.metafields.woo.testimonial_by.value }}</strong></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rdhAGi",
+        "text_rpVKLk",
+        "testimonial_Gdt3B3"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "scheme-1",
+        "merging_color": "#04aed8",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_6TEzn4": {
+      "type": "z-video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "So Glad I Bought These Books",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=9Bmp_29ghqw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_I_am_glad_that_I_buy.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ssky_testimonials_di8piQ": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_KGCmXg": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about</strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Marcus D.",
+            "author_state": "Illinois",
+            "author_image": "shopify://shop_images/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_KGCmXg"
+      ],
+      "name": "TT Testimonials",
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_c_mV3bRK": {
+      "type": "sskymo-text-column-c",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_slide_iwNBPC": {
+      "type": "sskymo-image-slide",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "17466479813764fd69": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_8rFKFa": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "212015",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_8rFKFa"
+      ],
+      "settings": {}
+    },
+    "sskymo_text_image_block_b_WVtgjx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17579275513f4ab1ab",
+    "1757927561e4c7d14e",
+    "sskymo_text_column_d_m6bTYG",
+    "sskyp_text_image_block_b_QVA8hJ",
+    "ssky_image_glide_slider_qicjLt",
+    "ssky_text_block_wD86WM",
+    "sskyp_atc_autopopulate_6nPAPh",
+    "z_video_6TEzn4",
+    "ssky_testimonials_di8piQ",
+    "sskymo_text_column_c_mV3bRK",
+    "sskymo_image_slide_iwNBPC",
+    "17466479813764fd69",
+    "sskymo_text_image_block_b_WVtgjx",
+    "related-products"
+  ]
+}

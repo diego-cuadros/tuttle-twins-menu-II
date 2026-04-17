@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.Americas History.json",
+  "context": {
+    "market": "all-b2b"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "recharge_subscriptions_subscription_widget_v2_FyfwHV": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "z_quick_order_list_rhnCn": {
+      "type": "z-quick-order-list",
+      "disabled": false,
+      "settings": {
+        "show_image": false,
+        "show_sku": false,
+        "color_scheme": "",
+        "header-44b435a3e33ae4d08b136f251e8ec084": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "t:sections.quick-order-list.presets.name"
+    }
+  },
+  "order": [
+    "main",
+    "z_quick_order_list_rhnCn",
+    "sskyp_text_image_block_iwiedg",
+    "sskyp_text_image_block_b_VWUmpY",
+    "related-products",
+    "sskymo_text_column_e_aak6zR",
+    "sskymo_text_block_f_wxaNjn",
+    "sskymo_product_column_f_ErjUfU",
+    "sskymo_product_column_g_ePfWQW",
+    "17466475286431d87d",
+    "sskymo_text_image_block_b_LbXCVt",
+    "sskyp_atc_autopopulate_hCVkiG"
+  ]
+}

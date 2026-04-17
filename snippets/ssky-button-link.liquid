@@ -1,0 +1,25 @@
+{% comment %}
+  Add metaobjects type for 'type':
+  Usage:
+    {% render 'ssky-button-link', type: add_metaobjects_type_here %}
+    {% capture link_value %}{% render 'ssky-button-link', type: add_metaobjects_type_here %}{% endcapture %}
+{% endcomment %}
+{% liquid
+assign w = type.link_a_collection
+assign x = type.link_a_product
+assign y = type.link_a_page
+assign z = type.link_a_url
+if w != blank
+assign b = collections[w.value.handle]
+assign a = b.url
+elsif x != blank
+assign b = all_products[x.value.handle]
+assign a = b.url
+elsif y != blank
+assign b = pages[y.value.handle]
+assign a = b.url
+elsif z != blank
+assign b = z
+assign a = b
+endif
+%}{% echo a %}

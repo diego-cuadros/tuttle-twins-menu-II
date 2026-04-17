@@ -1,0 +1,70 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Announcement Bar
+  File:    sections/section-a250-annbar.liquid
+  ============================================================
+{% endcomment %}
+
+{{ 'america250.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Nunito+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+{% if section.settings.visible %}
+<div class="a250">
+  <div class="a250-annbar">
+    {% if section.settings.emoji != blank %}
+      {{ section.settings.emoji }}&nbsp;
+    {% endif %}
+    {{ section.settings.message }}
+    {% if section.settings.link_text != blank and section.settings.link_url != blank %}
+      &nbsp;<a href="{{ section.settings.link_url }}">{{ section.settings.link_text }} →</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "A250 · Announcement Bar",
+  "tag": "div",
+  "class": "a250-section-annbar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "emoji",
+      "label": "Emoji / Icon",
+      "default": "🇺🇸"
+    },
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Bar message",
+      "default": "America's 250th is here."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "Enter the Young Voices Contest"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

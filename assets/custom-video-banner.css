@@ -1,0 +1,229 @@
+.video-section__media {
+  --ratio-percent: 56.25%;
+  position: relative;
+  padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
+  overflow: hidden;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: none;
+}
+
+/* Keep rounded bottom corners visible in both poster and loaded-video states. */
+.video-section__media,
+.video-section__media.global-media-settings--full-width,
+.video-section__media .video-section__poster,
+.video-section__media .video-section__poster img,
+.video-section__media iframe,
+.video-section__media video {
+  border-bottom-left-radius: 100px !important;
+  border-bottom-right-radius: 100px !important;
+}
+
+@media only screen and (max-width: 749px) {
+  .video-section__media,
+  .video-section__media.global-media-settings--full-width,
+  .video-section__media .video-section__poster,
+  .video-section__media .video-section__poster img,
+  .video-section__media iframe,
+  .video-section__media video {
+    border-bottom-left-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+  }
+}
+
+/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
+.scroll-trigger:where(.gradient.video-section__media) {
+  background: transparent;
+}
+
+.video-section__media.global-media-settings--full-width {
+  padding-bottom: var(--ratio-percent);
+}
+
+.video-section__media.deferred-media {
+  box-shadow: var(--media-shadow-horizontal-offset)
+    var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.video-section__media.deferred-media:after {
+  content: none;
+}
+
+.video-section__poster.deferred-media__poster:focus {
+  outline-offset: 0.3rem;
+}
+
+.video-section__media iframe {
+  background-color: rgba(var(--color-foreground), 0.03);
+  border: 0;
+}
+
+.video-section__poster,
+.video-section__media iframe,
+.video-section__media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video-section__media video {
+  background: #000000;
+}
+
+.video-section__overlay-card {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  color: #ffffff;
+  padding: 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.video-section__overlay-badge {
+  margin: 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  background: #38aed8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.video-section__overlay-title {
+  margin: 0;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 600 !important;
+  line-height: 1.15;
+  text-align: left;
+}
+
+@media only screen and (max-width: 749px) {
+  .video-section__overlay-title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.video-section__overlay-button {
+  display: inline-block;
+  margin-top: 11px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.video-section__overlay-small-text {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 1.2rem;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.video-section__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+  margin-right: 8px;
+}
+
+.video-section__stars svg {
+  width: 16px;
+  height: 15px;
+}
+
+/* Hide default center play icon so overlay card is the visual focus. */
+.video-section__media .deferred-media__poster-button {
+  display: none;
+}
+
+.video-section__media.media-fit-cover video {
+  object-fit: cover;
+}
+
+@media screen and (min-width: 750px) {
+  .video-section__media,
+  .video-section__media.global-media-settings--full-width {
+    height: 403px !important;
+    min-height: 403px !important;
+    max-height: 403px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .video-section__poster img,
+  .video-section__media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-section__media .video-section__solid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, #040604 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+    display: block;
+    border-bottom-left-radius: 100px;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .video-section__solid-overlay {
+    display: none;
+  }
+
+  .video-section__overlay-card {
+    padding: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 749px) {
+  .dc_content-for_mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .dc_content-for_mobile {
+    display: block;
+    position: relative;
+    z-index: 6;
+    background: linear-gradient(to bottom, #040604 75%, rgba(0, 0, 0, 0) 100%);
+    border: none;
+    padding: 24px 16px 80px 16px;
+    margin-bottom: -85px;
+    text-align: center;
+  }
+
+  .video-section__overlay-badge {
+    margin: auto;
+  }
+
+  .video-section__media {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dc_content-for-desktop {
+    display: none;
+  }
+}

@@ -1,0 +1,181 @@
+.product-grid:not(.ssky-hide-text-content) .grid__item:hover {
+  background-color: none !important;
+  border: none !important;
+}
+
+.ssky-quick-add.quick-add {
+  position: relative !important;
+  display: block !important;
+}
+
+.grid__item {
+  background-color: #ffffff !important;
+  border-radius: 15px !important;
+  border: none !important;
+  padding-bottom: 20px !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-grid:not(.ssky-hide-text-content) .grid__item:hover {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border: none !important;
+}
+
+.product-grid:not(.ssky-hide-text-content) .grid__item:hover .card__inner,
+.product-grid:not(.ssky-hide-text-content)
+  .grid__item:hover
+  .card__information {
+  opacity: 1 !important;
+}
+
+.dc_age-tag {
+  padding: 4px 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card__information h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.card__information h3 a {
+  font-size: 24px;
+  line-height: 120%;
+}
+
+@media only screen and (max-width: 749px) {
+  .card__information h3 a {
+    font-size: 16px;
+  }
+}
+
+.price__container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.price__sale {
+  display: grid !important;
+  grid-template-columns: auto auto;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.price__sale .price-item--sale {
+  grid-column: 1;
+}
+
+.price__sale span:has(s) {
+  grid-column: 2;
+  display: inline-block;
+  order: 2;
+}
+
+.price__sale .visually-hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 749px) {
+  .price__sale .price-item {
+    font-size: 1.6rem !important;
+  }
+}
+
+.card-information
+  > *:not(.visually-hidden:first-child)
+  + *:not(.rating):not(.card__information-volume-pricing-note) {
+  margin-top: 0px !important;
+}
+
+.metafield-rich_text_field {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media only screen and (max-width: 749px) {
+  .metafield-rich_text_field {
+    font-size: 11px;
+  }
+}
+
+.metafield-rich_text_field p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.metafield-rich_text_field ul {
+  padding-left: 20px !important;
+}
+
+@media only screen and (max-width: 749px) {
+  .metafield-rich_text_field ul {
+    padding-left: 10px !important;
+  }
+}
+
+.ssky-quick-add.quick-add .button {
+  min-height: 54px !important;
+}
+
+.ssky-quick-add.quick-add {
+  width: 100% !important ;
+}
+
+button span {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 749px) {
+  button span {
+    font-size: 14px !important;
+  }
+
+  .ssky-quick-add.quick-add .button {
+    min-height: 41px !important;
+  }
+}
+
+
+@media only screen and (max-width: 749px) {
+  /* Prevent the text wrap */
+  .dc_shop-now span {
+    white-space: nowrap !important;
+    font-size: 14px !important;
+  }
+
+  /* Adjust padding if the button looks too cramped */
+  .dc_shop-now.button {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    min-height: 41px !important;
+  }
+}
+@media only screen and (max-width: 749px) {
+  .price__sale {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .price__sale .price-item--sale {
+    order: 1 !important; 
+    grid-column: auto !important;
+    font-size: 16px !important; 
+    line-height: 1.2 !important;
+  }
+
+  .price__sale span:has(s) {
+    order: 2 !important; 
+    grid-column: auto !important;
+    opacity: 0.7;
+    margin-top: 0px !important;
+  }
+
+
+  .price__sale span:has(s) s {
+    font-size: 14px !important;
+  }
+}

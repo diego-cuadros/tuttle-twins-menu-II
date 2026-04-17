@@ -1,0 +1,598 @@
+{% doc %}
+  @prompt
+    An interactive horizontal collection slider that rotates items, and highlights and pops out the item when the user hovers over it., Can you make it so there's no arrow buttons and it automatically rotates new products every couple seconds?, Make the Title and Price optional to show, On mobile, the items aren't being centered when they rotate, especially when the visible item is set to 1, Hm, the products still aren't centered on mobile.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-slider-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    padding: {{ block.settings.padding }}px 0;
+    width: 100%;
+  }
+
+  .ai-collection-slider-track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.8s ease;
+    gap: {{ block.settings.gap }}px;
+    padding: 0 20px;
+  }
+
+  .ai-collection-slider-item-{{ ai_gen_id }} {
+    flex: 0 0 calc((100% - ({{ block.settings.visible_items }} - 1) * {{ block.settings.gap }}px) / {{ block.settings.visible_items }});
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-collection-slider-item-{{ ai_gen_id }}:hover {
+    transform: translateY(-{{ block.settings.hover_lift }}px) scale({{ block.settings.hover_scale | divided_by: 10.0 | plus: 1.0 }});
+    z-index: 2;
+    box-shadow: 0 {{ block.settings.shadow_size }}px {{ block.settings.shadow_size | times: 2 }}px rgba(0, 0, 0, {{ block.settings.shadow_opacity | divided_by: 100.0 }});
+  }
+
+  .ai-collection-slider-image-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+    margin-bottom: {% if block.settings.show_title or block.settings.show_price %}10px{% else %}0{% endif %};
+  }
+
+  .ai-collection-slider-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-collection-slider-item-{{ ai_gen_id }}:hover .ai-collection-slider-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-collection-slider-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-collection-slider-placeholder-{{ ai_gen_id }} svg {
+    width: 80%;
+    height: 80%;
+  }
+
+  .ai-collection-slider-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 500;
+    margin: 0 0 5px;
+    color: {{ block.settings.title_color }};
+  }
+
+  .ai-collection-slider-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_size }}px;
+    color: {{ block.settings.price_color }};
+    margin: 0;
+  }
+
+  .ai-collection-slider-dots-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .ai-collection-slider-dot-{{ ai_gen_id }} {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  .ai-collection-slider-dot-{{ ai_gen_id }}.active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-slider-{{ ai_gen_id }} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    .ai-collection-slider-track-{{ ai_gen_id }} {
+      padding: 0;
+    }
+    
+    .ai-collection-slider-item-{{ ai_gen_id }} {
+      flex: 0 0 calc((100% - ({{ block.settings.visible_items_mobile }} - 1) * {{ block.settings.gap }}px) / {{ block.settings.visible_items_mobile }});
+    }
+    
+    .ai-collection-slider-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | minus: 2 }}px;
+    }
+    
+    .ai-collection-slider-price-{{ ai_gen_id }} {
+      font-size: {{ block.settings.price_size | minus: 2 }}px;
+    }
+    
+    /* For single item on mobile, ensure it's centered */
+    {% if block.settings.visible_items_mobile == 1 %}
+    .ai-collection-slider-{{ ai_gen_id }} {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .ai-collection-slider-track-{{ ai_gen_id }} {
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    {% endif %}
+  }
+{% endstyle %}
+
+<collection-slider-{{ ai_gen_id }} 
+  class="ai-collection-slider-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+  data-visible-items="{{ block.settings.visible_items }}"
+  data-visible-items-mobile="{{ block.settings.visible_items_mobile }}"
+  data-rotation-speed="{{ block.settings.rotation_speed }}"
+  data-pause-on-hover="{{ block.settings.pause_on_hover }}"
+>
+  <div class="ai-collection-slider-track-{{ ai_gen_id }}">
+    {% if block.settings.collection != blank %}
+      {% for product in block.settings.collection.products limit: block.settings.product_limit %}
+        <a href="{{ product.url }}" class="ai-collection-slider-item-{{ ai_gen_id }}">
+          <div class="ai-collection-slider-image-container-{{ ai_gen_id }}">
+            {% if product.featured_image != blank %}
+              <img
+                src="{{ product.featured_image | image_url: width: 400 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                class="ai-collection-slider-image-{{ ai_gen_id }}"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-collection-slider-placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.show_title %}
+            <h3 class="ai-collection-slider-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+          {% endif %}
+          {% if block.settings.show_price %}
+            <p class="ai-collection-slider-price-{{ ai_gen_id }}">{{ product.price | money }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    {% else %}
+      {% for i in (1..6) %}
+        <div class="ai-collection-slider-item-{{ ai_gen_id }}">
+          <div class="ai-collection-slider-image-container-{{ ai_gen_id }}">
+            <div class="ai-collection-slider-placeholder-{{ ai_gen_id }}">
+              {{ 'product-1' | placeholder_svg_tag }}
+            </div>
+          </div>
+          {% if block.settings.show_title %}
+            <h3 class="ai-collection-slider-title-{{ ai_gen_id }}">Sample Product</h3>
+          {% endif %}
+          {% if block.settings.show_price %}
+            <p class="ai-collection-slider-price-{{ ai_gen_id }}">$19.99</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+  {% if block.settings.show_dots %}
+  <div class="ai-collection-slider-dots-{{ ai_gen_id }}">
+    {% if block.settings.collection != blank %}
+      {% assign product_count = block.settings.collection.products.size %}
+      {% if product_count > block.settings.product_limit %}
+        {% assign product_count = block.settings.product_limit %}
+      {% endif %}
+    {% else %}
+      {% assign product_count = 6 %}
+    {% endif %}
+    
+    {% assign visible_items = block.settings.visible_items %}
+    {% if product_count > visible_items %}
+      {% assign dot_count = product_count | minus: visible_items | plus: 1 %}
+      {% for i in (1..dot_count) %}
+        <div class="ai-collection-slider-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endif %}
+</collection-slider-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionSlider extends HTMLElement {
+      constructor() {
+        super();
+        this.track = this.querySelector('.ai-collection-slider-track-{{ ai_gen_id }}');
+        this.items = this.querySelectorAll('.ai-collection-slider-item-{{ ai_gen_id }}');
+        this.dots = this.querySelectorAll('.ai-collection-slider-dot-{{ ai_gen_id }}');
+        this.visibleItems = parseInt(this.dataset.visibleItems);
+        this.visibleItemsMobile = parseInt(this.dataset.visibleItemsMobile);
+        this.rotationSpeed = parseInt(this.dataset.rotationSpeed) * 1000;
+        this.pauseOnHover = this.dataset.pauseOnHover === 'true';
+        this.currentIndex = 0;
+        this.itemCount = this.items.length;
+        this.isMobile = window.innerWidth < 750;
+        this.interval = null;
+        this.isHovered = false;
+        this.slideWidth = 0;
+        this.containerWidth = 0;
+      }
+
+      connectedCallback() {
+        if (this.items.length <= (this.isMobile ? this.visibleItemsMobile : this.visibleItems)) {
+          return;
+        }
+
+        this.calculateDimensions();
+        window.addEventListener('resize', this.handleResize.bind(this));
+        
+        this.startAutoRotation();
+        
+        if (this.pauseOnHover) {
+          this.addEventListener('mouseenter', () => {
+            this.isHovered = true;
+          });
+          
+          this.addEventListener('mouseleave', () => {
+            this.isHovered = false;
+          });
+        }
+        
+        this.dots.forEach(dot => {
+          dot.addEventListener('click', () => {
+            this.currentIndex = parseInt(dot.dataset.index);
+            this.updateSlider();
+            this.updateDots();
+          });
+        });
+      }
+
+      disconnectedCallback() {
+        this.stopAutoRotation();
+        window.removeEventListener('resize', this.handleResize.bind(this));
+      }
+
+      calculateDimensions() {
+        this.containerWidth = this.offsetWidth;
+        const currentVisibleItems = this.isMobile ? this.visibleItemsMobile : this.visibleItems;
+        const gap = parseInt(getComputedStyle(this.track).gap);
+        
+        // Calculate item width based on container and gap
+        if (this.items.length > 0) {
+          const firstItem = this.items[0];
+          const itemStyle = getComputedStyle(firstItem);
+          const itemPadding = parseInt(itemStyle.paddingLeft) + parseInt(itemStyle.paddingRight);
+          
+          if (this.isMobile && currentVisibleItems === 1) {
+            // For single item on mobile, use a fixed percentage of container width
+            this.slideWidth = firstItem.offsetWidth;
+          } else {
+            // For multiple items, calculate based on container width and gaps
+            this.slideWidth = (this.containerWidth - (gap * (currentVisibleItems - 1))) / currentVisibleItems;
+          }
+        }
+      }
+
+      handleResize() {
+        const wasMobile = this.isMobile;
+        this.isMobile = window.innerWidth < 750;
+        
+        if (wasMobile !== this.isMobile) {
+          this.calculateDimensions();
+          this.currentIndex = 0;
+          this.updateSlider();
+          this.updateDots();
+        } else {
+          this.calculateDimensions();
+          this.updateSlider();
+        }
+      }
+
+      startAutoRotation() {
+        if (this.interval) return;
+        
+        this.interval = setInterval(() => {
+          if (!this.isHovered) {
+            this.next();
+          }
+        }, this.rotationSpeed);
+      }
+
+      stopAutoRotation() {
+        if (this.interval) {
+          clearInterval(this.interval);
+          this.interval = null;
+        }
+      }
+
+      next() {
+        const currentVisibleItems = this.isMobile ? this.visibleItemsMobile : this.visibleItems;
+        const maxIndex = this.itemCount - currentVisibleItems;
+        
+        if (this.currentIndex >= maxIndex) {
+          this.currentIndex = 0;
+        } else {
+          this.currentIndex++;
+        }
+        
+        this.updateSlider();
+        this.updateDots();
+      }
+
+      updateSlider() {
+        // Calculate the gap between items
+        const gap = parseInt(getComputedStyle(this.track).gap);
+        const currentVisibleItems = this.isMobile ? this.visibleItemsMobile : this.visibleItems;
+        
+        // Calculate the translation amount based on item width and gap
+        let translateX;
+        
+        if (this.isMobile && currentVisibleItems === 1) {
+          // For single item on mobile, center the current item
+          const itemWidth = this.items[0].offsetWidth;
+          const trackWidth = this.track.offsetWidth;
+          const containerWidth = this.offsetWidth;
+          
+          // Calculate center position
+          const itemCenter = (itemWidth / 2);
+          const containerCenter = (containerWidth / 2);
+          
+          // Calculate how much to translate to center the current item
+          translateX = -(this.currentIndex * (itemWidth + gap)) + (containerCenter - itemCenter);
+        } else {
+          // For multiple items, standard translation
+          translateX = -(this.currentIndex * (this.slideWidth + gap));
+        }
+        
+        this.track.style.transform = `translateX(${translateX}px)`;
+      }
+      
+      updateDots() {
+        this.dots.forEach((dot, index) => {
+          if (index === this.currentIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('collection-slider-{{ ai_gen_id }}', CollectionSlider);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "visible_items",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Visible items (desktop)"
+    },
+    {
+      "type": "select",
+      "id": "visible_items_mobile",
+      "options": [
+        {"value": "1", "label": "1"},
+        {"value": "2", "label": "2"}
+      ],
+      "default": "1",
+      "label": "Visible items (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "default": 20,
+      "unit": "px",
+      "label": "Gap between items"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "px",
+      "label": "Vertical padding"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "default": 8,
+      "unit": "px",
+      "label": "Border radius"
+    },
+    {
+      "type": "header",
+      "content": "Product Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show product title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show product price",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16,
+      "unit": "px",
+      "label": "Title size"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 14,
+      "unit": "px",
+      "label": "Price size"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Hover Effects"
+    },
+    {
+      "type": "range",
+      "id": "hover_lift",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "default": 10,
+      "unit": "px",
+      "label": "Hover lift distance"
+    },
+    {
+      "type": "range",
+      "id": "hover_scale",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "%",
+      "label": "Hover scale"
+    },
+    {
+      "type": "range",
+      "id": "shadow_size",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "default": 10,
+      "unit": "px",
+      "label": "Shadow size"
+    },
+    {
+      "type": "range",
+      "id": "shadow_opacity",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "default": 15,
+      "unit": "%",
+      "label": "Shadow opacity"
+    },
+    {
+      "type": "header",
+      "content": "Autoplay Settings"
+    },
+    {
+      "type": "range",
+      "id": "rotation_speed",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "unit": "s",
+      "label": "Rotation interval"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show indicator dots",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Indicator dot color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider"
+    }
+  ]
+}
+{% endschema %}

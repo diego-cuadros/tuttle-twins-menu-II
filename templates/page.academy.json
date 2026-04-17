@@ -1,0 +1,1920 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_hero_banner_4zfBk7": {
+      "type": "ssky-hero-banner",
+      "blocks": {
+        "caption_r8GKwr": {
+          "type": "caption",
+          "settings": {
+            "caption": "Tuttle Twins Academy",
+            "text_style": "large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "heading_YEtqJp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Educating and Inspiring Teens for the Real World",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_76JR34": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Trusted content to shape the next generation of thinkers and leaders. </p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_mNWtDy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/d6c200d33af257348c3a546b7ee30df6_621131af-2425-4f2e-9058-35caa2ab4546.png",
+            "image_fit": true
+          }
+        },
+        "button_KreQa8": {
+          "type": "button",
+          "settings": {
+            "button_large": true,
+            "button_full": false,
+            "button_label": "Enroll My Teen in the Academy",
+            "button_link": "#enroll",
+            "button_style_secondary": false
+          }
+        },
+        "milestones_4Wgmrm": {
+          "type": "milestones",
+          "settings": {
+            "title_a": "36",
+            "text_a": "<p>Different Courses</p>",
+            "title_b": "318",
+            "text_b": "<p>Engaging Lessons</p>",
+            "title_c": "30",
+            "text_c": "<p>Teachers</p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_r8GKwr",
+        "heading_YEtqJp",
+        "text_76JR34",
+        "image_mNWtDy",
+        "button_KreQa8",
+        "milestones_4Wgmrm"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 12,
+        "padding_bottom": 28,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": "#bcecf6",
+        "anchor_id": "",
+        "anchor_offset": 80
+      }
+    },
+    "sskymo_logo_list_ViTxeN": {
+      "type": "sskymo-logo-list",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_new_text_column_LbW86c": {
+      "type": "ssky-new-text-column",
+      "blocks": {
+        "text_column_4B9M7T": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "",
+            "text": "<ul><li>Unlimited lifetime access to all currently available Academy courses</li><li>Automatic access to all future Academy courses we create</li><li>Access to quizzes, slide decks, summaries, and takeaways for each lesson</li></ul>",
+            "text_large": false,
+            "show_dynamic_price_row": true,
+            "price_suffix": "One-Time Fee for Lifetime Access",
+            "price_subline": "",
+            "use_custom_link_instead_of_product_form": false,
+            "button_label": "Enroll In The Academy",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "product": "tuttle-twins-academy-lifetime"
+          }
+        },
+        "text_column_QcNntC": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "",
+            "text": "<ul><li>Annual subscription to all currently available Academy courses</li><li>Automatic access to all future Academy courses we create while you're enrolled</li><li>Access to quizzes, slide decks, summaries, and takeaways for each lesson</li></ul>",
+            "text_large": false,
+            "show_dynamic_price_row": true,
+            "price_suffix": "Renews Annually",
+            "price_subline": "per year",
+            "use_custom_link_instead_of_product_form": true,
+            "button_label": "Enroll In The Academy",
+            "button_link": "https://tuttletwins.com/apps/rebuy/cart?variants%5B45740778717322%5D%5Bquantity%5D=1&variants%5B45740778717322%5D%5Bselling_plan%5D=1642725514&clear_cart=yes&landing_page=cart&smart_cart_show=no",
+            "button_style_secondary": false,
+            "product": "tuttle-twins-academy-annual"
+          }
+        }
+      },
+      "block_order": [
+        "text_column_4B9M7T",
+        "text_column_QcNntC"
+      ],
+      "settings": {
+        "anchor_id": "enroll",
+        "heading": "<p>Enroll in the Academy</p>",
+        "heading_size": "h3",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_courses_b_McQLjy": {
+      "type": "ssky-courses-b",
+      "blocks": {
+        "course_U9enfw": {
+          "type": "course",
+          "name": "Character Course",
+          "settings": {
+            "course_image": "shopify://shop_images/courses-tuttle-twins-academy-ezgif.com-gif-to-webp-converter.webp",
+            "course_icon": "shopify://shop_images/NEW_circle.png",
+            "course_title": "Character",
+            "course_description": "<p>Learn essential traits that shape strong and honorable character: integrity, empathy, and resilience.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>Ten Tips for Teens</p>",
+            "listicle_text_2": "<p>Leadership & Self-Confidence</p>",
+            "listicle_text_3": "<p>Emotional Intelligence & Personal Growth</p>",
+            "listicle_text_4": "<p>Succeed in Your Life By Helping Others Succeed in Theirs</p><p></p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_CP9Qej": {
+          "type": "course",
+          "name": "World History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5_a87027b7-1896-4af6-87dc-1ac329644ab1.gif",
+            "course_icon": "shopify://shop_images/academy-icon-world-history.png",
+            "course_title": "World History",
+            "course_description": "<p>Explore major turning points—from revolutions to world wars and social movements—to see how the last century shaped today’s world and the choices ahead.</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>The Dangerous Isms</p>",
+            "listicle_text_2": "<p>Patterns of History</p>",
+            "listicle_text_3": "<p>The History of European Civilization</p>",
+            "listicle_text_4": "<p>Domino Effect: Foreign Intervention and the Two World Wars</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/nqr_2iPe2eQ"
+          }
+        },
+        "course_xQCYWr": {
+          "type": "course",
+          "name": "US History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "course_icon": "shopify://shop_images/academy-icon-united-states-history_cd10f1c3-2403-4775-b552-8dd1f2645329.png",
+            "course_title": "U.S. History",
+            "course_description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as learn from the many mistakes, so we aren’t doomed to repeat them.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>The Eight Worst Presidents</p>",
+            "listicle_text_2": "<p>Conspiracy and Catastrophe</p>",
+            "listicle_text_3": "<p>What Led to the United States?</p>",
+            "listicle_text_4": "<p>What Can We Learn From American History?</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_fDV3KX": {
+          "type": "course",
+          "name": "Civics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/e44f0f4ac0e18a6c6f08778364818cf6.png",
+            "course_title": "Civics",
+            "course_description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>Bill of Rights Basics</p>",
+            "listicle_text_2": "<p>Constitutional Competency: Understanding US Law</p>",
+            "listicle_text_3": "<p>The Ten Worst SCOTUS Cases</p>",
+            "listicle_text_4": "<p>How the System REALLY Works</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/5birStlc0Rw"
+          }
+        },
+        "course_4FRA8Y": {
+          "type": "course",
+          "name": "Economics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "course_icon": "shopify://shop_images/academy-icon-economics-300x300.png",
+            "course_title": "Economics",
+            "course_description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p>",
+            "listicle_icon_color": "#f8ad42",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>Economics for Everyday Life</p>",
+            "listicle_text_2": "<p><span style=\"text-decoration:underline\">The Economic Way of Thinking</span></p>",
+            "listicle_text_3": "<p><span style=\"text-decoration:underline\">Economic Myth Busters</span></p>",
+            "listicle_text_4": "<p><span style=\"text-decoration:underline\">The Economics of Globalization</span></p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/5tv2xH2CDm4"
+          }
+        },
+        "course_NdPTtw": {
+          "type": "course",
+          "name": "Finances Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/a968c22a65c70e5b26e4cc433fad2b5e.png",
+            "course_title": "Finances",
+            "course_description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>The World of Investing</p>",
+            "listicle_text_2": "<p>Money Mastery</p>",
+            "listicle_text_3": "<p>How to Make Money</p>",
+            "listicle_text_4": "<p>Adulting 101: How to Save and Spend Wisely</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/3eARS99f0eA"
+          }
+        },
+        "course_KkGHV8": {
+          "type": "course",
+          "name": "Logic & Critical Thinking Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/ff76cbc3e1afbefc91cd0f4a89f215f0.png",
+            "course_title": "Logic & Critical Thinking",
+            "course_description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>Problem Solving Strategies</p>",
+            "listicle_text_2": "<p>Fallacies and Biases, Oh My</p>",
+            "listicle_text_3": "<p>Detecting Deception: A Masterclass in Misinformation</p>",
+            "listicle_text_4": "<p>Ten Steps to Develop Critical Thinking</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/wIanPJTtfVs"
+          }
+        },
+        "course_fXYmCj": {
+          "type": "course",
+          "name": "Entrepreneurship Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/d4319e2674747c7b4164633f7aadce31.png",
+            "course_title": "Entrepreneurship",
+            "course_description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p>",
+            "listicle_icon_color": "#ffd05a",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p>The Fundamentals of Business</p>",
+            "listicle_text_2": "<p>Turn a Hobby into a Profitable Small Business</p>",
+            "listicle_text_3": "<p>Case Studies for Success</p>",
+            "listicle_text_4": "<p>How to Think Like an Entrepreneur</p>",
+            "course_button_text": "View Sample Video Lesson",
+            "course_video_url": "https://youtu.be/HmsanDxS_QI"
+          }
+        }
+      },
+      "block_order": [
+        "course_U9enfw",
+        "course_CP9Qej",
+        "course_xQCYWr",
+        "course_fDV3KX",
+        "course_4FRA8Y",
+        "course_NdPTtw",
+        "course_KkGHV8",
+        "course_fXYmCj"
+      ],
+      "custom_css": [
+        ".tt-courses-template--20138876338314sskycoursesbmcqljy {display: none;}"
+      ],
+      "name": "Courses Carousel",
+      "settings": {
+        "title": "An online learning platform that encourages teens to think, question, and explore our world.",
+        "description": "<p>Tuttle Twins Academy offers an immediate treasure trove of knowledge with 32 immersive courses organized into eight categories:</p>",
+        "section_padding": 20,
+        "heading_size": 36,
+        "text_size": 16,
+        "heading_color": "#3f3939",
+        "text_color": "#3f3939",
+        "card_background_color": "#ffffff",
+        "card_title_color": "#3f3939",
+        "card_text_color": "#3f3939",
+        "card_border_radius": 20,
+        "button_color": "#04aed8",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#da5846",
+        "button_border_radius": 8
+      }
+    },
+    "ssky_courses_b_aQAArM": {
+      "type": "ssky-courses-b",
+      "blocks": {
+        "course_Maxa4H": {
+          "type": "course",
+          "name": "Character Course",
+          "settings": {
+            "course_image": "shopify://shop_images/courses-tuttle-twins-academy-ezgif.com-gif-to-webp-converter.webp",
+            "course_icon": "shopify://shop_images/NEW_circle.png",
+            "course_title": "Character",
+            "course_description": "<p>Learn essential traits that shape strong and honorable character: integrity, empathy, and resilience.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\">Ten Tips for Teens</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\">Leadership & Self-Confidence</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\">Emotional Intelligence & Personal Growth</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\">Succeed in Your Life By Helping Others Succeed in Theirs</a></p><p></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_LHb4Q9": {
+          "type": "course",
+          "name": "World History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5_a87027b7-1896-4af6-87dc-1ac329644ab1.gif",
+            "course_icon": "shopify://shop_images/academy-icon-world-history.png",
+            "course_title": "World History",
+            "course_description": "<p>Explore major turning points—from revolutions to world wars and social movements—to see how the last century shaped today’s world and the choices ahead.</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\">The Dangerous Isms</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\">Patterns of History</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\">The History of European Civilization</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/domino-effect/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/domino-effect/\">Domino Effect: Foreign Intervention and the Two World Wars</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/nqr_2iPe2eQ"
+          }
+        },
+        "course_AfCPBE": {
+          "type": "course",
+          "name": "US History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "course_icon": "shopify://shop_images/academy-icon-united-states-history_cd10f1c3-2403-4775-b552-8dd1f2645329.png",
+            "course_title": "U.S. History",
+            "course_description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as learn from the many mistakes, so we aren’t doomed to repeat them.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\">The Eight Worst Presidents</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\">Conspiracy and Catastrophe</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\">What Led to the United States?</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\">What Can We Learn From American History?</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_QdUdrT": {
+          "type": "course",
+          "name": "Civics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/e44f0f4ac0e18a6c6f08778364818cf6.png",
+            "course_title": "Civics",
+            "course_description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\">Bill of Rights Basics</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\">Constitutional Competency: Understanding US Law</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\">The Ten Worst SCOTUS Cases</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\">How the System REALLY Works</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/5birStlc0Rw"
+          }
+        },
+        "course_inapwc": {
+          "type": "course",
+          "name": "Economics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "course_icon": "shopify://shop_images/academy-icon-economics-300x300.png",
+            "course_title": "Economics",
+            "course_description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p>",
+            "listicle_icon_color": "#f8ad42",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\">Economics for Everyday Life</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\"><span style=\"text-decoration:underline\">The Economic Way of Thinking</span></a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com//courses/economic-myth-busters/\"><span style=\"text-decoration:underline\">Economic Myth Busters</span></a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-economics-of-globalization/\"><span style=\"text-decoration:underline\">The Economics of Globalization</span></a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/5tv2xH2CDm4"
+          }
+        },
+        "course_nmfWyj": {
+          "type": "course",
+          "name": "Finances Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/a968c22a65c70e5b26e4cc433fad2b5e.png",
+            "course_title": "Finances",
+            "course_description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/world-of-investing/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/world-of-investing/\">The World of Investing</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/money-mastery/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/money-mastery/\">Money Mastery</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\">How to Make Money</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\">Adulting 101: How to Save and Spend Wisely</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3eARS99f0eA"
+          }
+        },
+        "course_7hGfAz": {
+          "type": "course",
+          "name": "Logic & Critical Thinking Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/ff76cbc3e1afbefc91cd0f4a89f215f0.png",
+            "course_title": "Logic & Critical Thinking",
+            "course_description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\">Problem Solving Strategies</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\">Fallacies and Biases, Oh My</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\">Detecting Deception: A Masterclass in Misinformation</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\">Ten Steps to Develop Critical Thinking</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/wIanPJTtfVs"
+          }
+        },
+        "course_gzzWM3": {
+          "type": "course",
+          "name": "Entrepreneurship Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/d4319e2674747c7b4164633f7aadce31.png",
+            "course_title": "Entrepreneurship",
+            "course_description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p>",
+            "listicle_icon_color": "#ffd05a",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\">The Fundamentals of Business</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com//courses/turn-a-hobby-into-a-small-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/turn-a-hobby-into-a-small-business/\">Turn a Hobby into a Profitable Small Business</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\">Case Studies for Success</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\">How to Think Like an Entrepreneur</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/HmsanDxS_QI"
+          }
+        }
+      },
+      "block_order": [
+        "course_Maxa4H",
+        "course_LHb4Q9",
+        "course_AfCPBE",
+        "course_QdUdrT",
+        "course_inapwc",
+        "course_nmfWyj",
+        "course_7hGfAz",
+        "course_gzzWM3"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".tt-courses-template--20138876338314sskycoursesbmcqljy {display: block;}"
+      ],
+      "name": "Courses Carousel",
+      "settings": {
+        "title": "Our Courses",
+        "description": "<p>Explore our educational courses designed for children and families to learn important concepts in a fun and engaging way.</p>",
+        "section_padding": 20,
+        "heading_size": 36,
+        "text_size": 16,
+        "heading_color": "#3f3939",
+        "text_color": "#3f3939",
+        "card_background_color": "#ffffff",
+        "card_title_color": "#3f3939",
+        "card_text_color": "#3f3939",
+        "card_border_radius": 20,
+        "button_color": "#04aed8",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#da5846",
+        "button_border_radius": 8
+      }
+    },
+    "hs_courses_carousel_nWPdGR": {
+      "type": "hs-courses-carousel",
+      "blocks": {
+        "course_iGFCgR": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "course_icon": "shopify://shop_images/NEW_circle.png",
+            "course_title": "U.S. History",
+            "course_description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as to learn from the many mistakes, so we aren’t doomed to repeat them.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\">The Eight Worst Presidents</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\">Conspiracy and Catastrophe</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\">What Led to the United States?</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\">What Can We Learn From American History?</a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_3bAkBz": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "course_icon": "shopify://shop_images/academy-icon-economics-300x300.png",
+            "course_title": "Economics",
+            "course_description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\">Economics for Everyday Life</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\"><span style=\"text-decoration:underline\">The Economic Way of Thinking</span></a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com//courses/economic-myth-busters/\"><span style=\"text-decoration:underline\">Economic Myth Busters</span></a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-economics-of-globalization/\"><span style=\"text-decoration:underline\">The Economics of Globalization</span></a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_xLRN4r": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/e44f0f4ac0e18a6c6f08778364818cf6.png",
+            "course_title": "Civics",
+            "course_description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\">Bill of Rights Basics</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\">Constitutional Competency: Understanding US Law</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\">The Ten Worst SCOTUS Cases</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\">How the System REALLY Works</a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_p8eAwW": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/a968c22a65c70e5b26e4cc433fad2b5e.png",
+            "course_title": "Finances",
+            "course_description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/world-of-investing/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/world-of-investing/\">The World of Investing</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/money-mastery/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/money-mastery/\">Money Mastery</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\">How to Make Money</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\">Adulting 101: How to Save and Spend Wisely</a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_PqeKkq": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/ff76cbc3e1afbefc91cd0f4a89f215f0.png",
+            "course_title": "Logic & Critical Thinking",
+            "course_description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\">Problem Solving Strategies</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\">Fallacies and Biases, Oh My</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\">Detecting Deception: A Masterclass in Misinformation</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\">Ten Steps to Develop Critical Thinking</a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_BDTzxH": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/d4319e2674747c7b4164633f7aadce31.png",
+            "course_title": "Entrepreneurship",
+            "course_description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p>",
+            "listicle_icon_color": "#fbd35b",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\">The Fundamentals of Business</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com//courses/turn-a-hobby-into-a-small-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/turn-a-hobby-into-a-small-business/\">Turn a Hobby into a Profitable Small Business</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\">Case Studies for Success</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\">How to Think Like an Entrepreneur</a></p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        },
+        "course_r87EFA": {
+          "type": "course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5_a87027b7-1896-4af6-87dc-1ac329644ab1.gif",
+            "course_icon": "shopify://shop_images/academy-icon-world-history.png",
+            "course_title": "World History",
+            "course_description": "<p>Explore the turning points of recent world history—from revolutions and world wars to social movements and global conflicts—as we uncover how the past century continues to shape our world today and the choices we face tomorrow.</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "clock",
+            "listicle_text_1": "<p>The Dangerous Isms</p>",
+            "listicle_text_2": "<p>Patterns of History</p>",
+            "listicle_text_3": "<p>The History of European Civilization</p>",
+            "listicle_text_4": "<p>Domino Effect: Foreign Intervention and the Two World Wars</p>",
+            "course_button_text": "Watch Video",
+            "course_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "course_iGFCgR",
+        "course_3bAkBz",
+        "course_xLRN4r",
+        "course_p8eAwW",
+        "course_PqeKkq",
+        "course_BDTzxH",
+        "course_r87EFA"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".hs-courses-carousel {display: none;}"
+      ],
+      "name": "HS Courses Carousel",
+      "settings": {
+        "title": "Our Courses",
+        "description": "<p>Explore our educational courses designed for children and families to learn important concepts in a fun and engaging way.</p>",
+        "section_padding": 60,
+        "heading_size": 36,
+        "text_size": 16,
+        "heading_color": "#3f3939",
+        "text_color": "#3f3939",
+        "card_background_color": "#ffffff",
+        "card_title_color": "#3f3939",
+        "card_text_color": "#3f3939",
+        "card_border_radius": 8,
+        "button_color": "#04aed8",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#da5846",
+        "button_border_radius": 8
+      }
+    },
+    "ssky_image_glide_slider_eVVKf6": {
+      "type": "ssky-image-glide-slider",
+      "blocks": {
+        "ai_gen_block_cd1eedb_PdRWbH": {
+          "type": "ai_gen_block_cd1eedb",
+          "settings": {
+            "title": "An online learning platform that encourages teens to think, question, and explore our world.",
+            "description": "<p>Tuttle Twins Academy offers an immediate treasure trove of knowledge with 24 immersive courses organized into six categories:</p>",
+            "section_padding": 20,
+            "heading_size": 36,
+            "text_size": 16,
+            "heading_color": "#3f3939",
+            "text_color": "#3f3939",
+            "card_background_color": "#ffffff",
+            "card_title_color": "#3f3939",
+            "card_text_color": "#3f3939",
+            "card_border_radius": 8,
+            "button_color": "#da5846",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#e77161",
+            "button_border_radius": 8,
+            "course_1_enabled": true,
+            "course_1_image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "course_1_title": "U.S. History",
+            "course_1_description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as to learn from the many mistakes, so we aren’t doomed to repeat them.</p><p>Courses:</p><ul><li>The Eight Worst Presidents</li><li>Conspiracy and Catastrophe</li><li>What Led to the United States</li><li>What Can We Learn from American History</li></ul>",
+            "course_1_button_text": "Watch Video",
+            "course_1_video_url": "",
+            "course_2_enabled": true,
+            "course_2_image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "course_2_title": "Economics",
+            "course_2_description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p><p>Courses: </p><ul><li>Economics for Everyday Life</li><li>The Economic Way of Thinking</li><li>Economic Myth Busters</li><li>The Economics of Globalization</li></ul>",
+            "course_2_button_text": "Watch Video",
+            "course_2_video_url": "",
+            "course_3_enabled": true,
+            "course_3_image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "course_3_title": "Civics",
+            "course_3_description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p><p>Courses:</p><ul><li>Bill of Rights Basics</li><li>Constitutional Competency: Understanding US Law</li><li>The Ten Worst SCOTUS Cases</li><li>How the System REALLY Works</li></ul>",
+            "course_3_button_text": "Watch Video",
+            "course_3_video_url": "",
+            "course_4_enabled": true,
+            "course_4_image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "course_4_title": "Finances",
+            "course_4_description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p><p>Courses:</p><ul><li>The World of Investing</li><li>Money Mastery</li><li>How to Make Money</li><li>Adulting 101: How to Save and Spend Wisely</li></ul>",
+            "course_4_button_text": "Watch Video",
+            "course_4_video_url": "",
+            "course_5_enabled": true,
+            "course_5_image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "course_5_title": "Logic & Critical Thinking",
+            "course_5_description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p><p>Courses: </p><ul><li>Problem Solving Strategies</li><li>Fallacies and Biases, Oh My</li><li>Detecting Deception: A Master Class in Misinformation</li><li>Ten Steps to Develop Critical Thinking</li></ul>",
+            "course_5_button_text": "Watch Video",
+            "course_5_video_url": "",
+            "course_6_enabled": true,
+            "course_6_image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "course_6_title": "Entrepreneurship",
+            "course_6_description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p><p>Courses:</p><ul><li>The Fundamentals of Business</li><li>Turn a Hobby into a Profitable Small Business</li><li>Case Studies for Success</li><li>How to Think Like an Entrepreneur</li></ul>",
+            "course_6_button_text": "Watch Video",
+            "course_6_video_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_cd1eedb_PdRWbH"
+      ],
+      "disabled": true,
+      "name": "TT Image swiper slider",
+      "settings": {
+        "color_scheme": "",
+        "fullwidth": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_courses_NMr437": {
+      "type": "ssky-courses",
+      "blocks": {
+        "courses_JHFPfh": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/Academy_GIFs_8.gif",
+            "image_url": "",
+            "image_alignment": "left",
+            "icon": "shopify://shop_images/NEW_circle.png",
+            "title": "The Psychology of Persuasion",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Uncover the secrets of effective communication and influence. Your teen will understand the motivations behind human behavior.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-power-of-propaganda/\" target=\"_blank\" title=\"The Power of Propaganda\">The Power of Propaganda</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/become-an-effective-debater/\" target=\"_blank\" title=\"Become an Effective Debater\">Become an Effective Debater</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/brain-busters/\" target=\"_blank\" title=\"Brain Busters\">Brain Busters</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-write-and-speak-persuasively/\" target=\"_blank\" title=\"How to Write and Speak Persuasively\">How to Write and Speak Persuasively</a></p>"
+          }
+        },
+        "courses_mK36QV": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/courses-tuttle-twins-academy-ezgif.com-gif-to-webp-converter.webp",
+            "image_url": "",
+            "image_alignment": "right",
+            "icon": "shopify://shop_images/academy-icon-character.png",
+            "title": "Character",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Learn essential traits that shape strong and honorable character: integrity, empathy, and resilience.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#cb80c1",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\">Ten Tips for Teens</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\">Leadership & Self-Confidence</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\">Emotional Intelligence & Personal Growth</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\">Succeed in Your Life By Helping Others Succeed in Theirs</a></p>"
+          }
+        },
+        "courses_PhA9hW": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/Academy_GIFs_5_a87027b7-1896-4af6-87dc-1ac329644ab1.gif",
+            "image_url": "",
+            "image_alignment": "left",
+            "icon": "shopify://shop_images/academy-icon-world-history.png",
+            "title": "World History",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Explore the turning points of recent world history—from revolutions and world wars to social movements and global conflicts—as we uncover how the past century continues to shape our world today and the choices we face tomorrow.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\">The Dangerous Isms</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\">Patterns of History</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\">The History of European Civilization</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/domino-effect/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/domino-effect/\">Domino Effect: Foreign Intervention and the Two World Wars</a></p>"
+          }
+        },
+        "courses_GDtjnM": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "image_url": "",
+            "image_alignment": "right",
+            "icon": "shopify://shop_images/academy-icon-united-states-history_cd10f1c3-2403-4775-b552-8dd1f2645329.png",
+            "title": "U.S. History",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as learn from the many mistakes, so we aren’t doomed to repeat them.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\">The Eight Worst Presidents</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\">Conspiracy and Catastrophe</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\">What Led to the United States?</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\">What Can We Learn From American History?</a></p>"
+          }
+        },
+        "courses_MEPTnC": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "image_url": "",
+            "image_alignment": "left",
+            "icon": "shopify://shop_images/e44f0f4ac0e18a6c6f08778364818cf6.png",
+            "title": "Civics",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\">Bill of Rights Basics</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\">Constitutional Competency: Understanding US Law</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\">The Ten Worst SCOTUS Cases</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\">How the System REALLY Works</a></p>"
+          }
+        },
+        "courses_4d4KHz": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "image_url": "",
+            "image_alignment": "right",
+            "icon": "shopify://shop_images/academy-icon-economics-300x300.png",
+            "title": "Economics",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\">Economics for Everyday Life</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\"><span style=\"text-decoration:underline\">The Economic Way of Thinking</span></a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com//courses/economic-myth-busters/\"><span style=\"text-decoration:underline\">Economic Myth Busters</span></a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-economics-of-globalization/\"><span style=\"text-decoration:underline\">The Economics of Globalization</span></a></p>"
+          }
+        },
+        "courses_QwQYzw": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "image_url": "",
+            "image_alignment": "left",
+            "icon": "shopify://shop_images/a968c22a65c70e5b26e4cc433fad2b5e.png",
+            "title": "Finances",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/world-of-investing/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/world-of-investing/\">The World of Investing</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/money-mastery/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/money-mastery/\">Money Mastery</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\">How to Make Money</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\">Adulting 101: How to Save and Spend Wisely</a></p>"
+          }
+        },
+        "courses_aH8iRp": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "image_url": "",
+            "image_alignment": "right",
+            "icon": "shopify://shop_images/ff76cbc3e1afbefc91cd0f4a89f215f0.png",
+            "title": "Logic & Critical Thinking",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\">Problem Solving Strategies</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\">Fallacies and Biases, Oh My</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\">Detecting Deception: A Masterclass in Misinformation</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\">Ten Steps to Develop Critical Thinking</a></p>"
+          }
+        },
+        "courses_W4Ndbh": {
+          "type": "courses",
+          "settings": {
+            "image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "image_url": "",
+            "image_alignment": "left",
+            "icon": "shopify://shop_images/d4319e2674747c7b4164633f7aadce31.png",
+            "title": "Entrepreneurship",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h3",
+            "description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "listicle_icon_color": "#fbd35b",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\">The Fundamentals of Business</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com//courses/turn-a-hobby-into-a-small-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/turn-a-hobby-into-a-small-business/\">Turn a Hobby into a Profitable Small Business</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\">Case Studies for Success</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\">How to Think Like an Entrepreneur</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "courses_JHFPfh",
+        "courses_mK36QV",
+        "courses_PhA9hW",
+        "courses_GDtjnM",
+        "courses_MEPTnC",
+        "courses_4d4KHz",
+        "courses_QwQYzw",
+        "courses_aH8iRp",
+        "courses_W4Ndbh"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "An online learning platform that encourages teens to think, question, and explore our world.",
+        "heading_size": "h2",
+        "heading_weight": "semibold",
+        "heading_tag": "h2",
+        "text": "<p>Tuttle Twins Academy offers an immediate treasure trove of knowledge with 36 immersive courses organized into nine categories:</p>",
+        "text_size": "regular",
+        "text_weight": "regular",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_new_text_image_block_wpegdU": {
+      "type": "ssky-new-text-image-block",
+      "blocks": {
+        "heading_CUVpTK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Courses to Look Forward To</p>",
+            "heading_size": "h4",
+            "heading_weight": "medium",
+            "heading_tag": "h2"
+          }
+        },
+        "text_p3FLKy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While the Academy has already launched thirty-six amazing courses in nine categories, there is more content on the way. Sign up for a lifetime membership, so you will have access to courses released in the next couple years. Here’s our current plan:</p><p><strong>Mindset Mastery:</strong> Equip your teen with the tools to develop a growth mindset, encouraging self-confidence, perseverance, and the ability to overcome challenges and achieve their goals.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_t8UtgY": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Sign Up for the Academy Now",
+            "button_link": "#shopify-section-template--18480558473354__ssky_new_text_column_LbW86c",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CUVpTK",
+        "text_p3FLKy",
+        "button_t8UtgY"
+      ],
+      "custom_css": [
+        "@media (max-width: 989px) {.ssky-new-text-image-block__image img, .ssky-box-image-block__image-column img {display: none !important; }}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/9d116128f5391ea54f92dfd24e2eb735.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "inner_padding_top": 48,
+        "inner_padding_bottom": 48,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_new_testimonials_GNUWDD": {
+      "type": "ssky-new-testimonials",
+      "blocks": {
+        "testimonial_LihNKQ": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 50,
+            "testimonial_highlight": "<p><strong>The new Tuttle Twins Academy is a perfect fit for my teens.</strong> The videos are not too long, and animated to hold their attention to get them thinking about big ideas, which I love. We're big fans and so appreciative to have something like this!</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Nicole E.",
+            "author_state": "(Tennessee)",
+            "author_image": "shopify://shop_images/nicole.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_LihNKQ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 100,
+        "show_as_card": true,
+        "section_radius": 12,
+        "color_scheme_show_as_card": "scheme-1",
+        "padding_top": 16,
+        "padding_bottom": 40,
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_sign_up_academy_grtHDt": {
+      "type": "ssky-sign-up-academy",
+      "blocks": {
+        "heading_PUKEAy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Building on the Beloved Tuttle Twins Books, Tailored for Teens</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "button_YzWjjL": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Sign Up for the Academy Now",
+            "button_link": "#shopify-section-template--18602075553930__ssky_new_text_column_LbW86c",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "text_column_w_icons_yHkJTh": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>Values-Aligned Education:</strong> The Academy is specifically designed to align with conservative and libertarian values, making it a trustworthy resource for families who prioritize these principles.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_Dxw44R": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>Comprehensive and Unique Content:</strong> The Academy offers exclusive courses that cover critical but often overlooked topics that are not adequately addressed in many traditional curricula.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_FJ8hbe": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>Affordable Pricing:</strong> The Academy provides an affordable alternative to other platforms, with a single, low price that offers significant savings compared to purchasing similar courses individually.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_TKGcqD": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>One Price for the Whole Family:</strong> You membership covers unlimited access for all the teens in your household, making it a cost-effective choice for families with multiple learners.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_xVkaGn": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>Focus on Real-World Skills:</strong> Courses are designed to equip teens with practical skills and knowledge that are essential for success in reallife.</p>",
+            "text_large": false
+          }
+        },
+        "text_column_w_icons_BBdAAj": {
+          "type": "text_column_w_icons",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "icon_position": "left",
+            "heading": "",
+            "heading_color": "",
+            "icon_type": "fa-face",
+            "icon_background_color": "",
+            "icon_color": "",
+            "text_item": "<p><strong>Trusted Brand:</strong> The Tuttle Twins brand has a strong reputation, giving parents confidence that their teens are receiving education that aligns with their familyʼs values and beliefs.</p>",
+            "text_large": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PUKEAy",
+        "button_YzWjjL",
+        "text_column_w_icons_yHkJTh",
+        "text_column_w_icons_Dxw44R",
+        "text_column_w_icons_FJ8hbe",
+        "text_column_w_icons_TKGcqD",
+        "text_column_w_icons_xVkaGn",
+        "text_column_w_icons_BBdAAj"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#04aed8",
+        "background_overlay_opacity": 100,
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_TTVbPX": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "box_text_73Ay8Q": {
+          "type": "box_text",
+          "settings": {
+            "box_text": "<h6>Expert Instructors</h6><p>Instructors are carefully selected based on their alignment with Tuttle Twins values and their expertise in various fields.</p>",
+            "box_text_size": "regular",
+            "box_text_weight": "regular"
+          }
+        },
+        "box_text_q6QeJF": {
+          "type": "box_text",
+          "settings": {
+            "box_text": "<h6>Quizzes for Mastery & Understanding</h6><p>In addition to video lectures, the Academy provides supplementary materials such as quizzes and lesson summaries to reinforce learning and ensure understanding.</p>",
+            "box_text_size": "regular",
+            "box_text_weight": "regular"
+          }
+        },
+        "box_text_z6ME34": {
+          "type": "box_text",
+          "settings": {
+            "box_text": "<h6>Tailored for Teens</h6><p>The use of animated content in these engaging lectures is designed to capture the interest of teens, making learning more enjoyable and effective.</p>",
+            "box_text_size": "regular",
+            "box_text_weight": "regular"
+          }
+        },
+        "box_text_G9f4zW": {
+          "type": "box_text",
+          "settings": {
+            "box_text": "<h6>Invest in your child's future</h6><p>Our aim is to help your teen thrive in todayʼs world. Invest in an engaging online library of animated lectures designed specifically for teens to learn ideas that matter.</p>",
+            "box_text_size": "regular",
+            "box_text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "box_text_73Ay8Q",
+        "box_text_q6QeJF",
+        "box_text_z6ME34",
+        "box_text_G9f4zW"
+      ],
+      "custom_css": [],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/1903e19b8401d7f71795a1932ba4b31b.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 100,
+        "padding_bottom": 64,
+        "inner_padding_top": 100,
+        "inner_padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8",
+        "custom_css": "[TT_CSS] .ssky-box-image-block__image-column {\n  position: relative;\n}\n[TT_CSS] .ssky-box-image-block__image-column .ssky-box-image-block__image {\n  position: absolute;\n    left: 1px;\n    top: -60px;\n}\n[TT_CSS] .ssky-box-image-block__image-column img {\n    display: unset !important;\n    position: relative !important;\n}\n@media (max-width: 989px) {\n  [TT_CSS] .ssky-new-text-image-block__image img,\n  [TT_CSS] .ssky-box-image-block__image-column img {\n    display: none !important;\n  }\n}\n@media (max-width: 568px) {\n  [TT_CSS] .ssky-box-image-block {\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n  }\n  [TT_CSS] .ssky-box-image-block__text-column {\n    padding: 25px 0;\n  }\n}"
+      }
+    },
+    "ssky_simple_box_nFNA6k": {
+      "type": "ssky-simple-box",
+      "custom_css": [
+        ".box-content-description {margin-left: 25px; margin-bottom: -110px; position: relative; z-index: 1;}",
+        "@media (max-width: 568px) {.box-content-main-section .box-content-description {margin-bottom: 0 !important; margin-left: 0 !important; } .box-content-main-section {padding-bottom: 15px !important; }}"
+      ],
+      "settings": {
+        "box_content": "<p>More than anything... you want your kids to be well-rounded, appreciate freedom, and have the self-esteem and confidence to make up their own minds — in a world that is out to brainwash them and push all kinds of socialist narratives.</p>",
+        "box_background_color": "#bcecf6"
+      }
+    },
+    "ssky_meet_our_teachers_Q8EGrb": {
+      "type": "ssky-meet-our-teachers",
+      "blocks": {
+        "text_AfTEhJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Activating the Next Generation of Free Thinkers</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "heading_jHGdB9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Meet Our Teachers</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_3MqJV3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because you trust the Tuttle Twins brand, we’ve carefully selected some engaging and expert instructors to help introduce a wide range of topics to your teens.<br/><br/>Each of them brings experience and deep educational insights to their courses. We think your teens will love hearing from each of them!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_HXdBge": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Learn More About Our Teachers",
+            "button_link": "https://tuttletwinsacademy.com/academy-teachers/",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_AfTEhJ",
+        "heading_jHGdB9",
+        "text_3MqJV3",
+        "button_HXdBge"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 1200px) {.ssky-meet-our-teachers__wrapper {max-width: 1300px; padding-left: 60px; padding-right: 60px; } .ssky-meet-our-teachers__image img {width: 555px !important; }}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/d44eefb414286a4733bc12304ddb3375.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-61c8710f-e6dd-48e9-afb8-a755a8b5b4c3",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "border_radius_image": 30,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "meet-our-teachers-cus-section",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "inner_padding_top": 48,
+        "inner_padding_bottom": 48,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_box_image_block_iW7WEP": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "heading_49Y7Px": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The \"Freedom Lovers\" Guarantee</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_A4nYyX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are serious about helping your family’s education and the future of freedom in our society.<br/><br/>To us the most important thing is that you have the tools to share your values with your teen—especially in a world full of people who want to influence your kids in a different direction.<br/><br/>If for any reason you don’t enjoy Tuttle Twins Academy or believe we haven’t contributed to your family positively, we will refund your money in full. We have a 100% Unconditional Money-Back Guarantee. Just drop us a line within 30 days of your purchase.<br/><br/>You’ve got nothing at all to lose. So give your teen a foundation of freedom today!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_bmNkji": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Join Today – Completely Risk Free",
+            "button_link": "#shopify-section-template--18602075553930__ssky_new_text_column_LbW86c",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "text_tDPzX4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>100% Unconditional Money-Back Guarantee</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_49Y7Px",
+        "text_A4nYyX",
+        "button_bmNkji",
+        "text_tDPzX4"
+      ],
+      "custom_css": [
+        "@media (max-width: 989px) {.ssky-box-image-block__image-column {display: none !important; }}",
+        "@media (max-width: 568px) {.ssky-box-image-block__text-column {padding: 25px 0; } .ssky-box-image-block__wrapper {gap: 0; } .ssky-box-image-block {padding-top: 0; }}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/77c204444044a36a2713b1b8a25faaf2.png",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-c44b38f8-5972-4f9b-b492-c0e1f1e144ee",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8",
+        "custom_css": ""
+      }
+    },
+    "ssky_simple_box_bGVHWV": {
+      "type": "ssky-simple-box",
+      "custom_css": [
+        ".box-content-main-section .box-content-description {margin: 0 auto 20px;}"
+      ],
+      "settings": {
+        "box_content": "<p>Joining the Tuttle Twins Academy is quick and easy. Choose an annual subscription for the price of $299 each year or invest in a lifetime of knowledge and empowerment for a one-time fee of $559.<br/><br/>The power to shape your teen's future is within your reach.</p>",
+        "box_background_color": ""
+      }
+    },
+    "ssky_new_text_column_6VEERR": {
+      "type": "ssky-new-text-column",
+      "blocks": {
+        "text_column_3LgpDH": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "",
+            "text": "<ul><li>Unlimited lifetime access to all currently available Academy courses</li><li>Automatic access to all future Academy courses we create</li><li>Access to quizzes, slide decks, summaries, and takeaways for each lesson</li></ul>",
+            "text_large": false,
+            "show_dynamic_price_row": true,
+            "price_suffix": "One-Time Fee for Lifetime Access",
+            "price_subline": "",
+            "use_custom_link_instead_of_product_form": false,
+            "button_label": "Enroll In The Academy",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "product": "tuttle-twins-academy-lifetime"
+          }
+        },
+        "text_column_PY4ixX": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "",
+            "text": "<ul><li>Annual subscription to all currently available Academy courses</li><li>Automatic access to all future Academy courses we create while you're enrolled</li><li>Access to quizzes, slide decks, summaries, and takeaways for each lesson</li></ul>",
+            "text_large": false,
+            "show_dynamic_price_row": true,
+            "price_suffix": "Renews Annually",
+            "price_subline": "per year",
+            "use_custom_link_instead_of_product_form": true,
+            "button_label": "Enroll In The Academy",
+            "button_link": "https://tuttletwins.com/apps/rebuy/cart?variants%5B45740778717322%5D%5Bquantity%5D=1&variants%5B45740778717322%5D%5Bselling_plan%5D=1642725514&clear_cart=yes&landing_page=cart&smart_cart_show=no",
+            "button_style_secondary": false,
+            "product": "tuttle-twins-academy-annual"
+          }
+        }
+      },
+      "block_order": [
+        "text_column_3LgpDH",
+        "text_column_PY4ixX"
+      ],
+      "settings": {
+        "anchor_id": "enroll",
+        "heading": "<p>Enroll in the Academy</p>",
+        "heading_size": "h3",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_meet_our_teachers_jiYcaD": {
+      "type": "ssky-meet-our-teachers",
+      "blocks": {
+        "section_header_AVaFni": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Your first lesson is on us!</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_CacwyU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Explore Tuttle Twins Academy and dive into our courses without any commitment—your first lesson is on us. Whether your teen is curious about civics, critical thinking, or personal finance, they can experience our engaging educational content firsthand.</strong></p><p><strong>Join us as we empower teens with knowledge that inspires critical thinking and fosters thoughtful discussions. Start learning today and see why families trust Tuttle Twins Academy for values-aligned education.”</strong></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_QDmTCj": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Explore the Academy for Free",
+            "button_link": "https://tuttletwinsacademy.com",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "https://tuttletwinsacademy.com",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_AVaFni",
+        "text_CacwyU",
+        "button_QDmTCj"
+      ],
+      "custom_css": [
+        ".ssky-meet-our-teachers__wrapper.image-right {flex-direction: column-reverse;}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "border_radius_image": 30,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "inner_padding_top": 44,
+        "inner_padding_bottom": 44,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_LTXXER": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "text_qiYdTm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet the author of Tuttle Twins and Principal of the Academy!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "heading_4ipdx4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Hi, I'm Connor Boyack</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_RRfDGQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Public Speaker, Author of Over 35 Books, and Illegal Beekeeper (Yeah, That's a Thing...)</p><p>I’m the founder and president of Libertas Institute, a free market think tank where we change laws to protect our rights. I have had dozens of legislative victories spanning a wide range of areas such as privacy, government transparency, property rights, entrepreneurship, education, personal freedom, and more.</p><p>When we started selling these books, I wasn’t sure if there would be demand. We made them as a labor of love—because we believe in these ideas so strongly.</p><p>But I quickly learned that there were many parents out there who shared our values and our concerns about the world—and who were desperate to find material like this to teach their children about why freedom is so important.</p><p>And today, millions of children are reading the Tuttle Twins books, learning the dangers of socialism, the benefits of freedom, the importance of entrepreneurship, and more!</p><p>Each day I hear from families who have newly discovered these materials, expressing their gratitude. Sometimes they’re even upset… that they didn’t find the books years ago!</p><p>So it’s never been a better time to welcome the Tuttle Twins into your world. I personally thank you for educating your family on these important freedoms, and have a great risk free offer for you.</p><p>In liberty,</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "icon_DqDUfA": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/2700b6f81ab431a683bf2c3cd911a297.png"
+          }
+        },
+        "button_ga9g3E": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Sign My Teen Up Now!",
+            "button_link": "#shopify-section-template--18079271813258__ssky_new_text_column_LbW86c",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_qiYdTm",
+        "heading_4ipdx4",
+        "text_RRfDGQ",
+        "icon_DqDUfA",
+        "button_ga9g3E"
+      ],
+      "custom_css": [
+        ".ssky-text-block__text.rte:first-child > p:first-child {color: #04aed8; margin: 0;}",
+        ".ssky-text-image-block__wrapper {align-items: center;}",
+        ".ssky-text-image-block__image .media {padding-bottom: 0 !important;}",
+        ".ssky-text-image-block__image-column img {display: unset !important; position: relative !important;}",
+        "@media (min-width: 900px) {.ssky-text-image-block__image-column {flex: 0 0 calc(50% - 7.5px); max-width: calc(50% - 7.5px); }}",
+        ".ssky-text-block__icon img {max-width: 200px;}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/0bf8e43f22e765df6c9581e1a4060e34.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_TtWUaF": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_6NTERa": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Join the Tuttle Twins Academy so Your Teens Learn Ideas that Most Adults Don't Know!</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_rgbgyM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We need a new generation of leaders, thinkers, and doers to take on challenges of our time. Every lesson of every course is packed with valuable lessons that encourage children to think, question and explore the world around them.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_GgTfbP": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Sign Up for the Academy Now",
+            "button_link": "#shopify-section-template--18079271813258__ssky_new_text_column_LbW86c",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6NTERa",
+        "text_rgbgyM",
+        "button_GgTfbP"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/d6c200d33af257348c3a546b7ee30df6.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "cus-text-image-block-section",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_hero_banner_4zfBk7",
+    "sskymo_logo_list_ViTxeN",
+    "ssky_new_text_column_LbW86c",
+    "ssky_courses_b_McQLjy",
+    "ssky_courses_b_aQAArM",
+    "hs_courses_carousel_nWPdGR",
+    "ssky_image_glide_slider_eVVKf6",
+    "ssky_courses_NMr437",
+    "ssky_new_text_image_block_wpegdU",
+    "ssky_new_testimonials_GNUWDD",
+    "ssky_sign_up_academy_grtHDt",
+    "ssky_box_image_block_TTVbPX",
+    "ssky_simple_box_nFNA6k",
+    "ssky_meet_our_teachers_Q8EGrb",
+    "ssky_box_image_block_iW7WEP",
+    "ssky_simple_box_bGVHWV",
+    "ssky_new_text_column_6VEERR",
+    "ssky_meet_our_teachers_jiYcaD",
+    "ssky_text_image_block_LTXXER",
+    "ssky_text_image_block_TtWUaF"
+  ]
+}

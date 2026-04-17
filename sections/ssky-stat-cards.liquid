@@ -1,0 +1,426 @@
+{%- comment -%}
+  sections/ssky-stat-cards.liquid
+  CSS lives in assets/homepage-redesign.css
+{%- endcomment -%}
+
+<section
+  class="ssky-stat-cards color-{{ section.settings.color_scheme }}"
+  data-ssky-stat-cards
+  style="
+    --ssky-stat-pad-m: {{ section.settings.padding_y_mobile }}px;
+    --ssky-stat-pad-d: {{ section.settings.padding_y_desktop }}px;
+    --ssky-card-bg: {{ section.settings.card_background }};
+  "
+>
+  <div class="page-width">
+
+  {%- assign card_count = 0 -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'card' -%}
+      {%- assign card_count = card_count | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign seen_card = false -%}
+  {%- capture header_html -%}{%- endcapture -%}
+  {%- capture grid_html -%}{%- endcapture -%}
+  {%- capture after_grid_html -%}{%- endcapture -%}
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'card' -%}
+      {%- assign seen_card = true -%}
+
+      {%- capture grid_html -%}{{ grid_html }}
+        <div
+          class="ssky-stat-cards__card"
+          style="--ssky-accent: {{ block.settings.accent_color }};"
+          {{ block.shopify_attributes }}
+        >
+          <div class="ssky-stat-cards__card-inner">
+
+            {%- if block.settings.icon_image != blank or block.settings.icon_emoji != blank -%}
+              <div class="ssky-stat-cards__icon">
+                {%- if block.settings.icon_image != blank -%}
+                  {{ block.settings.icon_image | image_url: width: 120 | image_tag: loading: 'lazy' }}
+                {%- else -%}
+                  <span class="ssky-stat-cards__emoji">{{ block.settings.icon_emoji }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.stat != blank -%}
+              <div class="ssky-stat-cards__stat">
+                {{ block.settings.stat }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.internal_heading != blank -%}
+              <div class="ssky-stat-cards__internal-heading">
+                {{ block.settings.internal_heading }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.body != blank -%}
+              <div class="ssky-stat-cards__body">
+                {{ block.settings.body }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.pill_text != blank -%}
+              <div class="ssky-stat-cards__pill">
+                {{ block.settings.pill_text }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.subtext != blank -%}
+              <div class="ssky-stat-cards__subtext">
+                {{ block.settings.subtext }}
+              </div>
+            {%- endif -%}
+
+          </div>
+        </div>
+      {%- endcapture -%}
+
+    {%- else -%}
+      {%- capture block_markup -%}
+        {%- case block.type -%}
+
+          {%- when 'caption' -%}
+            {%- if block.settings.caption != blank -%}
+              <div class="ssky-stat-cards__caption" {{ block.shopify_attributes }}>
+                {{ block.settings.caption }}
+              </div>
+            {%- endif -%}
+
+          {%- when 'heading' -%}
+            {%- if block.settings.heading != blank -%}
+              <{{ block.settings.heading_tag }} class="ssky-stat-cards__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</{{ block.settings.heading_tag }}>
+            {%- endif -%}
+
+          {%- when 'text' -%}
+            {%- if block.settings.text != blank -%}
+              <div class="ssky-stat-cards__text rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+
+          {%- when 'section_pill' -%}
+            {%- if block.settings.pill_text != blank -%}
+              <div
+                class="ssky-stat-cards__section-pill-wrap"
+                style="--ssky-pill-alpha: {{ block.settings.pill_opacity | divided_by: 100.0 }}; --ssky-pill-radius: {{ block.settings.pill_radius }}px; --ssky-pill-pad-y: {{ block.settings.pill_padding_y }}px; --ssky-pill-pad-x: {{ block.settings.pill_padding_x }}px;"
+                {{ block.shopify_attributes }}
+              >
+                <div class="ssky-stat-cards__section-pill{% if block.settings.invert %} is-invert{% endif %}">
+                  {{ block.settings.pill_text }}
+                </div>
+              </div>
+            {%- endif -%}
+
+          {%- when 'buttons' -%}
+            {%- assign has_any_button = false -%}
+            {%- if block.settings.button_label != blank -%}{%- assign has_any_button = true -%}{%- endif -%}
+            {%- if block.settings.button_label_b != blank -%}{%- assign has_any_button = true -%}{%- endif -%}
+            {%- if block.settings.button_label_c != blank -%}{%- assign has_any_button = true -%}{%- endif -%}
+            {%- if block.settings.button_label_d != blank -%}{%- assign has_any_button = true -%}{%- endif -%}
+
+            {%- if has_any_button -%}
+              {%- assign btn_style = 'width: auto;' -%}
+              {%- if block.settings.button_full -%}{%- assign btn_style = 'width: 100%;' -%}{%- endif -%}
+              <div class="ssky-stat-cards__buttons{% if block.settings.button_full %} ssky-stat-cards__buttons--fullwidth{% endif %}" style="{{ btn_style }}" {{ block.shopify_attributes }}>
+                {%- if block.settings.button_label != blank -%}
+                  {%- if block.settings.button_link != blank -%}
+                    <a href="{{ block.settings.button_link }}" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label | escape }}</a>
+                  {%- else -%}
+                    <a role="link" aria-disabled="true" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label | escape }}</a>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- if block.settings.button_label_b != blank -%}
+                  {%- if block.settings.button_link_b != blank -%}
+                    <a href="{{ block.settings.button_link_b }}" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_b | escape }}</a>
+                  {%- else -%}
+                    <a role="link" aria-disabled="true" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_b | escape }}</a>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- if block.settings.button_label_c != blank -%}
+                  {%- if block.settings.button_link_c != blank -%}
+                    <a href="{{ block.settings.button_link_c }}" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_c | escape }}</a>
+                  {%- else -%}
+                    <a role="link" aria-disabled="true" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_c | escape }}</a>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- if block.settings.button_label_d != blank -%}
+                  {%- if block.settings.button_link_d != blank -%}
+                    <a href="{{ block.settings.button_link_d }}" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_d | escape }}</a>
+                  {%- else -%}
+                    <a role="link" aria-disabled="true" class="ssky-stat-cards__button button button--stat-teal{% if block.settings.button_large %} button--large{% endif %}" style="{{ btn_style }}">{{ block.settings.button_label_d | escape }}</a>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+        {%- endcase -%}
+      {%- endcapture -%}
+
+      {%- if block_markup != blank -%}
+        {%- if seen_card -%}
+          {%- capture after_grid_html -%}{{ after_grid_html }}{{ block_markup }}{%- endcapture -%}
+        {%- else -%}
+          {%- capture header_html -%}{{ header_html }}{{ block_markup }}{%- endcapture -%}
+        {%- endif -%}
+      {%- endif -%}
+
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if header_html != blank -%}
+    <div class="ssky-stat-cards__header">
+      {{ header_html }}
+    </div>
+  {%- endif -%}
+
+  {%- if card_count > 0 -%}
+    <div class="ssky-stat-cards__grid" style="--ssky-stat-cols: {{ card_count }};">
+      {{ grid_html }}
+    </div>
+  {%- endif -%}
+
+  {%- if after_grid_html != blank -%}
+    <div class="ssky-stat-cards__after">
+      {{ after_grid_html }}
+    </div>
+  {%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Colored Stat Cards",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "padding_y_mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding (mobile)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_y_desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding (desktop)",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "FROM OUR SURVEY OF 1,014 PARENTS"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "The Numbers Behind the Gap"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "h1",
+          "options": [
+            { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h0", "label": "H0" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "default": "h2",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>We surveyed 1,014 parents of school-aged kids across the U.S. Here's what they said — in their own words, backed by data.</p>"
+        }
+      ]
+    },
+    {
+      "type": "section_pill",
+      "name": "Section Pill",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "pill_text",
+          "label": "Pill text",
+          "default": "⭐️⭐️⭐️⭐️⭐️ 4,500+ Five-Star Reviews"
+        },
+        {
+          "type": "range",
+          "id": "pill_opacity",
+          "min": 5,
+          "max": 80,
+          "step": 5,
+          "unit": "%",
+          "label": "Pill background opacity",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "pill_radius",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "Border radius",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "pill_padding_y",
+          "min": 4,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Vertical padding",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "pill_padding_x",
+          "min": 8,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Horizontal padding",
+          "default": 22
+        },
+        {
+          "type": "checkbox",
+          "id": "invert",
+          "label": "Invert pill colors",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 1,
+      "settings": [
+        { "type": "checkbox", "id": "button_large", "label": "Large buttons", "default": true },
+        { "type": "checkbox", "id": "button_full", "label": "Full width container", "default": true },
+        { "type": "header", "content": "Button 1" },
+        { "type": "text", "id": "button_label", "label": "Label", "default": "Learn More" },
+        { "type": "url", "id": "button_link", "label": "Link" },
+        { "type": "checkbox", "id": "button_style_secondary", "label": "Outline style", "default": false },
+        { "type": "header", "content": "Button 2" },
+        { "type": "text", "id": "button_label_b", "label": "Label" },
+        { "type": "url", "id": "button_link_b", "label": "Link" },
+        { "type": "header", "content": "Button 3" },
+        { "type": "text", "id": "button_label_c", "label": "Label" },
+        { "type": "url", "id": "button_link_c", "label": "Link" },
+        { "type": "header", "content": "Button 4" },
+        { "type": "text", "id": "button_label_d", "label": "Label" },
+        { "type": "url", "id": "button_link_d", "label": "Link" }
+      ]
+    },
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Top border + stat color",
+          "default": "#0597AF"
+        },
+        { "type": "header", "content": "Icon (optional)" },
+        { "type": "image_picker", "id": "icon_image", "label": "Icon image" },
+        { "type": "text", "id": "icon_emoji", "label": "Icon emoji (if no image)" },
+        { "type": "header", "content": "Stat + Content" },
+        { "type": "text", "id": "stat", "label": "Big stat" },
+        { "type": "text", "id": "internal_heading", "label": "Internal heading (optional)" },
+        { "type": "textarea", "id": "body", "label": "Main text" },
+        { "type": "header", "content": "Pill (optional)" },
+        { "type": "text", "id": "pill_text", "label": "Pill text" },
+        { "type": "header", "content": "Small subtext" },
+        { "type": "text", "id": "subtext", "label": "Small subtext" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Colored Stat Cards",
+      "blocks": [
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

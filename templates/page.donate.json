@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_iLKE7r": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_qt3qzf": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p>Thank you for your interest in our work! Our Tuttle Twins education program is a philanthropic endeavor of Libertas Institute, a 501(c)3 non-profit.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_qt3qzf"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_GK3i7e": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "text_hBBRaD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Libertas Institute is the publisher of these books, and our donors help us spread these books widely into schools and homes through their financial support.<br/><br/>Your tax-deductible support helps us accelerate the publication of more educational material, market them aggressively to educate more children, and partner with educators and schools across the country to distribute more books and curriculum.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_hBBRaD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/team.jpg",
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_XGrUEp": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_yPHiEV": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p>We deeply appreciate your willingness to hep us educate the rising generation about the principles of a free society so we can combat the socialist, entitlement mindset that is far too popular with today’s youth.<br/><br/>To contribute to our project, please make a secure donation:</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_gDTmQw": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": false,
+            "button_label": "Donate Now",
+            "button_link": "https://secure.anedot.com/libertas-institute/ttredirect",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_yPHiEV",
+        "button_gDTmQw"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_kAhQVN": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_krDr7h": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p><br/>We also accept donations via:</p><ul><li>Venmo at @LibertasUtah</li><li>Paypal at info@libertasutah.org</li><li>Cryptocurrency (<a href=\"https://libertas.org/contact\" target=\"_blank\" title=\"https://libertas.org/contact\">ask us</a> for a wallet ID)</li><li>Donor-advised funds</li><li>Check, made out to Libertas Institute, 2183 West Main Street, #A102, Lehi UT 84043</li></ul>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_krDr7h"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 8,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_block_iLKE7r",
+    "ssky_text_image_block_GK3i7e",
+    "ssky_text_block_XGrUEp",
+    "ssky_text_block_kAhQVN"
+  ]
+}

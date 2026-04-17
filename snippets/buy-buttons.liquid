@@ -1,0 +1,201 @@
+{% comment %}
+  Renders product buy-buttons.
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} product form id.
+  - section_id: {String} id of section to which this snippet belongs.
+  - show_pickup_availability: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+  - is_product_column: {Boolean} enables additional design for the 'TT Product column' section
+  - is_product_column_single: {Boolean} enables additional design for the 'TT Product column' section
+  - is_button_full: {Boolean} enables button--full-width class
+  - is_button_large: {Boolean} enables button--large class
+  - is_button_medium: {Boolean} enables button--medium class
+  - is_button_link: {Boolean} enables button-link class and removes other button classes
+  - is_cart_icon: {Boolean} enables cart-icon
+  - button_label: {String} custom button label
+
+  Usage:
+  {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
+{% endcomment %}
+<div class="buy-buttons--wrapper" {{ block.shopify_attributes }} {% if is_button_full -%}style="width:100%"{%- endif -%}>
+  {%- if product != blank -%}
+    {%- liquid
+      assign gift_card_recipient_feature_active = false
+      if block.settings.show_gift_card_recipient and product.gift_card?
+        assign gift_card_recipient_feature_active = true
+      endif
+
+      assign show_dynamic_checkout = false
+      if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
+        assign show_dynamic_checkout = true
+      endif
+    -%}
+
+    <product-form
+      class="product-form"
+      data-hide-errors="{{ gift_card_recipient_feature_active }}"
+      data-section-id="{{ section.id }}"
+    >
+      <div class="product-form__error-message-wrapper" role="alert" hidden>
+        <span class="svg-wrapper">
+          {{- 'icon-error.svg' | inline_asset_content -}}
+        </span>
+        <span class="product-form__error-message"></span>
+      </div>
+
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      -%}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.available == false
+            or quantity_rule_soldout
+            or product.selected_or_first_available_variant == null
+          %}
+            disabled
+          {% endif %}
+          class="product-variant-id"
+        >
+
+        {%- if gift_card_recipient_feature_active -%}
+          {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+        {%- endif -%}
+        {% if template.suffix == 'replo-pdp' %}
+        <div class="orderText">
+          <p>
+            <span><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.8" d="M12.6571 0.000321333C12.4927 0.00519231 12.3364 0.0733863 12.2218 0.192043L3.93493 8.45829L1.08969 5.60682C0.971035 5.48388 0.807564 5.41374 0.636106 5.41374C0.0667854 5.41198 -0.215342 6.10405 0.193626 6.50074L3.47667 9.79177C3.48894 9.80502 3.502 9.8173 3.51505 9.8284C3.80731 10.1033 4.27921 10.0394 4.48827 9.69747L13.1159 1.08889C13.5329 0.68713 13.2356 -0.0172142 12.6571 0.000321333Z" fill="#6F9B43"/></svg></span>
+            Order today for First Delivery by: </p>
+        </div>
+      {% endif %}
+        <div class="product-form__buttons">
+          {%- liquid
+            assign check_against_inventory = true
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+              assign check_against_inventory = false
+            endif
+            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+              assign quantity_rule_soldout = true
+            endif
+          -%}
+          <button
+            id="ProductSubmitButton-{{ section_id }}"
+            type="submit"
+            name="add"
+            class="product-form__submit{% if is_button_link %} button-link{% else %} button{%- if is_button_large and button_style != 'link' %} button--large{%- elsif is_button_medium %} button--medium{%- elsif is_product_column %}{%- else %} button--full-width{%- endif -%}{%- if is_button_full %} button--full-width{%- endif -%}{%- if show_dynamic_checkout or button_style == 'secondary' %} button--secondary{%  elsif button_style == 'link' %} button--link{%- else %} button--primary{%- endif -%}{% endif %}"
+            {% if product.selected_or_first_available_variant.available == false
+              or quantity_rule_soldout
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            {%- if is_cart_icon -%}
+              <span class="svg-wrapper">
+                {{- 'icon-cart-for-atc.svg' | inline_asset_content -}}
+              </span>
+            {%- endif -%}
+            <span>
+              {% if template.suffix == 'replo-pdp' %}
+                Get Started - <s>{{ product.price | money }}</s>
+              {% else %}
+                {%- if product.selected_or_first_available_variant == null -%}
+                  {{ 'products.product.unavailable' | t }}
+                {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- elsif button_label != blank -%}
+                  {{ button_label }}
+                {%- elsif is_product_column_single -%}
+                  {{ 'TT_Sections.product_column_Section.purchase_this_book' | t }}
+                {%- elsif is_product_column -%}
+                  {{ 'TT_Sections.product_column_Section.add_to_cart' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
+              {% endif %}
+            </span>
+            {%- render 'loading-spinner' -%}
+          </button>
+          {%- if show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
+        </div>
+        {% if template.suffix == 'replo-pdp' %}
+        <div class="button_bottomLabel">
+          <p>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.99996 6.00004C7.26356 6.00004 6.66663 6.44775 6.66663 7.00004C6.66663 7.55231 7.26356 8.00004 7.99996 8.00004C8.73636 8.00004 9.33329 8.44777 9.33329 9.00004C9.33329 9.55231 8.73636 10 7.99996 10M7.99996 6.00004C8.58049 6.00004 9.07436 6.27831 9.25743 6.66671M7.99996 6.00004V5.33337M7.99996 10C7.41943 10 6.92556 9.72177 6.74249 9.33337M7.99996 10V10.6667" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.33337 1.46673C8.90257 1.37928 8.45664 1.33337 8.00004 1.33337C4.31814 1.33337 1.33337 4.31814 1.33337 8.00004C1.33337 11.6819 4.31814 14.6667 8.00004 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8.00004C14.6667 7.54344 14.6208 7.09751 14.5334 6.66671" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.3334 4.66671H14.3334M11.3334 4.66671V1.66671M11.3334 4.66671L14.6667 1.33337" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            100% Money-Back Guarantee
+          </p>
+          <p>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.66663 2.00061H14.3333" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 1.99988V10.6538L7.95753 13.9885C7.98 14.0036 8.0094 14.0036 8.03187 13.9886L13 10.6538V1.99988" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.44441 9.33329L7.99996 8.72463L9.55549 9.33329L9.36109 7.71009L10.3333 6.49271L8.97216 6.08691L7.99996 4.66663L7.02776 6.08691L5.66663 6.49271L6.63885 7.71009L6.44441 9.33329Z" stroke="#3F3939" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            5 Million Books Sold
+          </p>
+        </div>
+      {% endif %}
+
+      {%- endform -%}
+  
+ 
+    
+    </product-form>
+  
+  {%- else -%}
+    <div class="product-form">
+      <div class="product-form__buttons form">
+        <button
+          type="submit"
+          name="add"
+          class="product-form__submit{% if is_button_link %} button-link{% else %} button button--full-width button--primary{% endif %}"
+          disabled
+        >
+          {{ 'products.product.sold_out' | t }}
+        </button>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if show_pickup_availability -%}
+    {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+
+    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+      | where: 'pick_up_enabled', true
+    -%}
+
+    <pickup-availability
+      class="product__pickup-availabilities quick-add-hidden"
+      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+        available
+      {% endif %}
+      data-root-url="{{ routes.root_url }}"
+      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      data-has-only-default-variant="{{ product.has_only_default_variant }}"
+      data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
+    >
+      <template>
+        <pickup-availability-preview class="pickup-availability-preview">
+          <span class="svg-wrapper">
+            {{- 'icon-unavailable.svg' | inline_asset_content -}}
+          </span>
+          <div class="pickup-availability-info">
+            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+            <button class="pickup-availability-button link link--text underlined-link">
+              {{ 'products.product.pickup_availability.refresh' | t }}
+            </button>
+          </div>
+        </pickup-availability-preview>
+      </template>
+    </pickup-availability>
+
+    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+</div>

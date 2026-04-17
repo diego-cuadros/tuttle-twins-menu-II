@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "us"
+  },
+  "parent": "page.academy.json",
+  "sections": {
+    "ssky_new_text_column_LbW86c": {
+      "settings": {},
+      "blocks": {
+        "text_column_4B9M7T": {
+          "settings": {
+            "heading": "",
+            "price_suffix": "One-Time for Lifetime Access",
+            "price_subline": ""
+          }
+        },
+        "text_column_QcNntC": {
+          "settings": {
+            "heading": "",
+            "use_custom_link_instead_of_product_form": true,
+            "product": "tuttle-twins-academy-annual"
+          }
+        }
+      }
+    },
+    "ssky_courses_b_McQLjy": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "ssky_image_glide_slider_eVVKf6": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "ssky_courses_NMr437": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "ssky_new_text_column_6VEERR": {
+      "settings": {},
+      "blocks": {
+        "text_column_3LgpDH": {
+          "settings": {
+            "heading": "",
+            "price_suffix": "One-Time Lifetime Access",
+            "price_subline": ""
+          }
+        },
+        "text_column_PY4ixX": {
+          "settings": {
+            "heading": "",
+            "use_custom_link_instead_of_product_form": true,
+            "product": "tuttle-twins-academy-annual"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,812 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "tt_hero_Yhm7VT": {
+      "type": "tt-hero",
+      "blocks": {
+        "caption_9q4GmG": {
+          "type": "caption",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "caption": "Homeschool with Confidence",
+            "alignment": "left",
+            "font_size_desktop": 18,
+            "font_size_mobile": 14,
+            "font_weight": "700",
+            "text_transform": "none",
+            "color": "#ffd05a",
+            "margin_top": 0,
+            "margin_bottom": 8
+          },
+          "blocks": {}
+        },
+        "heading_kwDNjA": {
+          "type": "heading",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "heading": "Teach Freedom That Lasts a Lifetime",
+            "alignment": "left",
+            "font_size_desktop": 48,
+            "font_size_mobile": 32,
+            "font_weight": "600",
+            "text_transform": "none",
+            "color": "",
+            "highlight_color": "",
+            "heading_tag": "h2",
+            "max_width": 100,
+            "margin_top": 0,
+            "margin_bottom": 16
+          },
+          "blocks": {}
+        },
+        "text_J7pt4F": {
+          "type": "text",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "text": "Homeschool families across America trust Tuttle Twins to teach kids about liberty, responsibility, critical thinking, and real-world economics—without the indoctrination.",
+            "alignment": "left",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14,
+            "font_weight": "400",
+            "text_transform": "none",
+            "color": "",
+            "margin_top": 0,
+            "margin_bottom": 16
+          },
+          "blocks": {}
+        },
+        "button_group_D97NPq": {
+          "type": "button-group",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "alignment": "flex-start",
+            "gap": 16,
+            "stack_on_mobile": false,
+            "margin_top": 32,
+            "margin_bottom": 20
+          },
+          "blocks": {
+            "button_8pY6Rj": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "Shop Homeschool Bundles",
+                "button_link": "#shop-homeschool",
+                "button_style": "primary",
+                "button_size": "default",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            },
+            "button_gLdDmD": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "See How to Use ESA Funds",
+                "button_link": "#esa",
+                "button_style": "primary",
+                "button_size": "default",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            },
+            "button_G9TRY4": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "Parent Resources & Community",
+                "button_link": "#resources",
+                "button_style": "primary",
+                "button_size": "default",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_8pY6Rj",
+            "button_gLdDmD",
+            "button_G9TRY4"
+          ]
+        }
+      },
+      "block_order": [
+        "caption_9q4GmG",
+        "heading_kwDNjA",
+        "text_J7pt4F",
+        "button_group_D97NPq"
+      ],
+      "name": "TT Hero",
+      "settings": {
+        "hide_on_mobile": false,
+        "hide_on_tablet": false,
+        "hide_on_desktop": false,
+        "image": "shopify://shop_images/Homeschool_Hub.png",
+        "vertical_alignment": "center",
+        "color_scheme": "scheme-4",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_JYLyUy": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "heading_b4BKAF": {
+          "type": "heading",
+          "settings": {
+            "custom_id": "",
+            "heading": "<p>Homeschool-Ready Bundles</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_GJFeGk": {
+          "type": "text",
+          "settings": {
+            "custom_id": "",
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Whether you’re just starting out or have years of homeschooling experience, Tuttle Twins makes it simple to add freedom-based lessons into your daily rhythm. Choose a bundle that fits your kids’ ages and learning level.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b4BKAF",
+        "text_GJFeGk"
+      ],
+      "name": "TT Custom block",
+      "settings": {
+        "anchor_id": "shop-homeschool",
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 0,
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "fullwidth": false,
+        "narrow_width": false
+      }
+    },
+    "ssky_collection_menu_FUGpKE": {
+      "type": "ssky-collection-menu",
+      "blocks": {
+        "collection_4bwwPp": {
+          "type": "collection",
+          "settings": {
+            "collection": "#toddler-bundles",
+            "title": "Toddlers (Ages 6 and Below)"
+          }
+        },
+        "collection_W7MLi4": {
+          "type": "collection",
+          "settings": {
+            "collection": "#kids-bundles",
+            "title": "Kids (Ages 7-12)"
+          }
+        },
+        "collection_QDVFwr": {
+          "type": "collection",
+          "settings": {
+            "collection": "#teen-bundles",
+            "title": "Teens (Ages 13 and Up)"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4bwwPp",
+        "collection_W7MLi4",
+        "collection_QDVFwr"
+      ],
+      "name": "TT Collection menu",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "z_featured_collection_JGXBTm": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Toddlers (Ages 6 and Below)",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "toddler-bundle",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "z_featured_collection_jXVzQm": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Children (Ages 7-12)",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kidsbundles",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "z_featured_collection_D9kCdk": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Teens (Ages 13 and Up)",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "teen-bundles",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "z_featured_collection_Gptzh4": {
+      "type": "z-featured-collection",
+      "name": "Academy Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": true,
+        "title": "Academy",
+        "heading_size": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "academy",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "z_video_KW7aLi": {
+      "type": "z-video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/aJg-TyXFdTw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_about_page.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "ssky_testimonials_P6iCqz": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_gQhALH": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“<strong>We’re really concerned about teaching our daughter proper education, giving her real useful and practical tools to be a successful person and to learn about</strong> economics and government and politics and history, the way it’s supposed to be taught accurately. Thanks for what you do.“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Dusty S.",
+            "author_state": "",
+            "author_image": "shopify://shop_images/Dusty-Scott.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_gQhALH"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_trFXHH": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_nrX9Pm": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Our Mission Is to Help You Teach Powerful Ideas and True History to Your Children</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_BWeWm9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a parent wanting to teach your kids the values you hold dear, you may wonder:</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_xgRjXi": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>Can my kids really understand economic ideas? Do I need to teach them about it?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_HTBtkh": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How can I inspire my kids to love America and the ideas taught by the Founding Fathers?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_pDWwC7": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do I give my kids a foundation of freedom so they aren’t swept up by the crazy ideas being promoted on social media and by the government and media?</p>",
+            "text_large": true
+          }
+        },
+        "text_9ncrwa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While there are many books to teach the ideas of freedom to adults, there has been a profound void in the children’s literature market. The Tuttle Twins series closes the gap, helping parents convey the principles of freedom to their kids in a fun way.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_nrX9Pm",
+        "text_BWeWm9",
+        "checkbox_xgRjXi",
+        "checkbox_HTBtkh",
+        "checkbox_pDWwC7",
+        "text_9ncrwa"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/family-with-book.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_y6c3af": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_YqyxEx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Taking the ideas of liberty to the next generation, with fun, educational books that kids and adults can enjoy.</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_39j4mG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each of our books focuses on a different aspect of the principles of a free society: free markets, entrepreneurship, individual rights, personal responsibility, sound money, protectionism, and a variety of other issues—all boiled down to core concepts that children of different ages can easily grasp.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YqyxEx",
+        "text_39j4mG"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Girl-with-Book-v2.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "scheme-5",
+        "merging_color": "#3f3939",
+        "overflow_image": 60,
+        "merge_with_section_above": true,
+        "remove_bottom_space": true,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_hero_banner_rVpfzj": {
+      "type": "ssky-hero-banner",
+      "blocks": {
+        "heading_FajjEY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Use Your State’s Education Funds for Tuttle Twins",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_6JB8ME": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thousands of homeschool families are using ESA programs like ClassWallet, Odyssey, and other state-based funding programs to cover the cost of their Tuttle Twins resources. You may be eligible too!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_CVMFJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/untitled-18.jpg",
+            "image_fit": false
+          }
+        },
+        "state_selector_LYdzLj": {
+          "type": "state_selector",
+          "settings": {
+            "label": "Choose your state",
+            "default_state_code": "TX",
+            "states": [
+              "al",
+              "az",
+              "ar",
+              "ca",
+              "fl",
+              "ga",
+              "id",
+              "in",
+              "ia",
+              "ks",
+              "la",
+              "ms",
+              "mo",
+              "mt",
+              "nh",
+              "ny",
+              "nc",
+              "oh",
+              "sc",
+              "tn",
+              "tx",
+              "ut",
+              "wv",
+              "wy"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "heading_FajjEY",
+        "text_6JB8ME",
+        "image_CVMFJ6",
+        "state_selector_LYdzLj"
+      ],
+      "name": "TT Hero Banner",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "anchor_id": "esa",
+        "anchor_offset": 80
+      }
+    },
+    "ssky_custom_block_JMhzCU": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "heading_CMtVr6": {
+          "type": "heading",
+          "settings": {
+            "custom_id": "",
+            "heading": "<p>Resources Just for Homeschool Parents</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nhcpGm": {
+          "type": "text",
+          "settings": {
+            "custom_id": "",
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Teaching at home is a big job. We’ve created a library of resources to make your homeschool experience inspiring, practical, and fun.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CMtVr6",
+        "text_nhcpGm"
+      ],
+      "name": "TT Custom block",
+      "settings": {
+        "anchor_id": "resources",
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 0,
+        "padding_top": 32,
+        "padding_bottom": 28,
+        "fullwidth": false,
+        "narrow_width": false
+      }
+    },
+    "z_featured_blog_LXRTrp": {
+      "type": "z-featured-blog",
+      "custom_css": [
+        "h2 {text-align: center !important;}"
+      ],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "Articles & Blog Posts",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "blog": "blog",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "excerpt_limit": 100,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "z_featured_blog_qQtbVq": {
+      "type": "z-featured-blog",
+      "custom_css": [],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "The Tuttle Twins Podcast",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "blog": "podcast",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "excerpt_limit": 100,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "sskymo_text_column_f_dhgtpb": {
+      "type": "sskymo-text-column-f",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "tt_hero_Yhm7VT",
+    "ssky_custom_block_JYLyUy",
+    "ssky_collection_menu_FUGpKE",
+    "z_featured_collection_JGXBTm",
+    "z_featured_collection_jXVzQm",
+    "z_featured_collection_D9kCdk",
+    "z_featured_collection_Gptzh4",
+    "z_video_KW7aLi",
+    "ssky_testimonials_P6iCqz",
+    "ssky_text_image_block_trFXHH",
+    "ssky_text_image_block_y6c3af",
+    "ssky_hero_banner_rVpfzj",
+    "ssky_custom_block_JMhzCU",
+    "z_featured_blog_LXRTrp",
+    "z_featured_blog_qQtbVq",
+    "sskymo_text_column_f_dhgtpb"
+  ]
+}

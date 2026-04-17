@@ -1,0 +1,99 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Campaign Sub-Nav
+  File:    sections/section-a250-subnav.liquid
+  Note:    Sticky offset is set via the CSS variable
+           --a250-subnav-top. Default 0. If your theme nav
+           is sticky and 64px tall, set this to 64px in
+           america250.css or override inline here.
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <div class="a250-subnav" style="position: sticky; top: {{ section.settings.sticky_offset }}px; z-index: 190;">
+    <div class="a250-subnav-inner">
+      <ul class="a250-subnav-links">
+        {% for block in section.blocks %}
+          {% if block.type == 'nav_link' %}
+            <li {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.url }}">{{ block.settings.label }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% if section.settings.cta_text != blank %}
+        <a href="{{ section.settings.cta_url }}" class="a250-subnav-cta">
+          {{ section.settings.cta_text }} →
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · Sub-Nav",
+  "tag": "div",
+  "class": "a250-section-subnav",
+  "settings": [
+    {
+      "type": "range",
+      "id": "sticky_offset",
+      "label": "Sticky top offset (px)",
+      "info": "Set to your theme header height so this sticks below it.",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "CTA Button"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA label",
+      "default": "Enter Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Nav Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "The Contest"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "Anchor or URL",
+          "default": "#a250-contest",
+          "info": "Use an anchor like #a250-contest to scroll to a section, or a full URL."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Sub-Nav",
+      "blocks": [
+        { "type": "nav_link", "settings": { "label": "The Contest",          "url": "#a250-contest"    }},
+        { "type": "nav_link", "settings": { "label": "How to Enter",         "url": "#a250-how"        }},
+        { "type": "nav_link", "settings": { "label": "Find Your Newspaper",  "url": "#a250-newspapers" }},
+        { "type": "nav_link", "settings": { "label": "Books",                "url": "#a250-books"      }}
+      ]
+    }
+  ]
+}
+{% endschema %}

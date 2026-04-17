@@ -1,0 +1,148 @@
+/* Back in Stock Component Styles */
+
+.back-in-stock-container {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.back-in-stock-wrapper {
+  padding: 2rem;
+  background-color: rgba(var(--color-foreground), 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.back-in-stock-heading {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .back-in-stock-wrapper {
+    padding: 1.5rem;
+  }
+
+  .back-in-stock-heading {
+    font-size: 1.3rem;
+  }
+}
+
+/* Form Styles */
+.back-in-stock-form {
+  width: 100%;
+}
+
+.back-in-stock-form__field-group {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 749px) {
+  .back-in-stock-form__field-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.back-in-stock-form .field {
+  flex: 1;
+  margin: 0;
+}
+
+.back-in-stock-form .field__input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 4px;
+  font-size: 1.4rem;
+  background-color: rgb(var(--color-background));
+  transition: border-color 0.2s ease;
+  height: auto;
+  min-height: 4.5rem;
+}
+
+.back-in-stock-form .field__input:focus {
+  outline: none;
+  border-color: rgb(var(--color-button));
+  box-shadow: 0 0 0 3px rgba(var(--color-button), 0.1);
+}
+
+.back-in-stock-form .button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  min-height: 4.5rem;
+}
+
+@media screen and (max-width: 749px) {
+  .back-in-stock-form .button {
+    width: 100%;
+  }
+}
+
+.back-in-stock-spinner {
+  display: none;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.back-in-stock-spinner svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Message Styles */
+.back-in-stock-message {
+  display: none;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-in-stock-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.back-in-stock-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Disabled button state */
+.back-in-stock-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

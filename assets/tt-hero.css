@@ -1,0 +1,48 @@
+/* tt-hero section */
+.tt-hero__blocks {
+    position: relative;
+  }
+  
+  .tt-hero__block-left {
+    width: 100%;
+  }
+  
+  .tt-hero__block-left > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  .tt-hero__image {
+    border-radius: 20px;
+    background-color: transparent;
+    margin-top: 24px;
+  }
+  
+  .tt-hero__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .tt-hero__blocks {
+      display: flex;
+      gap: 24px;
+    }
+  
+    .tt-hero__block-left {
+      width: 50%;
+      flex-shrink: 0;
+    }
+  
+    .tt-hero__image {
+      width: 50%;
+      margin-top: 0;
+    }
+  
+    .tt-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  

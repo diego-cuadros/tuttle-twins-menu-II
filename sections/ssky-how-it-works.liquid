@@ -1,0 +1,365 @@
+{%- comment -%}
+  sections/ssky-how-it-works.liquid
+  CSS lives in assets/homepage-redesign.css
+{%- endcomment -%}
+
+<section
+  class="ssky-how-it-works color-{{ section.settings.color_scheme }}"
+  data-ssky-how-it-works
+  style="
+    --ssky-hiw-pad-m: {{ section.settings.padding_y_mobile }}px;
+    --ssky-hiw-pad-d: {{ section.settings.padding_y_desktop }}px;
+    --ssky-hiw-accent: {{ section.settings.accent_color }};
+  "
+>
+  <div class="page-width">
+
+    <div class="ssky-how-it-works__header">
+      {%- if section.settings.caption != blank -%}
+        <div class="ssky-how-it-works__caption">{{ section.settings.caption }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h2 class="ssky-how-it-works__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="ssky-how-it-works__text rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="ssky-how-it-works__steps">
+
+      <!-- STEP 1 -->
+      <div class="ssky-how-it-works__step" data-step="1">
+        <div class="ssky-how-it-works__step-badge">1</div>
+
+        <div class="ssky-how-it-works__step-title">
+          {{ section.settings.step1_title }}
+        </div>
+
+        {%- if section.settings.step1_text != blank -%}
+          <div class="ssky-how-it-works__step-text">{{ section.settings.step1_text }}</div>
+        {%- endif -%}
+
+        <div class="ssky-how-it-works__age-grid" role="tablist" aria-label="Choose age range">
+          <button class="ssky-how-it-works__age-btn is-active" type="button" data-age="2_4" aria-pressed="true">
+            Ages 2–4
+          </button>
+          <button class="ssky-how-it-works__age-btn" type="button" data-age="5_8" aria-pressed="false">
+            Ages 5–8
+          </button>
+          <button class="ssky-how-it-works__age-btn" type="button" data-age="9_12" aria-pressed="false">
+            Ages 9–12
+          </button>
+          <button class="ssky-how-it-works__age-btn" type="button" data-age="13_plus" aria-pressed="false">
+            Teens 13+
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="ssky-how-it-works__step" data-step="2">
+        <div class="ssky-how-it-works__step-badge">2</div>
+
+        <div class="ssky-how-it-works__step-title">
+          {{ section.settings.step2_title }}
+        </div>
+
+        {%- if section.settings.step2_text != blank -%}
+          <div class="ssky-how-it-works__step-text">{{ section.settings.step2_text }}</div>
+        {%- endif -%}
+
+        <div class="ssky-how-it-works__products" data-products>
+          {%- assign groups = "2_4,5_8,9_12,13_plus" | split: "," -%}
+          {%- for g in groups -%}
+            <div class="ssky-how-it-works__product-group{% if forloop.first %} is-active{% endif %}" data-product-group="{{ g }}">
+              {%- for i in (1..4) -%}
+                {%- assign key = 'p_' | append: g | append: '_' | append: i -%}
+                {%- assign product_obj = section.settings[key] -%}
+
+                {%- if product_obj != blank -%}
+                  <button
+                    type="button"
+                    class="ssky-how-it-works__product"
+                    data-product
+                    data-variant-id="{{ product_obj.selected_or_first_available_variant.id }}"
+                    data-product-title="{{ product_obj.title | escape }}"
+                    {%- assign blurb_key = key | append: '_blurb' -%}
+                    data-product-blurb="{{ section.settings[blurb_key] | escape }}"
+                    aria-pressed="false"
+                  >
+                    <div class="ssky-how-it-works__product-media">
+                      {%- if product_obj.featured_image != blank -%}
+                        {{ product_obj.featured_image | image_url: width: 480 | image_tag: loading: 'lazy' }}
+                      {%- endif -%}
+                    </div>
+                    <div class="ssky-how-it-works__product-meta">
+                      <div class="ssky-how-it-works__product-title">{{ product_obj.title }}</div>
+                      <div class="ssky-how-it-works__product-price">
+                        {%- assign variant = product_obj.selected_or_first_available_variant -%}
+                        {%- if variant.compare_at_price > variant.price -%}
+                          <span class="ssky-how-it-works__product-price-compare">
+                            {{ variant.compare_at_price | money }}
+                          </span>
+                        {%- endif -%}
+                        <span class="ssky-how-it-works__product-price-current">
+                          {{ variant.price | money }}
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="ssky-how-it-works__step" data-step="3">
+        <div class="ssky-how-it-works__step-badge" data-step3-badge>3</div>
+
+        <div class="ssky-how-it-works__step-title">
+          {{ section.settings.step3_title }}
+        </div>
+
+        {%- if section.settings.step3_text != blank -%}
+          <div class="ssky-how-it-works__step-text">{{ section.settings.step3_text }}</div>
+        {%- endif -%}
+
+        <div class="ssky-how-it-works__cta" data-cta>
+          <div class="ssky-how-it-works__cta-selected" data-selected-label>
+            Select a product to Add to Cart.
+          </div>
+
+          <button class="ssky-how-it-works__add button button--primary" type="button" disabled data-add>
+            Add to cart
+          </button>
+
+          <div class="ssky-how-it-works__status" aria-live="polite" data-status></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    @keyframes ssky-badge-pulse {
+      0%   { transform: scale(1);    box-shadow: 0 0 0 0 var(--ssky-hiw-accent, #0597AF); }
+      40%  { transform: scale(1.18); box-shadow: 0 0 0 8px rgba(5, 151, 175, 0); }
+      70%  { transform: scale(0.96); }
+      100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(5, 151, 175, 0); }
+    }
+    .ssky-how-it-works__step-badge[data-step3-badge].is-pulse {
+      animation: ssky-badge-pulse 0.55s ease-out forwards;
+    }
+  </style>
+
+  <script>
+  (function() {
+    const root = document.querySelector('[data-ssky-how-it-works]');
+    if (!root) return;
+
+    const ageButtons     = Array.from(root.querySelectorAll('.ssky-how-it-works__age-btn'));
+    const groups         = Array.from(root.querySelectorAll('[data-product-group]'));
+    const productButtons = Array.from(root.querySelectorAll('[data-product]'));
+    const addBtn         = root.querySelector('[data-add]');
+    const statusEl       = root.querySelector('[data-status]');
+    const selectedLabel  = root.querySelector('[data-selected-label]');
+    const step3El        = root.querySelector('[data-step="3"]');
+    const step3Badge     = root.querySelector('[data-step3-badge]');
+
+    let selectedVariantId    = null;
+    let selectedProductTitle = null;
+    let hasScrolledToStep3   = false;
+
+    function isMobileView() {
+      return window.matchMedia('(max-width: 989px)').matches;
+    }
+
+    function scrollToStep3() {
+      if (!step3El || !isMobileView()) return;
+
+      setTimeout(function() {
+        step3El.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 160);
+    }
+
+    function pulseStep3Badge() {
+      if (!step3Badge) return;
+      step3Badge.classList.remove('is-pulse');
+      void step3Badge.offsetWidth;
+      step3Badge.classList.add('is-pulse');
+    }
+
+    function setAge(ageValue) {
+      ageButtons.forEach(function(btn) {
+        const active = btn.dataset.age === ageValue;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      groups.forEach(function(group) {
+        group.classList.toggle('is-active', group.dataset.productGroup === ageValue);
+      });
+
+      selectedVariantId    = null;
+      selectedProductTitle = null;
+      hasScrolledToStep3   = false;
+
+      productButtons.forEach(function(p) {
+        p.classList.remove('is-selected');
+        p.setAttribute('aria-pressed', 'false');
+      });
+
+      addBtn.disabled           = true;
+      selectedLabel.textContent = 'Select a product to Add to Cart.';
+      statusEl.textContent      = '';
+    }
+
+    function setSelectedProduct(btn) {
+      productButtons.forEach(function(p) {
+        p.classList.remove('is-selected');
+        p.setAttribute('aria-pressed', 'false');
+      });
+
+      btn.classList.add('is-selected');
+      btn.setAttribute('aria-pressed', 'true');
+
+      selectedVariantId    = btn.dataset.variantId;
+      selectedProductTitle = btn.dataset.productTitle;
+      addBtn.disabled      = !selectedVariantId;
+
+      const blurb = btn.dataset.productBlurb;
+      if (blurb && blurb.trim() !== '') {
+        selectedLabel.textContent = blurb;
+      } else {
+        selectedLabel.textContent = selectedProductTitle ? selectedProductTitle : 'Product selected.';
+      }
+
+      statusEl.textContent = '';
+      pulseStep3Badge();
+
+      if (isMobileView() && !hasScrolledToStep3) {
+        hasScrolledToStep3 = true;
+        scrollToStep3();
+      }
+    }
+
+    async function addToCart() {
+      if (!selectedVariantId) return;
+
+      addBtn.disabled      = true;
+      statusEl.textContent = 'Adding…';
+
+      try {
+        const res = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            items: [{ id: Number(selectedVariantId), quantity: 1 }]
+          })
+        });
+
+        if (!res.ok) throw new Error('Add to cart failed');
+
+        await res.json();
+        statusEl.textContent = '';
+      } catch (e) {
+        statusEl.textContent = 'Sorry — could not add to cart. Please try again.';
+      } finally {
+        addBtn.disabled = !selectedVariantId;
+      }
+    }
+
+    ageButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setAge(btn.dataset.age);
+      });
+    });
+
+    productButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setSelectedProduct(btn);
+      });
+    });
+
+    addBtn.addEventListener('click', addToCart);
+
+    setAge('2_4');
+  })();
+</script>
+</section>
+
+{% schema %}
+{
+  "name": "How It Works",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#0597AF" },
+    { "type": "text", "id": "caption", "label": "Caption", "default": "THREE SIMPLE STEPS" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "How It Works" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Most families are reading their first Tuttle Twins book within a week of ordering. Here's what happens next.</p>" },
+    { "type": "header", "content": "Step 1" },
+    { "type": "text", "id": "step1_title", "label": "Step 1 title", "default": "Choose Where to Start" },
+    { "type": "text", "id": "step1_text", "label": "Step 1 description", "default": "Pick your child's age range to see recommended bundles." },
+    { "type": "header", "content": "Step 2" },
+    { "type": "text", "id": "step2_title", "label": "Step 2 title", "default": "Choose a Bundle" },
+    { "type": "text", "id": "step2_text", "label": "Step 2 description", "default": "Select one of the recommended options below." },
+    { "type": "header", "content": "Step 3" },
+    { "type": "text", "id": "step3_title", "label": "Step 3 title", "default": "Add to Cart" },
+    { "type": "text", "id": "step3_text", "label": "Step 3 description", "default": "We'll add your selection to your cart with one click." },
+    { "type": "header", "content": "Products for Ages 2–4" },
+    { "type": "product", "id": "p_2_4_1", "label": "Product 1" },
+    { "type": "text", "id": "p_2_4_1_blurb", "label": "Product 1 blurb" },
+    { "type": "product", "id": "p_2_4_2", "label": "Product 2" },
+    { "type": "text", "id": "p_2_4_2_blurb", "label": "Product 2 blurb" },
+    { "type": "product", "id": "p_2_4_3", "label": "Product 3" },
+    { "type": "text", "id": "p_2_4_3_blurb", "label": "Product 3 blurb" },
+    { "type": "product", "id": "p_2_4_4", "label": "Product 4" },
+    { "type": "text", "id": "p_2_4_4_blurb", "label": "Product 4 blurb" },
+    { "type": "header", "content": "Products for Ages 5–8" },
+    { "type": "product", "id": "p_5_8_1", "label": "Product 1" },
+    { "type": "text", "id": "p_5_8_1_blurb", "label": "Product 1 blurb" },
+    { "type": "product", "id": "p_5_8_2", "label": "Product 2" },
+    { "type": "text", "id": "p_5_8_2_blurb", "label": "Product 2 blurb" },
+    { "type": "product", "id": "p_5_8_3", "label": "Product 3" },
+    { "type": "text", "id": "p_5_8_3_blurb", "label": "Product 3 blurb" },
+    { "type": "product", "id": "p_5_8_4", "label": "Product 4" },
+    { "type": "text", "id": "p_5_8_4_blurb", "label": "Product 4 blurb" },
+    { "type": "header", "content": "Products for Ages 9–12" },
+    { "type": "product", "id": "p_9_12_1", "label": "Product 1" },
+    { "type": "text", "id": "p_9_12_1_blurb", "label": "Product 1 blurb" },
+    { "type": "product", "id": "p_9_12_2", "label": "Product 2" },
+    { "type": "text", "id": "p_9_12_2_blurb", "label": "Product 2 blurb" },
+    { "type": "product", "id": "p_9_12_3", "label": "Product 3" },
+    { "type": "text", "id": "p_9_12_3_blurb", "label": "Product 3 blurb" },
+    { "type": "product", "id": "p_9_12_4", "label": "Product 4" },
+    { "type": "text", "id": "p_9_12_4_blurb", "label": "Product 4 blurb" },
+    { "type": "header", "content": "Products for Teens 13+" },
+    { "type": "product", "id": "p_13_plus_1", "label": "Product 1" },
+    { "type": "text", "id": "p_13_plus_1_blurb", "label": "Product 1 blurb" },
+    { "type": "product", "id": "p_13_plus_2", "label": "Product 2" },
+    { "type": "text", "id": "p_13_plus_2_blurb", "label": "Product 2 blurb" },
+    { "type": "product", "id": "p_13_plus_3", "label": "Product 3" },
+    { "type": "text", "id": "p_13_plus_3_blurb", "label": "Product 3 blurb" },
+    { "type": "product", "id": "p_13_plus_4", "label": "Product 4" },
+    { "type": "text", "id": "p_13_plus_4_blurb", "label": "Product 4 blurb" },
+    { "type": "range", "id": "padding_y_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding (mobile)", "default": 48 },
+    { "type": "range", "id": "padding_y_desktop", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding (desktop)", "default": 72 }
+  ],
+  "presets": [
+    { "name": "How It Works" }
+  ]
+}
+{% endschema %}

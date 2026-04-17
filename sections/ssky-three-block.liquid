@@ -1,0 +1,431 @@
+{%- style -%}
+  .ssky-three-block-{{ section.id }} .ssky-three-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-three-block-{{ section.id }} .ssky-three-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-three-block-{{ section.id }} .ssky-three-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-three-block-{{ section.id }} .ssky-three-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-three-block-{{ section.id }} .ssky-three-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-three-block-{{ section.id }} .ssky-three-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-three-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+<div class="ssky-three-block-{{ section.id }}">
+  <div class="ssky-three-block gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-three-block__blocks">
+        <div class="ssky-three-block__block-left">
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'block_one' -%}
+                <div class="ssky-three-block__block gradient color-{{ block.settings.color_scheme }}">
+                  <h3 class="ssky-three-block__heading h4" {{ block.shopify_attributes }}>
+                    {{ block.settings.heading }}
+                  </h3>
+                  <div
+                    class="ssky-three-block__text rte"
+                    {%- if block.settings.image == blank %}
+                      style="max-width:100%;"
+                    {%- endif -%}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.text }}
+                  </div>
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="ssky-three-block__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.image != blank -%}
+                    <div class="ssky-three-block__image" {{ block.shopify_attributes }}>
+                      {%- assign widths = '360, 535, 600' -%}
+                      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 600
+                        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- when 'block_two' -%}
+                <div class="ssky-three-block__block gradient color-{{ block.settings.color_scheme }}">
+                  <h3 class="ssky-three-block__heading h4" {{ block.shopify_attributes }}>
+                    {{ block.settings.heading }}
+                  </h3>
+                  <div
+                    class="ssky-three-block__text rte"
+                    {%- if block.settings.image == blank %}
+                      style="max-width:100%;"
+                    {%- endif -%}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.text }}
+                  </div>
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="ssky-three-block__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.image != blank -%}
+                    <div class="ssky-three-block__image" {{ block.shopify_attributes }}>
+                      {%- assign widths = '360, 535, 600' -%}
+                      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 600
+                        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        <div class="ssky-three-block__block-right">
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'block_three' -%}
+                <div class="ssky-three-block__block gradient color-{{ block.settings.color_scheme }}">
+                  <h3 class="ssky-three-block__heading h4" {{ block.shopify_attributes }}>
+                    {{ block.settings.heading }}
+                  </h3>
+                  <div
+                    class="ssky-three-block__text rte"
+                    {%- if block.settings.image == blank %}
+                      style="max-width:100%;"
+                    {%- endif -%}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.text }}
+                  </div>
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="ssky-three-block__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.button_label_b != blank -%}
+                    <div class="ssky-three-block__button-two">
+                      <a
+                        {% if block.settings.button_link_b == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link_b }}"
+                        {% endif %}
+                        class="ssky-three-block__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label_b | escape }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.image != blank -%}
+                    <div class="ssky-three-block__image" {{ block.shopify_attributes }}>
+                      {%- assign widths = '360, 535, 600' -%}
+                      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 600
+                        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TT Three Block",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block_one",
+      "name": "Block One",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "block_two",
+      "name": "Block Two",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-3"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "block_three",
+      "name": "Block Three",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_b",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link_b",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Three Block",
+      "blocks": [
+        {
+          "type": "block_one"
+        },
+        {
+          "type": "block_two"
+        },
+        {
+          "type": "block_three"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

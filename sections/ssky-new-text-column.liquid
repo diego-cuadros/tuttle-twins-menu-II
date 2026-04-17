@@ -1,0 +1,1159 @@
+{%- liquid
+  assign column_with_border = false
+  assign column_with_border_padding = false
+  assign column_with_border_vtwo = false
+  if section.settings.column_with_border == true
+    assign column_with_border = true
+    if section.settings.column_with_border_padding == true
+      assign column_with_border_padding = true
+    endif
+    if section.settings.column_with_border_vtwo == true
+      assign column_with_border_vtwo = true
+    endif
+  endif
+-%}
+
+{%- style -%}
+  /* Section spacing */
+  .ssky-new-text-column-{{ section.id }} .ssky-new-text-column {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-new-text-column-{{ section.id }} .ssky-new-text-column {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Rounded corner variants */
+  {%- if section.settings.top_left -%}
+    .ssky-new-text-column-{{ section.id }} .ssky-new-text-column { border-radius: 15vw 0 0 0; }
+  {%- elsif section.settings.top_right -%}
+    .ssky-new-text-column-{{ section.id }} .ssky-new-text-column { border-radius: 0 15vw 0 0; }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-new-text-column-{{ section.id }} .ssky-new-text-column { border-radius: 0 0 15vw 0; }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-new-text-column-{{ section.id }} .ssky-new-text-column { border-radius: 0 0 0 15vw; }
+  {%- endif -%}
+
+  /* Optional outer corner color wrapper */
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-new-text-column-{{ section.id }} { background-color: {{ section.settings.corner_color }}; }
+  {%- endif -%}
+
+  /* Custom-link button should look like a product-form submit */
+  .ssky-new-text-column-{{ section.id }} a.ssky-new-text-column__button.product-form__submit {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+/* Base header styling */
+.ssky-new-text-column__block h4.ssky-new-text-column__heading.rte.h5 {
+  padding: 48px 32px;
+  background-color: #04aed8;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+
+  /* ✅ STACK content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* top align everything */
+  align-items: stretch;
+
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 600;
+  margin-bottom: 32px;
+
+  /* ✅ Equal height across columns */
+  min-height: 190px;
+  box-sizing: border-box;
+}
+
+/* Second column colors only */
+.ssky-new-text-column__block-set--top .ssky-new-text-column__block:nth-child(2) h4.ssky-new-text-column__heading.rte.h5 {
+  background-color: #ffd05a;
+  color: #3f3939;
+}
+
+/* Make sure the two-column price row always top-aligns */
+.ssky-new-text-column-{{ section.id }} .ssky-heading-row {
+  align-items: start;
+}
+
+/* Prevent vertical shifting between sale and regular price */
+.ssky-new-text-column-{{ section.id }} .ssky-heading-row__left,
+.ssky-new-text-column-{{ section.id }} .ssky-heading-row__right {
+  align-self: start;
+}
+
+/* Remove any artificial vertical nudging */
+.ssky-new-text-column-{{ section.id }} .ssky-heading-row__right {
+  padding-top: 0 !important;
+}
+
+/* Keep suffix using normal rhythm even inside h4 */
+.ssky-new-text-column-{{ section.id }} .ssky-heading-suffix {
+  line-height: 1.2;
+  display: inline-block;
+}
+
+
+  /* Heading: title line above the price/suffix 2-col row */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-title {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* 50/50 price + suffix row inside the heading bar */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50/50 split */
+    align-items: start;            /* top align (sale + non-sale consistent) */
+    width: 100%;
+
+    /* outer padding so content doesn't hug edges */
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Left column = dynamic price (left aligned) + center gutter */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-row__left {
+    text-align: left;
+    padding-right: 12px; /* center gutter */
+    align-self: start;
+  }
+
+  /* Right column = suffix (right aligned) + center gutter + normal line height */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-row__right {
+    text-align: right;
+    padding-left: 12px;  /* center gutter */
+    line-height: 1.2;    /* prevent huge wrapped line height */
+    align-self: start;
+    padding-top: 0;      /* default (non-sale) */
+  }
+
+  /* Apply the tiny vertical tweak ONLY when compare-at is present
+     (add class "has-compare" to .ssky-heading-row in Liquid) */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-row.has-compare .ssky-heading-row__right {
+    padding-top: 0; /* dial 1–3px if needed */
+  }
+
+  /* Price stack (sale over compare) */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-price {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.05;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-price__sale {
+    font-weight: 700;
+  }
+
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-price__compare {
+    opacity: 0.75;
+    font-size: 0.95em;
+    margin-top: 4px;
+  }
+
+  /* Suffix: treat like normal text even though it's inside an h4 */
+  .ssky-new-text-column-{{ section.id }} .ssky-heading-suffix {
+    display: inline-block;
+    opacity: 0.9;
+    font-weight: 500;
+    font-size: 1.7rem; /* keep your chosen size */
+    line-height: 1.2;  /* normal wrapped line height */
+  }
+
+  /* Keep price + currency together on one line */
+.ssky-new-text-column-{{ section.id }} .ssky-heading-price__sale,
+.ssky-new-text-column-{{ section.id }} .ssky-heading-price__compare {
+  white-space: nowrap;
+}
+
+/* Currency should read like a modifier, not its own line */
+.ssky-new-text-column-{{ section.id }} .ssky-currency {
+  font-size: 0.55em;     /* smaller CAD */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 4px; /* ← controls the space cleanly */
+}
+
+.ssky-new-text-column-{{ section.id }} .ssky-heading-price__subline {
+  font-size: 0.35em;     /* small like your screenshot */
+  font-weight: 600;
+  opacity: 0.9;
+  line-height: 1.1;
+  margin-left: 4px;
+}
+
+
+{%- endstyle -%}
+
+
+<div class="ssky-new-text-column-{{ section.id }}"{% if section.settings.anchor_id != blank %} id="{{ section.settings.anchor_id | escape }}"{% endif %}>
+  <div class="ssky-new-text-column gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width{%- if column_with_border %} ssky-new-text-column__layout-border{%- if column_with_border_padding %} ssky-new-text-column__layout-border-padding{%- endif -%}{%- if column_with_border_vtwo %} ssky-new-text-column__layout-border-v2{%- endif -%}{%- endif -%}">
+      <div class="ssky-new-text-column__blocks ssky-text-block__blocks {{ section.settings.content_alignment }}">
+        {%- if section.settings.heading != blank -%}
+          {%- assign heading_length = section.settings.heading | size -%}
+          <h2
+            class="ssky-text-block__heading rte {{ section.settings.heading_size }} weight-{{ section.settings.heading_weight }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1"
+            {% endif %}
+          >
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'text_column' -%}
+              {%- assign text_column_block = true -%}
+            {%- when 'text_column_w_image' -%}
+              {%- assign text_column_w_image_block = true -%}
+            {%- when 'text_column_w_icons' -%}
+              {%- assign text_column_w_icons_block = true -%}
+            {%- when 'caption' -%}
+              {%- assign header_block = true -%}
+            {%- when 'heading' -%}
+              {%- assign header_block = true -%}
+            {%- when 'text' -%}
+              {%- assign header_block = true -%}
+            {%- when 'checkbox' -%}
+              {%- assign checkbox_block = true -%}
+          {%- endcase -%}
+        {%- endfor -%}
+
+        {%- if header_block == true -%}
+          <div class="ssky-new-text-column__block-set--header ssky-text-block__blocks {{ section.settings.content_alignment }}">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'caption' -%}
+                  <div
+                    class="ssky-text-block__caption {{ block.settings.text_style }} {{ block.settings.color_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {{ block.settings.caption | escape }}
+                  </div>
+
+                {%- when 'heading' -%}
+                  {%- assign heading_length = block.settings.heading | size -%}
+                  <h2
+                    class="ssky-text-block__heading rte {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {{ block.settings.heading }}
+                  </h2>
+
+                {%- when 'text' -%}
+                  <div
+                    class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="rte" style="max-width:{{ block.settings.max_width }}rem;">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if text_column_block == true -%}
+          {% assign block_count = 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'text_column' %}
+              {% assign block_count = block_count | plus: 1 %}
+              {% if block_count == 1 %}
+                {% assign number_block = 'one' %}
+              {% elsif block_count == 2 %}
+                {% assign number_block = 'two' %}
+              {% else %}
+                {% assign number_block = 'none' %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          <div class="ssky-new-text-column__block-set--top {{ number_block }}">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'text_column' -%}
+                  <div
+                    class="ssky-new-text-column__block ssky-new-text-column__block-{{ block.id }} gradient color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% style %}
+                      .ssky-new-text-column__block-{{ block.id }} .buy-buttons--wrapper {
+                        padding: 50px 20px;
+                      }
+                      .ssky-new-text-column__block-{{ block.id }} .buy-buttons--wrapper button.product-form__submit {
+                        width: auto;
+                        margin: auto;
+                      }
+                    {% endstyle %}
+
+                    <div>
+                      {%- assign block_product = block.settings.product -%}
+
+<h4 class="color-{{ block.settings.color_scheme }} ssky-new-text-column__heading rte h5{%- if column_with_border %} h6{%- unless column_with_border_vtwo %} primary-blue{%- endunless -%}{%- endif -%}">
+  <span class="ssky-heading-title">
+    {{ block.settings.heading }}
+  </span>
+
+  {%- if block.settings.show_dynamic_price_row and block_product != blank -%}
+    {%- assign v = block_product.selected_or_first_available_variant -%}
+    {%- assign price = v.price -%}
+    {%- assign compare = v.compare_at_price -%}
+
+    {%- assign sale_str = price | money | replace: '.00', '' | replace: ',00', '' -%}
+    {%- assign compare_str = compare | money | replace: '.00', '' | replace: ',00', '' -%}
+
+    <span class="ssky-heading-row{% if compare and compare > price %} has-compare{% endif %}">
+      <!-- LEFT COLUMN -->
+      <span class="ssky-heading-row__left">
+        <span class="ssky-heading-price">
+          <span class="ssky-heading-price__sale">
+  {{ sale_str }}{% unless localization.country.iso_code == 'US' %}<span class="ssky-currency"> {{ localization.country.currency.iso_code }}</span>{% endunless %}
+</span>
+{%- if block.settings.price_subline != blank -%}
+  <span class="ssky-heading-price__subline">{{ block.settings.price_subline | escape }}</span>
+{%- endif -%}
+
+
+          {%- if compare and compare > price -%}
+            <span class="ssky-heading-price__compare">
+  <s>{{ compare_str }}{% unless localization.country.iso_code == 'US' %}<span class="ssky-currency"> {{ localization.country.currency.iso_code }}</span>{% endunless %}</s>
+</span>
+
+          {%- endif -%}
+        </span>
+      </span>
+
+      <!-- RIGHT COLUMN -->
+      <span class="ssky-heading-row__right">
+        {%- if block.settings.price_suffix != blank -%}
+          <span class="ssky-heading-suffix">{{ block.settings.price_suffix | escape }}</span>
+        {%- endif -%}
+      </span>
+    </span>
+  {%- endif -%}
+</h4>
+
+
+
+                      <div class="ssky-new-text-column__text rte{%- if block.settings.text_large %} text-body-large{%- endif -%}">
+                        {{ block.settings.text }}
+                      </div>
+                    </div>
+
+                    {%- assign block_product = block.settings.product -%}
+                    {%- assign use_custom_link = block.settings.use_custom_link_instead_of_product_form -%}
+
+                    
+
+                    {%- if block_product != blank -%}
+                      {%- if use_custom_link -%}
+                        {%- if block.settings.button_label != blank -%}
+                          <a
+                            {% if block.settings.button_link == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link }}"
+                            {% endif %}
+                            class="ssky-new-text-column__button product-form__submit button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                          >
+                            {{ block.settings.button_label | escape }}
+                          </a>
+                        {%- endif -%}
+                      {%- else -%}
+                        {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+
+                        <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                        {%- render 'buy-buttons',
+                            block: block,
+                            product: block_product,
+                            product_form_id: product_form_id,
+                            section_id: section.id,
+                            is_button_large: block.settings.button_large,
+                            is_button_full: block.settings.button_full,
+                            button_label: block.settings.button_label
+                          -%}
+                      {%- endif -%}
+                    {%- else -%}
+                      {%- if block.settings.button_label != blank -%}
+                        <a
+                          {% if block.settings.button_link == blank %}
+                            role="link" aria-disabled="true"
+                          {% else %}
+                            href="{{ block.settings.button_link }}"
+                          {% endif %}
+                          class="ssky-new-text-column__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                        >
+                          {{ block.settings.button_label | escape }}
+                        </a>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if text_column_w_image_block == true -%}
+          <div class="ssky-new-text-column__block-set--top left">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'text_column_w_image' -%}
+                  <div
+                    class="ssky-new-text-column__block ssky-new-text-column__block--w--image gradient color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div>
+                      <h4 class="ssky-new-text-column__heading rte h5{%- if column_with_border %} h6{%- unless column_with_border_vtwo %} primary-blue{%- endunless -%}{%- endif -%}">
+                        {{ block.settings.heading }}
+                      </h4>
+                      <div class="ssky-new-text-column__text rte{%- if block.settings.text_large %} text-body-large{%- endif -%}">
+                        {{ block.settings.text }}
+                      </div>
+                    </div>
+                    {%- if block.settings.button_label != blank -%}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
+                        class="ssky-new-text-column__button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    {%- endif -%}
+                    {%- if block.settings.image != blank -%}
+                      <div class="ssky-new-text-column__image">
+                        <img src="{{ block.settings.image | image_url: width: 240 }}">
+                      </div>
+                    {%- endif -%}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if text_column_w_icons_block == true -%}
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+          <style>
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__block--w--icons {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__icons-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 20px;
+            }
+
+            @media screen and (min-width: 750px) {
+              .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__icons-grid {
+                grid-template-columns: repeat(3, 1fr);
+              }
+            }
+
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__block--w--icons-text {
+              display: flex;
+              align-items: flex-start;
+              margin-bottom: 15px;
+            }
+
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__block--w--icons-icon {
+              flex-shrink: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 2rem auto;
+            }
+
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__block--w--icons-icon i {
+              font-size: 2.5rem;
+              padding: 1.5rem;
+              border-radius: 5px;
+            }
+
+            .ssky-new-text-column-{{ section.id }} .ssky-new-text-column__block--text-content {
+              flex: 1;
+              min-width: 0;
+              word-break: break-word;
+              overflow-wrap: break-word;
+              text-align: center;
+            }
+
+            .ssky-new-text-column-{{ section.id }} i.fa {
+              min-width: 55px;
+              text-align: center;
+            }
+
+            .ssky-new-text-column-{{ section.id }} .text-body-large {
+              font-size: 1.125rem;
+              line-height: 1.5;
+            }
+          </style>
+
+          <div class="ssky-new-text-column__block-set--top left">
+            <div class="ssky-new-text-column__icons-grid">
+              {%- for block in section.blocks -%}
+                {% case block.type %}
+                  {%- when 'text_column_w_icons' -%}
+                    <div
+                      class="ssky-new-text-column__block ssky-new-text-column__block--w--icons gradient color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {{ block.shopify_attributes }}
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      <div class="ssky-text-block__blocks">
+                        {%- if block.settings.icon_type != 'none' -%}
+                          <span class="ssky-new-text-column__block--w--icons-icon">
+                            <i class="fa {{ block.settings.icon_type }}" aria-hidden="true"
+                              style="background: {{ block.settings.icon_background_color }}; color: {{ block.settings.icon_color }};"></i>
+                          </span>
+                        {%- endif -%}
+                        <h4 class="ssky-new-text-column__heading rte h5 {{ section.settings.content_alignment }}"
+                          {% if block.settings.heading_color != blank %}
+                            style="color: {{ block.settings.heading_color }};"
+                          {% endif %}
+                        >
+                          {{ block.settings.heading }}
+                        </h4>
+                        {%- if block.settings.text_item != blank -%}
+                          <div
+                            class="ssky-new-text-column__block--w--icons-text{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                            {% if settings.animations_reveal_on_scroll %}
+                              data-cascade
+                              style="--animation-order: {{ forloop.index }};"
+                            {% endif %}
+                          >
+                            <div class="rte ssky-new-text-column__block--text-content">
+                              {{ block.settings.text_item }}
+                            </div>
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if checkbox_block == true -%}
+          <div class="ssky-new-text-column__block-set--bottom ssky-text-block__checkbox-con">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'checkbox' -%}
+                  <div
+                    class="ssky-text-block__checkbox{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <span class="svg-wrapper">
+                      {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                    </span>
+                    <div class="rte">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          <div
+            class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 4;"
+            {% endif %}
+          >
+            {%- if section.settings.button_label != blank -%}
+              <a
+                {% if section.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link }}"
+                {% endif %}
+                class="button button--large{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{- section.settings.button_label | escape -}}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TT New Text column",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "Optional. Add a unique ID to this section so it can be linked with #anchor_id."
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+      "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h4", "label": "t:sections.all.heading_size.options__0.label" },
+        { "value": "h3", "label": "t:sections.all.heading_size.options__1.label" },
+        { "value": "h2", "label": "t:sections.all.heading_size.options__2.label" },
+        { "value": "h1", "label": "t:sections.all.heading_size.options__3.label" },
+        { "value": "h0", "label": "t:sections.all.heading_size.options__4.label" },
+        { "value": "hxl", "label": "t:sections.all.heading_size.options__5.label" }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "options": [
+        { "value": "medium", "label": "t:sections.all.heading_weight.options__1.label" },
+        { "value": "semibold", "label": "t:sections.all.heading_weight.options__2.label" },
+        { "value": "bold", "label": "t:sections.all.heading_weight.options__3.label" }
+      ],
+      "default": "bold",
+      "label": "t:sections.all.heading_weight.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label",
+      "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "default": false,
+      "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        { "value": "left", "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label" },
+        { "value": "center", "label": "t:sections.ssky_text_block.settings.content_alignment.options__2.label" },
+        { "value": "right", "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label" }
+      ],
+      "default": "center",
+      "label": "t:sections.ssky_text_block.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.border"
+    },
+    {
+      "type": "checkbox",
+      "id": "column_with_border",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "column_with_border_padding",
+      "label": "t:sections.all.ssky_layouts.extension.borderpadding",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "column_with_border_vtwo",
+      "label": "t:sections.all.ssky_layouts.extension.bordervtwo",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            { "value": "small-semibold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label" },
+            { "value": "small-bold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label" },
+            { "value": "medium-semibold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label" },
+            { "value": "large-semibold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label" },
+            { "value": "large-bold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label" },
+            { "value": "extra-large-bold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__5.label" },
+            { "value": "extra-extra-large-bold", "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__6.label" }
+          ],
+          "default": "large-bold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "t:sections.all.ssky_color_class.default",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.ssky_text_block.blocks.heading.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h4", "label": "t:sections.all.heading_size.options__0.label" },
+            { "value": "h3", "label": "t:sections.all.heading_size.options__1.label" },
+            { "value": "h2", "label": "t:sections.all.heading_size.options__2.label" },
+            { "value": "h1", "label": "t:sections.all.heading_size.options__3.label" },
+            { "value": "h0", "label": "t:sections.all.heading_size.options__4.label" },
+            { "value": "hxl", "label": "t:sections.all.heading_size.options__5.label" }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            { "value": "medium", "label": "t:sections.all.heading_weight.options__1.label" },
+            { "value": "semibold", "label": "t:sections.all.heading_weight.options__2.label" },
+            { "value": "bold", "label": "t:sections.all.heading_weight.options__3.label" }
+          ],
+          "default": "bold",
+          "label": "t:sections.all.heading_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.ssky_text_block.blocks.text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "range",
+          "id": "max_width",
+          "min": 56,
+          "max": 120,
+          "step": 1,
+          "label": "t:sections.ssky_text_block.blocks.text.settings.max_width.label",
+          "default": 100
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            { "value": "regular", "label": "t:sections.all.text_size.options__0.label" },
+            { "value": "medium", "label": "t:sections.all.text_size.options__1.label" },
+            { "value": "large", "label": "t:sections.all.text_size.options__2.label" },
+            { "value": "extra-large", "label": "t:sections.all.text_size.options__3.label" },
+            { "value": "extra-extra-large", "label": "t:sections.all.text_size.options__4.label" }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            { "value": "regular", "label": "t:sections.all.text_weight.options__0.label" },
+            { "value": "medium", "label": "t:sections.all.text_weight.options__1.label" },
+            { "value": "semibold", "label": "t:sections.all.text_weight.options__2.label" },
+            { "value": "bold", "label": "t:sections.all.text_weight.options__3.label" }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "text_column",
+      "name": "Text column",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        },
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        },
+
+        /* New: dynamic price row controls */
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_price_row",
+          "label": "Show dynamic price row",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "price_suffix",
+          "label": "Price suffix (right side)",
+          "default": "Renews Annually"
+        },
+        {
+          "type": "text",
+          "id": "price_subline",
+          "label": "Price subline (under price)",
+          "default": "per year"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_custom_link_instead_of_product_form",
+          "label": "Use custom button link (ignore product add-to-cart)",
+          "default": false
+        },
+
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Select product to link the button (also used for dynamic price)"
+        }
+      ]
+    },
+    {
+      "type": "text_column_w_image",
+      "name": "Text column with image",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image [as corner icon]"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "text_column_w_icons",
+      "name": "Text column with icons",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "info": "Leave blank to use default text color"
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "Icon type",
+          "options": [
+            { "value": "none", "label": "No icon" },
+            { "value": "fa-book-reader", "label": "Book Reader" },
+            { "value": "fa-chalkboard-teacher", "label": "Chalkboard Teacher" },
+            { "value": "fa-lightbulb", "label": "Light Bulb" },
+            { "value": "fa-check", "label": "Checkmark" },
+            { "value": "fa-star", "label": "Star" },
+            { "value": "fa-heart", "label": "Heart" },
+            { "value": "fa-edit", "label": "Edit" },
+            { "value": "fa-question", "label": "Question Mark" },
+            { "value": "fa-thumbs-up", "label": "Thumbs up" },
+            { "value": "fa-arrow-right", "label": "Arrow right" },
+            { "value": "fa-trophy", "label": "Trophy" },
+            { "value": "fa-gift", "label": "Gift" },
+            { "value": "fa-clock", "label": "Clock" },
+            { "value": "fa-cog", "label": "Settings/Gear" },
+            { "value": "fa-bell", "label": "Bell" },
+            { "value": "fa-shield", "label": "Shield" },
+            { "value": "fa-bookmark", "label": "Bookmark" },
+            { "value": "fa-tag", "label": "Tag" },
+            { "value": "fa-rocket", "label": "Rocket" }
+          ],
+          "default": "fa-check"
+        },
+        {
+          "type": "color",
+          "id": "icon_background_color",
+          "label": "Icon Background Color"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon Color"
+        },
+        {
+          "type": "richtext",
+          "id": "text_item",
+          "label": "Text item"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "name": "Checkbox",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.checkbox.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.checkbox.settings.text.default"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT New Text column",
+      "blocks": [
+        { "type": "text_column" },
+        { "type": "text_column", "settings": { "color_scheme": "scheme-3" } },
+        { "type": "text_column", "settings": { "color_scheme": "scheme-4" } },
+        { "type": "checkbox" },
+        { "type": "checkbox" },
+        { "type": "checkbox" }
+      ]
+    }
+  ]
+}
+{% endschema %}

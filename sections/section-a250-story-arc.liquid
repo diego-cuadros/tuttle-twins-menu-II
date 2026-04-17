@@ -1,0 +1,154 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Five-Beat Story Arc
+  File:    sections/section-a250-story-arc.liquid
+  Blocks:  beat (each beat in the timeline — repeatable,
+           ordered, editable icon/label/text)
+  Framework note: World → Gap (Villain) → Guide →
+  Dinner Table Moment → Vision (A Freer Future)
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-story-arc" id="a250-story">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-story-arc-sub">{{ section.settings.subheading }}</p>
+
+    <div class="a250-beats-timeline">
+      {% for block in section.blocks %}
+        {% if block.type == 'beat' %}
+          <div class="a250-beat-row" {{ block.shopify_attributes }}>
+            <div class="a250-beat-icon a250-beat-icon--{{ block.settings.color_key }}">
+              {{ block.settings.icon }}
+            </div>
+            <div>
+              <div class="a250-beat-label">{{ block.settings.beat_label }}</div>
+              <div class="a250-beat-text">{{ block.settings.beat_text }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · Story Arc",
+  "tag": "div",
+  "class": "a250-section-story-arc",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Why This Matters"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The world your child inherits is 250 years in the making."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Most kids can name the date of independence. Ask them why it changed the world. That gap is exactly what Tuttle Twins exists to close."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "beat",
+      "name": "Story Beat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji / Icon",
+          "default": "🌎"
+        },
+        {
+          "type": "select",
+          "id": "color_key",
+          "label": "Icon background color",
+          "options": [
+            { "value": "world",   "label": "Navy (The World)"   },
+            { "value": "villain", "label": "Red (The Gap)"      },
+            { "value": "guide",   "label": "Teal (The Guide)"   },
+            { "value": "moment",  "label": "Gold (The Moment)"  },
+            { "value": "vision",  "label": "Green (The Vision)" }
+          ],
+          "default": "world"
+        },
+        {
+          "type": "text",
+          "id": "beat_label",
+          "label": "Beat label (small caps)",
+          "default": "The World"
+        },
+        {
+          "type": "textarea",
+          "id": "beat_text",
+          "label": "Beat body text",
+          "default": "America turns 250 — the most important experiment in human freedom ever attempted. Most kids can recite the facts. Very few understand what it cost, what it means, and what it still requires of them."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Story Arc",
+      "blocks": [
+        {
+          "type": "beat",
+          "settings": {
+            "icon": "🌎",
+            "color_key": "world",
+            "beat_label": "The World",
+            "beat_text": "America turns 250 — the most important experiment in human freedom ever attempted. Most kids can recite the facts. Very few understand what it cost, what it means, and what it still requires of them."
+          }
+        },
+        {
+          "type": "beat",
+          "settings": {
+            "icon": "⚡",
+            "color_key": "villain",
+            "beat_label": "The Gap",
+            "beat_text": "It's not a failure of kids. It's a gap in what they've been given. The distance between the world they'll inherit and the ideas most schools have time to teach."
+          }
+        },
+        {
+          "type": "beat",
+          "settings": {
+            "icon": "📖",
+            "color_key": "guide",
+            "beat_label": "The Guide",
+            "beat_text": "We put the ideas that built America — liberty, character, self-governance, and honest history — into stories a 9-year-old can love and a 16-year-old can stand behind."
+          }
+        },
+        {
+          "type": "beat",
+          "settings": {
+            "icon": "💬",
+            "color_key": "moment",
+            "beat_label": "The Dinner Table Moment",
+            "beat_text": "\"She read the passage at dinner and said, 'I think I finally get why 1776 actually mattered.'\" That conversation — that's the whole point."
+          }
+        },
+        {
+          "type": "beat",
+          "settings": {
+            "icon": "🗽",
+            "color_key": "vision",
+            "beat_label": "A Freer Future",
+            "beat_text": "A kid who understands the history of freedom becomes an adult who protects it. This contest is their first chance to say so — in their own words, in their own community."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

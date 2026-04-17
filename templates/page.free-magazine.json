@@ -1,0 +1,132 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_custom_liquid_YjbpzQ": {
+      "type": "z-custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"background-color: #04AED8; text-align: center; margin: 0; padding: 0; line-height: 0;\">\n    <img\n      src=\"{{ 'Britt-Desktop.png' | asset_img_url: '3600x' }}\"\n      alt=\"Description of image\"\n      class=\"responsive-banner desktop-only\"\n    >\n    <img\n      src=\"{{ 'Britt-Mobile-Banner.png' | asset_img_url: '800x' }}\"\n      alt=\"Description of mobile image\"\n      class=\"responsive-banner mobile-only\"\n    >\n  </a>\n</div>\n\n<style>\n  .responsive-banner {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    margin: 0;\n    padding: 0;\n    border: 0;\n  }\n\n  .desktop-only {\n    display: none;\n  }\n\n  .mobile-only {\n    display: block;\n  }\n\n  @media (min-width: 768px) {\n    .desktop-only {\n      display: block;\n    }\n    .mobile-only {\n      display: none;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "z_custom_liquid_jYmaCt": {
+      "type": "z-custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-mobile-banner-wrapper\">\n  <a href=\"https://tuttletwins.com/pages/freemagazine\" style=\"display: block; margin: 0; padding: 0;\">\n    <img\n      src=\"{{ 'Free-Magazine-mobile.png' | asset_img_url: '800x' }}\"\n      alt=\"Description of mobile image\"\n      class=\"custom-mobile-banner-img\"\n    >\n  </a>\n</div>\n\n<style>\n  .custom-mobile-banner-wrapper {\n    background-color: #04AED8;\n    text-align: center;\n    margin: 0;\n    padding: 0;\n    line-height: 0;\n    display: block;\n  }\n\n  .custom-mobile-banner-img {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n    margin: 0;\n    padding: 0;\n    border: 0;\n  }\n\n  @media (min-width: 768px) {\n    .custom-mobile-banner-wrapper {\n      display: none !important;\n      height: 0 !important;\n      overflow: hidden !important;\n      padding: 0 !important;\n      margin: 0 !important;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-5",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_image_banner_z9Ujx8": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "image_block_YbFHeJ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Tuttle_Times_logo.png",
+            "image_size": "large",
+            "mobile_image_size": "large",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_7wWhTA": {
+          "type": "icon",
+          "settings": {}
+        },
+        "heading_KNwcHL": {
+          "type": "heading",
+          "settings": {
+            "heading": "FREE ISSUE",
+            "heading_size": "h1"
+          }
+        },
+        "text_6ACAxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Tuttle Twins books and <em>Tuttle Times Magazine</em> help parents have deeper<br/>conversations with their kids about the big topics they face in today’s chaotic world. <br/>Knowledge builds confidence—and confidence empowers.<br/><strong>Try this issue FREE today.<br/></strong><br/>Don’t wait—<strong>limited supply!</strong></p>",
+            "text_large": true
+          }
+        },
+        "custom_liquid_ywXntj": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"klaviyo-form-WfPhgg\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_YbFHeJ",
+        "icon_7wWhTA",
+        "heading_KNwcHL",
+        "text_6ACAxq",
+        "custom_liquid_ywXntj"
+      ],
+      "custom_css": [
+        "@media (max-width: 767px) {.banner__media {display: none !important; }}"
+      ],
+      "name": "TT Image banner",
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/Free-Magazine-desktop_1.png",
+        "image_2_link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "top-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-5",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "z_custom_liquid_YjbpzQ",
+    "z_custom_liquid_jYmaCt",
+    "ssky_image_banner_z9Ujx8"
+  ]
+}

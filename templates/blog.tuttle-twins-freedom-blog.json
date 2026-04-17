@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rcl_blog_header_r73exb": {
+      "type": "rcl-blog-header",
+      "blocks": {
+        "blog_menu_PKXhBe": {
+          "type": "blog_menu",
+          "settings": {
+            "menu": "blog-menu"
+          }
+        },
+        "breadcrumbs_YrC99R": {
+          "type": "breadcrumbs",
+          "disabled": true,
+          "settings": {
+            "text_style": "small-bold",
+            "color_class": "primary"
+          }
+        },
+        "heading_t4DwzB": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Tuttle Twins Newsletter",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "text_gfP3GJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ditch the talking points from mainstream media and dive into real ideas with our newsletter below.</p><p>Want to receive our newsletters in your email? Sign up below!</p>",
+            "text_large": false
+          }
+        },
+        "custom_liquid_aHT7qw": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"klaviyo-form-TpwCB8\"></div>"
+          }
+        },
+        "image_gRMznX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter-scaled-1-1024x622.webp",
+            "image_fit": true
+          }
+        },
+        "spacer_btFh3t": {
+          "type": "spacer",
+          "settings": {
+            "spacer_height_vw": 5
+          }
+        }
+      },
+      "block_order": [
+        "blog_menu_PKXhBe",
+        "breadcrumbs_YrC99R",
+        "heading_t4DwzB",
+        "text_gfP3GJ",
+        "custom_liquid_aHT7qw",
+        "image_gRMznX",
+        "spacer_btFh3t"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 12,
+        "padding_bottom": 60,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "heading": "Ongoing Commentary on What’s Happening Now",
+        "h1": false,
+        "subheading": "<p>Each edition shares commentary on news and cultural topics shaping the world today.</p>",
+        "margin_top": 5,
+        "margin_top_mobile": 1,
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "articles_per_page": 9,
+        "excerpt_limit": 150,
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": false,
+        "show_author": false
+      }
+    }
+  },
+  "order": [
+    "rcl_blog_header_r73exb",
+    "main"
+  ]
+}

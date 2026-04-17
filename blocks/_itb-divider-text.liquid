@@ -1,0 +1,119 @@
+{%- style -%}
+  .divider-background-{{ block.id }} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }  
+  @media screen and (min-width: 750px) {
+    .divider-background-{{ block.id }} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.divider-background-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+<div class="divider-background divider-background-{{ block.id }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+  style="
+    width: {{ block.settings.divider_tile_width }}%;
+    height: {{ block.settings.divider_height }}px;
+    margin: {{ block.settings.divider_spacing }}px 0;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 preserveAspectRatio=%22none%22 overflow=%22visible%22 height=%22100%25%22 viewBox=%220 0 20 16%22 fill=%22none%22 stroke=%22{{ block.settings.divider_color | remove: '#' | prepend: '%23' }}%22 stroke-width=%22{{ block.settings.divider_stroke_width }}%22 stroke-linecap=%22square%22 stroke-miterlimit=%2210%22%3E%3Cg transform=%22translate(-12.000000, 0)%22%3E%3Cpath d=%22M28,0L10,18%22/%3E%3Cpath d=%22M18,0L0,18%22/%3E%3Cpath d=%22M48,0L30,18%22/%3E%3Cpath d=%22M38,0L20,18%22/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat-x;
+    background-size: {{ block.settings.divider_spacing }}px auto;
+    opacity: {{ block.settings.divider_opacity | divided_by: 100.0 }};
+  "><span></span></div>
+
+{% schema %}
+  {
+    "name": "Divider Text",
+    "settings": [
+      {
+        "type": "color",
+        "id": "divider_color",
+        "label": "Divider Color",
+        "default": "#fff"
+      },
+      {
+        "type": "range",
+        "id": "divider_height",
+        "min": 8,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Divider Height",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "divider_tile_width",
+        "min": 10,
+        "max": 100,
+        "step": 2,
+        "unit": "%",
+        "label": "Pattern Width",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "divider_stroke_width",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "unit": "px",
+        "label": "Line Thickness",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "divider_spacing",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Spacing",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "divider_opacity",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Opacity",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 20
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Divider Text" }
+    ]
+  }
+{% endschema %}

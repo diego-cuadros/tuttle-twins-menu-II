@@ -1,0 +1,431 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_yfMMtm": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_kRp7Pt": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Explore our carefully created collection of children’s books designed to educate and inspire young minds. Each book equips kids with the knowledge and values they need to understand the world around them while having fun.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_kRp7Pt"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_z8d3rq": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_PQEykk": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_Fpc86G": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_JU9K8f": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_hmbwG9": {
+          "type": "caption",
+          "settings": {
+            "caption": "Kids Educational Books That Little Ones Will Love",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_jJrEXp": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>We believe in encouraging your child’s love for learning through engaging stories that teach important life lessons. Our kids educational books make complex concepts simple, fun, and easy to understand. </p><p>Our books’ stunning narratives and valuable life lessons provide a great foundation for your child’s young, curious mind to develop a strong understanding of important topics. These include freedom, economics, <a href=\"https://tuttletwins.com/products/americas-history-volume-1-2-bundle\"><span style=\"text-decoration:underline\">American history</span></a>, and personal responsibility.</p><h2>Benefits of Our Educational Kids Books</h2><p>Our educational books for kids are informative and entertaining, combining storytelling with key concepts to encourage critical thinking. Here are just a few benefits of reading our books.</p><h3>Teaches Important Life Skills</h3><p>Our children’s books equip your child with essential life skills, such as responsibility, critical thinking, perseverance, and decision-making. Each of our books presents relatable characters who face challenges and make decisions, helping your kids understand the consequences of their choices and the importance of personal responsibility.</p><h3>Simplifies Complex Topics</h3><p>We understand that complicated ideas can be hard for young minds to understand. That’s why our educational kids books break down big concepts like economics, history, and government into easy-to-understand stories that will keep kids engaged while they learn.</p><h3>Promotes a Growth Mindset</h3><p>We believe in developing a growth mindset in kids. Our books encourage children to embrace challenges, learn from their mistakes, see things from others’ points of view, and never give up. Seeing the characters in our books face obstacles and overcome them, your child will be inspired to do the same in their own life.</p><h3>Critical Thinking</h3><p>Our books have topics and themes that encourage kids to think critically, which is an important skill they’ll use throughout their lives. Critical thinking skills allow your child to question, consider, analyze, and understand ideas deeply. Our books nurture these abilities by encouraging thoughtful reading and independent reasoning for lifelong learning and informed decision-making.</p><h3>Engaging Illustrations</h3><p>As they say, a picture is worth a thousand words. Our children's learning books feature beautiful, eye-catching illustrations that bring our stories to life. These illustrations help your children connect with the characters and ideas on a deeper level, making learning exciting and memorable.</p><h3>Age-Appropriate Content</h3><p>We carefully select the topics and themes of our books to ensure that the content is age-appropriate for your child’s developmental stage. From learning about money to exploring the principles of freedom, our books are tailored to suit their needs.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_hmbwG9",
+        "text_jJrEXp"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_eKyw4r": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_TdmmxL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions About Children’s Books</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_mxVtqe": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do We Have Books for Other Age Groups?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our books have been designed to allow kids of all ages, from toddlers to teenagers, to enjoy and learn. Our <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a> are hardy and colorful, making them perfect for little hands, and our <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a> incorporate lessons that will help them stand tall in their morals and values.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_VWF6rm": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Are Tuttle Twins Books Different From Other Children’s Books?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our books stand out by offering educational content that is both entertaining and engaging. Our books teach children important life lessons such as personal responsibility, the value of hard work, and the principles of a free society.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_Gc8VJj": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are the Books Suitable for All Ages?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, our books cater to a wide range of age groups, with titles available for children as young as toddlers up to teens. We carefully create each book to be age-appropriate, offering simplified concepts for younger children and more challenging ideas for older children.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_3K7igG": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can You Use Tuttle Twins Books for Homeschooling?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Absolutely! Our educational kids books are perfect for homeschooling families. They cover a wide range of topics, like Entrepreneurship (in the <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"><span style=\"text-decoration:underline\">Messed Up Market</span></a>) and <a href=\"https://tuttletwins.com/collections/economics-for-kids\"><span style=\"text-decoration:underline\">Economics</span></a>, that can complement your curriculum, making learning both enjoyable and effective.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_V6zrdm": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do We Offer Any Book Bundles?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, we offer book <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">bundles</span></a> that allow you to purchase multiple books at a discounted price. Our bundles are a great way to introduce your child to the entire series while saving money.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TdmmxL",
+        "faq_mxVtqe",
+        "faq_VWF6rm",
+        "faq_Gc8VJj",
+        "faq_3K7igG",
+        "faq_V6zrdm"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ssky_text_block_yfMMtm",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "sskymo_three_block_z8d3rq",
+    "sskymo_product_column_c_PQEykk",
+    "sskymo_text_image_block_Fpc86G",
+    "sskymo_text_image_block_b_V3HPhx",
+    "ssky_text_block_JU9K8f",
+    "ssky_faqs_eKyw4r"
+  ]
+}

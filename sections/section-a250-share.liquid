@@ -1,0 +1,140 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Social Share
+  File:    sections/section-a250-share.liquid
+  Blocks:  share_button (repeatable — each platform)
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-share-section" id="a250-share">
+    {% if section.settings.emoji != blank %}
+      <h3>{{ section.settings.emoji }}&nbsp; {{ section.settings.heading }}</h3>
+    {% else %}
+      <h3>{{ section.settings.heading }}</h3>
+    {% endif %}
+    <p>{{ section.settings.subheading }}</p>
+
+    <div class="a250-share-buttons">
+      {% for block in section.blocks %}
+        {% if block.type == 'share_button' %}
+          <button
+            class="a250-share-btn a250-share-btn--{{ block.settings.platform }}"
+            onclick="a250Share('{{ block.settings.platform }}')"
+            {{ block.shopify_attributes }}>
+            {% if block.settings.icon_svg != blank %}
+              {{ block.settings.icon_svg }}
+            {% endif %}
+            {{ block.settings.label }}
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<script>
+(function() {
+  var shareURL  = encodeURIComponent(window.location.href);
+  var shareText = encodeURIComponent(
+    "My kid is entering the America\u2019s 250th Young Voices contest \u2014 " +
+    "writing an editorial for our local newspaper. Open to all kids! \uD83C\uDDFA\uD83C\uDDF8"
+  );
+
+  window.a250Share = function(platform) {
+    switch(platform) {
+      case 'facebook':
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank', 'width=600,height=400');
+        break;
+      case 'twitter':
+        window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareURL, '_blank', 'width=600,height=400');
+        break;
+      case 'email':
+        window.location.href = 'mailto:?subject=Your%20kids%20should%20enter%20this%20%E2%80%94%20America%27s%20250th%20Young%20Voices' +
+          '&body=Thought%20of%20you%20%E2%80%94%20Tuttle%20Twins%20is%20running%20a%20contest%20where%20kids%20write%20a%20letter%20to%20their%20local%20newspaper.' +
+          '%20250%20kids%20win%20books%20to%20donate%2C%20one%20family%20wins%20a%20trip.%0A%0A' + decodeURIComponent(shareURL);
+        break;
+      case 'copy':
+        var btn = document.querySelector('.a250-share-btn--copy');
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          var orig = btn ? btn.innerHTML : '';
+          if (btn) btn.innerHTML = '✅ &nbsp;Copied!';
+          setTimeout(function() { if (btn) btn.innerHTML = orig; }, 2200);
+        });
+        break;
+    }
+  };
+})();
+</script>
+
+{% schema %}
+{
+  "name": "A250 · Share Section",
+  "tag": "div",
+  "class": "a250-section-share",
+  "settings": [
+    {
+      "type": "text",
+      "id": "emoji",
+      "label": "Heading emoji (optional)",
+      "default": "🇺🇸"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Know a family who should enter?"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "The Compound Effect is real: one conversation becomes two. Help another family give their child a voice in America's 250th."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "share_button",
+      "name": "Share Button",
+      "settings": [
+        {
+          "type": "select",
+          "id": "platform",
+          "label": "Platform",
+          "options": [
+            { "value": "facebook", "label": "Facebook"    },
+            { "value": "twitter",  "label": "X / Twitter" },
+            { "value": "email",    "label": "Email"       },
+            { "value": "copy",     "label": "Copy Link"   }
+          ],
+          "default": "facebook"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Button label",
+          "default": "Share on Facebook"
+        },
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Icon SVG (optional)",
+          "info": "Paste an inline SVG here. Keep it small — 16×16 or 20×20 viewBox."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Share Section",
+      "blocks": [
+        { "type": "share_button", "settings": { "platform": "facebook", "label": "Share on Facebook",  "icon_svg": "<svg width='16' height='16' viewBox='0 0 24 24' fill='white'><path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z'/></svg>" }},
+        { "type": "share_button", "settings": { "platform": "twitter",  "label": "Share on X",         "icon_svg": "<svg width='16' height='16' viewBox='0 0 24 24' fill='white'><path d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z'/></svg>" }},
+        { "type": "share_button", "settings": { "platform": "email",    "label": "✉️ Send to a Friend" }},
+        { "type": "share_button", "settings": { "platform": "copy",     "label": "🔗 Copy Link"        }}
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,430 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Submission Form
+  File:    sections/section-a250-form.liquid
+
+  FORM INTEGRATION — choose ONE embed block type:
+  ─────────────────────────────────────────────────
+  Block type "klaviyo_embed"
+    Paste your Klaviyo embedded form HTML into the block's
+    "embed_code" field. Klaviyo generates this under:
+    Klaviyo → Sign-up Forms → [Your Form] → Embed → HTML Snippet.
+    The embed already handles validation, file attachment (if
+    configured), and success state. Delete the vanilla JS block.
+
+  Block type "typeform_embed"
+    Paste your Typeform embed URL (from Share → Embed → Standard).
+    Renders as a full-width iframe inside the form card.
+
+  Block type "custom_html"
+    Paste any other third-party form HTML. iFrames, scripts,
+    and inline forms all work here.
+
+  The section ships with a sensible DEFAULT vanilla form block
+  for teams that haven't wired a backend yet. Swap it out via
+  the block type in the customizer.
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-form-section" id="a250-enter">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-form-section-sub">{{ section.settings.subheading }}</p>
+
+    <div class="a250-submission-form" id="a250SubmissionForm">
+
+      {% for block in section.blocks %}
+
+        {%- comment -%} ── KLAVIYO EMBED BLOCK ── {%- endcomment -%}
+        {% if block.type == 'klaviyo_embed' %}
+          <div class="a250-form-embed-wrap" {{ block.shopify_attributes }}>
+            {% if block.settings.embed_code != blank %}
+              {{ block.settings.embed_code }}
+            {% else %}
+              <p style="text-align:center;color:#888;padding:32px;">
+                Paste your Klaviyo embed code into this block to display the form.
+              </p>
+            {% endif %}
+          </div>
+
+        {%- comment -%} ── TYPEFORM EMBED BLOCK ── {%- endcomment -%}
+        {% elsif block.type == 'typeform_embed' %}
+          <div class="a250-form-embed-wrap" {{ block.shopify_attributes }}>
+            {% if block.settings.typeform_url != blank %}
+              <iframe
+                src="{{ block.settings.typeform_url }}"
+                width="100%"
+                height="{{ block.settings.iframe_height }}"
+                frameborder="0"
+                allow="camera; microphone; autoplay; encrypted-media;"
+                style="border-radius:12px; display:block;">
+              </iframe>
+            {% else %}
+              <p style="text-align:center;color:#888;padding:32px;">
+                Paste your Typeform embed URL into this block to display the form.
+              </p>
+            {% endif %}
+          </div>
+
+        {%- comment -%} ── CUSTOM HTML BLOCK ── {%- endcomment -%}
+        {% elsif block.type == 'custom_html' %}
+          <div class="a250-form-embed-wrap" {{ block.shopify_attributes }}>
+            {{ block.settings.html }}
+          </div>
+
+        {%- comment -%} ── DEFAULT VANILLA FORM BLOCK ── {%- endcomment -%}
+        {% elsif block.type == 'default_form' %}
+          <div {{ block.shopify_attributes }}>
+
+            {%- comment -%} SUCCESS STATE {%- endcomment -%}
+            <div class="a250-form-success" id="a250FormSuccess">
+              <div class="a250-form-success-icon">🎉</div>
+              <h3>{{ block.settings.success_heading }}</h3>
+              <p>{{ block.settings.success_body }}</p>
+              <a href="{{ block.settings.success_cta_url }}" class="a250-btn-primary" style="display:inline-block;text-decoration:none;">
+                {{ block.settings.success_cta_text }} →
+              </a>
+            </div>
+
+            <div id="a250FormWrap">
+              <form id="a250ContestForm" action="{{ block.settings.form_action | default: '#' }}" method="post" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="contact[tags]" value="america250-contest">
+
+                {%- comment -%} CHILD INFO {%- endcomment -%}
+                <span class="a250-form-subsection-label">About the Young Writer</span>
+                <div class="a250-form-row">
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ChildFirst">Child's First Name <span class="a250-required">*</span></label>
+                    <input class="a250-form-input" type="text" id="a250ChildFirst" name="contact[child_first_name]" placeholder="Ethan" required>
+                  </div>
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ChildLast">Child's Last Name <span class="a250-required">*</span></label>
+                    <input class="a250-form-input" type="text" id="a250ChildLast" name="contact[child_last_name]" placeholder="Tuttle" required>
+                  </div>
+                </div>
+                <div class="a250-form-row">
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ChildAge">Child's Age <span class="a250-required">*</span></label>
+                    <input class="a250-form-input" type="number" id="a250ChildAge" name="contact[child_age]" min="1" max="99" placeholder="11" required>
+                  </div>
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ChildState">State <span class="a250-required">*</span></label>
+                    <select class="a250-form-select" id="a250ChildState" name="contact[state]" required>
+                      <option value="">Select state…</option>
+                      {%- assign states = "Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut,Delaware,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas,Kentucky,Louisiana,Maine,Maryland,Massachusetts,Michigan,Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire,New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio,Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina,South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Washington,West Virginia,Wisconsin,Wyoming" | split: "," -%}
+                      {%- for state in states -%}
+                        <option value="{{ state }}">{{ state }}</option>
+                      {%- endfor -%}
+                    </select>
+                  </div>
+                </div>
+
+                <hr class="a250-form-divider">
+
+                {%- comment -%} PARENT INFO {%- endcomment -%}
+                <span class="a250-form-subsection-label">Parent / Guardian Info</span>
+                <div class="a250-form-row">
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ParentFirst">First Name <span class="a250-required">*</span></label>
+                    <input class="a250-form-input" type="text" id="a250ParentFirst" name="contact[first_name]" placeholder="First" required>
+                  </div>
+                  <div class="a250-form-group">
+                    <label class="a250-form-label" for="a250ParentLast">Last Name <span class="a250-required">*</span></label>
+                    <input class="a250-form-input" type="text" id="a250ParentLast" name="contact[last_name]" placeholder="Last" required>
+                  </div>
+                </div>
+                <div class="a250-form-group">
+                  <label class="a250-form-label" for="a250ParentEmail">Email Address <span class="a250-required">*</span></label>
+                  <span class="a250-form-hint">We'll contact winners here. We'll never spam you.</span>
+                  <input class="a250-form-input" type="email" id="a250ParentEmail" name="contact[email]" placeholder="you@email.com" required>
+                </div>
+
+                <hr class="a250-form-divider">
+
+                {%- comment -%} SUBMISSION DETAILS {%- endcomment -%}
+                <span class="a250-form-subsection-label">About the Submission</span>
+                <div class="a250-form-group">
+                  <label class="a250-form-label" for="a250PaperName">Newspaper Name <span class="a250-required">*</span></label>
+                  <input class="a250-form-input" type="text" id="a250PaperName" name="contact[newspaper_name]" placeholder="e.g. The Tennessean, The Salt Lake Tribune…" required>
+                </div>
+                <div class="a250-form-group">
+                  <label class="a250-form-label" for="a250EditorialTitle">Editorial Title / Subject Line <span class="a250-required">*</span></label>
+                  <span class="a250-form-hint">What did your child title their letter, or use as the email subject?</span>
+                  <input class="a250-form-input" type="text" id="a250EditorialTitle" name="contact[editorial_title]" placeholder="e.g. "Why 250 Years Still Matters"" required>
+                </div>
+                <div class="a250-form-group">
+                  <label class="a250-form-label" for="a250TTConnection">How does the editorial weave in Tuttle Twins? <span class="a250-required">*</span></label>
+                  <span class="a250-form-hint">A sentence or two is great. No need to copy the whole letter.</span>
+                  <textarea class="a250-form-textarea" id="a250TTConnection" name="contact[tuttle_twins_connection]" placeholder="e.g. She wrote about what she learned from the America's History Vol. 1 book — specifically about the founders' understanding of natural rights." required></textarea>
+                </div>
+
+                <hr class="a250-form-divider">
+
+                {%- comment -%} SCREENSHOT UPLOAD {%- endcomment -%}
+                <span class="a250-form-subsection-label">Proof of Submission</span>
+                <div class="a250-form-group">
+                  <label class="a250-form-label">Confirmation Screenshot <span class="a250-required">*</span></label>
+                  <span class="a250-form-hint">Upload the confirmation email or page you received after submitting to the newspaper. (JPG, PNG, or PDF)</span>
+                  <div class="a250-upload-zone" id="a250UploadZone">
+                    <input type="file" id="a250ScreenshotFile" name="contact[screenshot]" accept="image/*,.pdf" onchange="a250HandleFileUpload(this)">
+                    <div class="a250-upload-icon">📸</div>
+                    <div class="a250-upload-label">Click to upload your confirmation screenshot</div>
+                    <div class="a250-upload-sub">JPG, PNG, or PDF · Max 10MB</div>
+                    <div class="a250-upload-filename" id="a250UploadFilename"></div>
+                  </div>
+                </div>
+
+                <hr class="a250-form-divider">
+
+                {%- comment -%} CONSENTS {%- endcomment -%}
+                <label class="a250-checkbox-group">
+                  <input type="checkbox" id="a250ConsentAge" name="contact[consent_parent]" required>
+                  <span class="a250-checkbox-label">
+                    I confirm that the editorial was written by my child and submitted to a U.S. newspaper,
+                    and that I am the parent or legal guardian of the child entering.
+                    {% if block.settings.rules_url != blank %}
+                      <a href="{{ block.settings.rules_url }}">Full contest rules →</a>
+                    {% endif %}
+                  </span>
+                </label>
+                <label class="a250-checkbox-group">
+                  <input type="checkbox" id="a250ConsentEmail" name="contact[consent_email]">
+                  <span class="a250-checkbox-label">
+                    Keep me updated with Tuttle Twins news, new books, and Dinner Table resources. (Optional)
+                  </span>
+                </label>
+
+                <button type="button" class="a250-form-submit" onclick="a250HandleSubmit()">
+                  {{ block.settings.submit_emoji }}&nbsp; {{ block.settings.submit_text }}
+                </button>
+                <div class="a250-form-guarantee">{{ block.settings.guarantee_text }}</div>
+
+              </form>
+            </div>
+
+          </div>
+        {% endif %}
+
+      {% endfor %}
+
+    </div>
+  </section>
+</div>
+
+<script>
+(function() {
+
+  window.a250HandleFileUpload = function(input) {
+    var filenameEl = document.getElementById('a250UploadFilename');
+    var zone = document.getElementById('a250UploadZone');
+    if (input.files && input.files[0]) {
+      filenameEl.textContent = '✅ ' + input.files[0].name + ' uploaded';
+      filenameEl.classList.add('is-visible');
+      zone.classList.add('is-success');
+    }
+  };
+
+  window.a250HandleSubmit = function() {
+    var required = ['a250ChildFirst','a250ChildLast','a250ChildAge','a250ChildState',
+                    'a250ParentFirst','a250ParentLast','a250ParentEmail',
+                    'a250PaperName','a250EditorialTitle','a250TTConnection'];
+    var valid = true;
+    required.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (!el.value.trim()) {
+        el.classList.add('a250-form-input--error');
+        valid = false;
+      } else {
+        el.classList.remove('a250-form-input--error');
+      }
+    });
+    var fileInput = document.getElementById('a250ScreenshotFile');
+    if (!fileInput || !fileInput.files || !fileInput.files[0]) {
+      var zone = document.getElementById('a250UploadZone');
+      if (zone) zone.style.borderColor = 'var(--red)';
+      valid = false;
+    }
+    var consent = document.getElementById('a250ConsentAge');
+    if (consent && !consent.checked) { valid = false; }
+
+    if (!valid) {
+      var first = document.querySelector('.a250-form-input--error');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    /* ── SUCCESS: replace with your actual form.submit() or fetch() ── */
+    var wrap = document.getElementById('a250FormWrap');
+    var success = document.getElementById('a250FormSuccess');
+    if (wrap) wrap.style.display = 'none';
+    if (success) {
+      success.classList.add('is-visible');
+      success.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "A250 · Submission Form",
+  "tag": "div",
+  "class": "a250-section-form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Official Entry Form"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Submit Your Entry"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Fill out the form below and upload your confirmation screenshot from the newspaper. One entry per child. All fields required."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "klaviyo_embed",
+      "name": "Klaviyo Form Embed",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "embed_code",
+          "label": "Klaviyo embed code",
+          "info": "Paste the full HTML snippet from Klaviyo → Sign-up Forms → [Form] → Embed."
+        }
+      ]
+    },
+    {
+      "type": "typeform_embed",
+      "name": "Typeform Embed",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "typeform_url",
+          "label": "Typeform embed URL",
+          "info": "From Typeform → Share → Embed → copy the src URL only (starts with https://form.typeform.com/to/...)."
+        },
+        {
+          "type": "range",
+          "id": "iframe_height",
+          "label": "Form height (px)",
+          "min": 400,
+          "max": 1200,
+          "step": 50,
+          "default": 700
+        }
+      ]
+    },
+    {
+      "type": "custom_html",
+      "name": "Custom HTML Form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "html",
+          "label": "Custom form HTML",
+          "info": "Paste any form embed code here — Jotform, Wufoo, custom iframe, etc."
+        }
+      ]
+    },
+    {
+      "type": "default_form",
+      "name": "Default Vanilla Form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "form_action",
+          "label": "Form POST action URL",
+          "info": "Leave blank to use JS-only client-side success state. Set to your webhook endpoint to POST data.",
+          "default": "#"
+        },
+        {
+          "type": "url",
+          "id": "rules_url",
+          "label": "Contest rules page URL"
+        },
+        {
+          "type": "text",
+          "id": "submit_emoji",
+          "label": "Submit button emoji",
+          "default": "🇺🇸"
+        },
+        {
+          "type": "text",
+          "id": "submit_text",
+          "label": "Submit button text",
+          "default": "Submit My Child's Entry"
+        },
+        {
+          "type": "text",
+          "id": "guarantee_text",
+          "label": "Guarantee / trust line below button",
+          "default": "🔒 Secure form · No spam, ever · 30-day money-back on any purchase"
+        },
+        {
+          "type": "header",
+          "content": "Success State"
+        },
+        {
+          "type": "text",
+          "id": "success_heading",
+          "label": "Success heading",
+          "default": "You're in! Entry received."
+        },
+        {
+          "type": "textarea",
+          "id": "success_body",
+          "label": "Success message",
+          "default": "Your child's entry has been officially submitted. We'll be in touch after the deadline. In the meantime — share this with another family who should enter."
+        },
+        {
+          "type": "text",
+          "id": "success_cta_text",
+          "label": "Success CTA text",
+          "default": "Share the Contest"
+        },
+        {
+          "type": "url",
+          "id": "success_cta_url",
+          "label": "Success CTA URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Submission Form",
+      "blocks": [
+        {
+          "type": "default_form",
+          "settings": {
+            "submit_emoji": "🇺🇸",
+            "submit_text": "Submit My Child's Entry",
+            "guarantee_text": "🔒 Secure form · No spam, ever · 30-day money-back on any purchase",
+            "success_heading": "You're in! Entry received.",
+            "success_body": "Your child's entry has been officially submitted. We'll be in touch after the deadline. Share this with another family who should enter.",
+            "success_cta_text": "Share the Contest"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

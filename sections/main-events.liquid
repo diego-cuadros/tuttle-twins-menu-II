@@ -1,0 +1,797 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .custom-events-section {
+    position: relative;
+    margin: -{{ section.settings.margin_top_mobile }}.5rem auto 0;
+    max-width: 1400px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 3rem;
+  }
+
+  @media screen and (min-width: 769px) {
+    .custom-events-section {
+      margin: -{{ section.settings.margin_top }}.5rem auto 0;
+      padding: 6rem;
+    }
+  }
+
+  .custom-events-section .page-width {
+    padding: 0;
+  }
+
+  .custom-events-section__heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #091d52;
+    margin: 0 0 2rem;
+  }
+
+  .custom-events-section__subheading.rte {
+    max-width: 1000px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto 4rem;
+    color: #152136;
+  }
+
+  .custom-events-layout {
+    display: block;
+  }
+
+  @media screen and (min-width: 990px) {
+    .custom-events-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 3rem;
+      align-items: start;
+    }
+  }
+
+  .custom-events-filters {
+    display: none;
+  }
+
+  @media screen and (min-width: 990px) {
+    .custom-events-filters {
+      display: block;
+      position: sticky;
+      top: 2rem;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(180, 180, 180, 0.25);
+    }
+  }
+
+  .custom-events-filters__title {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    color: #091d52;
+  }
+
+  .custom-events-filter-group + .custom-events-filter-group {
+    margin-top: 1.5rem;
+  }
+
+  .custom-events-filter-group label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #091d52;
+  }
+
+  .custom-events-filter-group input,
+  .custom-events-filter-group select {
+    width: 100%;
+  }
+
+  .custom-events-filter-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .custom-events-mobile-bar {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .custom-events-mobile-bar {
+      display: none;
+    }
+  }
+
+  .custom-events-mobile-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: none;
+  }
+
+  .custom-events-mobile-drawer.is-open {
+    display: block;
+  }
+
+  .custom-events-mobile-drawer__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .custom-events-mobile-drawer__panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: min(420px, 90vw);
+    background: #fff;
+    padding: 2rem;
+    overflow-y: auto;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .custom-events-mobile-drawer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .custom-events-mobile-drawer__title {
+    margin: 0;
+    font-size: 2rem;
+    color: #091d52;
+  }
+
+  .custom-events-mobile-drawer__close {
+    background: none;
+    border: 0;
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #091d52;
+  }
+
+  .custom-events-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media screen and (min-width: 750px) {
+    .custom-events-grid {
+      grid-template-columns: repeat({{ section.settings.columns_tablet }}, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .custom-events-grid {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr));
+    }
+  }
+
+  .custom-events-grid__item {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .custom-events-grid__item > * {
+    width: 100%;
+  }
+
+  .custom-events-grid__item.is-hidden {
+    display: none !important;
+  }
+
+  .custom-events-grid__item.is-js-hidden {
+    display: none !important;
+  }
+
+  .custom-events-grid__item .article-card-wrapper,
+  .custom-events-grid__item .card-wrapper,
+  .custom-events-grid__item .card.article-card,
+  .custom-events-grid__item .card__inner,
+  .custom-events-grid__item .card__content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .custom-events-grid__item .card.article-card {
+    border-style: solid;
+    border-width: 0;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgba(180, 180, 180, 0.5);
+  }
+
+  .custom-events-grid__item h3.card__heading.h2 {
+    font-size: 2.375rem;
+  }
+
+  .custom-events-grid__item .full-unstyled-link {
+    color: #000;
+  }
+
+  .custom-events-empty-results {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .custom-events-empty-results.is-visible {
+    display: block;
+  }
+
+  .custom-events-results-count {
+    margin: 0 0 2rem;
+    font-size: 1.4rem;
+    color: #4b5563;
+  }
+
+  .custom-events-load-more-wrap {
+    display: none;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .custom-events-load-more-wrap.is-visible {
+    display: flex;
+  }
+
+  .custom-events-sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+{% endstyle %}
+
+{% liquid
+  assign now_ts = 'now' | date: '%s'
+  assign events_all = shop.metaobjects['event'].values
+%}
+
+<section class="custom-events-section gradient">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      {% if section.settings.h1 %}
+        <h1 class="custom-events-section__heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h1>
+      {% else %}
+        <h2 class="custom-events-section__heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <div class="custom-events-section__subheading rte">
+        {{ section.settings.subheading }}
+      </div>
+    {% endif %}
+
+    {% assign shown_count = 0 %}
+
+    <div class="custom-events-mobile-bar">
+      <button type="button" class="button" id="custom-events-open-filters-{{ section.id }}">
+        Filter &amp; Sort
+      </button>
+    </div>
+
+    <div class="custom-events-layout">
+      <aside class="custom-events-filters" aria-label="Event filters">
+        <h3 class="custom-events-filters__title">Filter Events</h3>
+
+        <div class="custom-events-filter-group">
+          <label for="custom-events-date-{{ section.id }}">Date</label>
+          <input type="date" id="custom-events-date-{{ section.id }}">
+        </div>
+
+        <div class="custom-events-filter-group">
+          <label for="custom-events-month-{{ section.id }}">Month</label>
+          <select id="custom-events-month-{{ section.id }}">
+            <option value="">All months</option>
+          </select>
+        </div>
+
+        <div class="custom-events-filter-group">
+          <label for="custom-events-state-{{ section.id }}">State</label>
+          <select id="custom-events-state-{{ section.id }}">
+            <option value="">All states</option>
+          </select>
+        </div>
+
+        <div class="custom-events-filter-actions">
+          <button type="button" class="button" id="custom-events-apply-desktop-{{ section.id }}">Apply</button>
+          <button type="button" class="button button--secondary" id="custom-events-reset-desktop-{{ section.id }}">Reset</button>
+        </div>
+      </aside>
+
+      <div>
+        <p class="custom-events-results-count" id="custom-events-results-count-{{ section.id }}"></p>
+
+        <div class="custom-events-grid" data-id="{{ section.id }}" id="custom-events-grid-{{ section.id }}">
+          {% for event in events_all %}
+            {% comment %} Use day_1_start_time / day_1_end_time as the canonical event dates {% endcomment %}
+            {% assign start_ts = '' %}
+            {% assign start_ymd = '' %}
+            {% assign month_label = '' %}
+            {% assign month_sort = '' %}
+            {% if event.day_1_start_time != blank %}
+              {% assign start_ts = event.day_1_start_time | date: '%s' %}
+              {% assign start_ymd = event.day_1_start_time | date: '%Y-%m-%d' %}
+              {% assign month_label = event.day_1_start_time | date: "%B %Y" %}
+              {% assign month_sort = event.day_1_start_time | date: "%Y-%m" %}
+            {% endif %}
+
+            {% assign end_ts = '' %}
+            {% assign end_ymd = '' %}
+            {% comment %} Use day_4, day_3, day_2, or day_1 end time — whichever is the last populated day {% endcomment %}
+            {% if event.day_4_end_time != blank %}
+              {% assign end_ts = event.day_4_end_time | date: '%s' %}
+              {% assign end_ymd = event.day_4_end_time | date: '%Y-%m-%d' %}
+            {% elsif event.day_3_end_time != blank %}
+              {% assign end_ts = event.day_3_end_time | date: '%s' %}
+              {% assign end_ymd = event.day_3_end_time | date: '%Y-%m-%d' %}
+            {% elsif event.day_2_end_time != blank %}
+              {% assign end_ts = event.day_2_end_time | date: '%s' %}
+              {% assign end_ymd = event.day_2_end_time | date: '%Y-%m-%d' %}
+            {% elsif event.day_1_end_time != blank %}
+              {% assign end_ts = event.day_1_end_time | date: '%s' %}
+              {% assign end_ymd = event.day_1_end_time | date: '%Y-%m-%d' %}
+            {% endif %}
+
+            {% assign show_event = false %}
+            {% if event.day_1_start_time == blank %}
+              {% assign show_event = true %}
+            {% elsif end_ts != blank and end_ts >= now_ts %}
+              {% assign show_event = true %}
+            {% elsif start_ts >= now_ts %}
+              {% assign show_event = true %}
+            {% endif %}
+
+            {% if show_event %}
+              {% assign shown_count = shown_count | plus: 1 %}
+              <div
+                class="custom-events-grid__item{% if shown_count > section.settings.events_per_page %} is-js-hidden{% endif %}"
+                data-start-ts="{% if start_ts != blank %}{{ start_ts }}{% else %}9999999999{% endif %}"
+                data-has-date="{% if event.day_1_start_time != blank %}1{% else %}0{% endif %}"
+                data-start-date="{{ start_ymd }}"
+                data-end-date="{% if end_ymd != blank %}{{ end_ymd }}{% else %}{{ start_ymd }}{% endif %}"
+                data-month="{{ month_label | escape }}"
+                data-month-sort="{{ month_sort | escape }}"
+                data-state="{{ event.state | escape }}"
+              >
+                {% render 'event-card',
+                  event: event,
+                  media_height: section.settings.image_height,
+                  show_image: section.settings.show_image,
+                  show_date: section.settings.show_date,
+                  show_excerpt: true,
+                  excerpt_char_limit: section.settings.excerpt_limit,
+                  section_id: section.id
+                %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="custom-events-load-more-wrap{% if shown_count > section.settings.events_per_page %} is-visible{% endif %}" id="custom-events-load-more-wrap-{{ section.id }}">
+          <button type="button" class="button" id="custom-events-load-more-{{ section.id }}">
+            View More
+          </button>
+        </div>
+
+        <div class="custom-events-empty-results" id="custom-events-empty-results-{{ section.id }}">
+          <p>No events match your filters.</p>
+        </div>
+
+        {% if shown_count == 0 %}
+          {% if section.settings.show_empty_message %}
+            <div class="rte" style="text-align:center;">
+              <p>{{ section.settings.empty_message }}</p>
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-events-mobile-drawer" id="custom-events-mobile-drawer-{{ section.id }}" aria-hidden="true">
+    <div class="custom-events-mobile-drawer__overlay" id="custom-events-mobile-overlay-{{ section.id }}"></div>
+    <div class="custom-events-mobile-drawer__panel">
+      <div class="custom-events-mobile-drawer__header">
+        <h3 class="custom-events-mobile-drawer__title">Filter Events</h3>
+        <button type="button" class="custom-events-mobile-drawer__close" id="custom-events-close-filters-{{ section.id }}" aria-label="Close filters">
+          ×
+        </button>
+      </div>
+
+      <div class="custom-events-filter-group">
+        <label for="custom-events-date-mobile-{{ section.id }}">Date</label>
+        <input type="date" id="custom-events-date-mobile-{{ section.id }}">
+      </div>
+
+      <div class="custom-events-filter-group">
+        <label for="custom-events-month-mobile-{{ section.id }}">Month</label>
+        <select id="custom-events-month-mobile-{{ section.id }}">
+          <option value="">All months</option>
+        </select>
+      </div>
+
+      <div class="custom-events-filter-group">
+        <label for="custom-events-state-mobile-{{ section.id }}">State</label>
+        <select id="custom-events-state-mobile-{{ section.id }}">
+          <option value="">All states</option>
+        </select>
+      </div>
+
+      <div class="custom-events-filter-actions">
+        <button type="button" class="button" id="custom-events-apply-mobile-{{ section.id }}">Apply</button>
+        <button type="button" class="button button--secondary" id="custom-events-reset-mobile-{{ section.id }}">Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" id="custom-events-filter-data-{{ section.id }}">
+[
+  {% for event in events_all %}
+    {
+      "month": {% if event.day_1_start_time != blank %}{{ event.day_1_start_time | date: "%B %Y" | json }}{% else %}""{% endif %},
+      "month_sort": {% if event.day_1_start_time != blank %}{{ event.day_1_start_time | date: "%Y-%m" | json }}{% else %}""{% endif %},
+      "state": {{ event.state | json }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script>
+  (function() {
+    var grid = document.getElementById('custom-events-grid-{{ section.id }}');
+    if (!grid) return;
+
+    var resultsCount = document.getElementById('custom-events-results-count-{{ section.id }}');
+    var emptyResults = document.getElementById('custom-events-empty-results-{{ section.id }}');
+    var loadMoreWrap = document.getElementById('custom-events-load-more-wrap-{{ section.id }}');
+    var loadMoreBtn = document.getElementById('custom-events-load-more-{{ section.id }}');
+
+    var desktopDate = document.getElementById('custom-events-date-{{ section.id }}');
+    var desktopMonth = document.getElementById('custom-events-month-{{ section.id }}');
+    var desktopState = document.getElementById('custom-events-state-{{ section.id }}');
+
+    var mobileDate = document.getElementById('custom-events-date-mobile-{{ section.id }}');
+    var mobileMonth = document.getElementById('custom-events-month-mobile-{{ section.id }}');
+    var mobileState = document.getElementById('custom-events-state-mobile-{{ section.id }}');
+
+    var applyDesktop = document.getElementById('custom-events-apply-desktop-{{ section.id }}');
+    var resetDesktop = document.getElementById('custom-events-reset-desktop-{{ section.id }}');
+    var applyMobile = document.getElementById('custom-events-apply-mobile-{{ section.id }}');
+    var resetMobile = document.getElementById('custom-events-reset-mobile-{{ section.id }}');
+
+    var openFilters = document.getElementById('custom-events-open-filters-{{ section.id }}');
+    var closeFilters = document.getElementById('custom-events-close-filters-{{ section.id }}');
+    var mobileDrawer = document.getElementById('custom-events-mobile-drawer-{{ section.id }}');
+    var mobileOverlay = document.getElementById('custom-events-mobile-overlay-{{ section.id }}');
+
+    var items = Array.prototype.slice.call(grid.querySelectorAll('.custom-events-grid__item'));
+    var filterDataEl = document.getElementById('custom-events-filter-data-{{ section.id }}');
+    var allEventFilterData = [];
+    var initialVisibleCount = {{ section.settings.events_per_page | json }};
+    var currentVisibleCount = initialVisibleCount;
+
+    if (filterDataEl) {
+      try {
+        allEventFilterData = JSON.parse(filterDataEl.textContent);
+      } catch (e) {
+        allEventFilterData = [];
+      }
+    }
+
+    items.sort(function(a, b) {
+      var aHasDate = a.getAttribute('data-has-date') === '1';
+      var bHasDate = b.getAttribute('data-has-date') === '1';
+
+      if (aHasDate && !bHasDate) return -1;
+      if (!aHasDate && bHasDate) return 1;
+
+      var aTs = parseInt(a.getAttribute('data-start-ts') || '9999999999', 10);
+      var bTs = parseInt(b.getAttribute('data-start-ts') || '9999999999', 10);
+
+      return aTs - bTs;
+    });
+
+    items.forEach(function(item) {
+      grid.appendChild(item);
+    });
+
+    function populateSelect(selectEl, values, defaultLabel) {
+      if (!selectEl) return;
+
+      var currentValue = selectEl.value || '';
+      selectEl.innerHTML = '';
+
+      var defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = defaultLabel;
+      selectEl.appendChild(defaultOption);
+
+      values.forEach(function(value) {
+        if (!value) return;
+        var option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectEl.appendChild(option);
+      });
+
+      selectEl.value = currentValue;
+    }
+
+    function buildFilterOptions() {
+      var monthsMap = {};
+      var states = [];
+      var now = new Date();
+      var currentYearMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+
+      allEventFilterData.forEach(function(event) {
+        var month = event.month || '';
+        var monthSort = event.month_sort || '';
+        var state = event.state || '';
+
+        if (month && monthSort && !monthsMap[monthSort] && monthSort >= currentYearMonth) {
+          monthsMap[monthSort] = month;
+        }
+
+        if (state && states.indexOf(state) === -1) {
+          states.push(state);
+        }
+      });
+
+      var monthKeys = Object.keys(monthsMap).sort();
+      var months = monthKeys.map(function(key) {
+        return monthsMap[key];
+      });
+
+      states.sort();
+
+      populateSelect(desktopMonth, months, 'All months');
+      populateSelect(mobileMonth, months, 'All months');
+      populateSelect(desktopState, states, 'All states');
+      populateSelect(mobileState, states, 'All states');
+
+      var todayStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      if (desktopDate) desktopDate.setAttribute('min', todayStr);
+      if (mobileDate) mobileDate.setAttribute('min', todayStr);
+    }
+
+    function syncDesktopToMobile() {
+      if (mobileDate) mobileDate.value = desktopDate.value;
+      if (mobileMonth) mobileMonth.value = desktopMonth.value;
+      if (mobileState) mobileState.value = desktopState.value;
+    }
+
+    function syncMobileToDesktop() {
+      if (desktopDate) desktopDate.value = mobileDate.value;
+      if (desktopMonth) desktopMonth.value = mobileMonth.value;
+      if (desktopState) desktopState.value = mobileState.value;
+    }
+
+    function getFilteredItems() {
+      var selectedDate = desktopDate ? desktopDate.value : '';
+      var selectedMonth = desktopMonth ? desktopMonth.value : '';
+      var selectedState = desktopState ? desktopState.value : '';
+
+      return items.filter(function(item) {
+        var hasDate = item.getAttribute('data-has-date') === '1';
+        var startDate = item.getAttribute('data-start-date') || '';
+        var endDate = item.getAttribute('data-end-date') || '';
+        var month = item.getAttribute('data-month') || '';
+        var state = item.getAttribute('data-state') || '';
+
+        var matchesDate = true;
+        var matchesMonth = true;
+        var matchesState = true;
+
+        if (selectedDate) {
+          if (!hasDate || !startDate) {
+            matchesDate = false;
+          } else {
+            matchesDate = selectedDate >= startDate && selectedDate <= endDate;
+          }
+        }
+
+        if (selectedMonth) {
+          matchesMonth = month === selectedMonth;
+        }
+
+        if (selectedState) {
+          matchesState = state === selectedState;
+        }
+
+        return matchesDate && matchesMonth && matchesState;
+      });
+    }
+
+    function updateVisibleItems() {
+      var filteredItems = getFilteredItems();
+
+      items.forEach(function(item) {
+        item.classList.add('is-hidden');
+        item.classList.remove('is-js-hidden');
+      });
+
+      filteredItems.forEach(function(item, index) {
+        item.classList.remove('is-hidden');
+        if (index >= currentVisibleCount) {
+          item.classList.add('is-js-hidden');
+        }
+      });
+
+      if (resultsCount) {
+        resultsCount.textContent = filteredItems.length === 1 ? '1 event found' : filteredItems.length + ' events found';
+      }
+
+      if (emptyResults) {
+        emptyResults.classList.toggle('is-visible', filteredItems.length === 0);
+      }
+
+      if (loadMoreWrap) {
+        loadMoreWrap.classList.toggle('is-visible', filteredItems.length > currentVisibleCount);
+      }
+    }
+
+    function applyFilters(source) {
+      if (source === 'mobile') {
+        syncMobileToDesktop();
+      } else {
+        syncDesktopToMobile();
+      }
+
+      currentVisibleCount = initialVisibleCount;
+      updateVisibleItems();
+    }
+
+    function resetFilters(source) {
+      if (source === 'mobile') {
+        if (mobileDate) mobileDate.value = '';
+        if (mobileMonth) mobileMonth.value = '';
+        if (mobileState) mobileState.value = '';
+        syncMobileToDesktop();
+      } else {
+        if (desktopDate) desktopDate.value = '';
+        if (desktopMonth) desktopMonth.value = '';
+        if (desktopState) desktopState.value = '';
+        syncDesktopToMobile();
+      }
+
+      currentVisibleCount = initialVisibleCount;
+      updateVisibleItems();
+    }
+
+    function openDrawer() {
+      if (!mobileDrawer) return;
+      mobileDrawer.classList.add('is-open');
+      mobileDrawer.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('overflow-hidden');
+      syncDesktopToMobile();
+    }
+
+    function closeDrawer() {
+      if (!mobileDrawer) return;
+      mobileDrawer.classList.remove('is-open');
+      mobileDrawer.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    if (applyDesktop) {
+      applyDesktop.addEventListener('click', function() {
+        applyFilters('desktop');
+      });
+    }
+
+    if (resetDesktop) {
+      resetDesktop.addEventListener('click', function() {
+        resetFilters('desktop');
+      });
+    }
+
+    if (applyMobile) {
+      applyMobile.addEventListener('click', function() {
+        applyFilters('mobile');
+        closeDrawer();
+      });
+    }
+
+    if (resetMobile) {
+      resetMobile.addEventListener('click', function() {
+        resetFilters('mobile');
+      });
+    }
+
+    if (openFilters) {
+      openFilters.addEventListener('click', openDrawer);
+    }
+
+    if (closeFilters) {
+      closeFilters.addEventListener('click', closeDrawer);
+    }
+
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener('click', closeDrawer);
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function() {
+        currentVisibleCount += initialVisibleCount;
+        updateVisibleItems();
+      });
+    }
+
+    buildFilterOptions();
+    updateVisibleItems();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom Events Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Upcoming Events" },
+    { "type": "checkbox", "id": "h1", "label": "H1 heading tag", "default": false },
+    { "type": "richtext", "id": "subheading", "label": "Subheading", "default": "<p>Come meet us in person and see where we'll be next.</p>" },
+
+    { "type": "range", "id": "margin_top", "min": 1, "max": 100, "step": 1, "label": "Margin of the posts from the image cut (desktop)", "default": 1 },
+    { "type": "range", "id": "margin_top_mobile", "min": 0, "max": 40, "step": 1, "label": "Margin of the posts from the image cut (mobile)", "default": 1 },
+
+    { "type": "range", "id": "columns_desktop", "min": 1, "max": 4, "step": 1, "label": "Events per row (desktop)", "default": 3 },
+    { "type": "range", "id": "columns_tablet", "min": 1, "max": 3, "step": 1, "label": "Events per row (tablet)", "default": 2 },
+    { "type": "range", "id": "columns_mobile", "min": 1, "max": 3, "step": 1, "label": "Events per row (mobile)", "default": 1 },
+
+    { "type": "range", "id": "events_per_page", "min": 1, "max": 30, "step": 1, "label": "Initial visible events / load more batch size", "default": 9 },
+    { "type": "range", "id": "excerpt_limit", "min": 20, "max": 500, "step": 10, "label": "Excerpt character limit", "default": 150 },
+
+    { "type": "checkbox", "id": "show_image", "label": "Show featured image", "default": true },
+    {
+      "type": "select",
+      "id": "image_height",
+      "label": "Image height",
+      "default": "adapt",
+      "options": [
+        { "value": "adapt", "label": "Adapt to image" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_date", "label": "Show event date", "default": true },
+
+    { "type": "checkbox", "id": "show_empty_message", "label": "Show message when no upcoming events", "default": true },
+    { "type": "text", "id": "empty_message", "label": "Empty message", "default": "No upcoming events right now—check back soon!" }
+  ],
+  "presets": [
+    { "name": "Custom Events Grid" }
+  ]
+}
+{% endschema %}

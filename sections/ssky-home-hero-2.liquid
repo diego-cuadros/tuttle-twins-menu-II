@@ -1,0 +1,627 @@
+{%- style -%}
+  .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2 {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-home-hero-2-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+
+  @media screen and (max-width: 749px) {
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2__buttons--teal {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .ssky-home-hero-2-{{ section.id }} .ssky-home-hero-2__buttons--teal .ssky-home-hero-2__button {
+      width: 100%;
+      min-width: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+      white-space: normal;
+      line-height: 1.2;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      hyphens: none;
+    }
+  }
+  
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div class="ssky-home-hero-2-{{ section.id }}">
+  <div class="ssky-home-hero-2 gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="ssky-home-hero-2__blocks">
+        <div class="ssky-home-hero-2__block-left">
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'pill_banner' -%}
+  <div class="ssky-home-hero-2__pill" {{ block.shopify_attributes }}>
+    {{ block.settings.pill_text }}
+  </div>
+              {%- when 'caption' -%}
+                <h2
+                  class="ssky-home-hero-2__caption ssky-text-block__caption h5 {{ block.settings.text_style }} {{ block.settings.color_class }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.caption | escape }}
+                </h2>
+
+              {%- when 'heading' -%}
+                <{{ block.settings.heading_tag }}
+  class="ssky-home-hero-2__heading {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}"
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.heading }}
+</{{ block.settings.heading_tag }}>
+
+              {%- when 'text' -%}
+                <div
+                  class="ssky-home-hero-2__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.text }}
+                </div>
+
+              {%- when 'image' -%}
+                {%- if block.settings.image_link != blank -%}
+                  <a
+                    href="{{ block.settings.image_link }}"
+                    class="ssky-home-hero-2__image-link"
+                    {{ block.shopify_attributes }}
+                  >
+                {%- endif -%}
+
+                <div
+                  class="ssky-home-hero-2__image{%- if block.settings.image_fit %} image-fit{%- endif -%}{%- if block.settings.image != blank %} media{%- else %} placeholder{% endif -%}"
+                  style="padding-bottom:min({{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 | at_most: 100 }}%, 500px);"
+                >
+                  {%- if block.settings.image != blank -%}
+                    {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                    {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 1200
+                      | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                    }}
+                  {%- else -%}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.image_link != blank -%}
+                  </a>
+                {%- endif -%}
+
+              {%- when 'button' -%}
+                {%- if block.settings.product != blank -%}
+                  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                  {%- assign block_product = block.settings.product -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                  {%- if block.settings.show_price -%}
+                    <div class="ssky-text-block__price">
+                      {% render 'price', product: block_product, show_compare_at_price: true %}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+
+                <div class="ssky-home-hero-2__buttons{%- if block.settings.button_full %} ssky-home-hero-2__buttons--fullwidth{%- endif -%}{%- if block.settings.button_style_teal %} ssky-home-hero-2__buttons--teal{%- endif -%}">
+                  {%- if block.settings.product != blank -%}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: block_product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      is_button_large: block.settings.button_large,
+                      is_button_full: block.settings.button_full,
+                      button_label: block.settings.product_button_label
+                    -%}
+                  {%- else -%}
+                    {%- if block.settings.button_label != blank -%}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
+                        class="ssky-home-hero-2__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_style_teal %} button--hero2-teal{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    {%- endif -%}
+
+                    {%- if block.settings.button_label_b != blank -%}
+                      <a
+                        {% if block.settings.button_link_b == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link_b }}"
+                        {% endif %}
+                        class="ssky-home-hero-2__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_style_teal %} button--hero2-teal{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label_b | escape }}
+                      </a>
+                    {%- endif -%}
+
+                    {%- if block.settings.button_label_c != blank -%}
+                      <a
+                        {% if block.settings.button_link_c == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link_c }}"
+                        {% endif %}
+                        class="ssky-home-hero-2__button button{%- if block.settings.button_large %} button--large{%- endif -%}{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_style_teal %} button--hero2-teal{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label_c | escape }}
+                      </a>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+
+              {%- when 'milestones' -%}
+                <div class="ssky-home-hero-2__milestones" {{ block.shopify_attributes }}>
+                  {%- if block.settings.title_a != blank -%}
+                    <div class="ssky-home-hero-2__milestone-one">
+                      <div class="ssky-home-hero-2__ms-heading h2">{{ block.settings.title_a }}</div>
+                      <div class="ssky-home-hero-2__ms-text rte">{{ block.settings.text_a }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title_b != blank -%}
+                    <div class="ssky-home-hero-2__milestone-two">
+                      <div class="ssky-home-hero-2__ms-heading h2">{{ block.settings.title_b }}</div>
+                      <div class="ssky-home-hero-2__ms-text">{{ block.settings.text_b }}</div>
+                      {%- if block.settings.review_stars != blank -%}
+                        {{ block.settings.review_stars | image_url: width: 200 | image_tag }}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.icon != blank -%}
+                    <div class="ssky-home-hero-2__milestone-three">
+                      {{ block.settings.icon | image_url: width: 300 | image_tag }}
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Homepage Hero 2",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            { "value": "small-semibold", 
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label" 
+            },
+            { "value": "small-bold", 
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label" 
+            },
+            { "value": "medium-semibold", 
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label" 
+            },
+            { "value": "large-semibold", 
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label" 
+            },
+            { "value": "large-bold", 
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label" 
+            }
+          ],
+          "default": "large-bold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "primary-yellow",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "pill_banner",
+      "name": "Pill Banner",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "pill_text",
+          "label": "Pill Text",
+          "default": "<p>4,500+ Five-Star Reviews • 6 Million+ Happy Kids</p>"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "heading",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h4", 
+              "label": "t:sections.all.heading_size.options__0.label" 
+            },
+            { "value": "h3", 
+              "label": "t:sections.all.heading_size.options__1.label" 
+            },
+            { "value": "h2", 
+              "label": "t:sections.all.heading_size.options__2.label" 
+            },
+            { "value": "h1", 
+              "label": "t:sections.all.heading_size.options__3.label" 
+            },
+            { "value": "h0", 
+              "label": "t:sections.all.heading_size.options__4.label" 
+            },
+            { "value": "hxl", 
+              "label": "t:sections.all.heading_size.options__5.label" 
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            { "value": "medium", 
+              "label": "t:sections.all.heading_weight.options__1.label" 
+            },
+            { "value": "semibold", 
+              "label": "t:sections.all.heading_weight.options__2.label" 
+            },
+            { "value": "bold", 
+              "label": "t:sections.all.heading_weight.options__3.label" 
+            }
+          ],
+          "default": "semibold",
+          "label": "t:sections.all.heading_weight.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h1",
+          "label": "Heading tag"
+        }
+      ]
+    },
+
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "text",
+          "label": "Text (supports HTML/spans)",
+          "default": "This is customizable text."
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            { "value": "regular", "label": "t:sections.all.text_size.options__0.label" },
+            { "value": "medium", "label": "t:sections.all.text_size.options__1.label" },
+            { "value": "large", "label": "t:sections.all.text_size.options__2.label" },
+            { "value": "extra-large", "label": "t:sections.all.text_size.options__3.label" }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            { "value": "regular", "label": "t:sections.all.text_weight.options__0.label" },
+            { "value": "medium", "label": "t:sections.all.text_weight.options__1.label" },
+            { "value": "semibold", "label": "t:sections.all.text_weight.options__2.label" },
+            { "value": "bold", "label": "t:sections.all.text_weight.options__3.label" }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        }
+      ]
+    },
+
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "checkbox",
+          "id": "image_fit",
+          "label": "Switch between image fill or fit.",
+          "default": false,
+          "info": "Fill covers the container, while fit fits within the container."
+        },
+        { "type": "url", 
+          "id": "image_link", 
+          "label": "Image link", 
+          "info": "Optional. If set, the image will be clickable." 
+        }
+      ]
+    },
+
+    {
+      "type": "button",
+      "name": "t:sections.ssky_text_block.blocks.button.name",
+      "limit": 2,
+      "settings": [
+        { "type": "checkbox", 
+          "id": "button_large", 
+          "default": true, 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_large.label" 
+        },
+        { "type": "checkbox", 
+          "id": "button_full", 
+          "default": true, 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_full.label" 
+        },
+        { "type": "text", 
+          "id": "button_label", 
+          "default": "t:sections.ssky_text_block.blocks.button.settings.button_label.default", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label", 
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info" 
+        },
+        { "type": "url", 
+          "id": "button_link", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label" 
+        },
+        { "type": "text", 
+          "id": "button_label_b", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label", 
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info" 
+        },
+        { "type": "url", 
+          "id": "button_link_b", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label" 
+        },
+        { "type": "text", 
+          "id": "button_label_c", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_label.label", 
+          "info": "t:sections.ssky_text_block.blocks.button.settings.button_label.info" 
+        },
+        { "type": "url", 
+          "id": "button_link_c", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_link.label" 
+        },
+        { "type": "checkbox", 
+          "id": "button_style_secondary", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.button_style_secondary.label", 
+          "default": false },
+        { "type": "checkbox",
+          "id": "button_style_teal",
+          "label": "Use teal button style (Hero 2)",
+          "default": false
+        },
+        { "type": "header", 
+          "content": "t:sections.ssky_text_block.blocks.button.settings.product.header" 
+        },
+        { "type": "product", 
+          "id": "product", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.label", 
+          "info": "t:sections.ssky_text_block.blocks.button.settings.product.info" 
+        },
+        { "type": "text", 
+          "id": "product_button_label", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.button_label" 
+        },
+        { "type": "checkbox", 
+          "id": "show_price", 
+          "label": "t:sections.ssky_text_block.blocks.button.settings.product.show_price", 
+          "default": true 
+        }
+      ]
+    },
+
+    {
+      "type": "milestones",
+      "name": "Milestones",
+      "limit": 1,
+      "settings": [
+        { "type": "header", 
+          "content": "Milestones One" 
+        },
+        { "type": "text", 
+          "id": "title_a", 
+          "label": "Title", 
+          "default": "100+" 
+        },
+        { "type": "richtext", 
+          "id": "text_a", 
+          "label": "Text", 
+          "default": "<p>Orders <br> Every day</p>" 
+        },
+
+        { "type": "header", 
+          "content": "Milestones Two - Reviews" 
+        },
+        { "type": "text", 
+          "id": "title_b", 
+          "label": "Title", 
+          "default": "1000+" 
+        },
+        { "type": "image_picker", 
+          "id": "review_stars", 
+          "label": "Review Stars" 
+        },
+        { "type": "text", 
+          "id": "text_b", 
+          "label": "Text", 
+          "default": "5 Star Reviews" 
+        },
+
+        { "type": "header", 
+          "content": "Milestones Three - Icon" 
+        },
+        { "type": "image_picker", 
+          "id": "icon", 
+          "label": "Icon" 
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage Hero 2",
+      "blocks": [
+        { "type": "pill_banner"},
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+
+        { "type": "image" },
+        { "type": "button" },
+        { "type": "milestones" }
+      ]
+    }
+  ]
+}
+{% endschema %}

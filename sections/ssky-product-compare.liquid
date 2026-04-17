@@ -1,0 +1,301 @@
+{%- comment -%}
+  sections/ssky-product-compare.liquid
+  CSS lives in assets/homepage-redesign.css
+{%- endcomment -%}
+
+<section
+  class="ssky-product-compare color-{{ section.settings.color_scheme }}"
+  data-ssky-product-compare
+  style="
+    --ssky-pc-pad-m: {{ section.settings.padding_y_mobile }}px;
+    --ssky-pc-pad-d: {{ section.settings.padding_y_desktop }}px;
+  "
+>
+  <div class="page-width">
+    <div class="ssky-product-compare__content">
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'caption' -%}
+            {%- if block.settings.caption != blank -%}
+              <div
+                class="ssky-product-compare__row ssky-product-compare__row--full"
+                {{ block.shopify_attributes }}
+              >
+                <div class="ssky-product-compare__caption">
+                  {{ block.settings.caption }}
+                </div>
+              </div>
+            {%- endif -%}
+
+          {%- when 'heading' -%}
+            {%- if block.settings.heading != blank -%}
+              <div
+                class="ssky-product-compare__row ssky-product-compare__row--full"
+                {{ block.shopify_attributes }}
+              >
+                <{{ block.settings.heading_tag }}
+                  class="ssky-product-compare__heading {{ block.settings.heading_size }}"
+                >
+                  {{ block.settings.heading }}
+                </{{ block.settings.heading_tag }}>
+              </div>
+            {%- endif -%}
+
+          {%- when 'text' -%}
+            {%- if block.settings.text != blank -%}
+              <div
+                class="ssky-product-compare__row ssky-product-compare__row--full"
+                {{ block.shopify_attributes }}
+              >
+                <div class="ssky-product-compare__text rte">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            {%- endif -%}
+
+          {%- when 'button' -%}
+            {%- if block.settings.button_label != blank -%}
+              <div
+                class="ssky-product-compare__row ssky-product-compare__row--full"
+                {{ block.shopify_attributes }}
+              >
+                <div class="ssky-product-compare__button-wrap">
+                  <a
+                    {% if block.settings.button_link != blank %}
+                      href="{{ block.settings.button_link }}"
+                    {% else %}
+                      role="link" aria-disabled="true"
+                    {% endif %}
+                    class="button{% if block.settings.button_style == 'secondary' %} button--secondary{% endif %}"
+                  >
+                    {{ block.settings.button_label }}
+                  </a>
+                </div>
+              </div>
+            {%- endif -%}
+
+          {%- when 'product_card' -%}
+            {%- assign p = block.settings.product -%}
+            {%- if p != blank -%}
+              {%- assign v = p.selected_or_first_available_variant -%}
+              {%- assign price = v.price -%}
+              {%- assign compare = v.compare_at_price -%}
+
+              {%- assign has_sale = false -%}
+              {%- if compare and compare > price -%}
+                {%- assign has_sale = true -%}
+                {%- assign savings = compare | minus: price -%}
+                {%- assign savings_pct = savings | times: 100.0 | divided_by: compare | round -%}
+              {%- endif -%}
+
+              <div
+                class="ssky-product-compare__row ssky-product-compare__row--card"
+                {{ block.shopify_attributes }}
+              >
+                <article
+                  class="ssky-product-compare__card{% if block.settings.highlight %} is-highlight{% endif %}"
+                  style="
+                    --ssky-pc-accent: {{ block.settings.accent_color }};
+                    --ssky-pc-top: {{ block.settings.top_bg }};
+                    --ssky-pc-badge: {{ block.settings.badge_bg }};
+                  "
+                >
+                  <div class="ssky-product-compare__card-top">
+                    {%- if block.settings.badge_text != blank -%}
+                      <div class="ssky-product-compare__badge">
+                        {{ block.settings.badge_text }}
+                      </div>
+                    {%- endif -%}
+
+                    {%- if p.featured_image != blank -%}
+                      <div class="ssky-product-compare__image">
+                        {{ p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy' }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+
+                  <div class="ssky-product-compare__card-body">
+                    {%- if block.settings.kicker != blank -%}
+                      <div class="ssky-product-compare__kicker">{{ block.settings.kicker }}</div>
+                    {%- endif -%}
+
+                    <div class="ssky-product-compare__title">
+                      {{ block.settings.title_override | default: p.title }}
+                    </div>
+
+                    {%- if block.settings.desc != blank -%}
+                      <div class="ssky-product-compare__desc">{{ block.settings.desc }}</div>
+                    {%- endif -%}
+
+                    <div class="ssky-product-compare__price-row">
+                      <span class="ssky-product-compare__price">
+                        {{ price | money_without_trailing_zeros }}
+                      </span>
+
+                      {%- if has_sale -%}
+                        <span class="ssky-product-compare__compare">
+                          {{ compare | money_without_trailing_zeros }}
+                        </span>
+                      {%- endif -%}
+                    </div>
+
+                    {%- if has_sale -%}
+                      <div class="ssky-product-compare__save-pill">
+                        You save {{ savings | money_without_trailing_zeros }} — {{ savings_pct }}% off
+                      </div>
+                    {%- endif -%}
+
+                    {%- if block.settings.features != blank -%}
+                      {%- assign lines = block.settings.features | newline_to_br | split: '<br />' -%}
+                      <ul class="ssky-product-compare__features">
+                        {%- for line in lines -%}
+                          {%- assign item = line | strip -%}
+                          {%- if item != blank -%}
+                            <li>{{ item }}</li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+
+                    <form method="post" action="{{ routes.cart_add_url }}" class="ssky-product-compare__form">
+                      <input type="hidden" name="id" value="{{ v.id }}">
+                      <button
+                        type="submit"
+                        class="ssky-product-compare__cta button"
+                        style="background: var(--ssky-pc-accent);"
+                      >
+                        Add to Cart — {{ price | money_without_trailing_zeros }}
+                      </button>
+                    </form>
+                  </div>
+                </article>
+              </div>
+            {%- endif -%}
+
+        {%- endcase -%}
+      {%- endfor -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Compare",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_y_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_y_desktop", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding (desktop)", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "caption", "label": "Caption", "default": "SHOP BUNDLES — PRESIDENTS DAY SALE" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Give Them the Education Schools Skip" },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "h1",
+          "options": [
+            { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h0", "label": "H0" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "default": "h2",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Every bundle is deeply discounted. The Family Starter Pack is what 78% of new TT families choose first.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 2,
+      "settings": [
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop All Bundles" },
+        { "type": "url", "id": "button_link", "label": "Button link" },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "primary",
+          "options": [
+            { "value": "primary", "label": "Primary" },
+            { "value": "secondary", "label": "Secondary" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "limit": 3,
+      "settings": [
+        { "type": "product", "id": "product", "label": "Product" },
+        { "type": "checkbox", "id": "highlight", "label": "Highlight card", "default": false },
+        { "type": "text", "id": "badge_text", "label": "Badge text (optional)", "default": "⭐ MOST POPULAR" },
+        { "type": "color", "id": "badge_bg", "label": "Badge background", "default": "#E85A3D" },
+        { "type": "color", "id": "top_bg", "label": "Top background", "default": "#BFEAF5" },
+        { "type": "text", "id": "kicker", "label": "Kicker (e.g., AGES 5–12)", "default": "AGES 5–12" },
+        { "type": "text", "id": "title_override", "label": "Title override (optional)" },
+        { "type": "textarea", "id": "desc", "label": "Description", "default": "The complete starter library. The bundle 78% of new TT families choose first — for good reason." },
+        { "type": "textarea", "id": "features", "label": "Feature bullets (one per line)", "default": "All 22 children's story books\nWorkbooks + parent guides\nDigital bonus materials included" },
+        { "type": "color", "id": "accent_color", "label": "CTA accent color", "default": "#0597AF" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Compare",
+      "blocks": [
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "button" },
+        { "type": "product_card" },
+        { "type": "product_card" },
+        { "type": "product_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,364 @@
+{{ 'ssky-image-slide.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-image-slider-{{ section.id }} .ssky-image-slider {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-image-slider-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-image-slider-{{ section.id }}">
+  <div class="ssky-image-slider color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width">
+      <div class="ssky-text-block__blocks center">
+        {%- for cyoc_slide_proudly_ in shop.metaobjects.cyoc_slide_proudly_.values limit: 10 -%}
+          {%- if cyoc_slide_proudly_.main_heading != blank or cyoc_slide_proudly_.main_caption != blank -%}
+            {%- if cyoc_slide_proudly_.main_heading != blank -%}
+              <h3
+                class="ssky-text-block__heading rte h3 weight-semibold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: 1"
+                {% endif %}
+              >
+                {{ cyoc_slide_proudly_.main_heading }}
+              </h3>
+            {%- endif -%}
+            {%- if cyoc_slide_proudly_.main_caption != blank -%}
+              <div
+                class="ssky-text-block__text rte text-body-large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: 1"
+                {% endif %}
+              >
+                {{ cyoc_slide_proudly_.main_caption }}
+              </div>
+            {%- endif -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <slideshow-component
+        class="ssky-slider-component slider-mobile-gutter"
+        role="region"
+        aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
+      >
+        <div
+          class="slideshow banner banner--small grid grid--1-col slider slider--everywhere{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          id="Slider-{{ section.id }}"
+          aria-live="polite"
+          aria-atomic="true"
+          data-autoplay="{{ section.settings.auto_rotate }}"
+          data-speed="{{ section.settings.change_slides_speed }}"
+        >
+          {%- for cyoc_slide_proudly_ in shop.metaobjects.cyoc_slide_proudly_.values limit: 10 -%}
+            <div
+              class="slideshow__slide grid__item grid--1-col slider__slide"
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              role="group"
+              aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+              aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+              tabindex="-1"
+            >
+              <div class="slideshow__media banner__media media{% if cyoc_slide_proudly_.slide_image == blank %} placeholder{% endif %}">
+                {%- if cyoc_slide_proudly_.slide_image -%}
+                  {%- liquid
+                    assign height = cyoc_slide_proudly_.slide_image.value.image.width | divided_by: cyoc_slide_proudly_.slide_image.value.image.aspect_ratio | round
+                    assign sizes = '100vw'
+                    assign widths = '375, 550, 750'
+                    assign fetch_priority = 'auto'
+                  -%}
+                  {%- if forloop.first %}
+                    {{
+                        cyoc_slide_proudly_.slide_image
+                      | image_url: width: 750
+                      | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                    }}
+                  {%- else -%}
+                    {{
+                        cyoc_slide_proudly_.slide_image
+                      | image_url: width: 750
+                      | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                    }}
+                  {%- endif -%}
+                {%- else -%}
+                  {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+                  {%- if placeholder_slide == 1 -%}
+                    {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- else -%}
+                    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            </div>
+            {%- assign forloop_length = forloop.length -%}
+          {%- endfor -%}
+          {%- if forloop_length > 4 -%}
+            {%- for cyoc_slide_proudly_ in shop.metaobjects.cyoc_slide_proudly_.values limit: 10 -%}
+              <div
+                class="slideshow__slide grid__item grid--1-col slider__slide"
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                role="group"
+                aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                tabindex="-1"
+              >
+                <div class="slideshow__media banner__media media{% if cyoc_slide_proudly_.slide_image == blank %} placeholder{% endif %}">
+                  {%- if cyoc_slide_proudly_.slide_image -%}
+                    {%- liquid
+                      assign height = cyoc_slide_proudly_.slide_image.value.image.width | divided_by: cyoc_slide_proudly_.slide_image.value.image.aspect_ratio | round
+                      assign sizes = '100vw'
+                      assign widths = '375, 550, 750'
+                      assign fetch_priority = 'auto'
+                      if section.index == 1
+                        assign fetch_priority = 'high'
+                      endif
+                    -%}
+                    {%- if forloop.first %}
+                      {{
+                        cyoc_slide_proudly_.slide_image
+                        | image_url: width: 750
+                        | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                    {%- else -%}
+                      {{
+                        cyoc_slide_proudly_.slide_image
+                        | image_url: width: 750
+                        | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                      }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+                    {%- if placeholder_slide == 1 -%}
+                      {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- else -%}
+                      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+
+        <div class="slideshow__controls slider-buttons{%- unless section.settings.show_pagination %} ssky-image-slider__hide-pagination{%- endunless -%}">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret-big.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret-big.svg' | inline_asset_content -}}
+            </span>
+          </button>
+
+          {%- if section.settings.auto_rotate -%}
+            <button
+              type="button"
+              class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+              aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-pause.svg' | inline_asset_content -}}
+              </span>
+              <span class="svg-wrapper">
+                {{- 'icon-play.svg' | inline_asset_content -}}
+              </span>
+            </button>
+          {%- endif -%}
+        </div>
+      </slideshow-component>
+    </div>
+  </div>
+  {%- if request.design_mode -%}
+    <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sskySliderParent = document.querySelector('.ssky-image-slider-{{ section.id }} .slideshow');
+      const sskySlides = sskySliderParent.children;
+      const middleIndex = Math.floor(sskySlides.length / 2);
+      let copyCount = 0;
+      const isMiddleElementVisible = () => {
+        return sskySlides[middleIndex].getAttribute('aria-hidden') === 'false';
+      };
+      const copysskySlides = () => {
+        if (isMiddleElementVisible()) {
+          const sskySlidesToCopy = Array.from(sskySlides).slice(0, 5);
+          sskySlidesToCopy.forEach((element) => {
+            sskySliderParent.appendChild(element.cloneNode(true));
+          });
+          copyCount++;
+        }
+      };
+      const observer = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'aria-hidden') {
+            copysskySlides();
+            if (copyCount > 2) {
+              observer.disconnect();
+              clearTimeout(stopTimerId);
+            }
+          }
+        }
+      });
+
+      observer.observe(sskySlides[middleIndex], { attributes: true });
+      copysskySlides();
+      const stopTimerId = setTimeout(() => {
+        observer.disconnect();
+      }, 480000);
+    });
+  </script>
+</div>
+{% schema %}
+{
+  "name": "TTm CYOC slide",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "t:sections.slideshow.settings.auto_rotate.label",
+      "default": true,
+      "info": "On desktop, the auto-rotate feature works best with five or more slides."
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 3,
+      "max": 9,
+      "step": 2,
+      "unit": "s",
+      "label": "t:sections.slideshow.settings.change_slides_speed.label",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm CYOC slide"
+    }
+  ]
+}
+{% endschema %}

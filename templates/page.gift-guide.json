@@ -1,0 +1,923 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ss_hero_33_bbYcVJ": {
+      "type": "ss-hero-33",
+      "blocks": {
+        "heading_8whegr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Holiday Gift Guide</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "text_LNhMHA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Big ideas wrapped in fun stories. Meaningful gifts that last far beyond the holidays.</p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 15,
+            "text_size_mobile": 15,
+            "text_height": 150,
+            "text_mt": 28,
+            "text_mt_mobile": 16,
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8whegr",
+        "text_LNhMHA"
+      ],
+      "name": "SS - Hero #33",
+      "settings": {
+        "layout_height": "fixed_height",
+        "layout_fixed_height": 220,
+        "layout_fixed_height_mobile": 450,
+        "content_maxwidth": 50,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "center",
+        "layout_bg_type": "image",
+        "bg_image": "shopify://shop_images/Holiday_Gift_Guide_1.png",
+        "bg_video_url": "",
+        "bg_overlay": 0,
+        "bg_overlay_color": "#da5846",
+        "background_color": "#da5846",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "z_tt_collection_list_7qthUn": {
+      "type": "z-tt-collection-list",
+      "blocks": {
+        "featured_collection_GHwmxN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "books-for-kids-from-ages-5-to-8-copy"
+          }
+        },
+        "featured_collection_i6KRzw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "books-for-kids-from-ages-9-to-12-copy"
+          }
+        },
+        "featured_collection_ML7GG3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "books-for-teens-copy"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_GHwmxN",
+        "featured_collection_i6KRzw",
+        "featured_collection_ML7GG3"
+      ],
+      "name": "z TT Collection list",
+      "settings": {
+        "title": "Holiday Favorites by Age",
+        "heading_size": "h3",
+        "heading_alignment": "center",
+        "collection_title_size": "large",
+        "collection_title_alignment": "center",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-5",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "z_tt_collection_list_kMj3HN": {
+      "type": "z-tt-collection-list",
+      "blocks": {
+        "featured_collection_qBMQbQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-25"
+          }
+        },
+        "featured_collection_KQLNd9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-50"
+          }
+        },
+        "featured_collection_Jikd6p": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-75"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_qBMQbQ",
+        "featured_collection_KQLNd9",
+        "featured_collection_Jikd6p"
+      ],
+      "name": "TT Collection List",
+      "settings": {
+        "title": "Budget-Friendly Holiday Finds",
+        "heading_size": "h3",
+        "heading_alignment": "center",
+        "collection_title_size": "large",
+        "collection_title_alignment": "center",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "z_featured_collection_QwzFA6": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Bundle Up for Holiday Savings",
+        "heading_size": "h2",
+        "description": "<p>Holiday Bundles for Every Age</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bundles",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-5",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "ssky_image_glide_slider_qXerPB": {
+      "type": "ssky-image-glide-slider",
+      "blocks": {
+        "heading_WeLCLe": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "heading": "<p>Fan-Favorite Best Sellers</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "custom_css": ""
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_ab99dc3_pN7Yxk": {
+          "type": "ai_gen_block_ab99dc3",
+          "settings": {
+            "collection": "best-sellers",
+            "product_limit": 15,
+            "visible_items": 4,
+            "visible_items_mobile": "1",
+            "gap": 10,
+            "padding": 10,
+            "border_radius": 8,
+            "show_title": false,
+            "show_price": false,
+            "title_size": 16,
+            "title_color": "#333333",
+            "price_size": 14,
+            "price_color": "#666666",
+            "hover_lift": 10,
+            "hover_scale": 2,
+            "shadow_size": 10,
+            "shadow_opacity": 15,
+            "rotation_speed": 2,
+            "pause_on_hover": true,
+            "show_dots": true,
+            "dot_color": "#333333"
+          },
+          "blocks": {}
+        },
+        "button_i4q9i3": {
+          "type": "button",
+          "name": "Button",
+          "settings": {
+            "alignment": "center",
+            "button_large": false,
+            "button_full": false,
+            "button_label": "Shop Best Sellers",
+            "button_link": "shopify://collections/best-sellers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false,
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_WeLCLe",
+        "ai_gen_block_ab99dc3_pN7Yxk",
+        "button_i4q9i3"
+      ],
+      "name": "Children's Series Rotating Slider",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "fullwidth": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_image_banner_QYgyyj": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "caption_CGUzcn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Tuttle Twins TV Show",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_CmyE6x": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>A must-have gift lineup for Tuttle Twins fans—graphic novels, plushies, games, and adventure books that turn showtime favorites into real-life fun.</p><p></p>",
+            "text_large": true
+          }
+        },
+        "buttons_D8yVwr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/tuttle-twins-tv-show",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_CGUzcn",
+        "text_CmyE6x",
+        "buttons_D8yVwr"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": true,
+        "image": "shopify://shop_images/Homepage_Collection_Images_1200_x_1200_px_1.png",
+        "image_2": "shopify://shop_images/season-one-tuttle-twins-adventure-book-activity-books-425.webp",
+        "image_2_link": "shopify://collections/tuttle-twins-tv-show",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_WYiq6q": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "caption_xrr74i": {
+          "type": "caption",
+          "settings": {
+            "caption": "Give the Gift of Meaningful Moments",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_QQitjH": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>Share a Tuttle Twins e-gift card and let your loved ones pick the books that spark conversations, curiosity, and connection with their kids.</p><p></p>",
+            "text_large": true
+          }
+        },
+        "buttons_ENBiBG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/tuttle-twins-tv-show",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_xrr74i",
+        "text_QQitjH",
+        "buttons_ENBiBG"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": true,
+        "image": "shopify://shop_images/Homepage_Collection_Images_1200_x_1200_px_2.png",
+        "image_2": "shopify://shop_images/Homepage_Collection_Images_1200_x_1200_px_3.png",
+        "image_2_link": "shopify://products/tuttle-twins-giftcard",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_NK3DLt": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_cPpPMm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What’s Bringing Families Joy This Season</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cPpPMm"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "1763512009a5f4d026": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_JWpexy": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_JWpexy"
+      ],
+      "settings": {}
+    },
+    "ssky_text_image_block_nGxXAx": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_Y4MpkB": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Empower Your Children</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "Engage in meaningful family discussions",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "",
+            "caption": "",
+            "text_style": "medium-semibold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_jymUUm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>You might be wondering:</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "checkbox_zK3pr8": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do you <strong>communicate big ideas</strong> to little kids without seriously confusing them?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_dwpkwW": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do you teach an eight-year-old about the <strong>free market</strong> in a way that will be relevant to them… and so they aren’t turned off to economic truths for good?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_eEwbyb": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How can a six-year-old understand <strong>property rights</strong> and not feel pressured to be more than just a kid?</p>",
+            "text_large": true
+          }
+        },
+        "text_UHr8Lz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This series of children’s books teaches your kids what the schools no longer do, <strong>simplifying complex ideas</strong> so they can understand. Tried and tested by millions of readers, this <strong>storytelling approach</strong> works perfectly when it comes to educating your family about real-world concepts.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_iXqWnJ": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Shop Children's Books",
+            "button_link": "shopify://collections/childrens-series",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_Y4MpkB",
+        "heading_jymUUm",
+        "checkbox_zK3pr8",
+        "checkbox_dwpkwW",
+        "checkbox_eEwbyb",
+        "text_UHr8Lz",
+        "button_iXqWnJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Child-Content.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_three_block_VTKXX4": {
+      "type": "ssky-three-block",
+      "blocks": {
+        "block_one_bCjY4B": {
+          "type": "block_one",
+          "settings": {
+            "color_scheme": "",
+            "heading": "KIDS",
+            "text": "<p>Teach relevant <strong>freedom-based</strong> concepts that most of us were<br/>never taught as kids. These <strong>stimulating stories</strong> encourage<br/>children ages 5-11 to make sense<br/>of the world.</p>",
+            "image": "shopify://shop_images/girl-atlas.webp",
+            "button_label": "Kid's Books",
+            "button_link": "shopify://pages/childrens-resources",
+            "button_style_secondary": false
+          }
+        },
+        "block_two_4xWe9r": {
+          "type": "block_two",
+          "settings": {
+            "color_scheme": "",
+            "heading": "TODDLERS",
+            "text": "<p>Introduce big ideas to your (very!) little ones through these children's board books. Join the Tuttle Toddlers on their learning journey as they practice the ABCs and 123s of some important topics!</p>",
+            "image": "shopify://shop_images/abc-toddler.webp",
+            "button_label": "Toddler Books",
+            "button_link": "shopify://collections/toddler-books",
+            "button_style_secondary": false
+          }
+        },
+        "block_three_ePAM4H": {
+          "type": "block_three",
+          "settings": {
+            "color_scheme": "",
+            "heading": "TEENS",
+            "text": "<p>Choose from both fiction stories (like the “Choose Your Own Adventure” books we grew up on) and nonfiction guidebooks, teaching things like <strong>entrepreneurship, critical thinking, and courage.</strong></p>",
+            "image": "shopify://shop_images/logical-cropped-1a.webp",
+            "button_label": "Teen Guidebooks",
+            "button_link": "shopify://collections/guidebooks",
+            "button_label_b": "Teen Fiction",
+            "button_link_b": "shopify://collections/choose-your-consequence",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "block_one_bCjY4B",
+        "block_two_4xWe9r",
+        "block_three_ePAM4H"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_hcrAJa": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_geGL6T": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Parent with Confidence</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_8XFT9d": {
+          "type": "caption",
+          "settings": {
+            "caption": "Share Big Ideas and Powerful Truths in a Way Your Child Will Understand",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_gf87aN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Struggling to explain current events and complex world topics to your kids?<br/><br/>Experiencing some gaps in your own political and economic knowledge, and don’t have the time to catch up?<br/><br/>All you want is to ensure your values are passed on to your children to give them a foundation of truth to survive in today’s crazy world.<br/><br/><strong>The Tuttle Twins are here to help you.</strong></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_geGL6T",
+        "caption_8XFT9d",
+        "text_gf87aN"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Girl-with-Book.webp",
+        "rounded": false,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 36,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_j7KfF9": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_BKt8rE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Establish Core Truths</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_Lqb6XU": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sharing these ideas is important while kids are young",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_8tGLBp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Many parents think that waiting until children are older is the best approach when it comes to \"tricky\" topics. But in today's world, kids are exposed to similar ideas at a young age through social media, video, and even teachers.<br/><br/>Helping kids explore ideas and think critically while they are young is crucial. Tuttle Twins makes it easy.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BKt8rE",
+        "caption_Lqb6XU",
+        "text_8tGLBp"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Fred-Core-Truths.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_EPaCBj": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_zbCebB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bond as a Family</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_t6ngyr": {
+          "type": "caption",
+          "settings": {
+            "caption": "And Strengthen Your Core Values",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_iWUXJn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It can be a struggle at times—getting the family in the same room and having a discussion together. It can be hard feeling like the institutions in our  society are trying to undermine your efforts by broadcasting messages to your children that you disagree with.<br/><br/>You can facilitate family discussions about powerful ideas and current events and shield your children from harmful ideas they will be exposed to. Through engaging story adventures and activity pages we will provide, you will empower your kids to learn about your values—and what it means for their young lives in today’s world.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zbCebB",
+        "caption_t6ngyr",
+        "text_iWUXJn"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Fire-BondFam.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_testimonials_b_xtdbRk": {
+      "type": "sskymo-testimonials-b",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_iz3hBq": {
+      "type": "sskymo-text-image-block",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_hero_33_bbYcVJ",
+    "z_tt_collection_list_7qthUn",
+    "z_tt_collection_list_kMj3HN",
+    "z_featured_collection_QwzFA6",
+    "ssky_image_glide_slider_qXerPB",
+    "ssky_image_banner_QYgyyj",
+    "ssky_image_banner_WYiq6q",
+    "ssky_text_block_NK3DLt",
+    "1763512009a5f4d026",
+    "ssky_text_image_block_nGxXAx",
+    "ssky_three_block_VTKXX4",
+    "ssky_text_image_block_hcrAJa",
+    "ssky_text_image_block_j7KfF9",
+    "ssky_text_image_block_EPaCBj",
+    "sskymo_testimonials_b_xtdbRk",
+    "sskymo_text_image_block_iz3hBq"
+  ]
+}

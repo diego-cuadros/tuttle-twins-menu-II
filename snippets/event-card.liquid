@@ -1,0 +1,361 @@
+{% comment %}
+  Event card for metaobject events
+{% endcomment %}
+
+{%- style -%}
+  .article-card-wrapper {
+    height: 100%;
+  }
+
+  .card.article-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card.article-card .card__content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.25;
+  min-height: calc(1.25em * 2);
+  max-height: calc(1.25em * 2);
+  margin-bottom: 0.5rem;
+  }
+  .article-card__excerpt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-card__date {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #091d52;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-card__location {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .event-card__date,
+.event-card__location {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.event-card__icon {
+  display: inline-flex;
+  align-items: center;
+  color: #091d52;
+}
+
+  .card.article-card .article-card__info {
+    margin-bottom: 1rem;
+  }
+
+  .event-card__cta {
+    margin-top: auto;
+  }
+
+  .event-card__location-link {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.event-card__location-link:visited {
+  color: #4b5563;
+}
+
+.event-card__location-link:hover {
+  color: #4b5563;
+  text-decoration: underline;
+}
+
+.event-card__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.event-card__address {
+  line-height: 1.4;
+}
+
+.event-card__location-link {
+  color: #4b5563;
+  text-decoration: none;
+  display: block;
+}
+
+.event-card__location-link:visited {
+  color: #4b5563;
+}
+
+.event-card__location-link:hover {
+  text-decoration: underline;
+}
+
+{%- endstyle -%}
+
+{%- if event and event != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if media_aspect_ratio != null
+      assign ratio = media_aspect_ratio
+    endif
+
+    assign event_title = event.title | default: 'Event'
+
+    assign event_page_url = ''
+    if event.system and event.system.url
+      assign event_page_url = event.system.url
+    endif
+
+    comment
+      Use day_1_start_time as start date.
+      Use last populated day end time as end date.
+    endcomment
+    assign start_dt = event.day_1_start_time
+
+    assign end_dt = ''
+    if event.day_4_end_time != blank
+      assign end_dt = event.day_4_end_time
+    elsif event.day_3_end_time != blank
+      assign end_dt = event.day_3_end_time
+    elsif event.day_2_end_time != blank
+      assign end_dt = event.day_2_end_time
+    elsif event.day_1_end_time != blank
+      assign end_dt = event.day_1_end_time
+    endif
+
+    assign date_line = ''
+
+    if start_dt != blank and end_dt != blank
+      assign start_day = start_dt | date: "%-d"
+      assign end_day = end_dt | date: "%-d"
+      assign start_month = start_dt | date: "%B"
+      assign end_month = end_dt | date: "%B"
+      assign start_year = start_dt | date: "%Y"
+      assign end_year = end_dt | date: "%Y"
+
+      if start_year == end_year
+        if start_month == end_month
+          if start_day == end_day
+            assign date_line = start_month | append: " " | append: start_day | append: ", " | append: start_year
+          else
+            assign date_line = start_month | append: " " | append: start_day | append: " - " | append: end_day | append: ", " | append: start_year
+          endif
+        else
+          assign date_line = start_month | append: " " | append: start_day | append: " - " | append: end_month | append: " " | append: end_day | append: ", " | append: start_year
+        endif
+      else
+        assign date_line = start_month | append: " " | append: start_day | append: ", " | append: start_year
+        assign end_full = end_dt | date: "%B %-d, %Y"
+        assign date_line = date_line | append: " - " | append: end_full
+      endif
+    elsif start_dt != blank
+      assign date_line = start_dt | date: "%B %-d, %Y"
+    endif
+
+    assign location_line = ''
+    assign full_address = ''
+
+    assign street_val = event.street
+    assign city_val = event.city
+    assign state_val = event.state
+
+    if street_val != blank
+      assign full_address = street_val
+    endif
+
+    if city_val != blank
+      if full_address != blank
+        assign full_address = full_address | append: ", "
+      endif
+      assign full_address = full_address | append: city_val
+    endif
+
+    if state_val != blank
+      if full_address != blank
+        assign full_address = full_address | append: ", "
+      endif
+      assign full_address = full_address | append: state_val
+    endif
+
+    assign location_line = full_address
+
+    assign maps_url = ''
+    if full_address != blank
+      assign encoded_address = full_address | url_encode
+      assign maps_url = 'https://www.google.com/maps/search/?api=1&query=' | append: encoded_address
+    endif
+
+    assign excerpt_text = event.summary | default: event.details | default: ''
+    assign excerpt_text = excerpt_text | strip_html
+
+    assign cleaned_excerpt = ''
+    assign words = excerpt_text | split: ' '
+    for word in words
+      unless word contains 'http://' or word contains 'https://'
+        assign cleaned_excerpt = cleaned_excerpt | append: ' ' | append: word
+      endunless
+    endfor
+    assign cleaned_excerpt = cleaned_excerpt | strip
+
+    assign img_src = ''
+    assign img_obj = blank
+
+    assign fi = event.featured_image
+    assign fi_value = blank
+
+    if fi != blank and fi.value != blank
+      assign fi_value = fi.value
+    endif
+
+    if fi_value != blank and fi_value.preview_image != blank
+      assign img_obj = fi_value.preview_image
+    elsif fi != blank and fi.preview_image != blank
+      assign img_obj = fi.preview_image
+    elsif fi_value != blank and fi_value.image != blank
+      assign img_obj = fi_value.image
+    elsif fi != blank and fi.image != blank
+      assign img_obj = fi.image
+    elsif fi_value != blank
+      assign img_obj = fi_value
+    elsif fi != blank
+      assign img_obj = fi
+    endif
+
+    if img_obj != blank
+      assign img_src = img_obj | image_url: width: 800
+    endif
+  -%}
+
+  <div class="article-card-wrapper card-wrapper">
+    <div
+      class="
+        card article-card
+        card--{{ settings.blog_card_style }}
+        {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+        {% if img_src != blank and show_image %} card--media{% else %} card--text{% endif %}
+        {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
+      "
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      <div
+        class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if img_src != blank and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      >
+        {%- if show_image == true and img_src != blank -%}
+          <div class="article-card__image-wrapper card__media">
+            <div class="article-card__image media media--hover-effect">
+              {{- img_obj | image_url: width: 800 | image_tag:
+                alt: event_title,
+                class: 'motion-reduce',
+                loading: 'lazy',
+                widths: '200, 400, 600, 800',
+                sizes: '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 100vw'
+              -}}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading h2 event-card__title">
+            {{ event_title | escape }}
+          </h3>
+
+          <div class="article-card__info">
+            {% if show_date %}
+              <div class="event-card__date">
+                <span class="event-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </span>
+                <span>
+                  {% if date_line != blank %}
+                    {{ date_line }}
+                  {% else %}
+                    TBD
+                  {% endif %}
+                </span>
+              </div>
+            {% endif %}
+
+            {%- if location_line != blank -%}
+              <div class="event-card__location">
+                <span class="event-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div class="event-card__address">
+                  {% if maps_url != blank %}
+                    <a
+                      href="{{ maps_url }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="event-card__location-link"
+                      data-google="{{ maps_url }}"
+                      data-apple="http://maps.apple.com/?q={{ full_address | url_encode }}"
+                    >
+                      <div>{{ event.street }}</div>
+                      <div>{{ event.city }}, {{ event.state }}</div>
+                    </a>
+                  {% else %}
+                    <div>{{ event.street }}</div>
+                    <div>{{ event.city }}, {{ event.state }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if event.booth != blank -%}
+              <div>Booth {{ event.booth }}</div>
+            {%- endif -%}
+          </div>
+
+          {%- if show_excerpt and cleaned_excerpt != blank -%}
+            <p class="article-card__excerpt rte-width">
+              {{ cleaned_excerpt | truncate: excerpt_char_limit }}
+            </p>
+          {%- endif -%}
+
+          {% if event_page_url != blank %}
+            <div class="event-card__cta center">
+              <a href="{{ event_page_url }}" class="button">
+                View Event
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

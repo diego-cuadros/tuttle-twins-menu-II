@@ -1,0 +1,37 @@
+{% if section.settings.hide_nav_items %}
+  <style>
+    .header__inline-menu,
+    .ssky-header-search__desktop,
+    .header__icon--account,
+    .footer-ssky__top-menu,
+    .ssky-header-search__mobile,
+    header-drawer {
+        display: none !important;
+    }
+    .header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+  </style>
+{% endif %}
+  
+  
+  {% schema %}
+    {
+      "name": "HS - Landing",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "hide_nav_items",
+          "label": "Hide Nav Items",
+          "default": false
+        }
+      ],
+      "presets": [
+        {
+          "name": "HS - Landing"
+        }
+      ]
+    }
+  {% endschema %}

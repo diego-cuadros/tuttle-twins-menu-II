@@ -1,0 +1,481 @@
+
+{% raw %}
+<script id="rebuy-quick-view-dropdown-search-template" type="text/template">
+<div id="rebuy-quick-view-dropdown-search" class="rebuy-quick-view-dropdown">
+        <div class="rebuy-quick-view-dropdown__container" v-bind:class="[isQuickViewOpen ? 'visible' : '']">
+            <div class="rebuy-quick-view-dropdown__input-container">
+                <div class="rebuy-quick-view__search-input rebuy-quick-view-dropdown__search-input rebuy-input">
+                    <label v-if="searchByCollectionsEnabled" for="search" class="sr-only">Search by Collections</label>
+                    <select
+                        v-if="searchByCollectionsEnabled"
+                        name="search"
+                        class="rebuy-select"
+                        id="search"
+                        v-model="searchByCollection"
+                    >
+                        <option :value="SEARCH_BY_COLLECTION_DEFAULT">All</option>
+                        <option v-for="{ name, id } in searchByCollectionsCollections" :value="id">{{name}}</option>
+                    </select>
+
+                    <i class="far fa-search"></i>
+                    <label for="searchInput" class="sr-only">Enter a Search Term</label>
+                    <input
+                        id="searchInput"
+                        :class="(searchByCollectionsEnabled) && 'right-rounded'"
+                        type="text"
+                        :placeholder="placeholderText()"
+                        :value="searchTerm"
+                        @input="($event) => searchTerm = $event.target.value"
+                        ref="searchInput"
+                        @keydown.enter.stop.prevent="goToSearchPage"
+                        @keydown.escape.stop.prevent="closeQuickView"
+                    />
+                </div>
+
+                <button
+                    class="rebuy-quick-view-dropdown__close"
+                    type="button"
+                    v-on:click="closeQuickView()"
+                    aria-label="Close Dropdown"
+                >
+                    <i class="fal fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <transition name="rebuy-quick-view-overlay-fade">
+                <div
+                    v-if="shouldDropdownShow"
+                    id="rebuy-quick-view-overlay"
+                    class="rebuy-quick-view__overlay rebuy-quick-view__overlay--wide"
+                    role="dialog"
+                    tabindex="1"
+                    aria-labelledby="overlayTitle"
+                    aria-describedby="overlayDescription"
+                    ref="overlay"
+                >
+                    <section class="rebuy-quick-view__overlay-body" id="overlayDescription">
+                        <div class="rebuy-quick-view__container">
+                            <div
+                                v-if="!showResults"
+                                class="rebuy-quick-view__suggestions rebuy-quick-view-dropdown__suggestions"
+                            >
+                                <div
+                                    v-if="suggestedSearchTermsEnabled && suggestedTerms.length > 0"
+                                    class="rebuy-quick-view-dropdown__body-left"
+                                    tabindex="0"
+                                >
+                                    <div class="rebuy-quick-view__search-term-section">
+                                        <h3 class="rebuy-quick-view__title">{{suggestedSearchTermsTitle}}</h3>
+
+                                        <ul class="rebuy-quick-view__search-term-section-list-container">
+                                            <li
+                                                class="rebuy-quick-view__list-item rebuy-quick-view__search-term-section-list-term"
+                                                v-for="term in suggestedTerms"
+                                                @click="search(term)"
+                                                role="button"
+                                                tabindex="0"
+                                                v-bind:aria-label="suggestedSearchTermLabel(term)"
+                                            >
+                                                {{term}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rebuy-quick-view-dropdown__body-right">
+                                    <div
+                                        v-if="suggestedSearchTermsEnabled && suggestedTerms.length > 0"
+                                        class="rebuy-quick-view__search-term-section rebuy-quick-view-dropdown__search-term-section--mobile"
+                                    >
+                                        <h3 class="rebuy-quick-view__title rebuy-quick-view-dropdown__title">
+                                            {{suggestedSearchTermsTitle}}
+                                        </h3>
+
+                                        <ul class="rebuy-quick-view__list-items rebuy-quick-view-dropdown__search-term-list">
+                                            <li class="rebuy-quick-view__list-item rebuy-quick-view-dropdown__search-term" v-for="term in suggestedTerms" @click.stop="search(term)">{{term}}</li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        v-if="suggestedCollectionsEnabled && displayedSuggestedCollections.length > 0"
+                                        class="rebuy-quick-view__collection-section"
+                                    >
+                                        <h3 class="rebuy-quick-view__title rebuy-quick-view-dropdown__title">
+                                            {{suggestedCollectionsTitle}}
+                                        </h3>
+
+                                        <div class="rebuy-quick-view__list-items rebuy-quick-view__collection-list">
+                                            <a
+                                                v-for="collection in displayedSuggestedCollections"
+                                                class="rebuy-quick-view__list-item rebuy-quick-view__collection"
+                                                :href="collectionHref(collection)"
+                                            >
+                                                {{collection.name}}
+                                            </a>
+
+                                            <button
+                                                v-if="limitDisplayedCollections && suggestedCollections.length > AMOUNT_FOR_LIMITED_COLLECTIONS"
+                                                class="see-more"
+                                                @click.stop.prevent="seeMore"
+                                            >
+                                                See more &mldr;
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        v-if="suggestedProductsEnabled && suggestedProducts.length > 0"
+                                        class="rebuy-quick-view__product-section"
+                                    >
+                                        <h3 class="rebuy-quick-view__title rebuy-quick-view-dropdown__title">
+                                            {{suggestedProductsTitle}}
+                                        </h3>
+
+                                        <div
+                                            class="rebuy-quick-view__product-list rebuy-quick-view-dropdown__product-list"
+                                            :class="productListColumnClass"
+                                        >
+                                            <div
+                                                v-for="(product, index) in suggestedProducts"
+                                                :class="productDisplayType"
+                                            >
+                                                <a
+                                                    :href="learnMoreURL(product)"
+                                                    @click="learnMore(product, index)"
+                                                    class="rebuy-quick-view__image-link rebuy-smart-search__absolute-image-container"
+                                                    :class="shouldPositionAbsolute('container')"
+                                                    :style="productImageRatio()"
+                                                    rel="nofollow"
+                                                >
+                                                    <img
+                                                        v-bind:src="productImage(product, product.selected_variant)"
+                                                        v-bind:srcset="generateImgSrcset(product)"
+                                                        v-bind:alt="product.name"
+                                                        class="rebuy-quick-view_image rebuy-smart-search__absolute-image--zoomed rebuy-smart-search__absolute-image"
+                                                        :class="shouldPositionAbsolute('image')"
+                                                    />
+                                                </a>
+
+                                                <div class="rebuy-quick-view__product-detail">
+                                                    <div class="rebuy-product-info">
+                                                        <!-- Product Title -->
+                                                        <a
+                                                            class="rebuy-product-title"
+                                                            :href="learnMoreURL(product)"
+                                                            @click="learnMore(product, index)"
+                                                            rel="nofollow"
+                                                        >
+                                                            {{product.name}}
+                                                        </a>
+
+                                                        <!-- Product Review -->
+                                                        <div class="rebuy-product-review" v-if="shouldDisplayQuickViewProductRating(product)" aria-label="product star rating">
+                                                            <span class="rebuy-star-rating">
+                                                                <span
+                                                                    v-if="product.reviews.star_rating"
+                                                                    class="rebuy-star-rating-value sr-only"
+                                                                    v-html="product.ratings.average + ' stars out of 5 stars'"
+                                                                >
+                                                                </span>
+                                                                <span class="rebuy-star-rating-background"></span>
+                                                                <span class="rebuy-star-rating-foreground" v-bind:style="{ width: getProductReviewRatingPercentage(product) }"></span>
+                                                            </span>
+
+                                                            <span class="rebuy-review-count" v-html="getProductReviewCountHtml(product)"></span>
+                                                        </div>
+
+                                                        <!-- Product Price -->
+                                                        <div v-if="productOnSale(product)" class="price">
+                                                            <span class="rebuy-money sale">
+                                                                <span class="sr-only">Sale price</span>
+                                                                <span
+                                                                    v-html="formatMoney(product.selected_variant.price)"
+                                                                ></span>
+                                                            </span>
+
+                                                            <span class="rebuy-money compare-at">
+                                                                <span class="sr-only">Original price</span>
+                                                                <span
+                                                                    v-html="formatMoney(product.selected_variant.compareAtPrice)"
+                                                                ></span>
+                                                            </span>
+                                                        </div>
+
+                                                        <div v-else class="price">
+                                                            <span class="rebuy-money">
+                                                                <span class="sr-only">Price</span>
+                                                                <span
+                                                                    v-html="formatMoney(product.selected_variant.price)"
+                                                                ></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rebuy-product-options"
+                                                        v-if="shouldShowVariantSelector(product)"
+                                                    >
+                                                        <select
+                                                            title="Select product variant"
+                                                            id="rebuy-smart-search-results-variant-select"
+                                                            class="rebuy-select"
+                                                            v-bind:aria-label="'variant of ' + product.name"
+                                                            v-model="product.selected_variant_id"
+                                                            v-on:change="selectVariant(product)"
+                                                        >
+                                                            <option
+                                                                v-for="variant in product.variants"
+                                                                v-bind:value="variant.id"
+                                                                v-html="variant.name"
+                                                            ></option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div
+                                                        class="rebuy-product-actions"
+                                                        v-if="shouldShowAddToCart(product)"
+                                                    >
+                                                        <button
+                                                            class="rebuy-button rebuy-quick-view__product-cta"
+                                                            v-bind:class="{ working: (product.status != 'ready' && product.status != 'selecting') }"
+                                                            v-bind:disabled="!(variantAvailable(product.selected_variant)) || (product.status != 'ready' && product.status != 'selecting')"
+                                                            v-bind:aria-label="buttonAriaLabel(product)"
+                                                            v-on:click="addToCart(product)"
+                                                            type="button"
+                                                        >
+                                                            <span v-html="buttonLabel(product)"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rebuy-quick-view__see-all-results">
+                                            <a :href="'/search?q=' + encodeURIComponent(searchTerm)">See all results</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-else class="rebuy-quick-view-dropdown__results">
+                                <div
+                                    class="rebuy-quick-view__keywords-section"
+                                    v-if="keywordSuggestionsWithSearchTerm.length > 0"
+                                >
+                                    <p class="rebuy-quick-view__keyword-title">Suggested Searches</p>
+
+                                    <div class="rebuy-quick-view__keyword-list">
+                                        <p
+                                            v-for="keyword in keywordSuggestionsWithSearchTerm"
+                                            class="rebuy-quick-view__keyword"
+                                            @click.stop="search(keyword)"
+                                        >
+                                            {{keyword}}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="rebuy-quick-view__collection-section"
+                                    v-if="this.matchingCollectionsEnabled && collections.length > 0"
+                                >
+                                    <p class="rebuy-quick-view__title">{{this.matchingCollectionsTitle}}</p>
+
+                                    <div v-if="quickViewSearchLoading" class="rebuy-quick-view__collection-list">
+                                        <div
+                                            v-for="loadingCollection in new Array(breakpointColumns)"
+                                            class="rebuy-quick-view-skeleton rebuy-quick-view-skeleton__collection"
+                                        />
+                                    </div>
+
+                                    <div v-else class="rebuy-quick-view__collection-list">
+                                        <a
+                                            v-for="collection in displayedMatchingCollections"
+                                            class="rebuy-quick-view__collection"
+                                            :href="collectionHref(collection)"
+                                        >
+                                            {{collection.name}}
+                                        </a>
+
+                                        <button
+                                            v-if="limitDisplayedCollections && collections.length > AMOUNT_FOR_LIMITED_COLLECTIONS"
+                                            class="see-more"
+                                            @click.stop.prevent="seeMore"
+                                        >
+                                            See more &mldr;
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="rebuy-quick-view__product-section"
+                                    v-if="this.matchingProductsEnabled && products.length > 0"
+                                >
+                                    <p class="rebuy-quick-view__title">{{this.matchingProductsTitle}}</p>
+
+                                    <div
+                                        v-if="quickViewSearchLoading"
+                                        class="rebuy-quick-view__product-list"
+                                        :class="productListColumnClass"
+                                    >
+                                        <div
+                                            v-for="product in Array(breakpointColumns)"
+                                            class="rebuy-quick-view__product"
+                                            :class="skeletonLayout()"
+                                        >
+                                            <div
+                                                class="rebuy-quick-view-skeleton rebuy-quick-view-skeleton__product-image"
+                                            />
+
+                                            <div class="rebuy-quick-view-skeleton__product-details">
+                                                <div
+                                                    class="rebuy-quick-view-skeleton rebuy-quick-view-skeleton__product-name"
+                                                />
+                                                <div
+                                                    class="rebuy-quick-view-skeleton rebuy-quick-view-skeleton__product-price"
+                                                />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        v-else-if="!quickViewSearchLoading"
+                                        class="rebuy-quick-view__product-list"
+                                        :class="productListColumnClass"
+                                    >
+                                        <div v-for="(product, index) in products" :class="productDisplayType">
+                                            <a
+                                                :href="learnMoreURL(product)"
+                                                @click="learnMore(product, index)"
+                                                class="rebuy-quick-view__image-link rebuy-smart-search__absolute-image-container"
+                                                :class="shouldPositionAbsolute('container')"
+                                                :style="productImageRatio()"
+                                                rel="nofollow"
+                                            >
+                                                <img
+                                                    v-bind:src="productImage(product, product.selected_variant)"
+                                                    v-bind:srcset="generateImgSrcset(product)"
+                                                    v-bind:alt="'Image of ' + product.name"
+                                                    class="rebuy-quick-view_image rebuy-smart-search__absolute-image--zoomed rebuy-smart-search__absolute-image"
+                                                    :class="shouldPositionAbsolute('image')"
+                                                />
+                                            </a>
+
+                                            <div class="rebuy-quick-view__product-detail">
+                                                <div class="rebuy-product-info">
+                                                    <!-- Product Title -->
+                                                    <a
+                                                        class="rebuy-product-title"
+                                                        :href="learnMoreURL(product)"
+                                                        @click="learnMore(product, index)"
+                                                        rel="nofollow"
+                                                    >
+                                                        {{product.name}}
+                                                    </a>
+
+                                                    <!-- Product Review -->
+                                                    <div class="rebuy-product-review" v-if="shouldDisplayQuickViewProductRating(product)" aria-label="product star rating">
+                                                        <span class="rebuy-star-rating">
+                                                            <span
+                                                                v-if="product.reviews.star_rating"
+                                                                class="rebuy-star-rating-value sr-only"
+                                                                v-html="product.ratings.average + ' stars out of 5 stars'"
+                                                            >
+                                                            </span>
+                                                            <span class="rebuy-star-rating-background"></span>
+                                                            <span class="rebuy-star-rating-foreground" v-bind:style="{ width: getProductReviewRatingPercentage(product) }"></span>
+                                                        </span>
+
+                                                        <span class="rebuy-review-count" v-html="getProductReviewCountHtml(product)"></span>
+                                                    </div>
+
+                                                    <div v-if="productOnSale(product)" class="price">
+                                                        <span class="rebuy-money sale">
+                                                            <span class="sr-only">Sale price</span>
+                                                            <span
+                                                                v-html="formatMoney(product.selected_variant.price)"
+                                                            ></span>
+                                                        </span>
+
+                                                        <span class="rebuy-money compare-at">
+                                                            <span class="sr-only">Original price</span>
+                                                            <span
+                                                                v-html="formatMoney(product.selected_variant.compareAtPrice)"
+                                                            ></span>
+                                                        </span>
+                                                    </div>
+
+                                                    <div v-else class="price">
+                                                        <span class="rebuy-money">
+                                                            <span class="sr-only">Price</span>
+                                                            <span
+                                                                v-html="formatMoney(product.selected_variant.price)"
+                                                            ></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Product Options -->
+                                                <div
+                                                    class="rebuy-product-options"
+                                                    v-if="shouldShowVariantSelector(product)"
+                                                >
+                                                    <select
+                                                        title="Select product variant"
+                                                        id="rebuy-smart-search-results-variant-select"
+                                                        class="rebuy-select"
+                                                        v-bind:aria-label="'variant of ' + product.name"
+                                                        v-model="product.selected_variant_id"
+                                                        v-on:change="selectVariant(product)"
+                                                    >
+                                                        <option
+                                                            v-for="variant in product.variants"
+                                                            v-bind:value="variant.id"
+                                                            v-html="variant.name"
+                                                        ></option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- Add-to-cart -->
+                                                <div class="rebuy-product-actions" v-if="shouldShowAddToCart(product)">
+                                                    <button
+                                                        class="rebuy-button rebuy-quick-view__product-cta"
+                                                        v-bind:class="{ working: (product.status != 'ready' && product.status != 'selecting') }"
+                                                        v-bind:disabled="!(variantAvailable(product.selected_variant)) || (product.status != 'ready' && product.status != 'selecting')"
+                                                        v-bind:aria-label="buttonAriaLabel(product)"
+                                                        v-on:click="addToCart(product)"
+                                                        type="button"
+                                                    >
+                                                        <span v-html="buttonLabel(product)"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rebuy-quick-view__see-all-results">
+                                        <a :href="'/search?q=' + encodeURIComponent(searchTerm)">See all results</a>
+                                    </div>
+                                </div>
+
+                                <div
+                                    v-if="!quickViewSearchLoading && products.length === 0 && collections.length === 0"
+                                    class="rebuy-quick-view__no-results"
+                                >
+                                    <p>No Results For [<span>{{searchTerm}}</span>]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div v-if="shouldShowPoweredByRebuy()" class="powered-by-rebuy">
+                            <a v-bind:href="'https://rebuyengine.com/?shop=' + shop()" target="_blank" rel="noopener">
+                                Powered by Rebuy
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </transition>
+        </div>
+    </div>
+</script>
+{% endraw %}

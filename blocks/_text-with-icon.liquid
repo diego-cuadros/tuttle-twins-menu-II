@@ -1,0 +1,223 @@
+{%- style -%}
+  .ssky-text-block__text-with-icons-{{block.id}} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+  {%- if block.settings.custom_color != blank or block.settings.alignment != blank -%}
+    .ssky-text-block__text-with-icons-{{block.id}} .ssky-text-block__text-with-icon {
+      {%- if block.settings.custom_color != blank -%}
+        color: {{ block.settings.custom_color }} !important;
+      {%- endif -%}
+      {%- if block.settings.alignment != blank -%}
+        text-align: {{ block.settings.alignment }} !important;
+      {%- endif -%}
+    }
+  {%- endif -%}
+  {%- if block.settings.custom_color_b != blank -%}
+    .ssky-text-block__text-with-icons-{{block.id}}.ssky-text-block__text-with-icon-b {
+      color: {{ block.settings.custom_color_b }} !important;
+    }
+  {%- endif -%}
+  @media screen and (min-width: 750px) {
+    .ssky-text-block__text-with-icons-{{block.id}} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-text-block__text-with-icons-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+<div class="ssky-text-block__text-with-icons ssky-text-block__text-with-icons-{{block.id}}{%- if block.settings.text_b != blank %} ssky-text-block__text-with-icon-b{%- endif -%}" {{ block.shopify_attributes }}>
+  <div class="ssky-text-block__text-with-icon">
+    {%- if block.settings.icon != blank or block.settings.icon_svg != blank -%}
+      <div
+        class="ssky-text-block__icon{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
+        {%- if block.settings.icon_svg != blank -%}
+          {{- block.settings.icon_svg -}}
+        {%- elsif block.settings.icon != blank -%}
+          <img src="{{ block.settings.icon | image_url: width: nil }}">
+        {%- endif -%}  
+      </div>
+    {%- endif -%}
+    <div
+      class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {{ block.shopify_attributes }}>
+      {{ block.settings.text }}
+    </div>
+  </div>
+  {%- if block.settings.text_b != blank or block.settings.icon_b_svg != blank -%}
+    <div class="ssky-text-block__text-with-icon">
+      {%- if block.settings.icon_b != blank -%}
+        <div
+          class="ssky-text-block__icon{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}>
+          {%- if block.settings.icon_b_svg != blank -%}
+            {{- block.settings.icon_b_svg -}}
+          {%- elsif block.settings.icon_b != blank -%}
+            <img src="{{ block.settings.icon_b | image_url: width: nil }}">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div
+        class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {{ block.shopify_attributes }}>
+        {{ block.settings.text_b }}
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Text with icon",
+    "settings": [
+      {
+        "type": "select",
+        "id": "alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "label": "Text alignment"
+      },
+      {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_size.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_size.options__1.label"
+          },
+          {
+            "value": "large",
+            "label": "t:sections.all.text_size.options__2.label"
+          },
+          {
+            "value": "extra-large",
+            "label": "t:sections.all.text_size.options__3.label"
+          }
+        ],
+        "default": "regular",
+        "label": "t:sections.all.text_size.label"
+      },
+      {
+        "type": "select",
+        "id": "text_weight",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_weight.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_weight.options__1.label"
+          },
+          {
+            "value": "semibold",
+            "label": "t:sections.all.text_weight.options__2.label"
+          },
+          {
+            "value": "bold",
+            "label": "t:sections.all.text_weight.options__3.label"
+          }
+        ],
+        "default": "regular",
+        "label": "t:sections.all.text_weight.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.ssky_text_block.blocks.text_with_icon.settings.icon_one"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "t:sections.ssky_text_block.blocks.text_with_icon.settings.icon.label"
+      },
+      {
+        "type": "html",
+        "id": "icon_svg",
+        "label": "SVG Icon"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.ssky_text_block.blocks.text_with_icon.settings.text.label",
+        "default": "t:sections.ssky_text_block.blocks.text_with_icon.settings.text.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color",
+        "label": "Custom text color"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.ssky_text_block.blocks.text_with_icon.settings.icon_two"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon_b",
+        "label": "t:sections.ssky_text_block.blocks.text_with_icon.settings.icon.label"
+      },
+      {
+        "type": "html",
+        "id": "icon_b_svg",
+        "label": "SVG Icon"
+      },
+      {
+        "type": "richtext",
+        "id": "text_b",
+        "label": "t:sections.ssky_text_block.blocks.text_with_icon.settings.text.label"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      },
+      {
+        "type": "color",
+        "id": "custom_color_b",
+        "label": "Custom text color (second item)"
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Text with icon" }
+    ]
+  }
+{% endschema %}

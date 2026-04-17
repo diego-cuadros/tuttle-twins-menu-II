@@ -1,0 +1,116 @@
+/* -----  ssky edits starts here ------ */
+.ssky-timeline-block__section-header {
+  margin-bottom: 3.2rem;
+}
+.ssky-timeline-block__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+.ssky-timeline-block__column {
+  width: 100%;
+  padding: 20px;
+}
+.ssky-timeline-block__column.block-1,
+.ssky-timeline-block__column.block-3 {
+  z-index: 1;
+}
+.ssky-timeline-block__image-con {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ssky-timeline-block__image-con + * {
+  margin-top: 4rem;
+}
+.ssky-timeline-block__image {
+  width: 100%;
+}
+.ssky-timeline-block__image .media {
+  border-radius: 20px;
+  background: transparent;
+}
+.ssky-timeline-block__year-top-con,
+.ssky-timeline-block__year-bottom-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ssky-timeline-block__year-top,
+.ssky-timeline-block__year-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: calc(var(--font-heading-scale) * 3.5rem);
+  font-weight: 700;
+  z-index: 2;
+}
+.ssky-timeline-block__divider {
+  display: none;
+}
+@media screen and (max-width: 749px) {
+  .ssky-timeline-block__section-header
+    .ssky-text-block__heading--long:not(.h5, .h6) {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .ssky-timeline-block__section-header {
+    margin-bottom: 4rem;
+  }
+  .ssky-timeline-block__section-header .ssky-text-block__caption {
+    max-width: 98rem;
+  }
+  .ssky-timeline-block__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ssky-timeline-block__column {
+    flex: 1 0 50%;
+    padding: 40px;
+  }
+  .ssky-timeline-block__divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: 2px;
+    height: 100%;
+    border-left: 2px dashed currentColor;
+  }
+}
+@media screen and (min-width: 990px) {
+  .ssky-timeline-block__image-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 800px;
+  }
+  .ssky-timeline-block__image-con.image-size-ssky-small
+    .ssky-timeline-block__image {
+    flex: 0 0 50%;
+  }
+  .ssky-timeline-block__image-con.image-size-ssky-smallplus
+    .ssky-timeline-block__image {
+    flex: 0 0 60%;
+  }
+  .ssky-timeline-block__image-con.image-size-ssky-medium
+    .ssky-timeline-block__image {
+    flex: 0 0 85%;
+  }
+  .ssky-timeline-block__image-con.image-size-ssky-large
+    .ssky-timeline-block__image {
+    flex: 0 0 100%;
+  }
+}
+/* -----  ssky edits completes here ------ */

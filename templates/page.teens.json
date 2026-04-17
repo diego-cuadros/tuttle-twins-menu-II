@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_6dUtHX": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_h4BT4t": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Choose Your Consequence Books</p>",
+            "heading_size": "hxl",
+            "heading_weight": "semibold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_VbF99M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This bundle gives your teens five books, 37 total story endings and many opporunities for your teens and tweens to observe the outcomes of different economic and political situations.</p>",
+            "text_size": "extra-extra-large",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_h4BT4t",
+        "text_VbF99M"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/all-5CYOC-1024x1024.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_e_rd7eEq": {
+      "type": "sskymo-text-image-block-e",
+      "settings": {
+        "color_scheme": "",
+        "image_position": "image-right",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_order_block_xPp3ct": {
+      "type": "tt-call-to-action",
+      "settings": {
+        "product": "the-tuttle-twins-choose-your-consequence-combo-pack",
+        "heading": "Order the 5-book set",
+        "description": "",
+        "button_label": "Buy the 5-Book Set",
+        "text_below_button": "<p>You save 13%, limited time only.</p>",
+        "price_label": "For Only",
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_e_ycATqL": {
+      "type": "sskymo-product-column-e",
+      "settings": {}
+    },
+    "sskymo_product_order_block_GXQi6G": {
+      "type": "tt-call-to-action",
+      "settings": {
+        "product": "the-tuttle-twins-choose-your-consequence-combo-pack",
+        "heading": "Order the 5-book set",
+        "description": "",
+        "button_label": "Buy the 5-Book Set",
+        "text_below_button": "<p>You save 13%, limited time only.</p>",
+        "price_label": "For Only",
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_d_QJMLjR": {
+      "type": "sskymo-text-column-d",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_kLr393": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_zV6DBe": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "the-tuttle-twins-choose-your-consequence-combo-pack",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well-designed education supplement for your family to learn the principles of freedom and true history, you are in the right place.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "max_width": 58,
+            "button_label": "Buy The Combo Set For 15% Off!",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": true,
+            "show_price": false,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Actionable Insights for Your Teens</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_zV6DBe"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-5",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 48,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_banner_9Vk6ee": {
+      "type": "sskymo-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "color_scheme": "",
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_text_block_e_bGcWNf": {
+      "type": "sskymo-text-block-e",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": true,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_image_slide_b_d4WgBG": {
+      "type": "sskymo-image-slide-b",
+      "settings": {
+        "color_scheme": "",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_pagination": true,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_TYV3FM": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_6dUtHX",
+    "sskymo_text_image_block_e_rd7eEq",
+    "sskymo_product_order_block_xPp3ct",
+    "sskymo_product_column_e_ycATqL",
+    "sskymo_product_order_block_GXQi6G",
+    "sskymo_text_column_d_QJMLjR",
+    "ssky_product_order_block_kLr393",
+    "sskymo_image_banner_9Vk6ee",
+    "sskymo_text_block_e_bGcWNf",
+    "sskymo_image_slide_b_d4WgBG",
+    "sskymo_text_image_block_b_TYV3FM"
+  ]
+}

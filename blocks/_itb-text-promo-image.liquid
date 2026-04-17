@@ -1,0 +1,481 @@
+{%- if block.settings.promo_heading != blank or block.settings.promo_subheading != blank or block.settings.promo_text != blank -%}
+  {%- style -%}
+    .ssky-text-image-block__text-promo-image-{{block.id}} {
+      margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+      margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    }  
+    @media screen and (min-width: 750px) {
+      .ssky-text-image-block__text-promo-image-{{block.id}} {
+        margin-top: {{ block.settings.margin_top }}px;
+        margin-bottom: {{ block.settings.margin_bottom }}px;
+      }
+    }
+    {% if block.settings.custom_css != blank %}
+      {% assign tt_css = '.ssky-text-image-block__text-promo-image-' | append: block.id %}
+      {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+    {% endif %}
+  {%- endstyle -%}
+  <div 
+    class="ssky-text-image-block__text-promo ssky-text-image-block__text-promo-image-{{block.id}} color-{{ block.settings.promo_color_scheme }} gradient" {{ block.shopify_attributes }}>
+    <div class="ssky-text-promo__content">
+      <div class="ssky-text-promo__text-column">
+        {%- if block.settings.promo_heading != blank -%}
+          <{{ block.settings.heading_tag }} 
+            class="ssky-text-block__heading rte {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}"
+          >
+            {{ block.settings.promo_heading }}
+          </{{ block.settings.heading_tag }}>
+        {%- endif -%}
+        
+        {%- if block.settings.promo_subheading != blank -%}
+          <div class="ssky-text-block__caption {{ block.settings.text_style_subheading }}">
+            {{ block.settings.promo_subheading }}
+          </div>
+        {%- endif -%}
+        
+        {%- if block.settings.promo_text != blank -%}
+          <div class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }} text-{{ block.settings.text_align }}">
+            {{ block.settings.promo_text }}
+          </div>
+        {%- endif -%}
+      </div>
+      
+      <div class="ssky-text-promo__action-column">
+        {%- assign block_product = block.settings.product -%}
+        {%- if block_product != blank -%}
+          <script src="{{ 'product-form.js' | asset_url }}" defer></script>
+          {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id | append: '-promo' -%}
+          {%- if block.settings.show_price -%}
+            <div class="ssky-text-block__price">
+              {% render 'price', product: block_product, show_compare_at_price: true %}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+        
+        <div class="ssky-text-block__buttons{% if block.settings.promo_button_text != blank and block.settings.promo_button_text_2 != blank %} ssky-text-block__buttons--multiple{% endif %}">
+          {%- if block.settings.product != blank -%}
+            {%- render 'buy-buttons',
+              block: block,
+              product: block_product,
+              product_form_id: product_form_id,
+              section_id: section.id,
+              is_button_large: block.settings.button_large,
+              button_label: block.settings.product_button_label
+            -%}
+          {%- else -%}
+            {%- if block.settings.promo_button_text != blank -%}
+              <a {% if block.settings.promo_button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.promo_button_link }}"
+              {% endif %}
+              class="button{%- if block.settings.button_large %} button--large{%- elsif block.settings.button_medium %} button--medium{%- endif -%}{% if block.settings.promo_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{- block.settings.promo_button_text | escape -}}
+              </a>
+            {%- endif -%}
+            
+            {%- if block.settings.promo_button_text_2 != blank -%}
+              <a {% if block.settings.promo_button_link_2 == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.promo_button_link_2 }}"
+              {% endif %}
+              class="button{%- if block.settings.button_large %} button--large{%- elsif block.settings.button_medium %} button--medium{%- endif -%}{% if block.settings.promo_button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{- block.settings.promo_button_text_2 | escape -}}
+              </a>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+        
+        {%- if block.settings.promo_secondary_text != blank -%}
+          {%- assign secondary_product = block.settings.secondary_product -%}
+          {%- if block.settings.promo_secondary_link != blank or secondary_product != blank -%}
+            <div class="ssky-text-promo__secondary-link">
+              — OR —
+              {%- if secondary_product != blank -%}
+                {%- assign secondary_product_form_id = 'product-form-' | append: section.id | append: secondary_product.id | append: '-promo-secondary' -%}
+                
+                {%- if block.settings.secondary_show_price -%}
+                  <div class="ssky-text-block__price secondary-price">
+                    {% render 'price', product: secondary_product, show_compare_at_price: true %}
+                  </div>
+                {%- endif -%}
+                <div class="ssky-text-block__buttons secondary-buttons">
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: secondary_product,
+                    product_form_id: secondary_product_form_id,
+                    section_id: section.id,
+                    button_label: block.settings.secondary_product_button_label
+                  -%}
+                </div>
+              {%- else -%}
+                <a href="{{ block.settings.promo_secondary_link }}">{{ block.settings.promo_secondary_text }}</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "Promo text - image side",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "promo_color_scheme",
+        "label": "Color scheme",
+        "default": "scheme-4"
+      },
+      {
+        "type": "header",
+        "content": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "promo_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h4",
+            "label": "t:sections.all.heading_size.options__0.label"
+          },
+          {
+            "value": "h3",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__3.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__4.label"
+          },
+          {
+            "value": "hxl",
+            "label": "t:sections.all.heading_size.options__5.label"
+          }
+        ],
+        "default": "h2",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_weight",
+        "options": [
+          {
+            "value": "medium",
+            "label": "t:sections.all.heading_weight.options__1.label"
+          },
+          {
+            "value": "semibold",
+            "label": "t:sections.all.heading_weight.options__2.label"
+          },
+          {
+            "value": "bold",
+            "label": "t:sections.all.heading_weight.options__3.label"
+          }
+        ],
+        "default": "bold",
+        "label": "t:sections.all.heading_weight.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          },
+          {
+            "value": "h6",
+            "label": "H6"
+          }
+        ],
+        "default": "h3",
+        "label": "Heading tag"
+      },
+      {
+        "type": "header",
+        "content": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "promo_subheading",
+        "label": "Subheading"
+      },
+      {
+        "type": "select",
+        "id": "text_style_subheading",
+        "options": [
+          {
+            "value": "small-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+          },
+          {
+            "value": "small-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+          },
+          {
+            "value": "medium-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+          },
+          {
+            "value": "large-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+          },
+          {
+            "value": "large-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+          }
+        ],
+        "default": "medium-semibold",
+        "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label"
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "richtext",
+        "id": "promo_text",
+        "label": "Text content"
+      },
+      {
+        "type": "select",
+        "id": "text_size",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_size.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_size.options__1.label"
+          },
+          {
+            "value": "large",
+            "label": "t:sections.all.text_size.options__2.label"
+          },
+          {
+            "value": "extra-large",
+            "label": "t:sections.all.text_size.options__3.label"
+          },
+          {
+            "value": "extra-extra-large",
+            "label": "t:sections.all.text_size.options__4.label"
+          }
+        ],
+        "default": "regular",
+        "label": "t:sections.all.text_size.label"
+      },
+      {
+        "type": "select",
+        "id": "text_weight",
+        "options": [
+          {
+            "value": "regular",
+            "label": "t:sections.all.text_weight.options__0.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.all.text_weight.options__1.label"
+          },
+          {
+            "value": "semibold",
+            "label": "t:sections.all.text_weight.options__2.label"
+          },
+          {
+            "value": "bold",
+            "label": "t:sections.all.text_weight.options__3.label"
+          }
+        ],
+        "default": "regular",
+        "label": "t:sections.all.text_weight.label"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Text alignment"
+      },
+      {
+        "type": "header",
+        "content": "Primary Buttons"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_medium",
+        "default": false,
+        "label": "t:sections.ssky_text_block.blocks.button.settings.button_medium.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_large",
+        "default": false,
+        "label": "t:sections.ssky_text_block.blocks.button.settings.button_large.label"
+      },
+      {
+        "type": "text",
+        "id": "promo_button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "promo_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "checkbox",
+        "id": "promo_button_style_secondary",
+        "label": "Use secondary button style",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "promo_button_text_2",
+        "label": "Second button text"
+      },
+      {
+        "type": "url",
+        "id": "promo_button_link_2",
+        "label": "Second button link"
+      },
+      {
+        "type": "checkbox",
+        "id": "promo_button_style_secondary_2",
+        "label": "Use secondary style for second button",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Primary Product"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product",
+        "info": "If a product is selected, the primary button will trigger add to cart"
+      },
+      {
+        "type": "text",
+        "id": "product_button_label",
+        "label": "Product button label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_price",
+        "label": "Show product price",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Secondary Link with OR"
+      },
+      {
+        "type": "text",
+        "id": "promo_secondary_text",
+        "label": "Secondary link text"
+      },
+      {
+        "type": "url",
+        "id": "promo_secondary_link",
+        "label": "Secondary link URL"
+      },
+      {
+        "type": "color",
+        "id": "secondary_link_color",
+        "label": "Secondary link color"
+      },
+      {
+        "type": "product",
+        "id": "secondary_product",
+        "label": "Secondary product",
+        "info": "If a product is selected, the secondary link will act as an add to cart button"
+      },
+      {
+        "type": "text",
+        "id": "secondary_product_button_label",
+        "label": "Secondary product button label"
+      },
+      {
+        "type": "checkbox",
+        "id": "secondary_show_price",
+        "label": "Show secondary product price",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 20
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Promo text - image side" }
+    ]
+  }
+{% endschema %}

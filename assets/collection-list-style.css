@@ -1,0 +1,150 @@
+.sc-collection-list .top-bar {
+    background: #F2F7F8;
+    padding: 73px 0;
+}
+
+.sc-collection-list .top-bar .main-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    color: #3F3939;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.sc-collection-list .top-bar .collection-title-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.sc-collection-list .top-bar .collection-title {
+    width: 100%;
+    text-align: center;
+    width: calc(33.33% - 15px);
+    border-radius: 8px;
+}
+
+.sc-collection-list .top-bar .collection_trigger {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    padding: 20px 12px;
+    width: 100%;
+    display: block;
+}
+
+.sc-collection-list .collection-body-block .collection-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 58px;
+    text-align: center;
+    color: #3F3939;
+    margin: 0;
+}
+
+.sc-collection-list .collection-body-block .sub-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    color: #3F3939;
+}
+
+.sc-collection-list .collection-body-block {padding: 46px 0;}
+
+.sc-collection-list .collection-body-block .collection-details-header {padding-bottom: 48px;}
+
+.sc-collection-list .collection-body-block .price--on-sale .price__sale {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.sc-collection-list .collection-body-block .price--on-sale .price__sale span {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.sc-collection-list .collection-body-block .card__heading .text-body-large {font-size: 16px;}
+.sc-collection-list .collection-body-block .card__badge {left: 0;}
+.sc-collection-list .collection-body-block .collection-block {padding-bottom: 46px;}
+.sc-collection-list .collection-body-block .collection-block:last-child {padding-bottom: 0;}
+
+
+@media screen and (max-width: 1099px) {
+    .sc-collection-list .top-bar .main-title {
+        font-size: 42px;
+        line-height: 48px;
+        padding-bottom: 40px;
+    }
+    .sc-collection-list .top-bar {padding: 68px 0;}
+    .sc-collection-list .collection-body-block {padding: 40px 0;}
+    .sc-collection-list .collection-body-block .collection-title {
+        font-size: 38px;
+        line-height: 44px;
+    }
+    .sc-collection-list .collection-body-block .sub-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .sc-collection-list .collection-body-block .collection-details-header {padding-bottom: 40px;}
+}
+
+@media screen and (max-width: 989px) {
+    .sc-collection-list .top-bar .collection-title-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sc-collection-list .top-bar .collection-title {width: 40%;}
+    .sc-collection-list .top-bar .main-title {
+        font-size: 38px;
+        line-height: 44px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .sc-collection-list .top-bar .main-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .sc-collection-list .top-bar .collection_trigger {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .sc-collection-list .collection-body-block .collection-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .sc-collection-list .collection-body-block .sub-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .sc-collection-list .collection-body-block .card-information .caption-large {font-size: 11px; color: #3F3939;}
+    .sc-collection-list .collection-body-block .price--on-sale .price__sale span {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .sc-collection-list .top-bar .collection-title {width: 100%;}
+    .sc-collection-list .product-grid:not(.ssky-hide-text-content) .grid__item {
+        padding: 0;
+        background: transparent;
+        border: 0;
+    }
+    .sc-collection-list .price .price-item {margin: 0;}
+    .sc-collection-list .collection-body-block .price--on-sale .price__sale {justify-content: flex-end;}
+}

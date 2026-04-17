@@ -1,0 +1,205 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+  assign narrow_width = false
+  if section.settings.narrow_width == true
+    assign narrow_width = true
+  endif
+-%}
+{%- style -%}
+  .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__image {
+        flex: 0 0 calc(60% - 16px);
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-image-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if narrow_width -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+      max-width: 1100px;
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-text-image-block-{{ section.id }}">
+  <div class="ssky-text-image-block content-container color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class }}">
+    {%- for guidebook_image in shop.metaobjects.guidebook_image.values limit: 1 -%}
+      <div class="ssky-text-image-block__wrapper page-width">
+        <div class="ssky-text-image-block__image">
+          <div
+            class="{%- if guidebook_image.image != blank %}media{%- else %}placeholder{%- endif -%}"
+            style="padding-bottom:{%- if narrow_width -%}{{ 1 | divided_by: guidebook_image.image.value.image.aspect_ratio | times: 100 | at_most: 120 }}%;{%- else -%}{{ 1 | divided_by: guidebook_image.image.value.image.aspect_ratio | times: 100 | at_most: 100 }}%;{%- endif -%}"
+          >
+            {%- if guidebook_image.image != blank -%}
+              {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+              {{
+                guidebook_image.image
+                | image_url: width: 1500
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {%- if guidebook_image.heading_below_image != blank -%}
+        <div class="ssky-text-image-block__section-header page-width">
+          <div class="ssky-text-block__blocks center">
+            {%- assign section_heading_length = guidebook_image.heading_below_image | metafield_text | size -%}
+            <h2
+              class="ssky-text-block__heading rte h2 weight-semibold{%- if section_heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ guidebook_image.heading_below_image | metafield_tag }}
+            </h2>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "TTm Guidebook image",
+  "tag": "section",
+  "class": "section sskymo-text-image-block-g",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.narrow"
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_width",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.custom_class.header"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "t:sections.all.custom_class.label",
+      "info": "t:sections.all.custom_class.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Guidebook image"
+    }
+  ]
+}
+{% endschema %}

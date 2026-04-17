@@ -1,0 +1,315 @@
+#podcast-player {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 6rem 0;
+    max-width: 1250px;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.podcast-player.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+
+.post_image img {
+    height: 100%;
+}
+
+#podcast-player .post_title {
+    color: #3F3939;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+}
+
+.podcast-player.center {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 6px 6px 11px -9px rgba(144, 144, 144, 0.75);
+    box-shadow: 0.375rem 0.375rem 0.6875rem -0.5625rem rgba(144, 144, 144, 0.75);
+    -webkit-box-shadow: 6px 6px 11px -9px rgba(144, 144, 144, 0.75);
+    -webkit-box-shadow: 0.375rem 0.375rem 0.6875rem -0.5625rem rgba(144, 144, 144, 0.75);
+    -moz-box-shadow: 6px 6px 11px -9px rgba(144, 144, 144, 0.75);
+    -moz-box-shadow: 0.375rem 0.375rem 0.6875rem -0.5625rem rgba(144, 144, 144, 0.75);
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .podcast-player.center {
+        flex-direction: column;
+    }
+    .post_image img {
+        width: auto;
+        height: auto;
+    }
+}
+
+div#mep_0 {
+    width: 100%!important;
+}
+
+.custom_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next_link a,
+.next_link a:hover,
+.previous_link a,
+.previous_link a:hover {
+    color: transparent;
+}
+
+.previous_link,
+.next_link {
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.previous_link {
+    background: url(https://cdn.shopify.com/s/files/1/0655/8951/0282/files/prevlink.svg?v=1744134776) 0 0 no-repeat;
+    width: 14px;
+    width: 1.275rem;
+    height: 14px;
+    height: 1.275rem;
+    background-size: contain;
+    margin-right: 20px;
+    margin-right: 1.25rem;
+    cursor: pointer;
+}
+
+.next_link {
+    background: url(https://cdn.shopify.com/s/files/1/0655/8951/0282/files/nextlink.svg?v=1744134776) 0 0 no-repeat;
+    width: 14px;
+    width: 1.275rem;
+    height: 14px;
+    height: 1.275rem;
+    background-size: contain;
+    margin-left: 20px;
+    margin-left: 1.25rem;
+    cursor: pointer;
+}
+
+.reverse_15,
+.forward_15 {
+    background-size: contain;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.reverse_15 {
+    background: url(https://tuttletwins.com/wp-content/themes/hello-theme-child-master/images/rev15.png) 0 0 no-repeat;
+    width: 40px;
+    width: 3.5rem;
+    height: 36px;
+    height: 3.25rem;
+    background-size: contain;
+    text-indent: -99999px;
+    text-indent: -6249.9375rem;
+    cursor: pointer;
+}
+
+.forward_15 {
+    background: url(https://tuttletwins.com/wp-content/themes/hello-theme-child-master/images/for15.png) 0 0 no-repeat;
+    width: 40px;
+    width: 3.5rem;
+    height: 36px;
+    height: 3.25rem;
+    background-size: contain;
+    text-indent: -99999px;
+    text-indent: -6249.9375rem;
+    cursor: pointer;
+}
+
+.playback {
+    background: #04aed8;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.playback_options ul {
+    position: absolute;
+    margin: 0;
+    padding: 10px;
+    padding: .625rem;
+    display: inline-flex;
+    top: 25px;
+    top: 2.5rem;
+    left: -80px;
+    left: -8.125rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-radius: .25rem;
+}
+
+.playback {
+    background: #04aed8;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.playback_options {
+    position: absolute;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 9999;
+    margin-top: 10px;
+}
+
+.playback_options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playback_options li {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.playback_options li:hover {
+    background: #f5f5f5;
+}
+
+.mejs__controls {
+    background: transparent!important;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    z-index: 0!important;
+}
+
+.mejs__container,
+.mejs__outer-container {
+    background: transparent !important;
+}
+
+.mejs__time-rail {
+    position: relative;
+}
+
+.mejs__time-total {
+    background: #000 !important;
+    height: 6px !important;
+    border-radius: 3px;
+}
+
+.mejs__time-current {
+    background: #04aed8 !important;
+    height: 6px !important;
+    border-radius: 3px;
+}
+
+.mejs__time-handle,
+.mejs__time-handle-content {
+    border: 10px solid transparent;
+    border-radius: 100% !important;
+}
+
+.mejs__currenttime,
+.mejs__duration {
+    color: #3f3939;
+    font-size: 17px;
+    letter-spacing: -0.0265625rem;
+    margin: 0 4px;
+}
+
+.mejs__horizontal-volume-slider {
+    display: none !important;
+}
+
+/* If you still want a volume icon, it’ll appear, 
+     but the slider is hidden. If you want no volume button at all,
+     remove 'volume' from the `features` array in your JS. */
+
+/* --- PLAY/PAUSE BUTTON (SPRITE) --- */
+.mejs__button>button {
+    background: transparent url("mejs-controls.svg") no-repeat 0 0;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    /* ME.js default for the icon within the button */
+    text-decoration: none;
+    width: 20px;
+}
+
+.mejs__play>button {
+    background-position: 0 0 !important;
+}
+
+.mejs__pause>button {
+    background-position: -20px 0 !important;
+}
+
+.mejs__button.mejs__playpause-button.mejs__play,
+.mejs__button.mejs__playpause-button.mejs__pause {
+    width: 45px;
+    width: 3.8125rem;
+    height: 45px;
+    height: 3.8125rem;
+    background: #04aed8;
+    border-radius: 100px;
+    border-radius: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mejs__time-handle, .mejs__time-handle-content {
+    background: #04aed8;
+    height: 2rem;
+    width: 2rem;
+    top: -6px;
+}
+/* If you want a bigger custom background behind the sprite:
+  .mejs-button.mejs-playpause-button {
+    width: 45px;
+    height: 45px;
+    background: #04aed8;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* so the sprite is absolutely positioned inside */
+
+/* Hide some posts content inherit from original WP site */    
+.article-template__content .powerpress_player,
+.article-template__content .powerpress_links.powerpress_links_mp3,
+.article-template__content #podcast-subscribe-button-78561 {display:  none}

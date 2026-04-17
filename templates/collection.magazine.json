@@ -1,0 +1,792 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h3",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_block_d_RK6MJL": {
+      "type": "sskymo-text-block-d",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Q6YhNn": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_DfVQWx": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>INTRODUCING EDUCATION THAT'S FUN AND AUTHENTIC</p>",
+            "text_size": "medium",
+            "text_weight": "bold"
+          }
+        },
+        "caption_pUKeEQ": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Tuttle Times:",
+            "custom_color": "",
+            "text_style": "extra-large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_9p48Gh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Game-Changing Magazine<br/>Subscription for Kids</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "image_4ik9ip": {
+          "type": "image",
+          "settings": {
+            "image_mobile": "shopify://shop_images/magazine-img-1.webp",
+            "image": "shopify://shop_images/magazine-img-1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "text_DfVQWx",
+        "caption_pUKeEQ",
+        "heading_9p48Gh",
+        "image_4ik9ip"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 110,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_product_order_block_4Bpwq4": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_MtKwUD": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "",
+            "product_2": "",
+            "columns": "two",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "text": "<p>Each month’s issue is filled with a short story, articles, child entrepreneurs, and fun activities that will help your kids learn about all the important ideas that are not being taught in schools.<br/><br/>Teach your children about free markets, personal responsibility, American history, and more in an easy-to-understand and fun way.<br/><br/>This monthly membership helps children (and parents!) understand and embrace the ideas of a free society.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "max_width": 54,
+            "button_label": "Subscribe Today",
+            "button_link": "shopify://products/tuttle-times-magazine",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_label_2": "Subscribe + PLUS Pack",
+            "button_link_2": "shopify://products/tuttle-times-magazine",
+            "button_style2": "default",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": false,
+            "button_full": true,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_MtKwUD"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_twVDrE": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_KVHhXp": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 34,
+            "testimonial_highlight": "",
+            "testimonial": "<p>“<strong>Brilliant idea! I had flashbacks of my magazines as a kid and how much I loved them.</strong> My kids LOVE the <em>Tuttle Times</em>, thank you!“</p>",
+            "author": "- Rebecca Jorgensen",
+            "author_state": "(Sacramento, CA)",
+            "author_image": "shopify://shop_images/author_image_rebecca.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_KVHhXp"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "max_width": 80,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_YawPxe": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_wHVJaq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What if There was a Way to Inspire Kids to Love Learning, and Spark Curiosity About How the World Works?</p>",
+            "heading_size": "h4",
+            "heading_weight": "semibold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_gXQ6AL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is a better way for your children to learn about the values you hold dear. The information and skills children need to thrive in today’s world are often not taught in classrooms.<br/><br/><strong>And that's been a problem until now...</strong><br/><br/>Our monthly magazine gives your children access to thought-provoking articles about the real world and fun activities and projects each month to obtain a real education, with little extra effort from you.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_NzwGiU": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Subscribe To This Impactful Magazine",
+            "button_link": "shopify://products/tuttle-times-monthly-magazine-monthly-subscription",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "text_CYREwj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Includes All 12 Months</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wHVJaq",
+        "text_gXQ6AL",
+        "button_NzwGiU",
+        "text_CYREwj"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/tuttle-times-all-magazines-1.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_bV7r9c": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_yyL9Px": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Spark Curiosity With Magazine Subscriptions For Kids</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_M3d7HY": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>It can sometimes feel impossible to inspire your kids today with all of life's distractions. But what better way to motivate your child than with easy-to-read magazines that spark curiosity about how the world works?<br/><br/>Each monthly issue is made for kids aged 5 to 12 and includes:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_RceYBa": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>An original Tuttle Twins short story that makes them think</strong></p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_irUUdq": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Articles about real-life issues like free markets and civic responsibility</strong></p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_pnzcD3": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Profiles of real-life young entrepreneurs</strong></p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_ECgkbE": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Activities including puzzles, games, and hands-on work</strong></p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_NqCCqW": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Parent Guide (PDF) for important conversations at the dinner table</strong></p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "text_RMGMfB": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our goal is to help children become independent thinkers who understand the principles that make a free society – all while having fun!</p><p>If you're a homeschooling parent or want to inspire your child, our membership offers engaging, story-based learning that teaches concepts like personal responsibility, free markets, and civic freedom, which are lessons that children don’t usually learn in school.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yyL9Px",
+        "text_M3d7HY",
+        "checkbox_individual_RceYBa",
+        "checkbox_individual_irUUdq",
+        "checkbox_individual_pnzcD3",
+        "checkbox_individual_ECgkbE",
+        "checkbox_individual_NqCCqW",
+        "text_RMGMfB"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_di8wqN": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_MB6Xdy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Subscription Options</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_78nB69": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Our magazine subscription comes in two tiers:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MB6Xdy",
+        "text_78nB69"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-61c8710f-e6dd-48e9-afb8-a755a8b5b4c3",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_two_columns_custom_block_XibC8c": {
+      "type": "ssky-two-columns-custom-block",
+      "blocks": {
+        "text_with_icon_fmJCGz": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text": "<p>Receive a 20-page magazine in the mail every month. Each issue also comes with a downloadable PDF Parent Guide, packed with conversation starters and article summaries.</p>",
+            "custom_color": "",
+            "text_b": "<p>This plan includes everything in the standard subscription, plus digital access to current and past issues. It also features bonus activities, parent-focused resources, and a 'Plus Pack' of over 20 pages that dives deeper into each month’s topic.</p>",
+            "custom_color_b": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_with_icon_fmJCGz"
+      ],
+      "name": "TT 2 Col Custom block",
+      "settings": {
+        "main_heading": "",
+        "heading": "Magazine Subscription ($50/year or $5/month):",
+        "bg_color": "#ffd05a",
+        "text_color": "#3f3939",
+        "icon_svg": "",
+        "heading_b": "Magazine PLUS Subscription ($75/year or $8/month):",
+        "bg_color_b": "#bcecf6",
+        "text_color_b": "#3f3939",
+        "icon_svg_b": "",
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 0,
+        "padding_bottom": 28,
+        "narrow_width": false,
+        "rounded": true,
+        "align_center": false,
+        "container_padding": "70px 45px 38px",
+        "icon_size": 25
+      }
+    },
+    "ssky_text_block_EXHnxX": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_TgA3nE": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Both plans come with a 30-day money-back guarantee.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_TgA3nE"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_HFqkjK": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_pbLhid": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why Parents Love Our Kids Magazine Subscription</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_BnGfiP": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Here are six reasons why families keep coming back each month for more:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_ftARay": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Engaging Stories That Teach Real-World Ideas - </strong>Every issue gives you more than just entertainment. Kids learn while being drawn into exciting stories based on ideas like self-reliance, entrepreneurship, and economics.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_p4bVkw": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Spotlights on Real Kid Entrepreneurs - </strong>Children see what's possible through others. Monthly interviews and articles about young business owners help kids understand what it means to be an entrepreneur, and inspire them to start taking action early.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_Kh8Rp7": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Zero-Risk with a Money-Back Guarantee – </strong>It's easy for parents to sign up. Get a complete refund without hassle if you cancel within 30 days.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_9MDHTN": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Parent Guides for Easy, Enriching Conversations – </strong>Every issue comes with a Parent Guide that gives parents family dinner conversation starters to encourage discussion.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_XdAEtN": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Hands-On Activities That Reinforce Learning – </strong>Kids stay curious and engaged by doing puzzles and playing games. These aren't just busywork; they encourage kids to think about important concepts and get them to learn by doing.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_Jy4aqt": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Flexible Formats for Every Learning Style – </strong>Families can choose the format that works best for their child, including printed magazines, digital editions, or bonus activity materials. Kids who enjoy reading or learning online will find what they need.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pbLhid",
+        "text_BnGfiP",
+        "checkbox_individual_ftARay",
+        "checkbox_individual_p4bVkw",
+        "checkbox_individual_Kh8Rp7",
+        "checkbox_individual_9MDHTN",
+        "checkbox_individual_XdAEtN",
+        "checkbox_individual_Jy4aqt"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_t8qnyk": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_x4TeFJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_6rJ8gj": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Kind of Content is Included Each Month?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>There is a story, essays, activity pages, real-life business profiles, and a Parent Guide in every issue. The PLUS version comes with extra content that makes learning even better.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_mxUJQm": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Is This Suitable for Homeschool Families?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Absolutely. Our magazine is a popular choice for homeschoolers, especially those looking for materials that emphasize freedom, values, and critical thinking. It brings real-world issues to academic disciplines.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_y4PcLT": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How do I Decide Between the Standard and PLUS Subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<h4>Standard Subscription</h4><ul><li>Printed monthly magazine filled with articles, activities, and interviews</li><li>Parent Guide (PDF) with article overviews, family dinner conversation starters, and a parent article</li></ul><h4>PLUS Subscription</h4><ul><li>Printed monthly magazine filled with articles, activities, and interviews</li><li>Parent Guide (PDF) with article overviews, family dinner conversation starters, and a parent article</li><li>Digital access to current and all past issues, Parent Guides, and Plus Packs</li><li>20+ page monthly Plus Pack with activities to reinforce magazine lessons and additional parent articles</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_x4TeFJ",
+        "faq_6rJ8gj",
+        "faq_mxUJQm",
+        "faq_y4PcLT"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_WEAGTR": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "sskymo_text_block_d_RK6MJL",
+    "ssky_text_block_Q6YhNn",
+    "ssky_product_order_block_4Bpwq4",
+    "ssky_testimonials_twVDrE",
+    "ssky_text_image_block_YawPxe",
+    "ssky_text_block_bV7r9c",
+    "ssky_text_block_di8wqN",
+    "ssky_two_columns_custom_block_XibC8c",
+    "ssky_text_block_EXHnxX",
+    "ssky_text_block_HFqkjK",
+    "ssky_faqs_t8qnyk",
+    "sskymo_text_image_block_b_WEAGTR"
+  ]
+}

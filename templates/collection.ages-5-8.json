@@ -1,0 +1,572 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_z8d3rq": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_PQEykk": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_Fpc86G": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_WTxAmB": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_PbXj4D": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Excite Your Young Reader With These Special Books</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_LYnYze": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>The ages of 5 to 8 are so important in a child’s development. They’re growing quickly, not just physically, but also in their comprehension and curiosity. It can be tough shopping for books for little ones because they move through the stages so quickly. At the different stages, you can expect:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_VDUT8i": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Books for 5 year olds to pique their interest as they’re just starting their learning journey.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_wX6k8g": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Books for 6 year olds to help them gain confidence.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_hqE4Ca": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Books for 7 year olds provide opportunities for them to learn independence.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_kRhctd": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p>Books for 8 year olds have more challenging content for kids ready to dive deeper.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "text_nFpLMa": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Luckily, this process is made easy with our collection, which is perfectly suited for every step along the way.</p><p>Each of the books in our collection introduces core ideas like personal responsibility, freedom, entrepreneurship, and problem-solving. And the best part is that it’s all done through colorful illustrations, age-appropriate language, and engaging adventures that your children will love.</p><p>Our books don’t just entertain. They educate. And they do it in a way that sparks meaningful family conversations at the dinner table.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PbXj4D",
+        "text_LYnYze",
+        "checkbox_individual_VDUT8i",
+        "checkbox_individual_wX6k8g",
+        "checkbox_individual_hqE4Ca",
+        "checkbox_individual_kRhctd",
+        "text_nFpLMa"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_column_QdRNaJ": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_DGQwfW": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "text": "<p>Our books for younger children make reading engaging, fun, and exciting while teaching valuable lifelong lessons. Here are the benefits of choosing books from our collection:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "text_column_HD9tXL": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "",
+            "heading": "<p><strong>Promote Critical Thinking Early</strong></p>",
+            "text": "<p>These books go beyond surface-level stories. They introduce key economic, civic, and moral concepts in a way young readers can understand and question.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_LYdYjF": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "heading": "<p><strong>Values That Align With Your Family</strong></p>",
+            "text": "<p>Tuttle Twins stories focus on principles like responsibility, honesty, and freedom. They're designed for families who want more than just fluff in their children’s reading time.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_TUXkH4": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p><strong>Vibrant Illustrations and Clear Language</strong></p>",
+            "text": "<p>Our books use bright, inviting artwork to keep kids engaged. The language is simple enough for early readers, yet rich enough to challenge and inspire.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_KCE8zm": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "heading": "<p><strong>Great for Shared Reading</strong></p>",
+            "text": "<p>Reading aloud with your 5-year-old or letting your 8-year-old read independently is easy with these books, which work perfectly for all little ones. They’re written for flexible reading styles.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_TB6xrk": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p><strong>Support Learning at Home</strong></p>",
+            "text": "<p><strong>E</strong>ach book reinforces what many homeschool and alternative education families already value: liberty, entrepreneurship, and sound reasoning.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_t8abcN": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "",
+            "heading": "<p><strong>Built-In Conversation Starters</strong></p>",
+            "text": "<p>At the end of each book, you’ll find questions and topics to help you talk through the big ideas with your kids. It’s learning made easy for parents and fun for children.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_DGQwfW",
+        "text_column_HD9tXL",
+        "text_column_LYdYjF",
+        "text_column_TUXkH4",
+        "text_column_KCE8zm",
+        "text_column_TB6xrk",
+        "text_column_t8abcN"
+      ],
+      "name": "TT Text column",
+      "settings": {
+        "heading": "<p>Benefits of Tuttle Twins Books for Kids Ages 5–8</p>",
+        "heading_size": "h2",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_hgN78D": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_MdKRCN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions About Books for Kids Aged 5 to 8</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_WRG3Up": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Types of Books Are Best for 5- To 8-Year-Olds?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Parents often want to know which formats and genres are most suitable. At this age, children are typically ready for a mix of:</p><ul><li>Picture books (for ages 5–6)</li><li>Early readers/leveled readers (for ages 6–7)</li><li>Short chapter books (for ages 7–8)</li></ul><p>Popular genres include adventure, humor, fantasy, and stories about friendship or school life.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_qbCTw7": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Tell if a Book Is at the Right Reading Level for My Child?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Parents may be unsure if a book is too hard or too easy. Common tips include:</p><ul><li>The \"Five Finger Rule\" (if a child struggles with 5+ words on a page, it might be too difficult)</li><li>Looking for leveled readers (e.g., Level 1, Level 2)</li><li>Consulting Lexile scores, AR levels, or publisher recommendations for age ranges.</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_LizneF": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Do I Keep My Child Interested in Reading?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Parents often ask how to nurture their children’s love for books. Strategies include:</p><ul><li>Letting kids choose their own books</li><li>Reading aloud together</li><li>Offering book series with recurring characters</li><li>Mixing fiction with nonfiction on topics the child is interested in (e.g., animals, space)</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_ENmNMp": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are There Any Books That Promote Emotional or Social Development?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, many parents seek books that help children understand emotions, empathy, and relationships. Some examples include books about making friends, resolving conflict, or handling big feelings.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_jFAykq": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Are There Diverse and Inclusive Books for Kids in This Age Group?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>As parents, we want books that vary in culture, background, and experiences so our children develop empathy and tolerance. Luckily, there are amazing books available for children that feature:</p><ul><li>Characters of different races, ethnicities, and family structures.</li><li>Stories that highlight disabilities, neurodiversity, or gender expression.</li><li>Books that celebrate cultural traditions from around the world.</li></ul>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_X696LK": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Looking for Something Else?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>No matter their age, there's a Tuttle Twins product designed to spark curiosity and inspire confidence in your little one. Start your child’s journey toward independent thinking today with our <a href=\"https://tuttletwins.com/products/americas-history-volume-1-2-bundle\"><span style=\"text-decoration:underline\">America’s history</span></a> and <a href=\"https://tuttletwins.com/products/the-tuttle-twins-learn-about-the-law\"><span style=\"text-decoration:underline\">law</span></a> books. We also have <a href=\"https://tuttletwins.com/pages/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a> that will engage their minds.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MdKRCN",
+        "faq_WRG3Up",
+        "faq_qbCTw7",
+        "faq_LizneF",
+        "faq_ENmNMp",
+        "faq_jFAykq",
+        "faq_X696LK"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "sskymo_three_block_z8d3rq",
+    "sskymo_product_column_c_PQEykk",
+    "sskymo_text_image_block_Fpc86G",
+    "ssky_text_block_WTxAmB",
+    "ssky_text_column_QdRNaJ",
+    "ssky_faqs_hgN78D",
+    "sskymo_text_image_block_b_V3HPhx"
+  ]
+}

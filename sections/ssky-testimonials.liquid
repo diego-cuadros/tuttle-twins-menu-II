@@ -1,0 +1,966 @@
+{%- liquid
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials__blocks {
+      max-width: {{ section.settings.max_width }}rem;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-testimonials-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-testimonials-{{ section.id }} .ssky-testimonials__wrapper {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-testimonials-{{ section.id }}">
+  <div class="ssky-testimonials ssky-text-block content-container color-{{ section.settings.color_scheme }} gradient">
+    {%- if show_as_card -%}
+      <div class="page-width">
+    {%- endif -%}
+    <div class="ssky-testimonials__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-testimonials__blocks ssky-text-block__blocks center">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              {%- assign heading_length = block.settings.heading | size -%}
+              <h2
+                class="ssky-text-block__heading rte inline-richtext {{ block.settings.heading_size }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
+            {%- when 'caption' -%}
+              <div
+                class="ssky-text-block__caption {{ block.settings.text_style }} {{ block.settings.color_class }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.caption | escape }}
+              </div>
+            {%- when 'text' -%}
+              <div
+                class="ssky-text-block__text rte{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.text }}
+              </div>
+            {%- when 'testimonial' -%}
+              <div class="ssky-testimonials__block left" {{ block.shopify_attributes }}>
+                <div class="ssky-testimonials__block-quote">
+                  <img src="{{ 'quote.png' | asset_url }}" width="41px" height="41px">
+                </div>
+                <div class="ssky-testimonials__block-text-con" style="max-width:{{ block.settings.max_width }}rem;">
+                  {%- if block.settings.testimonial_highlight != blank -%}
+                    <div class="ssky-testimonials__block-text ssky-testimonials__block-text-highlight rte">
+                      {{ block.settings.testimonial_highlight }}
+                    </div>
+                  {%- elsif block.settings.testimonial != blank -%}
+                    <div class="ssky-testimonials__block-text rte">
+                      {{ block.settings.testimonial }}
+                    </div>
+                  {%- endif -%}
+                  <div class="ssky-testimonials__block-author primary-blue">
+                    <span class="ssky-testimonials__block-author-name">{{ block.settings.author }}</span>
+                    {%- if block.settings.author_state != blank -%}
+                      <span>{{ block.settings.author_state }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+                {%- if block.settings.author_image != blank -%}
+                  <div class="ssky-testimonials__block-author-image media">
+                    {{ block.settings.author_image | image_url: width: 200 | image_tag }}
+                  </div>
+                {%- endif -%}
+              </div>
+              {%- when 'stats_block' -%}
+                <div 
+                  class="ssky-testimonials__stats-block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <style>
+                    .ssky-testimonials__stats-block {
+                      background-color: {{ block.settings.background_color }};
+                      color: {{ block.settings.text_color }};
+                      padding: 30px 20px;
+                      border-radius: 10px;
+                      @media (max-width: 768px) {
+                        border-radius: 50px;
+                      }
+                      margin-bottom: 30px;
+                    }
+                    
+                    .ssky-testimonials__stats-container {
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 30px;
+                    }
+                    
+                    .ssky-testimonials__stats-item {
+                      text-align: center;
+                    }
+                    
+                    .ssky-testimonials__stats-title {
+                      font-size: 3.5rem;
+                      font-weight: bold;
+                      margin-bottom: 0.25rem;
+                    }
+                    
+                    .ssky-testimonials__stats-subtitle {
+                      font-size: 1.5rem;
+                    }
+                    
+                    .ssky-testimonials__stats-stars {
+                      color: {{ block.settings.star_color }};
+                      font-size: 2.5rem;
+                      line-height: 1;
+                      margin-top: 0.5rem;
+                    }
+                    
+                    .ssky-testimonials__stats-guarantee {
+                      position: relative;
+                      width: 120px;
+                      height: 120px;
+                    }
+                    
+                    .ssky-testimonials__stats-guarantee-circle {
+                      stroke: {{ block.settings.text_color }};
+                    }
+                    
+                    .ssky-testimonials__stats-guarantee-label {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      text-align: center;
+                      font-size: 0.6rem;
+                      text-transform: uppercase;
+                      font-weight: bold;
+                      line-height: 1;
+                    }
+                    
+                    .ssky-testimonials__stats-guarantee-days {
+                      font-size: 2rem;
+                      margin: 0.2rem 0;
+                    }
+                    
+                    .ssky-testimonials__stats-top-row {
+                      display: flex;
+                      width: 100%;
+                      justify-content: space-between;
+                    }
+                    
+                    .ssky-testimonials__stats-top-row .ssky-testimonials__stats-item {
+                      width: 48%;
+                    }
+                    
+                    @media screen and (min-width: 750px) {
+                      .ssky-testimonials__stats-container {
+                        flex-direction: row;
+                      }
+                      .ssky-testimonials__stats-top-row {
+                        display: contents;
+                      }
+                      .ssky-testimonials__stats-top-row .ssky-testimonials__stats-item {
+                        width: auto;
+                      }
+                    }
+                  </style>
+                  
+                  <div class="ssky-testimonials__stats-container">
+                    <div class="ssky-testimonials__stats-top-row">
+                      <div class="ssky-testimonials__stats-item">
+                        <div class="ssky-testimonials__stats-title">{{ block.settings.copies_number }}</div>
+                        <div class="ssky-testimonials__stats-subtitle">{{ block.settings.copies_text }}</div>
+                      </div>
+                      
+                      <div class="ssky-testimonials__stats-item">
+                        <div class="ssky-testimonials__stats-title">{{ block.settings.reviews_number }}</div>
+                        <div class="ssky-testimonials__stats-subtitle">{{ block.settings.reviews_text }}</div>
+                        <div class="ssky-testimonials__stats-stars">
+                          {% for i in (1..5) %}
+                            ★
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="ssky-testimonials__stats-item">
+                      {% if block.settings.guarantee_badge != blank %}
+                        <img 
+                          src="{{ block.settings.guarantee_badge | image_url: master }}" 
+                          alt="Money Back Guarantee"
+                          width="100"
+                          height="100"
+                          loading="lazy"
+                          class="ssky-testimonials__stats-guarantee"
+                        >
+                      {% else %}
+                        <div class="ssky-testimonials__stats-guarantee">
+                          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" fill="none" class="ssky-testimonials__stats-guarantee-circle" stroke-width="4"/>
+                            <circle cx="50" cy="50" r="42" fill="none" class="ssky-testimonials__stats-guarantee-circle" stroke-width="2"/>
+                            <foreignObject x="5" y="5" width="90" height="90">
+                              <div xmlns="http://www.w3.org/1999/xhtml" class="ssky-testimonials__stats-guarantee-label">
+                                <div>Money Back</div>
+                                <div>Guarantee</div>
+                                <div class="ssky-testimonials__stats-guarantee-days">30</div>
+                                <div>Days</div>
+                                <div>Money Back</div>
+                                <div>Guarantee</div>
+                              </div>
+                            </foreignObject>
+                          </svg>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+            {%- when 'testimonial_column' -%}
+              {% assign testimonial_column = true %}
+            {%- when 'testimonial_column_vtwo' -%}
+              {% assign testimonial_column_vtwo = true %}
+            {%- when 'testimonial_with_video' -%}
+              {% assign testimonial_with_video = true %}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      {%- if testimonial_column == true -%}
+        <div class="ssky-testimonials__column-blocks">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'testimonial_column' -%}
+                <div
+                  class="ssky-testimonials__column-block color-scheme-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div class="ssky-testimonials__column-block-author-con">
+                    {%- if block.settings.author_image != blank -%}
+                      <div class="ssky-testimonials__block-author-image media">
+                        {{ block.settings.author_image | image_url: width: 140 | image_tag }}
+                      </div>
+                    {%- endif -%}
+                    <div>
+                      <div class="ssky-testimonials__block-author">
+                        {{ block.settings.author }}
+                      </div>
+                      <div class="ssky-testimonials__block-state">
+                        {{ block.settings.state }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ssky-testimonials__block-text rte">
+                    {{ block.settings.richtext }}
+                  </div>
+                  {%- if section.settings.review_stars != blank -%}
+                    <div class="ssky-testimonials__block-stars">
+                      {{ section.settings.review_stars | image_url: width: 240 | image_tag }}
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if testimonial_column_vtwo == true -%}
+        <div class="ssky-testimonials__column-blocks ssky-testimonials__column-blocks-vtwo">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'testimonial_column_vtwo' -%}
+                <div
+                  class="ssky-testimonials__column-block color-scheme-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div class="ssky-testimonials__block left">
+                    <div class="ssky-testimonials__block-quote">
+                      <img src="{{ 'quote.png' | asset_url }}" width="41px" height="41px">
+                    </div>
+                    <div class="ssky-testimonials__block-text-con">
+                      {%- if section.settings.review_stars != blank -%}
+                        <div class="ssky-testimonials__block-stars">
+                          {{ section.settings.review_stars | image_url: width: 240 | image_tag }}
+                        </div>
+                      {%- endif -%}
+                      <div class="ssky-testimonials__block-text rte">
+                        {{ block.settings.richtext }}
+                      </div>
+                      <div class="ssky-testimonials__column-block-author-con primary-blue">
+                        <div class="ssky-testimonials__block-author">
+                          {{ block.settings.author }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if testimonial_with_video == true -%}
+        <div class="ssky-testimonials__video-blocks">
+          {{ 'video-section.css' | asset_url | stylesheet_tag }}
+          {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'testimonial_with_video' -%}
+                <div class="ssky-testimonials__video-block" {{ block.shopify_attributes }}>
+                  <div class="ssky-testimonials__video-block-video">
+                    <div class="video-section isolate">
+                      {%- liquid
+                        assign video_id = block.settings.video.id | default: block.settings.video_url.id
+                        assign video_alt = block.settings.video.alt | default: block.settings.description
+                        assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+                        assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+
+                        if block.settings.video != null
+                          assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                          if ratio_diff < 0.01 and ratio_diff > 0
+                            assign fix_ratio = true
+                          endif
+                        endif
+                      -%}
+                      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                      <deferred-media
+                        class="video-section__media deferred-media gradient global-media-settings{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        data-media-id="{{ video_id }}"
+                        {% if poster != null %}
+                          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                        {% endif %}
+                      >
+                        <button
+                          id="Deferred-Poster-Modal-{{ video_id }}"
+                          class="video-section__poster media deferred-media__poster media--landscape"
+                          type="button"
+                          aria-label="{{ alt }}"
+                        >
+                          {%- if poster != null -%}
+                            {{
+                              poster
+                              | image_url: width: 1500
+                              | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500', alt: alt
+                            }}
+                          {%- else -%}
+                            {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                          {%- endif -%}
+                          <span class="deferred-media__poster-button motion-reduce">
+                            <span class="svg-wrapper">
+                              {{- 'icon-play.svg' | inline_asset_content -}}
+                            </span>
+                          </span>
+                        </button>
+                        <template>
+                          {%- if block.settings.video == null and block.settings.video_url != null -%}
+                            {%- liquid
+                              assign loop = ''
+                              if block.settings.enable_video_looping
+                                assign loop = '&loop=1&playlist=' | append: video_id
+                              endif
+                            -%}
+                            {%- if block.settings.video_url.type == 'youtube' -%}
+                              <iframe
+                                src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                                class="js-youtube"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                                title="{{ block.settings.description | escape }}"
+                              ></iframe>
+                            {%- else -%}
+                              <iframe
+                                src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                                class="js-vimeo"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                                title="{{ block.settings.description | escape }}"
+                              ></iframe>
+                            {%- endif -%}
+                          {%- else -%}
+                            {{
+                              block.settings.video
+                              | video_tag:
+                                image_size: '1100x',
+                                autoplay: true,
+                                loop: block.settings.enable_video_looping,
+                                controls: true,
+                                muted: false
+                            }}
+                          {%- endif -%}
+                        </template>
+                      </deferred-media>
+                    </div>
+                  </div>
+                  <div
+                    class="ssky-testimonials__block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="ssky-testimonials__block-quote">
+                      <img src="{{ 'quote.png' | asset_url }}" width="41px" height="41px">
+                    </div>
+                    <div class="ssky-testimonials__block-text-con">
+                      <div class="ssky-testimonials__block-text ssky-testimonials__block-text-highlight rte">
+                        {{ block.settings.richtext }}
+                      </div>
+                      <div class="ssky-testimonials__block-author-name primary-blue">
+                        {{ block.settings.author }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TT Testimonials",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.ssky_text_block.settings.block_specific.label"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 72,
+      "max": 100,
+      "step": 1,
+      "label": "Content width for heading and text block only.",
+      "default": 80
+    },
+    {
+      "type": "image_picker",
+      "id": "review_stars",
+      "label": "Review stars for Testimonial column block only."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "small-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+            },
+            {
+              "value": "small-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "medium-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+            },
+            {
+              "value": "large-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+            },
+            {
+              "value": "large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+            }
+          ],
+          "default": "large-bold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "t:sections.all.ssky_color_class.default",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.ssky_text_block.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "t:sections.all.heading_size.options__0.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.ssky_text_block.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_large",
+          "label": "t:sections.all.ssky_text_large.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "range",
+          "id": "max_width",
+          "min": 30,
+          "max": 70,
+          "step": 1,
+          "label": "t:sections.ssky_text_block.blocks.text.settings.max_width.label",
+          "default": 52
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_highlight",
+          "label": "Testimonial with Highlight",
+          "default": "<p>“Enter your <strong>customer's testimonial here.</strong> Share their experience and feedback.“</p>",
+          "info": "Use the bold text option to highlight the text."
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial",
+          "label": "Testimonial",
+          "default": "<p>““</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "author_state",
+          "label": "Author state"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author image"
+        }
+      ]
+    },
+    {
+      "type": "testimonial_column",
+      "name": "Testimonial column",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author image"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "state",
+          "label": "Author state",
+          "default": "State"
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Testimonial",
+          "default": "<p>“Enter your <strong>customer's testimonial here.</strong> Share their experience and feedback.“</p>"
+        }
+      ]
+    },
+    {
+      "type": "testimonial_column_vtwo",
+      "name": "Testimonial column v2",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Testimonial",
+          "default": "<p>“Enter your <strong>customer's testimonial here.</strong> Share their experience and feedback.“</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Author Name"
+        }
+      ]
+    },
+    {
+      "type": "testimonial_with_video",
+      "name": "Testimonial with video",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Testimonial",
+          "default": "<p>“Enter your <strong>customer's testimonial here.</strong> Share their experience and feedback.“</p>",
+          "info": "Use the bold text option to highlight the text."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Author Name"
+        },
+        {
+          "type": "header",
+          "content": "Video settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_video_looping",
+          "label": "t:sections.video.settings.enable_video_looping.label",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "t:sections.video.settings.header__1.content"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "t:sections.video.settings.video.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.video.settings.header__2.content"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.video.settings.paragraph.content"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "label": "t:sections.video.settings.video_url.label",
+          "info": "t:sections.video.settings.video_url.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "t:sections.video.settings.cover_image.label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "t:sections.video.settings.description.label",
+          "info": "t:sections.video.settings.description.info"
+        }
+      ]
+    },
+    {
+      "type": "stats_block",
+      "name": "Stats Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "copies_number",
+          "label": "Copies Sold Number",
+          "default": "5 Mil+"
+        },
+        {
+          "type": "text",
+          "id": "copies_text",
+          "label": "Copies Sold Text",
+          "default": "Copies Sold Worldwide"
+        },
+        {
+          "type": "text",
+          "id": "reviews_number",
+          "label": "Reviews Number",
+          "default": "5,000+"
+        },
+        {
+          "type": "text",
+          "id": "reviews_text",
+          "label": "Reviews Text",
+          "default": "5 Star Reviews"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#00B1D8"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "star_color",
+          "label": "Star Color",
+          "default": "#FFD700"
+        },
+        {
+          "type": "header",
+          "content": "Guarantee Badge"
+        },
+        {
+          "type": "image_picker",
+          "id": "guarantee_badge",
+          "label": "Guarantee Badge Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial_column"
+        },
+        {
+          "type": "testimonial_column"
+        },
+        {
+          "type": "testimonial_column"
+        },
+        {
+          "type": "testimonial_with_video"
+        },
+        {
+          "type": "testimonial_with_video"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

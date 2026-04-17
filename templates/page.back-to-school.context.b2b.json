@@ -1,0 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.back-to-school.json",
+  "context": {
+    "market": "all-b2b"
+  },
+  "sections": {
+    "ss_hero_33_PzC7JT": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

@@ -1,0 +1,674 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "okendo_star_rating_ekB6wn": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "text_xCgkE7": {
+          "type": "text",
+          "settings": {
+            "text": "Recommended Ages: {{ product.metafields.custom.recommended_ages.value }}",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_FyfwHV": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_rGnMXn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"klaviyo-form-XR6pAL\"></div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_large": true
+          }
+        },
+        "popup_RzmqbB": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "See the Bundle Comparison",
+            "content_type": "image",
+            "page": "",
+            "image": "shopify://shop_images/Bundle_Comparison.png",
+            "video_url": "",
+            "html": "",
+            "hide_title": true,
+            "visibility_mode": "tag",
+            "tag_list": "Bundle Comparison",
+            "handle_list": "",
+            "invert_match": false
+          }
+        },
+        "icon_with_text_TmywmQ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/pdp_icon_1.webp",
+            "heading_1": "",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/pdp_icon_2.webp",
+            "heading_2": "",
+            "icon_3": "none",
+            "image_3": "shopify://shop_images/pdp_icon_3.webp",
+            "heading_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "okendo_star_rating_ekB6wn",
+        "text_xCgkE7",
+        "price",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_FyfwHV",
+        "buy_buttons",
+        "custom_liquid_rGnMXn",
+        "description",
+        "popup_RzmqbB",
+        "icon_with_text_TmywmQ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "replo_fsp_buy_box_QL7H4R": {
+      "type": "replo-fsp-buy-box",
+      "custom_css": [
+        ".r-15sm1na {display: none !important;}"
+      ],
+      "name": "FSP - Buy Box ",
+      "settings": {}
+    },
+    "1757927398369ebdc6": {
+      "type": "apps",
+      "blocks": {
+        "okendo_media_grid_eJqkXW": {
+          "type": "shopify://apps/okendo/blocks/media-grid/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_media_grid_eJqkXW"
+      ],
+      "settings": {}
+    },
+    "17579274086252006a": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_rfKUyH": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_rfKUyH"
+      ],
+      "settings": {}
+    },
+    "sskyp_text_image_block_Ma3fbR": {
+      "type": "sskyp-text-image-block",
+      "blocks": {
+        "heading_kjphDk": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.section_tear_drop_heading | metafield_tag }}",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "text_qUUHAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.description }}</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kjphDk",
+        "text_qUUHAg"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.section_tear_drop_image.value }}",
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskyp_text_image_block_b_RQREVg": {
+      "type": "sskyp-text-image-block-b",
+      "blocks": {
+        "heading_MCRPrC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.metafields.woo.cta_title.value }}</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "caption_xgbqwY": {
+          "type": "caption",
+          "settings": {
+            "caption": "{{ product.metafields.woo.cta_subtitle.value }}",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "text_giNap8": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_jANKfK": {
+          "type": "checkbox",
+          "settings": {
+            "text": "",
+            "text_large": false
+          }
+        },
+        "button_HYcqE3": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Add to Cart",
+            "button_link": "https://www.tuttletwins.com/apps/rebuy/cart?variants%5B47235382149258%5D%5Bquantity%5D=1&variants%5B47235382149258%5D%5Bselling_plan%5D=2026111114&clear_cart=no&landing_page=shopify_checkout&smart_cart_show=no",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MCRPrC",
+        "caption_xgbqwY",
+        "text_giNap8",
+        "checkbox_jANKfK",
+        "button_HYcqE3"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_k_eAECEn": {
+      "type": "sskymo-text-image-block-k",
+      "settings": {
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "custom_class": "heading-primary-light-blue",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "sskymo_product_column_c_yADiN4": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_c_yUXaNe": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_RiQr48": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskyp_atc_autopopulate_takR8L": {
+      "type": "sskyp-atc-autopopulate",
+      "blocks": {
+        "heading_3whfpd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ product.title }}</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold"
+          }
+        },
+        "text_wRyXK6": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.section_atc_description | metafield_tag }}",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "testimonial_KAfzNf": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"{{ product.metafields.woo.testimonial | metafield_tag }}\"<strong><br/></strong><strong>{{ product.metafields.woo.testimonial_by.value }}</strong></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3whfpd",
+        "text_wRyXK6",
+        "testimonial_KAfzNf"
+      ],
+      "settings": {
+        "image": "{{ product.featured_image }}",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_faqs_6m96qr": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_JpMTBM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_MMqWEV": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What ages are the Tuttle Twins book series appropriate for?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>The Tuttle Twins books are generally best for ages 5–12, though younger kids enjoy them as read-alouds and older teens often dive deeper into the ideas.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_yxY6JD": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do the Tuttle Twins books need to be read in order?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Nope! We ship them in order, but each story stands on its own—so your child can jump in anywhere.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_p4ENRB": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What do I get each month with my subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Each month, your child receives two Tuttle Twins books—delivered in order—packed with fun stories and big ideas.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_PCQeCn": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can I purchase the books without a subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes! You can absolutely buy the books individually or in bundles without subscribing. The subscription is just a convenient option for receiving two books each month in order—but all titles are also available for one-time purchase.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_Qa4Ftj": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How can I continue the series after canceling my subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>If you’d like to restart your subscription after already receiving a few months, just reach out to our customer service team at <a><strong>info@tuttletwins.com</strong></a> and we’ll help you pick back up. If you prefer to not re-subscribe, you can purchase the next books in the series as one-time buys.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_xhTgdi": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How easy is it to cancel my subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes! It’s super easy to unsubscribe. Please email info@tuttletwins.com or login to your Tuttle Twins account page and click “Manage subscriptions” to update your settings. </p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_g7ApaH": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Does the Tuttle Twins Book Subscription Work?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Once you sign up, you’ll receive new books from the Tuttle Twins series each month. Every book is designed to be age-appropriate and packed with lessons that teach kids about freedom, responsibility, merit, and economics, to name a few.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_9LbBBR": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can I Gift a Tuttle Twins Book Subscription?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, our book subscription makes an excellent gift! It’s a perfect way to introduce children to important concepts and provide them with a fun, educational reading experience.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JpMTBM",
+        "faq_MMqWEV",
+        "faq_yxY6JD",
+        "faq_p4ENRB",
+        "faq_PCQeCn",
+        "faq_Qa4Ftj",
+        "faq_xhTgdi",
+        "faq_g7ApaH",
+        "faq_9LbBBR"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_LFqrCE": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_3BcDDd": {
+          "type": "caption",
+          "settings": {
+            "caption": "Feel Part of the Club with Tuttle Twins Book Subscription",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_Nn8mkW": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>The Tuttle Twins Book Club is more than just a way to keep your child entertained. It’s a fantastic opportunity to develop and encourage essential life lessons and skills through engaging stories and vibrant illustrations. Every month, your child will discover new Tuttle Twins books, each designed to introduce children to timeless ideas about <a href=\"https://www.tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"><span style=\"text-decoration:underline\">entrepreneurship</span></a>, <a href=\"https://www.tuttletwins.com/collections/american-history-for-kids\"><span style=\"text-decoration:underline\">American history</span></a>, individual rights, and economics.</p><h2>Benefits of the Tuttle Twins Book Subscription</h2><p>Our subscription encourages young ones to read, but it also lays a foundation for your child's future success. Here’s why our book club is the perfect choice for parents who want to inspire and educate:</p><h3>Learning Through Stories</h3><p>Our books make learning fun. Each story is written in an engaging, easy-to-follow way that sparks curiosity in young readers. Your child will be introduced to complex ideas like economics, government, and personal responsibility through exciting narratives and memorable characters.</p><h3>Easy to Understand</h3><p>With the right approach, kids can learn complex ideas. Our story-driven books break down concepts into easy-to-understand lessons, making them perfect for children ages 5 to 12. The Tuttle Twins series offers relatable examples and characters that children can connect with, whether the topic is freedom, rights, or responsibility.</p><h3>Supports Critical Thinking</h3><p>Our books encourage kids to think for themselves. By introducing concepts such as individual liberty, free markets, and personal responsibility, your child will begin to understand the world in a deeper, more thoughtful way. These books encourage independent thinking and help your kids develop a principled moral compass.</p><h3>Convenient and Affordable Learning</h3><p>With our book subscription for kids, you'll never have to worry about finding new educational books. Every month, new Tuttle Twins books will arrive at your doorstep, making it easy to keep your child engaged and learning without the hassle of constantly searching for new titles. Plus, with our subscription plan, you can save on individual book prices while ensuring your child’s education continues to grow month after month.</p><h3>Promotes Family Bonding</h3><p>Reading together is a great way to bond as a family. Our books teach valuable lessons while providing an excellent opportunity for parents to engage with their children. You can create a space for meaningful conversations and shared learning experiences when reading aloud and discussing ideas around the dinner table.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_3BcDDd",
+        "text_Nn8mkW"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "17466480155b8d349c": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_wNCX4x": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "212015",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_wNCX4x"
+      ],
+      "settings": {}
+    },
+    "sskymo_text_image_block_b_rXATQX": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "replo_fsp_buy_box_QL7H4R",
+    "1757927398369ebdc6",
+    "17579274086252006a",
+    "sskyp_text_image_block_Ma3fbR",
+    "sskyp_text_image_block_b_RQREVg",
+    "sskymo_text_image_block_k_eAECEn",
+    "related-products",
+    "sskymo_product_column_c_yADiN4",
+    "sskymo_text_image_block_c_yUXaNe",
+    "sskymo_three_block_RiQr48",
+    "sskyp_atc_autopopulate_takR8L",
+    "ssky_faqs_6m96qr",
+    "ssky_text_block_LFqrCE",
+    "17466480155b8d349c",
+    "sskymo_text_image_block_b_rXATQX"
+  ]
+}

@@ -1,0 +1,587 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+<style>
+  #section--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color:{{section.settings.background_color}}
+  }
+  @media screen and (max-width: 767px) {
+    #section--{{ section.id }} {
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+  }
+   .books_slider_sec{
+       overflow:hidden;
+  }
+   .container{
+       max-width: 1280px;
+       margin: 0 auto;
+       height: 100%;
+  }
+   .swiper-container {
+       width: 100%;
+       height: 100%;
+       position:relative;
+  }
+   .swiper-slide {
+      width: fit-content;
+       text-align: center;
+       font-size: 18px;
+       background: #fff;
+      /* Center slide text vertically */
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: -webkit-flex;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       -webkit-justify-content: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       -webkit-align-items: center;
+       align-items: center;
+       border-radius: 15px;
+  }
+   .book_card_wrapper {
+    max-width: 300px;
+    padding: 12px;
+    box-shadow: 0px 5px 11px 0px #00000012, 0px 20px 20px 0px #0000000F, 0px 44px 26px 0px #0000000A, 0px 78px 31px 0px #00000003, 0px 122px 34px 0px #00000000;
+    border-radius: 12px;
+    gap: 15px;
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+}
+.book_card_wrapper .card_content_wrapper {
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+   .book_card_wrapper .card_image_wrapper {
+       display: flex;
+       flex-direction: row;
+       align-items: flex-start;
+       gap: 2px;
+       border-radius: 8px;
+       overflow: hidden;
+  }
+  .book_card_wrapper .card_img_before, .book_card_wrapper .card_img_after {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+.book_card_wrapper .card_img_before img, .book_card_wrapper .card_img_after img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+   .book_card_wrapper .card_img_before span, .book_card_wrapper .card_img_after span {
+       font-weight: 600;
+       font-size: 12px;
+       line-height: 14px;
+       color: #FFFFFF;
+       background-color: #DB5846FF;
+       padding: 3px 12px;
+       border-radius: 100px;
+       position: absolute;
+       left: 50%;
+       transform: translate(-50%, 6px);
+       width: max-content;
+  }
+   .book_card_wrapper .card_img_after span{
+       background-color:#05AED8FF;
+  }
+  .book_card_wrapper .card_content_wrapper{
+      text-align:left;
+  }
+  
+  .book_card_wrapper .card_content_wrapper .books_card_title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color:#3F3939;
+    margin-bottom: 8px;
+  }
+  .book_card_wrapper .card_content_wrapper .popup_card_title{
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+    color:#3F3939;
+    margin:0px;
+    margin-bottom:10px;
+  }
+  .book_card_wrapper .card_content_wrapper .popup_card_description,
+   .book_card_wrapper .card_content_wrapper .books_card_description {
+       font-size: 14px;
+       line-height: 18px;
+       color:rgba(63, 57, 57, 0.7);
+       font-weight: 500;
+       margin-bottom:16px;
+  }
+  
+  .book_card_wrapper .card_content_wrapper .popup_card_description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+  .book_card_wrapper .card_content_wrapper .popup_card_description ul li {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #3f3939;
+    position: relative;
+    padding-left: 20px;
+}
+.book_card_wrapper .card_content_wrapper .popup_card_description ul li:after {
+    position: absolute;
+    content: "";
+    background-image: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.00024 6.00024C1.00024 6.00024 2.33358 6.33358 3.33358 8.33358C3.33358 8.33358 7.03944 2.22246 10.3336 1.00024" stroke="%2305AED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-size: contain;
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 6px;
+}
+   .book_card_wrapper .card_content_wrapper button {
+       border: none;
+       background: no-repeat;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       padding: 0;
+       color:#05AED8;
+       font-family: "poppins";
+       font-size: 14px;
+       font-weight: 500;
+       line-height: 14px;
+       letter-spacing: 0px;
+       cursor: pointer;
+  }
+   .book_card_wrapper .card_content_wrapper button img {
+       width: 14px;
+       height: 14px;
+       margin-right:5px;
+  }
+  .books_slider_sec .books_slider_controllers > * {
+    position: unset;
+    z-index:1;
+    width: fit-content;
+  }
+  .books_slider_controllers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    margin-top: 32px;
+  }
+  .books_slider_sec .books_slider_controllers .swiper-books-prev,
+  .books_slider_sec .books_slider_controllers .swiper-books-next {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background-color: #fff;
+      box-shadow: 0px 1px 1px 0px #0000000D, 0px 3px 3px 0px #0000000D, 0px 6px 3px 0px #0000000D;
+      cursor: pointer;
+  }
+  .books_slider_controllers svg {
+    width: 14px;
+    height:14px;
+  }
+  .books_slider_sec .books_slider_controllers > * {
+    position: unset;
+    width: fit-content;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #3F3939;
+  }
+
+
+  .popup_content_wrapper,
+  .book-popup{
+    display:none;
+  }
+  .popup_content_wrapper span {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #05AED8;
+    background-color: #EAFBFF;
+    padding: 3px 12px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom:10px;
+  }
+  .popup_content_wrapper .books_card_title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height:29px ;
+    color: #3F3939;
+  }
+  
+
+  .book-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000008c;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+  }
+  .book-popup .book_card_wrapper {
+    max-width: 800px;
+    align-items: center;
+    gap: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px;
+}
+  .book-popup .card_content_wrapper {
+    padding-left: 32px;
+    justify-content: center;
+}
+  .book-popup .card_content_wrapper .card_content_wrapper {
+      display: none;
+  }
+  .book-popup .card_content_wrapper .popup_content_wrapper {
+      display: block;
+  }
+  .popup_inner_wrapper {
+    position: relative;
+}
+button.book-popup-close {
+    height: 40px;
+    width: 40px;
+    background: #3F3939;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+}
+.books_slider_sec .swiper-slide {
+    height: auto;
+}
+.books_slider_sec .swiper-slide .book_card_wrapper {
+    height: calc(100% - 12px*2);
+}
+
+@media(max-width:992px){
+  .popup_inner_wrapper {
+    position: relative;
+    width: 95%;
+}
+}
+@media(max-width:768px){
+  .book-popup .book_card_wrapper {
+      gap: 16px;
+      grid-template-columns: 1fr;
+      padding: 16px;
+  }
+  button.book-popup-close {
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .popup_inner_wrapper {
+    position: relative;
+    width: 90%;
+}
+.book-popup .card_content_wrapper {
+    padding-left: 0;
+}
+}
+</style>
+
+<section class="books_slider_sec" id="section--{{ section.id }}">
+  <div class="Container">
+    <div class="swiper-container books_slider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="book_card_wrapper">
+              <div class="card_image_wrapper">
+                <div class="card_img_before">
+                  <span>Original</span>
+
+                  <img
+                    src="{{ block.settings.before_image | image_url: width: 800 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="card_img_after">
+                  <span>Tuttle Twins</span>
+                  <img
+                    src="{{ block.settings.after_image | image_url: width: 800 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+              <div class="card_content_wrapper">
+                <div class="card_content_wrapper">
+                 <div class="card_text_block">
+                   <h3 class="books_card_title">{{ block.settings.title }}</h3>
+                  <div class="books_card_description">{{ block.settings.description }}</div>
+                 </div>
+                  <button>
+                    <img src="https://cdn.shopify.com/s/files/1/0655/8951/0282/files/pluse-icon.svg?v=1771225149">
+                    Read Description
+                  </button>
+                </div>
+                <div class="popup_content_wrapper">
+                  <span>Recommended Ages: {{ block.settings.recommended_ages }}</span>
+                  <h3 class="popup_card_title">{{ block.settings.title }}</h3>
+                  <div class="popup_card_description">{{ block.settings.popup_description }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="books_slider_controllers">
+        <div class="swiper-books-prev">
+          <svg
+            fill="#3F3939"
+            width="800px"
+            height="800px"
+            viewBox="-4.5 0 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+            class="cf-icon-svg"
+          >
+            <path d="M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/>
+          </svg>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-books-next">
+          <svg
+            fill="#3F3939"
+            width="800px"
+            height="800px"
+            viewBox="-4.5 0 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+            class="cf-icon-svg"
+          >
+            <path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="book-popup" id="bookPopup-{{ section.id }}" aria-hidden="true">
+    <div class="book-popup-overlay" data-popup-close></div>
+    <div class="popup_inner_wrapper">
+      <button type="button" class="book-popup-close" data-popup-close>✕</button>
+      <div class="poup_content"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Swiper init
+    new Swiper('.books_slider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-books-next',
+        prevEl: '.swiper-books-prev',
+      },
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      breakpoints: {
+        1920: { spaceBetween: 16 },
+        992: { spaceBetween: 16 },
+        768: { spaceBetween: 10 },
+        0: { spaceBetween: 10 },
+      },
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+ 
+  const triggerBtns = document.querySelectorAll(".card_content_wrapper button");
+  const popupWrapper = document.querySelector(".book-popup");
+  const popupInner = document.querySelector(".poup_content");
+  const closeBtn = document.querySelector(".book-popup-close");
+ 
+  triggerBtns.forEach(function(button) {
+    button.addEventListener("click", function() {
+ 
+      const card = this.closest(".book_card_wrapper");
+      if (!card || !popupInner || !popupWrapper) return;
+ 
+      popupInner.innerHTML = "";
+ 
+      const clone = card.cloneNode(true);
+ 
+      popupInner.appendChild(clone);
+ 
+      popupWrapper.style.display = "flex";
+    });
+  });
+ 
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function() {
+ 
+      if (popupWrapper) {
+        popupWrapper.style.display = "none";
+      }
+ 
+      if (popupInner) {
+        popupInner.innerHTML = "";
+      }
+    });
+  }
+ 
+});
+</script>
+
+{% schema %}
+{
+  "name": "Book Slider",
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Before image",
+          "id": "before_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "After image",
+          "id": "after_image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Popup Text"
+        },
+        {
+          "type": "text",
+          "id": "recommended_ages",
+          "label": "Recommended Ages:"
+        },
+        {
+          "type": "text",
+          "id": "popup_title",
+          "label": "Popup Title"
+        },
+        {
+          "type": "richtext",
+          "id": "popup_description",
+          "label": "Popup description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Book Slider"
+    }
+  ]
+}
+{% endschema %}

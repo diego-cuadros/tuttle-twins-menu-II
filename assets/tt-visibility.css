@@ -1,0 +1,27 @@
+/* Responsive Visibility Utilities
+ * Mobile: < 750px
+ * Tablet: 750px - 989px
+ * Desktop: >= 990px
+ */
+
+/* Hide on mobile (< 750px) */
+@media screen and (max-width: 749px) {
+    .hide-mobile {
+      display: none !important;
+    }
+  }
+  
+  /* Hide on tablet (750px - 989px) */
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .hide-tablet {
+      display: none !important;
+    }
+  }
+  
+  /* Hide on desktop (>= 990px) */
+  @media screen and (min-width: 990px) {
+    .hide-desktop {
+      display: none !important;
+    }
+  }
+  

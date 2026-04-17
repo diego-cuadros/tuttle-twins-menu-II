@@ -1,0 +1,225 @@
+{%- comment -%}
+  sections/ssky-character-cards.liquid
+  CSS lives in assets/homepage-redesign.css
+{%- endcomment -%}
+
+<section
+  class="ssky-character-cards color-{{ section.settings.color_scheme }}"
+  data-ssky-character-cards
+  style="
+    --ssky-cc-pad-m: {{ section.settings.padding_y_mobile }}px;
+    --ssky-cc-pad-d: {{ section.settings.padding_y_desktop }}px;
+    --ssky-cc-card-bg: {{ section.settings.card_background }};
+  "
+>
+  <div class="page-width">
+
+    {%- capture header_html -%}{%- endcapture -%}
+    {%- capture grid_html -%}{%- endcapture -%}
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'character_card' -%}
+
+        {%- assign accent = block.settings.accent_color -%}
+        {%- assign image_side = block.settings.image_side -%}
+
+        {%- capture grid_html -%}{{ grid_html }}
+          <div
+            class="ssky-character-cards__card{% if image_side == 'right' %} is-image-right{% endif %}"
+            style="--ssky-cc-accent: {{ accent }};"
+            {{ block.shopify_attributes }}
+          >
+            <div class="ssky-character-cards__card-inner">
+
+              <div class="ssky-character-cards__image">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+                {%- endif -%}
+              </div>
+
+              <div class="ssky-character-cards__content">
+                {%- if block.settings.name != blank -%}
+                  <div class="ssky-character-cards__name">{{ block.settings.name }}</div>
+                {%- endif -%}
+
+                {%- if block.settings.desc != blank -%}
+                  <div class="ssky-character-cards__desc rte">
+                    {{ block.settings.desc }}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.pill_text != blank -%}
+                  <div class="ssky-character-cards__pill">
+                    {{ block.settings.pill_text }}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.quote != blank -%}
+                  <div class="ssky-character-cards__quote">
+                    “{{ block.settings.quote }}”
+                  </div>
+                {%- endif -%}
+              </div>
+
+            </div>
+          </div>
+        {%- endcapture -%}
+
+      {%- else -%}
+
+        {%- capture block_markup -%}
+          {%- case block.type -%}
+
+            {%- when 'caption' -%}
+              {%- if block.settings.caption != blank -%}
+                <div class="ssky-character-cards__caption" {{ block.shopify_attributes }}>
+                  {{ block.settings.caption }}
+                </div>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+              {%- if block.settings.heading != blank -%}
+                <{{ block.settings.heading_tag }}
+                  class="ssky-character-cards__heading {{ block.settings.heading_size }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.heading }}
+                </{{ block.settings.heading_tag }}>
+              {%- endif -%}
+
+            {%- when 'text' -%}
+              {%- if block.settings.text != blank -%}
+                <div class="ssky-character-cards__text rte" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        {%- endcapture -%}
+
+        {%- if block_markup != blank -%}
+          {%- capture header_html -%}{{ header_html }}{{ block_markup }}{%- endcapture -%}
+        {%- endif -%}
+
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if header_html != blank -%}
+      <div class="ssky-character-cards__header">
+        {{ header_html }}
+      </div>
+    {%- endif -%}
+
+    {%- if grid_html != blank -%}
+      <div class="ssky-character-cards__grid">
+        {{ grid_html }}
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Character Cards",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "color", "id": "card_background", "label": "Card background", "default": "#FFFFFF" },
+    { "type": "range", "id": "padding_y_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Padding (mobile)", "default": 40 },
+    { "type": "range", "id": "padding_y_desktop", "min": 0, "max": 180, "step": 4, "unit": "px", "label": "Padding (desktop)", "default": 64 }
+  ],
+  "blocks": [
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "caption", "label": "Caption", "default": "MEET THE CHARACTERS" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Meet Ethan & Emily" },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "h1",
+          "options": [
+            { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h0", "label": "H0" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "default": "h2",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Short intro about the characters and how they guide the stories.</p>" }
+      ]
+    },
+    {
+      "type": "character_card",
+      "name": "Character Card",
+      "limit": 5,
+      "settings": [
+        { "type": "color", "id": "accent_color", "label": "Accent (top border + pill)", "default": "#0597AF" },
+        {
+          "type": "select",
+          "id": "image_side",
+          "label": "Image position",
+          "default": "left",
+          "options": [
+            { "value": "left", "label": "Image left" },
+            { "value": "right", "label": "Image right" }
+          ]
+        },
+        { "type": "image_picker", "id": "image", "label": "Character image" },
+        { "type": "text", "id": "name", "label": "Name", "default": "Ethan Tuttle" },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description",
+          "default": "<p>Ethan navigates business problems, market dynamics, and economic puzzles with curiosity and persistence…</p>"
+        },
+        { "type": "text", "id": "pill_text", "label": "Highlight pill text", "default": "His lemonade stand teaches more about supply, demand, and pricing than most economics courses." },
+        { "type": "text", "id": "quote", "label": "Quote (optional)", "default": "There has to be a reason prices went up. Let’s figure it out." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Character Cards",
+      "blocks": [
+        { "type": "caption" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "character_card" },
+        { "type": "character_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

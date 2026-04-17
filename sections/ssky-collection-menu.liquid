@@ -1,0 +1,211 @@
+{{ 'ssky-collection-menu.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .collection-menu-ssky-{{ section.id }} .collection-menu-ssky {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .collection-menu-ssky-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div class="collection-menu-ssky-{{ section.id }}">
+  <div class="collection-menu-ssky gradient color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="collection-menu-ssky__blocks">
+        {%- for block in section.blocks -%}
+          {%- if forloop.index == 1 -%}
+            <div class="collection-menu-ssky__block collection-menu-ssky__block-head" {{ block.shopify_attributes }}>
+              <div class="collection-menu-ssky__block-item">
+                {%- if block.settings.collection != empty -%}
+                  {%- if block.settings.title != blank -%}
+                    {{ block.settings.title }}
+                  {%- else -%}
+                    {{ block.settings.collection.title }}
+                  {%- endif -%}
+                {%- else -%}
+                  {{ 'onboarding.collection_title' | t }}
+                {%- endif -%}
+                <span class="svg-wrapper">
+                  {{- 'icon-caret-filled.svg' | inline_asset_content -}}
+                </span>
+              </div>
+            </div>
+          {%- endif -%}
+          <div class="collection-menu-ssky__block" {{ block.shopify_attributes }}>
+            <a
+              {%- if block.settings.collection != empty %}
+                href="{{ block.settings.collection.url }}"
+              {%- else %}
+                role="link" aria-disabled="true"
+              {%- endif %}
+              class="full-unstyled-link collection-menu-ssky__block-item"
+            >
+              {%- if block.settings.collection != empty -%}
+                {%- if block.settings.title != blank -%}
+                  {{ block.settings.title }}
+                {%- else -%}
+                  {{ block.settings.collection.title }}
+                {%- endif -%}
+              {%- else -%}
+                {{ 'onboarding.collection_title' | t }}
+              {%- endif -%}
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.collection-menu-ssky__block-head').addEventListener('click', () => {
+        document.querySelector('.collection-menu-ssky__blocks').classList.toggle('active');
+      });
+    });
+  </script>
+</div>
+
+{% schema %}
+{
+  "name": "TT Collection menu",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color",
+      "default": "#04AED8"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "limit": 15,
+      "settings": [
+        {
+          "type": "url",
+          "id": "collection",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "By default, the collection title will be displayed."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Collection menu",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

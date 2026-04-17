@@ -1,0 +1,1254 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_zPhkpt": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_rjaQgD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>\"With high inflation, it's never been <strong>more important</strong> to use the <strong>Tuttle Twins</strong> books to teach your kids what's happening. Get this free book!\"</p>",
+            "heading_size": "h4",
+            "heading_weight": "medium",
+            "heading_tag": "h2"
+          }
+        },
+        "text_EqebWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>We are offering a free paperback copy of our children’s book that teaches about money and inflation.</em><span style=\"text-decoration:underline\"><em><br/>Limited offer, only while supplies last. Book is free, you only pay shipping.</em></span></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rjaQgD",
+        "text_EqebWY"
+      ],
+      "settings": {
+        "background_image": "shopify://shop_images/2021-01-25.jpg",
+        "background_position": "top center",
+        "background_size": "cover",
+        "background_overlay": true,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 90,
+        "image": "shopify://shop_images/jekyll_d9a2e667-8590-4af0-81f9-4ca9ab490c6d.jpg",
+        "rounded": false,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "heading-bold-blue",
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_M9NNP8": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_e4fdCj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Teach Your Kids About <br/>About Inflation (And More) </p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "hxl",
+            "heading_weight": "semibold",
+            "heading_tag": "h1",
+            "center": false
+          }
+        },
+        "heading_hP3xEx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why do things cost more today than they did years ago… or last week? Our fun children's book helps explain how money works.</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_e4fdCj",
+        "heading_hP3xEx"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_w77XrW": {
+      "type": "z-video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=cDUxqLP9Mw0",
+        "cover_image": "shopify://shop_images/inflation_hurting_families.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_product_order_block_Ahmcib": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_NAPwpk": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "product_2": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "columns": "one",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 30,
+            "button_label": "Get Your Complimentary Book While Supplies Last!",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "",
+            "button_label_2": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "button_link_2": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": true,
+            "button_full": true,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_NAPwpk"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": false,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_EA9iHg": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_GMYPbW": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"The 'Creature' book is my kids' favorite in the Tuttle Twins series. They feel so smart knowing how money works and who's to blame for inflation!\"</p>",
+            "font_size": 18,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/sarah3.jpg",
+            "profile_name": "Sarah L.",
+            "profile_location": "Nevada",
+            "image_position": "image-left",
+            "narrow_width": true
+          }
+        },
+        "image_text_LeEYe9": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/14books.webp",
+            "image_position": "image-left",
+            "image_size": "small",
+            "heading": "<p><strong>6 MILLION</strong> <br/>COPIES SOLD!</p>",
+            "heading_font_size": 40,
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "button_large": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "background": "#2f2f2f",
+            "text_color": "#ffffff",
+            "rounded": true,
+            "height": "210"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_GMYPbW",
+        "image_text_LeEYe9"
+      ],
+      "settings": {
+        "column": 2,
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "narrow_width": true
+      }
+    },
+    "ssky_image_banner_78XNFh": {
+      "type": "ssky-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "image": "shopify://shop_images/kidcr.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_X8QkU4": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_fzjd6Q": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "product_2": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "columns": "one",
+            "heading": "<p>We're offering new customers a<br/><strong>FREE book for a limited-time</strong></p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Get Your FREE BOOK Now  - Just Enter Code: JKFree",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "",
+            "button_label_2": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "button_link_2": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": false,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_fzjd6Q"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 88,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_H3qULt": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_rby9zL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why Are We Giving Away This Book?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_CchGHy": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our Tuttle Twins books are making a difference in the lives of children and their parents. We’ve sold over 3.5 million copies so far. But there are still so many families that haven’t read them yet, and so many children that are only hearing “one side of the story.” Our mission is to reach even more homes.</p><p>We’re confident that if you read one book, you’ll be interested in the rest. It’s the reason we offer a free money-back guarantee for folks that buy our complete book sets.</p><p>So, we’re giving away a free copy of <em>The Tuttle Twins and the Creature From Jekyll Island</em> while our surplus printing supply lasts. We’re sure it will be a hit in your house. We chose this book because inflation is at record highs. Politicians and media outlets are busy spinning up excuses for inflation without addressing the core reasons for it. And families like yours need to understand what’s really happening—and what you can do about it.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rby9zL",
+        "text_CchGHy"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_LHBb7C": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_yJzdHT": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>What Is Inflation?<br/>How Can We Fight Against It?</p>",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_9mKbia": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Learning how money really works is one of the most important (and difficult) things to teach.</p><p>The Tuttle Twins use stories and illustrations to present these concepts in a fun and interesting way that children can easily understand.</p><p>In our book, inflation and markets come to life as Ethan and Emily explore a farmer’s market and county fair to understand just how controlling the “Creature from Jekyll Island” (the inflation monster) can be.</p><p>But what is the creature—and why can it raise prices and steal people’s money? And what exactly is money, anyway? Your children will discover the answers to these and other questions in this engaging and energetic book!</p><p><span style=\"text-decoration:underline\"><strong>And for a limited time, it’s yours—free.</strong></span> All you need to pay is the shipping cost!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_yJzdHT",
+        "text_9mKbia"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/tt3-qeif4075bqh2q8uw3izxxlv2qk5vsvzzmu2v7chlog.jpg",
+        "rounded": false,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_iGkVax": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_DUJDYk": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "product_2": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "columns": "two",
+            "heading": "<p>Teach Your Child About<br/><strong>Money and Inflation</strong></p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "<p><em>For a limited time, just pay shipping and get our children’s book for FREE<br/>Just enter code: JKFREE</em></p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 55,
+            "button_label": "Claim Your Free Book",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_label_2": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "button_link_2": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_DUJDYk"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 28,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_WfDztj": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_4YQft9": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<h4>With our books, your children will learn things like:</h4><ul><li>Why a <strong>free market</strong> economy is the greatest way to lift people out of poverty and allow people to trade with one another.</li><li>How <strong>property rights</strong> allows us to decide what’s best for us, and make decisions for our family.</li><li>Why the world is a better place because of <strong>entrepreneurs</strong> who create businesses to help serve us and improve our lives.</li><li>What <strong>socialism</strong> is and why it is so destructive to our freedoms and well being.</li><li>How the <strong>Golden Rule</strong> is so important to people getting along with one another, no matter where we live, what we look like, or what we believe.</li><li>Why <strong>education is so important</strong>, and why children should be allowed to learn things they are interested in.</li><li>What <strong>true laws</strong> are, and why the government should protect our rights.</li><li>…and so much more!</li></ul>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_wqCMNX": {
+          "type": "image",
+          "settings": {
+            "image_mobile": "shopify://shop_images/kids-tt-books-1024x472.png",
+            "image": "shopify://shop_images/kids-tt-books-1024x472.png"
+          }
+        },
+        "text_aqUYCi": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>And each of our books come with discussion questions at the end, helping parents like you have <em>amazing</em> conversations with their children about these rich ideas.</p><p>We get emails daily from parents who are blown away at how much they learned alongside their children—and how their conversations over dinner have “leveled up” by talking about real-world concepts about what’s happening in the world.</p><p>You owe it to your children to give them this well-rounded education that schools aren’t teaching—and the Tuttle Twins books make it super easy for you.</p><p>Your children can read these books on their own, or you can read along with them — and be sure to use the FREE activity workbooks we provide, to reinforce these new ideas your children will be learning.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_3Fj3V9": {
+          "type": "image",
+          "settings": {
+            "image_mobile": "shopify://shop_images/all14.webp",
+            "image": "shopify://shop_images/all14.webp"
+          }
+        },
+        "heading_pXHkHD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What Makes Our Books So Different?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_zCGUai": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>The Tuttle Twins’ Book Series Introduces Important Ideas That Schools Don’t Teach.</p><p>There aren’t any other children’s books that present a vast array of free-market topics in such a fun way. The books teach relevant freedom-based concepts that most of us were never taught as kids. But it’s not too late!</p><p>The Tuttle Twins books challenges children to learn “adult” ideas—and they love it! We explain these ideas simply, and with helpful illustrations… and we’ve been amazed at how well kids rise to this challenge. Yours will, too. </p><p>These stimulating stories encourage children to make sense of the world—and we’ve heard so much fun stories about how this is working so well.</p><p>One mom wrote us this: “I took my kids to the grocery store a few days after we read one of the Tuttle Twins books about free markets. We were walking down the chip aisle when my son pointed to the 18 kinds of potato chips and said <em>Hey, that’s spontaneous order!</em> I kid you not. My kids know economic ideas that I didn’t even understand until we read the book together. So awesome!”</p><p>And I recently got this email from another mom: “I’ve been so anxious about the state of our world and what to share with my children. Now we read Tuttle Twins books each night and it has been so helpful to talk to my kids about things like individual rights, the proper role of government, and what it means to be free. These discussions are so meaningful to our family, and they wouldn’t be happening without these books. Thank you so much!”</p><p>That’s what our books are about: helping you have amazing conversations with your children about the ideas that built our amazing country but which are now under attack. </p><p>For too long, parents have lacked a language to communicate these concepts to their kids.</p><p>But not any longer. That problem has been solved with the Tuttle Twins books!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_4YQft9",
+        "image_wqCMNX",
+        "text_aqUYCi",
+        "image_3Fj3V9",
+        "heading_pXHkHD",
+        "text_zCGUai"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 100,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_eqiVER": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_four_WDpf78": {
+          "type": "order_block_four",
+          "settings": {
+            "image": "shopify://shop_images/14books.webp",
+            "max_width": 40,
+            "rounded": false,
+            "heading": "<p>For a limited time, get your first book for free!</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "subheading": "",
+            "text_style_subheading": "medium-semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "left",
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "show_price": false,
+            "button_text": "Get Your FREE Book (just pay shipping)",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_large": true,
+            "show_or_divider": true,
+            "secondary_product": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "secondary_show_price": false,
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_link": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_large2": false
+          }
+        }
+      },
+      "block_order": [
+        "order_block_four_WDpf78"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_EDJJCQ": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_zJd6m7": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_AJaBMP": {
+          "type": "text",
+          "settings": {
+            "max_width": 80,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p><strong>Amid the ever-growing problems facing the next generation, true education has never been so important to defend. The Tuttle Twins books are a great way to instill a respect for the ideas of liberty in your children and help them understand the principles of a free society, before it's too late.</strong></p>",
+            "text_size": "large",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_AJaBMP"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 100,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Y9dP8n": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_cq8kGR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Sales of Tuttle Twins Books are Staggering!</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_6kaGkH": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>When we started selling these books, we weren’t sure if there would be demand. We made them as a labor of love—because we believe in these ideas so strongly.</p><p>But we quickly learned that there were many parents out there who shared our values and our concerns with the world—and who were desperate to find material like this to teach their children about why freedom is so important.</p><p>And today, millions of children are reading the Tuttle Twins books, learning the dangers of socialism, the benefits of freedom, the importance of entrepreneurship, and more!</p><p>Each day we hear from families who have newly discovered these materials, expressing their gratitude. Sometimes they’re even upset… that they didn’t find the books years ago!</p><p>Amandah wanted her kids to know about the principles of liberty and free markets, but she didn’t think they would have any interest. The Tuttle Twins give her kids the ability to learn “big kid” ideas (that most adults have never learned) and make it super easy for her, as a busy mom, to make sure her children learn valuable concepts. She was surprised and delighted that her kids were actually excited to read the books.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cq8kGR",
+        "text_6kaGkH"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 100,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_kxDbGG": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_gw7DCM": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "product_2": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "columns": "one",
+            "heading": "<p>Join the 500,000+ Families<br/><strong>Benefiting from the Tuttle Twins</strong></p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Get Your FREE BOOK Now  - Just Enter Code: JKFree",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "",
+            "button_label_2": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "button_link_2": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_gw7DCM"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 90,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 28,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_6KCrfB": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_wEFD9f": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"The Tuttle Twins have given my kids a solid understanding of free markets and piqued their interest in things I wouldn’t think they would have been able to understand or even be interested in learning. These books are now a central part of our curriculum!\"</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/Maya-T-1.png",
+            "profile_name": "Amandah",
+            "profile_location": "",
+            "image_position": "image-left",
+            "narrow_width": true
+          }
+        },
+        "text_XUhWXd": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Cassandra and her husband have three small childrenand are both very politically involved. They are passionate about liberty, but it goes over their kid’s heads when they have conversations. They had a hard time teaching what liberty means to their children. The whole family was thrilled when the Tuttle Twins came out and made these topics relatable—and the kids ate it up quickly</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "testimonial_gFR3tF": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"We were extremely excited when the Tuttle Twins books came out, which made the ideas of liberty so relatable to our young children. Now they are hungry to learn even more!\"</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/Sarah-L-1.png",
+            "profile_name": "Cassandra",
+            "profile_location": "",
+            "image_position": "image-right",
+            "narrow_width": true
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_wEFD9f",
+        "text_XUhWXd",
+        "testimonial_gFR3tF"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 50,
+        "padding_top": 52,
+        "padding_bottom": 20,
+        "narrow_width": true
+      }
+    },
+    "ssky_text_block_FL86kE": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_m9JzN8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Cost of NOT Getting These Books</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_hggTtA": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>There’s a high cost to our society when these ideas aren’t taught to children. Why? It’s quite simple: our kids become voters.</p><p>Ignorant voters support laws that restrict our rights and hurt businesses. Even worse, they miss out on valuable principles that improve their life.</p><p>The current political and economic climate is coming to a critical tipping point, and socialism’s popularity is on the rise. You need to educate your children about the ideas of freedom today—because people you strongly disagree with will be exposing them to all kinds of bad ideas in the days ahead.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_m9JzN8",
+        "text_hggTtA"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 100,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_hUAKhd": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_CYtaRN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ordering Now Gives You an Early Advantage!</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_iLFN9W": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<h4>There are plenty of reasons to get the Tuttle Twins books today:</h4><ul><li>We have a <strong>100%</strong> Unconditional Money-Back Guarantee (for those that purchase our book bundles)</li><li><strong>Over 6 million</strong> copies of the books have been sold, with ⭐⭐⭐⭐⭐ 5-star reviews from people around the world</li><li>Your children <strong>will learn</strong> amazing, important things very soon with these books</li></ul><p>Our children’s books are for kids age 5-11, but the magic of this content—and our amazing illustrations—is that younger and older children are attracted to learning from the books, too.</p><p>And more than half of the parents who buy our books indicate that <em>they</em> learned a lot, too! (Maybe we should send a few copies to Congress…)</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CYtaRN",
+        "text_iLFN9W"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 100,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_kJQFcg": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_9BVUKk": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"Forget 5-11-year-olds… When I read these books to my kids, I learned all sorts of stuff nobody ever taught me. Now my kids and I have some awesome discussions together!\"</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/Josie-A-1.png",
+            "profile_name": "Josie A.",
+            "profile_location": "Nevada",
+            "image_position": "image-left",
+            "narrow_width": true
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_9BVUKk"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 20,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "narrow_width": true
+      }
+    },
+    "ssky_product_order_block_AgPnGU": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_Xwiq36": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "product_2": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "columns": "one",
+            "heading": "<p>We're offering new customers a<br/><strong>FREE book for a limited-time</strong></p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Get Your FREE BOOK Now",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "",
+            "button_label_2": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "button_link_2": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "— OR —",
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_Xwiq36"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 88,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 28,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_dqQBch": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_j9Y8F9": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>You care about the principles of freedom, and with the Tuttle Twins, you now have<strong> a way to teach these values to your children</strong>.</p><p>As a father, I know how hard it is to communicate big ideas to little kids. For example, how do you teach an eight-year-old boy about the free market in a way that will be relevant to him? How can a six-year-old girl understand property rights? How can your child learn about and remember the Golden Rule?</p><p>And more than getting them to learn about the ideas… how do you get them to <em>care</em> about them?</p><p>As the founder and president of a thriving non-profit and the author of over two dozen books, I’ve spent years trying to figure out simple and effective ways of teaching other people important principles. Along the way, I came to realize something: kids can understand these ideas, too.</p><p>And now that we’ve sold over 6 million copies, the market has spoken… countless parents agree and are seeing the magic play out in their homes.</p><p>These families have been able to have some amazing conversations about big ideas—even with their little children. So get the books today and watch your child develop important critical thinking skills and insight about ideas that most adults don’t even understand.4</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "heading_n3hjyC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>How does it work?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_Gp9zyt": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>You can read these books to your kids, or they can simply read them themselves. Once they do, they will have the vocabulary to ask questions that lead to inspiring conversations. And with this new perspective, They will be encouraged to learn even more, ask bigger questions, and even take action—like writing an elected official or starting a small business.</p><p>Our optional activity workbooks and parent guides will enhance the process and enable you as a parent to make sure your child learns all of the many principles and concepts covered in the Tuttle Twins books.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_j9Y8F9",
+        "heading_n3hjyC",
+        "text_Gp9zyt"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 36,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_bn3Hne": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_mFCaEJ": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"My oldest is seven years old. He is autistic, on the high-functioning side. Speech therapy is via Zoom. So we've been reading a LOT more. He loves The Creature from Jekyll Island!! He now has made his own money to buy a very specific train he wants for Christmas.\"</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/Carrie-Hammer.jpg",
+            "profile_name": "Carrie Hammer",
+            "profile_location": "",
+            "image_position": "image-right",
+            "narrow_width": true
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_mFCaEJ"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "narrow_width": true
+      }
+    },
+    "ssky_product_order_block_HqFaPm": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_four_kjdn93": {
+          "type": "order_block_four",
+          "settings": {
+            "image": "shopify://shop_images/jekyll_d9a2e667-8590-4af0-81f9-4ca9ab490c6d.jpg",
+            "max_width": 40,
+            "rounded": false,
+            "heading": "<p>For a limited time, get your first book for free!</p>",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "subheading": "",
+            "text_style_subheading": "medium-semibold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_align": "left",
+            "product": "the-tuttle-twins-and-the-creature-from-jekyll-island",
+            "show_price": false,
+            "button_text": "Get Your Free Book",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_large": true,
+            "show_or_divider": true,
+            "secondary_product": "the-tuttle-twins-and-the-creature-from-jekyll-island-bundle",
+            "secondary_show_price": false,
+            "secondary_product_button_label": "Click here to also get the Activity Workbook, audiobook, and Parent’s Guide—all for $17.88!",
+            "secondary_link": "",
+            "button_style2": "link",
+            "button_link_color2": "#da5846",
+            "button_large2": false
+          }
+        }
+      },
+      "block_order": [
+        "order_block_four_kjdn93"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 100,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 28,
+        "padding_bottom": 60,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_zPhkpt",
+    "ssky_text_block_M9NNP8",
+    "z_video_w77XrW",
+    "ssky_product_order_block_Ahmcib",
+    "ssky_custom_block_EA9iHg",
+    "ssky_image_banner_78XNFh",
+    "ssky_product_order_block_X8QkU4",
+    "ssky_text_block_H3qULt",
+    "ssky_text_image_block_LHBb7C",
+    "ssky_product_order_block_iGkVax",
+    "ssky_text_block_WfDztj",
+    "ssky_product_order_block_eqiVER",
+    "sskymo_product_column_c_EDJJCQ",
+    "ssky_text_block_zJd6m7",
+    "ssky_text_block_Y9dP8n",
+    "ssky_product_order_block_kxDbGG",
+    "ssky_custom_block_6KCrfB",
+    "ssky_text_block_FL86kE",
+    "ssky_text_block_hUAKhd",
+    "ssky_custom_block_kJQFcg",
+    "ssky_product_order_block_AgPnGU",
+    "ssky_text_block_dqQBch",
+    "ssky_custom_block_bn3Hne",
+    "ssky_product_order_block_HqFaPm"
+  ]
+}

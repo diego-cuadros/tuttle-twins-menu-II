@@ -1,0 +1,121 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "z_announcement_bar_LKK6Jf": {
+      "type": "z-announcement-bar",
+      "blocks": {
+        "announcement_c6rbAX": {
+          "type": "announcement",
+          "settings": {
+            "text": "Tax Day Sale! 20% Off Kids Combo Pack with Code: TAXDAY26",
+            "link": "shopify://products/tuttle-twins-combo-pack-plus-free-bonuses"
+          }
+        },
+        "announcement_wBLWXe": {
+          "type": "announcement",
+          "settings": {
+            "text": "Give 20%, Get 20%",
+            "link": "shopify://pages/refer"
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on Domestic Orders $175+",
+            "link": ""
+          }
+        },
+        "announcement_78BeLz": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Free Tuttle Rebuttals eBook on Orders $150+",
+            "link": ""
+          }
+        },
+        "announcement_FreD8T": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Shop Holiday Savings Now 🎁",
+            "link": "shopify://pages/sale"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_c6rbAX",
+        "announcement_wBLWXe",
+        "announcement-bar-0",
+        "announcement_78BeLz",
+        "announcement_FreD8T"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": false,
+        "color_scheme": "scheme-2",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "z_custom_liquid_C3YVjz": {
+      "type": "z-custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% unless page.handle == 'rootedwings' or page.handle == 'next' or page.handle == 'problem' or page.handle == 'classwallet' or page.handle =='kirk' or collection.handle == 'classwallet' or page.handle == 'gift-guide' or page.handle =='sale'%}\n  <div style=\"background-color: #04AED8; text-align: center; margin: 0; padding: 0; line-height: 0;\">\n    <a href=\"https://www.tuttletwins.com/products/tuttle-twins-combo-pack-plus-free-bonuses\" style=\"display: block; margin: 0; padding: 0;\">\n      <img\n        src=\"{{ 'Tax-Day-Sale-26-desktop.png' | asset_img_url: '3600x' }}\"\n        alt=\"Description of image\"\n        class=\"responsive-banner desktop-only\"\n      >\n      <img\n        src=\"{{ 'Tax-Day-Sale-26-mobile.png' | asset_img_url: '800x' }}\"\n        alt=\"Description of mobile image\"\n        class=\"responsive-banner mobile-only\"\n      >\n    </a>\n  </div>\n\n  <style>\n    .responsive-banner {\n      display: block;\n      width: 100%;\n      max-width: 100%;\n      margin: 0;\n      padding: 0;\n      border: 0;\n    }\n\n    .desktop-only {\n      display: none;\n    }\n\n    .mobile-only {\n      display: block;\n    }\n\n    @media (min-width: 768px) {\n      .desktop-only {\n        display: block;\n      }\n      .mobile-only {\n        display: none;\n      }\n    }\n  </style>\n{% endunless %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "z_custom_liquid_ecjBkx": {
+      "type": "z-custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% unless page.handle == 'rootedwings' or page.handle == 'next' or page.handle == 'problem' or page.handle == 'classwallet' or page.handle =='kirk' or collection.handle == 'classwallet' or page.handle == 'gift-guide' or page.handle =='sale'%}\n  <div style=\"background-color: #04AED8; text-align: center; margin: 0; padding: 0; line-height: 0;\">\n    <a href=\"https://tuttletwins.com/collections/financial-literacy\" style=\"display: block; margin: 0; padding: 0;\">\n      <img\n        src=\"{{ 'Financial-lit-26-desktop.png' | asset_img_url: '3600x' }}\"\n        alt=\"Description of image\"\n        class=\"responsive-banner desktop-only\"\n      >\n      <img\n        src=\"{{ 'Financial-lit-26-mobile.png' | asset_img_url: '800x' }}\"\n        alt=\"Description of mobile image\"\n        class=\"responsive-banner mobile-only\"\n      >\n    </a>\n  </div>\n\n  <style>\n    .responsive-banner {\n      display: block;\n      width: 100%;\n      max-width: 100%;\n      margin: 0;\n      padding: 0;\n      border: 0;\n    }\n\n    .desktop-only {\n      display: none;\n    }\n\n    .mobile-only {\n      display: block;\n    }\n\n    @media (min-width: 768px) {\n      .desktop-only {\n        display: block;\n      }\n      .mobile-only {\n        display: none;\n      }\n    }\n  </style>\n{% endunless %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "z_announcement_bar_LKK6Jf",
+    "header",
+    "z_custom_liquid_C3YVjz",
+    "z_custom_liquid_ecjBkx"
+  ]
+}

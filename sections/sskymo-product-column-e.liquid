@@ -1,0 +1,95 @@
+{{ 'ssky-product-column.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  .ssky-product-column-{{ section.id }} .ssky-product-column {
+    padding-top: {{ 64 | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ 64 | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-product-column-{{ section.id }} .ssky-product-column.block-2 {
+    border-radius: 15vw 0 0 0;
+  }
+  .ssky-product-column-{{ section.id }} .ssky-product-column.block-4 {
+    border-radius: 0 15vw 0 0;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="ssky-product-column-{{ section.id }}">
+  {%- for cyoc_descriptions in shop.metaobjects.cyoc_descriptions.values limit: 10 -%}
+    <div class="ssky-product-column gradient {% cycle 'color-scheme-1', 'color-scheme-5' %} {% cycle 'block-1', 'block-2', 'block-3', 'block-4' %}">
+      <div class="ssky-product-column__wrapper page-width">
+        <div class="ssky-product-column__blocks ssky-text-block__blocks center">
+          <div class="ssky-product-column-single__block-set">
+            <div
+              class="ssky-product-column__block ssky-product-column-single__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              <h3 class="ssky-product-column__heading ssky-product-column__heading--mobile ssky-text-block__heading weight-semibold rte">
+                {{ cyoc_descriptions.heading }}
+              </h3>
+              <div class="ssky-product-column__image-con">
+                <div
+                  class="ssky-product-column__image media image-fit"
+                  style="padding-bottom:{{ 1 | divided_by: cyoc_descriptions.image.value.image.aspect_ratio | times: 100 }}%;"
+                >
+                  {%- if cyoc_descriptions.image != blank -%}
+                    {{ cyoc_descriptions.image | image_url: width: 720 | image_tag }}
+                  {%- else -%}
+                    {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+                {%- if cyoc_descriptions.link_add_to_cart_button != blank -%}
+                  {%- assign block_product = cyoc_descriptions.link_add_to_cart_button.value -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                  {%- render 'buy-buttons',
+                    product: block_product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    is_product_column: true,
+                    is_product_column_single: true
+                  -%}
+                {%- endif -%}
+              </div>
+
+              <div class="ssky-text-block__blocks left">
+                <h3 class="ssky-product-column__heading ssky-product-column__heading--desktop ssky-text-block__heading weight-semibold rte">
+                  {{ cyoc_descriptions.heading }}
+                </h3>
+                <div class="ssky-product-column__text rte text-body-large">
+                  {{ cyoc_descriptions.description | metafield_tag }}
+                </div>
+                <div class="ssky-product-column__text ssky-product-column__text--subtext text-body-large rte">
+                  {{ cyoc_descriptions.sub_text | metafield_tag }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "TTm CYOC descriptions",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "presets": [
+    {
+      "name": "TTm CYOC descriptions"
+    }
+  ]
+}
+{% endschema %}

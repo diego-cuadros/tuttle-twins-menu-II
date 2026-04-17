@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_ABVWdb": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_86zdGd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Job Opportunity: Exhibit Manager to Booth at Conventions<\/p>",
+            "heading_size": "h0",
+            "heading_weight": "semibold"
+          }
+        },
+        "text_Xf7w47": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p><strong><br\/>Regional Exhibit Manager<\/strong><br\/><br\/><strong>Location<\/strong>:  Virtual Office, Travel Required<br\/><br\/><strong>Hours:<\/strong>  Planning\/research for, and staffing at, 8-10+ events\/year<br\/><br\/><strong>Job Type:<\/strong>  Hourly, $20\/hour + Travel Stipend + Possible Bonuses<br\/><br\/><strong>Overview:<\/strong>  We are seeking a reliable, detail-oriented, and personable Regional Exhibit Manager to join our Tuttle Twins team. The successful candidate must believe in our mission to introduce the ideas of liberty to the rising generation.  The Regional Exhibit Manager will have the ability to travel, work nights and weekends, problem solve, and work in a busy environment.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_Fhx9J9": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p><strong><br\/>Responsibilities:<\/strong> Each Regional Exhibit Manager must be capable of planning and overseeing events from start to finish.<\/p><p><\/p><ul><li>Communication: Correspondence with Tuttle Twins Events Director, Event Decorators, Cross-docking Managers, Tuttle Twins Warehouse Manager, and various Event Managers, as well as communication with Tuttle Twins customers<br\/><\/li><li>Knowledge: Familiar with and believe in the Tuttle Twins mission and materials, with the ability to answer questions about products and promote our books and curriculum.<br\/><\/li><li>Planning: creating timelines<br\/><\/li><li>Budgeting: Creating and managing budgets, tracking expenses, and ensuring costs are within limits<br\/><\/li><li>Logistics: Booking events, filing event paperwork on time, organize event and shipping details, keeping track of inventory, reporting of event details to Tuttle Twins Event Director throughout the process<br\/><\/li><li>Installation: Physical installation and breakdown of Tuttle Twins booth at events<br\/><\/li><li>Event Ideas: Responsibility of assigned events as well as coming up with other suitable events in your region.<br\/><\/li><\/ul><p>Exhibit Managers need to be able to lift and move heavy objects and stand for extended periods. They may also need to work evenings and weekends depending on event needs.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_naJp44": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "text": "<p><strong><br\/>Requirements:<\/strong><\/p><ul><li>Professional but friendly. A good ambassador for the organization.<br\/><\/li><li>Highly organized and ability to work under pressure<br\/><\/li><li>Ability to travel and work weekends\/evenings<br\/><\/li><li>Knowledgeable on Tuttle Twins mission, books, and curriculum<br\/><\/li><li>Preferred experience in event planning<br\/><\/li><li>Physical ability to lift heavy objects and stand for extended periods<br\/><\/li><\/ul><p><strong><br\/>Benefits:<\/strong><\/p><ul><li>Positive work environment with supportive team members<br\/><\/li><li>Employee discounts on books and other merchandise<br\/><\/li><li>Bonuses available<br\/><\/li><li>Making a difference with an organization that is improving the education of the rising generation<\/li><\/ul>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_xrL4rq": {
+          "type": "text",
+          "settings": {
+            "max_width": 110,
+            "text": "<p><strong><br\/>To Apply:<\/strong>  Join our team and be part of a fulfilling experience! If you meet the requirements and are interested in this position, please email your resume and a 2-minute video cover letter to <a href=\"mailto:andrea@libertas.org\" title=\"mailto:andrea@libertas.org\">andrea@libertas.org<\/a> detailing your qualifications and availability. We look forward to hearing from you!<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_86zdGd",
+        "text_Xf7w47",
+        "text_Fhx9J9",
+        "text_naJp44",
+        "text_xrL4rq"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_block_ABVWdb"
+  ]
+}

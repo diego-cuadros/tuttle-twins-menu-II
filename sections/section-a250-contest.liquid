@@ -1,0 +1,191 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Contest + Prizes
+  File:    sections/section-a250-contest.liquid
+  Blocks:  prize_card (grand / runner-up, repeatable)
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-contest-section" id="a250-contest">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-section-sub">{{ section.settings.subheading }}</p>
+
+    {% assign prize_blocks = section.blocks | where: 'type', 'prize_card' %}
+    {% if prize_blocks.size > 0 %}
+      <div class="a250-prizes-grid">
+        {% for block in prize_blocks %}
+          <div class="a250-prize-card a250-prize-card--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+            <div class="a250-prize-card-header">
+              <div class="a250-prize-icon">{{ block.settings.icon }}</div>
+              <div>
+                <div class="a250-prize-card-tag">{{ block.settings.tag }}</div>
+                <div class="a250-prize-card-title">{{ block.settings.title }}</div>
+              </div>
+            </div>
+            <div class="a250-prize-card-body">
+              <p>{{ block.settings.description }}</p>
+              {% if block.settings.badge_text != blank %}
+                <span class="a250-prize-badge">
+                  {% if block.settings.badge_emoji != blank %}{{ block.settings.badge_emoji }}&nbsp;{% endif %}
+                  {{ block.settings.badge_text }}
+                </span>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.show_deadline %}
+      <div class="a250-deadline-box">
+        <div class="a250-deadline-label">{{ section.settings.deadline_label }}</div>
+        <div class="a250-deadline-date">{{ section.settings.deadline_date }}</div>
+        <div class="a250-deadline-sub">{{ section.settings.deadline_sub }}</div>
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · Contest & Prizes",
+  "tag": "div",
+  "class": "a250-section-contest",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "The Contest"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Write a letter. Win for your community."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Kids write an editorial for their local newspaper about America's 250th anniversary — weaving in what they've learned from the Tuttle Twins. The best entries get recognized. The winners give back."
+    },
+    {
+      "type": "header",
+      "content": "Deadline Box"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_deadline",
+      "label": "Show deadline box",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "deadline_label",
+      "label": "Deadline label",
+      "default": "Submission Deadline"
+    },
+    {
+      "type": "text",
+      "id": "deadline_date",
+      "label": "Deadline date",
+      "default": "[CONTEST DEADLINE — TBD]"
+    },
+    {
+      "type": "text",
+      "id": "deadline_sub",
+      "label": "Deadline fine print",
+      "default": "One entry per child · Open to all ages · U.S. residents only"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "prize_card",
+      "name": "Prize Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Card style",
+          "options": [
+            { "value": "grand",  "label": "Grand Prize (Navy)" },
+            { "value": "runner", "label": "Runner-Up (Teal)"   }
+          ],
+          "default": "grand"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon / Emoji",
+          "default": "✈️"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag line (small caps above title)",
+          "default": "Grand Prize · 1 Family"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "An Unforgettable Family Trip"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "One family will win an extraordinary trip to a landmark of American history. Details coming soon — but this one is worth writing for."
+        },
+        {
+          "type": "text",
+          "id": "badge_emoji",
+          "label": "Badge emoji (optional)",
+          "default": "🗺️"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text (optional)",
+          "default": "Historic American Destination · TBD"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Contest & Prizes",
+      "blocks": [
+        {
+          "type": "prize_card",
+          "settings": {
+            "style": "grand",
+            "icon": "✈️",
+            "tag": "Grand Prize · 1 Family",
+            "title": "An Unforgettable Family Trip",
+            "description": "One family will win an extraordinary trip to a landmark of American history. Details coming soon — but this one is worth writing for. Your family's Dinner Table Moment, taken live.",
+            "badge_emoji": "🗺️",
+            "badge_text": "Historic American Destination · Details TBD"
+          }
+        },
+        {
+          "type": "prize_card",
+          "settings": {
+            "style": "runner",
+            "icon": "📚",
+            "tag": "Runner-Up Prize · 250 Winners",
+            "title": "Donate 3 Books to Your Community",
+            "description": "250 randomly drawn winners each receive all 3 volumes of America's History by Tuttle Twins — to donate to the library, school, or non-profit of their choice. Their words become a gift to their community.",
+            "badge_emoji": "🏆",
+            "badge_text": "250 Winners · Randomly Drawn"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

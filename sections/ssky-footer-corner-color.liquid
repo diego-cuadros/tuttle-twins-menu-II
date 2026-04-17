@@ -1,0 +1,37 @@
+{%- for block in section.blocks -%}
+  {%- if template.suffix == block.settings.title or template.name == block.settings.title -%}
+    {%- style -%}.footer-corner-color-ssky{background-color: {{ block.settings.corner_color }} !important;}{%- endstyle -%}
+  {%- endif -%}
+{%- endfor -%}
+{% schema %}
+{
+  "name": "Footer corner color",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "template",
+      "name": "Template",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Set unique footer corner color for each template."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Template name",
+          "info": "For example, 'about' is the template name for 'page.about.json'."
+        },
+        {
+          "type": "color",
+          "id": "corner_color",
+          "label": "color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

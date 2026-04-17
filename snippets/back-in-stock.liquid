@@ -1,0 +1,77 @@
+{% comment %}
+  Renders a back-in-stock notification component with Klaviyo integration.
+
+  Accepts:
+  - product: {Object} product object
+  - variant: {Object} current variant object
+  - section_id: {String} id of section to which this snippet belongs
+
+  Usage:
+  {% render 'back-in-stock', product: product, variant: product.selected_or_first_available_variant, section_id: section.id %}
+{% endcomment %}
+
+<style>
+  back-in-stock .field__input::placeholder {
+  color: #000000;
+  opacity: 1; /* Ensures full opacity in Firefox */
+}
+
+/* For Microsoft Edge */
+::-ms-input-placeholder {
+  color: #000000;
+}
+
+/* For Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: #000000;
+} {
+  }
+</style>
+
+<back-in-stock data-section-id="{{ section_id }}" class="back-in-stock-container">
+  <div class="back-in-stock-wrapper">
+    <p class="back-in-stock-heading">
+      Out of stock? Get notified when it's available!
+    </p>
+
+    <form class="back-in-stock-form" js-form>
+      <div class="back-in-stock-form__field-group">
+        <div class="field">
+          <label class="visually-hidden" for="back-in-stock-email-{{ section_id }}">
+            Email Address
+          </label>
+          <input
+            type="email"
+            class="field__input"
+            id="back-in-stock-email-{{ section_id }}"
+            name="email"
+            required
+            placeholder="Enter your email"
+            js-email
+          >
+        </div>
+
+        <input
+          type="hidden"
+          name="variantId"
+          value="{{ variant.id }}"
+          js-variant-id
+        >
+
+        <button type="submit" class="button button--primary" js-submit-btn>
+          <span class="back-in-stock-spinner" js-loading-spinner>
+            {%- render 'loading-spinner' -%}
+          </span>
+          <span js-btn-text>
+            Notify Me
+          </span>
+        </button>
+      </div>
+
+      <div class="back-in-stock-message" js-message></div>
+    </form>
+  </div>
+</back-in-stock>
+
+{{ 'component-back-in-stock.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'back-in-stock.js' | asset_url }}" defer="defer"></script>

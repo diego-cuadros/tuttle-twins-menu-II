@@ -1,0 +1,777 @@
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .tt-collection-{{ ai_gen_id }} {
+    padding: 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .tt-collection-container-{{ ai_gen_id }} {
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding: 0 {{ settings.spacing_grid_horizontal }}px;
+  }
+
+  .tt-collection-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .tt-collection-title-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-weight: {{ settings.type_header_font.weight }};
+    font-size: calc({{ block.settings.heading_size }}px * {{ settings.heading_scale }} / 100);
+    color: {{ block.settings.text_color }};
+    margin: 0 0 20px;
+    line-height: 1.2;
+  }
+
+  .tt-collection-description-{{ ai_gen_id }} {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: calc({{ block.settings.description_size }}px * {{ settings.body_scale }} / 100);
+    color: {{ block.settings.text_color }};
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .tt-collection-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: {{ settings.spacing_grid_horizontal }}px {{ settings.spacing_grid_vertical }}px;
+    margin-bottom: 0px;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }} {
+    background: {{ block.settings.card_background }};
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 {{ settings.card_shadow_vertical_offset }}px {{ settings.card_shadow_blur }}px rgba({{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'red' }}, {{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'green' }}, {{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'blue' }}, {{ settings.card_shadow_opacity | divided_by: 100.0 }});
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+    text-align: {{ settings.card_text_alignment }};
+    position: relative;
+    border: 2px solid transparent;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 {{ settings.card_shadow_vertical_offset | plus: 5 }}px {{ settings.card_shadow_blur | plus: 5 }}px rgba({{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'red' }}, {{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'green' }}, {{ settings.color_schemes['scheme-1'].settings.shadow | color_extract: 'blue' }}, {{ settings.card_shadow_opacity | divided_by: 100.0 | times: 1.5 }});
+    border: 2px solid #04aed8;
+    border-radius: 12px;
+  }
+
+  .tt-collection-card-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: visible; /* let badge breathe; card still clips overall */
+    border-radius: 10px 10px 0 0;
+    transition: border-radius 0.3s ease;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }}:hover .tt-collection-card-image-wrapper-{{ ai_gen_id }} {
+    border-radius: 10px;
+  }
+
+  .tt-collection-card-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }}:hover .tt-collection-card-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  /* Make sure theme badges sit above overlay and aren't clipped */
+  .tt-collection-card-image-wrapper-{{ ai_gen_id }} .card__badge {
+    position: absolute;
+    inset: auto auto 12px 12px; /* bottom-left */
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Full card overlay on hover */
+  .tt-full-card-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 174, 216, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }}:hover .tt-full-card-overlay-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .tt-collection-card-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tt-collection-card-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .tt-collection-card-content-{{ ai_gen_id }} {
+    padding: 25px 20px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tt-collection-card-title-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-weight: 600;
+    font-size: calc({{ block.settings.card_title_size }}px * {{ settings.heading_scale }} / 100);
+    color: {{ block.settings.text_color }};
+    margin: 0 0 10px;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .tt-collection-card-price-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-weight: 500;
+    font-size: calc({{ block.settings.card_price_size }}px * {{ settings.body_scale }} / 100);
+    color: {{ block.settings.price_color }};
+    margin: 0;
+    text-decoration: none;
+  }
+
+  /* ensure both compare-at and sale use schema size */
+  .tt-collection-card-price-{{ ai_gen_id }} s,
+  .tt-collection-card-price-{{ ai_gen_id }} .tt-collection-card-sale-price-{{ ai_gen_id }} {
+    font-size: inherit;
+  }
+
+  .tt-collection-card-price-{{ ai_gen_id }} s {
+    color: rgba(var(--color-foreground), 0.6); /* Dawn-style gray for compare-at */
+    margin-right: 0.3rem;
+  }
+
+  .tt-collection-card-sale-price-{{ ai_gen_id }} {
+    color: {{ block.settings.price_color }}; /* base sale price color (overridden below for blue) */
+  }
+
+  .tt-collection-cta-{{ ai_gen_id }} {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  /* Section CTA button – now uses Quick Add colors to avoid duplicate unused color schema */
+  .tt-collection-{{ ai_gen_id }} .tt-collection-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px;
+    background-color: {{ block.settings.quick_add_button_color }};
+    color: {{ block.settings.quick_add_button_text_color }};
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-weight: 600;
+    font-size: calc({{ block.settings.button_text_size }}px * {{ settings.body_scale }} / 100);
+    text-decoration: none;
+    border-radius: {{ settings.buttons_radius }}px;
+    border: {{ settings.buttons_border_thickness }}px solid {{ block.settings.quick_add_button_color }};
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 200px;
+  }
+
+  .tt-collection-{{ ai_gen_id }} .tt-collection-cta-{{ ai_gen_id }} a.tt-collection-button-{{ ai_gen_id }}:hover {
+  background-color: {{ block.settings.quick_add_button_hover_color }};
+  color: {{ block.settings.quick_add_button_hover_text_color }};
+  border: {{ block.settings.quick_add_button_hover_border_width }}px solid {{ block.settings.quick_add_button_hover_border_color }} !important;
+  transform: translateY(-2px);
+}
+
+
+  /* Quick Add to Cart Styling (unchanged, controlled by Quick Add schema) */
+  .tt-quick-add-container-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 80%;
+  }
+
+  .tt-collection-card-{{ ai_gen_id }}:hover .tt-quick-add-container-{{ ai_gen_id }} {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .tt-quick-add-button-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    background-color: {{ block.settings.quick_add_button_color }};
+    color: {{ block.settings.quick_add_button_text_color }};
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-weight: 600;
+    font-size: calc({{ block.settings.button_text_size }}px * {{ settings.body_scale }} / 100);
+    text-decoration: none;
+    border-radius: {{ settings.buttons_radius }}px;
+    border: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+  }
+
+  .tt-quick-add-button-{{ ai_gen_id }}:hover {
+  background-color: {{ block.settings.quick_add_button_hover_color }};
+  color: {{ block.settings.quick_add_button_hover_text_color }};
+  border: {{ block.settings.quick_add_button_hover_border_width }}px solid {{ block.settings.quick_add_button_hover_border_color }} !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+  /* Remove text decoration from product links */
+  .tt-collection-card-link-{{ ai_gen_id }} {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+  }
+
+  /* Mimic product-grid hover styling for TT cards (except quick-add) */
+  .tt-collection-grid-{{ ai_gen_id }} .tt-collection-card-{{ ai_gen_id }} {
+    padding: 16px 16px 0;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff00;
+  }
+
+  .tt-collection-grid-{{ ai_gen_id }} .tt-collection-card-{{ ai_gen_id }}:hover {
+    background-color: rgb(212 247 255);
+    border-radius: 15px;
+    border: 2px solid #04aed8;
+  }
+
+  .tt-collection-grid-{{ ai_gen_id }} .tt-collection-card-{{ ai_gen_id }}:hover .tt-collection-card-image-wrapper-{{ ai_gen_id }},
+  .tt-collection-grid-{{ ai_gen_id }} .tt-collection-card-{{ ai_gen_id }}:hover .tt-collection-card-content-{{ ai_gen_id }} {
+    opacity: 0.6;
+  }
+
+  .tt-collection-grid-{{ ai_gen_id }} .tt-collection-card-{{ ai_gen_id }} .tt-collection-card-sale-price-{{ ai_gen_id }} {
+    color: rgb(var(--primary-blue));
+    font-weight: 500;
+  }
+
+    .tt-collection-card-content-{{ ai_gen_id }} .tt-recommended-ages-{{ ai_gen_id }} {
+    display: block;
+    margin-top: 4px;   /* small gap under title */
+    margin-bottom: 10px; /* bigger gap above price */
+  }
+
+
+  @media screen and (max-width: 749px) {
+    .tt-collection-{{ ai_gen_id }} {
+      padding: 40px 0;
+    }
+
+    .tt-collection-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      gap: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+    }
+
+    .tt-collection-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size | times: 0.8 }}px * {{ settings.heading_scale }} / 100);
+    }
+
+    .tt-collection-card-content-{{ ai_gen_id }} {
+      padding: 20px 15px;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .tt-collection-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_tablet }}, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .tt-collection-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    }
+  }
+{% endstyle %}
+
+
+
+<div class="tt-collection-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="tt-collection-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.description != blank %}
+      <div class="tt-collection-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="tt-collection-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.description != blank %}
+          <div class="tt-collection-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.collection != blank %}
+      <div class="tt-collection-grid-{{ ai_gen_id }}">
+        {% for product in block.settings.collection.products limit: block.settings.products_to_show %}
+          {% assign product_index = forloop.index %}
+          {% assign product_link_setting = 'product_link_' | append: product_index %}
+          {% assign custom_link = block.settings[product_link_setting] %}
+          
+          <div class="tt-collection-card-{{ ai_gen_id }}">
+            <div class="tt-full-card-overlay-{{ ai_gen_id }}"></div>
+            
+            {% comment %} WHOLE CARD → ALWAYS PDP {% endcomment %}
+            <a href="{{ product.url }}" class="tt-collection-card-link-{{ ai_gen_id }}">
+              <div class="tt-collection-card-image-wrapper-{{ ai_gen_id }}">
+                <!-- Product badges copied from main product card -->
+                <div class="card__badge {{ settings.badge_position }}">
+                  {%- if product.available == false -%}
+                    <span
+                      id="NoMediaStandardBadge-{{ section.id }}-{{ product.id }}"
+                      class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+                    >
+                      {{- 'products.product.sold_out' | t -}}
+                    </span>
+
+                  {%- elsif product.tags contains 'Cyber Monday Sale' -%}
+                    <span
+                      id="NoMediaStandardBadge-{{ section.id }}-{{ product.id }}"
+                      class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                    >
+                      ⚡ Cyber Monday Sale
+                    </span>
+
+                  {%- elsif bf_active -%}
+                    <span
+                      id="NoMediaStandardBadge-{{ section.id }}-{{ product.id }}"
+                      class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                    >
+                      🔥 Black Friday Sale
+                    </span>
+
+                  {%- elsif product.compare_at_price > product.price and product.available -%}
+                    <span
+                      id="NoMediaStandardBadge-{{ section.id }}-{{ product.id }}"
+                      class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                    >
+                      {{- 'products.product.on_sale' | t -}}
+                    </span>
+                  {%- endif -%}
+                </div>
+
+                {% if product.featured_image %}
+                  <img
+                    src="{{ product.featured_image | image_url: width: 600 }}
+"
+                    alt="{{ product.featured_image.alt | escape }}"
+                    loading="lazy"
+                    width="600"
+                    height="600"
+                    class="tt-collection-card-image-{{ ai_gen_id }}"
+                  >
+                {% else %}
+                  <div class="tt-collection-card-placeholder-{{ ai_gen_id }}">
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="tt-collection-card-content-{{ ai_gen_id }}">
+                <h3 class="tt-collection-card-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+
+                 {% if product.metafields.custom.recommended_ages.value != blank %}
+  <span class="caption-large light tt-recommended-ages-{{ ai_gen_id }}">
+    Recommended Ages: {{ product.metafields.custom.recommended_ages.value }}
+  </span>
+{% endif %}
+
+
+                 {% if block.settings.show_price %}
+                  <div class="tt-collection-card-price-{{ ai_gen_id }}">
+                  {% if product.compare_at_price > product.price %}
+                  {% assign raw_cap = product.compare_at_price | money_without_currency %}
+                  {% assign cleaned_cap = raw_cap | replace: '.00', '' %}
+                  <s>{{ cleaned_cap | prepend: cart.currency.symbol }} USD</s>
+                 {% endif %}
+
+      {% assign raw_price = product.price | money_without_currency %}
+      {% assign cleaned_price = raw_price | replace: '.00', '' %}
+      <span class="tt-collection-card-sale-price-{{ ai_gen_id }}">
+        {{ cleaned_price | prepend: cart.currency.symbol }}
+      </span> USD
+    </div>
+  {% endif %}
+</div>
+
+            </a>
+            
+            <div class="tt-quick-add-container-{{ ai_gen_id }}">
+  {%- if custom_link != blank -%}
+    <a href="{{ custom_link }}" class="tt-quick-add-button-{{ ai_gen_id }}">
+      {{ block.settings.quick_add_text }}
+    </a>
+  {%- else -%}
+    {%- assign variant = product.selected_or_first_available_variant -%}
+
+    {%- if product.available and variant != blank -%}
+      {%- form 'product', product, class: 'tt-quick-add-form' -%}
+        <input type="hidden" name="id" value="{{ variant.id }}">
+        <button type="submit" class="tt-quick-add-button-{{ ai_gen_id }}">
+          {{ block.settings.quick_add_text }}
+        </button>
+      {%- endform -%}
+    {%- else -%}
+      <button type="button" class="tt-quick-add-button-{{ ai_gen_id }}" disabled>
+        Sold out
+      </button>
+    {%- endif -%}
+  {%- endif -%}
+</div>
+
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+      <div class="tt-collection-cta-{{ ai_gen_id }}">
+        <a href="{{ block.settings.button_link }}" class="tt-collection-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Academy Custom Collection",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": "Products to show",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section title",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Section description",
+      "default": "<p>Discover our carefully curated collection of premium products.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show product prices",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Quick Add to Cart"
+    },
+    {
+      "type": "text",
+      "id": "quick_add_text",
+      "label": "Quick add button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color",
+      "id": "quick_add_bg",
+      "label": "Quick add background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "quick_add_button_color",
+      "label": "Quick add button color",
+      "default": "#da5846"
+    },
+    {
+      "type": "color",
+      "id": "quick_add_button_text_color",
+      "label": "Quick add button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "quick_add_button_hover_color",
+      "label": "Quick add button hover color",
+      "default": "#c54936"
+    },
+    {
+      "type": "color",
+      "id": "quick_add_button_hover_text_color",
+      "label": "Quick add button hover text color",
+      "default": "#ffffff"
+    },
+    {
+  "type": "color",
+  "id": "quick_add_button_hover_border_color",
+  "label": "Hover border/outline color",
+  "default": "#c54936"
+},
+{
+  "type": "range",
+  "id": "quick_add_button_hover_border_width",
+  "label": "Hover border/outline width",
+  "min": 0,
+  "max": 8,
+  "step": 1,
+  "unit": "px",
+  "default": 2
+},
+
+    {
+      "type": "header",
+      "content": "Product Links (Optional)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Override default product links with custom URLs. Leave blank to use product page."
+    },
+    {
+      "type": "url",
+      "id": "product_link_1",
+      "label": "Product 1 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_2",
+      "label": "Product 2 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_3",
+      "label": "Product 3 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_4",
+      "label": "Product 4 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_5",
+      "label": "Product 5 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_6",
+      "label": "Product 6 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_7",
+      "label": "Product 7 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_8",
+      "label": "Product 8 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_9",
+      "label": "Product 9 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_10",
+      "label": "Product 10 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_11",
+      "label": "Product 11 custom link"
+    },
+    {
+      "type": "url",
+      "id": "product_link_12",
+      "label": "Product 12 custom link"
+    },
+    {
+      "type": "header",
+      "content": "Section Button (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Columns on desktop",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Columns on tablet",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#3f3939"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Product price base color",
+      "default": "#da5846"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Section heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Product title size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_price_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Product price size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Academy Custom Collection"
+    }
+  ]
+}
+{% endschema %}

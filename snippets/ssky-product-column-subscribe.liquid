@@ -1,0 +1,221 @@
+<div class="ssky-product-column__block-set ssky-product-column-subscribe__block-set left">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'product_column_subscribe' -%}
+        {%- assign block_product = block.settings.product -%}
+        {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+        <div
+          class="ssky-product-column__block ssky-product-column-subscribe__block ssky-text-block__blocks gradient color-scheme-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {%- if block.settings.badge_label != blank -%}
+            <div class="ssky-pc-subscribe__badge h4 weight-semibold primary-orange primary-yellow-bg">
+              {{ block.settings.badge_label }}
+            </div>
+          {%- endif -%}
+
+          <div class="ssky-pc-subscribe__image-con gradient color-{{ block.settings.color_scheme }}">
+            <div class="ssky-pc-subscribe__image-text">
+              <div class="ssky-pc-subscribe__image-price">
+                {%- if block.settings.currency != blank -%}
+                  <span class="ssky-pcsip-currency">
+                    {{ block.settings.currency }}
+                  </span>
+                {%- endif -%}
+                {%- if block.settings.price != blank -%}
+                  <span class="ssky-pcsip-price">
+                    {{ block.settings.price }}
+                  </span>
+                {%- endif -%}
+                {%- if block.settings.period != blank -%}
+                  <span class="ssky-pcsip-period">
+                    {{ block.settings.period }}
+                  </span>
+                {%- endif -%}
+              </div>
+              {%- if block.settings.text_bottom != blank -%}
+                <div class="ssky-pcsip-text-bottom h6">
+                  {{ block.settings.text_bottom }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.text_bottom_large != blank -%}
+                <div class="ssky-pcsip-text-bottom-large h4">
+                  {{ block.settings.text_bottom_large }}
+                </div>
+              {%- endif -%}
+            </div>
+            {%- if block.settings.image != blank -%}
+              <div class="ssky-pc-subscribe__image">
+                {%- assign widths = '360, 535, 750' -%}
+                {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 750
+                  | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                }}
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="ssky-pc-subscribe__text-con ssky-text-block__blocks">
+            <div class="ssky-text-block__blocks">
+              {%- if block.settings.text != blank -%}
+                <div
+                  class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div class="rte">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.checkbox_a != blank -%}
+                <div
+                  class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="rte">
+                    {{ block.settings.checkbox_a }}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.checkbox_b != blank -%}
+                <div
+                  class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="rte">
+                    {{ block.settings.checkbox_b }}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.checkbox_c != blank -%}
+                <div
+                  class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="rte">
+                    {{ block.settings.checkbox_c }}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.checkbox_d != blank -%}
+                <div
+                  class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="rte">
+                    {{ block.settings.checkbox_d }}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.checkbox_e != blank -%}
+                <div
+                  class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left{%- if block.settings.text_large %} text-body-large{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="rte">
+                    {{ block.settings.checkbox_e }}
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+
+            <div class="ssky-text-block__blocks">
+              <div
+                class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {%- if block.settings.product != blank -%}
+                  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                  {%- assign block_product = block.settings.product -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: block_product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    is_button_large: true,
+                    button_label: block.settings.product_button_label
+                  -%}
+                {%- else -%}
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button button--large button--primary"
+                    >
+                      {{- block.settings.button_label | escape -}}
+                    </a>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+
+              {%- if block.settings.text_below_button != blank -%}
+                <div
+                  class="ssky-text-block__text rte text-body-large center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div class="rte">
+                    {{ block.settings.text_below_button }}
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.text_below_button_b != blank -%}
+                <div class="rte ssky-text-block__text-below-buttons center">
+                  {{ block.settings.text_below_button_b }}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>

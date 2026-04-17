@@ -1,0 +1,324 @@
+{% style %}
+  #section-{{ section.id }} {
+    padding-top: {{ section.settings.padding-top }}px;
+    padding-bottom: {{ section.settings.padding-bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+  }
+  @media only screen and (max-width: 991px) {
+    #section-{{ section.id }} {
+      padding-top: {{ section.settings.padding-top-mobile }}px;
+      padding-bottom: {{ section.settings.padding-bottom-mobile }}px;
+    }
+  }
+{% endstyle %}
+<section class="sc-pdp-image-text" id="section-{{ section.id }}">
+  <div class="container">
+    <div class="sc-pdp-grid">
+      <div class="image-part">
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | img_url:'master' }}" alt="image" class="desk-img">
+          <img src="{{ section.settings.mobile_image | img_url:'master' }}" alt="image" class="mobile-img">
+        {% endif %}
+      </div>
+      <div class="content-part">
+        {% if section.settings.heading != blank %}
+          <h2 class="heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="content">{{ section.settings.content }}</div>
+        {% endif %}
+        <div class="listing-part">
+          {% for block in section.blocks %}
+            <div class="listing-inner">
+              <img src="{{ block.settings.icon | img_url:'master' }}" alt="icon">
+              <div class="listing-inner-content">
+                {% if block.settings.listing_title != blank %}
+                  <div class="listing-title">{{ block.settings.listing_title }}</div>
+                {% endif %}
+                {% if block.settings.listing_content != blank %}
+                  <div class="listing-content">{{ block.settings.listing_content }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.settings.btn_text != blank %}
+          <a href="{{ section.settings.btn_link | default:'#' }}" class="shop-btn">{{ section.settings.btn_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+     .sc-pdp-image-text h2,
+     .sc-pdp-image-text p {
+        margin:0px;
+     }
+    .sc-pdp-image-text .container {
+     max-width: 1350px;
+     margin: 0 auto;
+     padding: 0 16px;
+     width:100%;
+  }
+  .sc-pdp-image-text .sc-pdp-grid {
+     display:flex;
+     gap:80px;
+  }
+  .sc-pdp-image-text .image-part {
+     border-radius:20px;
+     overflow:hidden;
+  }
+  .sc-pdp-image-text .image-part img {
+     height:100%;
+     width:100%;
+     object-fit:cover;
+     vertical-align:middle;
+  }
+  .sc-pdp-image-text .content-part {
+     max-width:588px;
+     width:100%;
+  }
+  .sc-pdp-image-text .content-part .heading{
+     font-size:40px;
+     line-height:120%;
+     letter-spacing:0px;
+     color:#3F3939;
+     font-weight:500;
+  }
+  .sc-pdp-image-text .content-part .content{
+     font-size:16px;
+     line-height:160%;
+     letter-spacing:0px;
+     color:#3F3939FF;
+     margin-top:16px;
+  }
+  .sc-pdp-image-text .content-part .listing-part{
+     margin:40px 0px;
+  }
+  .sc-pdp-image-text .content-part .listing-inner{
+     display:flex;
+     align-items:center;
+     gap:24px;
+     margin-bottom:32px;
+  }
+  .sc-pdp-image-text .content-part .listing-inner:last-child{
+     margin-bottom:0px;
+  }
+  .sc-pdp-image-text .content-part .listing-inner img{
+     width:48px;
+     height:48px;
+     vertical-align:middle;
+  }
+  .sc-pdp-image-text .content-part .listing-inner .listing-title{
+     font-size:24px;
+     line-height:140%;
+     letter-spacing:0px;
+     font-weight:500;
+  }
+  .sc-pdp-image-text .content-part .listing-inner .listing-content{
+     font-size:16px;
+     line-height:160%;
+     letter-spacing:0px;
+     margin-top:6px;
+  }
+  .sc-pdp-image-text .content-part .shop-btn{
+     display:inline-block;
+     font-size:18px;
+     line-height:120%;
+     letter-spacing:0px;
+     font-weight:500;
+     color:#ffffff;
+     background-color:#DB5846;
+     padding:16px 48px;
+     transition:all 0.3s ease;
+     text-align:center;
+     border-radius:50px;
+     text-decoration:none;
+  }
+  .sc-pdp-image-text .content-part .shop-btn:hover{
+   background-color:#3f3939;
+}
+.sc-pdp-image-text .mobile-img{
+   display:none;
+}
+.sc-pdp-image-text .content-part .content p {
+    display: inline;
+}
+    @media only screen and (max-width: 991px) {
+     .sc-pdp-image-text .sc-pdp-grid {
+        gap:24px;
+        align-items:start;
+     }
+     .sc-pdp-image-text .content-part {
+        max-width:100%;
+     }
+     .sc-pdp-image-text .image-part{
+        width:100%;
+     }
+     .sc-pdp-image-text .content-part .heading{
+        font-size:32px;
+     }
+     .sc-pdp-image-text .content-part .listing-inner .listing-title {
+      font-size: 20px;
+     }
+     .sc-pdp-image-text .content-part .listing-inner .listing-content{
+        margin-top:4px;
+     }
+     .sc-pdp-image-text .content-part .listing-inner img {
+      width: 40px;
+      height: 40px;
+     }
+     .sc-pdp-image-text .content-part .listing-part {
+        margin: 24px 0px;
+     }
+     .sc-pdp-image-text .content-part .listing-inner{
+        margin-bottom: 16px;
+     }
+     .sc-pdp-image-text .image-part {
+        border-radius:15px;
+     }
+     .sc-pdp-image-text .content-part .content{
+        margin-top:12px;
+     }
+    }
+    @media only screen and (max-width: 767px) {
+     .sc-pdp-image-text .sc-pdp-grid{
+        flex-wrap:wrap;
+     }
+     .sc-pdp-image-text .content-part .heading {
+        font-size: 28px;
+     }
+     .sc-pdp-image-text .content-part .content p {
+         margin-bottom: 20px;
+      }
+     .sc-pdp-image-text .content-part .content p:last-child{
+      margin-bottom:0px;
+   }
+    }
+    @media only screen and (max-width: 575px) {
+      .sc-pdp-image-text .content-part .shop-btn{
+         width:100%;
+      }
+      .sc-pdp-image-text .mobile-img{
+         display:block;
+      }
+      .sc-pdp-image-text .desk-img{
+         display:none;
+      }
+      .sc-pdp-image-text .content-part .content p {
+         display: block;
+      }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "PDP image text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "padding settings"
+    },
+    {
+      "type": "range",
+      "id": "padding-top",
+      "label": "Top Spacing",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-bottom",
+      "label": "Bottom Spacing",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-top-mobile",
+      "label": "Top Mobile Spacing",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-bottom-mobile",
+      "label": "Bottom Mobile Spacing",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon-box",
+      "name": "Icon box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "listing_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "listing_content",
+          "label": "Listing content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP image text"
+    }
+  ]
+}
+{% endschema %}

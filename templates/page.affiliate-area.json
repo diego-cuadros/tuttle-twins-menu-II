@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_EdcRr7": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_8rd83y": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "",
+            "product_2": "",
+            "columns": "one",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Back to Dashboard",
+            "button_link": "/account",
+            "button_style": "default",
+            "button_link_color": "#DA5846",
+            "button_label_2": "Interested in signing up as an affiliate? Click here.",
+            "button_link_2": "shopify://pages/affiliate-program",
+            "button_style2": "link",
+            "button_link_color2": "#DA5846",
+            "button_sep_label": "",
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": "<p>To see the Affiliate Area, log in as an existing affiliate, or add your account as an affiliate.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_8rd83y"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": false,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_product_order_block_EdcRr7"
+  ]
+}

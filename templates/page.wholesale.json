@@ -1,0 +1,259 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_hero_banner_ipVkfJ": {
+      "type": "ssky-hero-banner",
+      "blocks": {
+        "caption_W9M7Nj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Bulk Savings for Big Thinkers.",
+            "text_style": "large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "heading_aNWnRY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wholesale Discounts",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_fNhBAb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Want to empower your organization with the ideas of freedom, responsibility, and truth? </p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "text_et4BLn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the movement today.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "image_bnECBd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2021-01-25.jpg",
+            "image_fit": false
+          }
+        },
+        "button_DzUyHz": {
+          "type": "button",
+          "settings": {
+            "button_large": true,
+            "button_full": false,
+            "button_label": "Shop Here",
+            "button_link": "https://faire.com/direct/tuttletwins",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_W9M7Nj",
+        "heading_aNWnRY",
+        "text_fNhBAb",
+        "text_et4BLn",
+        "image_bnECBd",
+        "button_DzUyHz"
+      ],
+      "name": "TT Hero Banner",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_tD9HMx": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_3BTD8q": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Already a Tuttle Twins Wholesaler?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "button_mMHJEn": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Login",
+            "button_link": "https://www.faire.com/direct/tuttletwins?fdb=tuttletwins&signIn=1",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3BTD8q",
+        "button_mMHJEn"
+      ],
+      "disabled": true,
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_c_zjiTLY": {
+      "type": "sskymo-text-image-block-c",
+      "name": "TTm Build brighter future",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_KdnP7T": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_zBDVwP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Place Wholesale Orders on Faire</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "button_RGcEK3": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zBDVwP",
+        "button_RGcEK3"
+      ],
+      "name": "TT Text image block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Footer-Books-CTA-2-1024x836.webp",
+        "rounded": false,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_hero_banner_ipVkfJ",
+    "ssky_text_block_tD9HMx",
+    "sskymo_text_image_block_c_zjiTLY",
+    "ssky_text_image_block_KdnP7T"
+  ]
+}

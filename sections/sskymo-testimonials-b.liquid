@@ -1,0 +1,261 @@
+{%- style -%}
+  .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-testimonials-{{ section.id }} .ssky-testimonials {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-testimonials-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-testimonials-{{ section.id }}">
+  <div class="ssky-testimonials ssky-text-block content-container color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width">
+      {%- for testimonials_video in shop.metaobjects.testimonials_video.values limit: 1 -%}
+        <div class="ssky-testimonials__blocks ssky-text-block__blocks center">
+          <div
+            class="ssky-text-block__caption large-semibold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1;"
+            {% endif %}
+          >
+            {{ testimonials_video.caption | escape }}
+          </div>
+
+          {%- assign heading_length = testimonials_video.heading | metafield_text | size -%}
+          <h2
+            class="ssky-text-block__heading rte inline-richtext h2{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            {{ testimonials_video.heading | metafield_tag }}
+          </h2>
+        </div>
+        <div class="ssky-testimonials__video-blocks">
+          {{ 'video-section.css' | asset_url | stylesheet_tag }}
+          {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+          <div class="ssky-testimonials__video-block">
+            <div class="ssky-testimonials__video-block-video">
+              <div class="video-section isolate">
+                {%- liquid
+                  assign video_id = testimonials_video.column_one_video_id
+                  assign poster = testimonials_video.column_one_cover_image
+                -%}
+                {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                <deferred-media
+                  class="video-section__media deferred-media gradient global-media-settings{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  data-media-id="{{ video_id }}"
+                >
+                  <button
+                    id="Deferred-Poster-Modal-{{ video_id }}"
+                    class="video-section__poster media deferred-media__poster media--landscape"
+                    type="button"
+                  >
+                    {{ poster | image_url: width: 1500 | image_tag: sizes: sizes, widths: '560, 750, 1100, 1500' }}
+                    <span class="deferred-media__poster-button motion-reduce">
+                      <span class="svg-wrapper">
+                        {{- 'icon-play.svg' | inline_asset_content -}}
+                      </span>
+                    </span>
+                  </button>
+                  <template>
+                    <iframe
+                      src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1"
+                      class="js-youtube"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                    ></iframe>
+                  </template>
+                </deferred-media>
+              </div>
+            </div>
+            <div
+              class="ssky-testimonials__block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 3;"
+              {% endif %}
+            >
+              <div class="ssky-testimonials__block-quote">
+                <img src="{{ 'quote.png' | asset_url }}" width="41px" height="41px">
+              </div>
+              <div class="ssky-testimonials__block-text-con">
+                <div class="ssky-testimonials__block-text ssky-testimonials__block-text-highlight rte">
+                  {{ testimonials_video.column_one_testimonial | metafield_tag }}
+                </div>
+                <div class="ssky-testimonials__block-author-name primary-blue">
+                  {{ testimonials_video.column_one_author }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ssky-testimonials__video-block">
+            <div class="ssky-testimonials__video-block-video">
+              <div class="video-section isolate">
+                {%- liquid
+                  assign video_id = testimonials_video.column_two_video_id
+                  assign poster = testimonials_video.column_two_cover_image
+                -%}
+                {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                <deferred-media
+                  class="video-section__media deferred-media gradient global-media-settings{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  data-media-id="{{ video_id }}"
+                >
+                  <button
+                    id="Deferred-Poster-Modal-{{ video_id }}"
+                    class="video-section__poster media deferred-media__poster media--landscape"
+                    type="button"
+                  >
+                    {{ poster | image_url: width: 1500 | image_tag: sizes: sizes, widths: '560, 750, 1100, 1500' }}
+                    <span class="deferred-media__poster-button motion-reduce">
+                      <span class="svg-wrapper">
+                        {{- 'icon-play.svg' | inline_asset_content -}}
+                      </span>
+                    </span>
+                  </button>
+                  <template>
+                    <iframe
+                      src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1"
+                      class="js-youtube"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                    ></iframe>
+                  </template>
+                </deferred-media>
+              </div>
+            </div>
+            <div
+              class="ssky-testimonials__block{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 3;"
+              {% endif %}
+            >
+              <div class="ssky-testimonials__block-quote">
+                <img src="{{ 'quote.png' | asset_url }}" width="41px" height="41px">
+              </div>
+              <div class="ssky-testimonials__block-text-con">
+                <div class="ssky-testimonials__block-text ssky-testimonials__block-text-highlight rte">
+                  {{ testimonials_video.column_two_testimonial | metafield_tag }}
+                </div>
+                <div class="ssky-testimonials__block-author-name primary-blue">
+                  {{ testimonials_video.column_two_author }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Testimonial video",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Testimonial video"
+    }
+  ]
+}
+{% endschema %}

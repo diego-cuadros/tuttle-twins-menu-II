@@ -1,0 +1,274 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+{%- style -%}
+  .ssky-image-large-{{ section.id }} .ssky-image-large {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-image-large__wrapper {
+    max-width: 1920px;
+    margin-bottom: 2rem;
+  }
+  .ssky-text-block__wrapper + .ssky-image-large__wrapper {
+    margin-top: 4rem;
+  }
+  .ssky-image-large__wrapper > div {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .ssky-image-large--desktop {
+    display: none;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-image-large-{{ section.id }} .ssky-image-large {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .ssky-image-large--mobile {
+      display: none;
+    }
+    .ssky-image-large--desktop {
+      display: block;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-image-large-{{ section.id }} .ssky-image-large {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-image-large-{{ section.id }} .ssky-image-large {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-image-large-{{ section.id }} .ssky-image-large {
+      border-radius: 0 0 15vw 0;
+    }
+    @media screen and (min-width: 1340px) {
+      .ssky-image-large__wrapper {
+        margin-bottom: 5vw;
+      }
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-image-large-{{ section.id }} .ssky-image-large {
+      border-radius: 0 0 0 15vw;
+    }
+    @media screen and (min-width: 1340px) {
+      .ssky-image-large__wrapper {
+        margin-bottom: 5vw;
+      }
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-image-large-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-image-large-{{ section.id }}">
+  <div class="ssky-image-large color-{{ section.settings.color_scheme }} gradient">
+    {%- if section.settings.heading != blank -%}
+      <div class="ssky-text-block__wrapper page-width">
+        <div class="ssky-text-block__blocks {{ section.settings.content_alignment }}">
+          {%- assign heading_length = section.settings.heading | size -%}
+          <h2
+            class="ssky-text-block__heading weight-semibold rte inline-richtext {{ section.settings.heading_size }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1;"
+            {% endif %}
+          >
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      </div>
+    {%- endif -%}
+    <div class="ssky-image-large__wrapper{% unless section.settings.fullwidth %} page-width{% endunless %}">
+      <div class="ssky-image-large--mobile">
+        {%- if section.settings.image_mobile != blank -%}
+          {%- assign widths = '360, 535, 750, 1070' -%}
+          {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+          {{
+            section.settings.image_mobile
+            | image_url: width: 1070
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+      <div class="ssky-image-large--desktop">
+        {%- if section.settings.image != blank -%}
+          {%- assign widths = '1500, 1780, 2000, 3000, 3840' -%}
+          {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'full_width' -%}{%- endcapture -%}
+          {{
+            section.settings.image
+            | image_url: width: 3840
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TT Image large",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+      "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_size.options__0.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h3",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Desktop"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.ssky_text_block.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Fullwidth",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Image large"
+    }
+  ]
+}
+{% endschema %}

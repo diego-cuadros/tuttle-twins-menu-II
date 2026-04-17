@@ -1,0 +1,1515 @@
+{% style %}
+
+/* Root wrapper */
+bundle-comparison-{{ ai_gen_id }} {
+  display: block;
+}
+
+/* Section wrapper */
+.ai-bundle-comparison-{{ ai_gen_id }} {
+  padding: 40px 20px;
+  background-color: {{ block.settings.background_color }};
+}
+
+.ai-bundle-comparison-container-{{ ai_gen_id }} {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ai-bundle-comparison-header-{{ ai_gen_id }} {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ai-bundle-comparison-title-{{ ai_gen_id }} {
+  font-size: {{ block.settings.title_size }}px;
+  color: {{ block.settings.text_color }};
+  margin: 0 0 16px;
+}
+
+.ai-bundle-comparison-subtitle-{{ ai_gen_id }} {
+  font-size: {{ block.settings.subtitle_size }}px;
+  color: {{ block.settings.text_color }};
+  opacity: 0.8;
+}
+
+/* --------------------------------------------- */
+/* SELECTOR CHIPS */
+/* --------------------------------------------- */
+
+.ai-bundle-comparison-selector-{{ ai_gen_id }} {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.ai-bundle-comparison-selector-label-{{ ai_gen_id }} {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: {{ block.settings.selector_bg_color }};
+  color: {{ block.settings.selector_text_color }};
+  border: 2px solid {{ block.settings.selector_border_color }};
+  border-radius: {{ block.settings.selector_border_radius }}px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.ai-bundle-comparison-selector-label-{{ ai_gen_id }}:hover {
+  background-color: {{ block.settings.selector_hover_bg_color }};
+  border-color: {{ block.settings.selector_hover_border_color }};
+}
+
+.ai-bundle-comparison-selector-checkbox-{{ ai_gen_id }} {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: {{ block.settings.selector_active_bg_color }};
+}
+
+/* --------------------------------------------- */
+/* PRODUCT CARDS */
+/* --------------------------------------------- */
+
+.ai-bundle-comparison-card-{{ ai_gen_id }} {
+  background-color: {{ block.settings.card_bg_color }};
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  overflow: visible;
+  padding: 24px 16px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* Badge on top of card */
+.ai-bundle-comparison-badge-{{ ai_gen_id }} {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: {{ block.settings.badge_bg_color }};
+  color: {{ block.settings.badge_text_color }};
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Featured overrides — card border + badge colors match per bundle */
+
+/* Bundle 1 – Tuttle Gold */
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="1"].featured {
+  border-color: #FFD05A !important;
+}
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="1"].featured .ai-bundle-comparison-badge-{{ ai_gen_id }} {
+  background-color: #FFD05A;
+  color: #3F3939;
+}
+
+/* Bundle 2 – Tuttle Green */
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="2"].featured {
+  border-color: #afc856 !important;
+}
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="2"].featured .ai-bundle-comparison-badge-{{ ai_gen_id }} {
+  background-color: #afc856;
+  color: #3F3939;
+}
+
+/* Bundle 3 – Tuttle Orange */
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="3"].featured {
+  border-color: #f8ad42 !important;
+}
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="3"].featured .ai-bundle-comparison-badge-{{ ai_gen_id }} {
+  background-color: #f8ad42;
+  color: #3F3939;
+}
+
+/* Bundle 4 – Tuttle Purple */
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="4"].featured {
+  border-color: #cb80c1 !important;
+}
+.ai-bundle-comparison-card-{{ ai_gen_id }}[data-bundle="4"].featured .ai-bundle-comparison-badge-{{ ai_gen_id }} {
+  background-color: #cb80c1;
+  color: #ffffff;
+}
+
+/* Product image */
+.ai-bundle-comparison-image-{{ ai_gen_id }} {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #f8f8f8;
+}
+
+.ai-bundle-comparison-image-placeholder-{{ ai_gen_id }} {
+  width: 100%;
+  height: 180px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-bundle-comparison-image-placeholder-{{ ai_gen_id }} svg {
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+}
+
+/* Card content */
+.ai-bundle-comparison-card-title-{{ ai_gen_id }} {
+  font-size: 20px;
+  color: {{ block.settings.text_color }};
+  margin: 0 0 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ai-bundle-comparison-card-price-{{ ai_gen_id }} {
+  font-size: 28px;
+  color: {{ block.settings.price_color }};
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.ai-bundle-comparison-card-compare-price-{{ ai_gen_id }} {
+  font-size: 16px;
+  color: {{ block.settings.text_color }};
+  opacity: 0.6;
+  margin: 0 0 12px;
+}
+
+.ai-bundle-comparison-card-compare-price-original-{{ ai_gen_id }} {
+  text-decoration: line-through;
+}
+
+.ai-bundle-comparison-card-savings-{{ ai_gen_id }} {
+  font-size: 16px;
+  font-weight: 600;
+  color: #04aed8;
+  margin-left: 8px;
+}
+
+.ai-bundle-comparison-card-description-{{ ai_gen_id }} {
+  font-size: 13px;
+  color: {{ block.settings.text_color }};
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------- */
+/* TABLE LAYOUT */
+/* --------------------------------------------- */
+
+.ai-bundle-comparison-table-wrapper-{{ ai_gen_id }} {
+  width: 100%;
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.ai-bundle-comparison-table-{{ ai_gen_id }} {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.ai-bundle-comparison-table-{{ ai_gen_id }} th,
+.ai-bundle-comparison-table-{{ ai_gen_id }} td {
+  padding: 10px 3px;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Feature label column (left) */
+.ai-bundle-comparison-feature-header-{{ ai_gen_id }},
+.ai-bundle-comparison-feature-cell-{{ ai_gen_id }} {
+  width: 15%;
+  min-width: 110px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Bundle header (product card) columns */
+.ai-bundle-comparison-bundle-header-{{ ai_gen_id }} {
+  width: 19.5%;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Checkmark cells */
+.ai-bundle-comparison-check-cell-{{ ai_gen_id }} {
+  text-align: center;
+}
+
+.ai-bundle-comparison-check-cell-{{ ai_gen_id }} .ai-bundle-comparison-feature-icon-{{ ai_gen_id }} {
+  font-size: 16px;
+}
+
+.ai-bundle-comparison-feature-icon-{{ ai_gen_id }} {
+  color: {{ block.settings.feature_icon_color }};
+  font-weight: 700;
+}
+
+.ai-bundle-comparison-feature-icon--empty-{{ ai_gen_id }} {
+  opacity: 0.2;
+}
+
+/* Hideable bundle columns */
+.ai-bundle-comparison-cell-hidden-{{ ai_gen_id }} {
+  display: none !important;
+}
+
+.ai-bundle-comparison-card-compare-price-{{ ai_gen_id }} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------- */
+/* CTA WRAPPER (fix for link vs form height) */
+/* --------------------------------------------- */
+
+.ai-bundle-comparison-cta-{{ ai_gen_id }} {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Keep form from adding its own margins now that wrapper controls spacing */
+.ai-bundle-comparison-form-{{ ai_gen_id }} {
+  margin: 0;
+}
+
+/* --------------------------------------------- */
+/* BUTTON STYLING (button OR link) */
+/* --------------------------------------------- */
+
+/* Force custom styling on Add to Cart buttons + link buttons */
+button.ai-bundle-comparison-button-{{ ai_gen_id }},
+a.ai-bundle-comparison-button-{{ ai_gen_id }} {
+  all: unset;
+  box-sizing: border-box;
+
+  width: 100%;
+  display: block;
+
+  background-color: {{ block.settings.button_bg_color }};
+  color: {{ block.settings.button_text_color }};
+
+  padding: 12px 20px;
+  border-radius: {{ block.settings.button_border_radius }}px;
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+button.ai-bundle-comparison-button-{{ ai_gen_id }}:hover,
+a.ai-bundle-comparison-button-{{ ai_gen_id }}:hover {
+  background-color: {{ block.settings.button_hover_bg_color }};
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------- */
+/* MOBILE (≤ 768px) */
+/* --------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+  .ai-bundle-comparison-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size | times: 0.8 }}px;
+  }
+
+  .ai-bundle-comparison-card-{{ ai_gen_id }} {
+    padding: 20px 12px;
+  }
+
+  .ai-bundle-comparison-card-title-{{ ai_gen_id }} {
+    font-size: 16px;
+  }
+
+  .ai-bundle-comparison-card-savings-{{ ai_gen_id }} {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  button.ai-bundle-comparison-button-{{ ai_gen_id }},
+  a.ai-bundle-comparison-button-{{ ai_gen_id }} {
+    padding: 10px 14px;
+  }
+
+  .ai-bundle-comparison-table-{{ ai_gen_id }} th,
+  .ai-bundle-comparison-table-{{ ai_gen_id }} td {
+    font-size: 13px;
+  }
+
+  /* Freeze feature column horizontally only */
+  .ai-bundle-comparison-feature-header-{{ ai_gen_id }},
+  .ai-bundle-comparison-feature-cell-{{ ai_gen_id }} {
+    position: sticky;
+    left: 0;
+    top: auto;
+    z-index: 1;
+    background-color: {{ block.settings.background_color }};
+
+    width: 18vw;
+    min-width: 80px;
+    max-width: 100px;
+  }
+}
+
+{% endstyle %}
+
+<div
+  id="{% if block.settings.anchor_id != blank %}{{ block.settings.anchor_id | escape }}{% else %}bundle-comparison{% endif %}"
+  class="ai-bundle-comparison-wrapper-{{ ai_gen_id }}"
+>
+  <bundle-comparison-{{ ai_gen_id }}
+    class="ai-bundle-comparison-{{ ai_gen_id }}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="ai-bundle-comparison-container-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <div class="ai-bundle-comparison-header-{{ ai_gen_id }}">
+          <h2 class="ai-bundle-comparison-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+          {% if block.settings.subtitle != blank %}
+            <p class="ai-bundle-comparison-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Bundle selector chips -->
+      <div class="ai-bundle-comparison-selector-{{ ai_gen_id }}">
+        {% for i in (1..4) %}
+          {% liquid
+            assign bundle_enabled_key = 'bundle_' | append: i | append: '_enabled'
+            assign bundle_title_key   = 'bundle_' | append: i | append: '_title'
+            assign bundle_enabled     = block.settings[bundle_enabled_key]
+            assign bundle_title       = block.settings[bundle_title_key]
+          %}
+          {% if bundle_enabled and bundle_title != blank %}
+            <label class="ai-bundle-comparison-selector-label-{{ ai_gen_id }}">
+              <input
+                type="checkbox"
+                class="ai-bundle-comparison-selector-checkbox-{{ ai_gen_id }}"
+                data-bundle="{{ i }}"
+                checked
+              >
+              <span>{{ bundle_title }}</span>
+            </label>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Unified comparison grid as table -->
+      <div class="ai-bundle-comparison-table-wrapper-{{ ai_gen_id }}">
+        <table class="ai-bundle-comparison-table-{{ ai_gen_id }}">
+          <thead>
+            <tr>
+              <!-- Blank top-left header cell -->
+              <th class="ai-bundle-comparison-feature-header-{{ ai_gen_id }}"></th>
+
+              {% for i in (1..4) %}
+                {% liquid
+                  assign bundle_enabled_key     = 'bundle_' | append: i | append: '_enabled'
+                  assign bundle_title_key       = 'bundle_' | append: i | append: '_title'
+                  assign bundle_product_key     = 'bundle_' | append: i | append: '_product'
+                  assign bundle_description_key = 'bundle_' | append: i | append: '_description'
+                  assign bundle_featured_key    = 'bundle_' | append: i | append: '_featured'
+                  assign bundle_badge_key       = 'bundle_' | append: i | append: '_badge'
+                  assign bundle_button_text_key = 'bundle_' | append: i | append: '_button_text'
+                  assign bundle_button_url_key  = 'bundle_' | append: i | append: '_button_url'
+
+                  assign bundle_enabled     = block.settings[bundle_enabled_key]
+                  assign bundle_title       = block.settings[bundle_title_key]
+                  assign bundle_product     = block.settings[bundle_product_key]
+                  assign bundle_description = block.settings[bundle_description_key]
+                  assign bundle_featured    = block.settings[bundle_featured_key]
+                  assign bundle_badge       = block.settings[bundle_badge_key]
+                  assign bundle_button_text = block.settings[bundle_button_text_key]
+                  assign bundle_button_url  = block.settings[bundle_button_url_key]
+                %}
+                {% if bundle_enabled %}
+                  <th
+                    class="ai-bundle-comparison-bundle-header-{{ ai_gen_id }}"
+                    data-bundle-column="{{ i }}"
+                  >
+                    {% if bundle_product %}
+                      {% assign bundle_variant = bundle_product.selected_or_first_available_variant %}
+
+                      <div
+                        class="ai-bundle-comparison-card-{{ ai_gen_id }} {% if bundle_featured %}featured{% endif %}"
+                        data-bundle="{{ i }}"
+                      >
+                        {% if bundle_featured and bundle_badge != blank %}
+                          <div class="ai-bundle-comparison-badge-{{ ai_gen_id }}">{{ bundle_badge }}</div>
+                        {% endif %}
+
+                        {% if bundle_product.featured_image %}
+                          <img
+                            src="{{ bundle_product.featured_image | image_url: width: 400 }}"
+                            alt="{{ bundle_product.featured_image.alt | escape }}"
+                            class="ai-bundle-comparison-image-{{ ai_gen_id }}"
+                            loading="lazy"
+                            width="400"
+                            height="400"
+                          >
+                        {% else %}
+                          <div class="ai-bundle-comparison-image-placeholder-{{ ai_gen_id }}">
+                            {{ 'product-1' | placeholder_svg_tag }}
+                          </div>
+                        {% endif %}
+
+                        <h3 class="ai-bundle-comparison-card-title-{{ ai_gen_id }}">{{ bundle_product.title }}</h3>
+
+                        <div class="ai-bundle-comparison-card-price-{{ ai_gen_id }}">
+                          {{ bundle_variant.price | money }}
+                        </div>
+
+                        {% if bundle_variant.compare_at_price > bundle_variant.price %}
+                          {% assign savings_amount = bundle_variant.compare_at_price | minus: bundle_variant.price %}
+                          <div class="ai-bundle-comparison-card-compare-price-{{ ai_gen_id }}">
+                            <span class="ai-bundle-comparison-card-compare-price-original-{{ ai_gen_id }}">
+                              {{ bundle_variant.compare_at_price | money }}
+                            </span>
+                            <span class="ai-bundle-comparison-card-savings-{{ ai_gen_id }}">
+                              SAVE {{ savings_amount | money }}
+                            </span>
+                          </div>
+                        {% endif %}
+
+                        <!-- CTA wrapper ensures equal spacing whether link OR form -->
+                        <div class="ai-bundle-comparison-cta-{{ ai_gen_id }}">
+                          {% if bundle_button_url != blank %}
+                            <a
+                              href="{{ bundle_button_url }}"
+                              class="ai-bundle-comparison-button-{{ ai_gen_id }}"
+                            >
+                              {% if bundle_button_text != blank %}
+                                {{ bundle_button_text }}
+                              {% else %}
+                                Learn more
+                              {% endif %}
+                            </a>
+                          {% else %}
+                            <form method="post" action="/cart/add" class="ai-bundle-comparison-form-{{ ai_gen_id }}">
+                              <input type="hidden" name="id" value="{{ bundle_variant.id }}">
+                              <button
+                                type="submit"
+                                class="ai-bundle-comparison-button-{{ ai_gen_id }}"
+                              >
+                                {% if bundle_button_text != blank %}
+                                  {{ bundle_button_text }}
+                                {% else %}
+                                  Add to cart
+                                {% endif %}
+                              </button>
+                            </form>
+                          {% endif %}
+                        </div>
+
+                        {% if bundle_description != blank %}
+                          <div class="ai-bundle-comparison-card-description-{{ ai_gen_id }}">
+                            {{ bundle_description }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% else %}
+                      <div class="ai-bundle-comparison-empty-state-{{ ai_gen_id }}">
+                        <p>Select a product</p>
+                      </div>
+                    {% endif %}
+                  </th>
+                {% endif %}
+              {% endfor %}
+            </tr>
+          </thead>
+
+          <tbody>
+            {% if block.settings.ages_label != blank %}
+              <tr>
+                <td class="ai-bundle-comparison-feature-cell-{{ ai_gen_id }}">
+                  {{ block.settings.ages_label }}
+                </td>
+
+                {% for i in (1..4) %}
+                  {% liquid
+                    assign bundle_enabled_key = 'bundle_' | append: i | append: '_enabled'
+                    assign bundle_enabled     = block.settings[bundle_enabled_key]
+                    assign ages_key           = 'bundle_' | append: i | append: '_ages'
+                    assign ages_value         = block.settings[ages_key]
+                  %}
+                  {% if bundle_enabled %}
+                    <td class="ai-bundle-comparison-check-cell-{{ ai_gen_id }}" data-bundle-column="{{ i }}">
+                      {% if ages_value != blank %}
+                        <span class="ai-bundle-comparison-ages-value-{{ ai_gen_id }}">{{ ages_value }}</span>
+                      {% else %}
+                        <span class="ai-bundle-comparison-feature-icon--empty-{{ ai_gen_id }}">–</span>
+                      {% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+            {% endif %}
+
+            {% for f in (1..14) %}
+              {% liquid
+                assign feature_label_key = 'feature_' | append: f | append: '_label'
+                assign feature_label     = block.settings[feature_label_key]
+              %}
+              {% if feature_label != blank %}
+                <tr>
+                  <td class="ai-bundle-comparison-feature-cell-{{ ai_gen_id }}">
+                    {{ feature_label }}
+                  </td>
+
+                  {% for i in (1..4) %}
+                    {% liquid
+                      assign bundle_enabled_key   = 'bundle_' | append: i | append: '_enabled'
+                      assign bundle_enabled       = block.settings[bundle_enabled_key]
+                      assign feature_included_key = 'feature_' | append: f | append: '_bundle_' | append: i | append: '_included'
+                      assign feature_included     = block.settings[feature_included_key]
+                    %}
+                    {% if bundle_enabled %}
+                      <td
+                        class="ai-bundle-comparison-check-cell-{{ ai_gen_id }}"
+                        data-bundle-column="{{ i }}"
+                      >
+                        {% if feature_included %}
+                          <span class="ai-bundle-comparison-feature-icon-{{ ai_gen_id }}">✓</span>
+                        {% else %}
+                          <span class="ai-bundle-comparison-feature-icon--empty-{{ ai_gen_id }}">–</span>
+                        {% endif %}
+                      </td>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </bundle-comparison-{{ ai_gen_id }}>
+</div>
+
+<script>
+  (function() {
+    class BundleComparison{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.checkboxes = this.querySelectorAll('.ai-bundle-comparison-selector-checkbox-{{ ai_gen_id }}');
+        this.setupEventListeners();
+        this.initializeVisibility();
+      }
+
+      toggleBundleColumn(bundleId, isChecked) {
+        const columnCells = this.querySelectorAll('[data-bundle-column="' + bundleId + '"]');
+        columnCells.forEach((cell) => {
+          if (isChecked) {
+            cell.classList.remove('ai-bundle-comparison-cell-hidden-{{ ai_gen_id }}');
+          } else {
+            cell.classList.add('ai-bundle-comparison-cell-hidden-{{ ai_gen_id }}');
+          }
+        });
+      }
+
+      setupEventListeners() {
+        this.checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener('change', () => {
+            const bundleId = checkbox.getAttribute('data-bundle');
+            this.toggleBundleColumn(bundleId, checkbox.checked);
+          });
+        });
+      }
+
+      initializeVisibility() {
+        this.checkboxes.forEach((checkbox) => {
+          const bundleId = checkbox.getAttribute('data-bundle');
+          this.toggleBundleColumn(bundleId, checkbox.checked);
+        });
+      }
+    }
+
+    customElements.define('bundle-comparison-{{ ai_gen_id }}', BundleComparison{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Bundle comparison",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Compare Our Bundles"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Select bundles to compare side by side"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID (optional)",
+      "info": "Use this to link directly to this bundle comparison, e.g. #tt-bundles"
+    },
+
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 16
+    },
+
+    {
+      "type": "header",
+      "content": "Bundle 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_1_enabled",
+      "label": "Enable bundle 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bundle_1_title",
+      "label": "Bundle name",
+      "default": "Starter Bundle"
+    },
+    {
+      "type": "product",
+      "id": "bundle_1_product",
+      "label": "Product"
+    },
+    {
+      "type": "textarea",
+      "id": "bundle_1_description",
+      "label": "Description",
+      "default": "Perfect for getting started"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_1_featured",
+      "label": "Mark as featured",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bundle_1_badge",
+      "label": "Badge text"
+    },
+    {
+      "type": "text",
+      "id": "bundle_1_button_text",
+      "label": "Button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "url",
+      "id": "bundle_1_button_url",
+      "label": "Button URL (optional)",
+      "info": "If set, button links to this URL. If blank, button adds to cart."
+    },
+
+    {
+      "type": "header",
+      "content": "Bundle 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_2_enabled",
+      "label": "Enable bundle 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bundle_2_title",
+      "label": "Bundle name",
+      "default": "Premium Bundle"
+    },
+    {
+      "type": "product",
+      "id": "bundle_2_product",
+      "label": "Product"
+    },
+    {
+      "type": "textarea",
+      "id": "bundle_2_description",
+      "label": "Description",
+      "default": "Our most popular choice"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_2_featured",
+      "label": "Mark as featured",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bundle_2_badge",
+      "label": "Badge text",
+      "default": "Most Popular"
+    },
+    {
+      "type": "text",
+      "id": "bundle_2_button_text",
+      "label": "Button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "url",
+      "id": "bundle_2_button_url",
+      "label": "Button URL (optional)",
+      "info": "If set, button links to this URL. If blank, button adds to cart."
+    },
+
+    {
+      "type": "header",
+      "content": "Bundle 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_3_enabled",
+      "label": "Enable bundle 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bundle_3_title",
+      "label": "Bundle name",
+      "default": "Ultimate Bundle"
+    },
+    {
+      "type": "product",
+      "id": "bundle_3_product",
+      "label": "Product"
+    },
+    {
+      "type": "textarea",
+      "id": "bundle_3_description",
+      "label": "Description",
+      "default": "Everything you need and more"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_3_featured",
+      "label": "Mark as featured",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bundle_3_badge",
+      "label": "Badge text"
+    },
+    {
+      "type": "text",
+      "id": "bundle_3_button_text",
+      "label": "Button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "url",
+      "id": "bundle_3_button_url",
+      "label": "Button URL (optional)",
+      "info": "If set, button links to this URL. If blank, button adds to cart."
+    },
+
+    {
+      "type": "header",
+      "content": "Bundle 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_4_enabled",
+      "label": "Enable bundle 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bundle_4_title",
+      "label": "Bundle name",
+      "default": "Complete Bundle"
+    },
+    {
+      "type": "product",
+      "id": "bundle_4_product",
+      "label": "Product"
+    },
+    {
+      "type": "textarea",
+      "id": "bundle_4_description",
+      "label": "Description",
+      "default": "The complete collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_4_featured",
+      "label": "Mark as featured",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bundle_4_badge",
+      "label": "Badge text"
+    },
+    {
+      "type": "text",
+      "id": "bundle_4_button_text",
+      "label": "Button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "url",
+      "id": "bundle_4_button_url",
+      "label": "Button URL (optional)",
+      "info": "If set, button links to this URL. If blank, button adds to cart."
+    },
+
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#3f3939"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price",
+      "default": "#da5846"
+    },
+    {
+      "type": "color",
+      "id": "feature_icon_color",
+      "label": "Feature icon",
+      "default": "#04aed8"
+    },
+
+    {
+      "type": "header",
+      "content": "Selector"
+    },
+    {
+      "type": "color",
+      "id": "selector_bg_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "selector_text_color",
+      "label": "Text",
+      "default": "#3f3939"
+    },
+    {
+      "type": "color",
+      "id": "selector_border_color",
+      "label": "Border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "selector_hover_bg_color",
+      "label": "Hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "selector_hover_border_color",
+      "label": "Hover border",
+      "default": "#04aed8"
+    },
+    {
+      "type": "color",
+      "id": "selector_active_bg_color",
+      "label": "Checkbox color",
+      "default": "#04aed8"
+    },
+    {
+      "type": "range",
+      "id": "selector_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 40
+    },
+
+    {
+      "type": "header",
+      "content": "Badge"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg_color",
+      "label": "Background",
+      "default": "#ffd05a"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Text",
+      "default": "#3f3939"
+    },
+
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background",
+      "default": "#da5846"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background",
+      "default": "#c24a38"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 40
+    },
+
+    {
+      "type": "header",
+      "content": "Comparison grid"
+    },
+    {
+      "type": "header",
+      "content": "Ages row"
+    },
+    {
+      "type": "text",
+      "id": "ages_label",
+      "label": "Left label",
+      "default": "Ages"
+    },
+    {
+      "type": "text",
+      "id": "bundle_1_ages",
+      "label": "Bundle 1 ages",
+      "default": "5–12"
+    },
+    {
+      "type": "text",
+      "id": "bundle_2_ages",
+      "label": "Bundle 2 ages",
+      "default": "5–12"
+    },
+    {
+      "type": "text",
+      "id": "bundle_3_ages",
+      "label": "Bundle 3 ages",
+      "default": "5–12"
+    },
+    {
+      "type": "text",
+      "id": "bundle_4_ages",
+      "label": "Bundle 4 ages",
+      "default": "13+"
+    },
+
+    {
+      "type": "text",
+      "id": "feature_1_label",
+      "label": "Feature 1 label",
+      "default": "All 14 Children's Books"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_bundle_1_included",
+      "label": "Bundle 1 includes feature 1",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_bundle_2_included",
+      "label": "Bundle 2 includes feature 1",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_bundle_3_included",
+      "label": "Bundle 3 includes feature 1",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_bundle_4_included",
+      "label": "Bundle 4 includes feature 1",
+      "default": true
+    },
+
+    {
+      "type": "text",
+      "id": "feature_2_label",
+      "label": "Feature 2 label",
+      "default": "14 PDF Activity Workbooks"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_bundle_1_included",
+      "label": "Bundle 1 includes feature 2",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_bundle_2_included",
+      "label": "Bundle 2 includes feature 2",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_bundle_3_included",
+      "label": "Bundle 3 includes feature 2",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_bundle_4_included",
+      "label": "Bundle 4 includes feature 2",
+      "default": true
+    },
+
+    {
+      "type": "text",
+      "id": "feature_3_label",
+      "label": "Feature 3 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_bundle_1_included",
+      "label": "Bundle 1 includes feature 3",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_bundle_2_included",
+      "label": "Bundle 2 includes feature 3",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_bundle_3_included",
+      "label": "Bundle 3 includes feature 3",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_bundle_4_included",
+      "label": "Bundle 4 includes feature 3",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_4_label",
+      "label": "Feature 4 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_bundle_1_included",
+      "label": "Bundle 1 includes feature 4",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_bundle_2_included",
+      "label": "Bundle 2 includes feature 4",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_bundle_3_included",
+      "label": "Bundle 3 includes feature 4",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_bundle_4_included",
+      "label": "Bundle 4 includes feature 4",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_5_label",
+      "label": "Feature 5 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_5_bundle_1_included",
+      "label": "Bundle 1 includes feature 5",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_5_bundle_2_included",
+      "label": "Bundle 2 includes feature 5",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_5_bundle_3_included",
+      "label": "Bundle 3 includes feature 5",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_5_bundle_4_included",
+      "label": "Bundle 4 includes feature 5",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_6_label",
+      "label": "Feature 6 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_6_bundle_1_included",
+      "label": "Bundle 1 includes feature 6",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_6_bundle_2_included",
+      "label": "Bundle 2 includes feature 6",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_6_bundle_3_included",
+      "label": "Bundle 3 includes feature 6",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_6_bundle_4_included",
+      "label": "Bundle 4 includes feature 6",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_7_label",
+      "label": "Feature 7 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_7_bundle_1_included",
+      "label": "Bundle 1 includes feature 7",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_7_bundle_2_included",
+      "label": "Bundle 2 includes feature 7",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_7_bundle_3_included",
+      "label": "Bundle 3 includes feature 7",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_7_bundle_4_included",
+      "label": "Bundle 4 includes feature 7",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_8_label",
+      "label": "Feature 8 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_8_bundle_1_included",
+      "label": "Bundle 1 includes feature 8",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_8_bundle_2_included",
+      "label": "Bundle 2 includes feature 8",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_8_bundle_3_included",
+      "label": "Bundle 3 includes feature 8",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_8_bundle_4_included",
+      "label": "Bundle 4 includes feature 8",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_9_label",
+      "label": "Feature 9 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_9_bundle_1_included",
+      "label": "Bundle 1 includes feature 9",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_9_bundle_2_included",
+      "label": "Bundle 2 includes feature 9",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_9_bundle_3_included",
+      "label": "Bundle 3 includes feature 9",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_9_bundle_4_included",
+      "label": "Bundle 4 includes feature 9",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_10_label",
+      "label": "Feature 10 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_10_bundle_1_included",
+      "label": "Bundle 1 includes feature 10",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_10_bundle_2_included",
+      "label": "Bundle 2 includes feature 10",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_10_bundle_3_included",
+      "label": "Bundle 3 includes feature 10",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_10_bundle_4_included",
+      "label": "Bundle 4 includes feature 10",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_11_label",
+      "label": "Feature 11 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_11_bundle_1_included",
+      "label": "Bundle 1 includes feature 11",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_11_bundle_2_included",
+      "label": "Bundle 2 includes feature 11",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_11_bundle_3_included",
+      "label": "Bundle 3 includes feature 11",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_11_bundle_4_included",
+      "label": "Bundle 4 includes feature 11",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_12_label",
+      "label": "Feature 12 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_12_bundle_1_included",
+      "label": "Bundle 1 includes feature 12",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_12_bundle_2_included",
+      "label": "Bundle 2 includes feature 12",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_12_bundle_3_included",
+      "label": "Bundle 3 includes feature 12",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_12_bundle_4_included",
+      "label": "Bundle 4 includes feature 12",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_13_label",
+      "label": "Feature 13 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_13_bundle_1_included",
+      "label": "Bundle 1 includes feature 13",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_13_bundle_2_included",
+      "label": "Bundle 2 includes feature 13",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_13_bundle_3_included",
+      "label": "Bundle 3 includes feature 13",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_13_bundle_4_included",
+      "label": "Bundle 4 includes feature 13",
+      "default": false
+    },
+
+    {
+      "type": "text",
+      "id": "feature_14_label",
+      "label": "Feature 14 label"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_14_bundle_1_included",
+      "label": "Bundle 1 includes feature 14",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_14_bundle_2_included",
+      "label": "Bundle 2 includes feature 14",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_14_bundle_3_included",
+      "label": "Bundle 3 includes feature 14",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_14_bundle_4_included",
+      "label": "Bundle 4 includes feature 14",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle comparison"
+    }
+  ]
+}
+{% endschema %}

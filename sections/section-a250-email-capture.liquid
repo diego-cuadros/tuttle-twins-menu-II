@@ -1,0 +1,180 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Email Capture
+  File:    sections/section-a250-email-capture.liquid
+
+  KLAVIYO INTEGRATION:
+  ─────────────────────
+  Option A — Klaviyo Embedded Form (recommended):
+    Set "embed_type" to "klaviyo" and paste your Klaviyo
+    HTML snippet into the "klaviyo_embed_code" field.
+    The Klaviyo embed handles subscription server-side.
+
+  Option B — Klaviyo Client API (vanilla JS, no embed):
+    Keep embed_type as "vanilla", then replace the
+    placeholder fetch() in the inline <script> below with:
+
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=YOUR_COMPANY_ID', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'revision': '2023-12-15' },
+      body: JSON.stringify({
+        data: {
+          type: 'subscription',
+          attributes: {
+            profile: { data: { type: 'profile', attributes: { email: email } } },
+            relationships: { list: { data: { type: 'list', id: 'YOUR_LIST_ID' } } }
+          }
+        }
+      })
+    });
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-email-section" id="a250-email">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-email-section-sub">{{ section.settings.subheading }}</p>
+
+    {% if section.settings.embed_type == 'klaviyo' and section.settings.klaviyo_embed_code != blank %}
+      {%- comment -%} KLAVIYO EMBED MODE {%- endcomment -%}
+      <div class="a250-klaviyo-embed-wrap">
+        {{ section.settings.klaviyo_embed_code }}
+      </div>
+
+    {% else %}
+      {%- comment -%} VANILLA JS MODE {%- endcomment -%}
+      <div class="a250-email-form" id="a250EmailFormWrap">
+        <input
+          class="a250-email-input"
+          type="email"
+          id="a250EmailCapture"
+          placeholder="{{ section.settings.input_placeholder }}"
+          aria-label="{{ section.settings.input_placeholder }}">
+        <button class="a250-btn-email-submit" onclick="a250HandleEmailCapture()">
+          {{ section.settings.button_text }} →
+        </button>
+      </div>
+      <div class="a250-email-privacy">{{ section.settings.privacy_text }}</div>
+    {% endif %}
+  </section>
+</div>
+
+<script>
+(function() {
+  window.a250HandleEmailCapture = function() {
+    var input   = document.getElementById('a250EmailCapture');
+    var btn     = document.querySelector('.a250-btn-email-submit');
+    var privacy = document.querySelector('.a250-email-privacy');
+    var email   = input ? input.value.trim() : '';
+
+    if (!email || email.indexOf('@') === -1) {
+      if (input) input.style.borderColor = 'rgba(224,90,58,.8)';
+      return;
+    }
+
+    /* ── REPLACE THIS BLOCK with your Klaviyo client API call ── */
+    /* See comment at top of this file for the exact fetch() code */
+    console.log('[A250 Email] Captured:', email);
+    /* ────────────────────────────────────────────────────────── */
+
+    if (input)  { input.style.borderColor = 'rgba(46,155,82,.8)'; input.value = ''; }
+    if (btn)    { btn.style.display = 'none'; }
+    if (privacy){ privacy.textContent = '{{ section.settings.success_text | escape }}'; }
+    if (input)  { input.placeholder = '{{ section.settings.success_input_placeholder | escape }}'; }
+  };
+})();
+</script>
+
+{% schema %}
+{
+  "name": "A250 · Email Capture",
+  "tag": "div",
+  "class": "a250-section-email",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Stay Connected"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get contest updates & Dinner Table resources."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "We'll notify you when Volume 3 ships, when winners are announced, and send free resources to help your family celebrate 250 years — one conversation at a time."
+    },
+    {
+      "type": "header",
+      "content": "Form Type"
+    },
+    {
+      "type": "select",
+      "id": "embed_type",
+      "label": "Form embed type",
+      "options": [
+        { "value": "vanilla",  "label": "Vanilla JS (default)" },
+        { "value": "klaviyo",  "label": "Klaviyo Embedded Form" }
+      ],
+      "default": "vanilla",
+      "info": "Switch to 'Klaviyo Embedded Form' and paste your Klaviyo HTML snippet below."
+    },
+    {
+      "type": "html",
+      "id": "klaviyo_embed_code",
+      "label": "Klaviyo embed code",
+      "info": "Only used when Form Type is set to 'Klaviyo Embedded Form'. Paste your full Klaviyo HTML snippet here."
+    },
+    {
+      "type": "header",
+      "content": "Vanilla Form Labels"
+    },
+    {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "Input placeholder",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Keep Me Posted"
+    },
+    {
+      "type": "text",
+      "id": "privacy_text",
+      "label": "Privacy line",
+      "default": "🔒 No spam. Unsubscribe any time. You're already giving your kids something most schools can't."
+    },
+    {
+      "type": "header",
+      "content": "Success State"
+    },
+    {
+      "type": "text",
+      "id": "success_input_placeholder",
+      "label": "Input placeholder after submit",
+      "default": "✅ You're on the list — watch your inbox!"
+    },
+    {
+      "type": "text",
+      "id": "success_text",
+      "label": "Privacy line after submit",
+      "default": "✅ You're in! We'll be in touch with contest updates and Dinner Table resources."
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Email Capture"
+    }
+  ]
+}
+{% endschema %}

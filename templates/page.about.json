@@ -1,0 +1,1120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "tt_hero_9iPwqT": {
+      "type": "tt-hero",
+      "blocks": {
+        "heading_RmtYxA": {
+          "type": "heading",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "heading": "Introducing the Ideas of Liberty to a New Generation",
+            "alignment": "left",
+            "font_size_desktop": 48,
+            "font_size_mobile": 32,
+            "font_weight": "600",
+            "text_transform": "none",
+            "color": "",
+            "highlight_color": "",
+            "heading_tag": "h1",
+            "max_width": 100,
+            "margin_top": 20,
+            "margin_bottom": 20
+          },
+          "blocks": {}
+        },
+        "text_eRiXxV": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>For too long, freedom-loving parents didn’t know how to teach the ideas of liberty to their children—and they were left alone to try and shield their kids from the crazy ideas promoted by many teachers, government officials, and the media. Now, millions of parents are reversing this trend by using our life-changing resources for:</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "custom_css": ""
+          },
+          "blocks": {}
+        },
+        "button_group_c6fdNJ": {
+          "type": "button-group",
+          "name": "Button Group",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "alignment": "flex-start",
+            "gap": 20,
+            "stack_on_mobile": false,
+            "margin_top": 40,
+            "margin_bottom": 40
+          },
+          "blocks": {
+            "button_single_p6Cy9n": {
+              "type": "button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "Toddlers",
+                "button_link": "shopify://pages/toddler",
+                "button_style": "primary",
+                "button_size": "large",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            },
+            "button_single_qqnPhh": {
+              "type": "button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "Kids",
+                "button_link": "shopify://pages/kids-books",
+                "button_style": "primary",
+                "button_size": "large",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            },
+            "button_single_qXTbRx": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "button_label": "Teens",
+                "button_link": "shopify://pages/books-for-teens",
+                "button_style": "primary",
+                "button_size": "large",
+                "alignment": "left",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_single_p6Cy9n",
+            "button_single_qqnPhh",
+            "button_single_qXTbRx"
+          ]
+        },
+        "tt_milestones_wztcKr": {
+          "type": "tt-milestones",
+          "name": "Milestones",
+          "settings": {
+            "hide_on_mobile": false,
+            "hide_on_tablet": false,
+            "hide_on_desktop": false,
+            "alignment": "flex-start",
+            "gap": 24,
+            "min_width": 120,
+            "stack_on_mobile": false,
+            "margin_top": 24,
+            "margin_bottom": 20,
+            "background_color": "",
+            "text_color": "",
+            "padding": 40,
+            "border_radius": 16,
+            "width": 0
+          },
+          "blocks": {
+            "tt_milestone_AbyrwL": {
+              "type": "tt-milestone",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "icon_size": 60,
+                "heading": "6 Mil+",
+                "text": "Copies Sold Worldwide",
+                "show_stars": false,
+                "stars_color": "#ffb800",
+                "alignment": "left",
+                "item_spacing": 4,
+                "heading_size_desktop": 32,
+                "heading_size_mobile": 24,
+                "heading_weight": "700",
+                "heading_color": "",
+                "text_size_desktop": 14,
+                "text_size_mobile": 12,
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "tt_milestone_Q9eRfH": {
+              "type": "tt-milestone",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "icon_size": 60,
+                "heading": "4,500+",
+                "text": "5 Star Reviews",
+                "show_stars": true,
+                "stars_color": "#ffb800",
+                "alignment": "left",
+                "item_spacing": 4,
+                "heading_size_desktop": 32,
+                "heading_size_mobile": 24,
+                "heading_weight": "700",
+                "heading_color": "",
+                "text_size_desktop": 14,
+                "text_size_mobile": 12,
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "tt_milestone_ykUPdm": {
+              "type": "tt-milestone",
+              "settings": {
+                "hide_on_mobile": false,
+                "hide_on_tablet": false,
+                "hide_on_desktop": false,
+                "icon": "shopify://shop_images/money-back-guarantee-1.png",
+                "icon_size": 120,
+                "heading": "",
+                "text": "",
+                "show_stars": false,
+                "stars_color": "#ffb800",
+                "alignment": "left",
+                "item_spacing": 4,
+                "heading_size_desktop": 32,
+                "heading_size_mobile": 24,
+                "heading_weight": "700",
+                "heading_color": "",
+                "text_size_desktop": 14,
+                "text_size_mobile": 12,
+                "text_color": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tt_milestone_AbyrwL",
+            "tt_milestone_Q9eRfH",
+            "tt_milestone_ykUPdm"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_RmtYxA",
+        "text_eRiXxV",
+        "button_group_c6fdNJ",
+        "tt_milestones_wztcKr"
+      ],
+      "settings": {
+        "hide_on_mobile": false,
+        "hide_on_tablet": false,
+        "hide_on_desktop": false,
+        "image": "shopify://shop_images/NewGen-splash.webp",
+        "vertical_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 56,
+        "padding_bottom": 52,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "sskymo_logo_list_V7qKy7": {
+      "type": "sskymo-logo-list",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_KW7aLi": {
+      "type": "z-video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/aJg-TyXFdTw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_about_page.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "ssky_testimonials_P6iCqz": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_gQhALH": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“<strong>We’re really concerned about teaching our daughter proper education, giving her real useful and practical tools to be a successful person and to learn about</strong> economics and government and politics and history, the way it’s supposed to be taught accurately. Thanks for what you do.“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Dusty S.",
+            "author_state": "",
+            "author_image": "shopify://shop_images/Dusty-Scott.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_gQhALH"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_trFXHH": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_nrX9Pm": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Our Mission Is to Help You Teach Powerful Ideas and True History to Your Children</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_BWeWm9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a parent wanting to teach your kids the values you hold dear, you may wonder:</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_xgRjXi": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>Can my kids really understand economic ideas? Do I need to teach them about it?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_HTBtkh": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How can I inspire my kids to love America and the ideas taught by the Founding Fathers?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_pDWwC7": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do I give my kids a foundation of freedom so they aren’t swept up by the crazy ideas being promoted on social media and by the government and media?</p>",
+            "text_large": true
+          }
+        },
+        "text_9ncrwa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While there are many books to teach the ideas of freedom to adults, there has been a profound void in the children’s literature market. The Tuttle Twins series closes the gap, helping parents convey the principles of freedom to their kids in a fun way.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_nrX9Pm",
+        "text_BWeWm9",
+        "checkbox_xgRjXi",
+        "checkbox_HTBtkh",
+        "checkbox_pDWwC7",
+        "text_9ncrwa"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/family-with-book.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_y6c3af": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_YqyxEx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Taking the ideas of liberty to the next generation, with fun, educational books that kids and adults can enjoy.</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_39j4mG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each of our books focuses on a different aspect of the principles of a free society: free markets, entrepreneurship, individual rights, personal responsibility, sound money, protectionism, and a variety of other issues—all boiled down to core concepts that children of different ages can easily grasp.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YqyxEx",
+        "text_39j4mG"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Girl-with-Book-v2.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "scheme-5",
+        "merging_color": "#3f3939",
+        "overflow_image": 60,
+        "merge_with_section_above": true,
+        "remove_bottom_space": true,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_wPkdAD": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "section_header_J7DkwL": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>But Before You Welcome Us to Be a Part of Your Family’s Story, We Want to Share Our Story With You… </p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "timeline_column_xgwEK7": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/connor.png",
+            "image_fit": true,
+            "caption": "Hi, I’m",
+            "text_style": "small-bold",
+            "heading": "<p>Connor Boyack</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Public speaker, author of over 40 books, and illegal beekeeper (Yeah, that’s a thing…)</p>",
+            "text_size": "regular",
+            "text_weight": "bold",
+            "text_b": "<p>I’m the founder and president of Libertas Institute, a free market think tank where we change laws to protect our rights. I have had dozens of legislative victories spanning a wide range of areas such as privacy, government transparency, property rights, entrepreneurship, education, personal freedom, and more.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_e9AgVq": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/elijah_1.webp",
+            "image_fit": true,
+            "caption": "Hi, I’m",
+            "text_style": "small-bold",
+            "heading": "<p>Elijah Stanfield</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>llustrator, writer, animator</p>",
+            "text_size": "regular",
+            "text_weight": "bold",
+            "text_b": "<p>Before creating the Tuttle Twins with Connor, I produced videos and animations for numerous Fortune 500 companies, and political campaigns. When I’m not working to change the world, I love to learn about history and go on adventures with my wife, April, and our six children. We live in Tennessee.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_J7DkwL",
+        "timeline_column_xgwEK7",
+        "timeline_column_e9AgVq"
+      ],
+      "settings": {
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "year_top": "",
+        "merge_year_top": false,
+        "color_scheme_year_top": "",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_bfm783": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "section_header_baFmfN": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Here’s Our Journey So Far </p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "timeline_column_wncVBg": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Freedom-Fest.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_qcqRHw": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>2012 Connor and Elijah Met</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Connor and Elijah met at FreedomFest, an annual conference for liberty lovers. We were both helping the Ron Paul presidential campaign. We became friends and wanted to find a way to work together in the future, but at the time we were not yet sure what that would be.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_baFmfN",
+        "timeline_column_wncVBg",
+        "timeline_column_qcqRHw"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "year_top": "2012",
+        "merge_year_top": false,
+        "color_scheme_year_top": "scheme-3",
+        "year_bottom": "2014",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_Qkn6hW": {
+      "type": "z-video",
+      "settings": {
+        "heading": "The Tuttle Twins Were Born",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=Wl_iQuG397U",
+        "cover_image": "shopify://shop_images/Image-1-wplay.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "ssky_text_block_Qbcn8w": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_A83UwE": {
+          "type": "text",
+          "settings": {
+            "max_width": 68,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Connor’s young son asked him what he did all day for work as president of a think tank non-profit. Connor struggled to know how to explain his work to his children, so he went to Amazon hoping to find books that would teach kids about free markets, property rights, and justice.<br/><br/>There was nothing.<br/><br/>He and Elijah had discussed the idea of a children’s book to teach about liberty and felt like it would be a fun project to work on together. They were both big fans of The Law by Frédéric Bastiat, so they chose to base the first Tuttle Twins book off of Bastiat’s.<br/><br/>At the time, there was no vision for what the Tuttle Twins would grow into. We simply saw a need and wanted a book for our own kids, but lots of parents bought the book, telling us that there was demand for this type of content. So we keep creating books!<br/><br/><br/></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_A83UwE"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 32,
+        "padding_bottom": 100,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_CCHFDp": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_F8f6gq": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "image": "shopify://shop_images/free-market-rules2.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>New Economics Curriculum for Families</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>We launched a <a href=\"/collections/free-market-rules\" title=\"Free Market Rules\">curriculum</a> so children—and their parents—could learn about economics, starting at a simple level and growing in complexity. Using fun activities and lessons, our economic curriculum helps kids of all ages learn more about markets than most members of Congress know!<br/><br/>Free market economics is something that seems boring and complex, but in reality helps us better understand our world—and we made sure the Tuttle Twins made it interesting to learn.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_wxAUHR": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "image": "shopify://shop_images/hq720.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Won the Think Tank Shark Tank</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Connor presented our new economic curriculum at a competition and won the top prize!<br/><br/>There was great excitement from this community of freedom fighters for the project, and the judges selected our project as the winner.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_F8f6gq",
+        "timeline_column_wxAUHR"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "year_top": "2019",
+        "merge_year_top": true,
+        "color_scheme_year_top": "scheme-4",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_WEGmXR": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_FrPyfB": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/46514247_10104676848554979_2274094095565586432_n.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>1 Million Books Sold</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>In early 2020, we reached a significant milestone for our self-published book series: we sold our millionth book! This was a great celebration for our team and a validation that what we were doing mattered to so many families.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_feNF8E": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/untitled-14.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>New Books for Toddlers and Teens</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>The growing success of our book series led us to create books for younger and older children so we could expand our reach and better serve families with kids of varying ages.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_BMfgwi": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/23800334_10103957449212029_2736957895683920767_o.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Huge Surge in Book Sales</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>In our first six years, 2014-2019, we sold a total of 750,000 books—pretty impressive for a brand new self-published project! But in 2020 alone, we sold 1.3 million copies, nearly double our entire past six years!<br/><br/>So many families were troubled by school shutdowns, activist teachers, authoritarian politicians, and the decay of our society. When they went looking for answers, the Tuttle Twins team was there to introduce our books and help them teach their kids the time-tested ideas of liberty as a means to make our world a better place.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_ETKmdA": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/Group-102947-1.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Launched Our Podcast “The Way the World Works”</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>To help families learn even more about the ideas of liberty, we launched a new podcast featuring 15-minute episodes so parents and their kids together can quickly learn about and discuss important ideas related to what’s going on in the world.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_FrPyfB",
+        "timeline_column_feNF8E",
+        "timeline_column_BMfgwi",
+        "timeline_column_ETKmdA"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "year_top": "2020",
+        "merge_year_top": true,
+        "color_scheme_year_top": "scheme-3",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_biPWK3": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_N4Ueci": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/120316425_10106150156743559_299231982753259210_n.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Attacked by Socialist Magazine</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>The magazine <em>Current Affairs</em>, written by socialists for socialists, wrote a lengthy attack article about our books. While others might have been sad, we were happy—we shared the article widely with our audience who responded by purchasing tens of thousands of books over the next few days! Being attacked by our opposition helped us attract more attention from interested individuals who ended up purchasing our books to learn about liberty alongside their kids.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_N4Ueci"
+      ],
+      "settings": {
+        "image_size": "smallplus",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "year_top": "",
+        "merge_year_top": false,
+        "color_scheme_year_top": "",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_WDY48z": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_9Ny6ww": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/TT-Digital-Poster-1920x1080-1-1.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Our New Cartoon Launches</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>The growing success of our books led us to spin off an <a href=\"https://tuttletwinstv.com/\" target=\"_blank\" title=\"https://tuttletwinstv.com/\">animated cartoon series</a> to provide families even more content to understand the ideas of freedom. This highly entertaining cartoon is educational and fun for both kids and their parents, with plenty of humor throughout. It’s been a big hit!</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_KdBxe4": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/FEKytRpA.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Tuttle Times Monthly Magazine Launched</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Our books have been extremely popular, but we wanted to put out more regular content for kids to enjoy, so we launched a <a href=\"/collections/magazine\" title=\"Magazine\">monthly magazine subscription</a> so kids can get important mail every few weeks teaching them about current events, economics, history, civics, and more.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_9Ny6ww",
+        "timeline_column_KdBxe4"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "year_top": "2021",
+        "merge_year_top": true,
+        "color_scheme_year_top": "scheme-5",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_VCgXih": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_PzRed8": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/IMG_0391.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>Glenn Beck Signs on to Promote Tuttle Twins</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Our increased sales led to a lot of new attention from influencers and prominent people like Glenn Beck, who signed on to promote the books on his radio program every day. This increased awareness about our books and helped even more families learn the important ideas we teach about!</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_PzRed8"
+      ],
+      "settings": {
+        "image_size": "large",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "year_top": "",
+        "merge_year_top": false,
+        "color_scheme_year_top": "",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_timeline_block_cb7UH8": {
+      "type": "ssky-timeline-block",
+      "blocks": {
+        "timeline_column_WN7mJW": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/untitled-35-1024x825.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>America’s History Stories Series Published</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>Many parents are concerned about Critical Race Theory, the 1619 Project, and related attempts to rewrite our history and dumb down the powerful ideas of the Founding Fathers.<br/><br/>To respond to this, we published <a href=\"/pages/history\" title=\"History\">a new, 240-page American history book</a> to teach the ideas of the past so they can be applied to what’s going on in our world today.</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        },
+        "timeline_column_KktzCD": {
+          "type": "timeline_column",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/CNN-1.webp",
+            "image_fit": false,
+            "caption": "",
+            "text_style": "large-bold",
+            "heading": "<p>CNN Attacked Tuttle Twins</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "caption_b": "",
+            "text_style_b": "large-bold",
+            "text": "<p>A CNN article accused the Tuttle Twins of creating a “right wing children’s education complex” to combat liberal indoctrination of kids, in light of books on race, gender, and ideology being pushed as propaganda on kids in schools across the country. The article attacked our work and tried to discredit its purpose.<br/><br/>We shared the article with our audience, and this drove sales of over 50,000 books over the next few days from our community!</p>",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text_b": "",
+            "text_size_b": "regular",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_column_WN7mJW",
+        "timeline_column_KktzCD"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "year_top": "2022",
+        "merge_year_top": true,
+        "color_scheme_year_top": "scheme-3",
+        "year_bottom": "",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_f_dhgtpb": {
+      "type": "sskymo-text-column-f",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "tt_hero_9iPwqT",
+    "sskymo_logo_list_V7qKy7",
+    "z_video_KW7aLi",
+    "ssky_testimonials_P6iCqz",
+    "ssky_text_image_block_trFXHH",
+    "ssky_text_image_block_y6c3af",
+    "ssky_timeline_block_wPkdAD",
+    "ssky_timeline_block_bfm783",
+    "z_video_Qkn6hW",
+    "ssky_text_block_Qbcn8w",
+    "ssky_timeline_block_CCHFDp",
+    "ssky_timeline_block_WEGmXR",
+    "ssky_timeline_block_biPWK3",
+    "ssky_timeline_block_WDY48z",
+    "ssky_timeline_block_VCgXih",
+    "ssky_timeline_block_cb7UH8",
+    "sskymo_text_column_f_dhgtpb"
+  ]
+}

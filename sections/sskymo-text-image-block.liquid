@@ -1,0 +1,317 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+  assign merging_with_section_below = false
+  assign show_as_card = false
+  if section.settings.merging_with_section_below == true
+    assign merging_with_section_below = true
+  endif
+  if section.settings.show_as_card == true and merging_with_section_below == false
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-image-block-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if merging_with_section_below -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      z-index: 1;
+    }
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    }
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__layout-merging-color {
+      background-color: {{ section.settings.merging_color }};
+    }
+    {%- if section.settings.overflow_image > 0 -%}
+      @media screen and (min-width: 1140px) {
+        .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__layout-merging {
+          padding-top: {{ section.settings.overflow_image |  divided_by: 2 }}px
+        }
+        .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+          overflow: unset;
+          padding-top: 0 !important;
+        }
+        .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__image {
+          margin-top: -{{ section.settings.overflow_image }}px;
+        }
+        .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__blocks {
+          padding-top: 3.2rem;
+        }
+      }
+    {%- endif -%}
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-text-image-block-{{ section.id }} .ssky-text-image-block__wrapper {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-text-image-block-{{ section.id }}">
+  <div class="ssky-text-image-block content-container color-{{ section.settings.color_scheme }} gradient">
+    {%- if merging_with_section_below -%}
+      <div class="ssky-text-image-block__layout-merging{%- if section.settings.merge_with_section_above %} ssky-text-image-block__layout-merging-above page-width{%- endif -%}">
+        <div class="color-{{ section.settings.color_scheme_layout_merging }} gradient">
+    {%- endif -%}
+    {%- if show_as_card -%}<div class="page-width">{%- endif -%}
+    {%- for take_a_stand_today in shop.metaobjects.take_a_stand_today.values limit: 1 -%}
+      <div class="ssky-text-image-block__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+        <div class="ssky-text-image-block__image">
+          <div
+            class="image-fit{%- if take_a_stand_today.image != blank %} media{%- else %} placeholder{%- endif -%}"
+            style="padding-bottom:{%- if merging_with_section_below -%}{{ 1 | divided_by: take_a_stand_today.image.value.image.aspect_ratio | times: 100 | at_most: 120 }}%;{%- else -%}{{ 1 | divided_by: take_a_stand_today.image.value.image.aspect_ratio | times: 100 | at_most: 100 }}%;{%- endif -%}"
+          >
+            {%- if take_a_stand_today.image != blank -%}
+              {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+              {{
+                take_a_stand_today.image
+                | image_url: width: 1500
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="ssky-text-image-block__blocks ssky-text-block__blocks left">
+          {%- assign heading_length = take_a_stand_today.heading | metafield_text | size -%}
+          <h2
+            class="ssky-text-block__heading rte inline-richtext h4{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1;"
+            {% endif %}
+          >
+            {{ take_a_stand_today.heading | metafield_tag }}
+          </h2>
+
+          <div
+            class="ssky-text-block__text rte text-medium{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            {{ take_a_stand_today.description | metafield_tag }}
+          </div>
+
+          <div
+            class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 3;"
+            {% endif %}
+          >
+            {%- if take_a_stand_today.button_label != blank -%}
+              {% capture link_value %}{% render 'ssky-button-link', type: take_a_stand_today %}{% endcapture %}
+              <a
+                {% if link_value == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ link_value | strip }}"
+                {% endif %}
+                class="button button--large button--primary"
+              >
+                {{ take_a_stand_today.button_label | escape }}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+    {%- if show_as_card -%}</div>{%- endif -%}
+    {%- if merging_with_section_below -%}
+      </div>
+      </div>
+      <div
+        class="ssky-text-image-block__layout-merging-color{%- if section.settings.merge_with_section_above %} ssky-text-image-block__layout-merging-above{%- endif -%}"
+      ></div>
+    {%- endif -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "TTm Take a stand today",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.merging"
+    },
+    {
+      "type": "checkbox",
+      "id": "merging_with_section_below",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_layout_merging",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "color",
+      "id": "merging_color",
+      "label": "Merging color",
+      "default": "#bcecf6"
+    },
+    {
+      "type": "range",
+      "id": "overflow_image",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Overflow image from above",
+      "info": "Use this when the text content is smaller than the image. Desktop only.",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "merge_with_section_above",
+      "label": "t:sections.all.ssky_layouts.extension.merging_above",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Take a stand today"
+    }
+  ]
+}
+{% endschema %}

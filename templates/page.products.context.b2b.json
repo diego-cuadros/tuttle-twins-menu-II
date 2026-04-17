@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.products.json",
+  "context": {
+    "market": "all-b2b"
+  },
+  "sections": {
+    "z_featured_collection_p4BDCC": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_UUV8TF": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_nFcLXa": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_zHra3V": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_9HKDNx": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_NpETnb": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_7n4r3p": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_dYXP3i": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_U3xMcw": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_A3wEtj": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_VFHJdB": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "z_featured_collection_idUk6i": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "sskymo_text_image_block_h_f8FVKE": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  },
+  "order": [
+    "main",
+    "z_featured_collection_p4BDCC",
+    "z_featured_collection_UUV8TF",
+    "z_featured_collection_nFcLXa",
+    "z_featured_collection_zHra3V",
+    "z_featured_collection_9HKDNx",
+    "z_featured_collection_NpETnb",
+    "z_featured_collection_7n4r3p",
+    "z_featured_collection_dYXP3i",
+    "z_featured_collection_U3xMcw",
+    "z_featured_collection_A3wEtj",
+    "z_featured_collection_VFHJdB",
+    "z_featured_collection_idUk6i",
+    "sskymo_text_image_block_h_f8FVKE",
+    "ssky_text_image_block_iqMwpL",
+    "sskymo_text_image_block_b_4BM7L4",
+    "sskymo_text_image_block_jrLaXD"
+  ]
+}

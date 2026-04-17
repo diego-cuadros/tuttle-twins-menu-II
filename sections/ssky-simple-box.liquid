@@ -1,0 +1,61 @@
+{% if section.settings.box_content != blank %}<div class="box-content-main-section box-content-main-section-{{ section.id }}" style="background-color: {{ section.settings.box_background_color }};padding: 0px 0px;">
+  {% style %}
+    .box-content-main-section-{{ section.id }} .box-content-description {
+        border: 2px solid #3F3939;
+        border-radius: 15px;
+        padding: 48px;
+        text-align: center;
+        max-width: 79%;
+        font-weight: 600;
+        background-color: #ffffff;
+    }
+    .box-content-main-section-{{ section.id }} .box-content-description p {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0px;
+    }
+    @media (max-width: 989px) {
+      .box-content-main-section-{{ section.id }} .box-content-description {
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 568px) {
+      .box-content-main-section-{{ section.id }} .box-content-description {padding: 15px;}
+      .box-content-main-section-{{ section.id }} .box-content-description p {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  {% endstyle %}
+  <div class="page-width" >
+    <div class="box-content-description" >
+      {{ section.settings.box_content }}
+    </div>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "TT Box Section",
+  "tag": "section",
+  "class": "cus-box-section",
+  "settings": [
+    {
+      "type": "richtext",
+      "label": "Box content",
+      "id": "box_content"
+    },
+    {
+      "type": "color",
+      "label": "Box Background Color",
+      "id": "box_background_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Box Section"
+    }
+  ]
+}
+{% endschema %}

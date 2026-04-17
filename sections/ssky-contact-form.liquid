@@ -1,0 +1,555 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .ssky-contact-{{ section.id }} .ssky-contact {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .ssky-contact-{{ section.id }} .field:before, .ssky-contact-{{ section.id }} .field:after,
+  .ssky-contact-{{ section.id }} .field:hover.field:after {box-shadow: none}
+  .ssky-contact-{{ section.id }} .field .field__input {border: 1px solid rgba(63, 57, 57, 0.55);}
+  @media screen and (min-width: 750px) {
+    .ssky-contact-{{ section.id }} .ssky-contact {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .ssky-contact-{{ section.id }} .image-size-ssky-smallplus .ssky-contact__blocks {
+      flex: 0 0 calc(64% - 16px);
+    }
+  }
+  {%- if section.settings.image != blank -%}
+    @media screen and (min-width: 990px) {
+      .ssky-contact-{{ section.id }} .ssky-contact {
+        background-image: url('{{ section.settings.image | image_url: width: 3840  }}');
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: unset;
+      }
+    }
+  {%- else -%}
+    .ssky-contact-{{ section.id }} .ssky-contact__wrapper {
+      justify-content: center;
+      text-align: center;
+    }
+    @media screen and (min-width: 990px) {
+      .ssky-contact-{{ section.id }} .image-size-ssky-smallplus .ssky-contact__blocks {
+        flex: 0 0 calc(80% - 16px);
+      }
+    }
+  {%- endif -%}
+  {%- if section.settings.top_left -%}
+    .ssky-contact-{{ section.id }} .ssky-contact {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-contact-{{ section.id }} .ssky-contact {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-contact-{{ section.id }} .ssky-contact {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-contact-{{ section.id }} .ssky-contact {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-contact-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+<div class="ssky-contact-{{ section.id }}">
+  <div class="ssky-contact content-container color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class }}">
+    <div class="ssky-contact__wrapper image-size-ssky-smallplus page-width">
+      <div class="ssky-contact__blocks ssky-text-block__blocks">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'contact_form' -%}
+              {%- if block.settings.label != blank -%}
+                <h1 class="ssky-contact-form-label h5 color-scheme-1 gradient">{{ block.settings.label }}</h1>
+              {%- else -%}
+                <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+                <style>
+                  .ssky-contact-{{ section.id }} .contact {border-radius:20px;}
+                </style>
+              {%- endif -%}
+              <div class="contact color-scheme-1 gradient">
+                {%- liquid
+                  assign contact_form_class = 'isolate'
+                  if settings.animations_reveal_on_scroll
+                    assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+                  endif
+                -%}
+                {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+                  {%- if form.posted_successfully? -%}
+                    <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                      {{- 'icon-success.svg' | inline_asset_content -}}
+                      {{ 'templates.contact.form.post_success' | t }}
+                    </h2>
+                  {%- elsif form.errors -%}
+                    <div class="form__message">
+                      <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                        {{- 'icon-error.svg' | inline_asset_content -}}
+                        {{ 'templates.contact.form.error_heading' | t }}
+                      </h2>
+                    </div>
+                    <ul class="form-status-list caption-large" role="list">
+                      <li>
+                        <a href="#ContactForm-email" class="link">
+                          {{ form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email }}
+                        </a>
+                      </li>
+                    </ul>
+                  {%- endif -%}
+                  <div class="contact__fields">
+                    <div class="field">
+                      <input
+                        class="field__input"
+                        autocomplete="name"
+                        type="text"
+                        id="ContactForm-name"
+                        name="contact[{{ 'templates.contact.form.name' | t }}]"
+                        value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                        aria-required="true"
+                        placeholder="{{ 'templates.contact.form.name' | t }}"
+                      >
+                      <label class="field__label" for="ContactForm-name">
+                        {{- 'templates.contact.form.name' | t -}}
+                        <span aria-hidden="true">*</span>
+                      </label>
+                    </div>
+                    <div class="field field--with-error">
+                      <input
+                        autocomplete="email"
+                        type="email"
+                        id="ContactForm-email"
+                        class="field__input"
+                        name="contact[email]"
+                        spellcheck="false"
+                        autocapitalize="off"
+                        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                        aria-required="true"
+                        {% if form.errors contains 'email' %}
+                          aria-invalid="true"
+                          aria-describedby="ContactForm-email-error"
+                        {% endif %}
+                        placeholder="{{ 'templates.contact.form.email' | t }}"
+                      >
+                      <label class="field__label" for="ContactForm-email">
+                        {{- 'templates.contact.form.email' | t }}
+                        <span aria-hidden="true">*</span>
+                      </label>
+                      {%- if form.errors contains 'email' -%}
+                        <small class="contact__field-error" id="ContactForm-email-error">
+                          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                          <span class="form__message">
+                            <span class="svg-wrapper">
+                              {{- 'icon-error.svg' | inline_asset_content -}}
+                            </span>
+                            {{- form.errors.translated_fields.email | capitalize }}
+                            {{ form.errors.messages.email -}}
+                          </span>
+                        </small>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  {% comment %}
+                    <div class="field">
+                      <input
+                        type="tel"
+                        id="ContactForm-phone"
+                        class="field__input"
+                        autocomplete="tel"
+                        name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                        pattern="[0-9\-]*"
+                        value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                        placeholder="{{ 'templates.contact.form.phone' | t }}"
+                      >
+                      <label class="field__label" for="ContactForm-phone">
+                        {{- 'templates.contact.form.phone' | t -}}
+                      </label>
+                    </div>
+                  {% endcomment %}
+                  <div class="field">
+                    <input
+                      class="field__input"
+                      type="text"
+                      id="ContactForm-subject"
+                      name="contact[{{ 'templates.contact.form.subject' | t }}]"
+                      placeholder="{{ 'templates.contact.form.subject' | t }}"
+                    >
+                    <label class="field__label" for="ContactForm-subject">
+                      {{- 'templates.contact.form.subject' | t -}}
+                    </label>
+                  </div>
+
+                  <div class="field">
+                    <textarea
+                      rows="10"
+                      id="ContactForm-body"
+                      class="text-area field__input"
+                      name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                      placeholder="{{ 'templates.contact.form.comment' | t }}"
+                    >
+                        {{- form.body -}}
+                      </textarea>
+                    <label class="form__label field__label" for="ContactForm-body">
+                      {{- 'templates.contact.form.comment' | t -}}
+                    </label>
+                  </div>
+                  <div class="contact__button">
+                    <button type="submit" class="button">
+                      {{ 'templates.contact.form.send' | t }}
+                    </button>
+                  </div>
+                {%- endform -%}
+              </div>
+            {%- when 'caption' -%}
+              <div
+                class="ssky-text-block__caption {{ block.settings.text_style }} {{ block.settings.color_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.caption | escape }}
+              </div>
+            {%- when 'heading' -%}
+              {%- if block.settings.heading != blank -%}
+                {%- assign heading_length = block.settings.heading | size -%}
+                <h2
+                  class="ssky-text-block__heading rte {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}{%- if heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ block.settings.heading }}
+                </h2>
+              {%- endif -%}
+
+            {%- when 'text' -%}
+              <div
+                class="ssky-text-block__text rte text-{{ block.settings.text_size }} weight-{{ block.settings.text_weight }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.text }}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "TT Contact form",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.custom_class.header"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "t:sections.all.custom_class.label",
+      "info": "t:sections.all.custom_class.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact_form",
+      "name": "Contact form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Contact Us"
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "t:sections.ssky_text_block.blocks.caption.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "t:sections.ssky_text_block.blocks.caption.settings.text.default",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "small-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+            },
+            {
+              "value": "small-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "medium-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+            },
+            {
+              "value": "large-semibold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+            },
+            {
+              "value": "large-bold",
+              "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+            }
+          ],
+          "default": "medium-semibold",
+          "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+          "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+        },
+        {
+          "type": "text",
+          "id": "color_class",
+          "label": "t:sections.all.ssky_color_class.label",
+          "default": "t:sections.all.ssky_color_class.default",
+          "info": "t:sections.all.ssky_color_class.info"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.ssky_text_block.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "default": "t:sections.ssky_text_block.blocks.heading.settings.heading.default",
+          "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "t:sections.all.heading_size.options__0.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h2",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_weight",
+          "options": [
+            {
+              "value": "medium",
+              "label": "t:sections.all.heading_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.heading_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.heading_weight.options__3.label"
+            }
+          ],
+          "default": "bold",
+          "label": "t:sections.all.heading_weight.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.ssky_text_block.blocks.text.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.ssky_text_block.blocks.text.settings.text.label",
+          "default": "t:sections.ssky_text_block.blocks.text.settings.text.default"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_size.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_size.options__1.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.all.text_size.options__2.label"
+            },
+            {
+              "value": "extra-large",
+              "label": "t:sections.all.text_size.options__3.label"
+            },
+            {
+              "value": "extra-extra-large",
+              "label": "t:sections.all.text_size.options__4.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_size.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "regular",
+              "label": "t:sections.all.text_weight.options__0.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.all.text_weight.options__1.label"
+            },
+            {
+              "value": "semibold",
+              "label": "t:sections.all.text_weight.options__2.label"
+            },
+            {
+              "value": "bold",
+              "label": "t:sections.all.text_weight.options__3.label"
+            }
+          ],
+          "default": "regular",
+          "label": "t:sections.all.text_weight.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TT Contact form",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "caption"
+        },
+        {
+          "type": "contact_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

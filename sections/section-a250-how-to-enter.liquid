@@ -1,0 +1,123 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: How to Enter
+  File:    sections/section-a250-how-to-enter.liquid
+  Blocks:  step (repeatable — each numbered step)
+           eligibility_stat (repeatable — the navy stats bar)
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-how-section" id="a250-how">
+    <span class="a250-section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="a250-h2-serif">{{ section.settings.heading }}</h2>
+    <p class="a250-section-sub">{{ section.settings.subheading }}</p>
+
+    {% assign step_blocks = section.blocks | where: 'type', 'step' %}
+    {% if step_blocks.size > 0 %}
+      <div class="a250-steps-grid">
+        {% for block in step_blocks %}
+          <div class="a250-step-card" {{ block.shopify_attributes }}>
+            <div class="a250-step-num">{{ forloop.index }}</div>
+            <div class="a250-step-title">{{ block.settings.title }}</div>
+            <div class="a250-step-desc">{{ block.settings.description }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% assign elig_blocks = section.blocks | where: 'type', 'eligibility_stat' %}
+    {% if elig_blocks.size > 0 %}
+      <div class="a250-eligibility-box">
+        {% for block in elig_blocks %}
+          <div {{ block.shopify_attributes }}>
+            <div class="a250-elig-label">{{ block.settings.label }}</div>
+            <div class="a250-elig-val">{{ block.settings.value }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · How to Enter",
+  "tag": "div",
+  "class": "a250-section-how",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "How to Enter"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Five steps to a published voice."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Here's everything a family needs to go from first draft to official submission."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step title",
+          "default": "Write the Editorial"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Step description",
+          "default": "Your child writes a letter to the editor about America's 250th anniversary, weaving in the Tuttle Twins."
+        }
+      ]
+    },
+    {
+      "type": "eligibility_stat",
+      "name": "Eligibility Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Stat label",
+          "default": "Who Can Enter"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Stat value",
+          "default": "All Kids"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · How to Enter",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Write the Editorial",        "description": "Your child writes a letter to the editor of a local (or any U.S.) newspaper about America's 250th anniversary, weaving in the Tuttle Twins and what they've learned. Any age, any style — their voice, their words." }},
+        { "type": "step", "settings": { "title": "Find Your Newspaper",        "description": "Use our state-by-state guide below to find submission instructions for your state's most-read papers. Every paper has a letters-to-the-editor section — this is how real voices get heard." }},
+        { "type": "step", "settings": { "title": "Submit to the Paper",        "description": "Follow the paper's submission process. Most accept email or online form submissions. Keep it under 300 words — editors love brevity." }},
+        { "type": "step", "settings": { "title": "Screenshot the Confirmation","description": "Once you receive your submission confirmation from the newspaper, take a screenshot. That confirmation — not publication — is your entry proof." }},
+        { "type": "step", "settings": { "title": "Enter Here",                 "description": "Upload your screenshot and fill out the form below. 250 winners will be randomly drawn, plus one Grand Prize family trip. Winners notified after the deadline." }},
+        { "type": "eligibility_stat", "settings": { "label": "Who Can Enter",       "value": "All Kids"  }},
+        { "type": "eligibility_stat", "settings": { "label": "Residency",           "value": "U.S. Only" }},
+        { "type": "eligibility_stat", "settings": { "label": "Entries Per Child",   "value": "One"       }}
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,558 @@
+{%- style -%}
+  body {
+    min-height: auto!important;
+  }
+
+  .blog-sidebar-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-header-block {
+    margin-bottom: 1rem;
+    text-align: center;
+    background: #04aed8;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em 15em;
+  }
+
+  nav.blog-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 3vw;
+    flex-wrap: wrap;
+  }
+
+  .rcl-blog__link {
+    font-size: 1.3rem;
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    letter-spacing: 0.04rem;
+    color: #bcecf6;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  svg.rcl-blog__link.e-font-icon-svg.e-fas-angle-right {
+    height: 11px;
+    fill: #fff;
+  }
+
+  .rcl-blog__link.blog-title {
+    font-weight: normal!important;
+  }
+
+  .blog-header-block .breadcrumbs,
+  .blog-header-block .blog-date,
+  .blog-header-block .blog-author {
+    font-size: 0.9rem;
+    color: gray;
+  }
+
+  .blog-header-block h1 {
+    color: #fff;
+    max-width: 1000px;
+  }
+
+  .blog-two-col-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15em auto 0;
+    max-width: 1200px;
+    padding: 6rem;
+    background: #fff;
+    border-radius: 40px;
+  } 
+
+  .blog-two-col-section .left-column {
+    flex: 0 0 66%;
+    max-width: 66%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .blog-two-col-section .right-column {
+    flex: 0 0 34%;
+    max-width: 34%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .blog-sidebar-container .blog-content img {max-width: 100%}
+
+  @media (max-width: 768px) {
+    .blog-two-col-section {
+      padding: 3rem 2rem;
+    }
+
+    .blog-two-col-section .left-column,
+    .blog-two-col-section .right-column {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .blog-content a {
+    color: #da5846;
+  }
+
+  .large-block h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+  }
+
+  .large-block, .small-block {
+    padding: 1.5rem 2.5rem 3rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .large-block {
+    margin: 0 1.5rem 1.5rem;
+  }
+
+  .small-block {
+    margin: 2.5rem 1.5rem;
+  }
+
+  .large-block .subheader {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: #F7CD5D;
+    text-align: center;
+  }
+
+  .large-block .content, 
+  .small-block .content, 
+  .review-block .review-content {
+    margin: 0.5rem 0;
+  }
+
+  .content {
+    margin: 0 0 28px;
+    margin: 0 0 1.75rem;
+    letter-spacing: 0;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .block-button {
+    text-align: center;
+  }
+
+  .large-block .block-button a,
+  .small-block .block-button a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .review-block {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .review-block .reviewer-name {
+    font-weight: bold;
+  }
+
+  .review-block .star-rating {
+    color: #FFD700;
+    font-size: 3.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .small-block h3 {
+    font-size: 3rem; 
+  }
+
+  .large-block .block-button {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px 30px 30px 30px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .small-block .block-button {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 30px 30px 30px 30px;
+    padding: 16px 41px 16px 41px;
+    max-width: 19.5rem;
+  }
+{%- endstyle -%}
+<div class="blog-sidebar-container">
+  {% for block in section.blocks %}
+    {% if block.type == 'blog_header_block' %}
+      <div class="blog-header-block">
+        {% if block.settings.show_title %}
+          <h1>{{ article.title }}</h1>
+        {% endif %}
+        {% if block.settings.show_breadcrumbs %}
+          <nav class="blog-breadcrumbs" aria-label="breadcrumb">
+            {% if template contains 'article' %}
+                <a class="rcl-blog__link" href="{{ routes.root_url }}">Home</a> 
+                <svg aria-hidden="true" class="rcl-blog__link e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+                <a class="rcl-blog__link" href="{{ blog.url }}">{{ blog.title }}</a> 
+                <svg aria-hidden="true" class="rcl-blog__link e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+                <span class="rcl-blog__link blog-title">{{ article.title }}</span>
+            {% else %}
+                <a href="{{ routes.root_url }}">Home</a> ›
+                <span>{{ page_title }}</span>
+            {% endif %}
+          </nav>
+        {% endif %}
+        {% if block.settings.show_date %}
+          <p class="blog-date">Date here</p>
+        {% endif %}
+        {% if block.settings.show_author %}
+          <p class="blog-author">Author here</p>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="blog-two-col-section">
+    <div class="left-column">
+      {% if section.settings.featured_image %}
+        <div class="featured-image">
+          {%- if section.settings.featured_image != blank -%}
+              {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+              {{
+              section.settings.featured_image
+              | image_url: width: 1500
+              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+          {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      {% endif %}
+
+      <div class="blog-content">
+        {{ section.settings.blog_content }}
+      </div>
+    </div>
+
+    <!-- Right Column: Blocks -->
+    <div class="right-column">
+      {% for block in section.blocks %}
+        {% if block.type == 'large_block' %}
+          <div 
+            class="large-block" 
+            style="background-color: {{ block.settings.background_color }};"
+          >
+            {% if block.settings.subheader %}
+              <p class="subheader">{{ block.settings.subheader }}</p>
+            {% endif %}
+            
+            {% if block.settings.block_image %}
+              <div class="large-block-image">
+                  {%- if block.settings.block_image != blank -%}
+                      {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+                      {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                      {{
+                      block.settings.block_image
+                      | image_url: width: 1500
+                      | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                  {%- else -%}
+                      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+              </div>
+            {% endif %}
+
+            {% if block.settings.header %}
+              <h2>{{ block.settings.header }}</h2>
+            {% endif %}
+            
+            {% if block.settings.content %}
+              <div class="content">
+                {{ block.settings.content }}
+              </div>
+            {% endif %}
+            
+            {% if block.settings.button_label %}
+              <div class="block-button" style="background-color: {{ block.settings.button_bg_color }};">
+                <a 
+                  href="{{ block.settings.button_link }}" 
+                  style="color: {{ block.settings.button_font_color }}; background-color: {{ block.settings.button_bg_color }};"
+                >
+                  {{ block.settings.button_label }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+
+        {% elsif block.type == 'small_block' %}
+          <div class="small-block" 
+          style="background: {{ block.settings.background_color }} 
+          url({{ block.settings.background_image | image_url }}) no-repeat bottom right; background-size: auto; min-height: 250px;">
+
+          {% if block.settings.header %}
+              <h3 style="color: {{ block.settings.header_color }};">
+              {{ block.settings.header }}
+              </h3>
+          {% endif %}
+          
+          {% if block.settings.content %}
+              <div class="content" style="color: {{ block.settings.content_color }};">
+              {{ block.settings.content }}
+              </div>
+          {% endif %}
+            
+            {% if block.settings.button_label %}
+              <div class="block-button" style="background-color: {{ block.settings.button_bg_color }};">
+                <a 
+                  href="{{ block.settings.button_link }}" 
+                  style="color: {{ block.settings.button_font_color }}; background-color: {{ block.settings.button_bg_color }};"
+                >
+                  {{ block.settings.button_label }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+
+        {% elsif block.type == 'review_block' %}
+          <div class="review-block" style="background-color: transparent;">
+            {% if block.settings.reviewer_name %}
+              <p class="reviewer-name">{{ block.settings.reviewer_name }}</p>
+            {% endif %}
+
+            {% if block.settings.review_content %}
+              <div class="review-content">
+                {{ block.settings.review_content }}
+              </div>
+            {% endif %}
+
+            <p class="star-rating">
+              {% for i in (1..block.settings.star_count) %}
+                &#9733;
+              {% endfor %}
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+    {
+      "name": "TTb Blog Sidebar",
+      "tag": "section",
+      "class": "section",
+      "enabled_on": {
+        "templates": ["blog", "article"]
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "featured_image",
+          "label": "Featured Image"
+        },
+        {
+          "type": "text",
+          "id": "featured_image_alt",
+          "label": "Featured Image Alt Text"
+        },
+        {
+          "type": "richtext",
+          "id": "blog_content",
+          "label": "Blog Content",
+          "default": "<p>Your blog content goes here.</p>"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "blog_header_block",
+          "name": "Blog Header Block",
+          "settings": [
+            {
+              "type": "checkbox",
+              "id": "show_title",
+              "label": "Show Title"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_breadcrumbs",
+              "label": "Show Breadcrumbs"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_date",
+              "label": "Show Date"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_author",
+              "label": "Show Author"
+            }
+          ]
+        },
+        {
+          "type": "large_block",
+          "name": "Large Block",
+          "settings": [
+            {
+              "type": "color",
+              "id": "background_color",
+              "label": "Background Color",
+              "default": "#ffffff"
+            },
+            {
+              "type": "text",
+              "id": "subheader",
+              "label": "Subheader"
+            },
+            {
+              "type": "image_picker",
+              "id": "block_image",
+              "label": "Block Image"
+            },
+            {
+              "type": "text",
+              "id": "header",
+              "label": "Header"
+            },
+            {
+              "type": "textarea",
+              "id": "content",
+              "label": "Content"
+            },
+            {
+              "type": "text",
+              "id": "button_label",
+              "label": "Button Label"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button Link"
+            },
+            {
+              "type": "color",
+              "id": "button_font_color",
+              "label": "Button Font Color",
+              "default": "#ffffff"
+            },
+            {
+              "type": "color",
+              "id": "button_bg_color",
+              "label": "Button Background Color",
+              "default": "#000000"
+            }
+          ]
+        },
+        {
+          "type": "small_block",
+          "name": "Small Block",
+          "settings": [
+            {
+              "type": "color",
+              "id": "background_color",
+              "label": "Background Color",
+              "default": "#ffffff"
+            },
+            {
+              "type": "image_picker",
+              "id": "background_image",
+              "label": "Background Image"
+            },
+            {
+              "type": "color",
+              "id": "header_color",
+              "label": "Header Text Color",
+              "default": "#000000"
+            },
+            {
+              "type": "color",
+              "id": "content_color",
+              "label": "Content Text Color",
+              "default": "#000000"
+            },
+            {
+              "type": "text",
+              "id": "header",
+              "label": "Header"
+            },
+            {
+              "type": "textarea",
+              "id": "content",
+              "label": "Content"
+            },
+            {
+              "type": "text",
+              "id": "button_label",
+              "label": "Button Label"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button Link"
+            },
+            {
+              "type": "color",
+              "id": "button_font_color",
+              "label": "Button Font Color",
+              "default": "#ffffff"
+            },
+            {
+              "type": "color",
+              "id": "button_bg_color",
+              "label": "Button Background Color",
+              "default": "#000000"
+            }
+          ]
+        },
+        {
+          "type": "review_block",
+          "name": "Review Block",
+          "settings": [
+            {
+              "type": "text",
+              "id": "reviewer_name",
+              "label": "Reviewer Name"
+            },
+            {
+              "type": "textarea",
+              "id": "review_content",
+              "label": "Review Content"
+            },
+            {
+              "type": "range",
+              "id": "star_count",
+              "label": "# of stars",
+              "step": 1,
+              "min": 1,
+              "max": 5,
+              "default": 5
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "TTb Blog Sidebar"
+        }
+      ]
+    }
+{% endschema %}

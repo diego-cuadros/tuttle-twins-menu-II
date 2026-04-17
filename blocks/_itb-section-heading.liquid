@@ -1,0 +1,261 @@
+{%- if block.settings.caption != blank or block.settings.section_heading != blank or block.settings.subheading != blank -%}
+  {%- style -%}
+    .ssky-text-image-block__section-header-{{block.id}} {
+      margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+      margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    }  
+    @media screen and (min-width: 750px) {
+      .ssky-text-image-block__section-header-{{block.id}} {
+        margin-top: {{ block.settings.margin_top }}px;
+        margin-bottom: {{ block.settings.margin_bottom }}px;
+      }
+    }
+    {% if block.settings.custom_css != blank %}
+      {% assign tt_css = '.ssky-text-image-block__section-header-' | append: block.id %}
+      {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+    {% endif %}
+  {%- endstyle -%}
+  <div class="ssky-text-image-block__section-header ssky-text-image-block__section-header-{{block.id}} page-width" {{ block.shopify_attributes }}>
+    <div class="ssky-text-block__blocks center">
+      {%- if block.settings.caption != blank -%}
+        <div
+          class="ssky-text-block__caption {{ block.settings.text_style }} {{ block.settings.color_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ block.settings.caption | escape }}
+        </div>
+      {%- endif -%}
+      {%- if block.settings.section_heading != blank -%}
+        {%- assign section_heading_length = block.settings.section_heading | size -%}
+        <{{block.settings.heading_tag}}
+          class="ssky-text-block__heading rte {{ block.settings.heading_size }} weight-{{ block.settings.heading_weight }}{%- if section_heading_length > 40 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ block.settings.section_heading }}
+        </{{block.settings.heading_tag}}>
+      {%- endif -%}
+      {%- if block.settings.subheading != blank -%}
+        <div
+          class="ssky-text-block__caption {{ block.settings.text_style_subheading }} {{ block.settings.color_class_subheading }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ block.settings.subheading | escape }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Section Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Main Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "section_heading",
+        "label": "t:sections.ssky_text_block.blocks.heading.settings.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h4",
+            "label": "t:sections.all.heading_size.options__0.label"
+          },
+          {
+            "value": "h3",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__3.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__4.label"
+          },
+          {
+            "value": "hxl",
+            "label": "t:sections.all.heading_size.options__5.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_weight",
+        "options": [
+          {
+            "value": "medium",
+            "label": "t:sections.all.heading_weight.options__1.label"
+          },
+          {
+            "value": "semibold",
+            "label": "t:sections.all.heading_weight.options__2.label"
+          },
+          {
+            "value": "bold",
+            "label": "t:sections.all.heading_weight.options__3.label"
+          }
+        ],
+        "default": "bold",
+        "label": "t:sections.all.heading_weight.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          },
+          {
+            "value": "h6",
+            "label": "H6"
+          }
+        ],
+        "default": "h2",
+        "label": "Heading tag"
+      },
+      {
+        "type": "header",
+        "content": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+      },
+      {
+        "type": "select",
+        "id": "text_style_subheading",
+        "options": [
+          {
+            "value": "small-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+          },
+          {
+            "value": "small-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+          },
+          {
+            "value": "medium-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+          },
+          {
+            "value": "large-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+          },
+          {
+            "value": "large-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+          }
+        ],
+        "default": "large-bold",
+        "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+        "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+      },
+      {
+        "type": "text",
+        "id": "color_class_subheading",
+        "label": "t:sections.all.ssky_color_class.label",
+        "default": "t:sections.all.ssky_color_class.default",
+        "info": "t:sections.all.ssky_color_class.info"
+      },
+      {
+        "type": "header",
+        "content": "Caption above heading"
+      },
+      {
+        "type": "text",
+        "id": "caption",
+        "label": "t:sections.ssky_text_block.blocks.caption.settings.text.label"
+      },
+      {
+        "type": "select",
+        "id": "text_style",
+        "options": [
+          {
+            "value": "small-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__0.label"
+          },
+          {
+            "value": "small-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__1.label"
+          },
+          {
+            "value": "medium-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__2.label"
+          },
+          {
+            "value": "large-semibold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__3.label"
+          },
+          {
+            "value": "large-bold",
+            "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.options__4.label"
+          }
+        ],
+        "default": "large-bold",
+        "label": "t:sections.ssky_text_block.blocks.caption.settings.text_style.label",
+        "info": "t:sections.ssky_text_block.blocks.caption.settings.text_style.info"
+      },
+      {
+        "type": "text",
+        "id": "color_class",
+        "label": "t:sections.all.ssky_color_class.label",
+        "default": "t:sections.all.ssky_color_class.default",
+        "info": "t:sections.all.ssky_color_class.info"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 20
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Section Header" }
+    ]
+  }
+{% endschema %}

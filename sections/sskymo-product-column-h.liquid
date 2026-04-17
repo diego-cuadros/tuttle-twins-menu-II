@@ -1,0 +1,401 @@
+{{ 'ssky-product-column.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-product-column-{{ section.id }} .ssky-product-column {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-product-column-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div class="ssky-product-column-{{ section.id }}">
+  <div class="ssky-product-column gradient color-{{ section.settings.color_scheme }}">
+    {%- if show_as_card -%}
+      {%- for magazine_two_offers in shop.metaobjects.magazine_two_offers.values limit: 2 -%}
+        {%- if magazine_two_offers.main_heading != blank -%}
+          <div class="ssky-text-block__blocks page-width {{ section.settings.content_alignment }}">
+            {%- assign heading_length = magazine_two_offers.main_heading | metafield_text | size -%}
+            <h2
+              class="ssky-text-block__heading rte inline-richtext h1 weight-semibold{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 1"
+              {% endif %}
+            >
+              {{ magazine_two_offers.main_heading }}
+            </h2>
+          </div>
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      <div class="ssky-product-column__layout-card page-width">
+    {%- endif -%}
+
+    <div class="ssky-product-column__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-product-column__blocks ssky-text-block__blocks {{ section.settings.content_alignment }}">
+        {%- unless show_as_card -%}
+          {%- for magazine_two_offers in shop.metaobjects.magazine_two_offers.values limit: 2 -%}
+            {%- if magazine_two_offers.main_heading != blank -%}
+              <div class="ssky-text-block__heading-con ssky-text-block__blocks">
+                {%- assign heading_length = magazine_two_offers.main_heading | metafield_text | size -%}
+                <h2
+                  class="ssky-text-block__heading rte inline-richtext h1 weight-semibold{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: 1"
+                  {% endif %}
+                >
+                  {{ magazine_two_offers.main_heading }}
+                </h2>
+              </div>
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
+        <div class="ssky-product-column__block-set ssky-product-column-subscribe__block-set left">
+          {%- for magazine_two_offers in shop.metaobjects.magazine_two_offers.values limit: 2 -%}
+            <div
+              class="ssky-product-column__block ssky-product-column-subscribe__block ssky-text-block__blocks gradient color-scheme-1{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {%- if magazine_two_offers.badge_label != blank -%}
+                <div class="ssky-pc-subscribe__badge h4 weight-semibold primary-orange primary-yellow-bg">
+                  {{ magazine_two_offers.badge_label }}
+                </div>
+              {%- endif -%}
+
+              <div class="ssky-pc-subscribe__image-con gradient{%- if forloop.index == 1 %} color-scheme-3{%- else %} color-scheme-2{%- endif -%}">
+                <div class="ssky-pc-subscribe__image-text">
+                  <div class="ssky-pc-subscribe__image-price">
+                    {%- if magazine_two_offers.price_box_currency != blank -%}
+                      <span class="ssky-pcsip-currency">
+                        {{ magazine_two_offers.price_box_currency }}
+                      </span>
+                    {%- endif -%}
+                    {%- if magazine_two_offers.price_box_price != blank -%}
+                      <span class="ssky-pcsip-price">
+                        {{ magazine_two_offers.price_box_price }}
+                      </span>
+                    {%- endif -%}
+                    {%- if magazine_two_offers.price_box_period != blank -%}
+                      <span class="ssky-pcsip-period">
+                        {{ magazine_two_offers.price_box_period }}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                  {%- if magazine_two_offers.price_box_text_bottom != blank -%}
+                    <div class="ssky-pcsip-text-bottom h6">
+                      {{ magazine_two_offers.price_box_text_bottom }}
+                    </div>
+                  {%- endif -%}
+                  {%- if magazine_two_offers.price_box_text_bottom_b != blank -%}
+                    <div class="ssky-pcsip-text-bottom-large h4">
+                      {{ magazine_two_offers.price_box_text_bottom_b }}
+                    </div>
+                  {%- endif -%}
+                </div>
+                {%- if magazine_two_offers.price_box_image != blank -%}
+                  <div class="ssky-pc-subscribe__image">
+                    {%- assign widths = '360, 535, 750' -%}
+                    {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+                    {{
+                      magazine_two_offers.price_box_image
+                      | image_url: width: 750
+                      | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto'
+                    }}
+                  </div>
+                {%- endif -%}
+              </div>
+              <div class="ssky-pc-subscribe__text-con ssky-text-block__blocks">
+                <div class="ssky-text-block__blocks">
+                  {%- if magazine_two_offers.description != blank -%}
+                    <div
+                      class="ssky-text-block__text rte text-medium{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      <div class="rte">
+                        {{ magazine_two_offers.description | metafield_tag }}
+                      </div>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if magazine_two_offers.checkbox != blank -%}
+                    {%- for checkbox in magazine_two_offers.checkbox.value -%}
+                      <div
+                        class="ssky-text-block__checkbox ssky-text-block__checkbox--individual left text-body-large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ forloop.index }};"
+                        {% endif %}
+                      >
+                        <span class="svg-wrapper">
+                          {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                        </span>
+                        <div class="rte">
+                          {{ checkbox }}
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+
+                <div class="ssky-text-block__blocks">
+                  <div
+                    class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {%- if magazine_two_offers.link_add_to_cart_button != blank -%}
+                      <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                      {%- assign block_product = magazine_two_offers.link_add_to_cart_button.value -%}
+                      {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+                      {%- render 'buy-buttons',
+                        product: block_product,
+                        product_form_id: product_form_id,
+                        section_id: section.id,
+                        is_button_large: true,
+                        button_label: magazine_two_offers.add_to_cart_button_label
+                      -%}
+                    {%- else -%}
+                      {%- if magazine_two_offers.button_label != blank -%}
+                        {% capture link_value %}{% render 'ssky-button-link', type: magazine_two_offers %}{% endcapture %}
+                        <a
+                          {% if link_value == blank %}
+                            role="link" aria-disabled="true"
+                          {% else %}
+                            href="{{ link_value }}"
+                          {% endif %}
+                          class="button button--large button--primary"
+                        >
+                          {{- magazine_two_offers.button_label -}}
+                        </a>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+
+                  {%- if magazine_two_offers.text_below_button != blank -%}
+                    <div
+                      class="ssky-text-block__text rte text-body-large center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      <div class="rte">
+                        {{ magazine_two_offers.text_below_button | metafield_tag }}
+                      </div>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if magazine_two_offers.text_below_button_b != blank -%}
+                    <div class="rte ssky-text-block__text-below-buttons center">
+                      {{ magazine_two_offers.text_below_button_b | metafield_tag }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+
+        {%- for magazine_two_offers in shop.metaobjects.magazine_two_offers.values limit: 2 -%}
+          {%- if magazine_two_offers.bottom_text != blank -%}
+            <div
+              class="ssky-text-block__text ssky-text-block__text-bottom rte weight-bold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              <div class="rte">
+                {{ magazine_two_offers.bottom_text }}
+              </div>
+            </div>
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Magazine - two offers",
+  "tag": "section",
+  "class": "section sskymo-product-column-h",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.ssky_text_block.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.ssky_text_block.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Magazine - two offers"
+    }
+  ]
+}
+{% endschema %}

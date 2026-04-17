@@ -1,0 +1,1427 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_7bkXEh": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "section_header_3rzBje": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "section_heading": "<p>Talk about your brand</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "Add a tagline",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_mNWRe6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>EASTER BUNDLE</p>",
+            "heading_size": "hxl",
+            "heading_weight": "bold",
+            "heading_tag": "h1"
+          }
+        },
+        "caption_enQVWB": {
+          "type": "caption",
+          "settings": {
+            "caption": "All 14 Kids Books + 2-Vol History Bundles + All Digitals",
+            "text_style": "large-bold",
+            "color_class": ""
+          }
+        },
+        "text_CMc7Dp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't miss out on this incredible deal! Yours for only $198!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_afFK38": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "GET THE DEAL",
+            "button_link": "https://tuttletwins.com",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_3rzBje",
+        "heading_mNWRe6",
+        "caption_enQVWB",
+        "text_CMc7Dp",
+        "button_afFK38"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-size: 6em;}"
+      ],
+      "name": "TT Box Image Block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "easter",
+        "padding_top": 12,
+        "padding_bottom": 64,
+        "inner_padding_top": 64,
+        "inner_padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": "[TT_CSS] .easter {\n}"
+      }
+    },
+    "replo_sales_page_updated_hero_CYqwq8": {
+      "type": "replo-sales-page-updated-hero",
+      "name": "Sales Page Updated Hero",
+      "settings": {
+        "replo_text_6a7f8555-5ffe-4329-8859-14cc4ee3ee4b": "",
+        "replo_text_09e25e72-4d3c-4ee3-bdde-e455a837db84": "<p>Stories That Build Connection and Character</p>",
+        "replo_text_2ed6600b-c1ec-4d6d-869b-7e76d31a04d1": "<p>Shop The Sale Now</p>",
+        "replo_text_404ed8b3-28bb-4e8e-8427-3dfd7d705cc9": "<p>7 Million Copies Sold</p>",
+        "replo_text_a0c5bb8d-952f-4d21-950a-e5978d9e1f2e": "",
+        "replo_text_f411939a-e7f2-49ea-8e47-0f947d07568d": "<p>Stories That Build Connection and Character</p>",
+        "replo_url_56366234-f57e-4096-a257-023adfe4e05f": "",
+        "replo_text_cfef705e-ca59-4862-989c-e657cc82188b": "<p>Shop The Sale Now</p>",
+        "replo_text_69f28713-8437-40cd-a389-747f98b45469": "<p>7 Million Copies Sold</p>"
+      }
+    },
+    "ss_hero_33_UALJ9Q": {
+      "type": "ss-hero-33",
+      "blocks": {
+        "heading_DRGcMz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Stories That Build Connection and Character</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "button_VFBJ3p": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Now",
+            "button_url": "#sale",
+            "button_custom": false,
+            "button_bold": true,
+            "button_italic": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 20,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_radius": 48,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 16,
+            "button_style": "outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#da5846",
+            "button_bg_color": "#da5846",
+            "button_bg_hover_color": "#ffffff",
+            "button_border_color": "#da5846",
+            "button_border_hover_color": "#da5846"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DRGcMz",
+        "button_VFBJ3p"
+      ],
+      "disabled": true,
+      "name": "SS - Hero #33",
+      "settings": {
+        "layout_height": "fixed_height",
+        "layout_fixed_height": 700,
+        "layout_fixed_height_mobile": 450,
+        "content_maxwidth": 50,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "center",
+        "layout_bg_type": "video",
+        "bg_video": "shopify://files/videos/Untitled design.mp4",
+        "bg_video_url": "",
+        "bg_overlay": 0.2,
+        "bg_overlay_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "ss_hero_33_fHe8yA": {
+      "type": "ss-hero-33",
+      "blocks": {
+        "heading_8w9XVy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Stories That Build Connection and Character</h1>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "button_rcH9Vc": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Now",
+            "button_url": "#black-friday",
+            "button_custom": false,
+            "button_bold": true,
+            "button_italic": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 20,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 32,
+            "button_padding_horizontal_mobile": 32,
+            "button_radius": 48,
+            "button_border_thickness": 1,
+            "button_mt": 24,
+            "button_mt_mobile": 16,
+            "button_style": "outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#da5846",
+            "button_bg_color": "#da5846",
+            "button_bg_hover_color": "#ffffff",
+            "button_border_color": "#da5846",
+            "button_border_hover_color": "#da5846"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8w9XVy",
+        "button_rcH9Vc"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "SS - Hero #33",
+      "settings": {
+        "layout_height": "fixed_height",
+        "layout_fixed_height": 700,
+        "layout_fixed_height_mobile": 450,
+        "content_maxwidth": 50,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "content_vertical_align": "center",
+        "content_vertical_align_mobile": "center",
+        "layout_bg_type": "video",
+        "bg_video": "shopify://files/videos/BF web video.mp4",
+        "bg_video_url": "",
+        "bg_overlay": 0.2,
+        "bg_overlay_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
+    "blocks_dm7zXd": {
+      "type": "_blocks",
+      "blocks": {
+        "bundle_comparison_qbYRxE": {
+          "type": "bundle-comparison",
+          "name": "Bundle comparison",
+          "settings": {
+            "title": "Compare Our Bundles",
+            "subtitle": "Select bundles to compare side by side",
+            "anchor_id": "bundle-comparison",
+            "title_size": 36,
+            "subtitle_size": 16,
+            "bundle_1_enabled": true,
+            "bundle_1_title": "Mega Bundle",
+            "bundle_1_product": "tuttle-twins-mega-bundle-3",
+            "bundle_1_description": "",
+            "bundle_1_featured": true,
+            "bundle_1_badge": "Biggest Savings",
+            "bundle_1_button_text": "Add to Cart",
+            "bundle_1_button_url": "",
+            "bundle_2_enabled": true,
+            "bundle_2_title": "Family Starter Pack",
+            "bundle_2_product": "tuttle-twins-family-starter-pack",
+            "bundle_2_description": "",
+            "bundle_2_featured": true,
+            "bundle_2_badge": "Most Popular",
+            "bundle_2_button_text": "Add to Cart",
+            "bundle_2_button_url": "",
+            "bundle_3_enabled": true,
+            "bundle_3_title": "Tuttle Twins Combo Pack",
+            "bundle_3_product": "tuttle-twins-combo-pack-plus-free-bonuses",
+            "bundle_3_description": "",
+            "bundle_3_featured": false,
+            "bundle_3_badge": "Featured",
+            "bundle_3_button_text": "Add to Cart",
+            "bundle_3_button_url": "",
+            "bundle_4_enabled": false,
+            "bundle_4_title": "Teen Bundle",
+            "bundle_4_product": "",
+            "bundle_4_description": "",
+            "bundle_4_featured": false,
+            "bundle_4_badge": "Featured",
+            "bundle_4_button_text": "Add to Cart",
+            "bundle_4_button_url": "",
+            "background_color": "#ffffff",
+            "text_color": "#3f3939",
+            "price_color": "#da5846",
+            "feature_icon_color": "#04aed8",
+            "selector_bg_color": "#ffffff",
+            "selector_text_color": "#3f3939",
+            "selector_border_color": "#e0e0e0",
+            "selector_hover_bg_color": "#f5f5f5",
+            "selector_hover_border_color": "#04aed8",
+            "selector_active_bg_color": "#04aed8",
+            "selector_border_radius": 40,
+            "badge_bg_color": "#ffd05a",
+            "badge_text_color": "#3f3939",
+            "button_bg_color": "#da5846",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#c24a38",
+            "button_border_radius": 40,
+            "ages_label": "Ages",
+            "bundle_1_ages": "5–12",
+            "bundle_2_ages": "5–12",
+            "bundle_3_ages": "5–12",
+            "bundle_4_ages": "13+",
+            "feature_1_label": "All 14 Children's Books",
+            "feature_1_bundle_1_included": true,
+            "feature_1_bundle_2_included": true,
+            "feature_1_bundle_3_included": true,
+            "feature_1_bundle_4_included": false,
+            "feature_2_label": "All 14 PDF Activity Workbooks",
+            "feature_2_bundle_1_included": true,
+            "feature_2_bundle_2_included": true,
+            "feature_2_bundle_3_included": true,
+            "feature_2_bundle_4_included": false,
+            "feature_3_label": "All 14 PDF Parent Guides",
+            "feature_3_bundle_1_included": true,
+            "feature_3_bundle_2_included": false,
+            "feature_3_bundle_3_included": false,
+            "feature_3_bundle_4_included": false,
+            "feature_4_label": "All 14 Audiobooks",
+            "feature_4_bundle_1_included": true,
+            "feature_4_bundle_2_included": false,
+            "feature_4_bundle_3_included": false,
+            "feature_4_bundle_4_included": false,
+            "feature_5_label": "America's History Volume 1 & 2",
+            "feature_5_bundle_1_included": true,
+            "feature_5_bundle_2_included": true,
+            "feature_5_bundle_3_included": false,
+            "feature_5_bundle_4_included": false,
+            "feature_6_label": "America's History Curriculum",
+            "feature_6_bundle_1_included": true,
+            "feature_6_bundle_2_included": true,
+            "feature_6_bundle_3_included": false,
+            "feature_6_bundle_4_included": false,
+            "feature_7_label": "America's History Videos",
+            "feature_7_bundle_1_included": true,
+            "feature_7_bundle_2_included": true,
+            "feature_7_bundle_3_included": false,
+            "feature_7_bundle_4_included": false,
+            "feature_8_label": "America's History Audiobooks",
+            "feature_8_bundle_1_included": true,
+            "feature_8_bundle_2_included": true,
+            "feature_8_bundle_3_included": false,
+            "feature_8_bundle_4_included": false,
+            "feature_9_label": "7 Teen Guidebooks",
+            "feature_9_bundle_1_included": true,
+            "feature_9_bundle_2_included": false,
+            "feature_9_bundle_3_included": false,
+            "feature_9_bundle_4_included": false,
+            "feature_10_label": "5 Teen Choose Your Consequence Books",
+            "feature_10_bundle_1_included": true,
+            "feature_10_bundle_2_included": false,
+            "feature_10_bundle_3_included": false,
+            "feature_10_bundle_4_included": false,
+            "feature_11_label": "Tuttle Rebuttals",
+            "feature_11_bundle_1_included": true,
+            "feature_11_bundle_2_included": false,
+            "feature_11_bundle_3_included": false,
+            "feature_11_bundle_4_included": false,
+            "feature_12_label": "5 Additional eBooks",
+            "feature_12_bundle_1_included": true,
+            "feature_12_bundle_2_included": false,
+            "feature_12_bundle_3_included": false,
+            "feature_12_bundle_4_included": false,
+            "feature_13_label": "",
+            "feature_13_bundle_1_included": false,
+            "feature_13_bundle_2_included": false,
+            "feature_13_bundle_3_included": false,
+            "feature_13_bundle_4_included": false,
+            "feature_14_label": "",
+            "feature_14_bundle_1_included": false,
+            "feature_14_bundle_2_included": false,
+            "feature_14_bundle_3_included": false,
+            "feature_14_bundle_4_included": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "bundle_comparison_qbYRxE"
+      ],
+      "settings": {}
+    },
+    "z_featured_collection_XRmEiL": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Shop Best-Selling Bundles",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sale",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "sale",
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "blocks_iKfNPz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_961eb6a_zB3MV4": {
+          "type": "ai_gen_block_961eb6a",
+          "settings": {
+            "collection": "academy",
+            "products_to_show": 3,
+            "title": "Tuttle Twins Academy",
+            "description": "<p>The Tuttle Twins Academy is an online learning platform that encourages teens to think, question, and explore our world.</p><p>Recommend ages 13+</p>",
+            "show_price": true,
+            "quick_add_text": "Add to Cart",
+            "quick_add_bg": "#ffffff",
+            "quick_add_button_color": "#da5846",
+            "quick_add_button_text_color": "#ffffff",
+            "quick_add_button_hover_color": "#ffffff",
+            "quick_add_button_hover_text_color": "#da5846",
+            "quick_add_button_hover_border_color": "#da5846",
+            "quick_add_button_hover_border_width": 2,
+            "product_link_1": "https://www.tuttletwins.com/apps/rebuy/cart?variants%5B45740778815626%5D%5Bquantity%5D=1&clear_cart=no&landing_page=shopify_checkout&smart_cart_show=no",
+            "product_link_2": "https://tuttletwins.com/apps/rebuy/cart?variants%5B45740778717322%5D%5Bquantity%5D=1&variants%5B45740778717322%5D%5Bselling_plan%5D=1642725514&clear_cart=yes&landing_page=cart&smart_cart_show=no",
+            "product_link_3": "",
+            "product_link_4": "",
+            "product_link_5": "",
+            "product_link_6": "",
+            "product_link_7": "",
+            "product_link_8": "",
+            "product_link_9": "",
+            "product_link_10": "",
+            "product_link_11": "",
+            "product_link_12": "",
+            "button_text": "Shop Collection",
+            "button_link": "",
+            "columns_desktop": 3,
+            "columns_tablet": 2,
+            "columns_mobile": "1",
+            "background_color": "#ffffff",
+            "text_color": "#3f3939",
+            "card_background": "#ffffff",
+            "price_color": "#04aed8",
+            "heading_size": 36,
+            "description_size": 16,
+            "card_title_size": 18,
+            "card_price_size": 20,
+            "button_text_size": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_961eb6a_zB3MV4"
+      ],
+      "disabled": true,
+      "name": "TT Collection",
+      "settings": {}
+    },
+    "z_featured_collection_3WaFzn": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "name": "Academy Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Cyber Monday Sale",
+        "heading_size": "h3",
+        "description": "<p>The Tuttle Twins Academy is an online learning platform that encourages teens to think, question, and explore our world. </p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "academy",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_courses_b_dNwFcL": {
+      "type": "ssky-courses-b",
+      "blocks": {
+        "course_ydmT9G": {
+          "type": "course",
+          "name": "Character Course",
+          "settings": {
+            "course_image": "shopify://shop_images/courses-tuttle-twins-academy-ezgif.com-gif-to-webp-converter.webp",
+            "course_icon": "shopify://shop_images/NEW_circle.png",
+            "course_title": "Character",
+            "course_description": "<p>Learn essential traits that shape strong and honorable character: integrity, empathy, and resilience.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-tips-for-teens/\">Ten Tips for Teens</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/leadership-self-confidence/\">Leadership & Self-Confidence</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/emotional-intelligence-personal-growth/\">Emotional Intelligence & Personal Growth</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/succeed-in-your-life-by-helping-others-succeed-in-theirs/\">Succeed in Your Life By Helping Others Succeed in Theirs</a></p><p></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_6ULFyb": {
+          "type": "course",
+          "name": "World History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5_a87027b7-1896-4af6-87dc-1ac329644ab1.gif",
+            "course_icon": "shopify://shop_images/academy-icon-world-history.png",
+            "course_title": "World History",
+            "course_description": "<p>Explore major turning points—from revolutions to world wars and social movements—to see how the last century shaped today’s world and the choices ahead.</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-dangerous-isms/\">The Dangerous Isms</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/patterns-of-history/\">Patterns of History</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-history-of-european-civilization/\">The History of European Civilization</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/domino-effect/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/domino-effect/\">Domino Effect: Foreign Intervention and the Two World Wars</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/nqr_2iPe2eQ"
+          }
+        },
+        "course_D8epxm": {
+          "type": "course",
+          "name": "US History Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_5.gif",
+            "course_icon": "shopify://shop_images/academy-icon-united-states-history_cd10f1c3-2403-4775-b552-8dd1f2645329.png",
+            "course_title": "U.S. History",
+            "course_description": "<p>Take a journey to the past to analyze the brilliant ideas that have influenced our world today as well as learn from the many mistakes, so we aren’t doomed to repeat them.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-eight-worst-presidents/\">The Eight Worst Presidents</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/conspiracy-and-catastrophe/\">Conspiracy and Catastrophe</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-led-to-the-united-states/\">What Led to the United States?</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/what-can-we-learn-from-american-history/\">What Can We Learn From American History?</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3kV05vNbi34"
+          }
+        },
+        "course_CPktzp": {
+          "type": "course",
+          "name": "Civics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-civics-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/e44f0f4ac0e18a6c6f08778364818cf6.png",
+            "course_title": "Civics",
+            "course_description": "<p>Not your typical Civics 101. These courses explain how the government was supposed to work...and provide many examples of how it has gone awry.</p>",
+            "listicle_icon_color": "#da5846",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/bill-of-rights-basics/\">Bill of Rights Basics</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/constitutional-competency/\">Constitutional Competency: Understanding US Law</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-worst-scotus-cases/\">The Ten Worst SCOTUS Cases</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-system-really-works/\">How the System REALLY Works</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/5birStlc0Rw"
+          }
+        },
+        "course_xXMxMW": {
+          "type": "course",
+          "name": "Economics Course",
+          "settings": {
+            "course_image": "shopify://shop_images/Academy_GIFs_2.gif",
+            "course_icon": "shopify://shop_images/academy-icon-economics-300x300.png",
+            "course_title": "Economics",
+            "course_description": "<p>Empower your teen with a solid understanding of free market principles and how it helps everyone have the opportunity to prosper.</p>",
+            "listicle_icon_color": "#f8ad42",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/economics-for-everyday-life/\">Economics for Everyday Life</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/the-economic-way-of-thinking/\"><span style=\"text-decoration:underline\">The Economic Way of Thinking</span></a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com//courses/economic-myth-busters/\"><span style=\"text-decoration:underline\">Economic Myth Busters</span></a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-economics-of-globalization/\"><span style=\"text-decoration:underline\">The Economics of Globalization</span></a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/5tv2xH2CDm4"
+          }
+        },
+        "course_9MhzDJ": {
+          "type": "course",
+          "name": "Finances Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-finances-course-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/a968c22a65c70e5b26e4cc433fad2b5e.png",
+            "course_title": "Finances",
+            "course_description": "<p>Learn how to make informed decisions about saving, giving, and spending while navigating inflation. Develop habits for lifelong financial success!</p>",
+            "listicle_icon_color": "#afc856",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/world-of-investing/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/world-of-investing/\">The World of Investing</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/money-mastery/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/money-mastery/\">Money Mastery</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-make-money/\">How to Make Money</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/adulting-101-save-spend-wisely/\">Adulting 101: How to Save and Spend Wisely</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/3eARS99f0eA"
+          }
+        },
+        "course_Fk3zEK": {
+          "type": "course",
+          "name": "Logic & Critical Thinking Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-critical-thinking-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/ff76cbc3e1afbefc91cd0f4a89f215f0.png",
+            "course_title": "Logic & Critical Thinking",
+            "course_description": "<p>Empower your teen to critically analyze information and situations, so they can navigate life's challenges with confidence and make well-informed choices.</p>",
+            "listicle_icon_color": "#04aed8",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/problem-solving-strategies/\">Problem Solving Strategies</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/fallacies-and-biases-oh-my/\">Fallacies and Biases, Oh My</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/detecting-deception-misinformation/\">Detecting Deception: A Masterclass in Misinformation</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/ten-steps-develop-critical-thinking/\">Ten Steps to Develop Critical Thinking</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/wIanPJTtfVs"
+          }
+        },
+        "course_YwXzjC": {
+          "type": "course",
+          "name": "Entrepreneurship Course",
+          "settings": {
+            "course_image": "shopify://shop_images/video-player-entrepreneruship-courses-tuttle-twins-academy.webp",
+            "course_icon": "shopify://shop_images/d4319e2674747c7b4164633f7aadce31.png",
+            "course_title": "Entrepreneurship",
+            "course_description": "<p>Young people can do great things! With practical advice and inspiring success stories, these courses will help teens gain the skills and confidence to create their own businesses.</p>",
+            "listicle_icon_color": "#ffd05a",
+            "listicle_marker": "play-button",
+            "listicle_text_1": "<p><a href=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com//courses/the-fundamentals-of-business/\">The Fundamentals of Business</a></p>",
+            "listicle_text_2": "<p><a href=\"https://tuttletwinsacademy.com//courses/turn-a-hobby-into-a-small-business/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/turn-a-hobby-into-a-small-business/\">Turn a Hobby into a Profitable Small Business</a></p>",
+            "listicle_text_3": "<p><a href=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/case-studies-for-success/\">Case Studies for Success</a></p>",
+            "listicle_text_4": "<p><a href=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\" target=\"_blank\" title=\"https://tuttletwinsacademy.com/courses/how-to-think-like-an-entrepreneur/\">How to Think Like an Entrepreneur</a></p>",
+            "course_button_text": "View Sample Video",
+            "course_video_url": "https://youtu.be/HmsanDxS_QI"
+          }
+        }
+      },
+      "block_order": [
+        "course_ydmT9G",
+        "course_6ULFyb",
+        "course_D8epxm",
+        "course_CPktzp",
+        "course_xXMxMW",
+        "course_9MhzDJ",
+        "course_Fk3zEK",
+        "course_YwXzjC"
+      ],
+      "disabled": true,
+      "name": "Courses Carousel",
+      "settings": {
+        "title": "Our Courses",
+        "description": "<p>Explore our educational courses designed for children and families to learn important concepts in a fun and engaging way.</p>",
+        "section_padding": 20,
+        "heading_size": 36,
+        "text_size": 16,
+        "heading_color": "#3f3939",
+        "text_color": "#3f3939",
+        "card_background_color": "#ffffff",
+        "card_title_color": "#3f3939",
+        "card_text_color": "#3f3939",
+        "card_border_radius": 20,
+        "button_color": "#04aed8",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#da5846",
+        "button_border_radius": 8
+      }
+    },
+    "ssky_text_block_4XiVhF": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "button_EmnBJc": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Learn More About the Academy",
+            "button_link_new_window": false,
+            "button_link": "shopify://pages/academy",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "button_EmnBJc"
+      ],
+      "disabled": true,
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_product_column_c_wGAa6G": {
+      "type": "sskymo-product-column-c",
+      "name": "TTm Principles of freedom",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_f_6mWcQL": {
+      "type": "sskymo-product-column-f",
+      "name": "TTm Americas discover a",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_featured_collection_xCiEMp": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": true,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sale",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "ssky_text_block_Jejc6D": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_fpW3NP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside Our Guidebooks</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fpW3NP"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_guidebook_combo_tcayG4": {
+      "type": "ssky-guidebook-combo",
+      "blocks": {
+        "description_ahTFcY": {
+          "type": "description",
+          "name": "True Conspiracies Description",
+          "settings": {
+            "guidebook_description": "short-the-tuttle-twins-guide-to-true-conspiracies",
+            "image_fit": false,
+            "image_width_desktop": 40,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-1",
+            "padding_top": 0,
+            "padding_bottom": 36,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "rgba(0,0,0,0)"
+          }
+        },
+        "product_HkyM68": {
+          "type": "product",
+          "name": "TC Breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "true-conspiracies",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 44,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": true,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_PH39PE": {
+          "type": "description",
+          "name": "LF Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-logical-fallacies-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "product_3BY4hX": {
+          "type": "product",
+          "name": "LF breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "logical-fallacies",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "description_JKgT4y": {
+          "type": "description",
+          "name": "Heroes Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-courageous-heroes-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "product_K7ANWX": {
+          "type": "product",
+          "name": "Heroes breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "courageous-heroes",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "description_mwgdbe": {
+          "type": "description",
+          "name": "Villains Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-modern-villains-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": true,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#04aed8"
+          }
+        },
+        "product_zTptjm": {
+          "type": "product",
+          "name": "Villains breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "modern-villains",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "description_kepNQq": {
+          "type": "description",
+          "name": "Bias Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-beware-your-bias-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-5",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#ffffff"
+          }
+        },
+        "product_xnrdtH": {
+          "type": "product",
+          "name": "Bias breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "beware-your-bias",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "description_XByiEP": {
+          "type": "description",
+          "name": "Entre Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-inspiring-entrepreneurs-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "left",
+            "content_alignment": "left",
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "product_mwAMjH": {
+          "type": "product",
+          "name": "Entre breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "inspiring-entrepreneurs",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        },
+        "description_Fneybi": {
+          "type": "description",
+          "name": "WWI Description",
+          "settings": {
+            "guidebook_description": "the-tuttle-twins-guide-to-the-worlds-worst-ideas-1",
+            "image_fit": false,
+            "image_width_desktop": 30,
+            "image_position": "right",
+            "content_alignment": "left",
+            "color_scheme": "scheme-1",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#04aed8"
+          }
+        },
+        "product_XKC7qj": {
+          "type": "product",
+          "name": "WWI breakdown",
+          "disabled": true,
+          "settings": {
+            "product_breakdown": "worlds-worst-ideas",
+            "content_alignment": "left",
+            "text_max_width": 100,
+            "highlight_columns": 3,
+            "color_scheme": "scheme-2",
+            "padding_top": 32,
+            "padding_bottom": 32,
+            "show_as_card": false,
+            "color_scheme_show_as_card": "",
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_bg_color": "#bcecf6"
+          }
+        }
+      },
+      "block_order": [
+        "description_ahTFcY",
+        "product_HkyM68",
+        "description_PH39PE",
+        "product_3BY4hX",
+        "description_JKgT4y",
+        "product_K7ANWX",
+        "description_mwgdbe",
+        "product_zTptjm",
+        "description_kepNQq",
+        "product_xnrdtH",
+        "description_XByiEP",
+        "product_mwAMjH",
+        "description_Fneybi",
+        "product_XKC7qj"
+      ],
+      "name": "TTm Guidebook Combined",
+      "settings": {
+        "section_background": "#ffffff",
+        "show_as_card": false,
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_text_block_kMtxbx": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_HCYAjq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside Our Choose Your Consequence Books</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HCYAjq"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_product_column_e_cYi9az": {
+      "type": "sskymo-product-column-e",
+      "name": "TTm CYOC descriptions",
+      "settings": {}
+    },
+    "ssky_product_order_block_bwXB9N": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_JeC8CT": {
+          "type": "order_block_one",
+          "disabled": true,
+          "settings": {
+            "product": "easter-toddler__trashed",
+            "heading": "<p>Easter Bundle</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>All 14 Kids Books + 2-Volume History Books + All Digitals</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Buy now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": true,
+            "show_price_bottom": true,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_JeC8CT"
+      ],
+      "name": "TT Product order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_c_zjiTLY": {
+      "type": "sskymo-text-image-block-c",
+      "name": "TTm Build brighter future",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_featured_collection_3JmgRm": {
+      "type": "z-featured-collection",
+      "name": "TT Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": true,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sale",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "sskymo_text_image_block_b_F4HjVT": {
+      "type": "sskymo-text-image-block-b",
+      "name": "TTm Footer guarantee",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_box_image_block_7bkXEh",
+    "replo_sales_page_updated_hero_CYqwq8",
+    "ss_hero_33_UALJ9Q",
+    "ss_hero_33_fHe8yA",
+    "blocks_dm7zXd",
+    "z_featured_collection_XRmEiL",
+    "blocks_iKfNPz",
+    "z_featured_collection_3WaFzn",
+    "ssky_courses_b_dNwFcL",
+    "ssky_text_block_4XiVhF",
+    "sskymo_product_column_c_wGAa6G",
+    "sskymo_product_column_f_6mWcQL",
+    "z_featured_collection_xCiEMp",
+    "ssky_text_block_Jejc6D",
+    "ssky_guidebook_combo_tcayG4",
+    "ssky_text_block_kMtxbx",
+    "sskymo_product_column_e_cYi9az",
+    "ssky_product_order_block_bwXB9N",
+    "sskymo_text_image_block_c_zjiTLY",
+    "z_featured_collection_3JmgRm",
+    "sskymo_text_image_block_b_F4HjVT"
+  ]
+}

@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "<p>Mix & Match For Big Savings</p>",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "z_custom_liquid_qUM7rC": {
+      "type": "z-custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% unless page.handle == 'rootedwings' or page.handle == 'next' %}\n  <div style=\"background-color: #04AED8; text-align: center; margin: 0; padding: 0; line-height: 0;\">\n      <img\n        src=\"{{ 'Bundle-Builder-desktop.png' | asset_img_url: '3600x' }}\"\n        alt=\"Description of image\"\n        class=\"responsive-banner desktop-only\"\n      >\n      <img\n        src=\"{{ 'Bundle-Builder-mobile.png' | asset_img_url: '800x' }}\"\n        alt=\"Description of mobile image\"\n        class=\"responsive-banner mobile-only\"\n      >\n  </div>\n\n  <style>\n    .responsive-banner {\n      display: block;\n      width: 100%;\n      max-width: 100%;\n      margin: 0;\n      padding: 0;\n      border: 0;\n    }\n\n    .desktop-only {\n      display: none;\n    }\n\n    .mobile-only {\n      display: block;\n    }\n\n    @media (min-width: 768px) {\n      .desktop-only {\n        display: block;\n      }\n      .mobile-only {\n        display: none;\n      }\n    }\n  </style>\n{% endunless %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "17501027155a87b0d8": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_pB9kNe": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "219355",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_pB9kNe"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "z_custom_liquid_qUM7rC",
+    "17501027155a87b0d8"
+  ]
+}

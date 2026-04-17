@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rcl_blog_header_r73exb": {
+      "type": "rcl-blog-header",
+      "blocks": {
+        "blog_menu_GgB4g9": {
+          "type": "blog_menu",
+          "settings": {
+            "menu": "blog-menu"
+          }
+        },
+        "breadcrumbs_YrC99R": {
+          "type": "breadcrumbs",
+          "disabled": true,
+          "settings": {
+            "text_style": "small-bold",
+            "color_class": "primary"
+          }
+        },
+        "heading_t4DwzB": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Tuttle Twins Podcast",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "text_gfP3GJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From the trusted team behind the Tuttle Twins books, join us as we tackle current events, hot topics, and fun ideas to help your family find clarity in a world full of confusion.</p>",
+            "text_large": false
+          }
+        },
+        "text_7hXaif": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Click below to Subscribe</h6>",
+            "text_large": false
+          }
+        },
+        "button_WetbnV": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link": "https://podcasts.apple.com/us/podcast/the-way-the-world-works-a-tuttle-twins-podcast-for-families/id1520102889",
+            "use_button_image": true,
+            "button_image": "shopify://shop_images/Group-101938.png",
+            "button_label_b": "",
+            "button_link_b": "https://open.spotify.com/show/6fHOiVhFl2seVssecCYglm",
+            "use_button_image_b": true,
+            "button_image_b": "shopify://shop_images/Group-101940.png",
+            "button_label_c": "",
+            "button_link_c": "https://www.stitcher.com/podcast/libertas-institute/the-way-the-world-works-a-tuttle-twins-podcast-for-families",
+            "use_button_image_c": true,
+            "button_image_c": "shopify://shop_images/Group-101936.png",
+            "button_style_secondary": true
+          }
+        },
+        "button_Ch8CQt": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link": "https://tunein.com/podcasts/Education-Podcasts/The-Way-the-World-Works-A-Tuttle-Twins-Podcast-fo-p1337409/",
+            "use_button_image": true,
+            "button_image": "shopify://shop_images/Group-101935.png",
+            "button_label_b": "",
+            "button_link_b": "https://podcasts.google.com/feed/aHR0cHM6Ly90dXR0bGV0d2lucy5jb20vZmVlZC9wb2RjYXN0Lw",
+            "use_button_image_b": true,
+            "button_image_b": "shopify://shop_images/Group-101937.png",
+            "button_label_c": "",
+            "button_link_c": "",
+            "use_button_image_c": false,
+            "button_style_secondary": true
+          }
+        },
+        "image_gRMznX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The_Way_the_World_Works_3.png",
+            "image_fit": true
+          }
+        },
+        "spacer_btFh3t": {
+          "type": "spacer",
+          "settings": {
+            "spacer_height_vw": 5
+          }
+        }
+      },
+      "block_order": [
+        "blog_menu_GgB4g9",
+        "breadcrumbs_YrC99R",
+        "heading_t4DwzB",
+        "text_gfP3GJ",
+        "text_7hXaif",
+        "button_WetbnV",
+        "button_Ch8CQt",
+        "image_gRMznX",
+        "spacer_btFh3t"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 16,
+        "padding_bottom": 84,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "heading": "15-Minute Introductions to Ideas that Matter",
+        "h1": false,
+        "subheading": "<p>Short enough for a quick car ride with the kids, our podcast episodes spark important conversations between you and your kids!</p>",
+        "margin_top": 8,
+        "margin_top_mobile": 1,
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "articles_per_page": 18,
+        "excerpt_limit": 150,
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": false,
+        "show_author": false
+      }
+    }
+  },
+  "order": [
+    "rcl_blog_header_r73exb",
+    "main"
+  ]
+}

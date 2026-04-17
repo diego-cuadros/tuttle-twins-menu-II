@@ -1,0 +1,183 @@
+{% comment %}
+  ============================================================
+  Tuttle Twins · America's 250th
+  Section: Hero
+  File:    sections/section-a250-hero.liquid
+  Blocks:  proof_stat (repeatable — the stats bar)
+  ============================================================
+{% endcomment %}
+
+<div class="a250">
+  <section class="a250-hero" id="a250-hero">
+    <div class="a250-hero-eyebrow">
+      <span>{{ section.settings.eyebrow_emoji_left }}</span>
+      {{ section.settings.eyebrow_text }}
+      <span>{{ section.settings.eyebrow_emoji_right }}</span>
+    </div>
+
+    <h1>
+      {{ section.settings.heading | newline_to_br }}
+      {% if section.settings.heading_italic != blank %}
+        <br><em>{{ section.settings.heading_italic }}</em>
+      {% endif %}
+    </h1>
+
+    {% if section.settings.subheading != blank %}
+      <p class="a250-hero-sub">{{ section.settings.subheading }}</p>
+    {% endif %}
+
+    <div class="a250-hero-cta-group">
+      {% if section.settings.cta_primary_text != blank %}
+        <a href="{{ section.settings.cta_primary_url }}" class="a250-btn-primary">
+          {% if section.settings.cta_primary_emoji != blank %}{{ section.settings.cta_primary_emoji }}&nbsp;{% endif %}
+          {{ section.settings.cta_primary_text }}
+        </a>
+      {% endif %}
+      {% if section.settings.cta_secondary_text != blank %}
+        <a href="{{ section.settings.cta_secondary_url }}" class="a250-btn-secondary">
+          {{ section.settings.cta_secondary_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% assign proof_blocks = section.blocks | where: 'type', 'proof_stat' %}
+    {% if proof_blocks.size > 0 %}
+      <div class="a250-hero-proof-bar">
+        {% for block in proof_blocks %}
+          <div {{ block.shopify_attributes }}>
+            <div class="a250-hero-proof-num">{{ block.settings.number }}</div>
+            <div class="a250-hero-proof-label">{{ block.settings.label }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="a250-hero-stripes"></div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "A250 · Hero",
+  "tag": "div",
+  "class": "a250-section-hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Eyebrow Badge"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_emoji_left",
+      "label": "Left emoji",
+      "default": "⭐"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow text",
+      "default": "America's 250th Anniversary"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_emoji_right",
+      "label": "Right emoji",
+      "default": "⭐"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (plain)",
+      "default": "Your kid's voice belongs in the"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading italic line (yellow)",
+      "default": "conversation.",
+      "info": "Renders on a new line in italic yellow. Leave blank to hide."
+    },
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "250 years of extraordinary history — and a new generation is ready to write the next chapter. Enter the [CONTEST_NAME] and give your child a voice in America's biggest birthday."
+    },
+    {
+      "type": "header",
+      "content": "Primary CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_primary_emoji",
+      "label": "Button emoji",
+      "default": "🖊️"
+    },
+    {
+      "type": "text",
+      "id": "cta_primary_text",
+      "label": "Button label",
+      "default": "Submit Your Entry"
+    },
+    {
+      "type": "url",
+      "id": "cta_primary_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "header",
+      "content": "Secondary CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_secondary_text",
+      "label": "Button label",
+      "default": "Learn How It Works"
+    },
+    {
+      "type": "url",
+      "id": "cta_secondary_url",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "proof_stat",
+      "name": "Proof Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number / Value",
+          "default": "7M+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Copies Sold"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A250 · Hero",
+      "blocks": [
+        { "type": "proof_stat", "settings": { "number": "7M+",   "label": "Copies Sold"            }},
+        { "type": "proof_stat", "settings": { "number": "4,500+","label": "5-Star Reviews"          }},
+        { "type": "proof_stat", "settings": { "number": "250",   "label": "Book Prize Winners"      }},
+        { "type": "proof_stat", "settings": { "number": "1",     "label": "Grand Prize Family Trip" }}
+      ]
+    }
+  ]
+}
+{% endschema %}

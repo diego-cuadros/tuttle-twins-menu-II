@@ -1,0 +1,141 @@
+{%- style -%}
+  .tt-button-group-{{ block.id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: {{ block.settings.gap }}px;
+    justify-content: {{ block.settings.alignment }};
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .tt-button-group-{{ block.id }} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {%- if block.settings.stack_on_mobile -%}
+    @media screen and (max-width: 749px) {
+      .tt-button-group-{{ block.id }} {
+        flex-direction: column;
+      }
+      .tt-button-group-{{ block.id }} .button {
+        width: 100%;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{%- liquid
+  assign visibility_classes = ''
+  if block.settings.hide_on_mobile
+    assign visibility_classes = visibility_classes | append: ' hide-mobile'
+  endif
+  if block.settings.hide_on_tablet
+    assign visibility_classes = visibility_classes | append: ' hide-tablet'
+  endif
+  if block.settings.hide_on_desktop
+    assign visibility_classes = visibility_classes | append: ' hide-desktop'
+  endif
+-%}
+
+<div class="tt-button-group tt-button-group-{{ block.id }}{{ visibility_classes }}" {{ block.shopify_attributes }}>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Button Group",
+  "blocks": [
+    { "type": "button" }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_tablet",
+      "label": "Hide on tablet",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_desktop",
+      "label": "Hide on desktop",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start",
+      "label": "Alignment"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 0,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between buttons",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_on_mobile",
+      "default": false,
+      "label": "Stack vertically on mobile"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button Group",
+      "blocks": [
+        { "type": "button" },
+        { "type": "button" }
+      ]
+    }
+  ]
+}
+{% endschema %}

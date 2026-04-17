@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_newsletter_EJNEiE": {
+      "type": "ssky-newsletter",
+      "blocks": {
+        "heading_pJ7VmM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>SUBSCRIBE TO THE NEWSLETTER AND GET OUR FREE GUIDE<\/p>",
+            "heading_size": "h2",
+            "heading_weight": "semibold"
+          }
+        },
+        "text_fyBiTw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There are many subtle ways that socialist ideas are being introduced, taught, and reinforced directly to your children. Our e-book walks through several examples to help raise your attention to this agenda so you can help your children avoid being indoctrinated to support the state.<\/p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "email_form_bRp4PD": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_pJ7VmM",
+        "text_fyBiTw",
+        "email_form_bRp4PD"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4d716372-45f4-4b55-80da-e8e92833b4fe.jpg",
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "smallplus",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_newsletter_EJNEiE"
+  ]
+}

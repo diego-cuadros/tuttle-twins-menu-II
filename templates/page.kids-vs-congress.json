@@ -1,0 +1,652 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_two_xrnjt8": {
+      "type": "ssky-image-banner-two",
+      "blocks": {
+        "heading_MaQNfq": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE TUTTLE TWINS BOOKS",
+            "heading_size": "h4"
+          }
+        },
+        "text_wrk9R3": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Teaching Kids What Schools Won't</h1>",
+            "text_large": false
+          }
+        },
+        "text_CaVkDe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From free markets to property rights, our books teach critical ideas that will help children thrive in the real world.</p><p>Save big on our most popular bundles below!</p>",
+            "text_large": true
+          }
+        },
+        "buttons_dWLH6P": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the Bundles",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "stats_block_q7RCPx": {
+          "type": "stats_block",
+          "settings": {
+            "copies_number": "6 Mil+",
+            "copies_text": "Copies Sold Worldwide",
+            "reviews_number": "4,500+",
+            "reviews_text": "5 Star Reviews",
+            "background_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "star_color": "#ffd700",
+            "guarantee_badge": "shopify://shop_images/30-years-guarantee.webp"
+          }
+        },
+        "image_block_K6dVqD": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Kid-v-Congress-Profile-Pics-1300-x-750-px.webp",
+            "position": "right",
+            "image_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MaQNfq",
+        "text_wrk9R3",
+        "text_CaVkDe",
+        "buttons_dWLH6P",
+        "stats_block_q7RCPx",
+        "image_block_K6dVqD"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "background_image": "shopify://shop_images/Website-Mockups_7bb1b649-9d11-4884-8874-3afa2a95f622.webp",
+        "background_size": "cover",
+        "background_position": "center center",
+        "background_color": "#04aed8",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0,
+        "heading_color": "#ffd05a",
+        "caption_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_background": "#da5846",
+        "hide_main_image": true,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    },
+    "sskymo_logo_list_xwjTme": {
+      "type": "sskymo-logo-list",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_column_G8yChj": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_EcfHqE": {
+          "type": "product_column",
+          "settings": {
+            "product": "the-tuttle-twins-guidebook-combo-set-2",
+            "image_fit": true,
+            "heading": "",
+            "text": "<p> </p>",
+            "text_large": false,
+            "price": "",
+            "button_label": "ADD TO CART",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_FX3Vdi": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-volume-1-2-bundle",
+            "image_fit": true,
+            "heading": "",
+            "text": "<p> </p>",
+            "text_large": false,
+            "price": "",
+            "button_label": "ADD TO CART",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_d8pwPU": {
+          "type": "product_column",
+          "settings": {
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses",
+            "image_fit": true,
+            "heading": "<p>{{ block.settings.product.title }}</p>",
+            "text": "<p> </p>",
+            "text_large": false,
+            "price": "",
+            "button_label": "ADD TO CART",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        }
+      },
+      "block_order": [
+        "product_column_EcfHqE",
+        "product_column_FX3Vdi",
+        "product_column_d8pwPU"
+      ],
+      "settings": {
+        "heading": "<h2>These vibrant children's books make big ideas so simple!</h2>",
+        "heading_size": "h3",
+        "heading_weight": "medium",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_two_tfLDTp": {
+      "type": "ssky-image-banner-two",
+      "blocks": {
+        "section_heading_dF9JWG": {
+          "type": "section_heading",
+          "settings": {
+            "section_heading": "Why Your Children (and Congress) Need These Books",
+            "section_heading_align": "center",
+            "section_heading_size": "h1"
+          }
+        },
+        "text_a4mXUD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our society has normalized dependence on government. Many look to the government to solve every problem—even those the government created.</p><p>Let’s empower our children by teaching them about self-ownership and personal responsibility. Let’s teach them history, so they understand the freedoms that underpin our nation. Our elected officials need a reminder, for sure.</p>",
+            "text_large": true
+          }
+        },
+        "buttons_LAdaaL": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop All Products",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "youtube_video_slider_XKBhb4": {
+          "type": "youtube_video_slider",
+          "settings": {
+            "position": "left",
+            "use_slider": true,
+            "use_lightbox": true,
+            "video_count": 3,
+            "youtube_id_1": "MTyZSVMVvc0",
+            "thumbnail_1": "shopify://shop_images/Screenshot-2025-02-26-at-1.webp",
+            "title_1": "",
+            "youtube_id_2": "CDcHRMF17Yg",
+            "thumbnail_2": "shopify://shop_images/Screenshot-2025-02-26-at-10.webp",
+            "title_2": "",
+            "youtube_id_3": "qexb98M0BpM",
+            "thumbnail_3": "shopify://shop_images/Screenshot-2025-02-26-at-2.webp",
+            "title_3": "",
+            "youtube_id_4": "",
+            "title_4": "",
+            "youtube_id_5": "",
+            "title_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_heading_dF9JWG",
+        "text_a4mXUD",
+        "buttons_LAdaaL",
+        "youtube_video_slider_XKBhb4"
+      ],
+      "settings": {
+        "full_width_container": true,
+        "background_size": "cover",
+        "background_position": "center center",
+        "background_color": "#04aed8",
+        "overlay_color": "",
+        "overlay_opacity": 0,
+        "heading_color": "#ffffff",
+        "caption_color": "rgba(0,0,0,0)",
+        "text_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_background": "#da5846",
+        "hide_main_image": true,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    },
+    "sskymo_product_column_c_EFPdx4": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_eDbrkC": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_m8mNh7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Amid the ever-growing problems facing the next generation, true education has never been so important to defend. The Tuttle Twins books are a great way to instill a respect for the ideas of liberty in your children and help them understand the principles of a free society, before it's too late.</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "button_9FRrPY": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "",
+            "button_link_new_window": false,
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "americas-history-bundle-digital-downloads",
+            "product_button_label": "Get the Books + Free Bonuses",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_m8mNh7",
+        "button_9FRrPY"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_product_column_MtVyJE": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_large_VDYqrD": {
+          "type": "product_column_large",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<h3>Volume 1: Seeds of Liberty</h3>",
+            "text": "<p>Embark on a journey leading up to 1776, exploring the ideas, philosophies, and stories that fueled the Founding Fathers in creating our great nation.</p>",
+            "text_large": false,
+            "image": "shopify://shop_images/Americas-History-Volume-1-Bundle-png-1024x1024.png",
+            "text_bottom": "",
+            "text_large_bottom": false,
+            "price": "View a sample chapter from Volume 1.",
+            "button_label": "Download Vol. 1 Chapter PDF",
+            "button_link": "https://tuttletwins.com/wp-content/uploads/2024/02/amhist-vol1-sample.pdf?",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_large_jTNPmA": {
+          "type": "product_column_large",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<h3>Volume 2: Birth of a Nation</h3>",
+            "text": "<p>Uncover the riveting stories and powerful ideas of the Revolutionary War, the birth of the Constitution, and the ratification of the Bill of Rights.</p>",
+            "text_large": false,
+            "image": "shopify://shop_images/Americas-History-Volume-2-Bundle-png-1024x1024.png",
+            "text_bottom": "",
+            "text_large_bottom": false,
+            "price": "View a sample from Volume 2.",
+            "button_label": "Download Vol. 2 Chapter PDF",
+            "button_link": "https://tuttletwins.com/wp-content/uploads/2024/02/amhist-vol2-sample.pdf?",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        }
+      },
+      "block_order": [
+        "product_column_large_VDYqrD",
+        "product_column_large_jTNPmA"
+      ],
+      "settings": {
+        "heading": "<h2>Discover the Series: America’s History in Two Captivating Volumes</h2>",
+        "heading_size": "h3",
+        "heading_weight": "bold",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_column_Qt6mEL": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_kErJmh": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-a-series-of-tuttle-twins-stories",
+            "image_fit": true,
+            "heading": "<p>Volume 1 Bundle</p>",
+            "text": "<ul><li>240-page book</li><li>200 pages of curriculum (PDF)</li><li>6-hour audiobook</li><li>4 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "Add Vol. 1 Bundle to Cart",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_XP6TPp": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-vol2",
+            "image_fit": true,
+            "heading": "<p>Volume 2 Bundle</p>",
+            "text": "<ul><li>240-page book</li><li>200 pages of curriculum (PDF)</li><li>6-hour audiobook</li><li>4 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "Add Vol. 2 Bundle to Cart",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_pzAFKe": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-volume-1-2-bundle",
+            "image_fit": true,
+            "heading": "<p>Two Book Bundle</p>",
+            "text": "<ul><li>500 pages of history</li><li>400 pages of curriculum (PDF)</li><li>12 hours of audiobooks</li><li>8 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "Add 2-Book Bundle to Cart",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        }
+      },
+      "block_order": [
+        "product_column_kErJmh",
+        "product_column_XP6TPp",
+        "product_column_pzAFKe"
+      ],
+      "custom_css": [
+        ".ssky-product-column__image {display: none;}"
+      ],
+      "settings": {
+        "heading": "<h2>Exclusive Bundles with Bonus Content</h2>",
+        "heading_size": "h3",
+        "heading_weight": "bold",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_d_mCn3wt": {
+      "type": "sskymo-text-image-block-d",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image_position": "image-right",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Mz7apV": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_N3btEt": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Claim Your Books For Your Family Now!</h2>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N3btEt"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_custom_block_hzWRVL": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "image_hDMFxj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kids-reading_ba207720-aeb4-49bd-8fa3-6250e88eb4c9.webp",
+            "image_alt": "",
+            "alignment": "center",
+            "narrow_width": false,
+            "custom_width": "",
+            "rounded": true,
+            "add_border": false,
+            "border_width": 1,
+            "border_style": "solid",
+            "border_color": "#000000",
+            "add_shadow": false
+          }
+        },
+        "image_rWwkRe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cong1.png",
+            "image_alt": "",
+            "alignment": "center",
+            "narrow_width": false,
+            "custom_width": "",
+            "rounded": true,
+            "add_border": false,
+            "border_width": 1,
+            "border_style": "solid",
+            "border_color": "#000000",
+            "add_shadow": false
+          }
+        }
+      },
+      "block_order": [
+        "image_hDMFxj",
+        "image_rWwkRe"
+      ],
+      "settings": {
+        "column": 2,
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "fullwidth": false,
+        "narrow_width": false
+      }
+    },
+    "sskymo_text_image_block_b_kVc6nq": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_image_banner_two_xrnjt8",
+    "sskymo_logo_list_xwjTme",
+    "ssky_product_column_G8yChj",
+    "ssky_image_banner_two_tfLDTp",
+    "sskymo_product_column_c_EFPdx4",
+    "ssky_text_block_eDbrkC",
+    "ssky_product_column_MtVyJE",
+    "ssky_product_column_Qt6mEL",
+    "sskymo_text_image_block_d_mCn3wt",
+    "ssky_text_block_Mz7apV",
+    "ssky_custom_block_hzWRVL",
+    "sskymo_text_image_block_b_kVc6nq"
+  ]
+}

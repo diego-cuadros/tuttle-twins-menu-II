@@ -1,0 +1,1013 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_cCtEgn": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_G83tFy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>American History for kids,<br/><strong>done the right way!</strong></p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h1"
+          }
+        },
+        "text_AJmpVK": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Teach Your Kids the Inspiring Ideas of America's Founding—Without the Bias and Hidden Agendas Found in Other History Books for Kids.</h5>",
+            "text_size": "extra-extra-large",
+            "text_weight": "bold"
+          }
+        },
+        "button_pYpg6f": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "SHOP THE BUNDLES",
+            "button_link": "#shopify-section-template--18069625733258__sskymo_product_column_g_Bwr3gr",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_G83tFy",
+        "text_AJmpVK",
+        "button_pYpg6f"
+      ],
+      "custom_css": [
+        ".ssky-text-block__buttons {margin: 20px 0 0;}",
+        "@media screen and (max-width: 749px) {.ssky-text-block__buttons {justify-content: center; } .ssky-text-block__heading {font-size: 36px; } .ssky-text-block__text h5 {font-weight: 400; }}"
+      ],
+      "settings": {
+        "background_position": "top center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/hisboth-min_5048c5ee-9e2f-40f5-8f86-e3df78ae2110.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "heading-white-orange",
+        "padding_top": 20,
+        "padding_bottom": 100,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_qWqiVx": {
+      "type": "z-video",
+      "custom_css": [
+        ".color-scheme-1 {background-color: transparent; background-image: linear-gradient(180deg, #97d6f096 0%, #00000000 19%); background-attachment: unset; margin-top: 50px;}",
+        ".video-section {max-width: 935px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=Wtc0dOGHJaU&ab_channel=TheTuttleTwins",
+        "cover_image": "shopify://shop_images/maxresdefault.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "ssky_text_block_NXaET8": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_ccRjyY": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>We’ve read them — all the social studies books being used in schools today. They’re fantastic, <em>if your goal is to make kids uninterested in our history</em>.</p><p>But if your goal is to raise a well-rounded child who learns lessons from the past that they can apply to their own life, you need something better. </p><p>Introducing <em><strong>America’s History: A Tuttle Twins Series of Stories</strong></em> — two 240+ page hardback storybooks that teach inspiring stories and powerful ideas from our nation’s past, to help empower your children to live their best lives today.</p><p><em><strong>Volume 1</strong></em> covers the years leading up to 1776 and explores the ideas, philosophy, and stories that moved the Founding Fathers to establish our country. </p><p><em><strong>Volume 2</strong></em> covers the Revolutionary War, the creation of the Constitution, and the ratification of the Bill of Rights—and the book is jam-packed with interesting stories and powerful ideas. </p><p>Recommended ages: 7-13</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_pPBBCL": {
+          "type": "button",
+          "settings": {
+            "alignment": "center",
+            "button_last": false,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Buy America's History vol. 1 & 2",
+            "button_link": "#shopify-section-template--18069625733258__sskymo_product_column_g_Bwr3gr",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "text_ccRjyY",
+        "button_pPBBCL"
+      ],
+      "custom_css": [
+        ".ssky-text-block__buttons {justify-content: center; max-width: 100%; margin-top: 40px;}",
+        ".ssky-text-block__text p strong {color: #f6a92b;}"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 84,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_banner_8tqawJ": {
+      "type": "ssky-image-banner",
+      "settings": {
+        "full_width_container": true,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/HistoryBook2_FGP-41-scaled.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_two_columns_custom_block_ypYyWr": {
+      "type": "ssky-two-columns-custom-block",
+      "blocks": {
+        "text_with_icon_MzqDKr": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text": "<p>Focus on superficial facts, such as dates and names of places and battles</p>",
+            "custom_color": "",
+            "text_b": "<p>Help young readers understand history more deeply by immersing them in the stories around the events</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_TDdz6j": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text": "<p>Gloss over the Founding Fathers' ideas that revolutionized America and the world</p>",
+            "custom_color": "",
+            "text_b": "<p>Teach the inspiring <span style=\"text-decoration:underline\"><em>ideas </em></span>of America's founding and how those ideas are relevant to their lives today</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_cKjr6D": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text": "<p>Don't help young readers understand why what happened 250 years ago is relevant to our world today</p>",
+            "custom_color": "",
+            "text_b": "<p>Challenge your children to learn <span style=\"text-decoration:underline\"><em>from </em></span>the past and apply those ideas to our world</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_z3BqxA": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text": "",
+            "custom_color": "",
+            "text_b": "<p>Are filled with examples about how the lessons of history are relevant to us today</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_6T9DAK": {
+          "type": "text_with_icon",
+          "settings": {
+            "text_size": "medium",
+            "text_weight": "regular",
+            "text": "",
+            "custom_color": "",
+            "text_b": "<p>Are enjoyable to read as a family and turn history into an engaging story for kids of all ages</p>",
+            "custom_color_b": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_with_icon_MzqDKr",
+        "text_with_icon_TDdz6j",
+        "text_with_icon_cKjr6D",
+        "text_with_icon_z3BqxA",
+        "text_with_icon_6T9DAK"
+      ],
+      "settings": {
+        "main_heading": "Here's What Our New Books Fix:",
+        "heading": "Most Kids' History Textbooks…",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "icon_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-times\" viewBox=\"0 0 352 512\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#BD1C1C\" d=\"M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z\"></path></svg>",
+        "heading_b": "Our America's History stories…",
+        "bg_color_b": "rgba(0,0,0,0)",
+        "text_color_b": "#000000",
+        "icon_svg_b": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-check\" viewBox=\"0 0 512 512\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#32BD1C\" d=\"M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z\"></path></svg>",
+        "colspacing": 20,
+        "rowspacing": 40,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "narrow_width": false,
+        "rounded": false,
+        "align_center": true,
+        "container_padding": "0",
+        "icon_size": 36
+      }
+    },
+    "sskymo_product_column_g_Bwr3gr": {
+      "type": "sskymo-product-column-g",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_image_large_WkW6PD": {
+      "type": "ssky-image-large",
+      "settings": {
+        "heading": "<p>Here are some sample pages of the books</p>",
+        "heading_size": "h3",
+        "image_mobile": "shopify://shop_images/hpages2.jpg",
+        "image": "shopify://shop_images/hpages1-1.webp",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "fullwidth": true
+      }
+    },
+    "ssky_product_column_iwr9p3": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_9rAdJB": {
+          "type": "product_column",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<p> </p>",
+            "image": "shopify://shop_images/hboth-min.png",
+            "text": "<p><strong>America's History: A Tuttle Twins Series of Stories Vol. 1 & Vol. 2<br/><br/></strong>Two 240+ page hardcover books that are fully illustrated in vivid color and filled with stories and adventures to teach the inspiring stories of America’s founding.<br/><br/>Normally: $198<br/><br/>SALE PRICE: <em><strong>$118.88</strong></em></p>",
+            "text_large": true,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        },
+        "product_column_mLXmey": {
+          "type": "product_column",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<p> </p>",
+            "image": "shopify://shop_images/xcurr.jpg",
+            "text": "<p><strong>400 pages of PDF companion <br/>curriculum and activities</strong><br/><br/>Go beyond the book to help your children immerse themselves in the ideas of history with our fun projects and wide variety of curriculum worksheets.<br/><br/>Normally: $98 <br/><br/>SALE PRICE: <span style=\"text-decoration:underline\"><em><strong>FREE</strong></em></span></p>",
+            "text_large": true,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        },
+        "product_column_NzxY8m": {
+          "type": "product_column",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<p> </p>",
+            "image": "shopify://shop_images/audx2.jpg",
+            "text": "<p><strong>Over 12 hours of MP3 audiobooks to listen to </strong><br/><br/>Your children can listen along to the entire series of stories with our professionally recorded audiobooks that help make the stories come alive!<br/><br/><br/>Normally: $78 <br/><br/>SALE PRICE: <span style=\"text-decoration:underline\"><em><strong>FREE</strong></em></span></p>",
+            "text_large": true,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        },
+        "product_column_qx76w3": {
+          "type": "product_column",
+          "settings": {
+            "product": "",
+            "image_fit": true,
+            "heading": "<p> </p>",
+            "image": "shopify://shop_images/vidkdf.jpg",
+            "text": "<p><strong>Over 8 hours of extra stories of <br/>history from Mr. C</strong><br/><br/>We produced a set of fun videos to share even more about the stories and powerful ideas from history, presented by Mr. C. Your kids will love him!<br/><br/><br/>Normally: $58 <br/><br/>SALE PRICE: <span style=\"text-decoration:underline\"><em><strong>FREE</strong></em></span></p>",
+            "text_large": true,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true
+          }
+        }
+      },
+      "block_order": [
+        "product_column_9rAdJB",
+        "product_column_mLXmey",
+        "product_column_NzxY8m",
+        "product_column_qx76w3"
+      ],
+      "settings": {
+        "heading": "<p>Order the Two-Book Bundle and get <strong>3 Big Bonuses:</strong></p>",
+        "heading_size": "h1",
+        "heading_weight": "bold",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "custom_class": "heading-blue-orange-two text-italic-orange product-four-column-layout price-button-hide-layout",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_g_MVX49M": {
+      "type": "sskymo-product-column-g",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_TU9QpL": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_wGxmxw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Download a Chapter</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_3N3Yct": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Still not convinced these books are a good fit for your family? Take a peek inside to review a chapter from each book.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_YDMHbg": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Download Vol. 1 Chapter PDF",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/8951/0282/files/amhist-vol1-sample.pdf?v=1737410948",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "button_jDLGNw": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Download Vol. 2 Chapter PDF",
+            "button_link": "https://cdn.shopify.com/s/files/1/0655/8951/0282/files/amhist-vol2-sample.pdf?v=1737410948",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wGxmxw",
+        "text_3N3Yct",
+        "button_YDMHbg",
+        "button_jDLGNw"
+      ],
+      "custom_css": [
+        ".ssky-text-image-block.content-container {background-color: transparent; background-image: linear-gradient( rgb(4, 174, 216) 58%, rgb(188, 236, 246) 100% );}",
+        ".ssky-text-block__buttons {margin-left: 0;}",
+        ".ssky-text-block__buttons:last-child {margin-top: 6px;}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/pageshist-min.png",
+        "rounded": false,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_a7fhTt": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_6PWtYi": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>I homeschool my kids but I've always struggled to find history curriculum I could trust. I'm blown away by the Tuttle Twins book in a very good way — the stories they share really help my kids get interested in history! I give this ⭐️⭐️⭐️⭐️⭐️.</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/family.jpg",
+            "profile_name": "Lindsay R.",
+            "profile_location": "",
+            "image_position": "image-left",
+            "show_star": false,
+            "stars": 5,
+            "narrow_width": true
+          }
+        },
+        "testimonial_CQ46BA": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>I was given an advance copy of this book to test with my kids, and HOLY MOLY it's amazing! This is what I've been looking for — a history book that is honest, focused on true principles, and taught in a way that my kids can apply to their lives. I'M A FAN! (Sorry for the caps but it's TRUE!)</p>",
+            "font_size": 20,
+            "background": "#f6f6f6",
+            "text_color": "#0a0a0a",
+            "profile_image": "shopify://shop_images/selfie-mom.jpg",
+            "profile_name": "Sara B.",
+            "profile_location": "",
+            "image_position": "image-right",
+            "show_star": false,
+            "stars": 5,
+            "narrow_width": true
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_6PWtYi",
+        "testimonial_CQ46BA"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 0,
+        "rowspacing": 30,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "fullwidth": false,
+        "narrow_width": false
+      }
+    },
+    "ssky_product_order_block_WPbgpx": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_two_YfVy4w": {
+          "type": "order_block_two",
+          "settings": {
+            "product": "america-s-history-volume-1-2-bundle",
+            "product_2": "",
+            "columns": "one",
+            "heading": "<p>Get $432 of history education<br/><strong>for only $127.99</strong></p>",
+            "heading_size": "h3",
+            "heading_weight": "medium",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Get the Two-Book Bundle With Free Bonuses",
+            "button_link": "",
+            "button_style": "default",
+            "button_link_color": "#da5846",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style2": "default",
+            "button_link_color2": "#da5846",
+            "button_sep_label": "",
+            "button_large": true,
+            "button_full": false,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_two_YfVy4w"
+      ],
+      "custom_css": [
+        ".ssky-text-block__heading strong {color: #f6a92b;}"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 88,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 5,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_m6QxtD": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "footer_guarantee_ecR6LA": {
+          "type": "footer_guarantee",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "padding_top": 40,
+            "padding_bottom": 140,
+            "top_left": false,
+            "top_right": false,
+            "bottom_right": false,
+            "bottom_left": false,
+            "corner_color": "",
+            "heading": "",
+            "description": "",
+            "image": "shopify://shop_images/amhist-cropped-1a-1.webp",
+            "custom_position": true,
+            "image_height": 700,
+            "image_top_offset": 70
+          }
+        }
+      },
+      "block_order": [
+        "footer_guarantee_ecR6LA"
+      ],
+      "custom_css": [
+        ".ssky-text-block__icon > img {max-width: 503px;}"
+      ],
+      "settings": {
+        "column": 1,
+        "colspacing": 0,
+        "rowspacing": 0,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "fullwidth": true,
+        "narrow_width": false
+      }
+    },
+    "ssky_text_block_RarHii": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_a6YtXJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Families LOVE the Tuttle Twins!</p>",
+            "custom_color": "#424242",
+            "alignment": "center",
+            "heading_size": "h2",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_nmBajp": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "#424242",
+            "alignment": "center",
+            "text": "<p>See what parents just like you have to say about the Tuttle Twins books!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_a6YtXJ",
+        "text_nmBajp"
+      ],
+      "custom_css": [],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 24,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_custom_block_EUQCFp": {
+      "type": "ssky-custom-block",
+      "blocks": {
+        "testimonial_A4BqE9": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"For years, I hoped to find books like these. My frustration finally ended when I came across a Facebook ad for the Tuttle Twins books, and my kids are SO happy I bought them!\"</p>",
+            "font_size": 16,
+            "background": "#e5ebff",
+            "text_color": "#000000",
+            "profile_image": "shopify://shop_images/Sarah-L-1.png",
+            "profile_name": "Sarah L.",
+            "profile_location": "Arizona",
+            "image_position": "image-bottom",
+            "show_star": true,
+            "stars": 5,
+            "narrow_width": true
+          }
+        },
+        "testimonial_Dz4LmH": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"My son doesn't like to read, but he devours these books over and over again. Kudos to Connor and his team for finding the secret sauce to get my son interested in learning.\"</p>",
+            "font_size": 16,
+            "background": "#e5ebff",
+            "text_color": "#000000",
+            "profile_image": "shopify://shop_images/Peter-R-1.png",
+            "profile_name": "Sarah L.",
+            "profile_location": "Arizona",
+            "image_position": "image-bottom",
+            "show_star": true,
+            "stars": 5,
+            "narrow_width": true
+          }
+        },
+        "testimonial_PnVMhm": {
+          "type": "testimonial",
+          "settings": {
+            "text": "<p>\"Forget 5-11 year olds… when I read these books to my kids I learned all sorts of stuff nobody ever taught me. Now my kids and I have some awesome discussions together!\"</p>",
+            "font_size": 16,
+            "background": "#e5ebff",
+            "text_color": "#000000",
+            "profile_image": "shopify://shop_images/Josie-A-1.png",
+            "profile_name": "Sarah L.",
+            "profile_location": "Arizona",
+            "image_position": "image-bottom",
+            "show_star": true,
+            "stars": 5,
+            "narrow_width": true
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_A4BqE9",
+        "testimonial_Dz4LmH",
+        "testimonial_PnVMhm"
+      ],
+      "custom_css": [],
+      "settings": {
+        "column": 3,
+        "colspacing": 30,
+        "rowspacing": 30,
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "fullwidth": false,
+        "narrow_width": false
+      }
+    },
+    "ssky_text_image_block_JNHtyc": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_z9L7mi": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>See what children have to say!</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_z9L7mi"
+      ],
+      "custom_css": [
+        ".ssky-text-image-block {max-width: 900px; margin: auto;}"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Connor-Letter.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_tYdcck": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_NbxDq6": {
+          "type": "caption",
+          "settings": {
+            "caption": "Meet the Author",
+            "text_style": "large-semibold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_iwxnKh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Connor Boyack is founder and president of Libertas Institute, a free market think tank in Utah. Named one of Utah’s most politically influential people by <em>The Salt Lake Tribune</em>, Connor’s leadership has led to dozens of legislative victories spanning a wide range of areas such as privacy, government transparency, property rights, entrepreneurship, education, personal freedom, and more.</p><p>A public speaker and author of over two dozen books, Connor is best known for The Tuttle Twins books, a children’s series introducing young readers to economic, political, and civic principles.</p><p>Connor lives near Salt Lake City, Utah, with his wife and two homeschooled children.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "divider_jmymci": {
+          "type": "divider",
+          "settings": {
+            "margin": 16
+          }
+        }
+      },
+      "block_order": [
+        "caption_NbxDq6",
+        "text_iwxnKh",
+        "divider_jmymci"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/connor.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "small",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_Df9bTc": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "caption_BR8n96": {
+          "type": "caption",
+          "settings": {
+            "caption": "Meet the Illustrator",
+            "text_style": "large-bold",
+            "color_class": "primary-yellow"
+          }
+        },
+        "text_YAJAah": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elijah Stanfield is owner of Red House Motion Imaging, a media production company in Washington.</p><p>A longtime student of Austrian economics, history, and the classical liberal philosophy, Elijah has dedicated much of his time and energy to promoting the ideas of free markets and individual liberty. Some of his more notable works include producing eight videos in support of Ron Paul’s 2012 presidential candidacy.</p><p>He currently resides in Tennessee with his wife April and their six children.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_BR8n96",
+        "text_YAJAah"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/elijah.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "small",
+        "content_alignment": "right",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_image_block_cCtEgn",
+    "z_video_qWqiVx",
+    "ssky_text_block_NXaET8",
+    "ssky_image_banner_8tqawJ",
+    "ssky_two_columns_custom_block_ypYyWr",
+    "sskymo_product_column_g_Bwr3gr",
+    "ssky_image_large_WkW6PD",
+    "ssky_product_column_iwr9p3",
+    "sskymo_product_column_g_MVX49M",
+    "ssky_text_image_block_TU9QpL",
+    "ssky_custom_block_a7fhTt",
+    "ssky_product_order_block_WPbgpx",
+    "ssky_custom_block_m6QxtD",
+    "ssky_text_block_RarHii",
+    "ssky_custom_block_EUQCFp",
+    "ssky_text_image_block_JNHtyc",
+    "ssky_text_image_block_tYdcck",
+    "ssky_text_image_block_Df9bTc"
+  ]
+}

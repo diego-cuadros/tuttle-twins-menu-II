@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "rcl-blog-header",
+      "blocks": {
+        "blog_menu_UNKg4j": {
+          "type": "blog_menu",
+          "settings": {
+            "menu": "blog-menu"
+          }
+        },
+        "heading_yP8HP4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explore Our Latest Content",
+            "heading_size": "h1",
+            "heading_weight": "semibold"
+          }
+        },
+        "text_hLTD43": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stories, insights, and conversations designed to help families think freely</p><p></p>",
+            "text_large": false
+          }
+        },
+        "image_WdcWhC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter-scaled-1-1024x622.webp",
+            "image_fit": true
+          }
+        }
+      },
+      "block_order": [
+        "blog_menu_UNKg4j",
+        "heading_yP8HP4",
+        "text_hLTD43",
+        "image_WdcWhC"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 68,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "main": {
+      "type": "main-all-blogs",
+      "settings": {
+        "heading": "Everything We’re Publishing Right Now",
+        "h1": false,
+        "subheading": "<p>Browse the latest across articles, podcasts, and newsletter editions.</p>",
+        "blog_handles": "newsletter,podcast,blog",
+        "margin_top": 2,
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "articles_per_page": 9,
+        "excerpt_limit": 150,
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

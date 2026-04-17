@@ -1,0 +1,687 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "ssky_text_image_block_jiDwjt": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_J4MP3g": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<h2>The Best Toddler Books: Our Complete Collection</h2>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_kk9Vjc": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>ABCs Combo Set</strong> – Each letter opens the door to important ideas like the American Revolution, liberty, and basic economics that toddlers can start to understand.</li></ul><p></p><ul><li><strong>123s Combo Set</strong> – Your kids will learn about helping others, innovation, and the Bill of Rights through counting from 1 to 10. Fun lessons made simple for small readers.</li></ul>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_J4MP3g",
+        "text_kk9Vjc"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/toddler-testimonial-image-1.jpg",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_b_EdHfbQ": {
+      "type": "sskymo-text-column-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_8AP3y3": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_JhULTz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why Families Choose Tuttle Toddlers</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h3",
+            "center": false
+          }
+        },
+        "checkbox_individual_maFhKn": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Educational and Fun</strong>: The Tuttle Toddlers series teaches important ideas through fun stories. Teach your child key life lessons like the importance of responsibility and working together while learning how to read and count.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_CaCe64": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Age-Appropriate Early Years Books</strong>: These are the best board books for kids aged 2 to 4, with stories that are easy to understand. They introduce big ideas in a way that’s fun and exciting.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_xjyJr4": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Parent-Child Bonding</strong>: These children’s books create an opportunity for families to spend time together and have meaningful conversations about important values.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_yximYw": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Sturdy Board Book Format</strong>: Get strong board books that can handle the rough and tumble of toddler life. </p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_n4h93Q": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Beautiful Illustrations</strong>: The images in each book are bright and captivating to bring the narrative to life. This helps your toddler take in the information and remember what they've learned.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_pcnhfK": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Perfect for Gift-Giving</strong>: The Tuttle Toddlers collection is a great gift for any occasion, including birthdays, holidays, and other special events.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JhULTz",
+        "checkbox_individual_maFhKn",
+        "checkbox_individual_CaCe64",
+        "checkbox_individual_xjyJr4",
+        "checkbox_individual_yximYw",
+        "checkbox_individual_n4h93Q",
+        "checkbox_individual_pcnhfK"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_text_block_63zpGB": {
+      "type": "sskymo-text-block",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_Lhhnrp": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_GQ4qza": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Early Learning Books for 2-Year-Olds and Beyond</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_dp3YmE": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our collection offers great early childhood books. The <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-combo-set\"><span style=\"text-decoration:underline\">ABCs Combo Set</span></a> and <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-123-combo-set\"><span style=\"text-decoration:underline\">123s Combo Set</span></a> help toddlers get used to basic ideas. For example, our ABCs Combo Set links each letter to a topic, like \"A\" for \"American Revolution,\" and \"B\" for \"Bill of Rights.” The 123s Combo uses numbers to teach young learners about important principles such as \"2 Dependable Farmers” and “10 The Right to Local Government.”</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GQ4qza",
+        "text_dp3YmE"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_product_column_fH4XYV": {
+      "type": "sskymo-product-column",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_b_iVVDbt": {
+      "type": "sskymo-product-column-b",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_block_yhFB7B": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_mbUV7N": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Benefits of Our Books For Toddlers</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h3",
+            "center": false
+          }
+        },
+        "checkbox_individual_hWM4BN": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Promotes Early Literacy: </strong>Our toddler learning books are ideal for helping kids develop pre-reading skills. They strengthen your child’s language abilities from a young age with simple, clear text and a focus on early vocabulary.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_FXLPYL": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Builds Critical Thinking</strong>: Teaching toddlers about ideas like liberty and other concepts in a way they can understand gives them the tools they need to think critically. These books help kids get a head start on the things they will learn in the future.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_tRnfTL": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Engages Curiosity</strong>: Every page encourages children to ask questions and explore their curiosity. This develops a lifetime passion for learning.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_3e8Vd4": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Supports Social-Emotional Development</strong>: These board books address topics like helping others and why rules are important. Kids can develop their social and emotional skills, which are important for their growth.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mbUV7N",
+        "checkbox_individual_hWM4BN",
+        "checkbox_individual_FXLPYL",
+        "checkbox_individual_tRnfTL",
+        "checkbox_individual_3e8Vd4"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_image_large_z3YDRQ": {
+      "type": "sskymo-image-large",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_ipBKbJ": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_YfzXdJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "Durable, Engaging, and Perfect Books for Little Hands",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_yADrGn": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Board books are a great way to introduce your child to reading early on. Our high-quality, baby-friendly books are made from thick, durable board that can handle the teething and tossing that come with babies and toddlers. We’ve designed our board books to be as engaging as they are educational, so your little one can start learning valuable lessons while enjoying vibrant illustrations and interactive content.</p><h2>Benefits of Board Books for Toddlers and Children</h2><p>Board books offer more than just fun. They play an important role in your child's development. Here’s why our sturdy, hands-on books are a great choice for your baby or toddler.</p><h3>Durability for Active Little Hands</h3><p>Babies and toddlers can be rough with their belongings, especially books. Our board books have thick, sturdy pages that stand up to lots of use. Your baby can flip, chew, or toss them, and they’ll still last. Their strong design means our books stay together, even after many hours of play.</p><h3>Early Motor Skill Development</h3><p>Board books are great for learning, but they’re also fantastic for helping your child develop essential motor skills. The thick pages are easy for your baby or toddler to grasp, turn, and explore. This simple action of flipping pages helps improve their hand-eye coordination, dexterity, and fine motor skills. Plus, they’re perfect for interactive reading sessions, where your child can “help” turn the pages as you read aloud about the <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-abcs-of-the-american-revolution\"><span style=\"text-decoration:underline\">American Revolution</span></a>, <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-abcs-of-economics\"><span style=\"text-decoration:underline\">Economics</span></a>, and everything in between.</p><h3>Safe, Non-Toxic Materials</h3><p>When it comes to babies, safety is always our top priority. Our toddler books are made with non-toxic materials, so you don’t have to worry about harmful chemicals. Each book is carefully crafted to ensure it’s safe for your little one to explore, even if they decide to chew on the pages. The rounded corners prevent any accidental pokes, giving you complete peace of mind.</p><h3>Engaging Stories and Colorful Illustrations</h3><p>Our board books are educational and eye-catching. Bright colors and bold pictures grab your child’s attention, making reading enjoyable. From learning simple ideas to listening to a story, our books help create a happy space for early learning. The stories are short and simple, just right for young children.</p><h3>A Foundation for Early Learning</h3><p>Reading with your child from an early age helps build a strong foundation for future learning. Our board books are the perfect introduction to the world of books, teaching your little one about <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-123s-of-helping\"><span style=\"text-decoration:underline\">Helping</span></a>, <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-abcs-of-liberty\"><span style=\"text-decoration:underline\">Liberty</span></a>, and even values like kindness and empathy. With interactive content and simple, yet valuable lessons, our board books support the development of early literacy skills that benefit your child as they grow.<br/><br/></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_YfzXdJ",
+        "text_yADrGn"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_home_main_BaPaxN": {
+      "type": "ssky-home-main",
+      "blocks": {
+        "heading_QNr4Rr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inspire Your Children to Greatness With an Understanding of and a Love for Freedom",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "image_en3xKN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/empower_your_children_image.webp",
+            "image_fit": true
+          }
+        },
+        "text_n4XqUa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Tuttle Twins is an exciting and powerful series of books and multimedia materials that celebrate the idea of freedom in a fun, friendly, and engaging way. The Tuttle Twins give parents like you hope by learning about the ideas of the past, how they relate today, and how through storytelling your kids can understand and embrace these powerful ideas as well.<br/><br/><strong>Empower your children. Shop by age:</strong></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_df7qG4": {
+          "type": "button",
+          "settings": {
+            "button_large": false,
+            "button_full": true,
+            "button_label": "Toddlers",
+            "button_link": "shopify://collections/toddler-books",
+            "button_label_b": "Kids",
+            "button_link_b": "shopify://collections/childrens-series",
+            "button_label_c": "Teens",
+            "button_link_c": "shopify://pages/books-for-teens",
+            "button_style_secondary": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_QNr4Rr",
+        "image_en3xKN",
+        "text_n4XqUa",
+        "button_df7qG4"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-5",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_faqs_pNm4DK": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_N9Mkbb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_9XmEpe": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Book Should a Two-Year-Old Read?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Early learning books for 2-year-olds should be fun, colorful, and teach basic ideas like numbers, letters, and simple phrases. Tuttle Toddlers books are a fantastic choice because of their enjoyable and interactive stories.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_49jae6": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Age Range Are Toddler Books For?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Toddler books are for children between the ages of 1 and 4. These books are all about helping your toddler learn basic skills like counting, reading, and learning about the world in ways that are easy to understand.</p><p>Tuttle Toddlers books are ideal early learning books for 3-year-olds.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_D74DWn": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can a Child Start Reading At 2?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>At age 2, most kids can't read on their own, but they can start learning the fundamentals of reading, such as how to recognize letters, sounds, and words. Our books teach these ideas in a fun and easy-to-understand style, which will encourage your child to learn to read and write early on.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_dnCVCf": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Old Should My Child Be to Use Board Books?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Board books are ideal for babies as young as 6 months old and can be enjoyed well into the toddler years. Their sturdy construction and engaging illustrations make them a great choice for children who are just beginning to explore the world of reading.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_bG3HRE": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are Your Board Books Safe for Babies to Chew On?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, all of our board books are made with non-toxic materials, ensuring they’re safe for babies to chew on. The rounded corners also mean there’s no chance your little one can hurt themselves on pointy edges.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_LKTXgx": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can I Use Board Books to Teach My Child Important Concepts?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Absolutely! Our board books are designed with educational themes in mind, such as numbers, colors, and positive character traits. They’re a wonderful tool for teaching your little one important lessons in a fun and interactive way.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_PUf4rQ": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Long Do Board Books Last?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our <a href=\"https://tuttletwins.com/products/the-tuttle-toddlers-combo-set-1\"><span style=\"text-decoration:underline\">toddler book bundle</span></a> features books that are made with board that’s hardy and made to last through temper tantrums, drooling, teething, and dropping! Made with thick, durable materials, they’re perfect for babies and toddlers who tend to be rough on their things. With proper care, our board books will provide years of reading enjoyment.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_N9Mkbb",
+        "faq_9XmEpe",
+        "faq_49jae6",
+        "faq_D74DWn",
+        "faq_dnCVCf",
+        "faq_bG3HRE",
+        "faq_LKTXgx",
+        "faq_PUf4rQ"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 28,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "ssky_text_image_block_jiDwjt",
+    "sskymo_text_column_b_EdHfbQ",
+    "ssky_text_block_8AP3y3",
+    "sskymo_text_block_63zpGB",
+    "ssky_text_block_Lhhnrp",
+    "sskymo_product_column_fH4XYV",
+    "sskymo_product_column_b_iVVDbt",
+    "ssky_text_block_yhFB7B",
+    "sskymo_image_large_z3YDRQ",
+    "ssky_text_block_ipBKbJ",
+    "ssky_home_main_BaPaxN",
+    "ssky_faqs_pNm4DK"
+  ]
+}

@@ -1,0 +1,186 @@
+{%- style -%}
+  .ssky-image-swiper-slider-block-{{ block.id }} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    position: relative;
+  }      
+  .ssky-image-swiper-slider-block-{{ block.id }} .ssky-slider-swiper-controls-container {       
+    width: 100%;
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    overflow: visible;
+    z-index: 2;
+  }
+  .ssky-image-swiper-slider-block-{{ block.id }} .ssky-slider-swiper-container {margin-inline: 30px;}
+  .ssky-image-swiper-slider-block-{{ block.id }} .swiper-slider-button {
+    background: transparent;
+    color: #fff;
+    border: none;
+  }
+  .ssky-image-swiper-slider-block-{{ block.id }} .swiper-slider-button:after {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .ssky-image-swiper-slider-block-{{ block.id }} .swiper-button-prev {left: -10px;}
+  .ssky-image-swiper-slider-block-{{ block.id }} .swiper-button-next {right: -10px;}
+  @media screen and (min-width: 750px) {
+    .ssky-image-swiper-slider-block-{{ block.id }} {
+      padding-top: {{ block.settings.margin_top }}px;
+      padding-bottom: {{ block.settings.margin_bottom }}px;
+    }    
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-image-swiper-slider-block-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+<div class="ssky-slider-swiper-component ssky-image-swiper-slider-block-{{ block.id }}"
+  role="region"
+  aria-roledescription="{{ 'sections.slideshow.carousel' | t }}">
+  <div class="ssky-slider-swiper-container swiper">
+    <div class="slideshow-swiper swiper-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+      id="Slider-swiper-{{ block.id }}"
+      aria-live="polite"
+      aria-atomic="true">
+      {% content_for 'blocks' %}       
+    </div>  
+  </div> 
+  {%- if block.settings.show_pagination -%}
+    <div class="ssky-slider-swiper-controls-container swiper">
+      <div class="swiper-slideshow__controls swiper-slider-buttons">          
+        <button
+          type="button"
+          class="swiper-slider-button swiper-button-prev"
+          name="previous"
+          aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+          aria-controls="Slider-{{ block.id }}"
+        >
+        </button>
+        <button
+          type="button"
+          class="swiper-slider-button swiper-button-next"
+          name="next"
+          aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+          aria-controls="Slider-{{ block.id }}"
+        >
+        </button>         
+      </div>
+    </div>
+  {%- endif -%} 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const {{ block.id | remove: '_' }} = new Swiper('.ssky-image-swiper-slider-block-{{ block.id }} .swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        {% if block.settings.auto_rotate %}        
+          speed: 1000,
+          autoplay: true,  
+        {% endif %}  
+        // Navigation arrows
+        navigation: {
+          nextEl: '.ssky-image-swiper-slider-block-{{ block.id }} .swiper-button-next',
+          prevEl: '.ssky-image-swiper-slider-block-{{ block.id }} .swiper-button-prev',
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1
+          },
+          // when window width is >= 600px
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          // when window width is >= 800px
+          800: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          // when window width is >= 1200px
+          1200: {
+            slidesPerView: {{ block.settings.columns }},
+            spaceBetween: 24
+          }
+          }
+        });
+    });
+  </script>
+</div>
+{% schema %}
+  {
+    "name": "TT slider swiper block",
+    "blocks": [
+      { "type": "_swiper-slider-item" }
+    ],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Slider settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_rotate",
+        "label": "t:sections.slideshow.settings.auto_rotate.label",
+        "default": true,
+        "info": "On desktop, the auto-rotate feature works best with five or more slides."
+      },
+      {
+        "type": "range",
+        "id": "columns",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Items per column - Desktop",
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "change_slides_speed",
+        "min": 3,
+        "max": 9,
+        "step": 2,
+        "unit": "s",
+        "label": "t:sections.slideshow.settings.change_slides_speed.label",
+        "default": 5
+      },
+      {
+        "type": "checkbox",
+        "id": "show_pagination",
+        "label": "Show arrows",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 20
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+  "presets": [
+    {
+      "name": "TT slider swiper block"
+    }
+  ]
+}
+{% endschema %}

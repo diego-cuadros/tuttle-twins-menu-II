@@ -1,0 +1,51 @@
+{% capture contentForQuerystring %}
+<script>variantRestrictionLockIds = []</script>  {{ content_for_header }}
+{% endcapture %}
+{% assign pageUrlWithHost = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+%}
+
+{% assign queryParam = pageUrlWithHost | split: "?" | slice:1 %}
+{% assign bypassLocks = false %}
+{% unless queryParam == blank %}
+  {% if queryParam contains 'bypassLocks=true' %}
+    {% assign bypassLocks = true %}
+  {% endif %}
+{% endunless %}
+
+{% assign exemptPages = false %}
+{% if request.design_mode == true or template == 'customers/login' or template == 'customers/account' or template == 'customers/activate_account' or template == 'customers/reset_password' %}
+{% assign exemptPages = true %}
+{% endif %}
+{% assign timeMillis = 'now' | date:'%s' | times: 1 %}{% assign weekDay = timeMillis | date:'%u' %}{% assign monthDay = timeMillis | date:'%d' %}{% assign time = timeMillis | date:'%H%M' | times: 1 %}
+{% if customer %}{% assign lastOrderPlaced = customer.orders.first.created_at | date:'%s' %}{% assign lastOrderPlacedTimeDiff = timeMillis | minus: lastOrderPlaced %}{% endif %}
+<!-- miniOrange Unpriority Locks START -->
+
+
+<!-- miniOrange LOCK START _7400 -->
+{% unless exemptPages or bypassLocks or template == 'customers/register' %}
+{% assign lock = false %}
+{% if template contains "page" and page %}{% if  page.id == 106071949450  %}{% assign lock = true %}{% endif %}{% endif %}
+
+{% if lock %}
+{% capture content_for_layout %}
+{{ _7400 }}
+{% endcapture %}
+{% endif %}
+{% endunless %}
+<!-- miniOrange LOCK END _7400 -->
+<!-- miniOrange Unpriority Locks END -->
+
+<!-- miniOrange Priority-Whole-Website Locks START -->
+<!-- miniOrange Priority-Whole-Website Locks END -->
+
+<!-- miniOrange Priority Locks START -->
+<!-- miniOrange Priority Locks END -->
+
+<!-- miniOrange hide-prices Locks START -->
+<!-- miniOrange hide-prices Locks END -->
+
+<!-- miniOrange purchase-form Locks START -->
+<!-- miniOrange purchase-form Locks END -->

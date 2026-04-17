@@ -1,0 +1,255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "<p>Easter</p>",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_7bkXEh": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "section_header_3rzBje": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "section_heading": "<p>Talk about your brand</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "Add a tagline",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_mNWRe6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>EASTER BUNDLE</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h1"
+          }
+        },
+        "caption_enQVWB": {
+          "type": "caption",
+          "settings": {
+            "caption": "All 14 Kids Books + Both America's History Books + Digital Extras",
+            "text_style": "large-bold",
+            "color_class": ""
+          }
+        },
+        "text_CMc7Dp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't miss out on this incredible deal! Yours for only $198!</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_afFK38": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "",
+            "button_link": "",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "easter-bundle",
+            "product_button_label": "GET THE DEAL",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_3rzBje",
+        "heading_mNWRe6",
+        "caption_enQVWB",
+        "text_CMc7Dp",
+        "button_afFK38"
+      ],
+      "custom_css": [
+        "h1 {font-size: 4.5em;}"
+      ],
+      "name": "TT Box Image Block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Easter_Bundles.png",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-2",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "easter",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "inner_padding_top": 0,
+        "inner_padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": "[TT_CSS] .easter {\n\n}"
+      }
+    },
+    "sskymo_product_column_f_6mWcQL": {
+      "type": "sskymo-product-column-f",
+      "name": "TTm Americas discover a",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_wGAa6G": {
+      "type": "sskymo-product-column-c",
+      "name": "TTm Principles of freedom",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_bwXB9N": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_JeC8CT": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "easter-toddler__trashed",
+            "heading": "<p>Easter Bundle</p>",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>All 14 Kids Books + 2-Volume History Books + All Digitals</p>",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "max_width": 64,
+            "button_label": "Buy now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": true,
+            "show_price_bottom": true,
+            "text_below_buttons": ""
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_JeC8CT"
+      ],
+      "name": "TT Product order-block",
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_c_zjiTLY": {
+      "type": "sskymo-text-image-block-c",
+      "name": "TTm Build brighter future",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_F4HjVT": {
+      "type": "sskymo-text-image-block-b",
+      "name": "TTm Footer guarantee",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_box_image_block_7bkXEh",
+    "sskymo_product_column_f_6mWcQL",
+    "sskymo_product_column_c_wGAa6G",
+    "ssky_product_order_block_bwXB9N",
+    "sskymo_text_image_block_c_zjiTLY",
+    "sskymo_text_image_block_b_F4HjVT"
+  ]
+}

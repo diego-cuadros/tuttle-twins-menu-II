@@ -1,0 +1,281 @@
+{%- style -%}
+  .tt-milestone-{{ block.id }} {
+    text-align: {{ block.settings.alignment }};
+    width: 100%;
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__icon,
+  .tt-milestone-{{ block.id }} .tt-milestone__heading,
+  .tt-milestone-{{ block.id }} .tt-milestone__text,
+  .tt-milestone-{{ block.id }} .tt-milestone__stars {
+    width: 100%;
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__icon img {
+    max-width: {{ block.settings.icon_size }}px;
+    height: auto;
+    display: inline-block;
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__heading {
+    font-size: {{ block.settings.heading_size_mobile }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    line-height: 1.2;
+    {%- if block.settings.heading_color != blank -%}
+      color: {{ block.settings.heading_color }};
+    {%- endif -%}
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__heading,
+  .tt-milestone-{{ block.id }} .tt-milestone__text,
+  .tt-milestone-{{ block.id }} .tt-milestone__stars,
+  .tt-milestone-{{ block.id }} .tt-milestone__icon {
+    margin-top: {{ block.settings.item_spacing }}px;
+  }
+
+  .tt-milestone-{{ block.id }} > *:first-child {
+    margin-top: 0;
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__text {
+    font-size: {{ block.settings.text_size_mobile }}px;
+    {%- if block.settings.text_color != blank -%}
+      color: {{ block.settings.text_color }};
+    {%- endif -%}
+  }
+
+  .tt-milestone-{{ block.id }} .tt-milestone__text p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .tt-milestone-{{ block.id }} {
+      text-align: center;
+    }
+
+    .tt-milestone-{{ block.id }} .tt-milestone__icon,
+    .tt-milestone-{{ block.id }} .tt-milestone__heading,
+    .tt-milestone-{{ block.id }} .tt-milestone__text,
+    .tt-milestone-{{ block.id }} .tt-milestone__stars {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tt-milestone-{{ block.id }} .tt-milestone__stars svg {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .tt-milestone-{{ block.id }} .tt-milestone__heading {
+      font-size: {{ block.settings.heading_size_desktop }}px;
+    }
+
+    .tt-milestone-{{ block.id }} .tt-milestone__text {
+      font-size: {{ block.settings.text_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign visibility_classes = ''
+  if block.settings.hide_on_mobile
+    assign visibility_classes = visibility_classes | append: ' hide-mobile'
+  endif
+  if block.settings.hide_on_tablet
+    assign visibility_classes = visibility_classes | append: ' hide-tablet'
+  endif
+  if block.settings.hide_on_desktop
+    assign visibility_classes = visibility_classes | append: ' hide-desktop'
+  endif
+-%}
+
+<div class="tt-milestone tt-milestone-{{ block.id }}{{ visibility_classes }}" {{ block.shopify_attributes }}>
+  {%- if block.settings.icon != blank -%}
+    <div class="tt-milestone__icon">
+      {{ block.settings.icon | image_url: width: 300 | image_tag }}
+    </div>
+  {%- endif -%}
+  {%- if block.settings.heading != blank -%}
+    <div class="tt-milestone__heading">{{ block.settings.heading }}</div>
+  {%- endif -%}
+  {%- if block.settings.text != blank -%}
+    <div class="tt-milestone__text rte">{{ block.settings.text }}</div>
+  {%- endif -%}
+  {%- if block.settings.show_stars -%}
+    <div class="tt-milestone__stars" style="color: {{ block.settings.stars_color | default: '#FFB800' }};">
+      <svg width="100" height="20" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 0L12.245 6.91H19.511L13.633 11.18L15.878 18.09L10 13.82L4.122 18.09L6.367 11.18L0.489 6.91H7.755L10 0Z"/>
+        <path d="M30 0L32.245 6.91H39.511L33.633 11.18L35.878 18.09L30 13.82L24.122 18.09L26.367 11.18L20.489 6.91H27.755L30 0Z"/>
+        <path d="M50 0L52.245 6.91H59.511L53.633 11.18L55.878 18.09L50 13.82L44.122 18.09L46.367 11.18L40.489 6.91H47.755L50 0Z"/>
+        <path d="M70 0L72.245 6.91H79.511L73.633 11.18L75.878 18.09L70 13.82L64.122 18.09L66.367 11.18L60.489 6.91H67.755L70 0Z"/>
+        <path d="M90 0L92.245 6.91H99.511L93.633 11.18L95.878 18.09L90 13.82L84.122 18.09L86.367 11.18L80.489 6.91H87.755L90 0Z"/>
+      </svg>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Milestone",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_tablet",
+      "label": "Hide on tablet",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_desktop",
+      "label": "Hide on desktop",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 24,
+      "max": 240,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon max width",
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "100+"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "Orders every day"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Show stars",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "stars_color",
+      "label": "Stars color",
+      "default": "#FFB800"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Alignment"
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Spacing between items",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Heading style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 16,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading size (desktop)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading size (mobile)",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700",
+      "label": "Heading weight"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size (desktop)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size (mobile)",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    }
+  ],
+  "presets": [
+    { "name": "Milestone" }
+  ]
+}
+{% endschema %}

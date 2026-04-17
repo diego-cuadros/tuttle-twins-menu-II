@@ -1,0 +1,333 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_VqJgdc": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_UBgjkw": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Dive into exciting worlds with our collection of fiction books for kids. Our stories spark imagination, highlight morals, promote creative thinking, and offer life lessons that your child will carry with them for years to come.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_UBgjkw"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 48,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_EfhEpd": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_7iGfFY": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "z_featured_collection_VxnBte": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "sskymo_text_image_block_c_RXd4Yk": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_z8d3rq": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_c_PQEykk": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_Fpc86G": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": true,
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_V3HPhx": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_XbTJYd": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_QD4hbf": {
+          "type": "caption",
+          "settings": {
+            "caption": "Spark Creativity and Adventure with Fiction Books for Kids",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_A4Df7i": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our fiction books for kids are designed to entertain while helping your children explore new ideas, develop empathy, learn new language, and grow their imaginations. Each story invites your kids into a world of adventure, where anything is possible. These include tackling topics about freedom, economics, <a href=\"https://tuttletwins.com/products/americas-history-volume-1-2-bundle\"><span style=\"text-decoration:underline\">American history</span></a>, and personal responsibility in a fun and engaging way.</p><h2>Benefits of Fiction Books for Kids</h2><p>Fiction books for kids are powerful tools for growth. They entertain and teach important life skills and values at the same time. Here are a few ways these books benefit your child:</p><h3>Encourages Imagination and Creativity</h3><p>Fiction books for kids are gateways to endless possibilities. They transport your kids to magical worlds, futuristic cities, and even historical times, all through the power of storytelling. As children read about the characters embarking on grand adventures, they develop their imagination and creativity, learning that anything is possible if they dare to dream.</p><p>Our books challenge your children to think outside the box and consider alternative realities. They also spark endless creativity and encourage kids to write their own stories where they can imagine a world full of talking animals or time travel adventures.</p><h3>Builds Empathy Through Diverse Characters</h3><p>One of the greatest benefits of fiction books for kids is their ability to help your child develop empathy. Through stories, your kids are introduced to characters with different backgrounds, experiences, lifestyles, and emotions. This helps them understand the feelings and perspectives of others, even if they’re from different walks of life.</p><p>The situations presented in our books teach children valuable life lessons, from overcoming adversity to simply learning to be kind to others. Your kids learn to navigate their own emotions and develop compassion for others by connecting with the characters.</p><h3>Teaches Important Life Lessons</h3><p>Fiction stories are often filled with important lessons that children can carry with them throughout their lives. From learning the value of hard work to understanding the consequences of making poor decisions, our fiction books present valuable lessons in a way that’s fun and memorable.</p><p>The challenges characters face in our stories provide excellent opportunities for you and your kids to discuss important topics like friendship, responsibility, honesty, and perseverance. These conversations help children process what they’re reading and apply it to their own lives.</p><h3>Strengthens Reading and Language Skills</h3><p>Our fiction books are designed with age-appropriate language that helps children improve their reading and language skills. As your kids read our stories, they encounter new vocabulary, sentence structures, character development, and grammatical concepts within the context of a fun and engaging narrative.</p><p>Regular reading also helps improve comprehension, attention span, language fluency, and memory. The more your children read, the better they become at understanding context and following plot developments. This strengthens their reading skills and encourages their confidence as readers.</p><h3>Engages Both Reluctant and Avid Readers</h3><p>Our fiction collection is perfect for all types of readers, from less confident beginners to keen bookworms. We offer a variety of stories that capture the interest of reluctant readers while still providing a challenge for more advanced ones.</p><p>The engaging plots, relatable characters, vivid illustrations, and exciting twists keep children interested and motivated to continue reading. The more they enjoy reading, the more likely they are to develop a lifelong love for books, and that’s something every parent wants.</p><h4>Frequently Asked Questions</h4><h5>What Age Group Are These Fiction Books Suitable For?</h5><p>Our fiction books are ideal for children ages 5–12. With clear, easy-to-follow language and captivating stories, they’re perfect for early readers and kids who are ready to dive into more complex narratives.</p><h5>Are the Stories in These Books Suitable for School Projects?</h5><p>Yes! Many of our fiction books align with school curricula and are perfect for school reading projects. They help students develop a love for literature while providing material for discussions and essays.</p><h5>Can These Books Help My Child Develop Reading Habits?</h5><p>Absolutely! Our fiction books are designed to be engaging and entertaining, which helps children develop a love for reading. The more fun your child has with these stories, the more they’ll develop a regular reading habit.</p><h5>Are These Books Appropriate for Family Reading?</h5><p>Yes, many of our fiction books are perfect for reading together as a family. The engaging plots and relatable characters provide great opportunities for shared reading experiences and conversations, strengthening the bond between you and your children.</p><h5>Do You Have Any Book Bundles?</h5><p>Yes, we have several book <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">bundles</span></a> that let you choose multiple books at a reduced price. Our bundles are great for introducing your child to our series, all while saving money.</p><h2>Looking for Something Else?</h2><p>We also have resources and books for children, no matter what stage they’re at. You can explore our exciting <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a>, colorful <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a>, or our engaging <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">book bundles</span></a> to keep your children entertained for hours.<br/><br/></p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_QD4hbf",
+        "text_A4Df7i"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ssky_text_block_VqJgdc",
+    "product-grid",
+    "z_featured_collection_EfhEpd",
+    "z_featured_collection_7iGfFY",
+    "z_featured_collection_VxnBte",
+    "sskymo_text_image_block_c_RXd4Yk",
+    "sskymo_three_block_z8d3rq",
+    "sskymo_product_column_c_PQEykk",
+    "sskymo_text_image_block_Fpc86G",
+    "sskymo_text_image_block_b_V3HPhx",
+    "ssky_text_block_XbTJYd"
+  ]
+}

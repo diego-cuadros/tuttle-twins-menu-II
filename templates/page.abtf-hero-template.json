@@ -1,0 +1,879 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "replo_hero_section_abtf_optim_bJ9Kmw": {
+      "type": "replo-hero-section-abtf-optim",
+      "disabled": true,
+      "name": "Hero Section - ABTF Optim",
+      "settings": {}
+    },
+    "ssky_image_banner_two_Gimgcn": {
+      "type": "ssky-image-banner-two",
+      "blocks": {
+        "heading_tDXedx": {
+          "type": "heading",
+          "settings": {
+            "heading": "This Independence Day, Don't Just Celebrate Freedom<strong>—</strong>Teach It.",
+            "heading_size": "h1"
+          }
+        },
+        "caption_LjKa7j": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": ""
+          }
+        },
+        "buttons_VpWcxr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop 70% Off America's History",
+            "button_link_1": "shopify://pages/history",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tDXedx",
+        "caption_LjKa7j",
+        "buttons_VpWcxr"
+      ],
+      "disabled": true,
+      "name": "TT Image banner two",
+      "settings": {
+        "full_width_container": true,
+        "background_image": "shopify://shop_images/Untitled_design_8.png",
+        "background_size": "cover",
+        "background_position": "center center",
+        "background_color": "",
+        "overlay_color": "#3f3939",
+        "overlay_opacity": 30,
+        "heading_color": "#ffffff",
+        "caption_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_background": "#da5846",
+        "hide_main_image": false,
+        "image": "shopify://shop_images/Untitled_design_8.png",
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "rgba(0,0,0,0)"
+      }
+    },
+    "z_featured_collection_QJtwMD": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "name": "America's History Collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Shop America's History",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "independence-day-sale",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 48,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_logo_list_NLxDDr": {
+      "type": "sskymo-logo-list",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_GAYHgK": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_AzyM6a": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_MPxpBw": {
+          "type": "caption",
+          "settings": {
+            "caption": "INTRODUCING THE TUTTLE TWINS",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_ktUcLL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Finally, a New Kind of Education <br/>That's Taking Our Nation by Storm</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_KyzBJw": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>An innovative series of colorful, engaging books that use storytelling to share important economic, civic, and real history principles with your child. <br/><br/>Plus workbooks, audiobooks, and parent guides to empower parents and enhance learning.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_MPxpBw",
+        "heading_ktUcLL",
+        "text_KyzBJw"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 85,
+        "color_scheme": "scheme-1",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_image_glide_slider_qXerPB": {
+      "type": "ssky-image-glide-slider",
+      "blocks": {
+        "ai_gen_block_ab99dc3_pN7Yxk": {
+          "type": "ai_gen_block_ab99dc3",
+          "settings": {
+            "collection": "childrens-series",
+            "product_limit": 15,
+            "visible_items": 4,
+            "visible_items_mobile": "1",
+            "gap": 10,
+            "padding": 10,
+            "border_radius": 8,
+            "show_title": false,
+            "show_price": false,
+            "title_size": 16,
+            "title_color": "#333333",
+            "price_size": 14,
+            "price_color": "#666666",
+            "hover_lift": 10,
+            "hover_scale": 2,
+            "shadow_size": 10,
+            "shadow_opacity": 15,
+            "rotation_speed": 2,
+            "pause_on_hover": true,
+            "show_dots": true,
+            "dot_color": "#333333"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ab99dc3_pN7Yxk"
+      ],
+      "disabled": true,
+      "name": "Children's Series Rotating Slider",
+      "settings": {
+        "color_scheme": "",
+        "fullwidth": false,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "z_featured_collection_bxmhEF": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": true,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "childrens-series-singles",
+        "products_to_show": 14,
+        "columns_desktop": 7,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ssky_image_banner_QYgyyj": {
+      "type": "ssky-image-banner",
+      "blocks": {
+        "caption_CGUzcn": {
+          "type": "caption",
+          "settings": {
+            "caption": "ATTACKED BY",
+            "text_style": "small-bold",
+            "color_class": ""
+          }
+        },
+        "icon_xMFUgR": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/cnn_logo.webp"
+          }
+        },
+        "text_CmyE6x": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>CNN calls these kids books “Conservative Indoctrination” and part of a “right-wing children’s entertainment complex.” </strong><br/>Parents who cherish freedom are pushing back by teaching their kids the truth. </p>",
+            "text_large": true
+          }
+        }
+      },
+      "block_order": [
+        "caption_CGUzcn",
+        "icon_xMFUgR",
+        "text_CmyE6x"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width_container": false,
+        "two_cols_container": false,
+        "image": "shopify://shop_images/red_background.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_bottom_shape": false,
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "z_video_6NqKUB": {
+      "type": "z-video",
+      "settings": {
+        "heading": "So Glad I Bought These Books",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=9Bmp_29ghqw",
+        "cover_image": "shopify://shop_images/Yt_thumbnail_I_am_glad_that_I_buy.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "ssky_testimonials_dy8fUA": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_HcqJrd": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about</strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Marcos D., Illinois",
+            "author_state": "",
+            "author_image": "shopify://shop_images/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_HcqJrd"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_column_KpPqYh": {
+      "type": "sskymo-text-column",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_testimonials_kBQhVz": {
+      "type": "sskymo-testimonials",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "card_background_color": "#ffffff",
+        "author_text_color": "#333333",
+        "review_text_color": "#444444",
+        "star_color": "gold",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "ssky_text_image_block_nGxXAx": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_Y4MpkB": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Empower Your Children</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "Engage in meaningful family discussions",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "",
+            "caption": "",
+            "text_style": "medium-semibold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_jymUUm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>You might be wondering:</p>",
+            "heading_size": "h4",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "checkbox_zK3pr8": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do you <strong>communicate big ideas</strong> to little kids without seriously confusing them?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_dwpkwW": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How do you teach an eight-year-old about the <strong>free market</strong> in a way that will be relevant to them… and so they aren’t turned off to economic truths for good?</p>",
+            "text_large": true
+          }
+        },
+        "checkbox_eEwbyb": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p>How can a six-year-old understand <strong>property rights</strong> and not feel pressured to be more than just a kid?</p>",
+            "text_large": true
+          }
+        },
+        "text_UHr8Lz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This series of children’s books teaches your kids what the schools no longer do, <strong>simplifying complex ideas</strong> so they can understand. Tried and tested by millions of readers, this <strong>storytelling approach</strong> works perfectly when it comes to educating your family about real-world concepts.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "button_iXqWnJ": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": true,
+            "button_label": "Shop Children's Books",
+            "button_link": "shopify://collections/childrens-series",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_Y4MpkB",
+        "heading_jymUUm",
+        "checkbox_zK3pr8",
+        "checkbox_dwpkwW",
+        "checkbox_eEwbyb",
+        "text_UHr8Lz",
+        "button_iXqWnJ"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Child-Content.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_three_block_VTKXX4": {
+      "type": "ssky-three-block",
+      "blocks": {
+        "block_one_bCjY4B": {
+          "type": "block_one",
+          "settings": {
+            "color_scheme": "",
+            "heading": "KIDS",
+            "text": "<p>Teach relevant <strong>freedom-based</strong> concepts that most of us were<br/>never taught as kids. These <strong>stimulating stories</strong> encourage<br/>children ages 5-11 to make sense<br/>of the world.</p>",
+            "image": "shopify://shop_images/girl-atlas.webp",
+            "button_label": "Kid's Books",
+            "button_link": "shopify://pages/childrens-resources",
+            "button_style_secondary": false
+          }
+        },
+        "block_two_4xWe9r": {
+          "type": "block_two",
+          "settings": {
+            "color_scheme": "",
+            "heading": "TODDLERS",
+            "text": "<p>Introduce big ideas to your (very!) little ones through these children's board books. Join the Tuttle Toddlers on their learning journey as they practice the ABCs and 123s of some important topics!</p>",
+            "image": "shopify://shop_images/abc-toddler.webp",
+            "button_label": "Toddler Books",
+            "button_link": "shopify://collections/toddler-books",
+            "button_style_secondary": false
+          }
+        },
+        "block_three_ePAM4H": {
+          "type": "block_three",
+          "settings": {
+            "color_scheme": "",
+            "heading": "TEENS",
+            "text": "<p>Choose from both fiction stories (like the “Choose Your Own Adventure” books we grew up on) and nonfiction guidebooks, teaching things like <strong>entrepreneurship, critical thinking, and courage.</strong></p>",
+            "image": "shopify://shop_images/logical-cropped-1a.webp",
+            "button_label": "Teen Guidebooks",
+            "button_link": "shopify://collections/guidebooks",
+            "button_label_b": "Teen Fiction",
+            "button_link_b": "shopify://collections/choose-your-consequence",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "block_one_bCjY4B",
+        "block_two_4xWe9r",
+        "block_three_ePAM4H"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_hcrAJa": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_geGL6T": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Parent with Confidence</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_8XFT9d": {
+          "type": "caption",
+          "settings": {
+            "caption": "Share Big Ideas and Powerful Truths in a Way Your Child Will Understand",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_gf87aN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Struggling to explain current events and complex world topics to your kids?<br/><br/>Experiencing some gaps in your own political and economic knowledge, and don’t have the time to catch up?<br/><br/>All you want is to ensure your values are passed on to your children to give them a foundation of truth to survive in today’s crazy world.<br/><br/><strong>The Tuttle Twins are here to help you.</strong></p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_geGL6T",
+        "caption_8XFT9d",
+        "text_gf87aN"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Girl-with-Book.webp",
+        "rounded": false,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": true,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 36,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 20,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_j7KfF9": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_BKt8rE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Establish Core Truths</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_Lqb6XU": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sharing these ideas is important while kids are young",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_8tGLBp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Many parents think that waiting until children are older is the best approach when it comes to \"tricky\" topics. But in today's world, kids are exposed to similar ideas at a young age through social media, video, and even teachers.<br/><br/>Helping kids explore ideas and think critically while they are young is crucial. Tuttle Twins makes it easy.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BKt8rE",
+        "caption_Lqb6XU",
+        "text_8tGLBp"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Fred-Core-Truths.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_EPaCBj": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_zbCebB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bond as a Family</p>",
+            "heading_size": "h2",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "caption_t6ngyr": {
+          "type": "caption",
+          "settings": {
+            "caption": "And Strengthen Your Core Values",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        },
+        "text_iWUXJn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It can be a struggle at times—getting the family in the same room and having a discussion together. It can be hard feeling like the institutions in our  society are trying to undermine your efforts by broadcasting messages to your children that you disagree with.<br/><br/>You can facilitate family discussions about powerful ideas and current events and shield your children from harmful ideas they will be exposed to. Through engaging story adventures and activity pages we will provide, you will empower your kids to learn about your values—and what it means for their young lives in today’s world.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zbCebB",
+        "caption_t6ngyr",
+        "text_iWUXJn"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/Fire-BondFam.webp",
+        "rounded": true,
+        "image_fit": true,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    },
+    "sskymo_testimonials_b_xtdbRk": {
+      "type": "sskymo-testimonials-b",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_iz3hBq": {
+      "type": "sskymo-text-image-block",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "replo_homepage_categories_both_Y4JyWg": {
+      "type": "replo-homepage-categories-both",
+      "name": "Homepage Categories BOTH",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "replo_homepage_categories_both_Y4JyWg",
+    "replo_hero_section_abtf_optim_bJ9Kmw",
+    "ssky_image_banner_two_Gimgcn",
+    "z_featured_collection_QJtwMD",
+    "sskymo_logo_list_NLxDDr",
+    "sskymo_three_block_GAYHgK",
+    "ssky_text_block_AzyM6a",
+    "ssky_image_glide_slider_qXerPB",
+    "z_featured_collection_bxmhEF",
+    "ssky_image_banner_QYgyyj",
+    "z_video_6NqKUB",
+    "ssky_testimonials_dy8fUA",
+    "sskymo_text_column_KpPqYh",
+    "sskymo_testimonials_kBQhVz",
+    "ssky_text_image_block_nGxXAx",
+    "ssky_three_block_VTKXX4",
+    "ssky_text_image_block_hcrAJa",
+    "ssky_text_image_block_j7KfF9",
+    "ssky_text_image_block_EPaCBj",
+    "sskymo_testimonials_b_xtdbRk",
+    "sskymo_text_image_block_iz3hBq"
+  ]
+}

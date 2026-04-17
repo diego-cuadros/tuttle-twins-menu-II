@@ -1,0 +1,264 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "",
+        "heading_size": "h0",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_DmXndm": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_KjaRTM": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Already an affiliate? <a href=\"https://affiliate.tuttletwins.com/login\" title=\"https://affiliate.tuttletwins.com/login\">Login here</a>.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_KjaRTM"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_image_block_9HA6Hr": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "section_header_ewzcQj": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Join Our Affiliate Program and <br/>Promote the Tuttle Twins</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_btEhhP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team has sold millions of books, mostly via online advertising. We help our affiliate partners succeed using the same proven graphics, text, and landing pages that get people buying books.<br/><br/>Who is an ideal affiliate? Anyone with an audience or following on social media, a website, or email list. If your audience is interested in topics related to personal liberty, educating younger people, or parenting it’s probably an ideal fit.<br/><br/>New signups get 15% commission on <strong>everything</strong> people buy on our website. Once you get 10 paid referrals, you’ll be bumped up to <strong>20%</strong>!<br/><br/>At 100 paid referrals you’ll increase to <strong>25%</strong>, and if you’re really dedicated and bring in 1,000 paid referrals, you unlock <strong>30%</strong> commission on all sales!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_ewzcQj",
+        "text_btEhhP"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/shield-your-kids-1024x1024-1.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-right",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_mGd6qX": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "testimonial_HcqJrd": {
+          "type": "testimonial",
+          "settings": {
+            "max_width": 52,
+            "testimonial_highlight": "<p>“I think my <strong>kids now understand more about</strong> how the free market works than most of Congress… these books need to be read by everyone, ASAP!“</p>",
+            "testimonial": "<p>““</p>",
+            "author": "Marcos D., Illinois",
+            "author_state": "",
+            "author_image": "shopify://shop_images/author_image_marcos.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_HcqJrd"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_contact_form_N8nY7W": {
+      "type": "ssky-contact-form",
+      "blocks": {
+        "heading_XyfPrM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Please Fill In the Form Below to Register</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "contact_form_cDQtQL": {
+          "type": "contact_form",
+          "settings": {
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_XyfPrM",
+        "contact_form_cDQtQL"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_testimonials_kKKRJY": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "heading_mtxhtz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What Our Customers Say</p>",
+            "heading_size": "h1"
+          }
+        },
+        "testimonial_column_3k77Jj": {
+          "type": "testimonial_column",
+          "settings": {
+            "author": "Carl A.",
+            "state": "",
+            "richtext": "<p><br/>“I think my kids read the first copy of the magazine five times in a row and now quiz me to see if they’re smarter than me. They’re getting there!“</p>"
+          }
+        },
+        "testimonial_column_N3FWix": {
+          "type": "testimonial_column",
+          "settings": {
+            "author": "Bearnecessities",
+            "state": "",
+            "richtext": "<p><br/>“My kids have loved the Tuttle Twins books, and I love adding the magazine content as a monthly benefit to keep them engaged! So exciting!“</p>"
+          }
+        },
+        "testimonial_column_UaWcxE": {
+          "type": "testimonial_column",
+          "settings": {
+            "author": "Rebecca J.",
+            "state": "",
+            "richtext": "<p><br/>“Brilliant idea! I had flashbacks of my magazines as a kid and how much I loved them. My kids are going to LOVE the Tuttle Times, thank you!“</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mtxhtz",
+        "testimonial_column_3k77Jj",
+        "testimonial_column_N3FWix",
+        "testimonial_column_UaWcxE"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "max_width": 80,
+        "review_stars": "shopify://shop_images/5-Stars-1.webp",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#bcecf6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_text_block_DmXndm",
+    "ssky_text_image_block_9HA6Hr",
+    "ssky_testimonials_mGd6qX",
+    "ssky_contact_form_N8nY7W",
+    "ssky_testimonials_kKKRJY"
+  ]
+}

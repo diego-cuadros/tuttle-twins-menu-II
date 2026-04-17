@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "canada"
+  },
+  "sections": {
+    "z_announcement_bar_LKK6Jf": {
+      "settings": {},
+      "blocks": {
+        "announcement-bar-0": {
+          "disabled": true,
+          "settings": {
+            "text": "Free Shipping on Domestic Orders $175+"
+          }
+        },
+        "announcement_78BeLz": {
+          "settings": {
+            "text": "Free Tuttle Rebuttals eBook on Orders C$210+"
+          }
+        }
+      }
+    },
+    "header": {
+      "settings": {
+        "menu": "main-menu-can",
+        "enable_country_selector": false
+      },
+      "blocks": {}
+    }
+  }
+}

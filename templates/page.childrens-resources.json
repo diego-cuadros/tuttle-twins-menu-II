@@ -1,0 +1,1192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "heading": "<p>Learning Resources</p>",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_collection_menu_wiabre": {
+      "type": "ssky-collection-menu",
+      "blocks": {
+        "collection_FbpeaG": {
+          "type": "collection",
+          "settings": {
+            "collection": "#childrens-series-books",
+            "title": "Children's Series Books"
+          }
+        },
+        "collection_6Y4YmU": {
+          "type": "collection",
+          "settings": {
+            "collection": "#americas-history-bundles",
+            "title": "America's History Bundles"
+          }
+        },
+        "collection_6AU4kd": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "collection_6DweCc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "collection_nMJApM": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_FbpeaG",
+        "collection_6Y4YmU",
+        "collection_6AU4kd",
+        "collection_6DweCc",
+        "collection_nMJApM"
+      ],
+      "disabled": true,
+      "name": "TT Collection menu",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "z_featured_collection_74jWQE": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": true,
+        "title": "",
+        "heading_size": "h2",
+        "description": "<p>Our fun and high-quality learning resources are designed to spark curiosity and help kids feel confident. These books and activities teach critical thinking, real-world economics, and important values. Perfect for homeschool families and anyone who loves to learn.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "childrens-series-books",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "childrens-series-books",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_GiL87f": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "americas-history-bundles",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "americas-history-bundles",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_XycXye": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "magazine",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_Hc8eKC": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Economics Curriculum",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "economics-for-kids",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_dWd7Ri": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "Tuttle Twins Cartoon Graphic Novels",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "cartoon",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_NYAfja": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "workbooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_bbdE4A": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "audiobooks",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "z_featured_collection_UmGbWN": {
+      "type": "z-featured-collection",
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "parent-guides",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "sskymo_text_image_block_c_pBaRMR": {
+      "type": "sskymo-text-image-block-c",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_column_DT8be6": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_column_97ey6r": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>14 Inspiring and Beautifully <br/>Illustrated Children’s Books</p>",
+            "text": "<p>Educational stories that are entertaining and easy to understand</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_ccF66k": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Engaging Storytelling About <br/>the Most Important Ideas of Our Time</p>",
+            "text": "<p>Our books introduce the ideas of liberty to a new generation</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_xee9Tk": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Activities and Conversation <br/>Starters With Every Book</p>",
+            "text": "<p>Encourage your kids to learn — and apply!— these new ideas</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_Lfej6X": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Based on Famous Books by <br/>Thought Leading Authors</p>",
+            "text": "<p>Restore freedom of education and the values that make our society great</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_NwrePG": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Easy to Understand Language <br/>for Kids About Big Ideas</p>",
+            "text": "<p>Written for children age 5-11 to make the ideas of liberty easy to digest</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_nUf8YJ": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "heading": "<p>Level up Your Own Education <br/>as You Share With Your Kids</p>",
+            "text": "<p>Increase your own confidence by easily learning alongside your children</p>",
+            "text_large": true,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_column_97ey6r",
+        "text_column_ccF66k",
+        "text_column_xee9Tk",
+        "text_column_Lfej6X",
+        "text_column_NwrePG",
+        "text_column_nUf8YJ"
+      ],
+      "settings": {
+        "heading": "<p>Principled. Independent. Intelligent.</p>",
+        "heading_size": "h1",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": true,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_order_block_4Cx3Mk": {
+      "type": "ssky-product-order-block",
+      "blocks": {
+        "order_block_one_mEzNVK": {
+          "type": "order_block_one",
+          "settings": {
+            "product": "tuttle-twins-combo-pack-plus-free-bonuses",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_weight": "semibold",
+            "text": "<p>If you are looking for a structured and well designed education supplement for your family to learn the principles of freedom and true history, you are in the right place.</p>",
+            "text_size": "large",
+            "text_weight": "medium",
+            "max_width": 59,
+            "button_label": "Books For Brilliant Young Minds",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": true,
+            "button_full": false,
+            "show_price": false,
+            "show_price_bottom": false,
+            "text_below_buttons": "<p>Includes All 14 Workbook PDFs Free</p>"
+          }
+        }
+      },
+      "block_order": [
+        "order_block_one_mEzNVK"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 120,
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "rounded": 45,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_three_block_MbHwmN": {
+      "type": "sskymo-three-block",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 40,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_8H6XVj": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_kYqRnd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>You Want to Raise Free-Thinking, Freedom-Loving Individuals </p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_nxbMcM": {
+          "type": "text",
+          "settings": {
+            "max_width": 72,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>But it’s hard to navigate the minefield of media and entertainment manipulation, right?</p>",
+            "text_size": "extra-large",
+            "text_weight": "medium"
+          }
+        },
+        "text_88kqHC": {
+          "type": "text",
+          "settings": {
+            "max_width": 120,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>You have probably tried in the past to educate your kids on what’s happening in our world and struggled:<br/><br/></p>",
+            "text_size": "medium",
+            "text_weight": "medium"
+          }
+        },
+        "text_with_icon_4KejYf": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>A trip to the <strong>Local Library </strong>in search of good literature results in frustration that many books are pushing harmful agendas that are appealing to kids. You wonder what good material you can introduce to your children that they’ll actually enjoy.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>You have broached big subjects in <strong>Family Discussions </strong>after dinner that end up in silence from apathetic kids or end awkwardly when your kids ask questions you can’t answer.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_cH8aQj": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "medium",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-sad.webp",
+            "text": "<p>After finding <strong>YouTube Videos</strong> from creators that seemed good at the time for your kids, you discovered that they ultimately had some agenda and were using their platform to promote ideas you strongly disagree with.</p>",
+            "custom_color": "",
+            "icon_b": "shopify://shop_images/icon-sad.webp",
+            "text_b": "<p>Perhaps you use <strong>Current Events</strong> to try and educate your child about what is happening but there is no context and it’s too complex to explain. Often, you wonder if what you’re doing is enough to “stick” and prepare your children for the world they’re growing up in.</p>",
+            "custom_color_b": ""
+          }
+        },
+        "divider_pF39QX": {
+          "type": "divider",
+          "settings": {
+            "margin": 24,
+            "contrast": true
+          }
+        },
+        "text_cGkQPz": {
+          "type": "text",
+          "settings": {
+            "max_width": 92,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Your kids are sometimes left with more questions than answers, and you can’t bear the thought of them getting lost at sea in all the manipulation and power games playing out in the world. <br/><br/>What if the solution to this emerging education problem was simpler than you thought?</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYqRnd",
+        "text_nxbMcM",
+        "text_88kqHC",
+        "text_with_icon_4KejYf",
+        "text_with_icon_cH8aQj",
+        "divider_pF39QX",
+        "text_cGkQPz"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "scheme-4",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_CVeNKG": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_AzqJdj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Be empowered as a parent to give your children a foundation of freedom—to understand the ideas of a free society that socialists and progressives are trying hard to undermine.",
+            "custom_color": "",
+            "text_style": "medium-semibold",
+            "color_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzqJdj"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 84,
+        "color_scheme": "scheme-4",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-1",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_bgrKay": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_TUY4Er": {
+          "type": "caption",
+          "settings": {
+            "caption": "A NEW KIND OF EDUCATION",
+            "custom_color": "",
+            "text_style": "small-bold",
+            "color_class": "primary-orange"
+          }
+        },
+        "caption_qUf3KB": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Tuttle Twins:",
+            "custom_color": "",
+            "text_style": "extra-extra-large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "heading_Rnz3Up": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Thought Provoking Book <br/>Series Read By Millions of Children</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_n74MMW": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>A unique series of beautiful, enjoyable books that use storytelling to introduce important economic, civic, and history principles to your child.</p>",
+            "text_size": "extra-large",
+            "text_weight": "semibold"
+          }
+        },
+        "heading_mxmNpw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Mentor Your Children to Become Critical Thinkers<br/><br/></p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h3",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_with_icon_R7dDph": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Feel Confident as a Parent Teaching Your Children About True History </strong><br/>Storytelling and illustrations unpack big concepts for easy understanding</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_WiUL4B": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Fix Your Own Political and Economic Education Gaps </strong><br/>Learn big ideas together as a family in a simple yet engaging way</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_TNrT6w": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Give Your Children a Leg Up in Life</strong><br/>Encouraging critical thinking and truth seeking will set them apart</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_rJiUKB": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Raise Well-Rounded Children</strong><br/>So they are prepared and understand what’s going on in the world</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_with_icon_hgAmVk": {
+          "type": "text_with_icon",
+          "settings": {
+            "alignment": "left",
+            "text_size": "regular",
+            "text_weight": "regular",
+            "icon": "shopify://shop_images/icon-happy.webp",
+            "text": "<p><strong>Bond as a Family and Strengthen Your Values</strong><br/>Elevate family discussions with powerful ideas and current events</p>",
+            "custom_color": "",
+            "text_b": "",
+            "custom_color_b": ""
+          }
+        },
+        "text_YYeEHq": {
+          "type": "text",
+          "settings": {
+            "max_width": 84,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p><br/>If you want a way to educate and equip your children for the future, we are glad you found us — because something new and important is happening here.</p>",
+            "text_size": "large",
+            "text_weight": "semibold"
+          }
+        }
+      },
+      "block_order": [
+        "caption_TUY4Er",
+        "caption_qUf3KB",
+        "heading_Rnz3Up",
+        "text_n74MMW",
+        "heading_mxmNpw",
+        "text_with_icon_R7dDph",
+        "text_with_icon_WiUL4B",
+        "text_with_icon_TNrT6w",
+        "text_with_icon_rJiUKB",
+        "text_with_icon_hgAmVk",
+        "text_YYeEHq"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 66,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "sskymo_product_column_c_m6P3mg": {
+      "type": "sskymo-product-column-c",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_tGJXq9": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "section_header_hxQ4FB": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Inspiring Children's Learning Materials</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_wCYXHt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Learning should be both exciting and meaningful. Our materials help kids discover important ideas through fun stories, hands-on projects, and good conversations. Our resources are ideal for aiding homeschooling, supplementing schoolwork, or supporting independent learning, and they seamlessly integrate into your child’s day.</p><p>We design every product for both kids and parents. With simple instructions and flexible formats, it’s easy to fit lessons into any schedule. Our resources cover topics like economics, law, and American history, and include engaging books like <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-road-to-surfdom\"><span style=\"text-decoration:underline\">Road to Surfdom</span></a> and <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-education-vacation\"><span style=\"text-decoration:underline\">Education Vacation</span></a>. These materials help start meaningful conversations and build lifelong skills.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_hxQ4FB",
+        "text_wCYXHt"
+      ],
+      "name": "TT Box Image Block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/kids-reading.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "scheme-5",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "inner_padding_top": 24,
+        "inner_padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_text_block_dBN9Wj": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_iWH9H6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Benefits of Our Children's Learning Resources</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_AJiUrq": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our learning resources work well for children of all ages. Here are some of the main benefits:</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_individual_FeULmc": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Critical Thinking Skills:</strong> Our books and activities encourage children to question, analyze, and think independently. Each story introduces complex ideas in a way that’s simple and fun, building confidence in decision-making. This skill helps in every subject, from math to reading, and gets them ready for real-life problem-solving.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_PLHJ3e": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Real-World Learning:</strong> Ideas like entrepreneurship (in<a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"> <span style=\"text-decoration:underline\">Messed Up Market</span></a>), liberty, discipline (in<a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-12-rules-boot-camp\"> <span style=\"text-decoration:underline\">12 Rules Bootcamp</span></a>), and personal responsibility come alive through relatable examples. Kids see how these ideas apply to their daily lives and future goals.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_AbKNaH": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Flexible for All Ages:</strong> Every child learns in their own way. That’s why our resources are flexible, allowing parents to adjust activities to fit reading level, interests, or pace. You can use these resources when homeschooling multiple kids or adding enrichment after school. The best part is that these materials meet your family’s unique needs.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_Dx6D3F": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Parent-Friendly Design:</strong> Easy-to-follow guides mean less prep and more learning. Parents can focus on meaningful discussions instead of hours of lesson planning.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_EKEpcW": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Engaging and Fun:</strong> Colorful illustrations, lively characters, and interactive projects keep kids interested and eager to learn. Say goodbye to boredom and burnout.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        },
+        "checkbox_individual_XV6x7E": {
+          "type": "checkbox_individual",
+          "settings": {
+            "text": "<p><strong>Values That Last:</strong> Each product teaches important values, such as responsibility, freedom, and respect for others. These lessons help build strong character as well as academic skills.</p>",
+            "text_large": true,
+            "custom_color": "",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iWH9H6",
+        "text_AJiUrq",
+        "checkbox_individual_FeULmc",
+        "checkbox_individual_PLHJ3e",
+        "checkbox_individual_AbKNaH",
+        "checkbox_individual_Dx6D3F",
+        "checkbox_individual_EKEpcW",
+        "checkbox_individual_XV6x7E"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_hVxF4C": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_eMKP9e": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions about Learning Resources</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_GXpPFY": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Why Are Learning Resources Important for Children?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Learning resources provide your children with tools to understand new concepts in a fun and interactive way. They help make abstract ideas concrete and keep kids engaged as they build important skills.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_Y9VaQc": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can Learning Resources Support My Child’s Development in Reading, Math, and Problem-Solving?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Hands-on activities and stories are a great way to introduce your child to more complex concepts. These materials encourage logical thinking, teach analytical skills, and improve reading comprehension. Children practice applying ideas rather than simply memorizing them.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_fVCcPh": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Know if Resources Are Age-Appropriate and Aligned With School Curriculum Standards?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Each product clearly lists recommended age ranges and learning goals. Tuttle Twins designs materials to complement common school standards while adding a fresh, real-world perspective.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_bBqNRX": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Types of Learning Materials Should I Include in My Child’s Homeschool Education?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>A mix of story-based books, interactive projects, and critical-thinking exercises works best. Tuttle Twins resources offer all three, making them a complete and flexible option for homeschooling.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_9KLijH": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>How Can I Track My Child’s Progress or Adapt the Resources to Their Individual Learning Style?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Our parent guides and flexible lesson plans make it easy to adjust pace and content. You can revisit topics, add related discussions, or extend activities to match your child’s strengths and interests.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_qGmrr3": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Looking for Something Else?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>If you're looking for something else, we have a wide collection of books for kids from the time they’re toddlers to when they’re teens. You can check out our <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a> or <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a> for resources and information to set your child up for life.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eMKP9e",
+        "faq_GXpPFY",
+        "faq_Y9VaQc",
+        "faq_fVCcPh",
+        "faq_bBqNRX",
+        "faq_9KLijH",
+        "faq_qGmrr3"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_b_erpQpz": {
+      "type": "sskymo-text-image-block-b",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ssky_collection_menu_wiabre",
+    "z_featured_collection_74jWQE",
+    "z_featured_collection_GiL87f",
+    "z_featured_collection_XycXye",
+    "z_featured_collection_Hc8eKC",
+    "z_featured_collection_dWd7Ri",
+    "z_featured_collection_NYAfja",
+    "z_featured_collection_bbdE4A",
+    "z_featured_collection_UmGbWN",
+    "sskymo_text_image_block_c_pBaRMR",
+    "ssky_text_column_DT8be6",
+    "ssky_product_order_block_4Cx3Mk",
+    "sskymo_three_block_MbHwmN",
+    "ssky_text_block_8H6XVj",
+    "ssky_text_block_CVeNKG",
+    "ssky_text_block_bgrKay",
+    "sskymo_product_column_c_m6P3mg",
+    "ssky_box_image_block_tGJXq9",
+    "ssky_text_block_dBN9Wj",
+    "ssky_faqs_hVxF4C",
+    "sskymo_text_image_block_b_erpQpz"
+  ]
+}

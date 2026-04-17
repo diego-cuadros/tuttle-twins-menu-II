@@ -1,0 +1,779 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_yhWezk": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_fgp6GG": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Spark curiosity and inspire real-world learning with our carefully selected nonfiction books for kids. Make big ideas simple, fun, and unforgettable.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_fgp6GG"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "z_featured_collection_pFzxDc": {
+      "type": "z-featured-collection",
+      "disabled": true,
+      "settings": {
+        "hide_text_content": false,
+        "hide_heading": false,
+        "title": "America’s History Bonuses",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "americas-history-bonuses",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "custom_class": "",
+        "custom_id": "",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "sskymo_text_column_e_RctCzW": {
+      "type": "sskymo-text-column-e",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": true,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_block_f_hcMTM4": {
+      "type": "sskymo-text-block-f",
+      "settings": {
+        "max_width": 80,
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_f_LBDXYg": {
+      "type": "sskymo-product-column-f",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "top_left": false,
+        "top_right": true,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_g_LxXeqC": {
+      "type": "sskymo-product-column-g",
+      "settings": {
+        "color_scheme": "",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": true,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_product_column_QiXVEN": {
+      "type": "ssky-product-column",
+      "blocks": {
+        "product_column_qWANa7": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-a-series-of-tuttle-twins-stories",
+            "image_fit": true,
+            "heading": "<p>Volume 1 Bundle</p>",
+            "image": "shopify://shop_images/his1-min-1.webp",
+            "text": "<ul><li>240-page book</li><li>200 pages of curriculum (PDF)</li><li>6-hour audiobook</li><li>4 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_mGpFRh": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-vol2",
+            "image_fit": true,
+            "heading": "<p>Volume 2 Bundle</p>",
+            "image": "shopify://shop_images/his2-min-1.webp",
+            "text": "<ul><li>240-page book</li><li>200 pages of curriculum (PDF)</li><li>6-hour audiobook</li><li>4 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        },
+        "product_column_q7V4Ep": {
+          "type": "product_column",
+          "settings": {
+            "product": "americas-history-volume-1-2-bundle",
+            "image_fit": true,
+            "heading": "<p>Two Book Bundle</p>",
+            "image": "shopify://shop_images/his1-his-2-bundle.webp",
+            "text": "<ul><li>500 pages of history stories</li><li>400 pages of curriculum (PDF)</li><li>12 hours of audiobooks</li><li>8 hours of video lessons</li></ul>",
+            "text_large": false,
+            "price": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_large": false
+          }
+        }
+      },
+      "block_order": [
+        "product_column_qWANa7",
+        "product_column_mGpFRh",
+        "product_column_q7V4Ep"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "heading_weight": "bold",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "show_as_card": true,
+        "color_scheme_show_as_card": "scheme-4",
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_box_image_block_D3PNnT": {
+      "type": "ssky-box-image-block",
+      "blocks": {
+        "section_header_pgbVqY": {
+          "type": "section_header",
+          "settings": {
+            "section_heading": "<p>Why Our Kids' History Books Shine</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text_style_subheading": "large-bold",
+            "color_class_subheading": "primary-blue",
+            "caption": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_LkgKW3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Volumes 1 (1215–1776) and 2 (1776–1791) of America's History take you on story-based journeys through the history of American independence. These storybooks are over 240 pages long, and they: </p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "checkbox_cjRDBT": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Show the philosophical connections between the Founding Fathers.</strong></p>",
+            "text_large": false
+          }
+        },
+        "checkbox_d6xRcF": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Tell a story and share ideas to spark interest, not just give boring dates.</strong></p>",
+            "text_large": false
+          }
+        },
+        "checkbox_Ymh3MB": {
+          "type": "checkbox",
+          "settings": {
+            "text": "<p><strong>Link the fight for freedom in the past to the principles that youngsters can relate to today.</strong></p>",
+            "text_large": false
+          }
+        },
+        "button_BK6LN3": {
+          "type": "button",
+          "settings": {
+            "button_medium": false,
+            "button_large": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "use_video_lightbox": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "use_video_lightbox_2": false,
+            "button_style_secondary_2": false,
+            "product": "americas-history-volume-1-2-bundle",
+            "product_button_label": "Add Vol 1 & 2 Bundle to Cart",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_pgbVqY",
+        "text_LkgKW3",
+        "checkbox_cjRDBT",
+        "checkbox_d6xRcF",
+        "checkbox_Ymh3MB",
+        "button_BK6LN3"
+      ],
+      "name": "TT Box Image Block",
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/History-book-2_inside.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "medium",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "inner_padding_top": 64,
+        "inner_padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_css": ""
+      }
+    },
+    "ssky_text_column_QxLPEE": {
+      "type": "ssky-text-column",
+      "blocks": {
+        "text_column_acQFD4": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "",
+            "heading": "<p>Story‑Based Learning Beats Textbooks</p>",
+            "text": "<p>Instead of just listing facts, our books are like interesting novels that draw in young readers with characters, situations, and dramatic events. They help children retain what they learn and stay engaged throughout the story.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_FUyyxY": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "heading": "<p>Philosophical Roots Brought to Life</p>",
+            "text": "<p>Our books don't simply tell you what happened. They also tell you why events happened and how ideas like natural rights, consent of the governed, and individual liberty helped to create a new nation. These timeless ideas will spark deep conversations at home or in the classroom.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_XiPqtE": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p>Multi‑Format Bundles for Every Learner</p>",
+            "text": "<p>Choose from:</p><ul><li>The hardback volumes alone</li><li>Audiobooks (best for kids who learn by listening)</li><li>PDF curriculum guidelines (which are great for structured school-based or homeschooling plans)</li></ul>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_p9WUNQ": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "heading": "<p>Encourages Hands‑On Learning & Conversation</p>",
+            "text": "<p>Each page encourages thoughtful reflection, with questions and natural pauses for family discussion. This opens the door to conversations grounded in timeless principles and deeper understanding.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_FKxJ4g": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-9b83f20c-1c44-44a7-9cd9-894083cef912",
+            "heading": "<p>Designed for Families & Lifelong Learners</p>",
+            "text": "<p>Parents love our \"Level Up Your Own Knowledge\" sections, which are short, deep dives into philosophy, context, and deeper meaning. These sections are for kids ages 5 to 12. </p><p>Everyone in the family grows together.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "text_column_KTmLzF": {
+          "type": "text_column",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "heading": "<p>Built to Inspire Civic Engagement</p>",
+            "text": "<p>These books give kids the power to make a freer world. Children are inspired to envision themselves as future torchbearers of liberty when they learn about past struggles for freedom.</p>",
+            "text_large": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_column_acQFD4",
+        "text_column_FUyyxY",
+        "text_column_XiPqtE",
+        "text_column_p9WUNQ",
+        "text_column_FKxJ4g",
+        "text_column_KTmLzF"
+      ],
+      "name": "TT Text column",
+      "settings": {
+        "heading": "<p>Why Families Love This Series</p>",
+        "heading_size": "h2",
+        "heading_weight": "bold",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "content_alignment": "center",
+        "color_scheme": "",
+        "column_with_border": false,
+        "column_with_border_padding": false,
+        "column_with_border_vtwo": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_C9caN6": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_44jwRr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>History Books For School</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_6AiAPg": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our books add depth and context to what children are already learning in school or through homeschooling. Instead of simply listing names and dates, they focus on big ideas like liberty, self-reliance, and the principles behind the founding of America.</p><p>They work especially well for homeschool families who want materials that align with principles like personal responsibility and individual freedom. With optional curriculum guides and audiobooks, it’s easy to build lessons around each chapter or just use them as a meaningful supplement.</p><p>If you're looking for history books that spark interest and encourage real thinking, our history books for kids are a smart place to start. We also offer<a href=\"https://tuttletwins.com/collections/books-for-teens\"> <span style=\"text-decoration:underline\">books for teens</span></a> that cover even more topics.</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        },
+        "button_4KBW6L": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_last": true,
+            "button_large": false,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Button label",
+            "button_link_new_window": false,
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "americas-history-volume-1-2-bundle",
+            "product_button_label": "Add Vol 1 & Vol 2 Bundle to Cart",
+            "show_price": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_44jwRr",
+        "text_6AiAPg",
+        "button_4KBW6L"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-5",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_text_block_G7NC6W": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "caption_9AJPXf": {
+          "type": "caption",
+          "settings": {
+            "caption": "Inspiring Nonfiction for Children to Immerse Themselves In",
+            "custom_color": "",
+            "text_style": "large-bold",
+            "color_class": "primary-blue"
+          }
+        },
+        "text_hFkmwQ": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>Our nonfiction children’s books help young readers understand the world while developing critical thinking and confidence. Your children can enjoy our engaging stories filled with colorful illustrations and age-appropriate lessons that make learning exciting and meaningful.</p><h2>Benefits of Nonfiction Books for Kids</h2><p>Our nonfiction for kids collection is designed to help parents raise thoughtful, independent thinkers. Here are some of the biggest benefits of reading our kids nonfiction books.</p><h3>Builds Real-World Knowledge</h3><p>Our kids nonfiction titles introduce essential concepts, like <a href=\"https://tuttletwins.com/collections/economics-for-kids\"><span style=\"text-decoration:underline\">Economics</span></a> and <a href=\"https://tuttletwins.com/collections/american-history-for-kids\"><span style=\"text-decoration:underline\">American history</span></a>, in a way children easily understand. Our nonfiction children’s books explain complex topics with simple language and relatable stories, preparing young minds for the challenges of adulthood. Your kids can enjoy learning real-world concepts that aren’t taught in schools in a relatable, age-appropriate way..</p><h3>Encourages Critical Thinking</h3><p>Our children’s nonfiction books encourage your kids to ask questions, analyze ideas, form their own opinions, and actively discuss their thoughts. Each one of our books includes discussion prompts and activities, helping families explore the lessons together and strengthen problem-solving skills.</p><h3>Makes Learning Fun and Memorable</h3><p>We combine exciting adventures and memorable characters to keep young readers engaged. By using fun storytelling with accurate information, our nonfiction books for children ensure knowledge sticks long after the last page is turned.</p><h3>Strengthens Family Conversations</h3><p>Our nonfiction children’s books are designed to be read together. Parents and kids can talk about things like freedom, entrepreneurship (check out<a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-messed-up-market\"> <span style=\"text-decoration:underline\">Messed Up Market</span></a>), businesses, and personal responsibility while enjoying meaningful, value-based discussions that build stronger family connections.</p><h3>Promotes Lifelong Curiosity</h3><p>With every book, we encourage children to think beyond the classroom. Our nonfiction for kids collection inspires curiosity about various topics, like <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-their-spectacular-show-business\"><span style=\"text-decoration:underline\">Show Business</span></a> or law (check out <a href=\"https://tuttletwins.com/products/the-tuttle-twins-and-the-food-truck-fiasco\"><span style=\"text-decoration:underline\">The Tuttle Twins and the Food Truck Fiasco</span></a>), giving them the confidence to keep exploring and asking “why.”</p>",
+            "text_size": "regular",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "caption_9AJPXf",
+        "text_hFkmwQ"
+      ],
+      "name": "t:sections.ssky_text_block.name",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "",
+        "custom_id": ""
+      }
+    },
+    "ssky_faqs_dwWQkt": {
+      "type": "ssky-faqs",
+      "blocks": {
+        "heading_wWRMjW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Frequently Asked Questions</p>",
+            "heading_size": "h1",
+            "heading_weight": "bold"
+          }
+        },
+        "faq_KJyBEe": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Are Some Good History Books for Kids?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Great history books for kids weave stories with facts. Look for books that tell interesting stories about historical people and events in a way that is appropriate for their age. That's exactly what our America's History books do, empowering children to learn, grow, and start thinking critically.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_t9FyqB": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Is The Most Popular Book for 7‑Year‑Olds?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>7-year-olds tend to prefer chapter books with pictures, although their reading levels can vary. This age group will be interested in the inspiring ideas and events in America’s History, Volume 1 (1215–1776).</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_HkwC6r": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Are the Best History Books?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>The best history books are accurate, easy to read, and inspiring. Our volumes offer well-researched, engaging narratives that emphasize important values and ideas, making them a great fit for both home and school learning.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_BjEDfn": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>What Should My 10‑Year‑Old Be Reading?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>At age 10, kids can grasp more serious topics and ask \"why\". Our American history books are a fantastic fit because they encourage kids to ask questions about the history that shaped our world, and answer them at the same time.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_jrbhqQ": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do We Have Books for Younger and Older Children?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>We have so many books to keep your children entertained and engaged, no matter what stage of life they’re in. We have hardy <a href=\"https://tuttletwins.com/collections/toddler-books\"><span style=\"text-decoration:underline\">toddler books</span></a> that are perfect for little hands to chew and throw around without a worry. Our <a href=\"https://tuttletwins.com/collections/books-for-teens\"><span style=\"text-decoration:underline\">books for teens</span></a> help older children develop independent mindsets and opinions of their own.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_cACq98": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do These Books Align With Specific School Subjects?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes! Our kids nonfiction collection complements subjects like history, civics, law, and economics, reinforcing what children learn in school while making big ideas exciting and easy to understand.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_Qarrcj": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Can Parents Read These Books With Their Children?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Absolutely. We design every book for family reading. Discussion questions and fun activities help parents guide conversations and deepen learning.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_qn6wmN": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Are These Books Suitable for Independent Reading?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes. With simple, engaging language and eye-catching illustrations, our nonfiction for children can be enjoyed independently or as a shared family experience.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        },
+        "faq_LEHPQn": {
+          "type": "faq",
+          "settings": {
+            "text": "<p>Do We Have Any Book Bundles?</p>",
+            "text_size": "medium",
+            "text_weight": "bold",
+            "answer": "<p>Yes, we have several book <a href=\"https://tuttletwins.com/collections/bundles\"><span style=\"text-decoration:underline\">bundles</span></a> that let you choose multiple books at a reduced price. Our bundles are perfect for introducing your child to our entire series, all while saving money.</p>",
+            "text_size_b": "medium",
+            "text_weight_b": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wWRMjW",
+        "faq_KJyBEe",
+        "faq_t9FyqB",
+        "faq_HkwC6r",
+        "faq_BjEDfn",
+        "faq_jrbhqQ",
+        "faq_cACq98",
+        "faq_Qarrcj",
+        "faq_qn6wmN",
+        "faq_LEHPQn"
+      ],
+      "name": "TT FAQs",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "max_width_faqs": 64,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ssky_text_block_yhWezk",
+    "product-grid",
+    "z_featured_collection_pFzxDc",
+    "sskymo_text_column_e_RctCzW",
+    "sskymo_text_block_f_hcMTM4",
+    "sskymo_product_column_f_LBDXYg",
+    "sskymo_product_column_g_LxXeqC",
+    "ssky_product_column_QiXVEN",
+    "ssky_box_image_block_D3PNnT",
+    "ssky_text_column_QxLPEE",
+    "ssky_text_block_C9caN6",
+    "ssky_text_block_G7NC6W",
+    "ssky_faqs_dwWQkt"
+  ]
+}

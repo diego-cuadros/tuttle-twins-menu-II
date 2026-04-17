@@ -1,0 +1,447 @@
+{{ 'ssky-product-column.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.375 | round: 0 }}px;
+  }
+  .ssky-product-column-{{ section.id }} .ssky-product-column {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: 0px;
+    }
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block .ssky-text-block__buttons {
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-text-image-block-{{ section.id }} .ssky-text-image-block {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-text-image-block-{{ section.id }},
+    .ssky-product-column-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div class="ssky-text-image-block-{{ section.id }}">
+  <div class="ssky-text-image-block gradient color-{{ section.settings.color_scheme }}">
+    {%- for onetwothrees_combo_set in shop.metaobjects.onetwothrees_combo_set.values limit: 1 -%}
+      <div class="ssky-text-image-block__wrapper image-left page-width">
+        <div class="ssky-text-image-block__image">
+          <div
+            class="{%- if onetwothrees_combo_set.image != blank %}media{%- else %}placeholder{%- endif -%}{%- if onetwothrees_combo_set.image_fill_or_fit != false %} image-fit{%- endif -%}"
+            style="padding-bottom:{{ 1 | divided_by: onetwothrees_combo_set.image.value.image.aspect_ratio | times: 100 | at_most: 100 }}%;"
+          >
+            {%- if onetwothrees_combo_set.image != blank -%}
+              {%- assign widths = '360, 535, 750, 1070, 1500' -%}
+              {%- capture sizes -%}{%- render 'ssky-sizes-attr', width: 'half_width' -%}{%- endcapture -%}
+              {{
+                onetwothrees_combo_set.image
+                | image_url: width: 1500
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="ssky-text-image-block__blocks ssky-text-block__blocks left">
+          {%- assign heading_length = onetwothrees_combo_set.heading | metafield_text | size -%}
+          <h2
+            class="ssky-text-block__heading rte inline-richtext h1{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 1;"
+            {% endif %}
+          >
+            {{ onetwothrees_combo_set.heading }}
+          </h2>
+          <div
+            class="ssky-text-block__caption small-bold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 2;"
+            {% endif %}
+          >
+            {{ onetwothrees_combo_set.sub_heading | escape }}
+          </div>
+          <div
+            class="ssky-text-block__text rte text-body-large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: 3;"
+            {% endif %}
+          >
+            {{ onetwothrees_combo_set.description | metafield_tag }}
+          </div>
+
+          {%- if onetwothrees_combo_set.link_add_to_cart_button != blank -%}
+            {%- assign section_product = onetwothrees_combo_set.link_add_to_cart_button.value -%}
+            {%- assign product_form_id = 'product-form-' | append: section.id | append: section_product.id -%}
+            <div
+              class="ssky-text-block__buttons{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 4;"
+              {% endif %}
+            >
+              {%- render 'buy-buttons',
+                product: section_product,
+                product_form_id: product_form_id,
+                section_id: section.id,
+                button_label: onetwothrees_combo_set.add_to_cart_button_label
+              -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<div class="ssky-product-column-{{ section.id }}">
+  <div class="ssky-product-column gradient color-{{ section.settings.color_scheme }}">
+    {%- for onetwothrees_combo_set in shop.metaobjects.onetwothrees_combo_set.values limit: 1 -%}
+      {%- if show_as_card -%}
+        <div class="ssky-text-block__blocks page-width center">
+          {%- if onetwothrees_combo_set.heading_for_three_columns != blank -%}
+            {%- assign heading_length = onetwothrees_combo_set.heading_for_three_columns | metafield_text | size -%}
+            <h2
+              class="ssky-text-block__heading rte inline-richtext h3{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 1"
+              {% endif %}
+            >
+              {{ onetwothrees_combo_set.heading_for_three_columns }}
+            </h2>
+          {%- endif -%}
+        </div>
+        <div class="ssky-product-column__layout-card page-width">
+      {%- endif -%}
+      <div class="ssky-product-column__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+        <div class="ssky-product-column__blocks ssky-text-block__blocks center">
+          {%- unless show_as_card -%}
+            {%- if onetwothrees_combo_set.heading_for_three_columns != blank -%}
+              {%- assign heading_length = onetwothrees_combo_set.heading_for_three_columns | metafield_text | size -%}
+              <h2
+                class="ssky-text-block__heading rte inline-richtext h3{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: 1"
+                {% endif %}
+              >
+                {{ onetwothrees_combo_set.heading_for_three_columns }}
+              </h2>
+            {%- endif -%}
+          {%- endunless -%}
+          <div class="ssky-product-column__block-set">
+            <div
+              class="ssky-product-column__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 1;"
+              {% endif %}
+            >
+              {%- assign block_product = onetwothrees_combo_set.column_one_product.value -%}
+              {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+              <div class="ssky-text-block__blocks">
+                <h3 class="ssky-product-column__heading ssky-text-block__heading rte h5">
+                  {%- if onetwothrees_combo_set.column_one_heading != blank -%}
+                    {{ onetwothrees_combo_set.column_one_heading | metafield_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.title }}
+                  {%- else -%}
+                    {{ 'TT_Sections.product_column_Section.title_placeholder' | t }}
+                  {%- endif -%}
+                </h3>
+                <div class="ssky-product-column__image media{%- if onetwothrees_combo_set.column_one_image_fill_or_fit != false %} image-fit{%- endif -%}">
+                  {%- if onetwothrees_combo_set.column_one_image != blank -%}
+                    {{ onetwothrees_combo_set.column_one_image | image_url: width: 560 | image_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                  {%- endif -%}
+                </div>
+                <div class="ssky-product-column__text rte">
+                  {%- if onetwothrees_combo_set.column_one_description != blank -%}
+                    {{ onetwothrees_combo_set.column_one_description | metafield_tag }}
+                  {%- else -%}
+                    {{ block_product.description | truncatewords: 20 | strip_html }}
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="ssky-text-block__blocks">
+                <div class="ssky-product-column__price">
+                  {% render 'price', product: block_product, show_compare_at_price: true %}
+                </div>
+                {%- if block_product != blank -%}
+                  {%- render 'buy-buttons',
+                    product: block_product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    is_product_column: true
+                  -%}
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div
+              class="ssky-product-column__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 2;"
+              {% endif %}
+            >
+              {%- assign block_product = onetwothrees_combo_set.column_two_product.value -%}
+              {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+              <div class="ssky-text-block__blocks">
+                <h3 class="ssky-product-column__heading ssky-text-block__heading rte h5">
+                  {%- if onetwothrees_combo_set.column_two_heading != blank -%}
+                    {{ onetwothrees_combo_set.column_two_heading | metafield_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.title }}
+                  {%- else -%}
+                    {{ 'TT_Sections.product_column_Section.title_placeholder' | t }}
+                  {%- endif -%}
+                </h3>
+                <div class="ssky-product-column__image media{%- if onetwothrees_combo_set.column_two_image_fill_or_fit != false %} image-fit{%- endif -%}">
+                  {%- if onetwothrees_combo_set.column_two_image != blank -%}
+                    {{ onetwothrees_combo_set.column_two_image | image_url: width: 560 | image_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                  {%- endif -%}
+                </div>
+                <div class="ssky-product-column__text rte">
+                  {%- if onetwothrees_combo_set.column_two_description != blank -%}
+                    {{ onetwothrees_combo_set.column_two_description | metafield_tag }}
+                  {%- else -%}
+                    {{ block_product.description | truncatewords: 20 | strip_html }}
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="ssky-text-block__blocks">
+                <div class="ssky-product-column__price">
+                  {% render 'price', product: block_product, show_compare_at_price: true %}
+                </div>
+                {%- if block_product != blank -%}
+                  {%- render 'buy-buttons',
+                    product: block_product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    is_product_column: true
+                  -%}
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div
+              class="ssky-product-column__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 3;"
+              {% endif %}
+            >
+              {%- assign block_product = onetwothrees_combo_set.column_three_product.value -%}
+              {%- assign product_form_id = 'product-form-' | append: section.id | append: block_product.id -%}
+              <div class="ssky-text-block__blocks">
+                <h3 class="ssky-product-column__heading ssky-text-block__heading rte h5">
+                  {%- if onetwothrees_combo_set.column_three_heading != blank -%}
+                    {{ onetwothrees_combo_set.column_three_heading | metafield_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.title }}
+                  {%- else -%}
+                    {{ 'TT_Sections.product_column_Section.title_placeholder' | t }}
+                  {%- endif -%}
+                </h3>
+                <div class="ssky-product-column__image media{%- if onetwothrees_combo_set.column_three_image_fill_or_fit != false %} image-fit{%- endif -%}">
+                  {%- if onetwothrees_combo_set.column_three_image != blank -%}
+                    {{ onetwothrees_combo_set.column_three_image | image_url: width: 560 | image_tag }}
+                  {%- elsif block_product != blank -%}
+                    {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                  {%- endif -%}
+                </div>
+                <div class="ssky-product-column__text rte">
+                  {%- if onetwothrees_combo_set.column_three_description != blank -%}
+                    {{ onetwothrees_combo_set.column_three_description | metafield_tag }}
+                  {%- else -%}
+                    {{ block_product.description | truncatewords: 20 | strip_html }}
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="ssky-text-block__blocks">
+                <div class="ssky-product-column__price">
+                  {% render 'price', product: block_product, show_compare_at_price: true %}
+                </div>
+                {%- if block_product != blank -%}
+                  {%- render 'buy-buttons',
+                    product: block_product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    is_product_column: true
+                  -%}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%- if show_as_card -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm 123s combo set",
+  "tag": "section",
+  "class": "section sskymo-product-column sskymo-product-column-b",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color",
+      "default": "#bcecf6"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm 123s combo set"
+    }
+  ]
+}
+{% endschema %}

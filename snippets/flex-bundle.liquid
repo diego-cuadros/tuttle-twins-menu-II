@@ -1,0 +1,133 @@
+{% if product.metafields.custom.flex_bundle.value %}
+  {% assign flex_bundle = product.metafields.custom.flex_bundle.value %}
+  {% assign components = flex_bundle.components.value %}
+
+  {% assign bundle_available = true %}
+  {% assign unavailable_products = '' %}
+  {% for component in components %}
+    {% if component.available == false %}
+      {% assign bundle_available = false %}
+      {% if unavailable_products == '' %}
+        {% assign unavailable_products = component.product.title %}
+      {% else %}
+        {% assign unavailable_products = unavailable_products | append: ', ' | append: component.product.title %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  <button
+    type="button"
+    id="flex-bundle-btn"
+    class="flex-bundle-btn button button--full-width button--primary"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    data-variant-sku="{{ product.selected_or_first_available_variant.sku }}"
+    {{ block.shopify_attributes }}
+    {% unless bundle_available %}disabled{% endunless %}
+  >
+    <span class="flex-bundle-btn__text">{% if bundle_available %}Add to cart{% else %}Out of stock{% endif %}</span>
+    <span class="flex-bundle-btn__loading" style="display: none;">Adding...</span>
+  </button>
+
+  {% unless bundle_available %}
+    <p class="flex-bundle-unavailable" style="color: #c00; margin-top: 0.5rem; font-size: 0.875rem;">
+      Unavailable: {{ unavailable_products }}
+    </p>
+  {% endunless %}
+
+  {% paginate components by 250 %}
+    <script type="application/json" id="flex-bundle-data">[{% for component in components %}{{ component.id }}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
+  {% endpaginate %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('flex-bundle-btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', async function() {
+        const variantId = parseInt(btn.dataset.variantId);
+        const variantSku = btn.dataset.variantSku;
+        const rawData = document.getElementById('flex-bundle-data').textContent;
+        console.log('Raw flex bundle data:', rawData);
+        const components = JSON.parse(rawData);
+        console.log('Parsed components:', components, 'Type:', typeof components, 'IsArray:', Array.isArray(components));
+
+        // Get quantity from the PDP quantity selector
+        const quantityInput = document.querySelector('.quantity__input');
+        const quantity = quantityInput ? parseInt(quantityInput.value) || 1 : 1;
+
+        const textEl = btn.querySelector('.flex-bundle-btn__text');
+        const loadingEl = btn.querySelector('.flex-bundle-btn__loading');
+
+        btn.disabled = true;
+        textEl.style.display = 'none';
+        loadingEl.style.display = 'inline';
+
+        // Build components array - each component gets quantity 1
+        const componentItems = components.map((id, index) => {
+          const item = { id: id, quantity: 1, attributes: { _is_part_of_bundle: 'true' } };
+          if (index === 0) {
+            item.attributes._is_first_component = 'true';
+            if (variantSku) {
+              item.attributes._bundle_sku = variantSku;
+            }
+          }
+          return item;
+        });
+
+        // Create separate line items for each quantity with unique identifier
+        const items = [];
+        for (let i = 0; i < quantity; i++) {
+          items.push({
+            id: variantId,
+            quantity: 1,
+            properties: {
+              _components: JSON.stringify(componentItems),
+              _bundle_id: `${Date.now()}-${i}`
+            }
+          });
+        }
+
+        const formData = { items };
+
+        try {
+          const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          if (!response.ok) {
+            throw new Error('Failed to add to cart');
+          }
+
+          // Refresh Rebuy cart data
+          if (window.Rebuy && window.Rebuy.Cart) {
+            if (typeof window.Rebuy.Cart.refresh === 'function') {
+              window.Rebuy.Cart.refresh();
+            } else if (typeof window.Rebuy.Cart.fetchCart === 'function') {
+              window.Rebuy.Cart.fetchCart();
+            }
+          }
+
+          // Open Rebuy cart drawer
+          if (window.Rebuy && window.Rebuy.Cart) {
+            if (typeof window.Rebuy.Cart.show === 'function') {
+              window.Rebuy.Cart.show();
+            } else if (typeof window.Rebuy.Cart.open === 'function') {
+              window.Rebuy.Cart.open();
+            } else if (typeof window.Rebuy.Cart.toggle === 'function') {
+              window.Rebuy.Cart.toggle();
+            }
+          }
+        } catch (error) {
+          console.error('Error adding bundle to cart:', error);
+          alert('Error adding to cart. Please try again.');
+        } finally {
+          btn.disabled = false;
+          textEl.style.display = 'inline';
+          loadingEl.style.display = 'none';
+        }
+      });
+    });
+  </script>
+{% endif %}

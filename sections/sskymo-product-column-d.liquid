@@ -1,0 +1,281 @@
+{{ 'ssky-product-column.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign show_as_card = false
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+  endif
+-%}
+{%- style -%}
+  .ssky-product-column-{{ section.id }} .ssky-product-column {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.top_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 15vw 0 0 0;
+    }
+  {%- elsif section.settings.top_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 15vw 0 0;
+    }
+  {%- elsif section.settings.bottom_right -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 15vw 0;
+    }
+  {%- elsif section.settings.bottom_left -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column {
+      border-radius: 0 0 0 15vw;
+    }
+  {%- endif -%}
+  {%- if section.settings.corner_color != blank -%}
+    .ssky-product-column-{{ section.id }} {
+      background-color: {{ section.settings.corner_color }};
+    }
+  {%- endif -%}
+  {%- if show_as_card -%}
+    .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      border-radius: 45px;
+    }
+    @media screen and (min-width: 750px) {
+      .ssky-product-column-{{ section.id }} .ssky-product-column__wrapper {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div class="ssky-product-column-{{ section.id }}">
+  <div class="ssky-product-column gradient color-{{ section.settings.color_scheme }}">
+    {%- if show_as_card -%}
+      <div class="ssky-text-block__blocks page-width center">
+        {%- for graphic_novels_season_1_set in shop.metaobjects.graphic_novels_season_1_set.values -%}
+          {%- if graphic_novels_season_1_set.main_heading != blank -%}
+            {%- assign heading_length = graphic_novels_season_1_set.main_heading | metafield_text | size -%}
+            <h2
+              class="ssky-text-block__heading rte inline-richtext h1{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: 1"
+              {% endif %}
+            >
+              {{ graphic_novels_season_1_set.main_heading }}
+            </h2>
+            {%- if graphic_novels_season_1_set.main_caption != blank -%}
+              <div
+                class="ssky-text-block__caption small-bold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: 2"
+                {% endif %}
+              >
+                {{ graphic_novels_season_1_set.main_caption }}
+              </div>
+            {%- endif -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="ssky-product-column__layout-card page-width">
+    {%- endif -%}
+    <div class="ssky-product-column__wrapper page-width{%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+      <div class="ssky-product-column__blocks ssky-text-block__blocks center">
+        {%- unless show_as_card -%}
+          {%- for graphic_novels_season_1_set in shop.metaobjects.graphic_novels_season_1_set.values -%}
+            {%- if graphic_novels_season_1_set.main_heading != blank -%}
+              {%- assign heading_length = graphic_novels_season_1_set.main_heading | metafield_text | size -%}
+              <h2
+                class="ssky-text-block__heading rte inline-richtext h1{%- if heading_length > 35 %} ssky-text-block__heading--long{%- endif -%}{%- if graphic_novels_season_1_set.main_caption != blank %} ssky-text-block__caption-true{%- endif -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: 1"
+                {% endif %}
+              >
+                {{ graphic_novels_season_1_set.main_heading }}
+              </h2>
+              {%- if graphic_novels_season_1_set.main_caption != blank -%}
+                <div
+                  class="ssky-text-block__caption small-bold{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: 2;"
+                  {% endif %}
+                >
+                  {{ graphic_novels_season_1_set.main_caption }}
+                </div>
+              {%- endif -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
+        <div class="ssky-product-column-manual__block-set">
+          {%- for graphic_novels_season_1_set in shop.metaobjects.graphic_novels_season_1_set.values -%}
+            <div
+              class="ssky-product-column__block ssky-product-column-manual__block ssky-text-block__blocks{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              <div class="ssky-product-column__image-con">
+                {%- if graphic_novels_season_1_set.link_a_product != blank -%}
+                  {% capture link_value %}{% render 'ssky-button-link', type: graphic_novels_season_1_set %}{% endcapture %}
+                  <a href="{{ link_value | strip }}" class="full-unstyled-link">
+                {%- endif -%}
+                <div
+                  class="ssky-product-column__image media image-fit"
+                  style="padding-bottom:{{ 1 | divided_by: graphic_novels_season_1_set.column_image.value.image.aspect_ratio | times: 100 }}%;"
+                >
+                  {%- if graphic_novels_season_1_set.column_image != blank -%}
+                    {{ graphic_novels_season_1_set.column_image | image_url: width: 360 | image_tag }}
+                  {%- else -%}
+                    {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+                {%- if graphic_novels_season_1_set.link_a_product != blank -%}</a>{%- endif -%}
+              </div>
+
+              <div class="ssky-text-block__blocks left">
+                <h3 class="ssky-product-column__heading ssky-text-block__heading rte">
+                  {%- if graphic_novels_season_1_set.link_a_product != blank -%}
+                    <a href="{{ link_value | strip }}" class="full-unstyled-link rte">
+                  {%- endif -%}
+                  {%- if graphic_novels_season_1_set.column_title != blank -%}
+                    {{ graphic_novels_season_1_set.column_title }}
+                  {%- endif -%}
+                  {%- if graphic_novels_season_1_set.link_a_product != blank -%}</a>{%- endif -%}
+                </h3>
+                <div class="ssky-product-column__text rte">
+                  {%- if graphic_novels_season_1_set.column_description != blank -%}
+                    {{ graphic_novels_season_1_set.column_description | metafield_tag }}
+                  {%- endif -%}
+                </div>
+                <div class="ssky-product-column__text ssky-product-column__text--small rte">
+                  {%- if graphic_novels_season_1_set.column_small_text != blank -%}
+                    {{ graphic_novels_season_1_set.column_small_text | metafield_tag }}
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    {%- if show_as_card -%}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Graphic novels s1 set",
+  "tag": "section",
+  "class": "section sskymo-product-column-d",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.all.ssky_layouts.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_layouts.card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "t:sections.all.ssky_layouts.activate",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_show_as_card",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.ssky_round_corners.heading",
+      "info": "t:sections.all.ssky_round_corners.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_left",
+      "label": "t:sections.all.ssky_round_corners.top_left",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "top_right",
+      "label": "t:sections.all.ssky_round_corners.top_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_right",
+      "label": "t:sections.all.ssky_round_corners.bottom_right",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_left",
+      "label": "t:sections.all.ssky_round_corners.bottom_left",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "corner_color",
+      "label": "t:sections.all.ssky_round_corners.corner_color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Graphic novels s1 set"
+    }
+  ]
+}
+{% endschema %}

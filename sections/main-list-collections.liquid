@@ -1,0 +1,306 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  /* Section spacing */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Title spacing + alignment */
+  .section-{{ section.id }}-padding .collection-list-title {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding .collection-list-title {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  /* Layout for the grid */
+  .section-{{ section.id }}-padding .collection-list {
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding .collection-list {
+      row-gap: 3.2rem;
+      column-gap: 3.2rem;
+    }
+  }
+
+  /* --- Typography + link clean-up for collection titles --- */
+
+  .section-{{ section.id }}-padding .card__heading,
+  .section-{{ section.id }}-padding .card__heading a {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: 1.8rem !important;
+    line-height: 1.25;
+  }
+
+  .section-{{ section.id }}-padding .card__heading a:hover,
+  .section-{{ section.id }}-padding .card__heading a:focus {
+    text-decoration: none !important;
+  }
+
+  /* Remove arrows from collection titles */
+  .section-{{ section.id }}-padding .card__heading .icon-arrow,
+  .section-{{ section.id }}-padding .card__heading svg.icon-arrow {
+    display: none !important;
+  }
+
+  /* Remove extra gap that Dawn adds for the arrow */
+  .section-{{ section.id }}-padding .card__heading {
+    gap: 0 !important;
+  }
+
+  /* Make cards feel clickable */
+  .section-{{ section.id }}-padding .card--media {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .section-{{ section.id }}-padding .card--media:hover {
+    transform: translateY(-2px);
+  }
+
+  /* --- Match collection image proportions to product cards --- */
+  /* Use the same image_ratio options as your product grid section:
+     - 'square'  -> 1/1
+     - 'portrait' -> 3/4
+     - 'adapt'   -> natural aspect ratio
+     Set both sections to the same value in the editor for a perfect match.
+  */
+
+  .section-{{ section.id }}-padding .card--media .card__inner {
+    {% case section.settings.image_ratio %}
+      {% when 'square' %}
+        aspect-ratio: 1 / 1;
+      {% when 'portrait' %}
+        aspect-ratio: 3 / 4;
+      {% else %}
+        aspect-ratio: auto;
+    {% endcase %}
+    overflow: hidden;
+  }
+
+  .section-{{ section.id }}-padding .card--media .card__media,
+  .section-{{ section.id }}-padding .card--media .card__media img,
+  .section-{{ section.id }}-padding .card--media .card__media picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Center collection names */
+.section-{{ section.id }}-padding .card__heading,
+.section-{{ section.id }}-padding .card__heading a {
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="page-width">
+    <h1
+      class="collection-list-title title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.heading_alignment == 'center' %} center{% endif %}"
+    >
+      {{ section.settings.title }}
+    </h1>
+
+    {%- liquid
+      case section.settings.sort
+        when 'products_high', 'products_low'
+          assign collections = collections | sort: 'all_products_count'
+        when 'date', 'date_reversed'
+          assign collections = collections | sort: 'published_at'
+      endcase
+
+      if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+        assign collections = collections | reverse
+      endif
+
+      assign moduloResult = 28 | modulo: section.settings.columns_desktop
+      assign paginate_by = 30
+      if moduloResult == 0
+        assign paginate_by = 28
+      endif
+    -%}
+
+    {%- paginate collections by paginate_by -%}
+      <ul
+        class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        role="list"
+      >
+        {%- for collection in collections -%}
+          <li
+            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-collection',
+              card_collection: collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: 3
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+      {% render 'pagination', paginate: paginate %}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-list-collections.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:sections.main-list-collections.settings.title.label",
+      "default": "t:sections.main-list-collections.settings.title.default"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "sort",
+      "options": [
+        {
+          "value": "alphabetical",
+          "label": "t:sections.main-list-collections.settings.sort.options__1.label"
+        },
+        {
+          "value": "alphabetical_reversed",
+          "label": "t:sections.main-list-collections.settings.sort.options__2.label"
+        },
+        {
+          "value": "date_reversed",
+          "label": "t:sections.main-list-collections.settings.sort.options__3.label"
+        },
+        {
+          "value": "date",
+          "label": "t:sections.main-list-collections.settings.sort.options__4.label"
+        },
+        {
+          "value": "products_high",
+          "label": "t:sections.main-list-collections.settings.sort.options__5.label"
+        },
+        {
+          "value": "products_low",
+          "label": "t:sections.main-list-collections.settings.sort.options__6.label"
+        }
+      ],
+      "default": "alphabetical",
+      "label": "t:sections.main-list-collections.settings.sort.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-list-collections.settings.image_ratio.label",
+      "info": "t:sections.main-list-collections.settings.image_ratio.info"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.main-list-collections.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-list-collections.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-list-collections.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-list-collections.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "2",
+      "label": "t:sections.main-list-collections.settings.columns_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    }
+  ]
+}
+{% endschema %}

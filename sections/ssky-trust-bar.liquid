@@ -1,0 +1,110 @@
+{%- comment -%}
+  sections/ssky-trust-bar.liquid
+  Styles live in assets/sections-homepage-redesign.css
+{%- endcomment -%}
+
+<div class="ssky-trust-bar" data-ssky-trust-bar>
+  <div
+    class="ssky-trust-bar__wrap ssky-trust-bar--{{ section.settings.style }} color-{{ section.settings.color_scheme }}"
+    style="--ssky-trust-pad-m: {{ section.settings.padding_y_mobile }}px; --ssky-trust-pad-d: {{ section.settings.padding_y_desktop }}px;"
+  >
+    <div class="page-width">
+      <div class="ssky-trust-bar__grid">
+        {%- for block in section.blocks -%}
+          <div class="ssky-trust-bar__item" {{ block.shopify_attributes }}>
+            {%- if section.settings.show_images and block.settings.image != blank -%}
+              <div class="ssky-trust-bar__icon">
+                {{ block.settings.image | image_url: width: 120 | image_tag: loading: 'lazy' }}
+              </div>
+            {%- endif -%}
+
+            <div class="ssky-trust-bar__content">
+              {%- if block.settings.title != blank -%}
+                <div class="ssky-trust-bar__title">{{ block.settings.title }}</div>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="ssky-trust-bar__text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Bar",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Light (example 1)" },
+        { "value": "teal", "label": "Teal bar (example 2)" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_images",
+      "label": "Show images/icons",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_y_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding (mobile)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "padding_y_desktop",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding (desktop)",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "limit": 4,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image/Icon (optional)" },
+        { "type": "text", "id": "title", "label": "Title", "default": "50,000+" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Active Tuttle Twins families" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Bar",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

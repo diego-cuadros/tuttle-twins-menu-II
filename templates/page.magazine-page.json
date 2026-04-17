@@ -1,0 +1,398 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": true,
+        "corner_color": ""
+      }
+    },
+    "sskymo_product_column_h_JPixUM": {
+      "type": "sskymo-product-column-h",
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_block_d_RVdgCg": {
+      "type": "sskymo-text-block-d",
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 120,
+        "color_scheme": "",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "sskymo_text_image_block_i_k4TxaM": {
+      "type": "sskymo-text-image-block-i",
+      "settings": {
+        "image_position": "image-right",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": true,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_JnzK3N": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "text_Kyhci8": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Activating the Next Generation of Free Thinkers</p>",
+            "text_size": "medium",
+            "text_weight": "medium"
+          }
+        },
+        "heading_y4pnHx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What's Inside<br/>The Tuttle Times Magazine?</p>",
+            "custom_color": "",
+            "alignment": "center",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h1",
+            "center": false
+          }
+        },
+        "text_eRFLzV": {
+          "type": "text",
+          "settings": {
+            "max_width": 70,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Every month you get a new thought provoking magazine, 20 pages designed specifically for your children to enjoy, learn, and have fun with as they learn!<br/><br/>It’s packed with information and activities that stimulate curiosity while they reinforce principles of freedom. It also includes a downloadable PDF Parent Guide with article overviews and family dinner table conversation starters.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_EkbAE8": {
+          "type": "text",
+          "settings": {
+            "max_width": 71,
+            "custom_color": "",
+            "alignment": "center",
+            "text": "<p>Even Better: Upgrade to Magazine Plus and get our bonus Plus Pack with more activities for your kids, writing prompts, and other parent articles to help your kids (and you!) gain even more from the magazine.</p>",
+            "text_size": "medium",
+            "text_weight": "semibold"
+          }
+        },
+        "background_qqdQrF": {
+          "type": "background",
+          "settings": {
+            "image_mobile": "shopify://shop_images/section_background_with_magazines_3.webp",
+            "image": "shopify://shop_images/section_background_with_magazines_3.webp",
+            "background": "#ffffff",
+            "background_overlay": 0,
+            "padding_top": 200,
+            "padding_bottom": 200,
+            "wide_background": true,
+            "ultra_wide_background": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Kyhci8",
+        "heading_y4pnHx",
+        "text_eRFLzV",
+        "text_EkbAE8",
+        "background_qqdQrF"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "max_width": 100,
+        "color_scheme": "scheme-2",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_image_block_d8d3Vb": {
+      "type": "ssky-text-image-block",
+      "blocks": {
+        "heading_rYX7XW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The “Freedom Lovers” Guarantee</p>",
+            "heading_size": "h0",
+            "heading_weight": "bold",
+            "heading_tag": "h2"
+          }
+        },
+        "text_A9ppyJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are serious about helping your family’s education and the future of freedom in our society.<br/><br/>To us, the most important thing is that you have the tools to share your values with your children—especially in a world full of people who want to influence your kids in a different direction.<br/><br/>If for any reason you don’t enjoy The Tuttle Times or believe we haven’t contributed to your family positively, we will refund your money in full. We have a 100% Unconditional Money-Back Guarantee. Just drop us a line within 30 days of your purchase.<br/><br/>You’ve got nothing at all to lose. So give your children a foundation of freedom today!</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rYX7XW",
+        "text_A9ppyJ"
+      ],
+      "settings": {
+        "background_position": "center center",
+        "background_size": "cover",
+        "background_overlay": false,
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50,
+        "image": "shopify://shop_images/freedom-lovers.webp",
+        "rounded": true,
+        "image_fit": false,
+        "image_position": "image-left",
+        "image_size": "large",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "narrow_width": false,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "overflow_image": 0,
+        "merge_with_section_above": false,
+        "remove_bottom_space": false,
+        "custom_class": "merge-image-above",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "top_left": true,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": "#04aed8"
+      }
+    },
+    "ssky_testimonials_K8dR3T": {
+      "type": "ssky-testimonials",
+      "blocks": {
+        "heading_wbVy6A": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Hear how the <em>Tuttle Times</em> is changing families…</p>",
+            "heading_size": "h1"
+          }
+        },
+        "testimonial_column_vtwo_fLBw6H": {
+          "type": "testimonial_column_vtwo",
+          "settings": {
+            "richtext": "<p>“My kids have loved the Tuttle Twins books, and <strong>I love adding the magazine content as a monthly benefit to keep them engaged!</strong> So exciting!“</p>",
+            "author": "– Arie Robison, Austin, TX"
+          }
+        },
+        "testimonial_column_vtwo_gkifQk": {
+          "type": "testimonial_column_vtwo",
+          "settings": {
+            "richtext": "<p>“<strong>I think my kids read their first magazine five times in a row</strong> and now quiz me to see if they’re smarter than me. They’re getting there!“</p>",
+            "author": "– Carl Albin, Rapid City, SD"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wbVy6A",
+        "testimonial_column_vtwo_fLBw6H",
+        "testimonial_column_vtwo_gkifQk"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "max_width": 90,
+        "review_stars": "shopify://shop_images/5-Stars-1.webp",
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    },
+    "ssky_text_block_MXJc3a": {
+      "type": "ssky-text-block",
+      "blocks": {
+        "heading_38Pzbm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Get the Magazine and Join the Growing Movement of Freedom Thinkers in America. Take the Future Into Your Own Hands.</p>",
+            "custom_color": "",
+            "alignment": "left",
+            "heading_size": "h1",
+            "heading_weight": "bold",
+            "heading_tag": "h2",
+            "center": false
+          }
+        },
+        "text_DWNBQr": {
+          "type": "text",
+          "settings": {
+            "max_width": 66,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>We need a new generation of leaders, thinkers, and doers to take on the challenges of our time. Each monthly issue is packed with valuable lessons  that encourage children to think, question and explore the world around them.</p>",
+            "text_size": "medium",
+            "text_weight": "regular"
+          }
+        },
+        "text_84pRRV": {
+          "type": "text",
+          "settings": {
+            "max_width": 100,
+            "custom_color": "",
+            "alignment": "left",
+            "text": "<p>A monthly magazine of the future… for kids today.</p>",
+            "text_size": "medium",
+            "text_weight": "bold"
+          }
+        },
+        "button_FBC6BN": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "button_large": true,
+            "button_medium": false,
+            "button_full": false,
+            "button_label": "Subscribe Now - Completely Risk Free",
+            "button_link": "shopify://products/tuttle-times-magazine",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "text_below_buttons": "",
+            "custom_color": "",
+            "product": "",
+            "product_button_label": "",
+            "show_price": false
+          }
+        },
+        "background_WeTJhA": {
+          "type": "background",
+          "settings": {
+            "image_mobile": "shopify://shop_images/mag-girl.webp",
+            "image": "shopify://shop_images/mag-girl.webp",
+            "background": "#bcecf6",
+            "background_overlay": 60,
+            "padding_top": 100,
+            "padding_bottom": 100,
+            "wide_background": true,
+            "ultra_wide_background": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_38Pzbm",
+        "text_DWNBQr",
+        "text_84pRRV",
+        "button_FBC6BN",
+        "background_WeTJhA"
+      ],
+      "settings": {
+        "content_alignment": "left",
+        "max_width": 82,
+        "color_scheme": "",
+        "twi_max_width": 120,
+        "twi_margin": 20,
+        "show_as_card": false,
+        "color_scheme_show_as_card": "",
+        "narrow_width": false,
+        "text_button_split": false,
+        "merging_with_section_below": false,
+        "color_scheme_layout_merging": "",
+        "merging_color": "#bcecf6",
+        "merge_with_section_above": false,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "top_left": false,
+        "top_right": false,
+        "bottom_right": false,
+        "bottom_left": false,
+        "corner_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sskymo_product_column_h_JPixUM",
+    "sskymo_text_block_d_RVdgCg",
+    "sskymo_text_image_block_i_k4TxaM",
+    "ssky_text_block_JnzK3N",
+    "ssky_text_image_block_d8d3Vb",
+    "ssky_testimonials_K8dR3T",
+    "ssky_text_block_MXJc3a"
+  ]
+}

@@ -1,0 +1,175 @@
+{%- style -%}
+  .ssky-text-block__highlights-con-{{ block.id }} {
+    margin-top: {{ block.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ block.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  } 
+  @media screen and (min-width: 750px) {
+    .ssky-text-block__highlights-con-{{ block.id }} {
+      margin-top: {{ block.settings.margin_top }}px;
+      margin-bottom: {{ block.settings.margin_bottom }}px;
+    }
+  }
+  {% if block.settings.custom_css != blank %}
+    {% assign tt_css = '.ssky-text-block__highlights-con-' | append: block.id %}
+    {{ block.settings.custom_css | replace: '[TT_CSS]', tt_css }}
+  {% endif %}
+{%- endstyle -%}
+
+<div class="ssky-text-block__highlights-con ssky-text-block__highlights-con-{{ block.id }}">
+  <div
+    class="ssky-text-block__highlights {{ block.settings.alignment }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}>
+    {% for i in (1..10) %}
+      {%- liquid
+        assign text_id = 'highlight_' | append: i
+        assign color_id = 'custom_color_' | append: i
+        assign text = block.settings[text_id]
+        assign color = block.settings[color_id]
+      -%}
+      {% if text != blank %}
+        <div class="ssky-text-block__highlight">
+          <div class="rte"{% if color != blank %} style="{{ color }}"{% endif %}>{{ text }}</div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Highlights",
+    "settings": [
+      {
+        "type": "select",
+        "id": "alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "label": "Text alignment"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_1",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label",
+        "default": "t:sections.ssky_text_block.blocks.highlight.settings.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_1",
+        "label": "Custom text color (item A)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_2",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label",
+        "default": "t:sections.ssky_text_block.blocks.highlight.settings.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_2",
+        "label": "Custom text color (item B)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_3",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label",
+        "default": "t:sections.ssky_text_block.blocks.highlight.settings.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_3",
+        "label": "Custom text color (item C)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_4",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label",
+        "default": "t:sections.ssky_text_block.blocks.highlight.settings.default"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_4",
+        "label": "Custom text color (item D)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_5",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_5",
+        "label": "Custom text color (item E)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_6",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_6",
+        "label": "Custom text color (item F)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_7",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_7",
+        "label": "Custom text color (item G)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_8",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_8",
+        "label": "Custom text color (item H)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_9",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_9",
+        "label": "Custom text color (item I)"
+      },
+      {
+        "type": "richtext",
+        "id": "highlight_10",
+        "label": "t:sections.ssky_text_block.blocks.highlight.settings.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_color_10",
+        "label": "Custom text color (item J)"
+      },
+      {
+        "type": "liquid",
+        "id": "custom_css",
+        "label": "Custom CSS",
+        "info": "Always use prefix [TT_CSS] for every CSS example [TT_CSS] .class {margin: 0}. [TT_CSS] will generate block dynamic ID"
+      }
+    ],
+    "presets": [
+      { "name": "Highlights" }
+    ]
+  }
+{% endschema %}

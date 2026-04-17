@@ -1,0 +1,886 @@
+{{ 'ssky-product-breakdown.css' | asset_url | stylesheet_tag }}
+{{ 'ssky-product-order-block.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+
+  assign show_as_card = false
+  assign narrow_width = false
+
+  if section.settings.show_as_card == true
+    assign show_as_card = true
+    if section.settings.narrow_width == true
+      assign narrow_width = true
+    endif
+  endif
+-%}
+
+{% style %}
+  .ttm-combo-blocks-{{ section.id }} .ttm-combo-blocks {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background-color: {{ section.settings.section_background }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .ttm-combo-blocks-{{ section.id }} .ttm-combo-blocks {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {% if show_as_card %}
+    .ttm-combo-blocks-{{ section.id }} .ttm-combo-blocks__inner {
+      padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      border-radius: 45px;
+      background-color: inherit;
+    }
+  {% endif %}
+
+  {% if narrow_width %}
+    .ttm-combo-blocks-{{ section.id }} .ttm-combo-blocks__inner {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  {% endif %}
+
+  /* No global margin between rows; block paddings control vertical rhythm */
+  .ttm-combo-blocks-{{ section.id }} .ttm-combo-blocks__inner > * + * {
+    margin-top: 0;
+  }
+
+  /* Description links */
+  .ttm-combo-blocks-{{ section.id }} .ttm-description__text a {
+    color: #da5846 !important;
+  }
+
+  .ttm-combo-blocks-{{ section.id }} .ttm-description__text a:hover {
+    color: #da5846 !important;
+    text-decoration: underline;
+  }
+
+  /* Description layout: stacked on mobile, side-by-side on desktop */
+  .ttm-combo-blocks-{{ section.id }} .ttm-description__wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 990px) {
+    .ttm-combo-blocks-{{ section.id }} .ttm-description__wrapper {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      flex-direction: row; /* default: image left, text right */
+    }
+
+    .ttm-combo-blocks-{{ section.id }} .ttm-description__wrapper.image-right {
+      flex-direction: row-reverse; /* image right, text left */
+    }
+  }
+
+  /* NEW: On mobile, force description columns to 100% width */
+  @media screen and (max-width: 989px) {
+    .ttm-combo-blocks-{{ section.id }} .ttm-description__image-column,
+    .ttm-combo-blocks-{{ section.id }} .ttm-description__text-column {
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+      width: 100%;
+    }
+  }
+  .ssky-text-block__highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    column-gap: 2rem;
+    row-gap: 0.75rem;
+  }
+  @media screen and (max-width: 749px) {
+    .ssky-text-block__highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ttm-combo-blocks-{{ section.id }}">
+  <div class="ttm-combo-blocks content-container color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class }}">
+    {% if show_as_card %}<div class="page-width">{% endif %}
+    <div class="ttm-combo-blocks__inner {%- if show_as_card %} color-{{ section.settings.color_scheme_show_as_card }} gradient{%- endif -%}">
+
+      {% for block in section.blocks %}
+        {% case block.type %}
+
+          {% comment %}
+            DESCRIPTION BLOCK (GUIDEBOOK)
+          {% endcomment %}
+          {% when 'description' %}
+            {% assign gd = block.settings.guidebook_description %}
+            {% if gd %}
+              <div class="ttm-description-block-row"
+                   {% if block.settings.corner_bg_color != blank %}style="background-color: {{ block.settings.corner_bg_color }};"{% endif %}>
+                <div
+                  class="content-container color-{{ block.settings.color_scheme }} gradient"
+                  style="
+                    border-radius:
+                      {% if block.settings.top_left %}15vw{% else %}0{% endif %}
+                      {% if block.settings.top_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_left %} 15vw{% else %} 0{% endif %};
+                    overflow:hidden;
+                  "
+                >
+                  <div class="page-width">
+                    <div
+                      class="ttm-description__wrapper image-{{ block.settings.image_position }}"
+                      style="
+                        padding-top: {{ block.settings.padding_top }}px;
+                        padding-bottom: {{ block.settings.padding_bottom }}px;
+                      "
+                    >
+                      {%- liquid
+                        assign active_image = nil
+                        if gd.image != blank
+                          assign active_image = gd.image
+                        elsif block.settings.fallback_image != blank
+                          assign active_image = block.settings.fallback_image
+                        endif
+
+                        assign padding_bottom = 100
+                        if active_image and active_image.aspect_ratio
+                          assign padding_bottom = 1 | divided_by: active_image.aspect_ratio | times: 100 | at_most: 120
+                        endif
+                      -%}
+
+                      <div
+                        class="ttm-description__image-column"
+                        style="flex-basis:{{ block.settings.image_width_desktop }}%; max-width:{{ block.settings.image_width_desktop }}%;"
+                      >
+                        <div class="ssky-text-image-block__image">
+                          <div
+                            class="{% if active_image %}media{% else %}placeholder{% endif %}{% if block.settings.image_fit %} image-fit{% endif %}"
+                            style="padding-bottom:{{ padding_bottom }}%;"
+                          >
+                            {% if active_image %}
+                              {% assign widths = '360, 535, 750, 1070, 1500' %}
+                              {% capture sizes %}{% render 'ssky-sizes-attr', width: 'half_width' %}{% endcapture %}
+                              {{
+                                active_image
+                                | image_url: width: 900
+                                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                              }}
+                            {% else %}
+                              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="ttm-description__text-column ssky-text-block__blocks {{ block.settings.content_alignment }}"
+                        style="flex-basis:{{ 100 | minus: block.settings.image_width_desktop }}%; max-width:{{ 100 | minus: block.settings.image_width_desktop }}%;"
+                      >
+                        {% if gd.heading != blank %}
+                          <h2 class="ssky-text-block__heading rte h2 weight-bold">
+                            {{ gd.heading }}
+                          </h2>
+                        {% endif %}
+
+                        {% if gd.text != blank %}
+                          <div class="ssky-text-block__text ttm-description__text rte text-large weight-regular">
+                            {{ gd.text | metafield_tag }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+          {% comment %}
+            PRODUCT BREAKDOWN BLOCK
+          {% endcomment %}
+          {% when 'product' %}
+            {% assign pb = block.settings.product_breakdown %}
+            {% if pb and pb.product and pb.product.value %}
+              {% assign block_product = pb.product.value %}
+              {% assign product_form_id = 'product-form-' | append: section.id | append: block.id | append: block_product.id %}
+
+              <div class="ttm-product-block-row"
+                   {% if block.settings.corner_bg_color != blank %}style="background-color: {{ block.settings.corner_bg_color }};"{% endif %}>
+                <div
+                  class="ssky-product-breakdown content-container color-{{ block.settings.color_scheme }} gradient"
+                  style="
+                    border-radius:
+                      {% if block.settings.top_left %}15vw{% else %}0{% endif %}
+                      {% if block.settings.top_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_left %} 15vw{% else %} 0{% endif %};
+                    overflow:hidden;
+                  "
+                >
+                  {% if block.settings.show_as_card %}
+                    <div class="page-width">
+                      <div
+                        class="ssky-product-breakdown__wrapper ssky-text-block__wrapper color-{{ block.settings.color_scheme_show_as_card }} gradient"
+                        style="
+                          padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+                          padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+                          border-radius: 45px;
+                        "
+                      >
+                        <div class="ssky-product-breakdown__product center">
+                          <div class="ssky-text-block__blocks">
+                            <div
+                              class="ssky-product-breakdown__image media image-fit"
+                              {% if block_product.featured_image != blank %}
+                                style="padding-bottom:{{ 1 | divided_by: block_product.featured_image.aspect_ratio | times: 100 | at_most: 120 }}%;"
+                              {% else %}
+                                style="padding-bottom:100%;"
+                              {% endif %}
+                            >
+                              {% if block_product.featured_image != blank %}
+                                {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                              {% else %}
+                                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                              {% endif %}
+                            </div>
+
+                            <div class="ssky-product-breakdown__price">
+                              {% render 'price', product: block_product, show_compare_at_price: true %}
+                            </div>
+
+                            {% if pb.add_to_cart_button_label != blank %}
+                              {% if pb.button_type == 'link' %}
+                                <a href="{{ pb.link }}" class="button button--primary">
+                                  {{ pb.add_to_cart_button_label | default: "Buy the book" }}
+                                </a>
+                              {% else %}
+                                {% render 'buy-buttons',
+                                  product: block_product,
+                                  product_form_id: product_form_id,
+                                  section_id: section.id,
+                                  block: nil,
+                                  is_product_column: true,
+                                  is_button_large: false,
+                                  button_label: pb.add_to_cart_button_label | default: "Buy the book"
+                                %}
+                              {% endif %}
+                            {% endif %}
+                          </div>
+                        </div>
+
+                        <div class="ssky-product-breakdown__content ssky-text-block__blocks {{ block.settings.content_alignment }}">
+                          {% if pb.text != blank %}
+                            <div class="ssky-text-block__text rte text-large weight-semibold">
+                              <div class="rte" style="max-width:{{ block.settings.text_max_width }}rem;">
+                                {{ pb.text | metafield_tag }}
+                              </div>
+                            </div>
+                          {% endif %}
+
+                          {% if pb.highlights and pb.highlights.value and pb.highlights.value.size > 0 %}
+                            <div class="ssky-text-block__highlights-con">
+                              <div
+                                class="ssky-text-block__highlights"
+                              >
+                                {% for item in pb.highlights.value %}
+                                  {% if item != blank %}
+                                    <div class="ssky-text-block__highlight">
+                                      <span class="svg-wrapper">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
+                                      <div class="rte">{{ item }}</div>
+                                    </div>
+                                  {% endif %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  {% else %}
+                    <div
+                      class="ssky-product-breakdown__wrapper ssky-text-block__wrapper page-width"
+                      style="
+                        padding-top: {{ block.settings.padding_top }}px;
+                        padding-bottom: {{ block.settings.padding_bottom }}px;
+                      "
+                    >
+                      <div class="ssky-product-breakdown__product center">
+                        <div class="ssky-text-block__blocks">
+                          <div
+                            class="ssky-product-breakdown__image media image-fit"
+                            {% if block_product.featured_image != blank %}
+                              style="padding-bottom:{{ 1 | divided_by: block_product.featured_image.aspect_ratio | times: 100 | at_most: 120 }}%;"
+                            {% else %}
+                              style="padding-bottom:100%;"
+                            {% endif %}
+                          >
+                            {% if block_product.featured_image != blank %}
+                              {{ block_product.featured_image | image_url: width: 560 | image_tag }}
+                            {% else %}
+                              {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% endif %}
+                          </div>
+
+                          
+                          <div class="ssky-product-breakdown__price">
+                            {% render 'price', product: block_product, show_compare_at_price: true %}
+                          </div>
+                          
+
+                          {% if pb.add_to_cart_button_label != blank %}
+                            {% if pb.button_type.value == 'Link' %}
+                              <a href="{{ pb.link }}" class="button button--primary">
+                                {{ pb.add_to_cart_button_label | default: "Buy the book" }}
+                              </a>
+                            {% else %}
+                              {% render 'buy-buttons',
+                                product: block_product,
+                                product_form_id: product_form_id,
+                                section_id: section.id,
+                                block: nil,
+                                is_product_column: true,
+                                is_button_large: false,
+                                button_label: pb.add_to_cart_button_label | default: "Buy the book"
+                              %}
+                            {% endif %}
+                          {% endif %}
+                        </div>
+                      </div>
+
+                      <div class="ssky-product-breakdown__content ssky-text-block__blocks {{ block.settings.content_alignment }}">
+                        {% if pb.text != blank %}
+                          <div class="ssky-text-block__text rte text-large weight-semibold">
+                            <div class="rte" style="max-width:{{ block.settings.text_max_width }}rem;">
+                              {{ pb.text | metafield_tag }}
+                            </div>
+                          </div>
+                        {% endif %}
+
+                        {% if pb.highlights and pb.highlights.value and pb.highlights.value.size > 0 %}
+                          <div class="ssky-text-block__highlights-con">
+                            <div
+                              class="ssky-text-block__highlights"
+                            >
+                              {% for item in pb.highlights.value %}
+                                {% if item != blank %}
+                                  <div class="ssky-text-block__highlight">
+                                    <span class="svg-wrapper">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
+                                    <div class="rte">{{ item }}</div>
+                                  </div>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% elsif request.design_mode %}
+              <p>Add text and highlights to your <strong>TT Product breakdown</strong> metaobject.</p>
+            {% endif %}
+
+          {% comment %}
+            ORDER BLOCK
+          {% endcomment %}
+          {% when 'order' %}
+            {% assign ob = block.settings.order_block %}
+            {% if ob %}
+              {% assign order_product = nil %}
+              {% if ob.link_add_to_cart_button and ob.link_add_to_cart_button.value %}
+                {% assign order_product = ob.link_add_to_cart_button.value %}
+              {% endif %}
+              <div class="ttm-order-block-row"
+                   {% if block.settings.corner_bg_color != blank %}style="background-color: {{ block.settings.corner_bg_color }};"{% endif %}>
+                <div
+                  class="content-container color-{{ block.settings.color_scheme }} gradient"
+                  style="
+                    border-radius:
+                      {% if block.settings.top_left %}15vw{% else %}0{% endif %}
+                      {% if block.settings.top_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_right %} 15vw{% else %} 0{% endif %}
+                      {% if block.settings.bottom_left %} 15vw{% else %} 0{% endif %};
+                    overflow:hidden;
+                  "
+                >
+                  <div class="page-width">
+                    <div
+                      class="ttm-order-inner ssky-text-block__blocks {{ block.settings.content_alignment }}"
+                      style="
+                        padding-top: {{ block.settings.padding_top }}px;
+                        padding-bottom: {{ block.settings.padding_bottom }}px;
+                      "
+                    >
+                      <div class="ssky-pdorder-block__order-block ssky-pdorder-block__order-block--three" style="max-width:{{ block.settings.max_width }}rem;margin-left:auto;margin-right:auto;">
+                        <div class="ssky-pdorder-block__order-block-left ssky-text-block__blocks">
+                          {% if ob.heading != blank %}
+                            {% assign heading_length = ob.heading | metafield_text | size %}
+                            <h2
+                              class="ssky-text-block__heading rte h3 weight-semibold{% if heading_length > 35 %} ssky-text-block__heading--long{% endif %}"
+                            >
+                              {{ ob.heading }}
+                            </h2>
+                          {% endif %}
+
+                          {% if ob.description != blank %}
+                            <div class="ssky-text-block__text rte text-medium">
+                              <div class="rte">
+                                {{ ob.description | metafield_tag }}
+                              </div>
+                            </div>
+                          {% endif %}
+
+                          {% if order_product %}
+                            <div class="ssky-text-block__buttons">
+                              {% assign order_form_id = 'product-form-' | append: section.id | append: block.id | append: order_product.id %}
+                              {% render 'buy-buttons',
+                                product: order_product,
+                                product_form_id: order_form_id,
+                                section_id: section.id,
+                                button_label: ob.add_to_cart_button_label
+                              %}
+                            </div>
+                          {% endif %}
+
+                          {% if ob.text_below_button != blank %}
+                            <div class="ssky-text-block__text weight-medium rte">
+                              {{ ob.text_below_button }}
+                            </div>
+                          {% endif %}
+                        </div>
+
+                        {% if order_product %}
+                          <div class="ssky-pdorder-block__order-block-right ssky-text-block__blocks">
+                            <div class="ssky-pdorder-block__price">
+                              <div class="ssky-pdorder-block__price-compare">
+                                {% if ob.price_label != blank %}
+                                  <div>{{ ob.price_label }}</div>
+                                {% endif %}
+                                {% render 'price', product: order_product, show_compare_at_price: true, hide_currency_code: true %}
+                              </div>
+                              <div class="ssky-pdorder-block__price-regular">
+                                {% render 'price', product: order_product, show_compare_at_price: true, hide_currency_code: true %}
+                              </div>
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+        {% endcase %}
+      {% endfor %}
+
+    </div>
+    {% if show_as_card %}</div>{% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TTm Combined PDP blocks",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Use Description, Product, and Order blocks in one section to avoid the 25-section limit. Add them in the order: Description → Product → Order."
+    },
+    {
+      "type": "header",
+      "content": "Section styling"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_as_card",
+      "label": "Display section as card (small rounded corners around all rows)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_width",
+      "label": "Limit section content width",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "description",
+      "name": "Description (Guidebook)",
+      "settings": [
+        {
+          "type": "metaobject",
+          "id": "guidebook_description",
+          "label": "Guidebook description metaobject",
+          "metaobject_type": "guidebook_descriptions"
+        },
+        {
+          "type": "image_picker",
+          "id": "fallback_image",
+          "label": "Fallback image"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_fit",
+          "label": "Image fit (cover)",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "image_width_desktop",
+          "min": 30,
+          "max": 70,
+          "step": 5,
+          "default": 50,
+          "label": "Image column width on desktop (%)"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position on desktop",
+          "options": [
+            { "value": "left", "label": "Image left, text right" },
+            { "value": "right", "label": "Image right, text left" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            { "value": "left", "label": "Align left" },
+            { "value": "center", "label": "Align center" },
+            { "value": "right", "label": "Align right" }
+          ],
+          "default": "left",
+          "label": "Text alignment"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Description color scheme",
+          "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "Description padding & big corners"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Top padding inside band",
+          "default": 32
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Bottom padding inside band",
+          "default": 32
+        },
+        {
+          "type": "checkbox",
+          "id": "top_left",
+          "label": "Top left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "top_right",
+          "label": "Top right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_right",
+          "label": "Bottom right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_left",
+          "label": "Bottom left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "corner_bg_color",
+          "label": "Corner background color (behind band)",
+          "default": "#ffffff"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product breakdown",
+      "settings": [
+        {
+          "type": "metaobject",
+          "id": "product_breakdown",
+          "label": "Product breakdown metaobject",
+          "metaobject_type": "product_breakdown"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            { "value": "left", "label": "Align left" },
+            { "value": "center", "label": "Align center" },
+            { "value": "right", "label": "Align right" }
+          ],
+          "default": "left",
+          "label": "Text alignment"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "min": 72,
+          "max": 120,
+          "step": 1,
+          "default": 100,
+          "label": "Text max width (rem)"
+        },
+        {
+          "type": "range",
+          "id": "highlight_columns",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 2,
+          "label": "Highlight columns (desktop)"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Product color scheme (band)",
+          "default": "scheme-2"
+        },
+        {
+          "type": "header",
+          "content": "Product padding, card layout & big corners"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "default": 32,
+          "unit": "px",
+          "label": "Top padding inside band"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "default": 32,
+          "unit": "px",
+          "label": "Bottom padding inside band"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_as_card",
+          "label": "Layout: show as card inside band",
+          "default": false
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_show_as_card",
+          "label": "Card color scheme (inner wrapper)",
+          "default": "scheme-4"
+        },
+        {
+          "type": "checkbox",
+          "id": "top_left",
+          "label": "Top left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "top_right",
+          "label": "Top right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_right",
+          "label": "Bottom right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_left",
+          "label": "Bottom left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "corner_bg_color",
+          "label": "Corner background color (behind band)",
+          "default": "#ffffff"
+        }
+      ]
+    },
+    {
+      "type": "order",
+      "name": "Order block",
+      "settings": [
+        {
+          "type": "metaobject",
+          "id": "order_block",
+          "label": "Order block metaobject",
+          "metaobject_type": "teen_bundle_order_12_books"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            { "value": "left", "label": "Align left" },
+            { "value": "center", "label": "Align center" },
+            { "value": "right", "label": "Align right" }
+          ],
+          "default": "left",
+          "label": "Text alignment"
+        },
+        {
+          "type": "range",
+          "id": "max_width",
+          "min": 60,
+          "max": 120,
+          "step": 2,
+          "default": 80,
+          "label": "Order block content max width (rem)"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Order block color scheme (band)",
+          "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "Order padding & big corners"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "default": 32,
+          "unit": "px",
+          "label": "Top padding inside band"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "default": 32,
+          "unit": "px",
+          "label": "Bottom padding inside band"
+        },
+        {
+          "type": "checkbox",
+          "id": "top_left",
+          "label": "Top left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "top_right",
+          "label": "Top right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_right",
+          "label": "Bottom right swoopy corner",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "bottom_left",
+          "label": "Bottom left swoopy corner",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "corner_bg_color",
+          "label": "Corner background color (behind band)",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TTm Combined PDP blocks",
+      "blocks": [
+        { "type": "description" },
+        { "type": "product" },
+        { "type": "order" }
+      ]
+    }
+  ]
+}
+{% endschema %}

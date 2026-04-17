@@ -25,6 +25,97 @@
         <div class="dc_menu-drawer__navigation-container">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
+              {% when 'expandable_submenu' %}
+                <div class="dc_expandable-submenu-container">
+                  {% if block.settings.use_collapsible_menu %}
+                    <div
+                      class="dc_expandable-header dc_expandable-toggle"
+                      role="button"
+                      tabindex="0"
+                      aria-expanded="false"
+                    >
+                      <div class="dc_expandable-submenu-label">
+                        <img
+                          src="{{ block.settings.menu_item_icon | image_url: width: 56 }}"
+                          alt="{{ block.settings.menu_item_label | escape }}"
+                          width="{{ image.width }}"
+                          height="{{ image.height }}"
+                          class="dc_expandable-submenu-icon"
+                        >
+                        <p class="dc_expandable-submenu-label__text">{{ block.settings.menu_item_label | escape }}</p>
+                      </div>
+                      <span class="dc_expandable-chevron">{% render 'icon-chevron' %}</span>
+                    </div>
+                    <div class="dc_expandable-submenu-links dc_expandable-submenu-links--collapsible">
+                      <ul role="list">
+                        {%- for i in (1..5) -%}
+                          {%- capture label_id -%}submenu_item_{{ i }}_label{%- endcapture -%}
+                          {%- capture link_id -%}submenu_item_{{ i }}_link{%- endcapture -%}
+                          {%- capture icon_id -%}submenu_item_{{ i }}_icon{%- endcapture -%}
+                          {%- if block.settings[label_id] != blank -%}
+                            <li>
+                              <a href="{{ block.settings[link_id] | default: '#' }}" class="dc_link">
+                                {%- if block.settings[icon_id] != blank -%}
+                                  <img
+                                    class="dc_link-item__image"
+                                    src="{{ block.settings[icon_id] | image_url: width: 40 }}"
+                                    alt="{{ block.settings[label_id] | escape }}"
+                                    width="30"
+                                    height="30"
+                                  >
+                                {%- endif -%}
+                                <span>{{ block.settings[label_id] | escape }}</span>
+                              </a>
+                            </li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  {% else %}
+                    <a
+                      href="{{ block.settings.menu_item_link | default: '#' }}"
+                      class="dc_expandable-header"
+                    >
+                      <div class="dc_expandable-submenu-label">
+                        <img
+                          src="{{ block.settings.menu_item_icon | image_url: width: 56 }}"
+                          alt="{{ block.settings.menu_item_label | escape }}"
+                          width="{{ image.width }}"
+                          height="{{ image.height }}"
+                          class="dc_expandable-submenu-icon"
+                        >
+                        <p class="dc_expandable-submenu-label__text">{{ block.settings.menu_item_label | escape }}</p>
+                      </div>
+                    </a>
+                  {% endif %}
+                </div>
+              {% when 'banner_on_mobile_menu' %}
+                <a
+                  href="{{ block.settings.banner_link_mobile_menu | default: '#' }}"
+                  class="dc_menu_drawer__banner"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="dc_menu_drawer__banner-image-container">
+                    <img
+                      src="{{ block.settings.banner_image_mobile_menu | image_url: width: 800 }}"
+                      alt="{{ block.settings.banner_image_mobile_menu | escape }}"
+                      loading="lazy"
+                      width="{{ image.width }}"
+                      height="{{ image.height }}"
+                    >
+                    <div class="dc_mobile-banner-overlay">
+                      <div class="dc_banner-overlay-inner-container">
+                        <div class="dc_banner-tag">{{ block.settings.banner_tag_text | escape }}</div>
+                        <p class="dc_banner-heading">{{ block.settings.banner_heading_text | escape }}</p>
+                      </div>
+                      <div class="dc_banner-overlay-inner-container">
+                        <div class="dc_banner-button">
+                          {{ block.settings.banner_button_label | escape }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               {%- when 'shop_grid' -%}
                 <div class="dc_menu_drawer__shop-box" {{ block.shopify_attributes }}>
                   {% if block.settings.heading != blank %}
@@ -110,3 +201,22 @@
     </div>
   </details>
 </header-drawer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.dc_expandable-toggle').forEach(function (el) {
+      function toggle() {
+        var expanded = el.getAttribute('aria-expanded') === 'true';
+        el.setAttribute('aria-expanded', String(!expanded));
+        el.nextElementSibling.classList.toggle('is-open', !expanded);
+      }
+      el.addEventListener('click', toggle);
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  });
+</script>

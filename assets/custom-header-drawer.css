@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
 .dc_menu-drawer {
   background-color: black;
   position: absolute;
@@ -114,4 +116,225 @@
 
 .dc_menw-drawer__social-icons:last-child {
   padding-bottom: 5rem; /* Adds extra space at the bottom to ensure visibility */
+}
+
+.dc_menu_drawer__banner,
+.dc_menu_drawer__banner-image-container,
+.dc_mobile-banner-overlay {
+  border-radius: 6px;
+}
+
+.dc_menu_drawer__banner {
+  display: block;
+  background-color: #f2f7f8;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.dc_menu_drawer__banner-image-container {
+  align-items: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 110px;
+  width: 100%;
+}
+
+.dc_mobile-banner-overlay {
+  background: linear-gradient(
+    to right,
+    #444444 0%,
+    #444444 40%,
+    transparent 70%
+  );
+  display: flex;
+  flex-direction: row;
+  inset: 0;
+  position: absolute;
+  padding: 24px 12px;
+}
+
+.dc_banner-overlay-inner-container:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.dc_banner-overlay-inner-container:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.dc_banner-tag {
+  width: 138px;
+  height: 20px;
+  border-radius: 100px;
+  padding: 4px 8px;
+  background-color: #04aed8;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.dc_banner-heading {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  line-height: 120%;
+  color: #fff;
+  margin: 0;
+}
+
+.dc_banner-button {
+  width: 93px;
+  height: 30px;
+  border-radius: 4px;
+  padding: 0 10px;
+  background-color: #fff;
+  color: #212429;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.dc_menu_drawer__banner-image-container img {
+  border-radius: 6px;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dc_expandable-submenu-container {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  padding: 0px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.dc_expandable-header {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0px 0px 10px 0px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dc_expandable-chevron {
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.dc_expandable-toggle[aria-expanded="true"] .dc_expandable-chevron {
+  transform: rotate(180deg);
+}
+
+.dc_expandable-submenu-links--collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.dc_expandable-submenu-links--collapsible.is-open {
+  max-height: 600px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.dc_expandable-submenu-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.dc_expandable-submenu-label__text {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.dc_expandable-submenu-label img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.dc_expandable-submenu-links {
+  background-color: #f8f8f8;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.dc_expandable-submenu-links--collapsible {
+  padding: 0;
+  margin: 0;
+}
+
+.dc_expandable-submenu-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dc_expandable-submenu-links li {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.dc_expandable-submenu-links li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.dc_expandable-submenu-links .dc_link {
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.dc_expandable-submenu-links .dc_link-item__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }

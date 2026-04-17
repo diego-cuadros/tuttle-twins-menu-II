@@ -71,6 +71,55 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "shop_grid_k9NkEf": {
+          "type": "shop_grid",
+          "settings": {
+            "heading": "Shop",
+            "img_1": "shopify://shop_images/Frame_48102245.jpg",
+            "label_1": "Shop By Age",
+            "link_1": "shopify://pages/shop-by-age-v2",
+            "img_2": "shopify://shop_images/Frame_2.jpg",
+            "label_2": "Shop Bundles",
+            "link_2": "shopify://collections/bundles",
+            "img_3": "shopify://shop_images/Frame.jpg",
+            "label_3": "Online Academy",
+            "link_3": "https://www.tuttletwins.com/pages/academy",
+            "img_4": "shopify://shop_images/Frame_1.jpg",
+            "label_4": "Monthly Book Club",
+            "link_4": "https://www.tuttletwins.com/products/tuttle-twins-book-subscription",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "custom_menu_pDeFPy": {
+          "type": "custom_menu",
+          "settings": {
+            "bottomless_menu": "bottomless-mobile-menu-1",
+            "use_icons_as_bullets": true,
+            "icon_1": "shopify://shop_images/Vector.png",
+            "use_icon_1": 1,
+            "icon_2": "shopify://shop_images/Frame_4.png",
+            "use_icon_2": 2,
+            "icon_3": "shopify://shop_images/Frame_5.png",
+            "use_icon_3": 3,
+            "icon_4": "shopify://shop_images/Frame_6.png",
+            "use_icon_4": 4
+          }
+        },
+        "custom_menu_WMMepC": {
+          "type": "custom_menu",
+          "settings": {
+            "bottomless_menu": "bottomless-menu-2",
+            "use_icons_as_bullets": false
+          }
+        }
+      },
+      "block_order": [
+        "shop_grid_k9NkEf",
+        "custom_menu_pDeFPy",
+        "custom_menu_WMMepC"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
@@ -85,7 +134,10 @@
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 4,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "use_custom_mobile_menu_bottomless": true,
+        "mmenu_background_color": "#f2f7f8",
+        "use_custom_separator_line": true
       }
     },
     "z_custom_liquid_C3YVjz": {

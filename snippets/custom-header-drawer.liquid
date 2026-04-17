@@ -1,0 +1,112 @@
+{% comment %}
+  Renders a custom header drawer menu for mobile and desktop made by bottomless labs.
+
+  Usage:
+  {% render 'header-drawer' %}
+{% endcomment %}
+
+{{ 'custom-header-drawer.css' | asset_url | stylesheet_tag }}
+
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary
+      class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <span>
+        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+
+    <div id="menu-drawer" class="menu-drawer color-{{ section.settings.menu_color_scheme }}">
+      <div class="menu-drawer__inner-container">
+        {% comment %}custom code starts here{% endcomment %}
+        <div class="dc_menu-drawer__navigation-container">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'shop_grid' -%}
+                <div class="dc_menu_drawer__shop-box" {{ block.shopify_attributes }}>
+                  {% if block.settings.heading != blank %}
+                    <p class="dc_menu-drawer__shop-label">{{ block.settings.heading | escape }}</p>
+                  {% endif %}
+
+                  <div class="dc_menu-drawer__shop-grid">
+                    {%- for i in (1..4) -%}
+                      {%- capture img_id -%}img_{{ i }}{%- endcapture -%}
+                      {%- capture label_id -%}label_{{ i }}{%- endcapture -%}
+                      {%- capture link_id -%}link_{{ i }}{%- endcapture -%}
+
+                      {%- if block.settings[img_id] != blank -%}
+                        <a href="{{ block.settings[link_id] | default: '#' }}" class="dc_menu-drawer__shop-item">
+                          <img
+                            src="{{ block.settings[img_id] | image_url: width: 300 }}"
+                            alt="{{ block.settings[label_id] | escape }}"
+                            loading="lazy"
+                            width="{{ image.width }}"
+                            height="{{ image.height }}"
+                          >
+                          <div class="dc_menu-drawer__label-container">
+                            <p class="dc_menu-drawer_label">{{ block.settings[label_id] | escape }}</p>
+                          </div>
+                        </a>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+
+                  {% if block.settings.button_label != blank %}
+                    <a
+                      href="{{ block.settings.button_link | default: '#' }}"
+                      class="button button--large button--primary"
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {% endif %}
+                </div>
+
+              {%- when 'custom_menu' -%}
+                <nav class="menu-drawer__navigation" {{ block.shopify_attributes }}>
+                  <ul class="dc_menu-drawer__menu" role="list">
+                    {%- for link in linklists[block.settings.bottomless_menu].links -%}
+                      {%- liquid
+                        assign current_index = forloop.index
+                        assign icon_to_show = null
+                        if current_index == block.settings.use_icon_1
+                          assign icon_to_show = block.settings.icon_1
+                        elsif current_index == block.settings.use_icon_2
+                          assign icon_to_show = block.settings.icon_2
+                        elsif current_index == block.settings.use_icon_3
+                          assign icon_to_show = block.settings.icon_3
+                        elsif current_index == block.settings.use_icon_4
+                          assign icon_to_show = block.settings.icon_4
+                        endif
+                      -%}
+                      <li class="dc_link-item">
+                        <a href="{{ link.url }}" class="dc_link" style="display: flex; align-items: center; gap: 10px;">
+                          {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
+                            <img
+                              class="dc_link-item__image"
+                              src="{{ icon_to_show | image_url: width: 40 }}"
+                              width="{{ image.width }}"
+                              height="{{ image.height }}"
+                            >
+                          {%- endif -%}
+                          <span>{{ link.title | escape }}</span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </nav>
+            {%- endcase -%}
+            {%- assign second_to_last_index = forloop.length | minus: 1 %}
+
+            {%- if section.settings.use_custom_separator_line and forloop.index == second_to_last_index -%}
+              <hr class="dc_menu-drawer_separator-line">
+            {%- endif -%}
+          {%- endfor -%}
+          {% render 'social-icons', class: 'dc_menw-drawer__social-icons' %}
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

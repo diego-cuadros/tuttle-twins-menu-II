@@ -1,0 +1,117 @@
+.dc_menu-drawer {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.dc_menu_drawer__shop-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #f2f7f8;
+  padding: 16px;
+}
+
+.dc_menu-drawer__shop-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+  line-height: 120%;
+}
+
+.dc_menu-drawer__shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 8px;
+}
+
+.dc_menu-drawer__shop-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 8px;
+  text-decoration: none;
+  color: #3f3939;
+  width: 100%;
+}
+
+.dc_menu-drawer_label {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dc_menu-drawer_separator-line {
+  margin: 0px 16px;
+}
+
+.menu-drawer__navigation {
+  padding: 0px;
+}
+
+.dc_menu-drawer__menu {
+  list-style: none;
+  padding: 16px;
+  margin: 0px;
+}
+
+.dc_menu-drawer__menu li {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.dc_menu-drawer__menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dc_link-item__image {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.dc_link {
+  display: flex;
+  gap: 14px;
+  color: #3f3939;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  text-decoration: none;
+}
+
+/* Update this section in your CSS */
+.menu-drawer__navigation-container {
+  display: flex; /* Changed from grid to flex for better child containment */
+  flex-direction: column;
+  overflow-y: auto; /* This enables scrolling */
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
+/* Ensure the inner container doesn't cut off content */
+.menu-drawer__inner-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dc_menw-drawer__social-icons {
+  padding-left: 16px;
+  margin: 24px 0px 30px 0px !important;
+}
+
+.dc_menw-drawer__social-icons .list-social__item {
+  background-color: #f2f7f8;
+  border-color: #f2f7f8;
+}
+
+.dc_menw-drawer__social-icons:last-child {
+  padding-bottom: 5rem; /* Adds extra space at the bottom to ensure visibility */
+}

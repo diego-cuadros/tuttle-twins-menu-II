@@ -62,8 +62,6 @@
         "event_metaobject": "{{ metaobject }}",
         "fb_name": "{{ section.settings.event_metaobject.title.value }}",
         "fb_type": "{{ metaobject.event_type.value }} · {{ metaobject.event_category_topics | metafield_text }}",
-        "fb_date_start": "{{ section.settings.event_metaobject.start_datetime | metafield_text }}",
-        "fb_date_end": "{{ section.settings.event_metaobject.end_datetime | metafield_text }}",
         "fb_day_1_start": "{{ section.settings.event_metaobject.day_1_start_time | metafield_text }}",
         "fb_day_1_end": "{{ section.settings.event_metaobject.day_1_end_time | metafield_text }}",
         "fb_day_2_start": "{{ section.settings.event_metaobject.day_2_start_time | metafield_text }}",

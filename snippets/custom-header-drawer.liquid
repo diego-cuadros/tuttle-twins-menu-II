@@ -173,17 +173,48 @@
                         endif
                       -%}
                       <li class="dc_link-item">
-                        <a href="{{ link.url }}" class="dc_link" style="display: flex; align-items: center; gap: 10px;">
-                          {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
-                            <img
-                              class="dc_link-item__image"
-                              src="{{ icon_to_show | image_url: width: 40 }}"
-                              width="{{ image.width }}"
-                              height="{{ image.height }}"
-                            >
-                          {%- endif -%}
-                          <span>{{ link.title | escape }}</span>
-                        </a>
+                        {%- if link.links.size > 0 -%}
+                          <div
+                            class="dc_expandable-header dc_expandable-toggle"
+                            role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                          >
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                              {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
+                                <img
+                                  class="dc_link-item__image"
+                                  src="{{ icon_to_show | image_url: width: 40 }}"
+                                  width="{{ image.width }}"
+                                  height="{{ image.height }}"
+                                >
+                              {%- endif -%}
+                              <span class="dc_link">{{ link.title | escape }}</span>
+                            </div>
+                            <span class="dc_expandable-chevron">{% render 'icon-chevron' %}</span>
+                          </div>
+                          <ul class="dc_expandable-submenu-links dc_expandable-submenu-links--collapsible" role="list">
+                            {%- for child_link in link.links -%}
+                              <li>
+                                <a href="{{ child_link.url }}" class="dc_link">
+                                  <span>{{ child_link.title | escape }}</span>
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- else -%}
+                          <a href="{{ link.url }}" class="dc_link" style="display: flex; align-items: center; gap: 10px;">
+                            {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
+                              <img
+                                class="dc_link-item__image"
+                                src="{{ icon_to_show | image_url: width: 40 }}"
+                                width="{{ image.width }}"
+                                height="{{ image.height }}"
+                              >
+                            {%- endif -%}
+                            <span>{{ link.title | escape }}</span>
+                          </a>
+                        {%- endif -%}
                       </li>
                     {%- endfor -%}
                   </ul>

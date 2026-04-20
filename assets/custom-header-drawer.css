@@ -338,3 +338,7 @@
   object-fit: cover;
   flex-shrink: 0;
 }
+
+.dc_menu-drawer__menu .dc_expandable-header {
+  padding-bottom: 0;
+}

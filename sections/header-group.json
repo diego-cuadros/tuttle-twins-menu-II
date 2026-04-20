@@ -72,8 +72,117 @@
     "header": {
       "type": "header",
       "blocks": {
+        "banner_on_mobile_menu_MyiKMx": {
+          "type": "banner_on_mobile_menu",
+          "settings": {
+            "banner_image_mobile_menu": "shopify://shop_images/6af5ce35c5d633157b0e63413eea109983aaaa4b.webp",
+            "banner_link_mobile_menu": "https://www.tuttletwins.com/products/tuttle-twins-family-starter-pack",
+            "banner_tag_text": "Best Selling Bundle",
+            "banner_heading_text": "Family Starter Pack",
+            "banner_button_label": "Shop Now"
+          }
+        },
+        "expandable_submenu_XyYVqp": {
+          "type": "expandable_submenu",
+          "settings": {
+            "menu_item_label": "Shop Products By Age",
+            "menu_item_link": "",
+            "menu_item_icon": "shopify://shop_images/Frame_48101707.png",
+            "use_collapsible_menu": true,
+            "submenu_item_1_label": "Toddlers",
+            "submenu_item_1_link": "https://www.tuttletwins.com/collections/toddler-books",
+            "submenu_item_1_icon": "shopify://shop_images/Frame_48102561.png",
+            "submenu_item_2_label": "Ages 5 to 12",
+            "submenu_item_2_link": "https://www.tuttletwins.com/pages/childrens-resources",
+            "submenu_item_2_icon": "shopify://shop_images/Frame_48102562.png",
+            "submenu_item_3_label": "Ages 13+",
+            "submenu_item_3_link": "https://www.tuttletwins.com/pages/books-for-teens",
+            "submenu_item_3_icon": "shopify://shop_images/Frame_48102562_1.png",
+            "submenu_item_4_label": "",
+            "submenu_item_4_link": "",
+            "submenu_item_5_label": "",
+            "submenu_item_5_link": ""
+          }
+        },
+        "expandable_submenu_3fzdzX": {
+          "type": "expandable_submenu",
+          "settings": {
+            "menu_item_label": "Book Club",
+            "menu_item_link": "https://www.tuttletwins.com/products/bookclub",
+            "menu_item_icon": "shopify://shop_images/Frame_48101707_1.png",
+            "use_collapsible_menu": false,
+            "submenu_item_1_label": "",
+            "submenu_item_1_link": "",
+            "submenu_item_2_label": "",
+            "submenu_item_2_link": "",
+            "submenu_item_3_label": "",
+            "submenu_item_3_link": "",
+            "submenu_item_4_label": "",
+            "submenu_item_4_link": "",
+            "submenu_item_5_label": "",
+            "submenu_item_5_link": ""
+          }
+        },
+        "expandable_submenu_G6BXmT": {
+          "type": "expandable_submenu",
+          "settings": {
+            "menu_item_label": "Shop Bundles",
+            "menu_item_link": "https://www.tuttletwins.com/collections/bundles",
+            "menu_item_icon": "shopify://shop_images/Frame_48101707_2.png",
+            "use_collapsible_menu": false,
+            "submenu_item_1_label": "",
+            "submenu_item_1_link": "",
+            "submenu_item_2_label": "",
+            "submenu_item_2_link": "",
+            "submenu_item_3_label": "",
+            "submenu_item_3_link": "",
+            "submenu_item_4_label": "",
+            "submenu_item_4_link": "",
+            "submenu_item_5_label": "",
+            "submenu_item_5_link": ""
+          }
+        },
+        "expandable_submenu_bJr8He": {
+          "type": "expandable_submenu",
+          "settings": {
+            "menu_item_label": "Academy",
+            "menu_item_link": "https://www.tuttletwins.com/pages/academy",
+            "menu_item_icon": "shopify://shop_images/Frame_48101707_3.png",
+            "use_collapsible_menu": false,
+            "submenu_item_1_label": "",
+            "submenu_item_1_link": "",
+            "submenu_item_2_label": "",
+            "submenu_item_2_link": "",
+            "submenu_item_3_label": "",
+            "submenu_item_3_link": "",
+            "submenu_item_4_label": "",
+            "submenu_item_4_link": "",
+            "submenu_item_5_label": "",
+            "submenu_item_5_link": ""
+          }
+        },
+        "expandable_submenu_WKnh7K": {
+          "type": "expandable_submenu",
+          "settings": {
+            "menu_item_label": "Homeschool Hub",
+            "menu_item_link": "https://www.tuttletwins.com/pages/homeschool-hub",
+            "menu_item_icon": "shopify://shop_images/Frame_48101707_4.png",
+            "use_collapsible_menu": false,
+            "submenu_item_1_label": "",
+            "submenu_item_1_link": "",
+            "submenu_item_2_label": "",
+            "submenu_item_2_link": "",
+            "submenu_item_3_label": "",
+            "submenu_item_3_link": "",
+            "submenu_item_4_label": "",
+            "submenu_item_4_link": "",
+            "submenu_item_5_label": "",
+            "submenu_item_5_link": ""
+          }
+        },
         "shop_grid_k9NkEf": {
           "type": "shop_grid",
+          "disabled": true,
           "settings": {
             "heading": "Shop",
             "img_1": "shopify://shop_images/Frame_48102245.jpg",
@@ -97,13 +206,12 @@
           "settings": {
             "bottomless_menu": "bottomless-mobile-menu-1",
             "use_icons_as_bullets": true,
-            "icon_1": "shopify://shop_images/Vector.png",
+            "icon_1": "shopify://shop_images/library-solid-standard_1_1.png",
             "use_icon_1": 1,
-            "icon_2": "shopify://shop_images/Frame_4.png",
+            "icon_2": "shopify://shop_images/Vector.png",
             "use_icon_2": 2,
-            "icon_3": "shopify://shop_images/Frame_5.png",
+            "icon_3": "shopify://shop_images/Frame_4.png",
             "use_icon_3": 3,
-            "icon_4": "shopify://shop_images/Frame_6.png",
             "use_icon_4": 4
           }
         },
@@ -116,6 +224,12 @@
         }
       },
       "block_order": [
+        "banner_on_mobile_menu_MyiKMx",
+        "expandable_submenu_XyYVqp",
+        "expandable_submenu_3fzdzX",
+        "expandable_submenu_G6BXmT",
+        "expandable_submenu_bJr8He",
+        "expandable_submenu_WKnh7K",
         "shop_grid_k9NkEf",
         "custom_menu_pDeFPy",
         "custom_menu_WMMepC"
@@ -136,7 +250,6 @@
         "padding_top": 4,
         "padding_bottom": 0,
         "use_custom_mobile_menu_bottomless": true,
-        "mmenu_background_color": "#f2f7f8",
         "use_custom_separator_line": true
       }
     },

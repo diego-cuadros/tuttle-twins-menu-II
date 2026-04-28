@@ -36,10 +36,11 @@
                     >
                       <div class="dc_expandable-submenu-label">
                         <img
-                          src="{{ block.settings.menu_item_icon | image_url: width: 56 }}"
+                          src="{{ block.settings.menu_item_icon | image_url: width: 168 }}"
+                          srcset="{{ block.settings.menu_item_icon | image_url: width: 56 }} 1x, {{ block.settings.menu_item_icon | image_url: width: 112 }} 2x, {{ block.settings.menu_item_icon | image_url: width: 168 }} 3x"
                           alt="{{ block.settings.menu_item_label | escape }}"
-                          width="{{ image.width }}"
-                          height="{{ image.height }}"
+                          width="56"
+                          height="56"
                           class="dc_expandable-submenu-icon"
                         >
                         <p class="dc_expandable-submenu-label__text">{{ block.settings.menu_item_label | escape }}</p>
@@ -58,10 +59,11 @@
                                 {%- if block.settings[icon_id] != blank -%}
                                   <img
                                     class="dc_link-item__image"
-                                    src="{{ block.settings[icon_id] | image_url: width: 40 }}"
+                                    src="{{ block.settings[icon_id] | image_url: width: 60 }}"
+                                    srcset="{{ block.settings[icon_id] | image_url: width: 20 }} 1x, {{ block.settings[icon_id] | image_url: width: 40 }} 2x, {{ block.settings[icon_id] | image_url: width: 60 }} 3x"
                                     alt="{{ block.settings[label_id] | escape }}"
-                                    width="30"
-                                    height="30"
+                                    width="20"
+                                    height="20"
                                   >
                                 {%- endif -%}
                                 <span>{{ block.settings[label_id] | escape }}</span>
@@ -78,10 +80,11 @@
                     >
                       <div class="dc_expandable-submenu-label">
                         <img
-                          src="{{ block.settings.menu_item_icon | image_url: width: 56 }}"
+                          src="{{ block.settings.menu_item_icon | image_url: width: 168 }}"
+                          srcset="{{ block.settings.menu_item_icon | image_url: width: 56 }} 1x, {{ block.settings.menu_item_icon | image_url: width: 112 }} 2x, {{ block.settings.menu_item_icon | image_url: width: 168 }} 3x"
                           alt="{{ block.settings.menu_item_label | escape }}"
-                          width="{{ image.width }}"
-                          height="{{ image.height }}"
+                          width="56"
+                          height="56"
                           class="dc_expandable-submenu-icon"
                         >
                         <p class="dc_expandable-submenu-label__text">{{ block.settings.menu_item_label | escape }}</p>
@@ -192,9 +195,10 @@
                               {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
                                 <img
                                   class="dc_link-item__image"
-                                  src="{{ icon_to_show | image_url: width: 40 }}"
-                                  width="{{ image.width }}"
-                                  height="{{ image.height }}"
+                                  src="{{ icon_to_show | image_url: width: 60 }}"
+                                  srcset="{{ icon_to_show | image_url: width: 20 }} 1x, {{ icon_to_show | image_url: width: 40 }} 2x, {{ icon_to_show | image_url: width: 60 }} 3x"
+                                  width="20"
+                                  height="20"
                                 >
                               {%- endif -%}
                               <span class="dc_link">{{ link.title | escape }}</span>

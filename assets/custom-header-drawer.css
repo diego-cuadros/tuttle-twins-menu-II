@@ -294,6 +294,17 @@
   object-fit: contain;
 }
 
+.dc_mobile-menu-tag {
+  padding: 4px 8px;
+  border-radius: 100px;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  background-color: blue;
+}
+
 .dc_expandable-submenu-links {
   background-color: #f8f8f8;
   padding: 14px;

@@ -86,6 +86,14 @@
                         >
                         <p class="dc_expandable-submenu-label__text">{{ block.settings.menu_item_label | escape }}</p>
                       </div>
+                      {% if block.settings.show_mobile_menu_item_tag %}
+                        <div
+                          class="dc_mobile-menu-tag"
+                          style="background-color:{{ block.settings.tag_color }}; color: {{ block.settings.tag_text_color }}"
+                        >
+                          {{ block.settings.tag_text }}
+                        </div>
+                      {% endif %}
                     </a>
                   {% endif %}
                 </div>
@@ -203,7 +211,11 @@
                             {%- endfor -%}
                           </ul>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="dc_link" style="display: flex; align-items: center; gap: 10px;">
+                          <a
+                            href="{{ link.url }}"
+                            class="dc_link"
+                            style="display: flex; align-items: center; gap: 10px;"
+                          >
                             {%- if block.settings.use_icons_as_bullets and icon_to_show != blank -%}
                               <img
                                 class="dc_link-item__image"

@@ -59,11 +59,11 @@
                                 {%- if block.settings[icon_id] != blank -%}
                                   <img
                                     class="dc_link-item__image"
-                                    src="{{ block.settings[icon_id] | image_url: width: 60 }}"
-                                    srcset="{{ block.settings[icon_id] | image_url: width: 20 }} 1x, {{ block.settings[icon_id] | image_url: width: 40 }} 2x, {{ block.settings[icon_id] | image_url: width: 60 }} 3x"
+                                    src="{{ block.settings[icon_id] | image_url: width: 90 }}"
+                                    srcset="{{ block.settings[icon_id] | image_url: width: 30 }} 1x, {{ block.settings[icon_id] | image_url: width: 60 }} 2x, {{ block.settings[icon_id] | image_url: width: 90 }} 3x"
                                     alt="{{ block.settings[label_id] | escape }}"
-                                    width="20"
-                                    height="20"
+                                    width="30"
+                                    height="30"
                                   >
                                 {%- endif -%}
                                 <span>{{ block.settings[label_id] | escape }}</span>
